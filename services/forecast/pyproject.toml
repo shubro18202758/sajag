@@ -1,0 +1,59 @@
+[project]
+name = "forecast"
+version = "0.1.0"
+description = "Sajag corridor forecasting — 15–120 min per-segment speed and V/C forecasts (p10/p50/p90) with Chronos-2, a seasonal-naive baseline and a rolling backtest; pre-emptive diversion PROPOSALS only (a named officer decides)"
+requires-python = ">=3.12"
+license = "MIT"
+dependencies = [
+    # HTTP surface (:8195 in production, loopback) + read-only client for the oracle / hydro
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.32",
+    "httpx>=0.27",
+
+    # numerics
+    "numpy>=1.26",
+
+    # config / logging
+    "pydantic>=2.10",
+    "pydantic-settings>=2.6",
+    "structlog>=24.4",
+]
+
+[project.optional-dependencies]
+# The foundation model (Apache-2.0). The image installs it; the offline test
+# suite does not need it (the Chronos path is behind the `model` marker).
+model = [
+    "chronos-forecasting>=2.2,<3",
+    "torch>=2.2",
+    "pandas>=2.0",
+]
+# Contender (Apache-2.0); univariate only, used by the backtest.
+contender = [
+    "timesfm[torch]>=3.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+    "pytest-asyncio>=0.24",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/forecast"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 110
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = [
+    "model: loads a real foundation model (Chronos-2 / TimesFM); run with -m model",
+]
+addopts = "-m 'not model'"

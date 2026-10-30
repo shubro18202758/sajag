@@ -1,0 +1,74 @@
+{
+ "_sample": {
+  "source": "POST /speech/report?lang=mr with JSON {\"text\": ...} (a typed field report) on services/speech, run locally on 30 Oct 2026 (loopback port 9361, CPU) with SPEECH_CITY_DIR=cities/mumbai; no ASR model was loaded for this path",
+  "pack": "Mumbai (cities/mumbai/landmarks.json)",
+  "note": "as returned. The place is Hindmata (score 1.0). The other two candidates are weak partial matches, BKC on the short word बस ('bus') and BMC headquarters at 0.587, shown to the officer as alternatives; only the top match is taken as the place"
+ },
+ "report_id": "919add61-0584-468d-b831-9dc6a4898efd",
+ "received_at": "2026-10-30T09:29:35+00:00",
+ "place": {
+  "id": "hindmata",
+  "name_en": "Hindmata (Dadar East)",
+  "name_mr": "हिंदमाता (दादर पूर्व)",
+  "lat": 19.0049,
+  "lon": 72.8424,
+  "match_score": 1.0,
+  "matched_text": "हिंदमाता",
+  "source": "landmarks"
+ },
+ "place_candidates": [
+  {
+   "id": "hindmata",
+   "name_en": "Hindmata (Dadar East)",
+   "name_mr": "हिंदमाता (दादर पूर्व)",
+   "lat": 19.0049,
+   "lon": 72.8424,
+   "match_score": 1.0,
+   "matched_text": "हिंदमाता",
+   "source": "landmarks"
+  },
+  {
+   "id": "bkc",
+   "name_en": "Bandra Kurla Complex (BKC)",
+   "name_mr": "वांद्रे कुर्ला संकुल",
+   "lat": 19.066,
+   "lon": 72.868,
+   "match_score": 0.86,
+   "matched_text": "बस",
+   "source": "landmarks"
+  },
+  {
+   "id": "bmc_hq",
+   "name_en": "BMC headquarters",
+   "name_mr": "बृहन्मुंबई महानगरपालिका मुख्यालय",
+   "lat": 18.94,
+   "lon": 72.835,
+   "match_score": 0.587,
+   "matched_text": "बस अडकल्या आहे",
+   "source": "landmarks"
+  }
+ ],
+ "kind": "waterlogging",
+ "kind_cues": [
+  "पाणी साच",
+  "गुडघाभर",
+  "साचल"
+ ],
+ "severity": "medium",
+ "severity_cues": [
+  "गुडघाभर",
+  "बस अडकल"
+ ],
+ "transcript": "हिंदमाता येथे गुडघाभर पाणी साचले आहे, बस अडकल्या आहेत",
+ "language": "mr",
+ "source": "field-text",
+ "asr": null,
+ "verification_state": "UNVERIFIED-FIELD",
+ "requires_confirmation": true,
+ "note": {
+  "en": "Field report awaiting an officer's confirmation. It is not an action.",
+  "mr": "क्षेत्रातून आलेला अहवाल, अधिकाऱ्याच्या पुष्टीच्या प्रतीक्षेत. ही कारवाई नाही.",
+  "hi": "फ़ील्ड से आई रिपोर्ट, अधिकारी की पुष्टि की प्रतीक्षा में। यह कोई कार्रवाई नहीं है।"
+ },
+ "latency_s": 0.128
+}

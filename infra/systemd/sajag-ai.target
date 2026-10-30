@@ -1,0 +1,7 @@
+# Sajag AI tier: forecast (8195), hydro (8197), twin (8198), speech (8194), vision (8196), city feeds (8199).
+[Unit]
+Description=Sajag AI services (forecast, hydro, twin, speech, vision, city feeds)
+Wants=sajag-ai-forecast.service sajag-ai-hydro.service sajag-ai-twin.service sajag-ai-speech.service sajag-ai-vision.service sajag-feeds.service
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,5727 @@
+{
+ "schema": "sajag.gazetteer/1",
+ "city": "mumbai",
+ "note": "The Mumbai place gazetteer: the City Pack's source of truth for scripts/gen_osint_gazetteer.py, which adds the network's junctions and road segments (scripts/data/osm_network.json) and writes scripts/data/osint_gazetteer.json. Places only (never a person). Ids and spellings of cities/mumbai/landmarks.json are used where a place is there. 'anchor' is how a place meets the road network: 'area' (an area or an off-network street, never pinned to another road), 'snap' (the nearest segment within 900 m), 'J<id>' or 'S<id>' (pre-linked). Hand rows ('source': 'hand') carry approximate points (+-300 m; pandals and flooding spots +-200 m; BMC wards are area points, +-1 km, not boundaries) for review. 'low_lying' marks the waterlogging-prone spots and subways that recur in news reporting (MUMBAI.md 2: a seed list, not a survey; BMC counts 386-498 spots by year). Police stations, hospitals marked 'osm:' and neighbourhood points come from OpenStreetMap (ODbL). Mumbai Police zone boundaries are left out: no reliable open geometry was found.",
+ "attribution": "Police-station, hospital and neighbourhood points © OpenStreetMap contributors, ODbL 1.0.",
+ "places": [
+  {
+   "id": "ward_a",
+   "kind": "ward",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "BMC A ward (Colaba, Fort area)",
+   "mr": "बृहन्मुंबई महानगरपालिका ए विभाग",
+   "hi": "बीएमसी ए वार्ड",
+   "aka": [
+    "a ward office",
+    "bmc a ward",
+    "ward a bmc"
+   ],
+   "aka_mr": [
+    "ए विभाग",
+    "ए विभाग कार्यालय",
+    "ए वॉर्ड"
+   ],
+   "aka_hi": [
+    "ए वार्ड"
+   ],
+   "lat": 18.9322,
+   "lon": 72.835,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "ward_b",
+   "kind": "ward",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "BMC B ward (Dongri, Masjid Bunder area)",
+   "mr": "बृहन्मुंबई महानगरपालिका बी विभाग",
+   "hi": "बीएमसी बी वार्ड",
+   "aka": [
+    "b ward office",
+    "bmc b ward",
+    "ward b bmc"
+   ],
+   "aka_mr": [
+    "बी विभाग",
+    "बी विभाग कार्यालय",
+    "बी वॉर्ड"
+   ],
+   "aka_hi": [
+    "बी वार्ड"
+   ],
+   "lat": 18.958,
+   "lon": 72.837,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "ward_c",
+   "kind": "ward",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "BMC C ward (Kalbadevi, Bhuleshwar area)",
+   "mr": "बृहन्मुंबई महानगरपालिका सी विभाग",
+   "hi": "बीएमसी सी वार्ड",
+   "aka": [
+    "c ward office",
+    "bmc c ward",
+    "ward c bmc"
+   ],
+   "aka_mr": [
+    "सी विभाग",
+    "सी विभाग कार्यालय",
+    "सी वॉर्ड"
+   ],
+   "aka_hi": [
+    "सी वार्ड"
+   ],
+   "lat": 18.9475,
+   "lon": 72.8265,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "ward_d",
+   "kind": "ward",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "BMC D ward (Grant Road, Malabar Hill area)",
+   "mr": "बृहन्मुंबई महानगरपालिका डी विभाग",
+   "hi": "बीएमसी डी वार्ड",
+   "aka": [
+    "d ward office",
+    "bmc d ward",
+    "ward d bmc"
+   ],
+   "aka_mr": [
+    "डी विभाग",
+    "डी विभाग कार्यालय",
+    "डी वॉर्ड"
+   ],
+   "aka_hi": [
+    "डी वार्ड"
+   ],
+   "lat": 18.9631,
+   "lon": 72.8147,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "ward_e",
+   "kind": "ward",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "BMC E ward (Byculla area)",
+   "mr": "बृहन्मुंबई महानगरपालिका ई विभाग",
+   "hi": "बीएमसी ई वार्ड",
+   "aka": [
+    "e ward office",
+    "bmc e ward",
+    "ward e bmc"
+   ],
+   "aka_mr": [
+    "ई विभाग",
+    "ई विभाग कार्यालय",
+    "ई वॉर्ड"
+   ],
+   "aka_hi": [
+    "ई वार्ड"
+   ],
+   "lat": 18.975,
+   "lon": 72.832,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "ward_fs",
+   "kind": "ward",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "BMC F/South ward (Parel area)",
+   "mr": "बृहन्मुंबई महानगरपालिका एफ दक्षिण विभाग",
+   "hi": "बीएमसी एफ दक्षिण वार्ड",
+   "aka": [
+    "f south ward office",
+    "bmc f south ward",
+    "ward f south bmc",
+    "f south ward",
+    "f s ward"
+   ],
+   "aka_mr": [
+    "एफ दक्षिण विभाग",
+    "एफ दक्षिण विभाग कार्यालय",
+    "एफ दक्षिण वॉर्ड"
+   ],
+   "aka_hi": [
+    "एफ दक्षिण वार्ड"
+   ],
+   "lat": 19.001,
+   "lon": 72.841,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "ward_fn",
+   "kind": "ward",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "BMC F/North ward (Matunga, Sion, Wadala area)",
+   "mr": "बृहन्मुंबई महानगरपालिका एफ उत्तर विभाग",
+   "hi": "बीएमसी एफ उत्तर वार्ड",
+   "aka": [
+    "f north ward office",
+    "bmc f north ward",
+    "ward f north bmc",
+    "f north ward",
+    "f n ward"
+   ],
+   "aka_mr": [
+    "एफ उत्तर विभाग",
+    "एफ उत्तर विभाग कार्यालय",
+    "एफ उत्तर वॉर्ड"
+   ],
+   "aka_hi": [
+    "एफ उत्तर वार्ड"
+   ],
+   "lat": 19.027,
+   "lon": 72.856,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "ward_gs",
+   "kind": "ward",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "BMC G/South ward (Worli, Prabhadevi area)",
+   "mr": "बृहन्मुंबई महानगरपालिका जी दक्षिण विभाग",
+   "hi": "बीएमसी जी दक्षिण वार्ड",
+   "aka": [
+    "g south ward office",
+    "bmc g south ward",
+    "ward g south bmc",
+    "g south ward",
+    "g s ward"
+   ],
+   "aka_mr": [
+    "जी दक्षिण विभाग",
+    "जी दक्षिण विभाग कार्यालय",
+    "जी दक्षिण वॉर्ड"
+   ],
+   "aka_hi": [
+    "जी दक्षिण वार्ड"
+   ],
+   "lat": 19.008,
+   "lon": 72.827,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "ward_gn",
+   "kind": "ward",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "BMC G/North ward (Dadar, Mahim, Dharavi area)",
+   "mr": "बृहन्मुंबई महानगरपालिका जी उत्तर विभाग",
+   "hi": "बीएमसी जी उत्तर वार्ड",
+   "aka": [
+    "g north ward office",
+    "bmc g north ward",
+    "ward g north bmc",
+    "g north ward",
+    "g n ward"
+   ],
+   "aka_mr": [
+    "जी उत्तर विभाग",
+    "जी उत्तर विभाग कार्यालय",
+    "जी उत्तर वॉर्ड"
+   ],
+   "aka_hi": [
+    "जी उत्तर वार्ड"
+   ],
+   "lat": 19.023,
+   "lon": 72.843,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "ward_he",
+   "kind": "ward",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "BMC H/East ward (Bandra East, Santacruz East area)",
+   "mr": "बृहन्मुंबई महानगरपालिका एच पूर्व विभाग",
+   "hi": "बीएमसी एच पूर्व वार्ड",
+   "aka": [
+    "h east ward office",
+    "bmc h east ward",
+    "ward h east bmc",
+    "h east ward",
+    "h e ward"
+   ],
+   "aka_mr": [
+    "एच पूर्व विभाग",
+    "एच पूर्व विभाग कार्यालय",
+    "एच पूर्व वॉर्ड"
+   ],
+   "aka_hi": [
+    "एच पूर्व वार्ड"
+   ],
+   "lat": 19.059,
+   "lon": 72.848,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "ward_hw",
+   "kind": "ward",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "BMC H/West ward (Bandra West, Khar West area)",
+   "mr": "बृहन्मुंबई महानगरपालिका एच पश्चिम विभाग",
+   "hi": "बीएमसी एच पश्चिम वार्ड",
+   "aka": [
+    "h west ward office",
+    "bmc h west ward",
+    "ward h west bmc",
+    "h west ward",
+    "h w ward"
+   ],
+   "aka_mr": [
+    "एच पश्चिम विभाग",
+    "एच पश्चिम विभाग कार्यालय",
+    "एच पश्चिम वॉर्ड"
+   ],
+   "aka_hi": [
+    "एच पश्चिम वार्ड"
+   ],
+   "lat": 19.067,
+   "lon": 72.836,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "ward_ke",
+   "kind": "ward",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "BMC K/East ward (Andheri East area)",
+   "mr": "बृहन्मुंबई महानगरपालिका के पूर्व विभाग",
+   "hi": "बीएमसी के पूर्व वार्ड",
+   "aka": [
+    "k east ward office",
+    "bmc k east ward",
+    "ward k east bmc",
+    "k east ward",
+    "k e ward"
+   ],
+   "aka_mr": [
+    "के पूर्व विभाग",
+    "के पूर्व विभाग कार्यालय",
+    "के पूर्व वॉर्ड"
+   ],
+   "aka_hi": [
+    "के पूर्व वार्ड"
+   ],
+   "lat": 19.115,
+   "lon": 72.856,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "ward_kw",
+   "kind": "ward",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "BMC K/West ward (Andheri West, Juhu area)",
+   "mr": "बृहन्मुंबई महानगरपालिका के पश्चिम विभाग",
+   "hi": "बीएमसी के पश्चिम वार्ड",
+   "aka": [
+    "k west ward office",
+    "bmc k west ward",
+    "ward k west bmc",
+    "k west ward",
+    "k w ward"
+   ],
+   "aka_mr": [
+    "के पश्चिम विभाग",
+    "के पश्चिम विभाग कार्यालय",
+    "के पश्चिम वॉर्ड"
+   ],
+   "aka_hi": [
+    "के पश्चिम वार्ड"
+   ],
+   "lat": 19.119,
+   "lon": 72.838,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "ward_ps",
+   "kind": "ward",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "BMC P/South ward (Goregaon area)",
+   "mr": "बृहन्मुंबई महानगरपालिका पी दक्षिण विभाग",
+   "hi": "बीएमसी पी दक्षिण वार्ड",
+   "aka": [
+    "p south ward office",
+    "bmc p south ward",
+    "ward p south bmc",
+    "p south ward",
+    "p s ward"
+   ],
+   "aka_mr": [
+    "पी दक्षिण विभाग",
+    "पी दक्षिण विभाग कार्यालय",
+    "पी दक्षिण वॉर्ड"
+   ],
+   "aka_hi": [
+    "पी दक्षिण वार्ड"
+   ],
+   "lat": 19.163,
+   "lon": 72.846,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "ward_pn",
+   "kind": "ward",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "BMC P/North ward (Malad area)",
+   "mr": "बृहन्मुंबई महानगरपालिका पी उत्तर विभाग",
+   "hi": "बीएमसी पी उत्तर वार्ड",
+   "aka": [
+    "p north ward office",
+    "bmc p north ward",
+    "ward p north bmc",
+    "p north ward",
+    "p n ward"
+   ],
+   "aka_mr": [
+    "पी उत्तर विभाग",
+    "पी उत्तर विभाग कार्यालय",
+    "पी उत्तर वॉर्ड"
+   ],
+   "aka_hi": [
+    "पी उत्तर वार्ड"
+   ],
+   "lat": 19.186,
+   "lon": 72.848,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "ward_rs",
+   "kind": "ward",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "BMC R/South ward (Kandivali area)",
+   "mr": "बृहन्मुंबई महानगरपालिका आर दक्षिण विभाग",
+   "hi": "बीएमसी आर दक्षिण वार्ड",
+   "aka": [
+    "r south ward office",
+    "bmc r south ward",
+    "ward r south bmc",
+    "r south ward",
+    "r s ward"
+   ],
+   "aka_mr": [
+    "आर दक्षिण विभाग",
+    "आर दक्षिण विभाग कार्यालय",
+    "आर दक्षिण वॉर्ड"
+   ],
+   "aka_hi": [
+    "आर दक्षिण वार्ड"
+   ],
+   "lat": 19.205,
+   "lon": 72.852,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "ward_rc",
+   "kind": "ward",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "BMC R/Central ward (Borivali area)",
+   "mr": "बृहन्मुंबई महानगरपालिका आर मध्य विभाग",
+   "hi": "बीएमसी आर मध्य वार्ड",
+   "aka": [
+    "r central ward office",
+    "bmc r central ward",
+    "ward r central bmc",
+    "r central ward",
+    "r c ward"
+   ],
+   "aka_mr": [
+    "आर मध्य विभाग",
+    "आर मध्य विभाग कार्यालय",
+    "आर मध्य वॉर्ड"
+   ],
+   "aka_hi": [
+    "आर मध्य वार्ड"
+   ],
+   "lat": 19.23,
+   "lon": 72.856,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "ward_rn",
+   "kind": "ward",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "BMC R/North ward (Dahisar area)",
+   "mr": "बृहन्मुंबई महानगरपालिका आर उत्तर विभाग",
+   "hi": "बीएमसी आर उत्तर वार्ड",
+   "aka": [
+    "r north ward office",
+    "bmc r north ward",
+    "ward r north bmc",
+    "r north ward",
+    "r n ward"
+   ],
+   "aka_mr": [
+    "आर उत्तर विभाग",
+    "आर उत्तर विभाग कार्यालय",
+    "आर उत्तर वॉर्ड"
+   ],
+   "aka_hi": [
+    "आर उत्तर वार्ड"
+   ],
+   "lat": 19.25,
+   "lon": 72.86,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "ward_l",
+   "kind": "ward",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "BMC L ward (Kurla area)",
+   "mr": "बृहन्मुंबई महानगरपालिका एल विभाग",
+   "hi": "बीएमसी एल वार्ड",
+   "aka": [
+    "l ward office",
+    "bmc l ward",
+    "ward l bmc"
+   ],
+   "aka_mr": [
+    "एल विभाग",
+    "एल विभाग कार्यालय",
+    "एल वॉर्ड"
+   ],
+   "aka_hi": [
+    "एल वार्ड"
+   ],
+   "lat": 19.07,
+   "lon": 72.88,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "ward_me",
+   "kind": "ward",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "BMC M/East ward (Govandi, Mankhurd area)",
+   "mr": "बृहन्मुंबई महानगरपालिका एम पूर्व विभाग",
+   "hi": "बीएमसी एम पूर्व वार्ड",
+   "aka": [
+    "m east ward office",
+    "bmc m east ward",
+    "ward m east bmc",
+    "m east ward",
+    "m e ward"
+   ],
+   "aka_mr": [
+    "एम पूर्व विभाग",
+    "एम पूर्व विभाग कार्यालय",
+    "एम पूर्व वॉर्ड"
+   ],
+   "aka_hi": [
+    "एम पूर्व वार्ड"
+   ],
+   "lat": 19.055,
+   "lon": 72.92,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "ward_mw",
+   "kind": "ward",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "BMC M/West ward (Chembur area)",
+   "mr": "बृहन्मुंबई महानगरपालिका एम पश्चिम विभाग",
+   "hi": "बीएमसी एम पश्चिम वार्ड",
+   "aka": [
+    "m west ward office",
+    "bmc m west ward",
+    "ward m west bmc",
+    "m west ward",
+    "m w ward"
+   ],
+   "aka_mr": [
+    "एम पश्चिम विभाग",
+    "एम पश्चिम विभाग कार्यालय",
+    "एम पश्चिम वॉर्ड"
+   ],
+   "aka_hi": [
+    "एम पश्चिम वार्ड"
+   ],
+   "lat": 19.056,
+   "lon": 72.899,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "ward_n",
+   "kind": "ward",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "BMC N ward (Ghatkopar, Vikhroli area)",
+   "mr": "बृहन्मुंबई महानगरपालिका एन विभाग",
+   "hi": "बीएमसी एन वार्ड",
+   "aka": [
+    "n ward office",
+    "bmc n ward",
+    "ward n bmc"
+   ],
+   "aka_mr": [
+    "एन विभाग",
+    "एन विभाग कार्यालय",
+    "एन वॉर्ड"
+   ],
+   "aka_hi": [
+    "एन वार्ड"
+   ],
+   "lat": 19.086,
+   "lon": 72.91,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "ward_s",
+   "kind": "ward",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "BMC S ward (Bhandup, Powai area)",
+   "mr": "बृहन्मुंबई महानगरपालिका एस विभाग",
+   "hi": "बीएमसी एस वार्ड",
+   "aka": [
+    "s ward office",
+    "bmc s ward",
+    "ward s bmc"
+   ],
+   "aka_mr": [
+    "एस विभाग",
+    "एस विभाग कार्यालय",
+    "एस वॉर्ड"
+   ],
+   "aka_hi": [
+    "एस वार्ड"
+   ],
+   "lat": 19.145,
+   "lon": 72.935,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "ward_t",
+   "kind": "ward",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "BMC T ward (Mulund area)",
+   "mr": "बृहन्मुंबई महानगरपालिका टी विभाग",
+   "hi": "बीएमसी टी वार्ड",
+   "aka": [
+    "t ward office",
+    "bmc t ward",
+    "ward t bmc"
+   ],
+   "aka_mr": [
+    "टी विभाग",
+    "टी विभाग कार्यालय",
+    "टी वॉर्ड"
+   ],
+   "aka_hi": [
+    "टी वार्ड"
+   ],
+   "lat": 19.172,
+   "lon": 72.956,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "colaba",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Colaba",
+   "mr": "कुलाबा",
+   "hi": "कोलाबा",
+   "aka": [
+    "colaaba"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.9151,
+   "lon": 72.826,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "fort",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Fort (Mumbai)",
+   "mr": "फोर्ट",
+   "hi": "फोर्ट",
+   "aka": [
+    "fort area mumbai"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.9333,
+   "lon": 72.8345,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "cuffe_parade",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Cuffe Parade",
+   "mr": "कफ परेड",
+   "hi": "कफ़ परेड",
+   "aka": [],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.9158,
+   "lon": 72.8189,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "nariman_point",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Nariman Point",
+   "mr": "नरिमन पॉइंट",
+   "hi": "नरीमन पॉइंट",
+   "aka": [],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.9271,
+   "lon": 72.8236,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "malabar_hill",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Malabar Hill",
+   "mr": "मलबार हिल",
+   "hi": "मलाबार हिल",
+   "aka": [],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.9582,
+   "lon": 72.8034,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "girgaon",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Girgaon",
+   "mr": "गिरगाव",
+   "hi": "गिरगांव",
+   "aka": [
+    "girgaum"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.9543,
+   "lon": 72.8179,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "kalbadevi",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Kalbadevi",
+   "mr": "काळबादेवी",
+   "hi": "कालबादेवी",
+   "aka": [],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.9493,
+   "lon": 72.8279,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "bhuleshwar",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Bhuleshwar",
+   "mr": "भुलेश्वर",
+   "hi": "भुलेश्वर",
+   "aka": [],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.9538,
+   "lon": 72.8275,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "tardeo",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Tardeo",
+   "mr": "ताडदेव",
+   "hi": "ताड़देव",
+   "aka": [],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.9722,
+   "lon": 72.8203,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "nagpada",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Nagpada",
+   "mr": "नागपाडा",
+   "hi": "नागपाड़ा",
+   "aka": [],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.9682,
+   "lon": 72.8286,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "byculla",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Byculla",
+   "mr": "भायखळा",
+   "hi": "भायखला",
+   "aka": [],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.9751,
+   "lon": 72.832,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "mazgaon",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Mazgaon",
+   "mr": "माझगाव",
+   "hi": "मझगांव",
+   "aka": [
+    "mazagaon"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.9697,
+   "lon": 72.8406,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "dongri",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Dongri",
+   "mr": "डोंगरी",
+   "hi": "डोंगरी",
+   "aka": [],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.9622,
+   "lon": 72.8368,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "mahalaxmi",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Mahalaxmi",
+   "mr": "महालक्ष्मी",
+   "hi": "महालक्ष्मी",
+   "aka": [
+    "mahalakshmi"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.9892,
+   "lon": 72.8187,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "worli",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Worli",
+   "mr": "वरळी",
+   "hi": "वर्ली",
+   "aka": [
+    "varli"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.01,
+   "lon": 72.816,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "prabhadevi",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Prabhadevi",
+   "mr": "प्रभादेवी",
+   "hi": "प्रभादेवी",
+   "aka": [],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.0149,
+   "lon": 72.828,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "lower_parel",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Lower Parel",
+   "mr": "लोअर परळ",
+   "hi": "लोअर परेल",
+   "aka": [],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.003,
+   "lon": 72.8303,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "parel",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Parel",
+   "mr": "परळ",
+   "hi": "परेल",
+   "aka": [
+    "parel village"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.99789,
+   "lon": 72.83762,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "lalbaug",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Lalbaug",
+   "mr": "लालबाग",
+   "hi": "लालबाग",
+   "aka": [
+    "lalbag",
+    "lal baug"
+   ],
+   "aka_mr": [],
+   "aka_hi": [
+    "लाल बाग"
+   ],
+   "lat": 18.99082,
+   "lon": 72.83574,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "sewri",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Sewri",
+   "mr": "शिवडी",
+   "hi": "शिवड़ी",
+   "aka": [
+    "shivdi"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.0014,
+   "lon": 72.8543,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "wadala",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Wadala",
+   "mr": "वडाळा",
+   "hi": "वडाला",
+   "aka": [],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.0176,
+   "lon": 72.864,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "dadar_area",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Dadar",
+   "mr": "दादर",
+   "hi": "दादर",
+   "aka": [
+    "dadar east",
+    "dadar west"
+   ],
+   "aka_mr": [
+    "दादर पूर्व",
+    "दादर पश्चिम"
+   ],
+   "aka_hi": [
+    "दादर पूर्व",
+    "दादर पश्चिम"
+   ],
+   "lat": 19.02,
+   "lon": 72.842,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "matunga",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Matunga",
+   "mr": "माटुंगा",
+   "hi": "माटुंगा",
+   "aka": [],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.028,
+   "lon": 72.848,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "mahim",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Mahim",
+   "mr": "माहीम",
+   "hi": "माहिम",
+   "aka": [],
+   "aka_mr": [
+    "माहिम"
+   ],
+   "aka_hi": [],
+   "lat": 19.0423,
+   "lon": 72.8398,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "dharavi",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Dharavi",
+   "mr": "धारावी",
+   "hi": "धारावी",
+   "aka": [],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.0445,
+   "lon": 72.8586,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "sion",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Sion",
+   "mr": "सायन",
+   "hi": "सायन",
+   "aka": [
+    "shiv"
+   ],
+   "aka_mr": [
+    "शीव"
+   ],
+   "aka_hi": [],
+   "lat": 19.0428,
+   "lon": 72.862,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "antop_hill",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Antop Hill",
+   "mr": "अँटॉप हिल",
+   "hi": "एंटॉप हिल",
+   "aka": [],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.0239,
+   "lon": 72.8685,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "chunabhatti",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Chunabhatti",
+   "mr": "चुनाभट्टी",
+   "hi": "चूनाभट्टी",
+   "aka": [],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.051,
+   "lon": 72.873,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "bandra_area",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Bandra",
+   "mr": "वांद्रे",
+   "hi": "बांद्रा",
+   "aka": [
+    "bandra east",
+    "bandra west"
+   ],
+   "aka_mr": [
+    "वांद्रे पूर्व",
+    "वांद्रे पश्चिम"
+   ],
+   "aka_hi": [
+    "बांद्रा पूर्व",
+    "बांद्रा पश्चिम"
+   ],
+   "lat": 19.0583,
+   "lon": 72.835,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "khar",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Khar",
+   "mr": "खार",
+   "hi": "खार",
+   "aka": [
+    "khar west",
+    "khar east"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.0725,
+   "lon": 72.8337,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "santacruz",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Santacruz",
+   "mr": "सांताक्रूझ",
+   "hi": "सांताक्रूज़",
+   "aka": [
+    "santa cruz",
+    "santacruz east",
+    "santacruz west"
+   ],
+   "aka_mr": [
+    "सांताक्रुझ"
+   ],
+   "aka_hi": [
+    "सांताक्रुज"
+   ],
+   "lat": 19.0844,
+   "lon": 72.8373,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "kalina",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Kalina",
+   "mr": "कलिना",
+   "hi": "कलिना",
+   "aka": [],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.0793,
+   "lon": 72.8613,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "vile_parle",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Vile Parle",
+   "mr": "विलेपार्ले",
+   "hi": "विले पार्ले",
+   "aka": [
+    "vileparle",
+    "vile parle east",
+    "vile parle west"
+   ],
+   "aka_mr": [
+    "विले पार्ले"
+   ],
+   "aka_hi": [
+    "विलेपार्ले"
+   ],
+   "lat": 19.099,
+   "lon": 72.844,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "juhu",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Juhu",
+   "mr": "जुहू",
+   "hi": "जुहू",
+   "aka": [],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.107,
+   "lon": 72.8275,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "andheri_area",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Andheri",
+   "mr": "अंधेरी",
+   "hi": "अंधेरी",
+   "aka": [
+    "andheri east",
+    "andheri west"
+   ],
+   "aka_mr": [
+    "अंधेरी पूर्व",
+    "अंधेरी पश्चिम"
+   ],
+   "aka_hi": [
+    "अंधेरी पूर्व",
+    "अंधेरी पश्चिम"
+   ],
+   "lat": 19.117,
+   "lon": 72.846,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "versova",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Versova",
+   "mr": "वर्सोवा",
+   "hi": "वर्सोवा",
+   "aka": [],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.131,
+   "lon": 72.8187,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "marol",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Marol",
+   "mr": "मरोळ",
+   "hi": "मरोल",
+   "aka": [],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.1144,
+   "lon": 72.8776,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "jogeshwari",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Jogeshwari",
+   "mr": "जोगेश्वरी",
+   "hi": "जोगेश्वरी",
+   "aka": [
+    "jogeshwari east",
+    "jogeshwari west"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.1364,
+   "lon": 72.845,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "goregaon",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Goregaon",
+   "mr": "गोरेगाव",
+   "hi": "गोरेगांव",
+   "aka": [
+    "goregaon east",
+    "goregaon west"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.165,
+   "lon": 72.848,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "malad",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Malad",
+   "mr": "मालाड",
+   "hi": "मलाड",
+   "aka": [
+    "malad east",
+    "malad west"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.185,
+   "lon": 72.848,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "kandivali",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Kandivali",
+   "mr": "कांदिवली",
+   "hi": "कांदिवली",
+   "aka": [
+    "kandivli",
+    "kandivali east",
+    "kandivali west"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.2055,
+   "lon": 72.85,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "borivali_area",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Borivali",
+   "mr": "बोरिवली",
+   "hi": "बोरीवली",
+   "aka": [
+    "borivli",
+    "borivali east",
+    "borivali west"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.23,
+   "lon": 72.856,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "dahisar",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Dahisar",
+   "mr": "दहिसर",
+   "hi": "दहिसर",
+   "aka": [
+    "dahisar east",
+    "dahisar west"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.2488,
+   "lon": 72.859,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "kurla_area",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Kurla",
+   "mr": "कुर्ला",
+   "hi": "कुर्ला",
+   "aka": [
+    "kurla east",
+    "kurla west"
+   ],
+   "aka_mr": [
+    "कुर्ल्या"
+   ],
+   "aka_hi": [],
+   "lat": 19.066,
+   "lon": 72.88,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "chembur",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Chembur",
+   "mr": "चेंबूर",
+   "hi": "चेंबूर",
+   "aka": [
+    "chembur east"
+   ],
+   "aka_mr": [],
+   "aka_hi": [
+    "चेम्बुर"
+   ],
+   "lat": 19.062,
+   "lon": 72.9,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "ghatkopar",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Ghatkopar",
+   "mr": "घाटकोपर",
+   "hi": "घाटकोपर",
+   "aka": [
+    "ghatkopar east",
+    "ghatkopar west"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.086,
+   "lon": 72.9081,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "vikhroli",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Vikhroli",
+   "mr": "विक्रोळी",
+   "hi": "विक्रोली",
+   "aka": [
+    "vikroli"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.107,
+   "lon": 72.928,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "powai",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Powai",
+   "mr": "पवई",
+   "hi": "पवई",
+   "aka": [
+    "powai lake area"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.12624,
+   "lon": 72.89368,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "bhandup",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Bhandup",
+   "mr": "भांडुप",
+   "hi": "भांडुप",
+   "aka": [
+    "bhandup east",
+    "bhandup west"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.144,
+   "lon": 72.937,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "mulund",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Mulund",
+   "mr": "मुलुंड",
+   "hi": "मुलुंड",
+   "aka": [
+    "mulund east",
+    "mulund west"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.172,
+   "lon": 72.956,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "mankhurd",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Mankhurd",
+   "mr": "मानखुर्द",
+   "hi": "मानखुर्द",
+   "aka": [],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.0521,
+   "lon": 72.9339,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "govandi",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Govandi",
+   "mr": "गोवंडी",
+   "hi": "गोवंडी",
+   "aka": [],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.053,
+   "lon": 72.917,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "deonar",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Deonar",
+   "mr": "देवनार",
+   "hi": "देवनार",
+   "aka": [],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.0476,
+   "lon": 72.9052,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "trombay",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Trombay",
+   "mr": "तुर्भे",
+   "hi": "ट्रॉम्बे",
+   "aka": [],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.028,
+   "lon": 72.93,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "saki_naka_area",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Saki Naka",
+   "mr": "साकीनाका",
+   "hi": "साकीनाका",
+   "aka": [
+    "sakinaka"
+   ],
+   "aka_mr": [
+    "साकी नाका"
+   ],
+   "aka_hi": [
+    "साकी नाका"
+   ],
+   "lat": 19.1082,
+   "lon": 72.8828,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "chandivali",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Chandivali",
+   "mr": "चांदिवली",
+   "hi": "चाँदिवली",
+   "aka": [],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.1091,
+   "lon": 72.8946,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "kanjurmarg",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Kanjurmarg",
+   "mr": "कांजूरमार्ग",
+   "hi": "कांजुरमार्ग",
+   "aka": [
+    "kanjur marg"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.129,
+   "lon": 72.93,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "hindmata",
+   "kind": "low_lying_spot",
+   "feature_type": "landmark",
+   "anchor": "J19",
+   "en": "Hindmata (Dadar East)",
+   "mr": "हिंदमाता (दादर पूर्व)",
+   "hi": "हिंदमाता (दादर पूर्व)",
+   "aka": [
+    "hindmata junction",
+    "hind mata",
+    "hindmata dadar"
+   ],
+   "aka_mr": [
+    "हिंदमाता चौक"
+   ],
+   "aka_hi": [
+    "हिंदमाता चौक"
+   ],
+   "lat": 19.00561,
+   "lon": 72.83976,
+   "importance": 0.82,
+   "low_lying": true,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "dadar_tt",
+   "kind": "low_lying_spot",
+   "feature_type": "landmark",
+   "anchor": "J20",
+   "en": "Dadar TT Circle",
+   "mr": "दादर टीटी सर्कल",
+   "hi": "दादर टीटी सर्कल",
+   "aka": [
+    "dadar tt",
+    "dadar t t circle",
+    "tt circle dadar"
+   ],
+   "aka_mr": [
+    "दादर टीटी"
+   ],
+   "aka_hi": [
+    "दादर टीटी"
+   ],
+   "lat": 19.01753,
+   "lon": 72.84811,
+   "importance": 0.8,
+   "low_lying": true,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "kings_circle",
+   "kind": "low_lying_spot",
+   "feature_type": "landmark",
+   "anchor": "J21",
+   "en": "King's Circle (Matunga)",
+   "mr": "किंग्ज सर्कल (माटुंगा)",
+   "hi": "किंग्स सर्कल (माटुंगा)",
+   "aka": [
+    "kings circle",
+    "king circle",
+    "maheshwari udyan circle"
+   ],
+   "aka_mr": [
+    "किंग्ज सर्कल",
+    "किंग सर्कल"
+   ],
+   "aka_hi": [
+    "किंग्स सर्कल",
+    "किंग सर्कल"
+   ],
+   "lat": 19.0278,
+   "lon": 72.85649,
+   "importance": 0.8,
+   "low_lying": true,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "gandhi_market",
+   "kind": "low_lying_spot",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Gandhi Market (Sion)",
+   "mr": "गांधी मार्केट (सायन)",
+   "hi": "गांधी मार्केट (सायन)",
+   "aka": [
+    "gandhi market sion",
+    "gandhi market matunga"
+   ],
+   "aka_mr": [
+    "गांधी मार्केट"
+   ],
+   "aka_hi": [
+    "गांधी मार्केट"
+   ],
+   "lat": 19.033,
+   "lon": 72.859,
+   "importance": 0.7,
+   "low_lying": true,
+   "source": "hand"
+  },
+  {
+   "id": "sion_road_24",
+   "kind": "low_lying_street",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Sion Road No. 24",
+   "mr": "सायन रोड क्रमांक २४",
+   "hi": "सायन रोड नंबर 24",
+   "aka": [
+    "road no 24 sion",
+    "sion road number 24"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.04,
+   "lon": 72.861,
+   "importance": 0.55,
+   "low_lying": true,
+   "source": "hand"
+  },
+  {
+   "id": "kranti_nagar",
+   "kind": "low_lying_spot",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Kranti Nagar (Kurla, Mithi river)",
+   "mr": "क्रांतीनगर (कुर्ला)",
+   "hi": "क्रांति नगर (कुर्ला)",
+   "aka": [
+    "kranti nagar kurla",
+    "kranti nagar mithi"
+   ],
+   "aka_mr": [
+    "क्रांती नगर"
+   ],
+   "aka_hi": [
+    "क्रांतिनगर"
+   ],
+   "lat": 19.076,
+   "lon": 72.879,
+   "importance": 0.7,
+   "low_lying": true,
+   "source": "hand"
+  },
+  {
+   "id": "wadala_bhakti_park",
+   "kind": "low_lying_spot",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Wadala (Bhakti Park)",
+   "mr": "वडाळा (भक्ती पार्क)",
+   "hi": "वडाला (भक्ति पार्क)",
+   "aka": [
+    "bhakti park wadala",
+    "wadala bridge"
+   ],
+   "aka_mr": [
+    "भक्ती पार्क"
+   ],
+   "aka_hi": [
+    "भक्ति पार्क"
+   ],
+   "lat": 19.028,
+   "lon": 72.878,
+   "importance": 0.6,
+   "low_lying": true,
+   "source": "hand"
+  },
+  {
+   "id": "dharavi_t_junction",
+   "kind": "low_lying_spot",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Dharavi T junction (90 Feet Road)",
+   "mr": "धारावी टी जंक्शन",
+   "hi": "धारावी टी जंक्शन",
+   "aka": [
+    "dharavi junction",
+    "90 feet road dharavi"
+   ],
+   "aka_mr": [
+    "धारावी जंक्शन"
+   ],
+   "aka_hi": [
+    "धारावी जंक्शन"
+   ],
+   "lat": 19.047,
+   "lon": 72.856,
+   "importance": 0.6,
+   "low_lying": true,
+   "source": "hand"
+  },
+  {
+   "id": "national_college_bandra",
+   "kind": "low_lying_spot",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Linking Road near National College (Bandra)",
+   "mr": "लिंकिंग रोड, नॅशनल कॉलेजजवळ (वांद्रे)",
+   "hi": "लिंकिंग रोड, नेशनल कॉलेज के पास (बांद्रा)",
+   "aka": [
+    "national college bandra",
+    "national college linking road"
+   ],
+   "aka_mr": [
+    "नॅशनल कॉलेज"
+   ],
+   "aka_hi": [
+    "नेशनल कॉलेज"
+   ],
+   "lat": 19.062,
+   "lon": 72.836,
+   "importance": 0.55,
+   "low_lying": true,
+   "source": "hand"
+  },
+  {
+   "id": "chunabhatti_station_road",
+   "kind": "low_lying_spot",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Chunabhatti station road",
+   "mr": "चुनाभट्टी स्थानक रस्ता",
+   "hi": "चूनाभट्टी स्टेशन रोड",
+   "aka": [
+    "chunabhatti station"
+   ],
+   "aka_mr": [
+    "चुनाभट्टी स्थानक"
+   ],
+   "aka_hi": [
+    "चूनाभट्टी स्टेशन"
+   ],
+   "lat": 19.052,
+   "lon": 72.869,
+   "importance": 0.55,
+   "low_lying": true,
+   "source": "hand"
+  },
+  {
+   "id": "yellow_gate",
+   "kind": "low_lying_spot",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Yellow Gate (docks, P D'Mello Road)",
+   "mr": "यलो गेट (पी. डिमेलो मार्ग)",
+   "hi": "येलो गेट (पी डिमेलो रोड)",
+   "aka": [
+    "yellow gate docks",
+    "yellow gate police station area"
+   ],
+   "aka_mr": [
+    "यलो गेट"
+   ],
+   "aka_hi": [
+    "येलो गेट"
+   ],
+   "lat": 18.944,
+   "lon": 72.843,
+   "importance": 0.5,
+   "low_lying": true,
+   "source": "hand"
+  },
+  {
+   "id": "parel_tt",
+   "kind": "low_lying_spot",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Parel TT (Parel East)",
+   "mr": "परळ टीटी",
+   "hi": "परेल टीटी",
+   "aka": [
+    "parel tt junction"
+   ],
+   "aka_mr": [
+    "परळ टीटी"
+   ],
+   "aka_hi": [
+    "परेल टीटी"
+   ],
+   "lat": 19.003,
+   "lon": 72.844,
+   "importance": 0.6,
+   "low_lying": true,
+   "source": "hand"
+  },
+  {
+   "id": "vile_parle_subway",
+   "kind": "subway",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Vile Parle subway (Nehru Road)",
+   "mr": "विलेपार्ले सबवे",
+   "hi": "विले पार्ले सबवे",
+   "aka": [
+    "parle subway",
+    "vile parle east subway"
+   ],
+   "aka_mr": [
+    "पार्ले सबवे"
+   ],
+   "aka_hi": [
+    "पार्ले सबवे"
+   ],
+   "lat": 19.0995,
+   "lon": 72.8475,
+   "importance": 0.55,
+   "low_lying": true,
+   "source": "hand"
+  },
+  {
+   "id": "chembur_shell_colony",
+   "kind": "low_lying_spot",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Shell Colony (Chembur)",
+   "mr": "शेल कॉलनी (चेंबूर)",
+   "hi": "शेल कॉलोनी (चेंबूर)",
+   "aka": [
+    "shell colony chembur"
+   ],
+   "aka_mr": [
+    "शेल कॉलनी"
+   ],
+   "aka_hi": [
+    "शेल कॉलोनी"
+   ],
+   "lat": 19.047,
+   "lon": 72.896,
+   "importance": 0.5,
+   "low_lying": true,
+   "source": "hand"
+  },
+  {
+   "id": "milan_subway",
+   "kind": "subway",
+   "feature_type": "landmark",
+   "anchor": "J42",
+   "en": "Milan Subway (Santacruz)",
+   "mr": "मिलन सबवे (सांताक्रूझ)",
+   "hi": "मिलन सबवे (सांताक्रूज़)",
+   "aka": [
+    "milan subway santacruz",
+    "milan underpass"
+   ],
+   "aka_mr": [
+    "मिलन भुयारी मार्ग"
+   ],
+   "aka_hi": [
+    "मिलन अंडरपास"
+   ],
+   "lat": 19.09048,
+   "lon": 72.84261,
+   "importance": 0.82,
+   "low_lying": true,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "andheri_subway",
+   "kind": "subway",
+   "feature_type": "landmark",
+   "anchor": "J47",
+   "en": "Andheri Subway",
+   "mr": "अंधेरी सबवे",
+   "hi": "अंधेरी सबवे",
+   "aka": [
+    "andheri underpass",
+    "andheri subway east"
+   ],
+   "aka_mr": [
+    "अंधेरी भुयारी मार्ग"
+   ],
+   "aka_hi": [
+    "अंधेरी अंडरपास"
+   ],
+   "lat": 19.1148,
+   "lon": 72.84742,
+   "importance": 0.82,
+   "low_lying": true,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "khar_subway",
+   "kind": "subway",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Khar subway",
+   "mr": "खार सबवे",
+   "hi": "खार सबवे",
+   "aka": [
+    "khar underpass"
+   ],
+   "aka_mr": [
+    "खार भुयारी मार्ग"
+   ],
+   "aka_hi": [],
+   "lat": 19.07,
+   "lon": 72.84,
+   "importance": 0.6,
+   "low_lying": true,
+   "source": "hand"
+  },
+  {
+   "id": "malad_subway",
+   "kind": "subway",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Malad subway (Malad West)",
+   "mr": "मालाड सबवे",
+   "hi": "मलाड सबवे",
+   "aka": [
+    "malad underpass",
+    "malad east subway"
+   ],
+   "aka_mr": [
+    "मालाड भुयारी मार्ग"
+   ],
+   "aka_hi": [],
+   "lat": 19.186,
+   "lon": 72.845,
+   "importance": 0.6,
+   "low_lying": true,
+   "source": "hand"
+  },
+  {
+   "id": "dahisar_subway",
+   "kind": "subway",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Dahisar subway",
+   "mr": "दहिसर सबवे",
+   "hi": "दहिसर सबवे",
+   "aka": [
+    "dahisar underpass"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.251,
+   "lon": 72.862,
+   "importance": 0.55,
+   "low_lying": true,
+   "source": "hand"
+  },
+  {
+   "id": "gokhale_road_subway",
+   "kind": "subway",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Gokhale Road subway (Dadar)",
+   "mr": "गोखले रोड सबवे (दादर)",
+   "hi": "गोखले रोड सबवे (दादर)",
+   "aka": [
+    "dadar subway"
+   ],
+   "aka_mr": [
+    "दादर सबवे"
+   ],
+   "aka_hi": [
+    "दादर सबवे"
+   ],
+   "lat": 19.023,
+   "lon": 72.84,
+   "importance": 0.5,
+   "low_lying": true,
+   "source": "hand"
+  },
+  {
+   "id": "csmt",
+   "kind": "terminal",
+   "feature_type": "landmark",
+   "anchor": "J4",
+   "en": "CSMT (Chhatrapati Shivaji Maharaj Terminus)",
+   "mr": "छत्रपती शिवाजी महाराज टर्मिनस",
+   "hi": "छत्रपति शिवाजी महाराज टर्मिनस",
+   "aka": [
+    "csmt station",
+    "cst station",
+    "victoria terminus",
+    "vt station",
+    "chhatrapati shivaji terminus",
+    "csmt railway station"
+   ],
+   "aka_mr": [
+    "सीएसएमटी",
+    "सीएसएमटी स्थानक",
+    "व्हीटी स्थानक"
+   ],
+   "aka_hi": [
+    "सीएसएमटी",
+    "सीएसटी स्टेशन",
+    "वीटी स्टेशन"
+   ],
+   "lat": 18.9398,
+   "lon": 72.8355,
+   "importance": 0.85,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "churchgate",
+   "kind": "terminal",
+   "feature_type": "landmark",
+   "anchor": "J3",
+   "en": "Churchgate",
+   "mr": "चर्चगेट",
+   "hi": "चर्चगेट",
+   "aka": [
+    "churchgate station",
+    "churchgate railway station"
+   ],
+   "aka_mr": [
+    "चर्चगेट स्थानक"
+   ],
+   "aka_hi": [
+    "चर्चगेट स्टेशन"
+   ],
+   "lat": 18.9353,
+   "lon": 72.8274,
+   "importance": 0.8,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "dadar",
+   "kind": "terminal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Dadar station",
+   "mr": "दादर स्थानक",
+   "hi": "दादर स्टेशन",
+   "aka": [
+    "dadar railway station",
+    "dadar stn"
+   ],
+   "aka_mr": [
+    "दादर रेल्वे स्थानक",
+    "दादर स्टेशन"
+   ],
+   "aka_hi": [
+    "दादर रेलवे स्टेशन"
+   ],
+   "lat": 19.0186,
+   "lon": 72.8436,
+   "importance": 0.82,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "andheri",
+   "kind": "terminal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Andheri station",
+   "mr": "अंधेरी स्थानक",
+   "hi": "अंधेरी स्टेशन",
+   "aka": [
+    "andheri railway station",
+    "andheri stn"
+   ],
+   "aka_mr": [
+    "अंधेरी रेल्वे स्थानक",
+    "अंधेरी स्टेशन"
+   ],
+   "aka_hi": [
+    "अंधेरी रेलवे स्टेशन"
+   ],
+   "lat": 19.1197,
+   "lon": 72.8464,
+   "importance": 0.8,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "bandra",
+   "kind": "terminal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Bandra station",
+   "mr": "वांद्रे स्थानक",
+   "hi": "बांद्रा स्टेशन",
+   "aka": [
+    "bandra railway station",
+    "bandra terminus"
+   ],
+   "aka_mr": [
+    "वांद्रे रेल्वे स्थानक",
+    "वांद्रे स्टेशन"
+   ],
+   "aka_hi": [
+    "बांद्रा रेलवे स्टेशन"
+   ],
+   "lat": 19.0544,
+   "lon": 72.8406,
+   "importance": 0.75,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "kurla",
+   "kind": "terminal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Kurla station",
+   "mr": "कुर्ला स्थानक",
+   "hi": "कुर्ला स्टेशन",
+   "aka": [
+    "kurla railway station",
+    "kurla stn"
+   ],
+   "aka_mr": [
+    "कुर्ला रेल्वे स्थानक",
+    "कुर्ला स्टेशन"
+   ],
+   "aka_hi": [
+    "कुर्ला रेलवे स्टेशन"
+   ],
+   "lat": 19.065,
+   "lon": 72.879,
+   "importance": 0.78,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "ltt",
+   "kind": "terminal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Lokmanya Tilak Terminus (LTT)",
+   "mr": "लोकमान्य टिळक टर्मिनस",
+   "hi": "लोकमान्य तिलक टर्मिनस",
+   "aka": [
+    "ltt",
+    "lokmanya tilak terminus",
+    "kurla terminus",
+    "ltt station"
+   ],
+   "aka_mr": [
+    "एलटीटी",
+    "कुर्ला टर्मिनस"
+   ],
+   "aka_hi": [
+    "एलटीटी",
+    "कुर्ला टर्मिनस"
+   ],
+   "lat": 19.069,
+   "lon": 72.891,
+   "importance": 0.72,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "borivali",
+   "kind": "terminal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Borivali station",
+   "mr": "बोरिवली स्थानक",
+   "hi": "बोरीवली स्टेशन",
+   "aka": [
+    "borivali railway station",
+    "borivli station"
+   ],
+   "aka_mr": [
+    "बोरिवली रेल्वे स्थानक",
+    "बोरिवली स्टेशन"
+   ],
+   "aka_hi": [
+    "बोरीवली रेलवे स्टेशन"
+   ],
+   "lat": 19.229,
+   "lon": 72.857,
+   "importance": 0.72,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "ghatkopar_station",
+   "kind": "terminal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Ghatkopar station",
+   "mr": "घाटकोपर स्थानक",
+   "hi": "घाटकोपर स्टेशन",
+   "aka": [
+    "ghatkopar railway station",
+    "ghatkopar metro station"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.086,
+   "lon": 72.9081,
+   "importance": 0.65,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "mumbai_central_station",
+   "kind": "terminal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Mumbai Central station",
+   "mr": "मुंबई सेंट्रल स्थानक",
+   "hi": "मुंबई सेंट्रल स्टेशन",
+   "aka": [
+    "mumbai central railway station",
+    "bombay central station"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.969,
+   "lon": 72.8195,
+   "importance": 0.65,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "marine_lines_station",
+   "kind": "terminal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Marine Lines station",
+   "mr": "मरीन लाइन्स स्थानक",
+   "hi": "मरीन लाइंस स्टेशन",
+   "aka": [
+    "marine lines railway station"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.946,
+   "lon": 72.824,
+   "importance": 0.65,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "byculla_station",
+   "kind": "terminal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Byculla station",
+   "mr": "भायखळा स्थानक",
+   "hi": "भायखला स्टेशन",
+   "aka": [
+    "byculla railway station"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.979,
+   "lon": 72.833,
+   "importance": 0.65,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "parel_station",
+   "kind": "terminal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Parel station",
+   "mr": "परळ स्थानक",
+   "hi": "परेल स्टेशन",
+   "aka": [
+    "parel railway station"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.009,
+   "lon": 72.838,
+   "importance": 0.65,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "prabhadevi_station",
+   "kind": "terminal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Prabhadevi station (Elphinstone Road)",
+   "mr": "प्रभादेवी स्थानक",
+   "hi": "प्रभादेवी स्टेशन",
+   "aka": [
+    "elphinstone road station",
+    "prabhadevi railway station"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.008,
+   "lon": 72.835,
+   "importance": 0.65,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "matunga_station",
+   "kind": "terminal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Matunga station",
+   "mr": "माटुंगा स्थानक",
+   "hi": "माटुंगा स्टेशन",
+   "aka": [
+    "matunga railway station"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.0275,
+   "lon": 72.855,
+   "importance": 0.65,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "sion_station",
+   "kind": "terminal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Sion station",
+   "mr": "सायन स्थानक",
+   "hi": "सायन स्टेशन",
+   "aka": [
+    "sion railway station"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.047,
+   "lon": 72.863,
+   "importance": 0.65,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "vile_parle_station",
+   "kind": "terminal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Vile Parle station",
+   "mr": "विलेपार्ले स्थानक",
+   "hi": "विले पार्ले स्टेशन",
+   "aka": [
+    "vile parle railway station"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.1,
+   "lon": 72.844,
+   "importance": 0.65,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "santacruz_station",
+   "kind": "terminal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Santacruz station",
+   "mr": "सांताक्रूझ स्थानक",
+   "hi": "सांताक्रूज़ स्टेशन",
+   "aka": [
+    "santacruz railway station"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.082,
+   "lon": 72.841,
+   "importance": 0.65,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "goregaon_station",
+   "kind": "terminal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Goregaon station",
+   "mr": "गोरेगाव स्थानक",
+   "hi": "गोरेगांव स्टेशन",
+   "aka": [
+    "goregaon railway station"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.165,
+   "lon": 72.849,
+   "importance": 0.65,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "malad_station",
+   "kind": "terminal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Malad station",
+   "mr": "मालाड स्थानक",
+   "hi": "मलाड स्टेशन",
+   "aka": [
+    "malad railway station"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.187,
+   "lon": 72.849,
+   "importance": 0.65,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "chembur_station",
+   "kind": "terminal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Chembur station",
+   "mr": "चेंबूर स्थानक",
+   "hi": "चेंबूर स्टेशन",
+   "aka": [
+    "chembur railway station"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.062,
+   "lon": 72.901,
+   "importance": 0.65,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "vikhroli_station",
+   "kind": "terminal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Vikhroli station",
+   "mr": "विक्रोळी स्थानक",
+   "hi": "विक्रोली स्टेशन",
+   "aka": [
+    "vikhroli railway station"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.111,
+   "lon": 72.928,
+   "importance": 0.65,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "mulund_station",
+   "kind": "terminal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Mulund station",
+   "mr": "मुलुंड स्थानक",
+   "hi": "मुलुंड स्टेशन",
+   "aka": [
+    "mulund railway station"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.172,
+   "lon": 72.956,
+   "importance": 0.65,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "wadala_road_station",
+   "kind": "terminal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Wadala Road station",
+   "mr": "वडाळा रोड स्थानक",
+   "hi": "वडाला रोड स्टेशन",
+   "aka": [
+    "wadala road railway station"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.016,
+   "lon": 72.859,
+   "importance": 0.65,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "acharya_atre_chowk_metro",
+   "kind": "terminal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Acharya Atre Chowk metro station (Line 3)",
+   "mr": "आचार्य अत्रे चौक मेट्रो स्थानक",
+   "hi": "आचार्य अत्रे चौक मेट्रो स्टेशन",
+   "aka": [
+    "acharya atre chowk metro",
+    "atre chowk metro station",
+    "line 3 worli metro station"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.001,
+   "lon": 72.816,
+   "importance": 0.65,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "airport_t2",
+   "kind": "terminal",
+   "feature_type": "landmark",
+   "anchor": "J49",
+   "en": "Mumbai Airport T2",
+   "mr": "मुंबई विमानतळ टी२",
+   "hi": "मुंबई हवाई अड्डा टी2",
+   "aka": [
+    "t2 terminal",
+    "csmia terminal 2",
+    "international airport mumbai",
+    "sahar airport"
+   ],
+   "aka_mr": [
+    "विमानतळ टी२",
+    "सहार विमानतळ"
+   ],
+   "aka_hi": [
+    "टी2 टर्मिनल",
+    "सहार हवाई अड्डा"
+   ],
+   "lat": 19.0989,
+   "lon": 72.8746,
+   "importance": 0.8,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "airport_t1",
+   "kind": "terminal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Mumbai Airport T1 (Santacruz)",
+   "mr": "मुंबई विमानतळ टी१ (सांताक्रूझ)",
+   "hi": "मुंबई हवाई अड्डा टी1 (सांताक्रूज़)",
+   "aka": [
+    "t1 terminal",
+    "domestic airport mumbai",
+    "santacruz airport"
+   ],
+   "aka_mr": [
+    "देशांतर्गत विमानतळ"
+   ],
+   "aka_hi": [
+    "घरेलू हवाई अड्डा"
+   ],
+   "lat": 19.0896,
+   "lon": 72.8656,
+   "importance": 0.7,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "atal_setu",
+   "kind": "bridge",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Atal Setu (Mumbai Trans Harbour Link)",
+   "mr": "अटल सेतू (शिवडी टोक)",
+   "hi": "अटल सेतु (सेवरी छोर)",
+   "aka": [
+    "mthl",
+    "mumbai trans harbour link",
+    "sewri nhava sheva sea bridge",
+    "atal setu bridge"
+   ],
+   "aka_mr": [
+    "शिवडी न्हावा शेवा सागरी सेतू",
+    "अटल सेतू पूल"
+   ],
+   "aka_hi": [
+    "एमटीएचएल",
+    "मुंबई ट्रांस हार्बर लिंक"
+   ],
+   "lat": 18.99836,
+   "lon": 72.85481,
+   "importance": 0.75,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "delisle_road_bridge",
+   "kind": "bridge",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Delisle Road bridge (Lower Parel)",
+   "mr": "डिलाईल रोड पूल (लोअर परळ)",
+   "hi": "डिलाइल रोड पुल (लोअर परेल)",
+   "aka": [
+    "delisle bridge",
+    "lower parel bridge"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.997,
+   "lon": 72.829,
+   "importance": 0.55,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "elphinstone_bridge",
+   "kind": "bridge",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Elphinstone Road bridge (Prabhadevi)",
+   "mr": "एल्फिन्स्टन पूल (प्रभादेवी)",
+   "hi": "एल्फिंस्टन पुल (प्रभादेवी)",
+   "aka": [
+    "elphinstone bridge",
+    "prabhadevi bridge"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.0085,
+   "lon": 72.836,
+   "importance": 0.55,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "hancock_bridge",
+   "kind": "bridge",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Hancock Bridge (Sandhurst Road)",
+   "mr": "हँकॉक पूल",
+   "hi": "हैनकॉक पुल",
+   "aka": [
+    "hancock bridge mazgaon"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.961,
+   "lon": 72.838,
+   "importance": 0.55,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "kherwadi_flyover",
+   "kind": "bridge",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Kherwadi flyover (Western Express Highway)",
+   "mr": "खेरवाडी उड्डाणपूल",
+   "hi": "खेरवाडी फ्लाईओवर",
+   "aka": [
+    "kherwadi bridge"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.061,
+   "lon": 72.847,
+   "importance": 0.55,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "sion_flyover",
+   "kind": "bridge",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Sion flyover",
+   "mr": "सायन उड्डाणपूल",
+   "hi": "सायन फ्लाईओवर",
+   "aka": [
+    "sion bridge",
+    "sion rob"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.04,
+   "lon": 72.864,
+   "importance": 0.55,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "barfiwala_flyover",
+   "kind": "bridge",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Barfiwala flyover (Andheri)",
+   "mr": "बर्फीवाला उड्डाणपूल",
+   "hi": "बर्फीवाला फ्लाईओवर",
+   "aka": [
+    "barfiwala bridge"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.118,
+   "lon": 72.842,
+   "importance": 0.55,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "kem",
+   "kind": "hospital",
+   "feature_type": "landmark",
+   "anchor": "J18",
+   "en": "KEM Hospital",
+   "mr": "केईएम रुग्णालय",
+   "hi": "केईएम अस्पताल",
+   "aka": [
+    "kem hospital parel",
+    "king edward memorial hospital",
+    "kem"
+   ],
+   "aka_mr": [
+    "केईएम",
+    "केईएम हॉस्पिटल"
+   ],
+   "aka_hi": [
+    "केईएम",
+    "केईएम हॉस्पिटल"
+   ],
+   "lat": 19.0026,
+   "lon": 72.842,
+   "importance": 0.82,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "sion_hospital",
+   "kind": "hospital",
+   "feature_type": "landmark",
+   "anchor": "J22",
+   "en": "Sion Hospital (LTMGH)",
+   "mr": "सायन रुग्णालय",
+   "hi": "सायन अस्पताल",
+   "aka": [
+    "ltmgh",
+    "lokmanya tilak hospital",
+    "lokmanya tilak municipal general hospital",
+    "sion hospital ltmgh"
+   ],
+   "aka_mr": [
+    "सायन हॉस्पिटल",
+    "लोकमान्य टिळक रुग्णालय"
+   ],
+   "aka_hi": [
+    "सायन हॉस्पिटल",
+    "लोकमान्य तिलक अस्पताल"
+   ],
+   "lat": 19.03636,
+   "lon": 72.85921,
+   "importance": 0.8,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "jj_hospital",
+   "kind": "hospital",
+   "feature_type": "landmark",
+   "anchor": "J13",
+   "en": "JJ Hospital",
+   "mr": "जे.जे. रुग्णालय",
+   "hi": "जे.जे. अस्पताल",
+   "aka": [
+    "j j hospital",
+    "sir jj hospital",
+    "jj hospital byculla"
+   ],
+   "aka_mr": [
+    "जेजे रुग्णालय",
+    "जे जे हॉस्पिटल"
+   ],
+   "aka_hi": [
+    "जेजे अस्पताल",
+    "जे जे हॉस्पिटल"
+   ],
+   "lat": 18.96386,
+   "lon": 72.83479,
+   "importance": 0.78,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "nair_hospital",
+   "kind": "hospital",
+   "feature_type": "landmark",
+   "anchor": "J12",
+   "en": "Nair Hospital",
+   "mr": "नायर रुग्णालय",
+   "hi": "नायर अस्पताल",
+   "aka": [
+    "byl nair hospital",
+    "nair hospital mumbai central"
+   ],
+   "aka_mr": [
+    "नायर हॉस्पिटल"
+   ],
+   "aka_hi": [
+    "नायर हॉस्पिटल"
+   ],
+   "lat": 18.97302,
+   "lon": 72.82191,
+   "importance": 0.74,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "cooper_hospital",
+   "kind": "hospital",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Cooper Hospital",
+   "mr": "कूपर रुग्णालय",
+   "hi": "कूपर अस्पताल",
+   "aka": [
+    "cooper hospital juhu",
+    "rn cooper hospital",
+    "r n cooper hospital"
+   ],
+   "aka_mr": [
+    "कूपर हॉस्पिटल"
+   ],
+   "aka_hi": [
+    "कूपर हॉस्पिटल"
+   ],
+   "lat": 19.10785,
+   "lon": 72.83599,
+   "importance": 0.72,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "hinduja_hospital",
+   "kind": "hospital",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Hinduja Hospital (Mahim)",
+   "mr": "हिंदुजा रुग्णालय (माहीम)",
+   "hi": "हिंदुजा अस्पताल (माहिम)",
+   "aka": [
+    "hinduja hospital mahim",
+    "pd hinduja hospital"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.03323,
+   "lon": 72.83817,
+   "importance": 0.62,
+   "low_lying": false,
+   "source": "osm:way/113716578"
+  },
+  {
+   "id": "lilavati_hospital",
+   "kind": "hospital",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Lilavati Hospital (Bandra)",
+   "mr": "लीलावती रुग्णालय (वांद्रे)",
+   "hi": "लीलावती अस्पताल (बांद्रा)",
+   "aka": [
+    "lilavati hospital bandra"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.05098,
+   "lon": 72.82917,
+   "importance": 0.62,
+   "low_lying": false,
+   "source": "osm:way/31144296"
+  },
+  {
+   "id": "bhabha_hospital_bandra",
+   "kind": "hospital",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Bhabha Hospital (Bandra)",
+   "mr": "भाभा रुग्णालय (वांद्रे)",
+   "hi": "भाभा अस्पताल (बांद्रा)",
+   "aka": [
+    "kb bhabha hospital",
+    "bandra bhabha hospital"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.05738,
+   "lon": 72.83345,
+   "importance": 0.62,
+   "low_lying": false,
+   "source": "osm:way/665481038"
+  },
+  {
+   "id": "bhabha_hospital_kurla",
+   "kind": "hospital",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Bhabha Hospital (Kurla)",
+   "mr": "भाभा रुग्णालय (कुर्ला)",
+   "hi": "भाभा अस्पताल (कुर्ला)",
+   "aka": [
+    "kurla bhabha hospital"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.07085,
+   "lon": 72.87811,
+   "importance": 0.62,
+   "low_lying": false,
+   "source": "osm:node/9215480148"
+  },
+  {
+   "id": "rajawadi_hospital",
+   "kind": "hospital",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Rajawadi Hospital (Ghatkopar)",
+   "mr": "राजावाडी रुग्णालय (घाटकोपर)",
+   "hi": "राजावाड़ी अस्पताल (घाटकोपर)",
+   "aka": [
+    "rajawadi hospital ghatkopar"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.07877,
+   "lon": 72.90137,
+   "importance": 0.62,
+   "low_lying": false,
+   "source": "osm:node/14173965274"
+  },
+  {
+   "id": "bombay_hospital",
+   "kind": "hospital",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Bombay Hospital (Marine Lines)",
+   "mr": "बॉम्बे हॉस्पिटल",
+   "hi": "बॉम्बे हॉस्पिटल",
+   "aka": [
+    "bombay hospital marine lines"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.94078,
+   "lon": 72.82792,
+   "importance": 0.62,
+   "low_lying": false,
+   "source": "osm:way/46715024"
+  },
+  {
+   "id": "st_george_hospital",
+   "kind": "hospital",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "St George's Hospital (CSMT)",
+   "mr": "सेंट जॉर्ज रुग्णालय",
+   "hi": "सेंट जॉर्ज अस्पताल",
+   "aka": [
+    "st george hospital",
+    "saint george hospital"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.94069,
+   "lon": 72.83788,
+   "importance": 0.62,
+   "low_lying": false,
+   "source": "osm:way/50884815"
+  },
+  {
+   "id": "kasturba_hospital",
+   "kind": "hospital",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Kasturba Hospital (Chinchpokli)",
+   "mr": "कस्तुरबा रुग्णालय",
+   "hi": "कस्तूरबा अस्पताल",
+   "aka": [
+    "kasturba hospital chinchpokli"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.98419,
+   "lon": 72.83003,
+   "importance": 0.62,
+   "low_lying": false,
+   "source": "osm:node/7225067144"
+  },
+  {
+   "id": "tata_memorial",
+   "kind": "hospital",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Tata Memorial Hospital (Parel)",
+   "mr": "टाटा मेमोरियल रुग्णालय",
+   "hi": "टाटा मेमोरियल अस्पताल",
+   "aka": [
+    "tata memorial hospital parel",
+    "tata hospital"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.00498,
+   "lon": 72.84321,
+   "importance": 0.62,
+   "low_lying": false,
+   "source": "osm:node/7052388277"
+  },
+  {
+   "id": "wadia_hospital",
+   "kind": "hospital",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Wadia Hospital (Parel)",
+   "mr": "वाडिया रुग्णालय (परळ)",
+   "hi": "वाडिया अस्पताल (परेल)",
+   "aka": [
+    "wadia maternity hospital",
+    "wadia children hospital"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.00361,
+   "lon": 72.84237,
+   "importance": 0.62,
+   "low_lying": false,
+   "source": "osm:way/618791586"
+  },
+  {
+   "id": "jaslok_hospital",
+   "kind": "hospital",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Jaslok Hospital (Peddar Road)",
+   "mr": "जसलोक रुग्णालय",
+   "hi": "जसलोक अस्पताल",
+   "aka": [
+    "jaslok hospital peddar road"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.97155,
+   "lon": 72.80994,
+   "importance": 0.62,
+   "low_lying": false,
+   "source": "osm:way/150485811"
+  },
+  {
+   "id": "holy_family_hospital",
+   "kind": "hospital",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Holy Family Hospital (Bandra)",
+   "mr": "होली फॅमिली रुग्णालय",
+   "hi": "होली फैमिली अस्पताल",
+   "aka": [
+    "holy family hospital bandra"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.0555,
+   "lon": 72.82714,
+   "importance": 0.62,
+   "low_lying": false,
+   "source": "osm:way/31213763"
+  },
+  {
+   "id": "shatabdi_hospital_govandi",
+   "kind": "hospital",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Shatabdi Hospital (Govandi)",
+   "mr": "शताब्दी रुग्णालय (गोवंडी)",
+   "hi": "शताब्दी अस्पताल (गोवंडी)",
+   "aka": [
+    "govandi shatabdi hospital"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.04957,
+   "lon": 72.91113,
+   "importance": 0.62,
+   "low_lying": false,
+   "source": "osm:way/411617420"
+  },
+  {
+   "id": "seven_hills_hospital",
+   "kind": "hospital",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Seven Hills Hospital (Marol)",
+   "mr": "सेव्हन हिल्स रुग्णालय",
+   "hi": "सेवन हिल्स अस्पताल",
+   "aka": [
+    "sevenhills hospital",
+    "seven hills hospital marol"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.11773,
+   "lon": 72.87797,
+   "importance": 0.62,
+   "low_lying": false,
+   "source": "osm:node/14246457601"
+  },
+  {
+   "id": "nanavati_hospital",
+   "kind": "hospital",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Nanavati Hospital (Vile Parle)",
+   "mr": "नानावटी रुग्णालय",
+   "hi": "नानावटी अस्पताल",
+   "aka": [
+    "nanavati hospital vile parle"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.09597,
+   "lon": 72.84001,
+   "importance": 0.62,
+   "low_lying": false,
+   "source": "osm:node/3951526714"
+  },
+  {
+   "id": "kokilaben_hospital",
+   "kind": "hospital",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Kokilaben Hospital (Andheri West)",
+   "mr": "कोकिलाबेन रुग्णालय",
+   "hi": "कोकिलाबेन अस्पताल",
+   "aka": [
+    "kokilaben hospital andheri"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.13125,
+   "lon": 72.82456,
+   "importance": 0.62,
+   "low_lying": false,
+   "source": "osm:node/9533834652"
+  },
+  {
+   "id": "hiranandani_hospital_powai",
+   "kind": "hospital",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Hiranandani Hospital (Powai)",
+   "mr": "हिरानंदानी रुग्णालय (पवई)",
+   "hi": "हीरानंदानी अस्पताल (पवई)",
+   "aka": [
+    "hiranandani hospital powai"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.12028,
+   "lon": 72.91705,
+   "importance": 0.62,
+   "low_lying": false,
+   "source": "osm:way/353139106"
+  },
+  {
+   "id": "wankhede",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Wankhede Stadium",
+   "mr": "वानखेडे स्टेडियम",
+   "hi": "वानखेड़े स्टेडियम",
+   "aka": [
+    "wankhede stadium churchgate",
+    "wankhede ground"
+   ],
+   "aka_mr": [
+    "वानखेडे मैदान"
+   ],
+   "aka_hi": [
+    "वानखेड़े मैदान"
+   ],
+   "lat": 18.9389,
+   "lon": 72.8258,
+   "importance": 0.78,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "girgaon_chowpatty",
+   "kind": "visarjan_point",
+   "feature_type": "landmark",
+   "anchor": "J6",
+   "en": "Girgaon Chowpatty",
+   "mr": "गिरगाव चौपाटी",
+   "hi": "गिरगांव चौपाटी",
+   "aka": [
+    "girgaum chowpatty",
+    "chowpatty beach",
+    "girgaon beach"
+   ],
+   "aka_mr": [
+    "गिरगाव चौपाटी किनारा"
+   ],
+   "aka_hi": [
+    "गिरगांव बीच"
+   ],
+   "lat": 18.9548,
+   "lon": 72.8136,
+   "importance": 0.82,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "gateway",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Gateway of India",
+   "mr": "गेटवे ऑफ इंडिया",
+   "hi": "गेटवे ऑफ इंडिया",
+   "aka": [
+    "gateway of india mumbai",
+    "apollo bunder gateway"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.922,
+   "lon": 72.8347,
+   "importance": 0.75,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "shivaji_park",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Shivaji Park",
+   "mr": "शिवाजी पार्क",
+   "hi": "शिवाजी पार्क",
+   "aka": [
+    "shivaji park ground",
+    "shivaji park dadar"
+   ],
+   "aka_mr": [
+    "शिवाजी पार्क मैदान"
+   ],
+   "aka_hi": [
+    "शिवाजी पार्क मैदान"
+   ],
+   "lat": 19.027,
+   "lon": 72.838,
+   "importance": 0.75,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "juhu_beach",
+   "kind": "visarjan_point",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Juhu Beach",
+   "mr": "जुहू चौपाटी",
+   "hi": "जुहू बीच",
+   "aka": [
+    "juhu chowpatty",
+    "juhu beach visarjan"
+   ],
+   "aka_mr": [
+    "जुहू किनारा"
+   ],
+   "aka_hi": [
+    "जुहू चौपाटी"
+   ],
+   "lat": 19.098,
+   "lon": 72.826,
+   "importance": 0.75,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "lalbaugcha_raja",
+   "kind": "pandal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Lalbaugcha Raja",
+   "mr": "लालबागचा राजा",
+   "hi": "लालबागचा राजा",
+   "aka": [
+    "lalbaugcha raja pandal",
+    "lalbaug raja mandal"
+   ],
+   "aka_mr": [
+    "लालबागचा राजा मंडप"
+   ],
+   "aka_hi": [
+    "लालबाग का राजा",
+    "लालबागचा राजा पंडाल"
+   ],
+   "lat": 18.9946,
+   "lon": 72.8356,
+   "importance": 0.8,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "gsb_kings_circle",
+   "kind": "pandal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "GSB Seva Mandal (King's Circle)",
+   "mr": "जीएसबी सेवा मंडळ (किंग्ज सर्कल)",
+   "hi": "जीएसबी सेवा मंडल (किंग्स सर्कल)",
+   "aka": [
+    "gsb ganpati kings circle",
+    "gsb seva mandal"
+   ],
+   "aka_mr": [
+    "जीएसबी गणपती"
+   ],
+   "aka_hi": [
+    "जीएसबी गणपति"
+   ],
+   "lat": 19.029,
+   "lon": 72.856,
+   "importance": 0.65,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "dadar_chowpatty",
+   "kind": "visarjan_point",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Dadar Chowpatty",
+   "mr": "दादर चौपाटी",
+   "hi": "दादर चौपाटी",
+   "aka": [
+    "dadar beach",
+    "shivaji park beach"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.026,
+   "lon": 72.834,
+   "importance": 0.7,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "versova_beach",
+   "kind": "visarjan_point",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Versova beach",
+   "mr": "वर्सोवा किनारा",
+   "hi": "वर्सोवा बीच",
+   "aka": [
+    "versova chowpatty"
+   ],
+   "aka_mr": [
+    "वर्सोवा चौपाटी"
+   ],
+   "aka_hi": [],
+   "lat": 19.135,
+   "lon": 72.813,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "marve_beach",
+   "kind": "visarjan_point",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Marve beach (Malad)",
+   "mr": "मार्वे किनारा",
+   "hi": "मार्वे बीच",
+   "aka": [
+    "marve chowpatty"
+   ],
+   "aka_mr": [
+    "मार्वे चौपाटी"
+   ],
+   "aka_hi": [],
+   "lat": 19.198,
+   "lon": 72.798,
+   "importance": 0.55,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "powai_lake_ghat",
+   "kind": "visarjan_point",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Powai lake Ganesh ghat",
+   "mr": "पवई तलाव गणेश घाट",
+   "hi": "पवई झील गणेश घाट",
+   "aka": [
+    "powai lake",
+    "powai ganesh ghat"
+   ],
+   "aka_mr": [
+    "पवई तलाव"
+   ],
+   "aka_hi": [
+    "पवई झील",
+    "पवई तालाब"
+   ],
+   "lat": 19.126,
+   "lon": 72.905,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "ganesh_galli",
+   "kind": "pandal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Ganesh Galli (Lalbaug)",
+   "mr": "गणेश गल्ली (लालबाग)",
+   "hi": "गणेश गली (लालबाग)",
+   "aka": [
+    "ganesh galli lalbaug",
+    "mumbaicha raja ganesh galli"
+   ],
+   "aka_mr": [
+    "गणेश गल्ली"
+   ],
+   "aka_hi": [
+    "गणेश गली"
+   ],
+   "lat": 18.993,
+   "lon": 72.837,
+   "importance": 0.65,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "chinchpokli_chintamani",
+   "kind": "pandal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Chinchpoklicha Chintamani (pandal)",
+   "mr": "चिंचपोकळीचा चिंतामणी",
+   "hi": "चिंचपोकली का चिंतामणि",
+   "aka": [
+    "chinchpokli chintamani pandal",
+    "chinchpoklicha chintamani mandal"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.988,
+   "lon": 72.832,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "khetwadi_ganraj",
+   "kind": "pandal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Khetwadi Ganraj (pandal)",
+   "mr": "खेतवाडीचा गणराज",
+   "hi": "खेतवाड़ी गणराज",
+   "aka": [
+    "khetwadi ganraj mandal",
+    "khetwadi pandal"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.958,
+   "lon": 72.82,
+   "importance": 0.55,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "andhericha_raja",
+   "kind": "pandal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Andhericha Raja (pandal)",
+   "mr": "अंधेरीचा राजा",
+   "hi": "अंधेरी का राजा",
+   "aka": [
+    "andhericha raja mandal",
+    "andheri raja pandal"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.123,
+   "lon": 72.841,
+   "importance": 0.55,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "brabourne_stadium",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Brabourne Stadium (Churchgate)",
+   "mr": "ब्रेबॉर्न स्टेडियम",
+   "hi": "ब्रेबोर्न स्टेडियम",
+   "aka": [
+    "brabourne stadium cci"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.9322,
+   "lon": 72.8246,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "azad_maidan",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Azad Maidan",
+   "mr": "आझाद मैदान",
+   "hi": "आज़ाद मैदान",
+   "aka": [
+    "azad maidan ground"
+   ],
+   "aka_mr": [],
+   "aka_hi": [
+    "आजाद मैदान"
+   ],
+   "lat": 18.9395,
+   "lon": 72.832,
+   "importance": 0.65,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "oval_maidan",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Oval Maidan",
+   "mr": "ओव्हल मैदान",
+   "hi": "ओवल मैदान",
+   "aka": [
+    "oval maidan ground"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.929,
+   "lon": 72.829,
+   "importance": 0.55,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "mahalaxmi_racecourse",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Mahalaxmi Racecourse",
+   "mr": "महालक्ष्मी रेसकोर्स",
+   "hi": "महालक्ष्मी रेसकोर्स",
+   "aka": [
+    "racecourse ground mahalaxmi"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.983,
+   "lon": 72.819,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "nsci_dome",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "NSCI Dome (Worli)",
+   "mr": "एनएससीआय डोम (वरळी)",
+   "hi": "एनएससीआई डोम (वर्ली)",
+   "aka": [
+    "nsci dome worli",
+    "nsci stadium"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.009,
+   "lon": 72.818,
+   "importance": 0.55,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "bkc_convention_centre",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "BKC convention centre",
+   "mr": "वांद्रे कुर्ला संकुल परिषद केंद्र",
+   "hi": "बीकेसी कन्वेंशन सेंटर",
+   "aka": [
+    "bkc convention center",
+    "jio world centre bkc"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.063,
+   "lon": 72.865,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "mmrda_grounds",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "MMRDA Grounds (BKC)",
+   "mr": "एमएमआरडीए मैदान",
+   "hi": "एमएमआरडीए ग्राउंड",
+   "aka": [
+    "mmrda ground bkc"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.068,
+   "lon": 72.864,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "nesco_goregaon",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "NESCO exhibition centre (Goregaon)",
+   "mr": "नेस्को प्रदर्शन केंद्र",
+   "hi": "नेस्को प्रदर्शनी केंद्र",
+   "aka": [
+    "nesco ground",
+    "nesco centre goregaon"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.154,
+   "lon": 72.853,
+   "importance": 0.55,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "mount_mary_basilica",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Mount Mary Basilica (Bandra)",
+   "mr": "माउंट मेरी चर्च (वांद्रे)",
+   "hi": "माउंट मैरी बेसिलिका (बांद्रा)",
+   "aka": [
+    "mount mary church",
+    "mount mary fair ground"
+   ],
+   "aka_mr": [
+    "माउंट मेरी चर्च"
+   ],
+   "aka_hi": [
+    "माउंट मैरी चर्च"
+   ],
+   "lat": 19.0465,
+   "lon": 72.8225,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "siddhivinayak_temple",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Siddhivinayak Temple (Prabhadevi)",
+   "mr": "सिद्धिविनायक मंदिर (प्रभादेवी)",
+   "hi": "सिद्धिविनायक मंदिर (प्रभादेवी)",
+   "aka": [
+    "siddhivinayak mandir",
+    "siddhivinayak temple prabhadevi"
+   ],
+   "aka_mr": [
+    "सिद्धिविनायक मंदिर"
+   ],
+   "aka_hi": [
+    "सिद्धिविनायक मंदिर"
+   ],
+   "lat": 19.0169,
+   "lon": 72.8303,
+   "importance": 0.7,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "mahalaxmi_temple",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Mahalaxmi Temple",
+   "mr": "महालक्ष्मी मंदिर",
+   "hi": "महालक्ष्मी मंदिर",
+   "aka": [
+    "mahalaxmi mandir"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.9772,
+   "lon": 72.8063,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "haji_ali_dargah",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Haji Ali Dargah",
+   "mr": "हाजी अली दर्गा",
+   "hi": "हाजी अली दरगाह",
+   "aka": [
+    "haji ali dargah mumbai"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.9827,
+   "lon": 72.8089,
+   "importance": 0.65,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "bandstand",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Bandra Bandstand promenade",
+   "mr": "वांद्रे बँडस्टँड",
+   "hi": "बांद्रा बैंडस्टैंड",
+   "aka": [
+    "bandstand bandra",
+    "bandstand promenade"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.047,
+   "lon": 72.819,
+   "importance": 0.55,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "carter_road",
+   "kind": "street",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Carter Road (Bandra)",
+   "mr": "कार्टर रोड (वांद्रे)",
+   "hi": "कार्टर रोड (बांद्रा)",
+   "aka": [
+    "carter road promenade"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.065,
+   "lon": 72.822,
+   "importance": 0.55,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "aarey_colony",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Aarey Milk Colony",
+   "mr": "आरे दुग्ध वसाहत",
+   "hi": "आरे मिल्क कॉलोनी",
+   "aka": [
+    "aarey colony"
+   ],
+   "aka_mr": [
+    "आरे कॉलनी"
+   ],
+   "aka_hi": [
+    "आरे कॉलोनी"
+   ],
+   "lat": 19.1561,
+   "lon": 72.8707,
+   "importance": 0.55,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "national_park_borivali",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "National Park (Borivali)",
+   "mr": "राष्ट्रीय उद्यान (बोरिवली)",
+   "hi": "राष्ट्रीय उद्यान (बोरीवली)",
+   "aka": [
+    "borivali national park",
+    "national park gate borivali"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.229,
+   "lon": 72.871,
+   "importance": 0.55,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "mantralaya",
+   "kind": "agency",
+   "feature_type": "landmark",
+   "anchor": "J1",
+   "en": "Mantralaya",
+   "mr": "मंत्रालय",
+   "hi": "मंत्रालय",
+   "aka": [
+    "mantralaya building"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.9271,
+   "lon": 72.8247,
+   "importance": 0.7,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "bmc_hq",
+   "kind": "agency",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "BMC headquarters",
+   "mr": "बृहन्मुंबई महानगरपालिका मुख्यालय",
+   "hi": "बीएमसी मुख्यालय",
+   "aka": [
+    "bmc headquarters",
+    "bmc hq",
+    "bmc building csmt",
+    "municipal corporation building"
+   ],
+   "aka_mr": [
+    "महापालिका मुख्यालय"
+   ],
+   "aka_hi": [
+    "बीएमसी मुख्यालय भवन"
+   ],
+   "lat": 18.94,
+   "lon": 72.835,
+   "importance": 0.68,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "police_hq",
+   "kind": "agency",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Mumbai Police headquarters (Crawford Market)",
+   "mr": "मुंबई पोलीस मुख्यालय (क्रॉफर्ड मार्केट)",
+   "hi": "मुंबई पुलिस मुख्यालय (क्रॉफर्ड मार्केट)",
+   "aka": [
+    "mumbai police headquarters",
+    "police headquarters crawford market"
+   ],
+   "aka_mr": [
+    "पोलीस मुख्यालय"
+   ],
+   "aka_hi": [
+    "पुलिस मुख्यालय"
+   ],
+   "lat": 18.947,
+   "lon": 72.834,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "traffic_hq",
+   "kind": "agency",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Mumbai Traffic Police headquarters (Worli)",
+   "mr": "मुंबई वाहतूक पोलीस मुख्यालय (वरळी)",
+   "hi": "मुंबई ट्रैफ़िक पुलिस मुख्यालय (वर्ली)",
+   "aka": [
+    "traffic police headquarters worli",
+    "mumbai traffic police hq"
+   ],
+   "aka_mr": [
+    "वाहतूक पोलीस मुख्यालय"
+   ],
+   "aka_hi": [
+    "ट्रैफिक पुलिस मुख्यालय"
+   ],
+   "lat": 19.017,
+   "lon": 72.817,
+   "importance": 0.55,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "haji_ali_ps",
+   "kind": "hydro",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Haji Ali pumping station",
+   "mr": "हाजी अली उदंचन केंद्र",
+   "hi": "हाजी अली पंपिंग स्टेशन",
+   "aka": [
+    "haji ali pumping station",
+    "haji ali storm water pumping station"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.981,
+   "lon": 72.813,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "irla_ps",
+   "kind": "hydro",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Irla pumping station",
+   "mr": "इर्ला उदंचन केंद्र",
+   "hi": "इर्ला पंपिंग स्टेशन",
+   "aka": [
+    "irla pumping station",
+    "irla storm water pumping station"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.101,
+   "lon": 72.833,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "love_grove_ps",
+   "kind": "hydro",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Love Grove pumping station",
+   "mr": "लव्ह ग्रोव्ह उदंचन केंद्र",
+   "hi": "लव ग्रोव पंपिंग स्टेशन",
+   "aka": [
+    "love grove pumping station",
+    "love grove storm water pumping station"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.008,
+   "lon": 72.815,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "cleveland_bunder_ps",
+   "kind": "hydro",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Cleveland Bunder pumping station",
+   "mr": "क्लिव्हलँड बंदर उदंचन केंद्र",
+   "hi": "क्लीवलैंड बंदर पंपिंग स्टेशन",
+   "aka": [
+    "cleveland bunder pumping station",
+    "cleveland bunder storm water pumping station"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.015,
+   "lon": 72.815,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "britannia_ps",
+   "kind": "hydro",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Britannia pumping station (Reay Road)",
+   "mr": "ब्रिटानिया उदंचन केंद्र (रे रोड)",
+   "hi": "ब्रिटानिया पंपिंग स्टेशन (रे रोड)",
+   "aka": [
+    "britannia pumping station",
+    "britannia storm water pumping station"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.969,
+   "lon": 72.847,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "gazdarbandh_ps",
+   "kind": "hydro",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Gazdarbandh pumping station (Khar)",
+   "mr": "गझदरबंध उदंचन केंद्र (खार)",
+   "hi": "गज़दरबंध पंपिंग स्टेशन (खार)",
+   "aka": [
+    "gazdarbandh pumping station",
+    "gazdarbandh storm water pumping station"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 19.076,
+   "lon": 72.829,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "mithi_kurla",
+   "kind": "hydro",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Mithi River (Kurla)",
+   "mr": "मिठी नदी (कुर्ला)",
+   "hi": "मीठी नदी (कुर्ला)",
+   "aka": [
+    "mithi river",
+    "mithi river kurla",
+    "mithi nadi"
+   ],
+   "aka_mr": [
+    "मिठी नदी"
+   ],
+   "aka_hi": [
+    "मीठी नदी",
+    "मिठी नदी"
+   ],
+   "lat": 19.073,
+   "lon": 72.878,
+   "importance": 0.72,
+   "low_lying": true,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "apollo_bunder",
+   "kind": "hydro",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Apollo Bunder tide station",
+   "mr": "अपोलो बंदर भरती केंद्र",
+   "hi": "अपोलो बंदर ज्वार स्टेशन",
+   "aka": [
+    "apollo bunder tide station"
+   ],
+   "aka_mr": [],
+   "aka_hi": [],
+   "lat": 18.922,
+   "lon": 72.834,
+   "importance": 0.45,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "ps_colaba",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Colaba Police Station",
+   "mr": "कुलाबा पोलीस ठाणे",
+   "hi": "कोलाबा पुलिस थाना",
+   "aka": [
+    "Colaba police",
+    "Colaba ps",
+    "Colaba police thane"
+   ],
+   "aka_mr": [
+    "कुलाबा पोलीस स्टेशन",
+    "कुलाबा पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "कोलाबा पुलिस स्टेशन"
+   ],
+   "lat": 18.92244,
+   "lon": 72.83098,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:way/207417322"
+  },
+  {
+   "id": "ps_cuffe_parade",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Cuffe Parade Police Station",
+   "mr": "कफ परेड पोलीस ठाणे",
+   "hi": "कफ़ परेड पुलिस थाना",
+   "aka": [
+    "Cuffe Parade police",
+    "Cuffe Parade ps",
+    "Cuffe Parade police thane"
+   ],
+   "aka_mr": [
+    "कफ परेड पोलीस स्टेशन",
+    "कफ परेड पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "कफ़ परेड पुलिस स्टेशन"
+   ],
+   "lat": 18.91192,
+   "lon": 72.81875,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:way/353758584"
+  },
+  {
+   "id": "ps_azad_maidan",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Azad Maidan Police Station",
+   "mr": "आझाद मैदान पोलीस ठाणे",
+   "hi": "आज़ाद मैदान पुलिस थाना",
+   "aka": [
+    "Azad Maidan police",
+    "Azad Maidan ps",
+    "Azad Maidan police thane"
+   ],
+   "aka_mr": [
+    "आझाद मैदान पोलीस स्टेशन",
+    "आझाद मैदान पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "आज़ाद मैदान पुलिस स्टेशन"
+   ],
+   "lat": 18.94156,
+   "lon": 72.83294,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:way/207376649"
+  },
+  {
+   "id": "ps_pydhonie",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Pydhonie Police Station",
+   "mr": "पायधुनी पोलीस ठाणे",
+   "hi": "पायधुनी पुलिस थाना",
+   "aka": [
+    "Pydhonie police",
+    "Pydhonie ps",
+    "Pydhonie police thane"
+   ],
+   "aka_mr": [
+    "पायधुनी पोलीस स्टेशन",
+    "पायधुनी पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "पायधुनी पुलिस स्टेशन"
+   ],
+   "lat": 18.95417,
+   "lon": 72.83202,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/858544419"
+  },
+  {
+   "id": "ps_dongri",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Dongri Police Station",
+   "mr": "डोंगरी पोलीस ठाणे",
+   "hi": "डोंगरी पुलिस थाना",
+   "aka": [
+    "Dongri police",
+    "Dongri ps",
+    "Dongri police thane"
+   ],
+   "aka_mr": [
+    "डोंगरी पोलीस स्टेशन",
+    "डोंगरी पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "डोंगरी पुलिस स्टेशन"
+   ],
+   "lat": 18.96214,
+   "lon": 72.83905,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/860348747"
+  },
+  {
+   "id": "ps_gamdevi",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Gamdevi Police Station",
+   "mr": "गावदेवी पोलीस ठाणे",
+   "hi": "गामदेवी पुलिस थाना",
+   "aka": [
+    "Gamdevi police",
+    "Gamdevi ps",
+    "Gamdevi police thane"
+   ],
+   "aka_mr": [
+    "गावदेवी पोलीस स्टेशन",
+    "गावदेवी पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "गामदेवी पुलिस स्टेशन"
+   ],
+   "lat": 18.96052,
+   "lon": 72.81236,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:way/39834520"
+  },
+  {
+   "id": "ps_tardeo",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Tardeo Police Station",
+   "mr": "ताडदेव पोलीस ठाणे",
+   "hi": "ताड़देव पुलिस थाना",
+   "aka": [
+    "Tardeo police",
+    "Tardeo ps",
+    "Tardeo police thane"
+   ],
+   "aka_mr": [
+    "ताडदेव पोलीस स्टेशन",
+    "ताडदेव पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "ताड़देव पुलिस स्टेशन"
+   ],
+   "lat": 18.96953,
+   "lon": 72.81418,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:way/48754898"
+  },
+  {
+   "id": "ps_nagpada",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Nagpada Police Station",
+   "mr": "नागपाडा पोलीस ठाणे",
+   "hi": "नागपाड़ा पुलिस थाना",
+   "aka": [
+    "Nagpada police",
+    "Nagpada ps",
+    "Nagpada police thane"
+   ],
+   "aka_mr": [
+    "नागपाडा पोलीस स्टेशन",
+    "नागपाडा पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "नागपाड़ा पुलिस स्टेशन"
+   ],
+   "lat": 18.96703,
+   "lon": 72.82924,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:way/1442619090"
+  },
+  {
+   "id": "ps_byculla",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Byculla Police Station",
+   "mr": "भायखळा पोलीस ठाणे",
+   "hi": "भायखला पुलिस थाना",
+   "aka": [
+    "Byculla police",
+    "Byculla ps",
+    "Byculla police thane"
+   ],
+   "aka_mr": [
+    "भायखळा पोलीस स्टेशन",
+    "भायखळा पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "भायखला पुलिस स्टेशन"
+   ],
+   "lat": 18.97328,
+   "lon": 72.83399,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:way/829610657"
+  },
+  {
+   "id": "ps_worli",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Worli Police Station",
+   "mr": "वरळी पोलीस ठाणे",
+   "hi": "वर्ली पुलिस थाना",
+   "aka": [
+    "Worli police",
+    "Worli ps",
+    "Worli police thane"
+   ],
+   "aka_mr": [
+    "वरळी पोलीस स्टेशन",
+    "वरळी पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "वर्ली पुलिस स्टेशन"
+   ],
+   "lat": 19.00516,
+   "lon": 72.81739,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:way/353810415"
+  },
+  {
+   "id": "ps_dadar",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Dadar Police Station",
+   "mr": "दादर पोलीस ठाणे",
+   "hi": "दादर पुलिस थाना",
+   "aka": [
+    "Dadar police",
+    "Dadar ps",
+    "Dadar police thane"
+   ],
+   "aka_mr": [
+    "दादर पोलीस स्टेशन",
+    "दादर पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "दादर पुलिस स्टेशन"
+   ],
+   "lat": 19.01502,
+   "lon": 72.83545,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:way/354066127"
+  },
+  {
+   "id": "ps_shivaji_park",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Shivaji Park Police Station",
+   "mr": "शिवाजी पार्क पोलीस ठाणे",
+   "hi": "शिवाजी पार्क पुलिस थाना",
+   "aka": [
+    "Shivaji Park police",
+    "Shivaji Park ps",
+    "Shivaji Park police thane"
+   ],
+   "aka_mr": [
+    "शिवाजी पार्क पोलीस स्टेशन",
+    "शिवाजी पार्क पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "शिवाजी पार्क पुलिस स्टेशन"
+   ],
+   "lat": 19.02326,
+   "lon": 72.84092,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:way/135732933"
+  },
+  {
+   "id": "ps_matunga",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Matunga Police Station",
+   "mr": "माटुंगा पोलीस ठाणे",
+   "hi": "माटुंगा पुलिस थाना",
+   "aka": [
+    "Matunga police",
+    "Matunga ps",
+    "Matunga police thane"
+   ],
+   "aka_mr": [
+    "माटुंगा पोलीस स्टेशन",
+    "माटुंगा पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "माटुंगा पुलिस स्टेशन"
+   ],
+   "lat": 19.03112,
+   "lon": 72.85788,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/5057817507"
+  },
+  {
+   "id": "ps_sion",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Sion Police Station",
+   "mr": "सायन पोलीस ठाणे",
+   "hi": "सायन पुलिस थाना",
+   "aka": [
+    "Sion police",
+    "Sion ps",
+    "Sion police thane"
+   ],
+   "aka_mr": [
+    "सायन पोलीस स्टेशन",
+    "सायन पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "सायन पुलिस स्टेशन"
+   ],
+   "lat": 19.03132,
+   "lon": 72.85759,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/4848773734"
+  },
+  {
+   "id": "ps_dharavi",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Dharavi Police Station",
+   "mr": "धारावी पोलीस ठाणे",
+   "hi": "धारावी पुलिस थाना",
+   "aka": [
+    "Dharavi police",
+    "Dharavi ps",
+    "Dharavi police thane"
+   ],
+   "aka_mr": [
+    "धारावी पोलीस स्टेशन",
+    "धारावी पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "धारावी पुलिस स्टेशन"
+   ],
+   "lat": 19.04327,
+   "lon": 72.8575,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:way/308016832"
+  },
+  {
+   "id": "ps_bandra",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Bandra Police Station",
+   "mr": "वांद्रे पोलीस ठाणे",
+   "hi": "बांद्रा पुलिस थाना",
+   "aka": [
+    "Bandra police",
+    "Bandra ps",
+    "Bandra police thane"
+   ],
+   "aka_mr": [
+    "वांद्रे पोलीस स्टेशन",
+    "वांद्रे पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "बांद्रा पुलिस स्टेशन"
+   ],
+   "lat": 19.05591,
+   "lon": 72.83574,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:way/1334676842"
+  },
+  {
+   "id": "ps_khar",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Khar Police Station",
+   "mr": "खार पोलीस ठाणे",
+   "hi": "खार पुलिस थाना",
+   "aka": [
+    "Khar police",
+    "Khar ps",
+    "Khar police thane"
+   ],
+   "aka_mr": [
+    "खार पोलीस स्टेशन",
+    "खार पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "खार पुलिस स्टेशन"
+   ],
+   "lat": 19.07289,
+   "lon": 72.83765,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/9730701801"
+  },
+  {
+   "id": "ps_santacruz",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Santacruz Police Station",
+   "mr": "सांताक्रूझ पोलीस ठाणे",
+   "hi": "सांताक्रूज़ पुलिस थाना",
+   "aka": [
+    "Santacruz police",
+    "Santacruz ps",
+    "Santacruz police thane"
+   ],
+   "aka_mr": [
+    "सांताक्रूझ पोलीस स्टेशन",
+    "सांताक्रूझ पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "सांताक्रूज़ पुलिस स्टेशन"
+   ],
+   "lat": 19.08414,
+   "lon": 72.83507,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:way/196092411"
+  },
+  {
+   "id": "ps_juhu",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Juhu Police Station",
+   "mr": "जुहू पोलीस ठाणे",
+   "hi": "जुहू पुलिस थाना",
+   "aka": [
+    "Juhu police",
+    "Juhu ps",
+    "Juhu police thane"
+   ],
+   "aka_mr": [
+    "जुहू पोलीस स्टेशन",
+    "जुहू पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "जुहू पुलिस स्टेशन"
+   ],
+   "lat": 19.10317,
+   "lon": 72.83271,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/10296626442"
+  },
+  {
+   "id": "ps_versova",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Versova Police Station",
+   "mr": "वर्सोवा पोलीस ठाणे",
+   "hi": "वर्सोवा पुलिस थाना",
+   "aka": [
+    "Versova police",
+    "Versova ps",
+    "Versova police thane"
+   ],
+   "aka_mr": [
+    "वर्सोवा पोलीस स्टेशन",
+    "वर्सोवा पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "वर्सोवा पुलिस स्टेशन"
+   ],
+   "lat": 19.12412,
+   "lon": 72.83037,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/1905389024"
+  },
+  {
+   "id": "ps_oshiwara",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Oshiwara Police Station",
+   "mr": "ओशिवरा पोलीस ठाणे",
+   "hi": "ओशिवारा पुलिस थाना",
+   "aka": [
+    "Oshiwara police",
+    "Oshiwara ps",
+    "Oshiwara police thane"
+   ],
+   "aka_mr": [
+    "ओशिवरा पोलीस स्टेशन",
+    "ओशिवरा पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "ओशिवारा पुलिस स्टेशन"
+   ],
+   "lat": 19.14,
+   "lon": 72.82586,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/14197852563"
+  },
+  {
+   "id": "ps_goregaon",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Goregaon Police Station",
+   "mr": "गोरेगाव पोलीस ठाणे",
+   "hi": "गोरेगांव पुलिस थाना",
+   "aka": [
+    "Goregaon police",
+    "Goregaon ps",
+    "Goregaon police thane"
+   ],
+   "aka_mr": [
+    "गोरेगाव पोलीस स्टेशन",
+    "गोरेगाव पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "गोरेगांव पुलिस स्टेशन"
+   ],
+   "lat": 19.15732,
+   "lon": 72.84547,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:way/621696888"
+  },
+  {
+   "id": "ps_aarey",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Aarey Police Station",
+   "mr": "आरे पोलीस ठाणे",
+   "hi": "आरे पुलिस थाना",
+   "aka": [
+    "Aarey police",
+    "Aarey ps",
+    "Aarey police thane"
+   ],
+   "aka_mr": [
+    "आरे पोलीस स्टेशन",
+    "आरे पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "आरे पुलिस स्टेशन"
+   ],
+   "lat": 19.16648,
+   "lon": 72.85438,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/985121037"
+  },
+  {
+   "id": "ps_dindoshi",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Dindoshi Police Station",
+   "mr": "दिंडोशी पोलीस ठाणे",
+   "hi": "दिंडोशी पुलिस थाना",
+   "aka": [
+    "Dindoshi police",
+    "Dindoshi ps",
+    "Dindoshi police thane"
+   ],
+   "aka_mr": [
+    "दिंडोशी पोलीस स्टेशन",
+    "दिंडोशी पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "दिंडोशी पुलिस स्टेशन"
+   ],
+   "lat": 19.17895,
+   "lon": 72.85773,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/2308138695"
+  },
+  {
+   "id": "ps_kandivali",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Kandivali Police Station",
+   "mr": "कांदिवली पोलीस ठाणे",
+   "hi": "कांदिवली पुलिस थाना",
+   "aka": [
+    "Kandivali police",
+    "Kandivali ps",
+    "Kandivali police thane"
+   ],
+   "aka_mr": [
+    "कांदिवली पोलीस स्टेशन",
+    "कांदिवली पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "कांदिवली पुलिस स्टेशन"
+   ],
+   "lat": 19.20958,
+   "lon": 72.85014,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/5116459526"
+  },
+  {
+   "id": "ps_samatanagar",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Samatanagar Police Station",
+   "mr": "समतानगर पोलीस ठाणे",
+   "hi": "समतानगर पुलिस थाना",
+   "aka": [
+    "Samatanagar police",
+    "Samatanagar ps",
+    "Samatanagar police thane"
+   ],
+   "aka_mr": [
+    "समतानगर पोलीस स्टेशन",
+    "समतानगर पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "समतानगर पुलिस स्टेशन"
+   ],
+   "lat": 19.19984,
+   "lon": 72.86142,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/5667043327"
+  },
+  {
+   "id": "ps_borivali",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Borivali Police Station",
+   "mr": "बोरिवली पोलीस ठाणे",
+   "hi": "बोरीवली पुलिस थाना",
+   "aka": [
+    "Borivali police",
+    "Borivali ps",
+    "Borivali police thane"
+   ],
+   "aka_mr": [
+    "बोरिवली पोलीस स्टेशन",
+    "बोरिवली पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "बोरीवली पुलिस स्टेशन"
+   ],
+   "lat": 19.22956,
+   "lon": 72.85593,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:way/312763210"
+  },
+  {
+   "id": "ps_bkc",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "BKC Police Station",
+   "mr": "बीकेसी पोलीस ठाणे",
+   "hi": "बीकेसी पुलिस थाना",
+   "aka": [
+    "BKC police",
+    "BKC ps",
+    "BKC police thane"
+   ],
+   "aka_mr": [
+    "बीकेसी पोलीस स्टेशन",
+    "बीकेसी पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "बीकेसी पुलिस स्टेशन"
+   ],
+   "lat": 19.06451,
+   "lon": 72.86034,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/5506320530"
+  },
+  {
+   "id": "ps_kherwadi",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Kherwadi Police Station",
+   "mr": "खेरवाडी पोलीस ठाणे",
+   "hi": "खेरवाड़ी पुलिस थाना",
+   "aka": [
+    "Kherwadi police",
+    "Kherwadi ps",
+    "Kherwadi police thane"
+   ],
+   "aka_mr": [
+    "खेरवाडी पोलीस स्टेशन",
+    "खेरवाडी पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "खेरवाड़ी पुलिस स्टेशन"
+   ],
+   "lat": 19.06594,
+   "lon": 72.85018,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:way/1149824750"
+  },
+  {
+   "id": "ps_chembur",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Chembur Police Station",
+   "mr": "चेंबूर पोलीस ठाणे",
+   "hi": "चेंबूर पुलिस थाना",
+   "aka": [
+    "Chembur police",
+    "Chembur ps",
+    "Chembur police thane"
+   ],
+   "aka_mr": [
+    "चेंबूर पोलीस स्टेशन",
+    "चेंबूर पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "चेंबूर पुलिस स्टेशन"
+   ],
+   "lat": 19.06395,
+   "lon": 72.90083,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/3205956099"
+  },
+  {
+   "id": "ps_govandi",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Govandi Police Station",
+   "mr": "गोवंडी पोलीस ठाणे",
+   "hi": "गोवंडी पुलिस थाना",
+   "aka": [
+    "Govandi police",
+    "Govandi ps",
+    "Govandi police thane"
+   ],
+   "aka_mr": [
+    "गोवंडी पोलीस स्टेशन",
+    "गोवंडी पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "गोवंडी पुलिस स्टेशन"
+   ],
+   "lat": 19.04868,
+   "lon": 72.91754,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:way/179915833"
+  },
+  {
+   "id": "ps_trombay",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Trombay Police Station",
+   "mr": "तुर्भे पोलीस ठाणे",
+   "hi": "ट्रॉम्बे पुलिस थाना",
+   "aka": [
+    "Trombay police",
+    "Trombay ps",
+    "Trombay police thane"
+   ],
+   "aka_mr": [
+    "तुर्भे पोलीस स्टेशन",
+    "तुर्भे पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "ट्रॉम्बे पुलिस स्टेशन"
+   ],
+   "lat": 19.03802,
+   "lon": 72.94526,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:way/816431603"
+  },
+  {
+   "id": "ps_vikhroli",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Vikhroli Police Station",
+   "mr": "विक्रोळी पोलीस ठाणे",
+   "hi": "विक्रोली पुलिस थाना",
+   "aka": [
+    "Vikhroli police",
+    "Vikhroli ps",
+    "Vikhroli police thane"
+   ],
+   "aka_mr": [
+    "विक्रोळी पोलीस स्टेशन",
+    "विक्रोळी पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "विक्रोली पुलिस स्टेशन"
+   ],
+   "lat": 19.11872,
+   "lon": 72.93733,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/3602876220"
+  },
+  {
+   "id": "ps_mulund",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Mulund Police Station",
+   "mr": "मुलुंड पोलीस ठाणे",
+   "hi": "मुलुंड पुलिस थाना",
+   "aka": [
+    "Mulund police",
+    "Mulund ps",
+    "Mulund police thane"
+   ],
+   "aka_mr": [
+    "मुलुंड पोलीस स्टेशन",
+    "मुलुंड पोलिस ठाणे"
+   ],
+   "aka_hi": [
+    "मुलुंड पुलिस स्टेशन"
+   ],
+   "lat": 19.1773,
+   "lon": 72.95169,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:way/317222141"
+  }
+ ],
+ "junction_aliases": {
+  "kalanagar": {
+   "aka": [
+    "kala nagar junction",
+    "kalanagar flyover",
+    "bandra kalanagar junction"
+   ],
+   "aka_mr": [
+    "कलानगर"
+   ],
+   "aka_hi": [
+    "कलानगर"
+   ]
+  },
+  "bkc": {
+   "aka": [
+    "bkc junction",
+    "bandra kurla complex junction"
+   ],
+   "aka_mr": [
+    "बीकेसी"
+   ],
+   "aka_hi": [
+    "बीकेसी"
+   ]
+  },
+  "haji_ali": {
+   "aka": [
+    "haji ali circle",
+    "haji ali chowk"
+   ],
+   "aka_mr": [
+    "हाजी अली"
+   ],
+   "aka_hi": [
+    "हाजी अली"
+   ]
+  },
+  "worli_naka": {
+   "aka": [
+    "worli naka junction"
+   ],
+   "aka_mr": [
+    "वरळी नाका"
+   ],
+   "aka_hi": [
+    "वर्ली नाका"
+   ]
+  },
+  "atre_chowk": {
+   "aka": [
+    "acharya atre chowk",
+    "atre chowk worli"
+   ],
+   "aka_mr": [
+    "आचार्य अत्रे चौक"
+   ],
+   "aka_hi": [
+    "आचार्य अत्रे चौक"
+   ]
+  },
+  "sion_circle": {
+   "aka": [
+    "sion circle junction",
+    "sion junction"
+   ],
+   "aka_mr": [
+    "सायन सर्कल",
+    "शीव सर्कल"
+   ],
+   "aka_hi": [
+    "सायन सर्कल"
+   ]
+  },
+  "jacob_circle": {
+   "aka": [
+    "jacob circle junction",
+    "saat rasta"
+   ],
+   "aka_mr": [
+    "सात रस्ता",
+    "जेकब सर्कल"
+   ],
+   "aka_hi": [
+    "सात रास्ता"
+   ]
+  },
+  "kemps_corner": {
+   "aka": [
+    "kemps corner junction",
+    "kemps corner flyover"
+   ],
+   "aka_mr": [
+    "केम्प्स कॉर्नर"
+   ],
+   "aka_hi": [
+    "केम्प्स कॉर्नर"
+   ]
+  },
+  "opera_house": {
+   "aka": [
+    "opera house junction"
+   ],
+   "aka_mr": [
+    "ऑपेरा हाऊस"
+   ],
+   "aka_hi": [
+    "ओपेरा हाउस"
+   ]
+  },
+  "saki_naka": {
+   "aka": [
+    "saki naka junction"
+   ],
+   "aka_mr": [],
+   "aka_hi": []
+  },
+  "amar_mahal": {
+   "aka": [
+    "amar mahal junction chembur"
+   ],
+   "aka_mr": [
+    "अमर महल"
+   ],
+   "aka_hi": [
+    "अमर महल"
+   ]
+  },
+  "chheda_nagar": {
+   "aka": [
+    "chheda nagar junction"
+   ],
+   "aka_mr": [
+    "छेडा नगर"
+   ],
+   "aka_hi": [
+    "छेडा नगर"
+   ]
+  },
+  "priyadarshini": {
+   "aka": [
+    "priyadarshini junction sion"
+   ],
+   "aka_mr": [
+    "प्रियदर्शिनी"
+   ],
+   "aka_hi": []
+  },
+  "weh_andheri": {
+   "aka": [
+    "andheri flyover weh",
+    "weh andheri junction"
+   ],
+   "aka_mr": [],
+   "aka_hi": []
+  },
+  "mahim_causeway": {
+   "aka": [
+    "mahim causeway junction"
+   ],
+   "aka_mr": [
+    "माहीम कॉजवे"
+   ],
+   "aka_hi": [
+    "माहिम कॉजवे"
+   ]
+  }
+ },
+ "road_aliases": {
+  "western express highway": {
+   "aka": [
+    "weh",
+    "western expressway"
+   ],
+   "aka_mr": [
+    "पश्चिम द्रुतगती महामार्ग",
+    "पश्चिम द्रुतगती मार्ग",
+    "वेस्टर्न एक्सप्रेस हायवे"
+   ],
+   "aka_hi": [
+    "वेस्टर्न एक्सप्रेस हाईवे",
+    "पश्चिमी एक्सप्रेस हाईवे"
+   ]
+  },
+  "eastern express highway": {
+   "aka": [
+    "eeh",
+    "eastern expressway"
+   ],
+   "aka_mr": [
+    "पूर्व द्रुतगती महामार्ग",
+    "ईस्टर्न एक्सप्रेस हायवे"
+   ],
+   "aka_hi": [
+    "ईस्टर्न एक्सप्रेस हाईवे",
+    "पूर्वी एक्सप्रेस हाईवे"
+   ]
+  },
+  "bandra worli sea link": {
+   "aka": [
+    "sea link",
+    "bwsl",
+    "worli sea link",
+    "bandra sea link",
+    "rajiv gandhi sea link"
+   ],
+   "aka_mr": [
+    "सागरी सेतू",
+    "वांद्रे वरळी सागरी सेतू",
+    "सी लिंक"
+   ],
+   "aka_hi": [
+    "सी लिंक",
+    "बांद्रा वर्ली सी लिंक"
+   ]
+  },
+  "mumbai coastal road": {
+   "aka": [
+    "coastal road",
+    "coastal road mumbai",
+    "dharmaveer sambhaji maharaj coastal road"
+   ],
+   "aka_mr": [
+    "सागरी किनारा मार्ग",
+    "कोस्टल रोड"
+   ],
+   "aka_hi": [
+    "कोस्टल रोड",
+    "तटीय सड़क"
+   ]
+  },
+  "jogeshwari vikhroli link road": {
+   "aka": [
+    "jvlr",
+    "jogeshwari vikhroli link"
+   ],
+   "aka_mr": [
+    "जेव्हीएलआर",
+    "जोगेश्वरी विक्रोळी जोड रस्ता"
+   ],
+   "aka_hi": [
+    "जेवीएलआर",
+    "जोगेश्वरी विक्रोली लिंक रोड"
+   ]
+  },
+  "santacruz chembur link road": {
+   "aka": [
+    "sclr",
+    "santacruz chembur link"
+   ],
+   "aka_mr": [
+    "एससीएलआर",
+    "सांताक्रूझ चेंबूर जोड रस्ता"
+   ],
+   "aka_hi": [
+    "एससीएलआर",
+    "सांताक्रूज़ चेंबूर लिंक रोड"
+   ]
+  },
+  "lal bahadur shastri marg": {
+   "aka": [
+    "lbs marg",
+    "lbs road",
+    "l b s marg",
+    "l b s road"
+   ],
+   "aka_mr": [
+    "एलबीएस मार्ग",
+    "लालबहादूर शास्त्री मार्ग"
+   ],
+   "aka_hi": [
+    "एलबीएस मार्ग",
+    "एलबीएस रोड"
+   ]
+  },
+  "swami vivekanand road": {
+   "aka": [
+    "sv road",
+    "s v road",
+    "swami vivekananda road"
+   ],
+   "aka_mr": [
+    "एस. व्ही. रोड",
+    "स्वामी विवेकानंद मार्ग"
+   ],
+   "aka_hi": [
+    "एसवी रोड",
+    "एस वी रोड"
+   ]
+  },
+  "dr ambedkar road": {
+   "aka": [
+    "ambedkar road",
+    "babasaheb ambedkar road",
+    "dr babasaheb ambedkar road"
+   ],
+   "aka_mr": [
+    "डॉ. आंबेडकर मार्ग",
+    "आंबेडकर मार्ग",
+    "बाबासाहेब आंबेडकर मार्ग"
+   ],
+   "aka_hi": [
+    "डॉ. आंबेडकर रोड",
+    "आंबेडकर रोड"
+   ]
+  },
+  "eastern freeway": {
+   "aka": [
+    "p d mello road freeway"
+   ],
+   "aka_mr": [
+    "पूर्व मुक्त मार्ग",
+    "ईस्टर्न फ्रीवे"
+   ],
+   "aka_hi": [
+    "ईस्टर्न फ्रीवे"
+   ]
+  },
+  "sion panvel highway": {
+   "aka": [
+    "sion panvel road",
+    "sion panvel expressway"
+   ],
+   "aka_mr": [
+    "सायन पनवेल महामार्ग"
+   ],
+   "aka_hi": [
+    "सायन पनवेल हाईवे"
+   ]
+  },
+  "andheri kurla road": {
+   "aka": [
+    "andheri kurla rd",
+    "a k road"
+   ],
+   "aka_mr": [
+    "अंधेरी कुर्ला मार्ग",
+    "अंधेरी कुर्ला रोड"
+   ],
+   "aka_hi": [
+    "अंधेरी कुर्ला रोड"
+   ]
+  },
+  "marine drive": {
+   "aka": [
+    "queens necklace",
+    "netaji subhash chandra bose road",
+    "marine drive promenade"
+   ],
+   "aka_mr": [
+    "मरीन ड्राइव्ह",
+    "मरीन ड्राईव्ह"
+   ],
+   "aka_hi": [
+    "मरीन ड्राइव"
+   ]
+  },
+  "senapati bapat marg": {
+   "aka": [
+    "senapati bapat road",
+    "s b marg"
+   ],
+   "aka_mr": [
+    "सेनापती बापट मार्ग"
+   ],
+   "aka_hi": [
+    "सेनापति बापट मार्ग"
+   ]
+  },
+  "dr annie besant road": {
+   "aka": [
+    "annie besant road",
+    "worli annie besant road"
+   ],
+   "aka_mr": [
+    "ॲनी बेझंट मार्ग"
+   ],
+   "aka_hi": [
+    "एनी बेसेंट रोड"
+   ]
+  },
+  "peddar road": {
+   "aka": [
+    "pedder road",
+    "dr g deshmukh marg"
+   ],
+   "aka_mr": [
+    "पेडर रोड"
+   ],
+   "aka_hi": [
+    "पेडर रोड"
+   ]
+  },
+  "g k gokhale bridge": {
+   "aka": [
+    "gokhale bridge",
+    "gokhale bridge andheri",
+    "gokhale road bridge"
+   ],
+   "aka_mr": [
+    "गोखले पूल"
+   ],
+   "aka_hi": [
+    "गोखले पुल",
+    "गोखले ब्रिज"
+   ]
+  },
+  "tilak bridge": {
+   "aka": [
+    "dadar tilak bridge",
+    "tilak bridge dadar"
+   ],
+   "aka_mr": [
+    "टिळक पूल"
+   ],
+   "aka_hi": [
+    "तिलक पुल",
+    "तिलक ब्रिज"
+   ]
+  },
+  "mahim causeway": {
+   "aka": [
+    "mahim causeway road"
+   ],
+   "aka_mr": [
+    "माहीम कॉजवे"
+   ],
+   "aka_hi": [
+    "माहिम कॉजवे"
+   ]
+  },
+  "ghatkopar mankhurd link road": {
+   "aka": [
+    "gmlr",
+    "ghatkopar mankhurd link"
+   ],
+   "aka_mr": [
+    "घाटकोपर मानखुर्द जोड रस्ता",
+    "जीएमएलआर"
+   ],
+   "aka_hi": [
+    "घाटकोपर मानखुर्द लिंक रोड"
+   ]
+  },
+  "sahar elevated road": {
+   "aka": [
+    "sahar elevated access road",
+    "airport elevated road"
+   ],
+   "aka_mr": [
+    "सहार उन्नत मार्ग"
+   ],
+   "aka_hi": [
+    "सहार एलिवेटेड रोड"
+   ]
+  },
+  "bandra kurla complex road": {
+   "aka": [
+    "bkc road",
+    "bkc connector"
+   ],
+   "aka_mr": [
+    "बीकेसी मार्ग",
+    "बीकेसी रोड"
+   ],
+   "aka_hi": [
+    "बीकेसी रोड"
+   ]
+  },
+  "p d mello road": {
+   "aka": [
+    "p d'mello road",
+    "pd mello road",
+    "p dmello road"
+   ],
+   "aka_mr": [
+    "पी. डिमेलो मार्ग"
+   ],
+   "aka_hi": [
+    "पी डिमेलो रोड"
+   ]
+  }
+ }
+}

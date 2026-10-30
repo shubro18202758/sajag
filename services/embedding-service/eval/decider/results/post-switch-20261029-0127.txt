@@ -1,0 +1,23 @@
+[KOLKATA-ERA: measured on the earlier Kolkata request set; not re-run on the Mumbai set. See KOLKATA_ERA.md.]
+reference v1-27b-live:served (pplx-decider-v1-27b): wall p50/p95 1292.4/2097.9 ms, labelled 23/26, gated 0.6
+
+pplx-decider-v1.2-live-20261029-0127:served: wall p50/p95 739.2/1047.5 ms, labelled 22/26, gated 0.433, peak alloc None GiB, load None s
+  choice   n=59  agree=0.8305 mean|dp|=0.1258
+  noul     n=35  agree=0.6286 mean|dp|=0.1638
+  score    n=40  agree=0.575 mean|dp|=0.2845 mean|dvalue|=0.2932
+    dss_coa/coa_strategy                       n=12  agree=0.75 |dp|=0.1606
+    dss_coa/disruption_tolerance               n=12  agree=0.8333 |dv|=0.1516 ref_v=0.4574 cand_v=0.4303
+    dss_coa/urgency                            n=12  agree=0.9167 |dp|=0.0959 ref_P(true)=0.6473 cand_P(true)=0.5743
+    escort_departure/departure                 n=6   agree=0.6667 |dp|=0.1409
+    escort_incident/action                     n=8   agree=0.625 |dp|=0.1802
+    escort_incident/urgency                    n=8   agree=0.75 |dp|=0.2771 ref_P(true)=0.4786 cand_P(true)=0.2016
+    post_clearance/restoration_posture         n=5   agree=1.0 |dp|=0.1501
+    pre_movement/disruption_tolerance          n=12  agree=0.9167 |dv|=0.1895 ref_v=0.7728 cand_v=0.6941
+    pre_movement/route_strategy                n=12  agree=0.9167 |dp|=0.1039
+    pre_movement/urgency                       n=12  agree=0.25 |dp|=0.1542 ref_P(true)=0.5374 cand_P(true)=0.3833
+    probe/probe                                n=1   agree=1.0 |dp|=0.2814 ref_P(true)=0.3491 cand_P(true)=0.0677
+    probe/readiness                            n=2   agree=0.0 |dv|=0.3103 ref_v=0.3812 cand_v=0.6916
+    probe/reroute                              n=2   agree=1.0 |dp|=0.0104
+    probe/urgency                              n=2   agree=0.5 |dp|=0.1171 ref_P(true)=0.5422 cand_P(true)=0.5667
+    tool_selection/decision_confidence         n=14  agree=0.1429 |dv|=0.5011 ref_v=0.4406 cand_v=0.9416
+    tool_selection/next_tool                   n=14  agree=0.9286 |dp|=0.085

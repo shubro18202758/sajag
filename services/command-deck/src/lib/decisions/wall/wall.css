@@ -1,0 +1,127 @@
+/*
+ * The situation wall's dense tables (SPEC §3.6): 28 px rows at 12 px under a
+ * 30 px header, every cell's content in `.c` (a flex row on a 16 px line
+ * box, so glyphs need no vertical-align), figures right-aligned in tabular
+ * numerals, one primary veil and a 2 px left bar on the selected row (the
+ * data active-state rule, .is-selected). Two-line rows are 44 px. Imported
+ * once by the /ops page; every wall section's table uses class `wdt`.
+ */
+
+.wdt {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0;
+	table-layout: fixed;
+	color: var(--v-ink-1);
+	font-family: var(--v-font-ui);
+	font-size: var(--v-text-xs);
+	line-height: 16px;
+}
+
+.wdt th {
+	height: 30px;
+	padding: 0 8px;
+	overflow: hidden;
+	color: var(--v-ink-2);
+	font-weight: 400;
+	text-align: left;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	border-bottom: 1px solid var(--v-line-2);
+}
+
+.wdt td {
+	height: 28px;
+	padding: 0 8px;
+	overflow: hidden;
+	white-space: nowrap;
+	border-bottom: 1px solid var(--v-line-1);
+}
+
+.wdt th:first-child,
+.wdt td:first-child {
+	padding-left: 16px;
+}
+
+/* the last column keeps the same 16 px gutter as the first: no text runs flush into the panel edge */
+.wdt th:last-child,
+.wdt td:last-child {
+	padding-right: 16px;
+}
+
+.wdt th.ic-col,
+.wdt td.ic-col {
+	width: 32px;
+	padding: 0 0 0 12px;
+	overflow: visible;
+}
+
+.wdt .num {
+	text-align: right;
+	font-variant-numeric: tabular-nums;
+}
+
+.wdt .c {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	min-width: 0;
+	line-height: 16px;
+}
+
+.wdt .num .c {
+	justify-content: flex-end;
+}
+
+.wdt .ell {
+	min-width: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.wdt .muted {
+	color: var(--v-ink-2);
+}
+
+.wdt .tn {
+	font-variant-numeric: tabular-nums;
+}
+
+.wdt [data-ui='icon'] {
+	flex: 0 0 auto;
+	color: var(--v-ink-2);
+}
+
+.wdt tbody.pick > tr.main,
+.wdt tr.pick {
+	cursor: pointer;
+}
+
+.wdt tbody.pick:hover > tr.main > td,
+.wdt tr.pick:hover > td {
+	background: var(--v-row-hover);
+}
+
+.wdt tbody.is-selected > tr > td,
+.wdt tr.is-selected > td {
+	background: var(--v-primary-veil);
+}
+
+.wdt tbody.is-selected > tr > td:first-child,
+.wdt tr.is-selected > td:first-child {
+	box-shadow: inset 2px 0 0 var(--v-primary-text);
+}
+
+.wdt tr.detail > td {
+	height: auto;
+	padding-top: 4px;
+	padding-bottom: 8px;
+	white-space: normal;
+	overflow: visible;
+	cursor: default;
+}
+
+.wdt tbody > tr:last-child > td {
+	border-bottom: 1px solid var(--v-line-1);
+}

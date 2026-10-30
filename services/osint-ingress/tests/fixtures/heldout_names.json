@@ -1,0 +1,700 @@
+{
+ "about": "Held-out corpus K (46 cases) for measuring the Sajag person-name and age redactor: English and Marathi news headlines and sentences, aggregator lines, a few Hindi items and unverified social posts about Kolkata traffic, rain, fire, crime, metro, tram and Puja crowds, plus person-free civic items whose place names must survive. It was written blind: the author never opened, read or searched the redaction code or its tests, so the measured recall and damage are honest. Every person in it is invented, built from common Marathi, Hindi/Bihari, Marwari, Muslim, Sikh, Christian and Anglo-Indian Kolkata given names and surnames; none is a public figure and none refers to a real case. Labels: 'names' lists every word of every person name as it appears in the text (Latin words match as whole words; Marathi/Devanagari words are given bare, without case endings such as -er/-ke, and must be substrings; initials are included as written; titles and honorifics such as Mr, Smt, Shri, Dr, SI, Inspector, শ্রী, শ্রীমতী, ডাঃ, ডাক্তার, श्री, डॉ. are not name words). 'ages' lists every age or age/sex marker that must not survive, as the shortest identifying substring (the number, or the shorthand such as 24F, 27/M, F(23), M, 31). 'keep' lists up to three substrings that must survive redaction: Kolkata place names (many of them containing a person's name, such as roads, parks and metro stations) and ordinary content words. Tiers are news_regional, aggregator and social_unverified. The corpus is scored by tests/test_heldout_recall.py.",
+ "cases": [
+  {
+   "id": "k01",
+   "tier": "news_regional",
+   "text": "Auto driver Bapi Naskar, 41, was killed when a dumper hit his vehicle on EM Bypass near Chingrighata; sergeant Dipankar Hazra said the dumper driver fled.",
+   "names": [
+    "Bapi",
+    "Naskar",
+    "Dipankar",
+    "Hazra"
+   ],
+   "ages": [
+    "41"
+   ],
+   "keep": [
+    "EM Bypass",
+    "Chingrighata"
+   ]
+  },
+  {
+   "id": "k02",
+   "tier": "aggregator",
+   "text": "Waterlogging at Thanthania: shopkeeper Haripada Bera (63) slipped into an open manhole on Bidhan Sarani and was pulled out by locals.",
+   "names": [
+    "Haripada",
+    "Bera"
+   ],
+   "ages": [
+    "63"
+   ],
+   "keep": [
+    "Thanthania",
+    "Bidhan Sarani",
+    "open manhole"
+   ]
+  },
+  {
+   "id": "k03",
+   "tier": "news_regional",
+   "text": "Police arrested Sabir Ali Molla, 29, of Tiljala for allegedly stealing copper cables from the Gariahat tram depot.",
+   "names": [
+    "Sabir",
+    "Ali",
+    "Molla"
+   ],
+   "ages": [
+    "29"
+   ],
+   "keep": [
+    "Tiljala",
+    "Gariahat tram depot"
+   ]
+  },
+  {
+   "id": "k04",
+   "tier": "news_regional",
+   "text": "SI Pranab Kundu of Hare Street police station was injured while clearing a crowd outside Santosh Mitra Square on Ashtami night.",
+   "names": [
+    "Pranab",
+    "Kundu"
+   ],
+   "ages": [],
+   "keep": [
+    "Hare Street",
+    "Santosh Mitra Square",
+    "Ashtami"
+   ]
+  },
+  {
+   "id": "k05",
+   "tier": "aggregator",
+   "text": "Mrs Sharmila Kedia's car was towed from Camac Street; she says the no-parking sign was hidden behind a hoarding.",
+   "names": [
+    "Sharmila",
+    "Kedia"
+   ],
+   "ages": [],
+   "keep": [
+    "Camac Street",
+    "no-parking sign"
+   ]
+  },
+  {
+   "id": "k06",
+   "tier": "news_regional",
+   "text": "A 67-year-old retired teacher, Nirmal Chandra Saha, died after a wall collapsed in Bowbazar following overnight rain.",
+   "names": [
+    "Nirmal",
+    "Chandra",
+    "Saha"
+   ],
+   "ages": [
+    "67"
+   ],
+   "keep": [
+    "Bowbazar",
+    "overnight rain"
+   ]
+  },
+  {
+   "id": "k07",
+   "tier": "aggregator",
+   "text": "Tapan Kumar Biswas booked after his lorry rammed the divider on Ultadanga flyover",
+   "names": [
+    "Tapan",
+    "Kumar",
+    "Biswas"
+   ],
+   "ages": [],
+   "keep": [
+    "Ultadanga flyover",
+    "divider"
+   ]
+  },
+  {
+   "id": "k08",
+   "tier": "news_regional",
+   "text": "Dr. Arindam Sarkar of NRS Medical College said 14 people were treated for smoke inhalation after the Moulali godown fire.",
+   "names": [
+    "Arindam",
+    "Sarkar"
+   ],
+   "ages": [],
+   "keep": [
+    "NRS Medical College",
+    "Moulali",
+    "smoke inhalation"
+   ]
+  },
+  {
+   "id": "k09",
+   "tier": "news_regional",
+   "text": "FIRE IN BURRABAZAR GODOWN: PORTER MANOJ MAHTO, 33, PULLED OUT ALIVE BY FIREFIGHTERS",
+   "names": [
+    "MANOJ",
+    "MAHTO"
+   ],
+   "ages": [
+    "33"
+   ],
+   "keep": [
+    "BURRABAZAR",
+    "GODOWN"
+   ]
+  },
+  {
+   "id": "k10",
+   "tier": "aggregator",
+   "text": "Tram Conductor Gregory D'Rozario Retires After 34 Years On The Esplanade–Shyambazar Route",
+   "names": [
+    "Gregory",
+    "D'Rozario"
+   ],
+   "ages": [],
+   "keep": [
+    "Esplanade",
+    "Shyambazar",
+    "Tram Conductor"
+   ]
+  },
+  {
+   "id": "k11",
+   "tier": "news_regional",
+   "text": "Inspector Subhash Pramanik, OC of Jadavpur police station, said the accused, Raju Shaw alias Kalia, had been snatching phones at the 8B bus stand.",
+   "names": [
+    "Subhash",
+    "Pramanik",
+    "Raju",
+    "Shaw",
+    "Kalia"
+   ],
+   "ages": [],
+   "keep": [
+    "Jadavpur",
+    "8B bus stand"
+   ]
+  },
+  {
+   "id": "k12",
+   "tier": "aggregator",
+   "text": "Shri Ashok Lal Agarwal, 58, and son Vivek, 31, were hurt when a hoarding fell on their scooter on Rashbehari Avenue during the squall.",
+   "names": [
+    "Ashok",
+    "Lal",
+    "Agarwal",
+    "Vivek"
+   ],
+   "ages": [
+    "58",
+    "31"
+   ],
+   "keep": [
+    "Rashbehari Avenue",
+    "squall"
+   ]
+  },
+  {
+   "id": "k13",
+   "tier": "news_regional",
+   "text": "Metro services on the Blue Line were hit for 40 minutes after commuter Shyamal Ghoshal, 49, fell ill at Kalighat station.",
+   "names": [
+    "Shyamal",
+    "Ghoshal"
+   ],
+   "ages": [
+    "49"
+   ],
+   "keep": [
+    "Blue Line",
+    "Kalighat"
+   ]
+  },
+  {
+   "id": "k14",
+   "tier": "news_regional",
+   "text": "Bus driver Mohammed Shahid Ansari was detained after the route 12C bus he drove hit a cyclist at Park Circus; the cyclist, Ayan Gazi, 19, is in SSKM.",
+   "names": [
+    "Mohammed",
+    "Shahid",
+    "Ansari",
+    "Ayan",
+    "Gazi"
+   ],
+   "ages": [
+    "19"
+   ],
+   "keep": [
+    "Park Circus",
+    "SSKM"
+   ]
+  },
+  {
+   "id": "k15",
+   "tier": "aggregator",
+   "text": "Pandal hopping crowd at Deshapriya Park swells; volunteer Moumita Ghatak, 22, says barricades went up only at 9 pm.",
+   "names": [
+    "Moumita",
+    "Ghatak"
+   ],
+   "ages": [
+    "22"
+   ],
+   "keep": [
+    "Deshapriya Park",
+    "barricades"
+   ]
+  },
+  {
+   "id": "k16",
+   "tier": "news_regional",
+   "text": "Smt. Anjali Mukherjee's family alleged negligence after she fell from a crowded Howrah-bound bus near Majerhat bridge.",
+   "names": [
+    "Anjali",
+    "Mukherjee"
+   ],
+   "ages": [],
+   "keep": [
+    "Majerhat bridge",
+    "Howrah-bound bus"
+   ]
+  },
+  {
+   "id": "k17",
+   "tier": "aggregator",
+   "text": "Two arrested for chain snatching in Lake Town: Sk Jamal, 24, and Bablu Prasad Gupta, 27, were held by Bangur Avenue police.",
+   "names": [
+    "Sk",
+    "Jamal",
+    "Bablu",
+    "Prasad",
+    "Gupta"
+   ],
+   "ages": [
+    "24",
+    "27"
+   ],
+   "keep": [
+    "Lake Town",
+    "Bangur Avenue",
+    "chain snatching"
+   ]
+  },
+  {
+   "id": "k18",
+   "tier": "news_regional",
+   "text": "Retired engineer P. K. Dasgupta, aged 72, wrote to KMC about the caved-in stretch near Lake Gardens railway station.",
+   "names": [
+    "P.",
+    "K.",
+    "Dasgupta"
+   ],
+   "ages": [
+    "72"
+   ],
+   "keep": [
+    "Lake Gardens",
+    "KMC"
+   ]
+  },
+  {
+   "id": "k19",
+   "tier": "aggregator",
+   "text": "Mr Neville Fernandes, who runs a bakery near Bow Barracks, said the Christmas lights drew huge crowds to Bowbazar on Saturday.",
+   "names": [
+    "Neville",
+    "Fernandes"
+   ],
+   "ages": [],
+   "keep": [
+    "Bow Barracks",
+    "Christmas lights",
+    "Bowbazar"
+   ]
+  },
+  {
+   "id": "k20",
+   "tier": "news_regional",
+   "text": "গড়িয়াহাট মোড়ে বাসের ধাক্কায় গুরুতর আহত পথচারী শ্রীমতী কাকলি সাহা (৫৬), তাঁকে এসএসকেএম হাসপাতালে ভর্তি করা হয়েছে।",
+   "names": [
+    "কাকলি",
+    "সাহা"
+   ],
+   "ages": [
+    "৫৬"
+   ],
+   "keep": [
+    "গড়িয়াহাট মোড়",
+    "এসএসকেএম হাসপাতাল"
+   ]
+  },
+  {
+   "id": "k21",
+   "tier": "news_regional",
+   "text": "উল্টোডাঙায় অটো উল্টে মৃত্যু হল চালক বিকাশ মণ্ডলের, বয়স হয়েছিল ৪৪ বছর।",
+   "names": [
+    "বিকাশ",
+    "মণ্ডল"
+   ],
+   "ages": [
+    "৪৪"
+   ],
+   "keep": [
+    "উল্টোডাঙা"
+   ]
+  },
+  {
+   "id": "k22",
+   "tier": "aggregator",
+   "text": "ঠনঠনিয়ায় জল জমা: হাঁটুজলে আটকে পড়া ৭২ বছরের বৃদ্ধ নিতাই ঘোষকে উদ্ধার করল দমকল।",
+   "names": [
+    "নিতাই",
+    "ঘোষ"
+   ],
+   "ages": [
+    "৭২"
+   ],
+   "keep": [
+    "ঠনঠনিয়া",
+    "জল জমা",
+    "দমকল"
+   ]
+  },
+  {
+   "id": "k23",
+   "tier": "news_regional",
+   "text": "শিয়ালদহ স্টেশনে পকেটমারির অভিযোগে গ্রেফতার অভিযুক্ত শেখ সেলিম (৩১), তার সঙ্গী রাজু দাস পলাতক।",
+   "names": [
+    "শেখ",
+    "সেলিম",
+    "রাজু",
+    "দাস"
+   ],
+   "ages": [
+    "৩১"
+   ],
+   "keep": [
+    "শিয়ালদহ স্টেশন"
+   ]
+  },
+  {
+   "id": "k24",
+   "tier": "news_regional",
+   "text": "কলকাতা মেডিকেল কলেজের ডাক্তার সুমনা চক্রবর্তী জানান, কলেজ স্ট্রিটে আগুনের ধোঁয়ায় অসুস্থ পাঁচজনের অবস্থা স্থিতিশীল।",
+   "names": [
+    "সুমনা",
+    "চক্রবর্তী"
+   ],
+   "ages": [],
+   "keep": [
+    "কলকাতা মেডিকেল কলেজ",
+    "কলেজ স্ট্রিট"
+   ]
+  },
+  {
+   "id": "k25",
+   "tier": "aggregator",
+   "text": "বাগবাজার সর্বজনীনে ভিড় সামলাতে গিয়ে অসুস্থ ২৬ বছরের স্বেচ্ছাসেবক অর্পণ পালকে হাসপাতালে নিয়ে যাওয়া হয়।",
+   "names": [
+    "অর্পণ",
+    "পাল"
+   ],
+   "ages": [
+    "২৬"
+   ],
+   "keep": [
+    "বাগবাজার সর্বজনীন",
+    "ভিড়"
+   ]
+  },
+  {
+   "id": "k26",
+   "tier": "news_regional",
+   "text": "খিদিরপুরে পুরনো বাড়ির অংশ ভেঙে নিহত শ্রী গোপাল বেরা (৬৮) ও তাঁর নাতনি রিয়া বেরা।",
+   "names": [
+    "গোপাল",
+    "বেরা",
+    "রিয়া"
+   ],
+   "ages": [
+    "৬৮"
+   ],
+   "keep": [
+    "খিদিরপুর",
+    "পুরনো বাড়ি"
+   ]
+  },
+  {
+   "id": "k27",
+   "tier": "social_unverified",
+   "text": "পার্ক সার্কাসে আবার জল জমেছে, পাশের বাড়ির রুবিনা খাতুন (৩৫) বলছে এত জল আগে দেখেনি।",
+   "names": [
+    "রুবিনা",
+    "খাতুন"
+   ],
+   "ages": [
+    "৩৫"
+   ],
+   "keep": [
+    "পার্ক সার্কাস"
+   ]
+  },
+  {
+   "id": "k28",
+   "tier": "news_regional",
+   "text": "ভারী বৃষ্টিতে জলমগ্ন মৌলালি ও এন্টালি, পাম্পিং স্টেশন চালু রেখেছে পুরসভা।",
+   "names": [],
+   "ages": [],
+   "keep": [
+    "মৌলালি",
+    "পাম্পিং স্টেশন",
+    "ভারী বৃষ্টি"
+   ]
+  },
+  {
+   "id": "k29",
+   "tier": "aggregator",
+   "text": "বিদ্যাসাগর সেতুতে যান্ত্রিক ত্রুটিতে আটকে পড়ল লরি, হাওড়ার দিকে দীর্ঘ যানজট।",
+   "names": [],
+   "ages": [],
+   "keep": [
+    "বিদ্যাসাগর সেতু",
+    "যানজট"
+   ]
+  },
+  {
+   "id": "k30",
+   "tier": "news_regional",
+   "text": "দেশপ্রিয় পার্কে ভিড় নিয়ন্ত্রণে রাসবিহারী মোড় থেকে একমুখী যান চলাচল, সন্ধ্যা ছ'টা থেকে।",
+   "names": [],
+   "ages": [],
+   "keep": [
+    "দেশপ্রিয় পার্ক",
+    "রাসবিহারী মোড়",
+    "একমুখী"
+   ]
+  },
+  {
+   "id": "k31",
+   "tier": "news_regional",
+   "text": "बड़ाबाजार के गोदाम में आग, मजदूर रमेश पासवान (38) झुलसे, दमकल की 10 गाड़ियां मौके पर।",
+   "names": [
+    "रमेश",
+    "पासवान"
+   ],
+   "ages": [
+    "38"
+   ],
+   "keep": [
+    "बड़ाबाजार",
+    "दमकल"
+   ]
+  },
+  {
+   "id": "k32",
+   "tier": "aggregator",
+   "text": "हावड़ा ब्रिज पर जाम में फंसी एंबुलेंस, मरीज श्रीमती सुनीता झुनझुनवाला के परिजनों ने पुलिस से शिकायत की।",
+   "names": [
+    "सुनीता",
+    "झुनझुनवाला"
+   ],
+   "ages": [],
+   "keep": [
+    "हावड़ा ब्रिज",
+    "एंबुलेंस"
+   ]
+  },
+  {
+   "id": "k33",
+   "tier": "news_regional",
+   "text": "सियालदह स्टेशन के पास 45 वर्षीय कुली मुन्ना साव की ट्रेन से कटकर मौत।",
+   "names": [
+    "मुन्ना",
+    "साव"
+   ],
+   "ages": [
+    "45"
+   ],
+   "keep": [
+    "सियालदह स्टेशन"
+   ]
+  },
+  {
+   "id": "k34",
+   "tier": "aggregator",
+   "text": "पार्क स्ट्रीट में मोबाइल चोरी के आरोप में पिंटू यादव उर्फ छोटू और अमित सिंह गिरफ्तार।",
+   "names": [
+    "पिंटू",
+    "यादव",
+    "छोटू",
+    "अमित",
+    "सिंह"
+   ],
+   "ages": [],
+   "keep": [
+    "पार्क स्ट्रीट",
+    "मोबाइल चोरी"
+   ]
+  },
+  {
+   "id": "k35",
+   "tier": "social_unverified",
+   "text": "F(23) new to Kolkata, need PG near Sector V or Karunamoyee, veg food preferred",
+   "names": [],
+   "ages": [
+    "F(23)"
+   ],
+   "keep": [
+    "Sector V",
+    "Karunamoyee"
+   ]
+  },
+  {
+   "id": "k36",
+   "tier": "social_unverified",
+   "text": "27/M working in Park Street, looking for a flatmate around Kankurgachi, DM pls",
+   "names": [],
+   "ages": [
+    "27/M"
+   ],
+   "keep": [
+    "Park Street",
+    "Kankurgachi"
+   ]
+  },
+  {
+   "id": "k37",
+   "tier": "social_unverified",
+   "text": "Huge shoutout to Biltu from the toto stand at Garia station, he waded through knee-deep water to get my mom home",
+   "names": [
+    "Biltu"
+   ],
+   "ages": [],
+   "keep": [
+    "Garia station",
+    "knee-deep water",
+    "toto stand"
+   ]
+  },
+  {
+   "id": "k38",
+   "tier": "social_unverified",
+   "text": "Ajke Behala Chowrasta te puro jol, amar mama Kartick Jana 2 ghonta bus e atke chilo",
+   "names": [
+    "Kartick",
+    "Jana"
+   ],
+   "ages": [],
+   "keep": [
+    "Behala Chowrasta",
+    "puro jol"
+   ]
+  },
+  {
+   "id": "k39",
+   "tier": "social_unverified",
+   "text": "My neighbour Chumki-di (52) fainted in the pandal queue at Sreebhumi, anyone know which hospital they took her to?",
+   "names": [
+    "Chumki"
+   ],
+   "ages": [
+    "52"
+   ],
+   "keep": [
+    "Sreebhumi",
+    "pandal queue"
+   ]
+  },
+  {
+   "id": "k40",
+   "tier": "social_unverified",
+   "text": "Lost wallet in a 215A bus near Tollygunge, it belongs to Arka Sengupta, 26M, please call if found",
+   "names": [
+    "Arka",
+    "Sengupta"
+   ],
+   "ages": [
+    "26M"
+   ],
+   "keep": [
+    "Tollygunge",
+    "Lost wallet"
+   ]
+  },
+  {
+   "id": "k41",
+   "tier": "social_unverified",
+   "text": "Saw a woman, maybe 60ish, collapse near Hatibagan; a cop named Rajib helped her into a cab",
+   "names": [
+    "Rajib"
+   ],
+   "ages": [
+    "60"
+   ],
+   "keep": [
+    "Hatibagan"
+   ]
+  },
+  {
+   "id": "k42",
+   "tier": "news_regional",
+   "text": "Heavy Rain Leaves Thanthania, College Street And Amherst Street Knee-Deep; Pumps Run All Night At Palmer Bazar",
+   "names": [],
+   "ages": [],
+   "keep": [
+    "College Street",
+    "Amherst Street",
+    "Palmer Bazar"
+   ]
+  },
+  {
+   "id": "k43",
+   "tier": "aggregator",
+   "text": "WATERLOGGING ALERT: EM BYPASS SERVICE ROAD SHUT NEAR RUBY CROSSING TILL MIDNIGHT",
+   "names": [],
+   "ages": [],
+   "keep": [
+    "EM BYPASS",
+    "RUBY CROSSING",
+    "SERVICE ROAD"
+   ]
+  },
+  {
+   "id": "k44",
+   "tier": "news_regional",
+   "text": "Jatin Das Park metro station entry gate 2 closed for repairs; commuters asked to use the Hazra Road exit.",
+   "names": [],
+   "ages": [],
+   "keep": [
+    "Jatin Das Park",
+    "Hazra Road"
+   ]
+  },
+  {
+   "id": "k45",
+   "tier": "aggregator",
+   "text": "Victoria Memorial and Prinsep Ghat see heavy weekend footfall as winter sets in; police deploy extra staff on Red Road.",
+   "names": [],
+   "ages": [],
+   "keep": [
+    "Victoria Memorial",
+    "Prinsep Ghat",
+    "Red Road"
+   ]
+  },
+  {
+   "id": "k46",
+   "tier": "news_regional",
+   "text": "Tram service between Esplanade and Kidderpore suspended after a tree fell on the overhead wire near Hastings.",
+   "names": [],
+   "ages": [],
+   "keep": [
+    "Esplanade",
+    "Kidderpore",
+    "overhead wire"
+   ]
+  }
+ ]
+}

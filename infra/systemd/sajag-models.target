@@ -1,0 +1,6 @@
+# The three host model services of the Sajag stack. Stopping or restarting
+# this target (or sajag.target) stops/restarts all three (PartOf=).
+[Unit]
+Description=Sajag model hosts: decider :8083, Gemma :8084, embeddings :8205
+Wants=sajag-llama.service sajag-decider.service sajag-embed.service
+PartOf=sajag.target

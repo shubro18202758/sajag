@@ -1,0 +1,23 @@
+[KOLKATA-ERA: measured on the earlier Kolkata request set; not re-run on the Mumbai set. See KOLKATA_ERA.md.]
+reference flash-v1.2:per_question (pplx-decider-flash-v1.2): wall p50/p95 257.2/402.8 ms, labelled 22/26, gated 0.783
+
+flash-v1.2-http9182:served: wall p50/p95 250.8/391.8 ms, labelled 22/26, gated 0.783, peak alloc None GiB, load None s
+  choice   n=59  agree=1.0 mean|dp|=0.0
+  noul     n=35  agree=1.0 mean|dp|=0.0
+  score    n=40  agree=1.0 mean|dp|=0.0 mean|dvalue|=0.0
+    dss_coa/coa_strategy                       n=12  agree=1.0 |dp|=0.0
+    dss_coa/disruption_tolerance               n=12  agree=1.0 |dv|=0.0 ref_v=0.332 cand_v=0.332
+    dss_coa/urgency                            n=12  agree=1.0 |dp|=0.0 ref_P(true)=0.4797 cand_P(true)=0.4797
+    escort_departure/departure                 n=6   agree=1.0 |dp|=0.0
+    escort_incident/action                     n=8   agree=1.0 |dp|=0.0
+    escort_incident/urgency                    n=8   agree=1.0 |dp|=0.0 ref_P(true)=0.2322 cand_P(true)=0.2322
+    post_clearance/restoration_posture         n=5   agree=1.0 |dp|=0.0
+    pre_movement/disruption_tolerance          n=12  agree=1.0 |dv|=0.0 ref_v=0.53 cand_v=0.53
+    pre_movement/route_strategy                n=12  agree=1.0 |dp|=0.0
+    pre_movement/urgency                       n=12  agree=1.0 |dp|=0.0 ref_P(true)=0.3537 cand_P(true)=0.3537
+    probe/probe                                n=1   agree=1.0 |dp|=0.0 ref_P(true)=0.4499 cand_P(true)=0.4499
+    probe/readiness                            n=2   agree=1.0 |dv|=0.0 ref_v=0.4364 cand_v=0.4364
+    probe/reroute                              n=2   agree=1.0 |dp|=0.0
+    probe/urgency                              n=2   agree=1.0 |dp|=0.0 ref_P(true)=0.7093 cand_P(true)=0.7093
+    tool_selection/decision_confidence         n=14  agree=1.0 |dv|=0.0 ref_v=0.4579 cand_v=0.4579
+    tool_selection/next_tool                   n=14  agree=1.0 |dp|=0.0

@@ -1,0 +1,5 @@
+{
+	"style": ["src/lib/ai/**", "src/lib/v3/map/**", "src/lib/v3/decide/**", "src/lib/v3/home/**"],
+	"glyph": ["src/lib/ai/**"],
+	"copy": ["src/lib/ai/packs.ai.ts"]
+}

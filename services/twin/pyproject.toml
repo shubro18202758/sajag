@@ -1,0 +1,39 @@
+[project]
+name = "sajag-twin"
+version = "0.1.0"
+description = "Signal-timing twin for Sajag: a macroscopic cell-transmission model of the city's road network that tests every AI signal proposal (extend green, green wave, max-pressure) against doing nothing before an officer sees it. Results are MODELLED; it never changes a signal."
+requires-python = ">=3.12"
+license = "MIT"
+dependencies = [
+    # HTTP service (loopback :8198) and the read-only oracle / local-LLM clients
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.32",
+    "httpx>=0.27",
+    "pydantic>=2.10",
+    # the model itself
+    "numpy>=1.26",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sajag_twin"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 120
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "tests"]
+filterwarnings = [
+    # starlette's TestClient on httpx: an upstream deprecation, not the twin's
+    "ignore:Using `httpx` with `starlette.testclient` is deprecated",
+]

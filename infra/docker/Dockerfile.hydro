@@ -1,0 +1,30 @@
+# Build the hydro (waterlogging nowcast) Python service — aarch64 (GB10) and x86 alike: pure Python + numpy.
+# Build context: services/hydro (compose: context ../services/hydro).
+# Dependencies come entirely from services/hydro/pyproject.toml. The DEM/OSM build step
+# (scripts/build_susceptibility.py, rasterio) is NOT in the image: the service reads the committed
+# src/hydro/data/susceptibility.json.
+# Base and tool images are pinned by digest (python 3.12.15-slim, uv 0.13.5), as for the other services.
+FROM python:3.12-slim@sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704 AS base
+
+COPY --from=ghcr.io/astral-sh/uv:0.13.5@sha256:32a7bb39b496babbd997b0a39a4d66c126bdaf5661b302bf6f06abda8deca6ff /uv /usr/local/bin/uv
+
+WORKDIR /app
+COPY pyproject.toml ./
+RUN uv pip install --system --no-cache -r pyproject.toml
+
+# src/hydro/data/ (network snapshot, landmarks, hotspots, susceptibility) travels with the package.
+COPY src/ src/
+
+# COPY keeps the checkout's mode bits and ACLs: make the sources world-readable for the non-root user.
+RUN chmod -R a+rX /app \
+ && python -m compileall -q /app/src \
+ && useradd --system --uid 10021 --no-create-home hydro
+USER hydro
+
+ENV PYTHONUNBUFFERED=1
+ENV PYTHONPATH=/app/src
+# Binds 127.0.0.1:8197 by default (config.py; HOST/PORT env override).
+EXPOSE 8197
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
+  CMD python -c "import os,urllib.request; urllib.request.urlopen('http://127.0.0.1:%s/health' % os.environ.get('PORT','8197'), timeout=4)"
+CMD ["python", "-m", "hydro"]

@@ -1,0 +1,607 @@
+{
+ "_sample": {
+  "source": "GET /forecast/segments?horizon_min=120 on services/forecast with Chronos-2 on the GPU, data_source=synthetic, run locally on 30 Oct 2026 (loopback port 9351, origin 14:45 IST) on the Mumbai network v1 (cities/mumbai/network.json, 86 segments) and the synthetic Mumbai history (seed 1853); oracle and hydro pointed at the discard port, so nothing live was read",
+  "trimmed": "segments trimmed to 3 of 86 (1066 Dr Ambedkar Road, Hindmata - Dadar TT; 1030 Sahar Road, the Andheri Subway approach; 1034 Saki Vihar Road); proposals trimmed to 1 of 36 (the Saki Vihar Road crossing); everything else as returned (crossings is the service's own count of segments forecast to cross V/C 0.8)"
+ },
+ "generated_at": "2026-10-30T09:43:12.377492+00:00",
+ "origin": "2026-10-30T09:15:00+00:00",
+ "step_min": 15,
+ "max_horizon_min": 120,
+ "threshold_vc": 0.8,
+ "model": "chronos-2",
+ "model_note": null,
+ "inference_sec": 14.09,
+ "data_labels": [
+  "SIMULATED"
+ ],
+ "data_note": "Forecast on simulated traffic: the history is the platform's SIMULATED Mumbai history (or the oracle's simulated feed). Covariates come from the same simulated world.",
+ "oracle": {
+  "used": false
+ },
+ "segments": [
+  {
+   "segment_id": 1030,
+   "road_name": "Sahar Road (Andheri Subway approach)",
+   "place": "Andheri Subway (Andheri East approach, Sahar Road)",
+   "from_junction": 46,
+   "to_junction": 47,
+   "data_label": "SIMULATED",
+   "history_source": "synthetic Mumbai history (seed 1853)",
+   "history_steps": 1344,
+   "notes": [],
+   "now": {
+    "t": "2026-10-30T09:15:00+00:00",
+    "vc": 0.716,
+    "speed_kmh": 33.8
+   },
+   "steps": [
+    {
+     "t": "2026-10-30T09:30:00+00:00",
+     "lead_min": 15,
+     "vc": {
+      "p10": 0.679,
+      "p50": 0.722,
+      "p90": 0.772
+     },
+     "speed_kmh": {
+      "p10": 32.4,
+      "p50": 33.6,
+      "p90": 34.6
+     },
+     "baseline_vc_p50": 0.559
+    },
+    {
+     "t": "2026-10-30T09:45:00+00:00",
+     "lead_min": 30,
+     "vc": {
+      "p10": 0.681,
+      "p50": 0.734,
+      "p90": 0.786
+     },
+     "speed_kmh": {
+      "p10": 32.0,
+      "p50": 33.4,
+      "p90": 34.6
+     },
+     "baseline_vc_p50": 0.636
+    },
+    {
+     "t": "2026-10-30T10:00:00+00:00",
+     "lead_min": 45,
+     "vc": {
+      "p10": 0.685,
+      "p50": 0.743,
+      "p90": 0.799
+     },
+     "speed_kmh": {
+      "p10": 31.6,
+      "p50": 33.1,
+      "p90": 34.5
+     },
+     "baseline_vc_p50": 0.662
+    },
+    {
+     "t": "2026-10-30T10:15:00+00:00",
+     "lead_min": 60,
+     "vc": {
+      "p10": 0.695,
+      "p50": 0.755,
+      "p90": 0.815
+     },
+     "speed_kmh": {
+      "p10": 31.1,
+      "p50": 32.8,
+      "p90": 34.3
+     },
+     "baseline_vc_p50": 0.668
+    },
+    {
+     "t": "2026-10-30T10:30:00+00:00",
+     "lead_min": 75,
+     "vc": {
+      "p10": 0.703,
+      "p50": 0.765,
+      "p90": 0.833
+     },
+     "speed_kmh": {
+      "p10": 30.6,
+      "p50": 32.5,
+      "p90": 34.1
+     },
+     "baseline_vc_p50": 0.691
+    },
+    {
+     "t": "2026-10-30T10:45:00+00:00",
+     "lead_min": 90,
+     "vc": {
+      "p10": 0.714,
+      "p50": 0.78,
+      "p90": 0.846
+     },
+     "speed_kmh": {
+      "p10": 30.1,
+      "p50": 32.1,
+      "p90": 33.8
+     },
+     "baseline_vc_p50": 0.707
+    },
+    {
+     "t": "2026-10-30T11:00:00+00:00",
+     "lead_min": 105,
+     "vc": {
+      "p10": 0.723,
+      "p50": 0.79,
+      "p90": 0.859
+     },
+     "speed_kmh": {
+      "p10": 29.7,
+      "p50": 31.9,
+      "p90": 33.6
+     },
+     "baseline_vc_p50": 0.702
+    },
+    {
+     "t": "2026-10-30T11:15:00+00:00",
+     "lead_min": 120,
+     "vc": {
+      "p10": 0.733,
+      "p50": 0.804,
+      "p90": 0.874
+     },
+     "speed_kmh": {
+      "p10": 29.2,
+      "p50": 31.4,
+      "p90": 33.4
+     },
+     "baseline_vc_p50": 0.721
+    }
+   ],
+   "crossing": {
+    "threshold": 0.8,
+    "at": "2026-10-30T11:15:00+00:00",
+    "in_min": 120,
+    "vc_p10": 0.733,
+    "vc_p50": 0.804,
+    "vc_p90": 0.874,
+    "baseline_vc_p50": 0.721
+   },
+   "above_threshold_now": false,
+   "covariates": {
+    "rain": {
+     "label": "SIMULATED",
+     "next_2h_mm": 0.0,
+     "source": "simulated world"
+    },
+    "gate_closed": {
+     "label": "SIMULATED",
+     "next_2h_steps_closed": 8,
+     "source": "Apollo Bunder tide model (MODELLED, approximate)"
+    },
+    "event": {
+     "label": "SIMULATED",
+     "active_next_2h": false,
+     "source": "simulated calendar (Ganeshotsav, visarjan, Wankhede egress, marathon)"
+    }
+   },
+   "model": "chronos-2",
+   "proposal_id": "fc-1030-20261030T0915Z"
+  },
+  {
+   "segment_id": 1034,
+   "road_name": "Saki Vihar Road",
+   "place": "Powai (JVLR, Saki Vihar Road)",
+   "from_junction": 54,
+   "to_junction": 55,
+   "data_label": "SIMULATED",
+   "history_source": "synthetic Mumbai history (seed 1853)",
+   "history_steps": 1344,
+   "notes": [],
+   "now": {
+    "t": "2026-10-30T09:15:00+00:00",
+    "vc": 0.739,
+    "speed_kmh": 43.4
+   },
+   "steps": [
+    {
+     "t": "2026-10-30T09:30:00+00:00",
+     "lead_min": 15,
+     "vc": {
+      "p10": 0.732,
+      "p50": 0.77,
+      "p90": 0.813
+     },
+     "speed_kmh": {
+      "p10": 40.7,
+      "p50": 42.3,
+      "p90": 43.6
+     },
+     "baseline_vc_p50": 0.802
+    },
+    {
+     "t": "2026-10-30T09:45:00+00:00",
+     "lead_min": 30,
+     "vc": {
+      "p10": 0.75,
+      "p50": 0.796,
+      "p90": 0.846
+     },
+     "speed_kmh": {
+      "p10": 39.3,
+      "p50": 41.3,
+      "p90": 43.0
+     },
+     "baseline_vc_p50": 0.769
+    },
+    {
+     "t": "2026-10-30T10:00:00+00:00",
+     "lead_min": 45,
+     "vc": {
+      "p10": 0.772,
+      "p50": 0.826,
+      "p90": 0.879
+     },
+     "speed_kmh": {
+      "p10": 37.9,
+      "p50": 40.2,
+      "p90": 42.2
+     },
+     "baseline_vc_p50": 0.788
+    },
+    {
+     "t": "2026-10-30T10:15:00+00:00",
+     "lead_min": 60,
+     "vc": {
+      "p10": 0.796,
+      "p50": 0.853,
+      "p90": 0.915
+     },
+     "speed_kmh": {
+      "p10": 36.3,
+      "p50": 39.1,
+      "p90": 41.3
+     },
+     "baseline_vc_p50": 0.859
+    },
+    {
+     "t": "2026-10-30T10:30:00+00:00",
+     "lead_min": 75,
+     "vc": {
+      "p10": 0.821,
+      "p50": 0.88,
+      "p90": 0.942
+     },
+     "speed_kmh": {
+      "p10": 35.1,
+      "p50": 37.9,
+      "p90": 40.4
+     },
+     "baseline_vc_p50": 0.895
+    },
+    {
+     "t": "2026-10-30T10:45:00+00:00",
+     "lead_min": 90,
+     "vc": {
+      "p10": 0.843,
+      "p50": 0.905,
+      "p90": 0.97
+     },
+     "speed_kmh": {
+      "p10": 33.7,
+      "p50": 36.8,
+      "p90": 39.5
+     },
+     "baseline_vc_p50": 0.889
+    },
+    {
+     "t": "2026-10-30T11:00:00+00:00",
+     "lead_min": 105,
+     "vc": {
+      "p10": 0.87,
+      "p50": 0.933,
+      "p90": 0.997
+     },
+     "speed_kmh": {
+      "p10": 32.4,
+      "p50": 35.5,
+      "p90": 38.3
+     },
+     "baseline_vc_p50": 0.947
+    },
+    {
+     "t": "2026-10-30T11:15:00+00:00",
+     "lead_min": 120,
+     "vc": {
+      "p10": 0.897,
+      "p50": 0.967,
+      "p90": 1.03
+     },
+     "speed_kmh": {
+      "p10": 30.9,
+      "p50": 33.9,
+      "p90": 37.1
+     },
+     "baseline_vc_p50": 0.988
+    }
+   ],
+   "crossing": {
+    "threshold": 0.8,
+    "at": "2026-10-30T10:00:00+00:00",
+    "in_min": 45,
+    "vc_p10": 0.772,
+    "vc_p50": 0.826,
+    "vc_p90": 0.879,
+    "baseline_vc_p50": 0.788
+   },
+   "above_threshold_now": false,
+   "covariates": {
+    "rain": {
+     "label": "SIMULATED",
+     "next_2h_mm": 0.0,
+     "source": "simulated world"
+    },
+    "gate_closed": {
+     "label": "SIMULATED",
+     "next_2h_steps_closed": 8,
+     "source": "Apollo Bunder tide model (MODELLED, approximate)"
+    },
+    "event": {
+     "label": "SIMULATED",
+     "active_next_2h": false,
+     "source": "simulated calendar (Ganeshotsav, visarjan, Wankhede egress, marathon)"
+    }
+   },
+   "model": "chronos-2",
+   "proposal_id": "fc-1034-20261030T0915Z"
+  },
+  {
+   "segment_id": 1066,
+   "road_name": "Dr Ambedkar Road (Hindmata - Dadar TT)",
+   "place": "Dadar TT Circle",
+   "from_junction": 19,
+   "to_junction": 20,
+   "data_label": "SIMULATED",
+   "history_source": "synthetic Mumbai history (seed 1853)",
+   "history_steps": 1344,
+   "notes": [],
+   "now": {
+    "t": "2026-10-30T09:15:00+00:00",
+    "vc": 0.694,
+    "speed_kmh": 53.8
+   },
+   "steps": [
+    {
+     "t": "2026-10-30T09:30:00+00:00",
+     "lead_min": 15,
+     "vc": {
+      "p10": 0.659,
+      "p50": 0.704,
+      "p90": 0.758
+     },
+     "speed_kmh": {
+      "p10": 51.4,
+      "p50": 53.5,
+      "p90": 55.0
+     },
+     "baseline_vc_p50": 0.689
+    },
+    {
+     "t": "2026-10-30T09:45:00+00:00",
+     "lead_min": 30,
+     "vc": {
+      "p10": 0.658,
+      "p50": 0.717,
+      "p90": 0.78
+     },
+     "speed_kmh": {
+      "p10": 50.4,
+      "p50": 53.0,
+      "p90": 55.0
+     },
+     "baseline_vc_p50": 0.736
+    },
+    {
+     "t": "2026-10-30T10:00:00+00:00",
+     "lead_min": 45,
+     "vc": {
+      "p10": 0.662,
+      "p50": 0.729,
+      "p90": 0.801
+     },
+     "speed_kmh": {
+      "p10": 49.5,
+      "p50": 52.5,
+      "p90": 54.9
+     },
+     "baseline_vc_p50": 0.754
+    },
+    {
+     "t": "2026-10-30T10:15:00+00:00",
+     "lead_min": 60,
+     "vc": {
+      "p10": 0.671,
+      "p50": 0.745,
+      "p90": 0.818
+     },
+     "speed_kmh": {
+      "p10": 48.7,
+      "p50": 51.9,
+      "p90": 54.6
+     },
+     "baseline_vc_p50": 0.732
+    },
+    {
+     "t": "2026-10-30T10:30:00+00:00",
+     "lead_min": 75,
+     "vc": {
+      "p10": 0.682,
+      "p50": 0.757,
+      "p90": 0.837
+     },
+     "speed_kmh": {
+      "p10": 47.8,
+      "p50": 51.4,
+      "p90": 54.2
+     },
+     "baseline_vc_p50": 0.694
+    },
+    {
+     "t": "2026-10-30T10:45:00+00:00",
+     "lead_min": 90,
+     "vc": {
+      "p10": 0.697,
+      "p50": 0.773,
+      "p90": 0.85
+     },
+     "speed_kmh": {
+      "p10": 47.1,
+      "p50": 50.7,
+      "p90": 53.7
+     },
+     "baseline_vc_p50": 0.705
+    },
+    {
+     "t": "2026-10-30T11:00:00+00:00",
+     "lead_min": 105,
+     "vc": {
+      "p10": 0.708,
+      "p50": 0.785,
+      "p90": 0.865
+     },
+     "speed_kmh": {
+      "p10": 46.3,
+      "p50": 50.2,
+      "p90": 53.3
+     },
+     "baseline_vc_p50": 0.746
+    },
+    {
+     "t": "2026-10-30T11:15:00+00:00",
+     "lead_min": 120,
+     "vc": {
+      "p10": 0.716,
+      "p50": 0.798,
+      "p90": 0.879
+     },
+     "speed_kmh": {
+      "p10": 45.6,
+      "p50": 49.6,
+      "p90": 53.0
+     },
+     "baseline_vc_p50": 0.754
+    }
+   ],
+   "crossing": null,
+   "above_threshold_now": false,
+   "covariates": {
+    "rain": {
+     "label": "SIMULATED",
+     "next_2h_mm": 0.0,
+     "source": "simulated world"
+    },
+    "gate_closed": {
+     "label": "SIMULATED",
+     "next_2h_steps_closed": 8,
+     "source": "Apollo Bunder tide model (MODELLED, approximate)"
+    },
+    "event": {
+     "label": "SIMULATED",
+     "active_next_2h": false,
+     "source": "simulated calendar (Ganeshotsav, visarjan, Wankhede egress, marathon)"
+    }
+   },
+   "model": "chronos-2"
+  }
+ ],
+ "skipped": [],
+ "fallback_reasons": {},
+ "proposals": [
+  {
+   "proposal_id": "fc-1034-20261030T0915Z",
+   "kind": "pre_emptive_diversion",
+   "subject_urn": "segment:1034",
+   "state": "proposed",
+   "generated_at": "2026-10-30T09:15:00+00:00",
+   "expires_at": "2026-10-30T10:00:00+00:00",
+   "horizon_min": 120,
+   "summary": "Powai (JVLR, Saki Vihar Road): V/C forecast 0.83 in 45 min (p10–p90 0.77–0.88) on Saki Vihar Road; propose diversion via Andheri-Kurla Road → Western Express Highway → Jogeshwari-Vikhroli Link Road.",
+   "situation": {
+    "segment_id": 1034,
+    "road_name": "Saki Vihar Road",
+    "place": "Powai (JVLR, Saki Vihar Road)",
+    "junction_id": 55,
+    "vc_now": 0.739,
+    "crossing_at": "2026-10-30T10:00:00+00:00",
+    "in_min": 45,
+    "vc_p10": 0.77,
+    "vc_p50": 0.83,
+    "vc_p90": 0.88,
+    "threshold": 0.8,
+    "baseline_vc_p50": 0.788
+   },
+   "actions": [
+    {
+     "verb": "diversion",
+     "target_urn": "segment:1034",
+     "params": {
+      "via_segment_ids": [
+       1032,
+       1017,
+       1035
+      ],
+      "via_names": [
+       "Andheri-Kurla Road",
+       "Western Express Highway",
+       "Jogeshwari-Vikhroli Link Road"
+      ],
+      "detour_length_m": 11606,
+      "direct_length_m": 2629,
+      "suggested_share": 0.06,
+      "window_min": 120,
+      "starts_before_min": 35
+     },
+     "requires_officer": true,
+     "reversible": true
+    },
+    {
+     "verb": "advisory",
+     "target_urn": "junction:55",
+     "params": {
+      "draft_en": "Heavy traffic expected near Powai (JVLR, Saki Vihar Road) in about 45 minutes. Please plan ahead.",
+      "channel": "public advisory (after officer approval)",
+      "draft_mr": "पवई (जेव्हीएलआर, साकी विहार मार्ग) जवळ सुमारे ४५ मिनिटांत मोठी वाहतूक कोंडी अपेक्षित आहे. कृपया प्रवासाचे नियोजन करा."
+     },
+     "requires_officer": true,
+     "reversible": true
+    }
+   ],
+   "expected_effect": {
+    "suggested_share": 0.06,
+    "note": "share of the flow that would have to divert to hold the forecast median just under the threshold (MODELLED, proportional; not simulated in the twin)"
+   },
+   "recommendation": {
+    "decision": "await_officer"
+   },
+   "human_gate": {
+    "state": "proposed",
+    "required_role": "duty_officer",
+    "officer": null,
+    "decided_at": null
+   },
+   "labels": [
+    "SIMULATED",
+    "MODELLED"
+   ],
+   "provenance": {
+    "model": "chronos-2",
+    "data": "SIMULATED",
+    "history_source": "synthetic Mumbai history (seed 1853)"
+   }
+  }
+ ],
+ "network": {
+  "source": "cities/mumbai/network.json",
+  "attribution": "(c) OpenStreetMap contributors, ODbL 1.0 — https://www.openstreetmap.org/copyright"
+ },
+ "horizon_min": 120,
+ "crossings": 36
+}

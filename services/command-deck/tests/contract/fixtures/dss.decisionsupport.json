@@ -1,0 +1,773 @@
+{
+	"dss_id": "7c1076f0-385c-4dec-817d-78bda6b3d185",
+	"event_urn": "osint_event:8ec6f567-9366-47ae-8fde-38aa421a3219",
+	"state": "expired",
+	"generated_at": "2026-10-25T15:13:45.964605Z",
+	"horizon_min": 120,
+	"seed": 20261024,
+	"situation": {
+		"summary": "Car crashes into three vehicles near Sector V on the New Town link; [AGE] scooter rider among 3 injured",
+		"event_class": "road_accident",
+		"correlated_classes": [
+			"road_accident",
+			"public_conflict"
+		],
+		"subtype": "affray+collision",
+		"sajag_event_kind": "road_accident",
+		"toponym": "Sector V (Salt Lake)",
+		"segment_id": 1045,
+		"junction_id": null,
+		"rep_lonlat": [
+			88.4414,
+			22.5799
+		],
+		"credibility": 0.65,
+		"independent_publishers": 2,
+		"source_tiers": [
+			"aggregator"
+		],
+		"cross_type_corroborated": false,
+		"attach": {
+			"novel": true,
+			"corroborates_live_urn": null,
+			"distance_m": null
+		},
+		"verification_state": "NEWS-REPORTED",
+		"geocode_confidence": 0.719,
+		"composite_confidence": 0.686
+	},
+	"criteria": [
+		{
+			"id": "safety_risk_reduction",
+			"label": "Public-safety risk reduction",
+			"direction": "benefit",
+			"weight": 0.3121,
+			"weight_source": "ahp",
+			"role": "discriminating"
+		},
+		{
+			"id": "time_to_effect",
+			"label": "Speed of effect (ETA to scene)",
+			"direction": "benefit",
+			"weight": 0.1075,
+			"weight_source": "ahp",
+			"role": "discriminating"
+		},
+		{
+			"id": "resource_cost",
+			"label": "Resource cost",
+			"direction": "cost",
+			"weight": 0.0247,
+			"weight_source": "ahp",
+			"role": "discriminating"
+		},
+		{
+			"id": "public_disruption",
+			"label": "Public traffic disruption",
+			"direction": "cost",
+			"weight": 0.0507,
+			"weight_source": "ahp",
+			"role": "discriminating"
+		},
+		{
+			"id": "cascade_risk",
+			"label": "Cascade / spillover risk",
+			"direction": "cost",
+			"weight": 0.0739,
+			"weight_source": "ahp",
+			"role": "discriminating"
+		},
+		{
+			"id": "reversibility",
+			"label": "Reversibility",
+			"direction": "benefit",
+			"weight": 0.0183,
+			"weight_source": "ahp",
+			"role": "discriminating"
+		},
+		{
+			"id": "affected_population",
+			"label": "Affected population",
+			"direction": "cost",
+			"weight": 0.035,
+			"weight_source": "ahp",
+			"role": "discriminating"
+		},
+		{
+			"id": "protocol_compliance",
+			"label": "Protocol compliance",
+			"direction": "benefit",
+			"weight": 0.2223,
+			"weight_source": "ahp",
+			"role": "gate (non-discriminating)"
+		},
+		{
+			"id": "legality",
+			"label": "Legality",
+			"direction": "benefit",
+			"weight": 0.1555,
+			"weight_source": "ahp",
+			"role": "gate (non-discriminating)"
+		}
+	],
+	"ahp": {
+		"consistency_ratio": 0.0346,
+		"acceptable": true,
+		"rank_order": [
+			"safety_risk_reduction",
+			"protocol_compliance",
+			"legality",
+			"time_to_effect",
+			"cascade_risk",
+			"public_disruption",
+			"affected_population",
+			"resource_cost",
+			"reversibility"
+		]
+	},
+	"scoring_note": "TOPSIS runs over the 7 discriminating criteria [safety_risk_reduction, time_to_effect, resource_cost, public_disruption, cascade_risk, reversibility, affected_population]. protocol_compliance and legality are guaranteed by the lexical veto (a COA that fails one is vetoed before scoring). A criterion equal across the COAs cannot change the ranking, so the 2 gate criteria are reported as gate-passed (non-discriminating). composite_confidence 0.686 is an honest blend (0.5 credibility + 0.3 (1 - closeness spread) + 0.2 geocode confidence), not a probability calibrated against outcomes. Public-safety floor: people are reported hurt or public safety is at stake, and credibility 0.65 is at or above the 0.50 act-on-it threshold, so the do-nothing baseline is held below every feasible response course of action — a documented, non-compensatory ordering rule; the TOPSIS closeness values are unchanged and still shown.",
+	"coa_set": [
+		{
+			"coa_id": "coa_base",
+			"kind": "baseline",
+			"label": "Monitor only (do nothing)",
+			"actions": [
+				{
+					"verb": "monitor",
+					"target_urn": "place:sector_v_salt_lake_106",
+					"params": {},
+					"requires_officer": false,
+					"reversible": true
+				}
+			],
+			"predicted_outcome": {
+				"response_time_to_scene_sec": null,
+				"total_disruption_vehicle_hours": {
+					"mean": 0,
+					"p90": 0,
+					"p90_mean_ratio": null,
+					"replications": 240
+				},
+				"cascade": {
+					"spillover_vehicle_hours": {
+						"mean": 0,
+						"p90": 0
+					},
+					"neighbourhoods_touched": [],
+					"parallel_routes_loaded": [],
+					"affected_segment_ids": []
+				},
+				"emergency_impact": {
+					"ambulance_delay_sec": 0,
+					"green_corridor_ok": true
+				},
+				"time_to_effect_sec": 0,
+				"event_resolution_prob": 0.3,
+				"method": "SIMULATED · disruption: DSS surrogate (240 replications, seeded): no closure or diversion, so there is nothing for the twin to run; cascade: DSS-layer spillover over the segment neighbours + pgRouting KSP reassignment (240 replications, seeded)"
+			},
+			"resource_feasibility": {
+				"required_resources": {},
+				"availability": {},
+				"eta_to_scene_sec": null,
+				"feasible": true,
+				"shortfalls": []
+			},
+			"attributes": {
+				"legality": 1,
+				"cascade_risk": 1,
+				"resource_cost": 1,
+				"reversibility": 1,
+				"time_to_effect": 1,
+				"public_disruption": 1,
+				"affected_population": 1,
+				"protocol_compliance": 1,
+				"safety_risk_reduction": 0
+			},
+			"score": {
+				"method": "topsis",
+				"closeness": 0.2127,
+				"rank": 2,
+				"feasible": true
+			},
+			"ethics": {
+				"touches_persons": false,
+				"legal": true,
+				"protocol_ok": true,
+				"irreversible_without_officer": false,
+				"vetoed": false,
+				"veto_reason": null
+			}
+		},
+		{
+			"coa_id": "coa_min",
+			"kind": "minimal",
+			"label": "Driver and citizen advisory only (VMS + app push)",
+			"actions": [
+				{
+					"verb": "advisory",
+					"target_urn": "place:sector_v_salt_lake_106",
+					"params": {
+						"draft": true,
+						"channel": "vms_and_app"
+					},
+					"requires_officer": false,
+					"reversible": true
+				}
+			],
+			"predicted_outcome": {
+				"response_time_to_scene_sec": null,
+				"total_disruption_vehicle_hours": {
+					"mean": 96.1,
+					"p90": 112,
+					"p90_mean_ratio": 1.165,
+					"replications": 240
+				},
+				"cascade": {
+					"spillover_vehicle_hours": {
+						"mean": 28.8,
+						"p90": 33.7
+					},
+					"neighbourhoods_touched": [],
+					"parallel_routes_loaded": [
+						"Acharya Jagadish Chandra Bose Road",
+						"Karl Marx Sarani"
+					],
+					"affected_segment_ids": [
+						1023,
+						1047
+					]
+				},
+				"emergency_impact": {
+					"ambulance_delay_sec": 0,
+					"green_corridor_ok": true
+				},
+				"time_to_effect_sec": 120,
+				"event_resolution_prob": 0.38,
+				"method": "SIMULATED · disruption: DSS surrogate (240 replications, seeded): no closure or diversion, and the twin cannot express this COA's advisory; cascade: DSS-layer spillover over the segment neighbours + pgRouting KSP reassignment (240 replications, seeded)"
+			},
+			"resource_feasibility": {
+				"required_resources": {},
+				"availability": {},
+				"eta_to_scene_sec": null,
+				"feasible": true,
+				"shortfalls": []
+			},
+			"attributes": {
+				"legality": 1,
+				"cascade_risk": 0.98,
+				"resource_cost": 1,
+				"reversibility": 1,
+				"time_to_effect": 0.8,
+				"public_disruption": 0.962,
+				"affected_population": 1,
+				"protocol_compliance": 1,
+				"safety_risk_reduction": 0
+			},
+			"score": {
+				"method": "topsis",
+				"closeness": 0.1824,
+				"rank": 1,
+				"feasible": true
+			},
+			"ethics": {
+				"touches_persons": false,
+				"legal": true,
+				"protocol_ok": true,
+				"irreversible_without_officer": false,
+				"vetoed": false,
+				"veto_reason": null
+			}
+		},
+		{
+			"coa_id": "coa_std",
+			"kind": "standard",
+			"label": "Advisory + 108 ambulance + 1 patrol + signal priority",
+			"actions": [
+				{
+					"verb": "advisory",
+					"target_urn": "place:sector_v_salt_lake_106",
+					"params": {
+						"draft": true,
+						"channel": "vms_and_app"
+					},
+					"requires_officer": false,
+					"reversible": true
+				},
+				{
+					"verb": "dispatch",
+					"target_urn": "segment:1045",
+					"params": {
+						"count": 1,
+						"agency": "ambulance"
+					},
+					"requires_officer": true,
+					"reversible": true
+				},
+				{
+					"verb": "dispatch",
+					"target_urn": "segment:1045",
+					"params": {
+						"count": 1,
+						"agency": "police"
+					},
+					"requires_officer": true,
+					"reversible": true
+				},
+				{
+					"verb": "signal_hold",
+					"target_urn": "junction:9",
+					"params": {
+						"mode": "emergency_priority",
+						"hold_sec": 60
+					},
+					"requires_officer": true,
+					"reversible": true
+				}
+			],
+			"predicted_outcome": {
+				"response_time_to_scene_sec": null,
+				"total_disruption_vehicle_hours": {
+					"mean": 448.3,
+					"p90": 539.8,
+					"p90_mean_ratio": 1.204,
+					"replications": 240
+				},
+				"cascade": {
+					"spillover_vehicle_hours": {
+						"mean": 32.6,
+						"p90": 38.7
+					},
+					"neighbourhoods_touched": [
+						"Salt Lake"
+					],
+					"parallel_routes_loaded": [
+						"Acharya Jagadish Chandra Bose Road",
+						"Karl Marx Sarani"
+					],
+					"affected_segment_ids": [
+						1045,
+						1023,
+						1047
+					]
+				},
+				"emergency_impact": {
+					"ambulance_delay_sec": -60,
+					"green_corridor_ok": true
+				},
+				"time_to_effect_sec": 300,
+				"event_resolution_prob": 0.88,
+				"method": "SIMULATED · disruption: DSS surrogate (240 replications, seeded): no closure or diversion, and the twin cannot express this COA's lane loss, advisory, dispatch and signal priority; cascade: DSS-layer spillover over the segment neighbours + pgRouting KSP reassignment (240 replications, seeded)"
+			},
+			"resource_feasibility": {
+				"required_resources": {
+					"police": 1,
+					"ambulance": 1
+				},
+				"availability": {
+					"police": 0,
+					"ambulance": 0
+				},
+				"eta_to_scene_sec": null,
+				"feasible": false,
+				"shortfalls": [
+					"ambulance: need 1, 0 free",
+					"police: need 1, 0 free"
+				]
+			},
+			"attributes": {
+				"legality": 1,
+				"cascade_risk": 0.978,
+				"resource_cost": 0.575,
+				"reversibility": 1,
+				"time_to_effect": 0.5,
+				"public_disruption": 0.823,
+				"affected_population": 0.7,
+				"protocol_compliance": 1,
+				"safety_risk_reduction": 0.88
+			},
+			"score": {
+				"method": "topsis",
+				"closeness": 0.8669,
+				"rank": 3,
+				"feasible": false
+			},
+			"ethics": {
+				"touches_persons": false,
+				"legal": true,
+				"protocol_ok": true,
+				"irreversible_without_officer": false,
+				"vetoed": false,
+				"veto_reason": null
+			}
+		},
+		{
+			"coa_id": "coa_agg",
+			"kind": "aggressive",
+			"label": "Close carriageway + full diversion + 108 + 2 police units",
+			"actions": [
+				{
+					"verb": "closure",
+					"target_urn": "segment:1045",
+					"params": {
+						"scope": "carriageway"
+					},
+					"requires_officer": true,
+					"reversible": true
+				},
+				{
+					"verb": "diversion",
+					"target_urn": "segment:1045",
+					"params": {
+						"via": [
+							"Acharya Jagadish Chandra Bose Road",
+							"Karl Marx Sarani",
+							"Ashutosh Mukherjee Road",
+							"Rash Behari Avenue"
+						]
+					},
+					"requires_officer": true,
+					"reversible": true
+				},
+				{
+					"verb": "dispatch",
+					"target_urn": "segment:1045",
+					"params": {
+						"count": 1,
+						"agency": "ambulance"
+					},
+					"requires_officer": true,
+					"reversible": true
+				},
+				{
+					"verb": "dispatch",
+					"target_urn": "segment:1045",
+					"params": {
+						"count": 2,
+						"agency": "police"
+					},
+					"requires_officer": true,
+					"reversible": true
+				}
+			],
+			"predicted_outcome": {
+				"response_time_to_scene_sec": null,
+				"total_disruption_vehicle_hours": {
+					"mean": 4870.8,
+					"p90": 4870.8,
+					"p90_mean_ratio": 1,
+					"replications": 20
+				},
+				"cascade": {
+					"spillover_vehicle_hours": {
+						"mean": 820.2,
+						"p90": 1216.8
+					},
+					"neighbourhoods_touched": [
+						"Rajarhat",
+						"Salt Lake",
+						"New Town"
+					],
+					"parallel_routes_loaded": [
+						"Acharya Jagadish Chandra Bose Road",
+						"Karl Marx Sarani",
+						"Ashutosh Mukherjee Road",
+						"Rash Behari Avenue"
+					],
+					"affected_segment_ids": [
+						1045,
+						1023,
+						1047,
+						1019,
+						1033
+					]
+				},
+				"emergency_impact": {
+					"ambulance_delay_sec": 541.7,
+					"green_corridor_ok": false
+				},
+				"time_to_effect_sec": 420,
+				"event_resolution_prob": 0.97,
+				"method": "SIMULATED · disruption: seeded corridor twin (unchanged, 20 replications, full_closure on segments [1045]), each closure pass projected to the COA's 50-min closure by the point-queue law; cascade: DSS-layer spillover over the segment neighbours + pgRouting KSP reassignment (240 replications, seeded)"
+			},
+			"resource_feasibility": {
+				"required_resources": {
+					"police": 2,
+					"ambulance": 1
+				},
+				"availability": {
+					"police": 0,
+					"ambulance": 0
+				},
+				"eta_to_scene_sec": null,
+				"feasible": false,
+				"shortfalls": [
+					"ambulance: need 1, 0 free",
+					"police: need 2, 0 free"
+				]
+			},
+			"attributes": {
+				"legality": 1,
+				"cascade_risk": 0.438,
+				"resource_cost": 0.08,
+				"reversibility": 0.75,
+				"time_to_effect": 0.3,
+				"public_disruption": 0,
+				"affected_population": 0.1,
+				"protocol_compliance": 1,
+				"safety_risk_reduction": 0.72
+			},
+			"score": {
+				"method": "topsis",
+				"closeness": 0.7153,
+				"rank": 4,
+				"feasible": false
+			},
+			"ethics": {
+				"touches_persons": false,
+				"legal": true,
+				"protocol_ok": true,
+				"irreversible_without_officer": false,
+				"vetoed": false,
+				"veto_reason": null
+			}
+		},
+		{
+			"coa_id": "coa_info",
+			"kind": "information",
+			"label": "Verify first: 1 patrol to confirm + ICCC situation check (no identification) + 10-min hold",
+			"actions": [
+				{
+					"verb": "dispatch",
+					"target_urn": "segment:1045",
+					"params": {
+						"role": "verify",
+						"count": 1,
+						"agency": "police"
+					},
+					"requires_officer": true,
+					"reversible": true
+				},
+				{
+					"verb": "request_cctv",
+					"target_urn": "junction:9",
+					"params": {
+						"label": "Situation check at the junction (ICCC) — no identification",
+						"channel": "ICCC",
+						"outside_sajag": true,
+						"identification": false
+					},
+					"requires_officer": false,
+					"reversible": true
+				},
+				{
+					"verb": "monitor",
+					"target_urn": "place:sector_v_salt_lake_106",
+					"params": {
+						"then": "regenerate with any new source",
+						"hold_min": 10
+					},
+					"requires_officer": false,
+					"reversible": true
+				}
+			],
+			"predicted_outcome": {
+				"response_time_to_scene_sec": null,
+				"total_disruption_vehicle_hours": {
+					"mean": 21.5,
+					"p90": 25.2,
+					"p90_mean_ratio": 1.171,
+					"replications": 240
+				},
+				"cascade": {
+					"spillover_vehicle_hours": {
+						"mean": 10.9,
+						"p90": 13
+					},
+					"neighbourhoods_touched": [],
+					"parallel_routes_loaded": [
+						"Acharya Jagadish Chandra Bose Road",
+						"Karl Marx Sarani"
+					],
+					"affected_segment_ids": [
+						1023,
+						1047
+					]
+				},
+				"emergency_impact": {
+					"ambulance_delay_sec": 0,
+					"green_corridor_ok": true
+				},
+				"time_to_effect_sec": 240,
+				"event_resolution_prob": 0.68,
+				"method": "SIMULATED · disruption: DSS surrogate (240 replications, seeded): no closure or diversion, and the twin cannot express this COA's dispatch; cascade: DSS-layer spillover over the segment neighbours + pgRouting KSP reassignment (240 replications, seeded)"
+			},
+			"resource_feasibility": {
+				"required_resources": {
+					"police": 1
+				},
+				"availability": {
+					"police": 0
+				},
+				"eta_to_scene_sec": null,
+				"feasible": false,
+				"shortfalls": [
+					"police: need 1, 0 free"
+				]
+			},
+			"attributes": {
+				"legality": 1,
+				"cascade_risk": 0.993,
+				"resource_cost": 0.82,
+				"reversibility": 1,
+				"time_to_effect": 0.6,
+				"public_disruption": 0.992,
+				"affected_population": 1,
+				"protocol_compliance": 1,
+				"safety_risk_reduction": 0.28
+			},
+			"score": {
+				"method": "topsis",
+				"closeness": 0.3482,
+				"rank": 5,
+				"feasible": false
+			},
+			"ethics": {
+				"touches_persons": false,
+				"legal": true,
+				"protocol_ok": true,
+				"irreversible_without_officer": false,
+				"vetoed": false,
+				"veto_reason": null
+			}
+		}
+	],
+	"recommendation": {
+		"ranked_coa_ids": [
+			"coa_min",
+			"coa_base",
+			"coa_std",
+			"coa_agg",
+			"coa_info"
+		],
+		"top_coa_id": "coa_min",
+		"margin": -0.0303,
+		"sensitivity": {
+			"rank_stability": 1,
+			"flips_to": {}
+		},
+		"value_of_information": {
+			"evoi": -0.1879,
+			"L_act_now": 0.652,
+			"L_gather_then_act": 0.8399,
+			"info_cost": 0.2,
+			"advise_gather": false,
+			"info_coa_id": "coa_info",
+			"why": "acting now: verifying first is not available this cycle (the information COA cannot be resourced or is vetoed: police: need 1, 0 free — request units), so the recommended feasible COA stands (EVOI -0.188, credibility 0.65); the best response coa_std is blocked on resources (ambulance: need 1, 0 free; police: need 1, 0 free) — request units"
+		},
+		"dissent": "Runner-up is coa_base (Monitor only (do nothing), closeness 0.213 vs 0.182): it scores closer to the ideal than the pick, but the public-safety floor (stated in the scoring note) holds a do-nothing baseline below every feasible response course of action; the gap is -0.030 with 100% rank stability under weight perturbation. Best blocked: the highest-scoring course of action coa_std (Advisory + 108 ambulance + 1 patrol + signal priority, closeness 0.867) cannot be resourced this cycle — the best response needs a 108 ambulance and a patrol; none is on duty — request units (ambulance: need 1, 0 free; police: need 1, 0 free). It would FLIP if resourcing coa_std (ambulance: need 1, 0 free; police: need 1, 0 free) would make it the pick (closeness 0.867 > 0.182); or if resourcing coa_agg (ambulance: need 1, 0 free; police: need 2, 0 free) would make it the pick (closeness 0.715 > 0.182); or if resourcing coa_info (police: need 1, 0 free) would make it the pick (closeness 0.348 > 0.182); or if raising the weight on 'time_to_effect' 1.25x would put coa_base first. Not enough on its own: an OFFICIAL source (credibility 0.95) would not change the advice (EVOI -0.198). Corroboration is REAL but within one tier: 2 independent news publisher(s), 1 source tier(s) (no official confirmation yet), so verification_state stays NEWS-REPORTED and credibility is not inflated to official grade. The more aggressive full-closure COA (coa_agg) is RESOURCE-INFEASIBLE this cycle (ambulance: need 1, 0 free; police: need 2, 0 free) and is ranked last and labelled, not hidden; the wargame separately shows it would delay the 108 to the scene (+542 s) and cast the largest cascade (820 veh·h spillover).",
+		"decision": "await_officer",
+		"strategy_prior": null,
+		"best_blocked": {
+			"coa_id": "coa_std",
+			"label": "Advisory + 108 ambulance + 1 patrol + signal priority",
+			"closeness": 0.8669,
+			"missing": [
+				"ambulance: need 1, 0 free",
+				"police: need 1, 0 free"
+			],
+			"unblock_action": "request_units"
+		}
+	},
+	"provenance": {
+		"feeds": [
+			"google_news_rss"
+		],
+		"publishers": [
+			"news-a.example",
+			"news-b.example"
+		],
+		"sources": [
+			{
+				"signal_id": "5da6e9dacc458558ad96d3605f87db0b5aca1b3a",
+				"source": "google_news_rss",
+				"publisher": "news-a.example",
+				"url": null,
+				"title": "Car crashes into three vehicles near Sector V on the New Town link; [AGE] scooter rider among 3 injured",
+				"event_class": "road_accident",
+				"credibility": 0.6,
+				"fetch_mode": "cached-sample",
+				"role": "primary"
+			},
+			{
+				"signal_id": "a74b990e3c399fd53d5fa50cedf82aa200c6c536",
+				"source": "google_news_rss",
+				"publisher": "news-b.example",
+				"url": null,
+				"title": "Driver beaten by mob after Sector V - New Town link crash near Sector V; the driver was identified as [PERSON]",
+				"event_class": "public_conflict",
+				"credibility": 0.6,
+				"fetch_mode": "cached-sample",
+				"role": "corroborating"
+			},
+			{
+				"signal_id": "8843d1861ca59f663eca981fe03ddf49c983395b",
+				"source": "google_news_rss",
+				"publisher": "news-b.example",
+				"url": null,
+				"title": "Multi-vehicle crash on the New Town link near Sector V leaves three injured",
+				"event_class": "road_accident",
+				"credibility": 0.6,
+				"fetch_mode": "cached-sample",
+				"role": "corroborating"
+			},
+			{
+				"signal_id": "ab19e25e261d2645703f443afdab7715cf06ca18",
+				"source": "google_news_rss",
+				"publisher": "news-b.example",
+				"url": null,
+				"title": "Sector V - New Town link accident: vehicles collided near Salt Lake, one lane blocked",
+				"event_class": "road_accident",
+				"credibility": 0.6,
+				"fetch_mode": "cached-sample",
+				"role": "corroborating"
+			},
+			{
+				"signal_id": "f0db961c339c0a4bf4d1cacf7dd9f5eee8ea01c3",
+				"source": "google_news_rss",
+				"publisher": "news-a.example",
+				"url": null,
+				"title": "Three injured after car rammed vehicles on Sector V - New Town link near Sector V",
+				"event_class": "road_accident",
+				"credibility": 0.6,
+				"fetch_mode": "cached-sample",
+				"role": "corroborating"
+			}
+		],
+		"sim_run_ids": [
+			"7c1076f0-385c-4dec-817d-78bda6b3d185/surrogate/coa_base",
+			"7c1076f0-385c-4dec-817d-78bda6b3d185/cascade/coa_base",
+			"7c1076f0-385c-4dec-817d-78bda6b3d185/surrogate/coa_min",
+			"7c1076f0-385c-4dec-817d-78bda6b3d185/cascade/coa_min",
+			"7c1076f0-385c-4dec-817d-78bda6b3d185/surrogate/coa_std",
+			"7c1076f0-385c-4dec-817d-78bda6b3d185/cascade/coa_std",
+			"7c1076f0-385c-4dec-817d-78bda6b3d185/twin/coa_agg",
+			"7c1076f0-385c-4dec-817d-78bda6b3d185/cascade/coa_agg",
+			"7c1076f0-385c-4dec-817d-78bda6b3d185/surrogate/coa_info",
+			"7c1076f0-385c-4dec-817d-78bda6b3d185/cascade/coa_info"
+		],
+		"model_tiers": [],
+		"wargame_method": "twin+cascade",
+		"brain_degraded": false
+	},
+	"human_gate": {
+		"state": "expired",
+		"required_role": "duty_officer",
+		"officer": null,
+		"decided_at": null,
+		"audit_ref": null
+	},
+	"labels": [
+		"NEWS-REPORTED",
+		"SIMULATED"
+	]
+}

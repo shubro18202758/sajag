@@ -1,0 +1,49 @@
+# Build command-deck SvelteKit app with Bun
+# CPU-only build — no GPU acceleration, memory-constrained to preserve VRAM
+#
+# Both stages are pinned by digest to bun 1.4.3 (the version bun.lock was
+# written with); bump them together, deliberately, never by a floating tag.
+FROM oven/bun:1.4.3@sha256:ec06c3b6cea04192ae6770c434f668ca41d343ad19fa6472216c7b48be39c598 AS builder
+
+WORKDIR /app
+# The lockfile is REQUIRED: the install is frozen, with no fallback to a fresh
+# resolve (a drifted lockfile fails the build instead of silently shipping
+# other dependency versions). services/command-deck/.dockerignore must let
+# bun.lock into the context.
+COPY package.json bun.lock ./
+
+RUN bun install --frozen-lockfile
+
+COPY . .
+# Vendor the prebuilt Cesium bundle (23 MB) into the SvelteKit static dir —
+# pages load the global `Cesium` from /cesium/Cesium.js and no application
+# code imports the 'cesium' package, so the vite bundle stays lean. The
+# bundle is .dockerignore'd from the context and always taken from this
+# image's own node_modules (cesium pinned in package.json).
+RUN mkdir -p static && cp -r node_modules/cesium/Build/Cesium static/cesium
+# Constrain Node.js heap to 1GB — keeps build within CPU/RAM budget
+ENV NODE_OPTIONS="--max-old-space-size=1024"
+RUN bun run build
+
+# --- Runtime ---
+FROM oven/bun:1.4.3-slim@sha256:14a223fa35747ec728bce300ef85888bc5f7958164d15bbba6a54b22b52a3288
+
+WORKDIR /app
+COPY --from=builder /app/build ./build
+COPY --from=builder /app/package.json ./
+
+# Non-root runtime (uid 10006). The build copies static/ with the checkout's
+# mode bits (0640 on this host, other::---), so the tree is made
+# world-readable; the deck writes no file (no volume, no host path), and the
+# user gets a writable HOME for bun's own cache.
+RUN chmod -R a+rX /app \
+ && useradd --system --uid 10006 --create-home --home-dir /home/deck \
+        --shell /usr/sbin/nologin deck
+USER deck
+
+# Runtime uses ~50MB — negligible vs 4GB backend budget
+ENV PORT=5173
+ENV HOST=0.0.0.0
+ENV NODE_OPTIONS="--max-old-space-size=256"
+EXPOSE 5173
+CMD ["bun", "./build"]

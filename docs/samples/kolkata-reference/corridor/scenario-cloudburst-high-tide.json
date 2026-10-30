@@ -1,0 +1,120 @@
+{
+ "_sample": {
+  "pack": "Kolkata reference pack (cities/kolkata/, the second City Pack kept in the repository). Made on 28 Oct 2026, before the platform moved to Mumbai, as 'source' says; NOT a Mumbai capture. The Mumbai version of this file is pending.",
+  "source": "scripts/scenario_library.json (format sajag/scenario-library/1), generated from the City Pack by scripts/city_build.py; one scenario as committed",
+  "label": "SIMULATED: a scenario the event emulator and the twin replay, not a recorded event"
+ },
+ "scenario_id": "cloudburst_high_tide",
+ "name": "Cloudburst at High Tide — Waterlogging, Pumps and Live-Wire Hazard",
+ "description": "SIMULATED. A monsoon evening (a scenario date, not a forecast): a cloudburst-class cell (rain modelled at 100 mm/h) breaks over North and Central Kolkata at 17:30 while the Hooghly is at high water (MODELLED tide phase). With the outfall gates shut against the river the drains cannot empty by gravity and KMC's pumping stations carry the whole load (pump capacity modelled), so the water spreads instead of draining: Thanthania on Bidhan Sarani first, then the Ultadanga approaches, MG Road by College Street, APC Road at Maniktala, AJC Bose Road at Moulali and Park Circus. A car stalls in standing water; signals at Ultadanga go dark (a modelled precautionary power cut). Where water stands around street-light poles and overhead lines the risk is electrocution: the stack may PROPOSE a live-wire hazard advisory to the power utility (CESC / WBSEDCL) — a proposal a named duty officer approves or rejects; nothing is sent by itself. An ambulance (108) from Lake Town to Kolkata Medical College needs windows through the water. Rain rate, tide, pump capacity and spread times are modelled assumptions, not measurements.",
+ "category": "weather",
+ "route_segment_ids": [
+  1039,
+  1062,
+  1058
+ ],
+ "departure_time": "2026-08-18T17:30:00+05:30",
+ "vvip_class": "X",
+ "closure_policy": {
+  "advance_closure_sec": 60,
+  "closure_type": "signal_hold"
+ },
+ "horizon_min": 60,
+ "n_replications": 10,
+ "seed": 20260818,
+ "convoy_speed_kmh": 30.0,
+ "weather": {
+  "monsoon": true,
+  "rain_intensity_mm_h": 100.0
+ },
+ "event_overrides": {
+  "breakdown": 1.8,
+  "waterlogging": 3.0,
+  "signal_fault": 1.5
+ },
+ "forced_events": [
+  {
+   "type": "waterlogging",
+   "segment_id": 1058,
+   "start_sec": 300.0,
+   "duration_sec": 3300.0,
+   "severity": 0.85,
+   "label": "Thanthania (Bidhan Sarani) — low-lying stretch waterlogged; water around lamp posts (live-wire risk)"
+  },
+  {
+   "type": "waterlogging",
+   "segment_id": 1062,
+   "start_sec": 600.0,
+   "duration_sec": 3000.0,
+   "severity": 0.8,
+   "label": "Ultadanga — water collects on Bidhannagar Road"
+  },
+  {
+   "type": "waterlogging",
+   "segment_id": 1039,
+   "start_sec": 900.0,
+   "duration_sec": 2700.0,
+   "severity": 0.75,
+   "label": "VIP Road at Ultadanga — water on the approach"
+  },
+  {
+   "type": "waterlogging",
+   "segment_id": 1055,
+   "start_sec": 900.0,
+   "duration_sec": 2700.0,
+   "severity": 0.75,
+   "label": "MG Road by College Street — outfall shut at high tide, pumps lag"
+  },
+  {
+   "type": "waterlogging",
+   "segment_id": 1057,
+   "start_sec": 1200.0,
+   "duration_sec": 2400.0,
+   "severity": 0.7,
+   "label": "APC Road at Maniktala — water spreading"
+  },
+  {
+   "type": "waterlogging",
+   "segment_id": 1025,
+   "start_sec": 1200.0,
+   "duration_sec": 2400.0,
+   "severity": 0.7,
+   "label": "AJC Bose Road at Moulali — water spreading"
+  },
+  {
+   "type": "waterlogging",
+   "segment_id": 1027,
+   "start_sec": 1500.0,
+   "duration_sec": 2100.0,
+   "severity": 0.7,
+   "label": "Park Circus — water spreading on Mother Teresa Sarani"
+  },
+  {
+   "type": "signal_fault",
+   "segment_id": 1039,
+   "start_sec": 1200.0,
+   "duration_sec": 2400.0,
+   "severity": 0.6,
+   "label": "Ultadanga signals dark — precautionary power cut in standing water"
+  },
+  {
+   "type": "vehicle_breakdown",
+   "segment_id": 1062,
+   "start_sec": 1500.0,
+   "duration_sec": 1800.0,
+   "severity": 0.7,
+   "label": "car stalled in standing water at Ultadanga"
+  }
+ ],
+ "expected_features": [
+  "cloudburst",
+  "high_tide_outfall_closed",
+  "pump_constraint",
+  "waterlogging_spread",
+  "live_wire_hazard_proposal",
+  "green_corridor_request"
+ ],
+ "event_kind": "emergency_evacuation",
+ "crowd_class": "MEDIUM",
+ "duration_class": "hours"
+}

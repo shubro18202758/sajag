@@ -1,0 +1,1459 @@
+{
+	"events": [
+		{
+			"event_id": "4c74cbb2-b52c-5d8b-93e1-c05cc3c497a7",
+			"event_kind": "crime_incident",
+			"protection_class": "none",
+			"crowd_class": "LOW",
+			"title": "Stolen-Vehicle ANPR Sweep — Central Kolkata Belt (Emulated)",
+			"description": "EMULATED use case 'watchlist_anpr_sweep' (seed 20261105, x120) — event-emulator run 24",
+			"status": "completed",
+			"movement_id": "4c74cbb2-b52c-5d8b-93e1-c05cc3c497a7",
+			"planned_start": "2026-10-23T16:39:14.221390+00:00",
+			"planned_end": "2026-10-23T16:39:36.721390+00:00",
+			"actual_start": "2026-10-23T16:39:14.265654+00:00",
+			"actual_end": "2026-10-23T16:39:36.724970+00:00",
+			"updated_at": "2026-10-23T16:39:36.724970+00:00",
+			"metadata": {
+				"mode": "use_case",
+				"seed": 20261105,
+				"run_id": 24,
+				"source": "event-emulator",
+				"is_replay": true,
+				"clock_scale": 120,
+				"scenario_id": "watchlist_anpr_sweep",
+				"use_case_id": "watchlist_anpr_sweep",
+				"closure_policy": {
+					"closure_type": "signal_hold",
+					"advance_closure_sec": 0
+				},
+				"replay_of_run_id": 23,
+				"scenario_horizon_sec": 2700
+			},
+			"zone_geojson": null,
+			"routes": [
+				{
+					"label": "spine",
+					"segment_ids": [
+						1015,
+						1012,
+						1049,
+						1013
+					],
+					"rank": 1,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-23T16:39:14.258283+00:00"
+				}
+			],
+			"route_history": [],
+			"phases": [
+				{
+					"label": "crime_incident",
+					"window_start": "2026-10-23T16:39:14.221390+00:00",
+					"window_end": "2026-10-23T16:39:36.721390+00:00",
+					"closure_policy": {
+						"closure_type": "signal_hold",
+						"advance_closure_sec": 0
+					}
+				}
+			],
+			"inputs_key": "adaptive:inputs:4c74cbb2-b52c-5d8b-93e1-c05cc3c497a7"
+		},
+		{
+			"event_id": "9a28fc47-4991-4745-8f0e-462c2a87b515",
+			"event_kind": "protected_movement",
+			"protection_class": "Z",
+			"crowd_class": "LOW",
+			"title": "Z protected movement · Strand Road → Maa Flyover",
+			"description": "The primary route is the one with the highest weighted score and the lowest disruption score. The alternate routes are the ones with the next highest weighted scores and lowest disruption scores. Decider: strategic tier confirms the tactical primary.",
+			"status": "completed",
+			"movement_id": "a32ca9f5-1b28-4965-be5f-4b7aa7326b56",
+			"planned_start": "2026-10-22T20:43:00+00:00",
+			"planned_end": "2026-10-22T20:54:30+00:00",
+			"actual_start": "2026-10-22T20:16:16.643722+00:00",
+			"actual_end": "2026-10-22T20:17:13.848086+00:00",
+			"updated_at": "2026-10-22T20:17:13.848086+00:00",
+			"metadata": {
+				"source": "convoy-brain",
+				"eta_sec": 570,
+				"route_ids": [
+					"mip_6d824bdf",
+					"ksp_aae10a08",
+					"ksp_e45a9c1e",
+					"ksp_7f0e0733",
+					"ksp_68464e92"
+				],
+				"brain_status": "approved",
+				"decider_pick": {
+					"tier": "decider",
+					"choice": "mip_6d824bdf",
+					"reason": "strategic tier confirms the tactical primary",
+					"applied": true,
+					"route_id": "mip_6d824bdf",
+					"confidence": 0.946
+				},
+				"movement_ref": "a32ca9f5-1b28-4965-be5f-4b7aa7326b56",
+				"security_score": 0.94,
+				"planned_departure": "2026-10-22T20:45:00.000Z",
+				"security_compliant": true
+			},
+			"zone_geojson": null,
+			"routes": [
+				{
+					"label": "primary",
+					"segment_ids": [
+						1005,
+						1013,
+						1014,
+						1024,
+						1025,
+						1029
+					],
+					"rank": 1,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T20:16:11.908304+00:00"
+				},
+				{
+					"label": "alt-1",
+					"segment_ids": [
+						1005,
+						1013,
+						1014,
+						1024,
+						1025,
+						1026,
+						1029
+					],
+					"rank": 2,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T20:16:11.908304+00:00"
+				},
+				{
+					"label": "alt-2",
+					"segment_ids": [
+						1005,
+						1013,
+						1014,
+						1024,
+						1027,
+						1025,
+						1029
+					],
+					"rank": 3,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T20:16:11.908304+00:00"
+				},
+				{
+					"label": "alt-3",
+					"segment_ids": [
+						1005,
+						1013,
+						1014,
+						1024,
+						1027,
+						1028,
+						1029
+					],
+					"rank": 4,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T20:16:11.908304+00:00"
+				},
+				{
+					"label": "alt-4",
+					"segment_ids": [
+						1005,
+						1038,
+						1013,
+						1014,
+						1024,
+						1025,
+						1029
+					],
+					"rank": 5,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T20:16:11.908304+00:00"
+				}
+			],
+			"route_history": [],
+			"phases": [
+				{
+					"label": "closure",
+					"window_start": "2026-10-22T20:43:00+00:00",
+					"window_end": "2026-10-22T20:54:30+00:00",
+					"closure_policy": {
+						"source": "protocol_floor",
+						"closure_type": "partial",
+						"advance_closure_sec": 120
+					}
+				}
+			],
+			"inputs_key": "adaptive:inputs:9a28fc47-4991-4745-8f0e-462c2a87b515"
+		},
+		{
+			"event_id": "d22ff664-cd4f-4ad4-b64a-8b8cf601ab10",
+			"event_kind": "work_zone",
+			"protection_class": "none",
+			"crowd_class": "LOW",
+			"title": "ACCEPTANCE TEST — WP-10 work zone #2 (1600x900 run)",
+			"description": "ACCEPTANCE TEST — WP-10 live ops-wall verification by Acceptance Tester. Synthetic work zone; completed at the end of the test.",
+			"status": "completed",
+			"movement_id": null,
+			"planned_start": "2026-10-23T16:30:00+00:00",
+			"planned_end": "2026-10-23T21:15:00+00:00",
+			"actual_start": "2026-10-22T20:13:41.816279+00:00",
+			"actual_end": "2026-10-22T20:14:08.261612+00:00",
+			"updated_at": "2026-10-22T20:14:08.261612+00:00",
+			"metadata": {
+				"acceptance_test": "WP-10 live verification"
+			},
+			"zone_geojson": null,
+			"routes": [
+				{
+					"label": "ACCEPTANCE TEST spine",
+					"segment_ids": [
+						1038
+					],
+					"rank": 1,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T20:13:27.439959+00:00"
+				}
+			],
+			"route_history": [],
+			"phases": [
+				{
+					"label": "setup",
+					"window_start": "2026-10-23T16:30:00+00:00",
+					"window_end": "2026-10-23T18:30:00+00:00",
+					"closure_policy": {
+						"closure_type": "partial_closure",
+						"advance_closure_sec": 300
+					}
+				},
+				{
+					"label": "works",
+					"window_start": "2026-10-23T18:30:00+00:00",
+					"window_end": "2026-10-23T21:15:00+00:00",
+					"closure_policy": {
+						"closure_type": "partial_closure"
+					}
+				}
+			],
+			"inputs_key": "adaptive:inputs:d22ff664-cd4f-4ad4-b64a-8b8cf601ab10"
+		},
+		{
+			"event_id": "374a82a6-1086-4914-b45b-e939b61762d6",
+			"event_kind": "work_zone",
+			"protection_class": "none",
+			"crowd_class": "LOW",
+			"title": "ACCEPTANCE TEST — WP-10 work zone (Eastern Metropolitan Bypass resurfacing)",
+			"description": "ACCEPTANCE TEST — WP-10 live ops-wall verification by Acceptance Tester. Synthetic work zone; completed at the end of the test.",
+			"status": "completed",
+			"movement_id": null,
+			"planned_start": "2026-10-23T16:30:00+00:00",
+			"planned_end": "2026-10-23T21:15:00+00:00",
+			"actual_start": "2026-10-22T20:10:12.352259+00:00",
+			"actual_end": "2026-10-22T20:10:39.999512+00:00",
+			"updated_at": "2026-10-22T20:10:39.999512+00:00",
+			"metadata": {
+				"acceptance_test": "WP-10 live verification"
+			},
+			"zone_geojson": null,
+			"routes": [
+				{
+					"label": "ACCEPTANCE TEST spine",
+					"segment_ids": [
+						1038
+					],
+					"rank": 1,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T20:08:39.037144+00:00"
+				}
+			],
+			"route_history": [],
+			"phases": [
+				{
+					"label": "setup",
+					"window_start": "2026-10-23T16:30:00+00:00",
+					"window_end": "2026-10-23T18:30:00+00:00",
+					"closure_policy": {
+						"closure_type": "partial_closure",
+						"advance_closure_sec": 300
+					}
+				},
+				{
+					"label": "works",
+					"window_start": "2026-10-23T18:30:00+00:00",
+					"window_end": "2026-10-23T21:15:00+00:00",
+					"closure_policy": {
+						"closure_type": "partial_closure"
+					}
+				}
+			],
+			"inputs_key": "adaptive:inputs:374a82a6-1086-4914-b45b-e939b61762d6"
+		},
+		{
+			"event_id": "1782500f-e1dd-4b02-acba-fe5b2a452f69",
+			"event_kind": "protected_movement",
+			"protection_class": "Z",
+			"crowd_class": "LOW",
+			"title": "Z protected movement · Strand Road → Maa Flyover",
+			"description": "The primary route has the highest weighted score and lowest disruption score. The alternate routes have lower weighted scores but still have low disruption scores. Decider: strategic tier confirms the tactical primary.",
+			"status": "completed",
+			"movement_id": "1e24cc10-2233-4d79-a0eb-51a118280160",
+			"planned_start": "2026-10-22T20:34:00+00:00",
+			"planned_end": "2026-10-22T20:45:33+00:00",
+			"actual_start": "2026-10-22T20:06:58.727549+00:00",
+			"actual_end": "2026-10-22T20:08:05.127433+00:00",
+			"updated_at": "2026-10-22T20:08:05.127433+00:00",
+			"metadata": {
+				"source": "convoy-brain",
+				"eta_sec": 573,
+				"route_ids": [
+					"mip_6c154c80",
+					"ksp_6b168c80",
+					"ksp_8e38571f",
+					"ksp_7cfb6217",
+					"ksp_34138994"
+				],
+				"brain_status": "approved",
+				"decider_pick": {
+					"tier": "decider",
+					"choice": "mip_6c154c80",
+					"reason": "strategic tier confirms the tactical primary",
+					"applied": true,
+					"route_id": "mip_6c154c80",
+					"confidence": 0.9294
+				},
+				"movement_ref": "1e24cc10-2233-4d79-a0eb-51a118280160",
+				"security_score": 0.94,
+				"planned_departure": "2026-10-22T20:36:00.000Z",
+				"security_compliant": true
+			},
+			"zone_geojson": null,
+			"routes": [
+				{
+					"label": "primary",
+					"segment_ids": [
+						1005,
+						1013,
+						1014,
+						1024,
+						1025,
+						1029
+					],
+					"rank": 1,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T20:06:54.517802+00:00"
+				},
+				{
+					"label": "alt-1",
+					"segment_ids": [
+						1005,
+						1013,
+						1014,
+						1024,
+						1025,
+						1026,
+						1029
+					],
+					"rank": 2,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T20:06:54.517802+00:00"
+				},
+				{
+					"label": "alt-2",
+					"segment_ids": [
+						1005,
+						1013,
+						1014,
+						1024,
+						1027,
+						1025,
+						1029
+					],
+					"rank": 3,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T20:06:54.517802+00:00"
+				},
+				{
+					"label": "alt-3",
+					"segment_ids": [
+						1005,
+						1013,
+						1014,
+						1024,
+						1027,
+						1028,
+						1029
+					],
+					"rank": 4,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T20:06:54.517802+00:00"
+				},
+				{
+					"label": "alt-4",
+					"segment_ids": [
+						1005,
+						1038,
+						1013,
+						1014,
+						1024,
+						1025,
+						1029
+					],
+					"rank": 5,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T20:06:54.517802+00:00"
+				}
+			],
+			"route_history": [],
+			"phases": [
+				{
+					"label": "closure",
+					"window_start": "2026-10-22T20:34:00+00:00",
+					"window_end": "2026-10-22T20:45:33+00:00",
+					"closure_policy": {
+						"source": "protocol_floor",
+						"closure_type": "partial",
+						"advance_closure_sec": 120
+					}
+				}
+			],
+			"inputs_key": "adaptive:inputs:1782500f-e1dd-4b02-acba-fe5b2a452f69"
+		},
+		{
+			"event_id": "035c95ab-19d9-4d8d-9d07-2916034cdce3",
+			"event_kind": "protected_movement",
+			"protection_class": "Z",
+			"crowd_class": "LOW",
+			"title": "Z protected movement · Strand Road → Maa Flyover",
+			"description": "The primary route has the highest weighted score, with a low disruption score and a good security score. The alternate routes also have good weighted scores, low disruption scores, and high security scores. Decider: strategic tier confirms the tactical primary.",
+			"status": "cancelled",
+			"movement_id": "edd61d6c-1d02-49d0-a8db-9efaa2c8905f",
+			"planned_start": "2026-10-22T20:30:00+00:00",
+			"planned_end": "2026-10-22T20:41:34+00:00",
+			"actual_start": null,
+			"actual_end": "2026-10-22T20:05:54.295993+00:00",
+			"updated_at": "2026-10-22T20:05:54.295993+00:00",
+			"metadata": {
+				"source": "convoy-brain",
+				"eta_sec": 574,
+				"route_ids": [
+					"mip_834df172",
+					"ksp_ab7f8086",
+					"ksp_4eb4b5ed",
+					"ksp_70c3ffc8",
+					"ksp_7a6e5396"
+				],
+				"brain_status": "approved",
+				"decider_pick": {
+					"tier": "decider",
+					"choice": "mip_834df172",
+					"reason": "strategic tier confirms the tactical primary",
+					"applied": true,
+					"route_id": "mip_834df172",
+					"confidence": 0.9214
+				},
+				"movement_ref": "edd61d6c-1d02-49d0-a8db-9efaa2c8905f",
+				"security_score": 0.94,
+				"planned_departure": "2026-10-22T20:32:00.000Z",
+				"security_compliant": true
+			},
+			"zone_geojson": null,
+			"routes": [
+				{
+					"label": "primary",
+					"segment_ids": [
+						1005,
+						1013,
+						1014,
+						1024,
+						1025,
+						1029
+					],
+					"rank": 1,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T20:03:26.291128+00:00"
+				},
+				{
+					"label": "alt-1",
+					"segment_ids": [
+						1005,
+						1013,
+						1014,
+						1024,
+						1025,
+						1026,
+						1029
+					],
+					"rank": 2,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T20:03:26.291128+00:00"
+				},
+				{
+					"label": "alt-2",
+					"segment_ids": [
+						1005,
+						1013,
+						1014,
+						1024,
+						1027,
+						1025,
+						1029
+					],
+					"rank": 3,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T20:03:26.291128+00:00"
+				},
+				{
+					"label": "alt-3",
+					"segment_ids": [
+						1005,
+						1013,
+						1014,
+						1024,
+						1027,
+						1028,
+						1029
+					],
+					"rank": 4,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T20:03:26.291128+00:00"
+				},
+				{
+					"label": "alt-4",
+					"segment_ids": [
+						1005,
+						1038,
+						1013,
+						1014,
+						1024,
+						1025,
+						1029
+					],
+					"rank": 5,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T20:03:26.291128+00:00"
+				}
+			],
+			"route_history": [],
+			"phases": [
+				{
+					"label": "closure",
+					"window_start": "2026-10-22T20:30:00+00:00",
+					"window_end": "2026-10-22T20:41:34+00:00",
+					"closure_policy": {
+						"source": "protocol_floor",
+						"closure_type": "partial",
+						"advance_closure_sec": 120
+					}
+				}
+			],
+			"inputs_key": "adaptive:inputs:035c95ab-19d9-4d8d-9d07-2916034cdce3"
+		},
+		{
+			"event_id": "cda2701c-1bf2-4f3a-934a-e3ed3f0dc23f",
+			"event_kind": "protected_movement",
+			"protection_class": "Z",
+			"crowd_class": "LOW",
+			"title": "Z protected movement · Strand Road → Maa Flyover",
+			"description": "Ranked 5 distinct candidate(s) by weighted score (time 0.30 / disruption 0.40 / security 0.20 / complexity 0.10). Primary mip_b6c71c81: 6 segments, 10.1 km, ETA 10 min, weighted score 0.95; meets the lane floor. Origin snapped to 1005 (Strand Road), destination to 1028 (AJC Bose Road Flyover). Decider: strategic tier confirms the tactical primary.",
+			"status": "completed",
+			"movement_id": "9775233f-ddb0-4c6b-b9c1-16e98fc760ef",
+			"planned_start": "2026-10-22T19:52:56+00:00",
+			"planned_end": "2026-10-22T20:04:32+00:00",
+			"actual_start": "2026-10-22T19:56:23.812490+00:00",
+			"actual_end": "2026-10-22T20:00:46.707683+00:00",
+			"updated_at": "2026-10-22T20:00:46.707683+00:00",
+			"metadata": {
+				"source": "convoy-brain",
+				"eta_sec": 576,
+				"route_ids": [
+					"mip_b6c71c81",
+					"ksp_b4b08d3f",
+					"ksp_eee11614",
+					"ksp_99396d3c",
+					"ksp_6a198738"
+				],
+				"brain_status": "approved",
+				"decider_pick": {
+					"tier": "decider",
+					"choice": "mip_b6c71c81",
+					"reason": "strategic tier confirms the tactical primary",
+					"applied": true,
+					"route_id": "mip_b6c71c81",
+					"confidence": 0.9165
+				},
+				"movement_ref": "9775233f-ddb0-4c6b-b9c1-16e98fc760ef",
+				"security_score": 0.94,
+				"planned_departure": "2026-10-22T19:54:56Z",
+				"security_compliant": true
+			},
+			"zone_geojson": null,
+			"routes": [
+				{
+					"label": "primary",
+					"segment_ids": [
+						1005,
+						1013,
+						1014,
+						1024,
+						1025,
+						1029
+					],
+					"rank": 1,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T19:53:39.012390+00:00"
+				},
+				{
+					"label": "alt-1",
+					"segment_ids": [
+						1005,
+						1013,
+						1014,
+						1024,
+						1025,
+						1026,
+						1029
+					],
+					"rank": 2,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T19:53:39.012390+00:00"
+				},
+				{
+					"label": "alt-2",
+					"segment_ids": [
+						1005,
+						1013,
+						1014,
+						1024,
+						1027,
+						1025,
+						1029
+					],
+					"rank": 3,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T19:53:39.012390+00:00"
+				},
+				{
+					"label": "alt-3",
+					"segment_ids": [
+						1005,
+						1013,
+						1014,
+						1024,
+						1027,
+						1028,
+						1029
+					],
+					"rank": 4,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T19:53:39.012390+00:00"
+				},
+				{
+					"label": "alt-4",
+					"segment_ids": [
+						1005,
+						1038,
+						1013,
+						1014,
+						1024,
+						1025,
+						1029
+					],
+					"rank": 5,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T19:53:39.012390+00:00"
+				}
+			],
+			"route_history": [],
+			"phases": [
+				{
+					"label": "closure",
+					"window_start": "2026-10-22T19:52:56+00:00",
+					"window_end": "2026-10-22T20:04:32+00:00",
+					"closure_policy": {
+						"source": "protocol_floor",
+						"closure_type": "partial",
+						"advance_closure_sec": 120
+					}
+				}
+			],
+			"inputs_key": "adaptive:inputs:cda2701c-1bf2-4f3a-934a-e3ed3f0dc23f"
+		},
+		{
+			"event_id": "22bf3e68-2be9-5099-892a-fa8dd6fb2a69",
+			"event_kind": "procession",
+			"protection_class": "none",
+			"crowd_class": "EXTREME",
+			"title": "Howrah Station Evening Surge + Howrah Bridge Breakdown",
+			"description": "EMULATED use case 'sea_link_breakdown_surge' (seed 202611041, x10) — event-emulator run 22",
+			"status": "completed",
+			"movement_id": "22bf3e68-2be9-5099-892a-fa8dd6fb2a69",
+			"planned_start": "2026-10-22T19:53:50.910662+00:00",
+			"planned_end": "2026-10-22T19:59:50.910662+00:00",
+			"actual_start": "2026-10-22T19:53:51.023277+00:00",
+			"actual_end": "2026-10-22T19:54:59.655555+00:00",
+			"updated_at": "2026-10-22T19:54:59.655555+00:00",
+			"metadata": {
+				"mode": "use_case",
+				"seed": 202506271,
+				"run_id": 22,
+				"source": "event-emulator",
+				"is_replay": false,
+				"clock_scale": 10,
+				"scenario_id": "sea_link_breakdown_surge",
+				"use_case_id": "sea_link_breakdown_surge",
+				"closure_policy": {
+					"closure_type": "signal_hold",
+					"advance_closure_sec": 45
+				},
+				"replay_of_run_id": null,
+				"scenario_horizon_sec": 3600
+			},
+			"zone_geojson": null,
+			"routes": [
+				{
+					"label": "spine",
+					"segment_ids": [
+						1005,
+						1015,
+						1006,
+						1001
+					],
+					"rank": 1,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T19:53:50.980609+00:00"
+				}
+			],
+			"route_history": [],
+			"phases": [
+				{
+					"label": "procession",
+					"window_start": "2026-10-22T19:53:50.910662+00:00",
+					"window_end": "2026-10-22T19:59:50.910662+00:00",
+					"closure_policy": {
+						"closure_type": "signal_hold",
+						"advance_closure_sec": 45
+					}
+				}
+			],
+			"inputs_key": "adaptive:inputs:22bf3e68-2be9-5099-892a-fa8dd6fb2a69"
+		},
+		{
+			"event_id": "9a4b7126-b28e-4a87-9d3c-aa74b292f768",
+			"event_kind": "work_zone",
+			"protection_class": "none",
+			"crowd_class": "LOW",
+			"title": "ACCEPTANCE TEST — WP-07 citizen/driver probe (cancelled after run)",
+			"description": "ACCEPTANCE TEST entity created by the WP-04/WP-07 live verification; cancelled at the end of the run.",
+			"status": "cancelled",
+			"movement_id": null,
+			"planned_start": "2026-10-22T20:14:32+00:00",
+			"planned_end": "2026-10-22T21:14:32+00:00",
+			"actual_start": null,
+			"actual_end": "2026-10-22T17:15:29.587019+00:00",
+			"updated_at": "2026-10-22T17:15:29.587019+00:00",
+			"metadata": {
+				"opened_by": "Acceptance Tester",
+				"acceptance_test": true
+			},
+			"zone_geojson": null,
+			"routes": [
+				{
+					"label": "ACCEPTANCE TEST spine",
+					"segment_ids": [
+						1015,
+						1012
+					],
+					"rank": 1,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T17:14:32.533131+00:00"
+				}
+			],
+			"route_history": [],
+			"phases": [
+				{
+					"label": "closure",
+					"window_start": "2026-10-22T20:14:32+00:00",
+					"window_end": "2026-10-22T21:14:32+00:00",
+					"closure_policy": {
+						"source": "acceptance_test",
+						"closure_type": "partial",
+						"advance_closure_sec": 120
+					}
+				}
+			],
+			"inputs_key": "adaptive:inputs:9a4b7126-b28e-4a87-9d3c-aa74b292f768"
+		},
+		{
+			"event_id": "7ff35a20-e9a5-4077-b970-0a307903ba45",
+			"event_kind": "work_zone",
+			"protection_class": "none",
+			"crowd_class": "LOW",
+			"title": "ACCEPTANCE TEST — WP-02 lifecycle probe 2 (closed after run)",
+			"description": "ACCEPTANCE TEST entity created by the wave-1 live verification (WP-02/03); closed at the end of the run.",
+			"status": "completed",
+			"movement_id": null,
+			"planned_start": null,
+			"planned_end": null,
+			"actual_start": "2026-10-22T17:11:20.952682+00:00",
+			"actual_end": "2026-10-22T17:11:21.155720+00:00",
+			"updated_at": "2026-10-22T17:11:21.155720+00:00",
+			"metadata": {
+				"opened_by": "Acceptance Tester",
+				"acceptance_test": true
+			},
+			"zone_geojson": null,
+			"routes": [
+				{
+					"label": "ACCEPTANCE TEST spine",
+					"segment_ids": [
+						1015
+					],
+					"rank": 1,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T17:11:20.554138+00:00"
+				}
+			],
+			"route_history": [],
+			"phases": [],
+			"inputs_key": "adaptive:inputs:7ff35a20-e9a5-4077-b970-0a307903ba45"
+		},
+		{
+			"event_id": "1d00ffa5-56b4-4979-a626-1db161ac7d44",
+			"event_kind": "protected_movement",
+			"protection_class": "Z",
+			"crowd_class": "LOW",
+			"title": "Z protected movement · Ashutosh Mukherjee Road → Shyama Prasad Mukherjee Road",
+			"description": "The primary route has a high score due to its low disruption and acceptable security measures. No alternative routes were provided. Decider: strategic tier confirms the tactical primary.",
+			"status": "cancelled",
+			"movement_id": "a3a76144-4c17-45fa-89c7-bc8b336d735d",
+			"planned_start": "2026-10-23T03:28:00+00:00",
+			"planned_end": "2026-10-23T03:33:46+00:00",
+			"actual_start": null,
+			"actual_end": "2026-10-22T17:00:38.336329+00:00",
+			"updated_at": "2026-10-22T17:00:38.336329+00:00",
+			"metadata": {
+				"source": "convoy-brain",
+				"eta_sec": 226,
+				"route_ids": [
+					"mip_c21cc4ae"
+				],
+				"brain_status": "approved",
+				"decider_pick": {
+					"tier": "decider",
+					"choice": "mip_c21cc4ae",
+					"reason": "strategic tier confirms the tactical primary",
+					"applied": true,
+					"route_id": "mip_c21cc4ae",
+					"confidence": 0.956
+				},
+				"movement_ref": "a3a76144-4c17-45fa-89c7-bc8b336d735d",
+				"security_score": 0.8,
+				"planned_departure": "2026-10-23T09:00:00+05:30",
+				"security_compliant": true
+			},
+			"zone_geojson": null,
+			"routes": [
+				{
+					"label": "primary",
+					"segment_ids": [
+						1019,
+						1020
+					],
+					"rank": 1,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T16:58:34.075866+00:00"
+				}
+			],
+			"route_history": [],
+			"phases": [
+				{
+					"label": "closure",
+					"window_start": "2026-10-23T03:28:00+00:00",
+					"window_end": "2026-10-23T03:33:46+00:00",
+					"closure_policy": {
+						"source": "protocol_floor",
+						"closure_type": "partial",
+						"advance_closure_sec": 120
+					}
+				}
+			],
+			"inputs_key": "adaptive:inputs:1d00ffa5-56b4-4979-a626-1db161ac7d44"
+		},
+		{
+			"event_id": "b826bfef-835b-4314-a2e6-d5bf1acc90dd",
+			"event_kind": "protected_movement",
+			"protection_class": "Z",
+			"crowd_class": "LOW",
+			"title": "Z protected movement · Strand Road → Maa Flyover",
+			"description": "The primary route has the highest weighted score and lowest disruption score. The alternate routes are ranked in descending order of their weighted scores. Decider: strategic tier confirms the tactical primary.",
+			"status": "cancelled",
+			"movement_id": "aba3b57d-100b-4e12-9c1f-d35cf7aeafd1",
+			"planned_start": "2026-10-23T03:28:00+00:00",
+			"planned_end": "2026-10-23T03:39:51+00:00",
+			"actual_start": null,
+			"actual_end": "2026-10-22T17:00:38.329065+00:00",
+			"updated_at": "2026-10-22T17:00:38.329065+00:00",
+			"metadata": {
+				"source": "convoy-brain",
+				"eta_sec": 591,
+				"route_ids": [
+					"mip_bb8a1685",
+					"ksp_205b27e4",
+					"ksp_9cb90ff3",
+					"ksp_6fe2c93d"
+				],
+				"brain_status": "approved",
+				"decider_pick": {
+					"tier": "decider",
+					"choice": "mip_bb8a1685",
+					"reason": "strategic tier confirms the tactical primary",
+					"applied": true,
+					"route_id": "mip_bb8a1685",
+					"confidence": 0.9322
+				},
+				"movement_ref": "aba3b57d-100b-4e12-9c1f-d35cf7aeafd1",
+				"security_score": 0.94,
+				"planned_departure": "2026-10-23T09:00:00+05:30",
+				"security_compliant": true
+			},
+			"zone_geojson": null,
+			"routes": [
+				{
+					"label": "primary",
+					"segment_ids": [
+						1005,
+						1013,
+						1014,
+						1024,
+						1025,
+						1029
+					],
+					"rank": 1,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T16:56:19.035123+00:00"
+				},
+				{
+					"label": "alt-1",
+					"segment_ids": [
+						1005,
+						1013,
+						1014,
+						1024,
+						1025,
+						1026,
+						1029
+					],
+					"rank": 2,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T16:56:19.035123+00:00"
+				},
+				{
+					"label": "alt-2",
+					"segment_ids": [
+						1005,
+						1013,
+						1014,
+						1024,
+						1027,
+						1025,
+						1029
+					],
+					"rank": 3,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T16:56:19.035123+00:00"
+				},
+				{
+					"label": "alt-3",
+					"segment_ids": [
+						1005,
+						1013,
+						1014,
+						1024,
+						1027,
+						1028,
+						1029
+					],
+					"rank": 4,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T16:56:19.035123+00:00"
+				}
+			],
+			"route_history": [],
+			"phases": [
+				{
+					"label": "closure",
+					"window_start": "2026-10-23T03:28:00+00:00",
+					"window_end": "2026-10-23T03:39:51+00:00",
+					"closure_policy": {
+						"source": "protocol_floor",
+						"closure_type": "partial",
+						"advance_closure_sec": 120
+					}
+				}
+			],
+			"inputs_key": "adaptive:inputs:b826bfef-835b-4314-a2e6-d5bf1acc90dd"
+		},
+		{
+			"event_id": "735cb745-6093-49d1-ab1c-5b7c9249537d",
+			"event_kind": "protected_movement",
+			"protection_class": "Z+",
+			"crowd_class": "LOW",
+			"title": "Z+ protected movement · Maa Flyover → Rash Behari Avenue",
+			"description": "Ranked 4 distinct candidate(s) by weighted score (time 0.30 / disruption 0.40 / security 0.20 / complexity 0.10). Primary mip_1641abec: 18 segments, 43.7 km, ETA 47 min, weighted score 0.86; 3 protocol violation(s). No fully compliant route: 3 segment(s) below the 6-lane floor for Z+ (1044, 1011, 1042). Origin snapped to 1028 (AJC Bose Road Flyover), destination to 1032 (Rash Behari Avenue). No fully compliant route: 3 segment(s) below the 6-lane floor for Z+ (1044, 1011, 1042). Re-routing around those segments found no connected alternative (1 attempt(s)); returning the best candidate set as conditional for an operator waiver. Decider: confidence 0.40 below the 0.45 floor and the pick disagrees with the tactical primary mip_1641abec — tactical ranking kept.",
+			"status": "cancelled",
+			"movement_id": "849c63d4-70e2-4d91-bfc2-5703b3c27887",
+			"planned_start": "2026-10-23T03:27:00+00:00",
+			"planned_end": "2026-10-23T04:17:16+00:00",
+			"actual_start": null,
+			"actual_end": "2026-10-22T17:00:38.321748+00:00",
+			"updated_at": "2026-10-22T17:00:38.321748+00:00",
+			"metadata": {
+				"source": "convoy-brain",
+				"eta_sec": 2836,
+				"route_ids": [
+					"mip_1641abec",
+					"ksp_66502539",
+					"ksp_f3640d85",
+					"ksp_2295885c"
+				],
+				"brain_status": "conditional",
+				"decider_pick": {
+					"tier": "decider",
+					"choice": "delay_departure",
+					"reason": "confidence 0.40 below the 0.45 floor and the pick disagrees with the tactical primary mip_1641abec — tactical ranking kept",
+					"applied": false,
+					"route_id": null,
+					"confidence": 0.4028
+				},
+				"movement_ref": "849c63d4-70e2-4d91-bfc2-5703b3c27887",
+				"security_score": 0.863,
+				"planned_departure": "2026-10-23T09:00:00+05:30",
+				"security_compliant": false
+			},
+			"zone_geojson": null,
+			"routes": [
+				{
+					"label": "primary",
+					"segment_ids": [
+						1029,
+						1026,
+						1047,
+						1035,
+						1034,
+						1046,
+						1033,
+						1018,
+						1017,
+						1016,
+						1044,
+						1011,
+						1042,
+						1006,
+						1001,
+						1002,
+						1041,
+						1032
+					],
+					"rank": 1,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T16:54:42.531788+00:00"
+				},
+				{
+					"label": "alt-1",
+					"segment_ids": [
+						1029,
+						1025,
+						1026,
+						1047,
+						1035,
+						1034,
+						1046,
+						1033,
+						1018,
+						1017,
+						1016,
+						1044,
+						1011,
+						1042,
+						1006,
+						1001,
+						1002,
+						1041,
+						1032
+					],
+					"rank": 2,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T16:54:42.531788+00:00"
+				},
+				{
+					"label": "alt-2",
+					"segment_ids": [
+						1029,
+						1026,
+						1047,
+						1035,
+						1034,
+						1046,
+						1033,
+						1018,
+						1017,
+						1016,
+						1044,
+						1011,
+						1042,
+						1006,
+						1015,
+						1001,
+						1002,
+						1041,
+						1032
+					],
+					"rank": 3,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T16:54:42.531788+00:00"
+				},
+				{
+					"label": "alt-3",
+					"segment_ids": [
+						1029,
+						1026,
+						1047,
+						1035,
+						1034,
+						1046,
+						1033,
+						1018,
+						1017,
+						1016,
+						1044,
+						1011,
+						1042,
+						1043,
+						1006,
+						1001,
+						1002,
+						1041,
+						1032
+					],
+					"rank": 4,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T16:54:42.531788+00:00"
+				}
+			],
+			"route_history": [],
+			"phases": [
+				{
+					"label": "closure",
+					"window_start": "2026-10-23T03:27:00+00:00",
+					"window_end": "2026-10-23T04:17:16+00:00",
+					"closure_policy": {
+						"source": "protocol_floor",
+						"closure_type": "full",
+						"advance_closure_sec": 180
+					}
+				}
+			],
+			"inputs_key": "adaptive:inputs:735cb745-6093-49d1-ab1c-5b7c9249537d"
+		},
+		{
+			"event_id": "2678a440-273c-4177-b754-39f2f071b871",
+			"event_kind": "protected_movement",
+			"protection_class": "Z",
+			"crowd_class": "LOW",
+			"title": "Z protected movement · Queensway - Cathedral Road → Sahid Khudiram Bose Road",
+			"description": "The primary route has the highest weighted score and lowest disruption score. The alternate route has a lower weighted score but is still acceptable. Decider: strategic tier confirms the tactical primary.",
+			"status": "cancelled",
+			"movement_id": "ddc15929-97c0-42f1-b6d1-3567c07be38a",
+			"planned_start": "2026-10-23T03:28:00+00:00",
+			"planned_end": "2026-10-23T03:32:27+00:00",
+			"actual_start": null,
+			"actual_end": "2026-10-22T17:00:38.313257+00:00",
+			"updated_at": "2026-10-22T17:00:38.313257+00:00",
+			"metadata": {
+				"source": "convoy-brain",
+				"eta_sec": 147,
+				"route_ids": [
+					"mip_a0d9b64b",
+					"ksp_1567f047"
+				],
+				"brain_status": "approved",
+				"decider_pick": {
+					"tier": "decider",
+					"choice": "mip_a0d9b64b",
+					"reason": "strategic tier confirms the tactical primary",
+					"applied": true,
+					"route_id": "mip_a0d9b64b",
+					"confidence": 0.9301
+				},
+				"movement_ref": "ddc15929-97c0-42f1-b6d1-3567c07be38a",
+				"security_score": 0.94,
+				"planned_departure": "2026-10-23T09:00:00+05:30",
+				"security_compliant": true
+			},
+			"zone_geojson": null,
+			"routes": [
+				{
+					"label": "primary",
+					"segment_ids": [
+						1015,
+						1012
+					],
+					"rank": 1,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T16:53:01.815078+00:00"
+				},
+				{
+					"label": "alt-1",
+					"segment_ids": [
+						1015,
+						1005,
+						1012
+					],
+					"rank": 2,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T16:53:01.815078+00:00"
+				}
+			],
+			"route_history": [],
+			"phases": [
+				{
+					"label": "closure",
+					"window_start": "2026-10-23T03:28:00+00:00",
+					"window_end": "2026-10-23T03:32:27+00:00",
+					"closure_policy": {
+						"source": "protocol_floor",
+						"closure_type": "partial",
+						"advance_closure_sec": 120
+					}
+				}
+			],
+			"inputs_key": "adaptive:inputs:2678a440-273c-4177-b754-39f2f071b871"
+		},
+		{
+			"event_id": "d262e9f9-c3c9-4599-bb45-c17d2c4b9bab",
+			"event_kind": "work_zone",
+			"protection_class": "none",
+			"crowd_class": "LOW",
+			"title": "ACCEPTANCE TEST — WP-02 lifecycle probe (closed after run)",
+			"description": "ACCEPTANCE TEST entity created by the wave-1 live verification; closed at the end of the run.",
+			"status": "completed",
+			"movement_id": null,
+			"planned_start": null,
+			"planned_end": null,
+			"actual_start": "2026-10-22T16:53:03.204000+00:00",
+			"actual_end": "2026-10-22T16:53:37.246425+00:00",
+			"updated_at": "2026-10-22T16:53:37.246425+00:00",
+			"metadata": {
+				"opened_by": "Acceptance Tester",
+				"acceptance_test": true
+			},
+			"zone_geojson": null,
+			"routes": [
+				{
+					"label": "ACCEPTANCE TEST spine",
+					"segment_ids": [
+						1015
+					],
+					"rank": 1,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-22T16:52:16.616301+00:00"
+				}
+			],
+			"route_history": [],
+			"phases": [],
+			"inputs_key": "adaptive:inputs:d262e9f9-c3c9-4599-bb45-c17d2c4b9bab"
+		},
+		{
+			"event_id": "3ef08290-66d8-511b-a25a-3d2967c79985",
+			"event_kind": "procession",
+			"protection_class": "none",
+			"crowd_class": "EXTREME",
+			"title": "Howrah Station Evening Surge + Howrah Bridge Breakdown",
+			"description": "",
+			"status": "completed",
+			"movement_id": "3ef08290-66d8-511b-a25a-3d2967c79985",
+			"planned_start": "2026-10-19T09:56:47.263414+00:00",
+			"planned_end": "2026-10-19T10:56:47.263414+00:00",
+			"actual_start": null,
+			"actual_end": null,
+			"updated_at": "2026-10-19T09:57:47.328931+00:00",
+			"metadata": {
+				"seed": 202506271,
+				"source": "event-emulator",
+				"is_replay": false,
+				"scenario_id": "sea_link_breakdown_surge",
+				"use_case_id": "sea_link_breakdown_surge",
+				"closure_policy": {
+					"closure_type": "signal_hold",
+					"advance_closure_sec": 45
+				}
+			},
+			"zone_geojson": null,
+			"routes": [
+				{
+					"label": "spine",
+					"segment_ids": [
+						1005,
+						1015,
+						1006,
+						1001
+					],
+					"rank": 1,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-19T09:56:47.351044+00:00"
+				}
+			],
+			"route_history": [],
+			"phases": [
+				{
+					"label": "procession",
+					"window_start": "2026-10-19T09:56:47.263414+00:00",
+					"window_end": "2026-10-19T10:56:47.263414+00:00",
+					"closure_policy": {
+						"closure_type": "signal_hold",
+						"advance_closure_sec": 45
+					}
+				}
+			],
+			"inputs_key": "adaptive:inputs:3ef08290-66d8-511b-a25a-3d2967c79985"
+		},
+		{
+			"event_id": "4508d86d-566b-438f-8414-b3d67fd7e6e4",
+			"event_kind": "vehicle_pursuit",
+			"protection_class": "none",
+			"crowd_class": "LOW",
+			"title": "PURSUIT — stolen MH47EM•••1 (FIR 4401/2026, Hare Street PS)",
+			"description": "God's Eye Morning: operator-opened pursuit of a FIR-named stolen vehicle after an approved e-challan recommendation and emulated ANPR sightings. Vehicles only (C6); interception plan assists the operator.",
+			"status": "planning",
+			"movement_id": null,
+			"planned_start": null,
+			"planned_end": null,
+			"actual_start": null,
+			"actual_end": null,
+			"updated_at": "2026-10-18T15:00:04.426867+00:00",
+			"metadata": {
+				"fir": "FIR 4401/2026, Hare Street PS",
+				"opened_by": "Duty Officer R. Mehta (God's Eye Morning)",
+				"vehicle_id": "1b94e9d2-7e11-4174-a735-7dd3be3189cf",
+				"recommendation_id": "e91d4591-390a-4c55-bcb0-ffd10c769c20"
+			},
+			"zone_geojson": null,
+			"routes": [
+				{
+					"label": "central sweep belt",
+					"segment_ids": [
+						1012,
+						1015,
+						1005,
+						1013
+					],
+					"rank": 1,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-18T15:00:04.426867+00:00"
+				}
+			],
+			"route_history": [],
+			"phases": [],
+			"inputs_key": "adaptive:inputs:4508d86d-566b-438f-8414-b3d67fd7e6e4"
+		},
+		{
+			"event_id": "5e44d9f6-941d-5e08-80a9-0251127216ba",
+			"event_kind": "crime_incident",
+			"protection_class": "none",
+			"crowd_class": "LOW",
+			"title": "Stolen-Vehicle ANPR Sweep — Central Kolkata Belt (Emulated)",
+			"description": "",
+			"status": "completed",
+			"movement_id": "5e44d9f6-941d-5e08-80a9-0251127216ba",
+			"planned_start": "2026-10-18T14:59:19.301446+00:00",
+			"planned_end": "2026-10-18T15:44:19.301446+00:00",
+			"actual_start": null,
+			"actual_end": null,
+			"updated_at": "2026-10-18T15:00:04.314603+00:00",
+			"metadata": {
+				"seed": 20261277,
+				"source": "event-emulator",
+				"is_replay": false,
+				"scenario_id": "watchlist_anpr_sweep",
+				"use_case_id": "watchlist_anpr_sweep",
+				"closure_policy": {
+					"closure_type": "signal_hold",
+					"advance_closure_sec": 0
+				}
+			},
+			"zone_geojson": null,
+			"routes": [
+				{
+					"label": "spine",
+					"segment_ids": [
+						1012,
+						1015,
+						1005,
+						1013
+					],
+					"rank": 1,
+					"variant": null,
+					"created_by": null,
+					"created_at": "2026-10-18T14:59:19.319436+00:00"
+				}
+			],
+			"route_history": [],
+			"phases": [
+				{
+					"label": "crime_incident",
+					"window_start": "2026-10-18T14:59:19.301446+00:00",
+					"window_end": "2026-10-18T15:44:19.301446+00:00",
+					"closure_policy": {
+						"closure_type": "signal_hold",
+						"advance_closure_sec": 0
+					}
+				}
+			],
+			"inputs_key": "adaptive:inputs:5e44d9f6-941d-5e08-80a9-0251127216ba"
+		}
+	],
+	"count": 18
+}

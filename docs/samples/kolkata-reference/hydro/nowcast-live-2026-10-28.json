@@ -1,0 +1,266 @@
+{
+ "_sample": {
+  "pack": "Kolkata reference pack (cities/kolkata/, the second City Pack kept in the repository). Made on 28 Oct 2026, before the platform moved to Mumbai, as 'source' says; NOT a Mumbai capture. The Mumbai version of this file is pending.",
+  "source": "GET /hydro/nowcast on services/hydro, run locally on 28 Oct 2026 (loopback dev port); live Open-Meteo rain",
+  "trimmed": "segments trimmed to 3 of 65 (1001 Howrah Bridge, 1033 Rash Behari Avenue, 1052 Chittaranjan Avenue); everything else as returned",
+  "removed": "fields in the reference pack's earlier second UI language were removed here (Sajag's UI languages are now English, Marathi and Hindi); everything else is as captured: segments[0].place_mr, segments[1].place_mr, segments[2].place_mr"
+ },
+ "generated_at": "2026-10-28T13:01:43.158255+00:00",
+ "now": "2026-10-28T13:01:43.079334+00:00",
+ "horizon_min": 120,
+ "step_min": 15,
+ "labels": {
+  "rain": "LIVE",
+  "tide": "MODELLED (approximate)",
+  "susceptibility": "MODELLED",
+  "pumps": "EMULATED",
+  "risk": "MODELLED"
+ },
+ "rain_feed": {
+  "source": "Open-Meteo forecast API, minutely_15 precipitation (model nowcast, not a gauge)",
+  "stale": false,
+  "error": null,
+  "notes": [
+   "15-min values are the preceding quarter-hour's sum ×4 (mm/h)",
+   "over India the 15-min field may be interpolated from hourly models"
+  ],
+  "fetched_at": "2026-10-28T13:01:43.079272+00:00",
+  "city_now_mm_h": 0.0,
+  "calls_today": 1,
+  "max_calls_per_day": 2000,
+  "cache_age_sec": 0.1,
+  "offline": false
+ },
+ "counts_by_class": {
+  "0": 65,
+  "1": 0,
+  "2": 0,
+  "3": 0
+ },
+ "flagged": [],
+ "segments": [
+  {
+   "segment_id": 1001,
+   "road_name": "Howrah Bridge (Rabindra Setu)",
+   "place": "Howrah Bridge, Kolkata end",
+   "lat": 22.58382,
+   "lon": 88.34983,
+   "risk_class": 0,
+   "risk_name": "dry",
+   "risk_class_now": 0,
+   "expected_depth_band": "0–2 cm",
+   "modelled_peak_depth_cm": 0.0,
+   "lead_time_min": 0,
+   "lead_time_deep_min": null,
+   "peak_at": "2026-10-28T13:00:00+00:00",
+   "elevated": true,
+   "drivers": {
+    "rain": {
+     "label": "LIVE",
+     "past_1h_mm": 0.0,
+     "past_3h_mm": 0.0,
+     "next_1h_mm": 0.0,
+     "next_2h_mm": 0.0,
+     "peak_next_2h_mm_h": 0.0,
+     "source": "Open-Meteo (IDW of the 3 nearest fixed points)"
+    },
+    "tide": {
+     "label": "MODELLED (approximate)",
+     "station": "Garden Reach (Hooghly)",
+     "level_m": 3.79,
+     "gate_closed_now": false,
+     "gate_closed_minutes_in_horizon": 0,
+     "gate_close_level_m": 5.0,
+     "next_high_water": {
+      "at": "2026-10-28T21:52:57.945132+00:00",
+      "level_m": 5.98
+     }
+    },
+    "susceptibility": {
+     "label": "MODELLED",
+     "score": 0.108,
+     "ground_m": 0.5,
+     "relative_elevation_m": -9.96,
+     "dist_drain_m": 2974,
+     "nearest_hotspot": "mg_road",
+     "dist_hotspot_m": 1131,
+     "elevated": true,
+     "note": null
+    },
+    "pumps": {
+     "label": "EMULATED",
+     "station": "Thanthania pumping station (Hrishikesh Park)",
+     "station_id": "thanthania",
+     "distance_m": 1745,
+     "availability": 1.0,
+     "pumps_available": 9,
+     "pumps_total": 9,
+     "note": "EMULATED until KMC FFEWS access is granted"
+    }
+   }
+  },
+  {
+   "segment_id": 1033,
+   "road_name": "Rash Behari Avenue",
+   "place": "Gariahat crossing",
+   "lat": 22.51883,
+   "lon": 88.36022,
+   "risk_class": 0,
+   "risk_name": "dry",
+   "risk_class_now": 0,
+   "expected_depth_band": "0–2 cm",
+   "modelled_peak_depth_cm": 0.0,
+   "lead_time_min": 0,
+   "lead_time_deep_min": null,
+   "peak_at": "2026-10-28T13:00:00+00:00",
+   "elevated": false,
+   "drivers": {
+    "rain": {
+     "label": "LIVE",
+     "past_1h_mm": 0.0,
+     "past_3h_mm": 0.0,
+     "next_1h_mm": 0.0,
+     "next_2h_mm": 0.0,
+     "peak_next_2h_mm_h": 0.0,
+     "source": "Open-Meteo (IDW of the 3 nearest fixed points)"
+    },
+    "tide": {
+     "label": "MODELLED (approximate)",
+     "station": "Garden Reach (Hooghly)",
+     "level_m": 3.79,
+     "gate_closed_now": false,
+     "gate_closed_minutes_in_horizon": 0,
+     "gate_close_level_m": 5.0,
+     "next_high_water": {
+      "at": "2026-10-28T21:52:57.945132+00:00",
+      "level_m": 5.98
+     }
+    },
+    "susceptibility": {
+     "label": "MODELLED",
+     "score": 0.778,
+     "ground_m": 5.73,
+     "relative_elevation_m": -3.79,
+     "dist_drain_m": 1476,
+     "nearest_hotspot": "rashbehari",
+     "dist_hotspot_m": 16,
+     "elevated": false,
+     "note": null
+    },
+    "pumps": {
+     "label": "EMULATED",
+     "station": "Jodhpur Park pumping station",
+     "station_id": "jodhpur_park",
+     "distance_m": 1160,
+     "availability": 1.0,
+     "pumps_available": 5,
+     "pumps_total": 5,
+     "note": "EMULATED until KMC FFEWS access is granted"
+    }
+   }
+  },
+  {
+   "segment_id": 1052,
+   "road_name": "Chittaranjan Avenue",
+   "place": "Girish Park crossing",
+   "lat": 22.58363,
+   "lon": 88.36212,
+   "risk_class": 0,
+   "risk_name": "dry",
+   "risk_class_now": 0,
+   "expected_depth_band": "0–2 cm",
+   "modelled_peak_depth_cm": 0.0,
+   "lead_time_min": 0,
+   "lead_time_deep_min": null,
+   "peak_at": "2026-10-28T13:00:00+00:00",
+   "elevated": false,
+   "drivers": {
+    "rain": {
+     "label": "LIVE",
+     "past_1h_mm": 0.0,
+     "past_3h_mm": 0.0,
+     "next_1h_mm": 0.0,
+     "next_2h_mm": 0.0,
+     "peak_next_2h_mm_h": 0.0,
+     "source": "Open-Meteo (IDW of the 3 nearest fixed points)"
+    },
+    "tide": {
+     "label": "MODELLED (approximate)",
+     "station": "Garden Reach (Hooghly)",
+     "level_m": 3.79,
+     "gate_closed_now": false,
+     "gate_closed_minutes_in_horizon": 0,
+     "gate_close_level_m": 5.0,
+     "next_high_water": {
+      "at": "2026-10-28T21:52:57.945132+00:00",
+      "level_m": 5.98
+     }
+    },
+    "susceptibility": {
+     "label": "MODELLED",
+     "score": 0.772,
+     "ground_m": 6.19,
+     "relative_elevation_m": -4.97,
+     "dist_drain_m": 1928,
+     "nearest_hotspot": "mg_road",
+     "dist_hotspot_m": 78,
+     "elevated": false,
+     "note": null
+    },
+    "pumps": {
+     "label": "EMULATED",
+     "station": "Thanthania pumping station (Hrishikesh Park)",
+     "station_id": "thanthania",
+     "distance_m": 651,
+     "availability": 1.0,
+     "pumps_available": 9,
+     "pumps_total": 9,
+     "note": "EMULATED until KMC FFEWS access is granted"
+    }
+   }
+  }
+ ],
+ "proposals": [],
+ "model": {
+  "kind": "conceptual ponding (bucket) model",
+  "params": {
+   "C_MIN_mm_h": 6.0,
+   "C_MAX_mm_h": 20.0,
+   "GATE_CUT": 0.5,
+   "PUMP_FLOOR": 0.6,
+   "RUNOFF": 0.85,
+   "CONCENTRATION": 2.0,
+   "class_edges_cm": [
+    2.0,
+    10.0,
+    30.0
+   ]
+  },
+  "classes": [
+   {
+    "class": 0,
+    "name": "dry",
+    "depth_band": "0–2 cm"
+   },
+   {
+    "class": 1,
+    "name": "shallow",
+    "depth_band": "2–10 cm"
+   },
+   {
+    "class": 2,
+    "name": "deep",
+    "depth_band": "10–30 cm"
+   },
+   {
+    "class": 3,
+    "name": "impassable",
+    "depth_band": "> 30 cm"
+   }
+  ]
+ },
+ "network": {
+  "source": "cities/kolkata/network.json",
+  "attribution": "(c) OpenStreetMap contributors, ODbL 1.0 — https://www.openstreetmap.org/copyright"
+ }
+}

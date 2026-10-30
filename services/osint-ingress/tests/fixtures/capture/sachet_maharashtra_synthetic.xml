@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- SYNTHETIC REPLICA of the NDMA SACHET Maharashtra CAP RSS (rss_maharashtra.xml) for Sajag tests: identifiers (1999...), mailboxes and alert texts are fictional, written in the shape of the real feed (English district nowcasts, Marathi SDMA nowcasts signed "मंत्रालय, मुंबई" whatever district they are for, one "in your district" item that names no place). Three other states' alerts are added (the all-India file carries them) to exercise the area filter. -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Maharashtra: CAP Disaster Alert Feeds (SYNTHETIC REPLICA)</title>
+    <description>CAP Integrated Alert System Warning Updates (synthetic replica for tests)</description>
+    <language>en</language>
+    <link>https://sachet.ndma.gov.in/cap_public_website/rss/rss_maharashtra.xml</link>
+    <copyright>SYNTHETIC REPLICA for Sajag tests; not an NDMA alert</copyright>
+    <pubDate>Tue, 20 Oct 2026 12:45:00 GMT</pubDate>
+    <item>
+      <title>Thunderstorm with lightning and moderate to heavy rain is very likely to occur at isolated places over Mumbai, Mumbai Suburban in next 3 hours.</title>
+      <description/>
+      <category>Met</category>
+      <link>https://sachet.ndma.gov.in/cap_public_website/FetchXMLFile?identifier=1999000000000201</link>
+      <author>synthetic-control-room@example.org (Synthetic Issuer)</author>
+      <guid isPermaLink="false">1999000000000201</guid>
+      <pubDate>Tue, 20 Oct 2026 12:30:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>पुढील ३ तासात ठाणे आणि पालघर जिल्ह्यात काही ठिकाणी हलका ते मध्यम पाऊस पडण्याची शक्यता आहे. नागरिकांनी सतर्क रहावे, मंत्रालय, मुंबई.</title>
+      <description/>
+      <category>Met</category>
+      <link>https://sachet.ndma.gov.in/cap_public_website/FetchXMLFile?identifier=1999000000000202</link>
+      <author>synthetic-control-room@example.org (Synthetic Issuer)</author>
+      <guid isPermaLink="false">1999000000000202</guid>
+      <pubDate>Tue, 20 Oct 2026 12:10:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>पुढील ३ तासांत कोल्हापूर, रत्नागिरी आणि सिंधुदुर्ग जिल्ह्यात मेघगर्जनेसह विजा चमकण्याची शक्यता आहे. मंत्रालय, मुंबई.</title>
+      <description/>
+      <category>Met</category>
+      <link>https://sachet.ndma.gov.in/cap_public_website/FetchXMLFile?identifier=1999000000000203</link>
+      <author>synthetic-control-room@example.org (Synthetic Issuer)</author>
+      <guid isPermaLink="false">1999000000000203</guid>
+      <pubDate>Tue, 20 Oct 2026 11:40:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Light to moderate rain with thunderstorm is very likely to occur at isolated places over Pune, Satara and Sangli in next 3 hours.</title>
+      <description/>
+      <category>Met</category>
+      <link>https://sachet.ndma.gov.in/cap_public_website/FetchXMLFile?identifier=1999000000000204</link>
+      <author>synthetic-control-room@example.org (Synthetic Issuer)</author>
+      <guid isPermaLink="false">1999000000000204</guid>
+      <pubDate>Tue, 20 Oct 2026 11:35:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Moderate thunderstorm with lightning is very likely over parts of Nashik and Ahilyanagar in next 2-3 hours.</title>
+      <description/>
+      <category>Met</category>
+      <link>https://sachet.ndma.gov.in/cap_public_website/FetchXMLFile?identifier=1999000000000205</link>
+      <author>synthetic-control-room@example.org (Synthetic Issuer)</author>
+      <guid isPermaLink="false">1999000000000205</guid>
+      <pubDate>Tue, 20 Oct 2026 10:20:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>पुढील ३ तासांत आपल्या जिल्ह्यात काही ठिकाणी हलक्या पावसाची शक्यता आहे. नागरिकांनी सतर्क रहावे, मंत्रालय, मुंबई.</title>
+      <description/>
+      <category>Met</category>
+      <link>https://sachet.ndma.gov.in/cap_public_website/FetchXMLFile?identifier=1999000000000206</link>
+      <author>synthetic-control-room@example.org (Synthetic Issuer)</author>
+      <guid isPermaLink="false">1999000000000206</guid>
+      <pubDate>Tue, 20 Oct 2026 09:55:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Heavy rain is very likely to occur at isolated places over Raigad and Ratnagiri in next 24 hours.</title>
+      <description/>
+      <category>Met</category>
+      <link>https://sachet.ndma.gov.in/cap_public_website/FetchXMLFile?identifier=1999000000000207</link>
+      <author>synthetic-control-room@example.org (Synthetic Issuer)</author>
+      <guid isPermaLink="false">1999000000000207</guid>
+      <pubDate>Tue, 20 Oct 2026 08:30:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Squally weather with strong surface wind 40-50 kmph is very likely along and off the Goa coast.</title>
+      <description/>
+      <category>Met</category>
+      <link>https://sachet.ndma.gov.in/cap_public_website/FetchXMLFile?identifier=1999000000000208</link>
+      <author>synthetic-control-room@example.org (Synthetic Issuer)</author>
+      <guid isPermaLink="false">1999000000000208</guid>
+      <pubDate>Tue, 20 Oct 2026 08:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>High waves of 2.5 to 3.5 m are forecast along the Saurashtra and Kutch coast in the next 24 hours.</title>
+      <description/>
+      <category>Met</category>
+      <link>https://sachet.ndma.gov.in/cap_public_website/FetchXMLFile?identifier=1999000000000209</link>
+      <author>synthetic-control-room@example.org (Synthetic Issuer)</author>
+      <guid isPermaLink="false">1999000000000209</guid>
+      <pubDate>Tue, 20 Oct 2026 07:30:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Heavy rain is very likely at isolated places over coastal Karnataka in next 24 hours.</title>
+      <description/>
+      <category>Met</category>
+      <link>https://sachet.ndma.gov.in/cap_public_website/FetchXMLFile?identifier=1999000000000210</link>
+      <author>synthetic-control-room@example.org (Synthetic Issuer)</author>
+      <guid isPermaLink="false">1999000000000210</guid>
+      <pubDate>Tue, 20 Oct 2026 07:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

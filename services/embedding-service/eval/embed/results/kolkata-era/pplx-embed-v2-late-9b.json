@@ -1,0 +1,22 @@
+{
+ "candidate": "pplx-embed-v2-late-9b",
+ "repo": "perplexity-ai/pplx-embed-v2-late-9b",
+ "family": "late",
+ "dtype": "bf16",
+ "device": "cuda",
+ "load_s": 22.2,
+ "weights_gib": 15.63,
+ "peak_alloc_gib": 17.87,
+ "reserved_gib": 18.73,
+ "dim": 128,
+ "timing": {
+  "memory_doc_tokens_mean": 41.72,
+  "sop_doc_tokens_mean": 73.62,
+  "sop_docs_over_cap64": 47,
+  "query_ms_p50": 113.11,
+  "query_ms_p95": 297.29,
+  "memory_doc_ms": 61.43,
+  "sop_doc_ms": 88.03
+ },
+ "at": "2026-10-28T21:08:25+0530"
+}

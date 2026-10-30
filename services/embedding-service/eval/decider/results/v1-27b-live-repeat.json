@@ -1,0 +1,191 @@
+{
+ "target": "http://127.0.0.1:8083",
+ "model": "pplx-decider-v1-27b",
+ "runtime": "autojev (pre-backend host)",
+ "question_mode": "per_question",
+ "health_before": {
+  "loaded": true,
+  "loading": false,
+  "load_error": null,
+  "resident_rss_gib": 1.352,
+  "cuda_reserved_gib": 49.773,
+  "p95_decide_latency_ms": 2093.494,
+  "queue_depth": 0,
+  "decides_total": 81,
+  "decides_failed": 0,
+  "model": "pplx-decider-v1-27b"
+ },
+ "health_after": {
+  "loaded": true,
+  "loading": false,
+  "load_error": null,
+  "resident_rss_gib": 1.355,
+  "cuda_reserved_gib": 49.773,
+  "p95_decide_latency_ms": 2093.494,
+  "queue_depth": 0,
+  "decides_total": 86,
+  "decides_failed": 0,
+  "model": "pplx-decider-v1-27b"
+ },
+ "modes": {
+  "served": {
+   "results": [
+    {
+     "id": "esc-dep-clear",
+     "kind": "escort_departure",
+     "status": 200,
+     "answers": {
+      "departure": {
+       "value": "proceed",
+       "probability": 0.9204920050245223,
+       "confidence": 0.8807380075367833,
+       "distribution": {
+        "proceed": 0.9204920050245223,
+        "hold_departure": 0.03862881458996458,
+        "activate_plan_b": 0.040879180385513136
+       }
+      }
+     },
+     "state_tokens": 338,
+     "latency_ms": 579.184,
+     "wall_ms": 580.8,
+     "error": null
+    },
+    {
+     "id": "pc-nabanna-airport",
+     "kind": "post_clearance",
+     "status": 200,
+     "answers": {
+      "restoration_posture": {
+       "value": "immediate_full_restoration",
+       "probability": 0.5480694689144273,
+       "confidence": 0.322104203371641,
+       "distribution": {
+        "immediate_full_restoration": 0.5480694689144273,
+        "staged_reverse_order_restoration": 0.3111165119541211,
+        "signal_assisted_recovery": 0.14081401913145156
+       }
+      }
+     },
+     "state_tokens": 145,
+     "latency_ms": 378.871,
+     "wall_ms": 380.5,
+     "error": null
+    },
+    {
+     "id": "probe-health",
+     "kind": "probe",
+     "status": 200,
+     "answers": {
+      "probe": {
+       "value": 0.34913192098546497,
+       "probability": 0.34913192098546497,
+       "confidence": null,
+       "distribution": {
+        "false": 0.650868079014535,
+        "true": 0.34913192098546497
+       }
+      }
+     },
+     "state_tokens": 109,
+     "latency_ms": 325.381,
+     "wall_ms": 327.0,
+     "error": null
+    },
+    {
+     "id": "probe-corridor-checkpoint",
+     "kind": "probe",
+     "status": 200,
+     "answers": {
+      "urgency": {
+       "value": 0.5141520806641626,
+       "probability": 0.5141520806641626,
+       "confidence": null,
+       "distribution": {
+        "false": 0.4858479193358374,
+        "true": 0.5141520806641626
+       }
+      },
+      "reroute": {
+       "value": "ajc_bose_road",
+       "probability": 0.9705390188990165,
+       "confidence": 0.9558085283485246,
+       "distribution": {
+        "em_bypass": 0.025892516483379202,
+        "chowringhee": 0.003568464617604298,
+        "ajc_bose_road": 0.9705390188990165
+       }
+      },
+      "readiness": {
+       "value": 1.6826191160180386,
+       "probability": 0.35932025447234606,
+       "confidence": 0.28205532685687884,
+       "distribution": {
+        "0": 0.19274285507478883,
+        "1": 0.20397153572727567,
+        "2": 0.35932025447234606,
+        "3": 0.21585434755628685,
+        "4": 0.02811100716930258
+       }
+      }
+     },
+     "state_tokens": 671,
+     "latency_ms": 1041.43,
+     "wall_ms": 1042.9,
+     "error": null
+    },
+    {
+     "id": "probe-corridor-checkpoint-rain",
+     "kind": "probe",
+     "status": 200,
+     "answers": {
+      "urgency": {
+       "value": 0.5703100818210791,
+       "probability": 0.5703100818210791,
+       "confidence": null,
+       "distribution": {
+        "false": 0.4296899181789209,
+        "true": 0.5703100818210791
+       }
+      },
+      "reroute": {
+       "value": "ajc_bose_road",
+       "probability": 0.9874626451541706,
+       "confidence": 0.9811939677312559,
+       "distribution": {
+        "em_bypass": 0.007580103401815425,
+        "chowringhee": 0.004957251444013943,
+        "ajc_bose_road": 0.9874626451541706
+       }
+      },
+      "readiness": {
+       "value": 1.3672514029783955,
+       "probability": 0.32403962574368184,
+       "confidence": 0.2103798912857041,
+       "distribution": {
+        "0": 0.25836490000147766,
+        "1": 0.2734165637364245,
+        "2": 0.32403962574368184,
+        "3": 0.13096005431905683,
+        "4": 0.013218856199359204
+       }
+      }
+     },
+     "state_tokens": 599,
+     "latency_ms": 1000.374,
+     "wall_ms": 1001.9,
+     "error": null
+    }
+   ],
+   "wall_ms_p50": 580.8,
+   "wall_ms_p95": 1042.9,
+   "server_ms_p50": 579.2,
+   "server_ms_p95": 1041.4,
+   "errors": 0
+  }
+ },
+ "name": "v1-27b-live-repeat",
+ "label": "SIMULATED",
+ "requests": 5,
+ "finished": "2026-10-28T20:21:20+0530"
+}

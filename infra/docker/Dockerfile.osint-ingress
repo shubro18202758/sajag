@@ -1,0 +1,65 @@
+# Build osint-ingress Python service (OSINT event intelligence: open sources →
+# redacted, place-tagged RawOsintSignals posted to the oracle over loopback;
+# places and situations, never persons).
+# Build context: the REPO ROOT (compose: context .., dockerfile
+# infra/docker/Dockerfile.osint-ingress). The service imports three sibling
+# libraries (osint-common, osint-geo, osint-analysis) through PYTHONPATH and
+# reads two repo data files, so the image mirrors the repo tree under
+# /repo/VVIP exactly as Dockerfile.traffic-oracle.gb10 does (plan §4: no
+# wheel, no index, no editable install). The libraries resolve
+# scripts/data/{osint_gazetteer,osm_network}.json by walking up from their
+# own files to /repo/VVIP; the ENV below names both paths explicitly too.
+# Dependencies come entirely from the four packages' pyproject.toml
+# [project.dependencies] (their dev groups stay out of the image).
+# Base and tool images are pinned by digest (python 3.12.15-slim, uv 0.13.5) so a
+# rebuild is reproducible; bump them deliberately, never by a floating tag.
+FROM python:3.12-slim@sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704 AS base
+
+COPY --from=ghcr.io/astral-sh/uv:0.13.5@sha256:32a7bb39b496babbd997b0a39a4d66c126bdaf5661b302bf6f06abda8deca6ff /uv /usr/local/bin/uv
+
+WORKDIR /repo/VVIP
+
+COPY services/osint-ingress/pyproject.toml services/osint-ingress/pyproject.toml
+COPY services/osint-geo/pyproject.toml services/osint-geo/pyproject.toml
+COPY services/osint-common/pyproject.toml services/osint-common/pyproject.toml
+COPY services/osint-analysis/pyproject.toml services/osint-analysis/pyproject.toml
+
+RUN uv pip install --system --no-cache -r services/osint-ingress/pyproject.toml -r services/osint-geo/pyproject.toml -r services/osint-common/pyproject.toml -r services/osint-analysis/pyproject.toml
+
+# The four source trees (sources only: no tests, no fixtures, no capture —
+# the deployed service's offline mode reads only its runtime cache volume,
+# never committed fixtures; plan R13).
+COPY services/osint-common/src/ /repo/VVIP/services/osint-common/src/
+COPY services/osint-geo/src/ /repo/VVIP/services/osint-geo/src/
+COPY services/osint-analysis/src/ /repo/VVIP/services/osint-analysis/src/
+COPY services/osint-ingress/src/ /repo/VVIP/services/osint-ingress/src/
+
+# The X19 place gazetteer (the redactor's protect-set and the resolver) and
+# the real-road network the resolver snaps to (ODbL, generated, read-only).
+COPY scripts/data/osint_gazetteer.json scripts/data/osm_network.json /repo/VVIP/scripts/data/
+
+# COPY keeps the checkout's mode bits and POSIX ACLs (0640/2750 on this
+# host); make the tree world-readable for the non-root runtime user, whose
+# only writable path is its cache (a named volume in compose, which takes
+# this directory's owner when it is first created).
+RUN chmod -R a+rX /repo/VVIP \
+ && useradd --system --uid 10003 --no-create-home osint \
+ && mkdir -p /var/cache/osint-ingress \
+ && chown osint /var/cache/osint-ingress \
+ && chmod 0750 /var/cache/osint-ingress
+USER osint
+
+ENV PYTHONUNBUFFERED=1
+ENV PYTHONPATH=/repo/VVIP/services/osint-ingress/src:/repo/VVIP/services/osint-common/src:/repo/VVIP/services/osint-geo/src:/repo/VVIP/services/osint-analysis/src
+ENV OSINT_GAZETTEER_PATH=/repo/VVIP/scripts/data/osint_gazetteer.json
+ENV OSINT_NETWORK_PATH=/repo/VVIP/scripts/data/osm_network.json
+ENV OSINT_CACHE_DIR=/var/cache/osint-ingress
+# pyproj never downloads PROJ grids: the source egress allow-list in code
+# (osint_ingress.safe_http) stays the only egress this image makes.
+ENV PROJ_NETWORK=OFF
+# Fails closed: an image run by hand without OSINT_ORACLE_URL posts nowhere
+# (the discard port refuses at once); the service default is the discard port too. infra/compose.osint-ingress.yml names the oracle explicitly.
+ENV OSINT_ORACLE_URL=http://127.0.0.1:9
+# Binds 127.0.0.1:8093 by default (config.py; HOST/PORT env override).
+EXPOSE 8093
+CMD ["python", "-m", "osint_ingress", "serve"]

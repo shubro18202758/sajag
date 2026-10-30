@@ -1,0 +1,14 @@
+# Sajag city operations stack (Corridor-OS + God's-eye): compose services via
+# sajag-up.service, host model services via sajag-models.target.
+#   enable once:  scripts/sajag_up.sh --install-units   (links units, enables this)
+#   reboot test:  systemctl --user stop sajag.target sajag-models.target;
+#                 docker compose ... stop; systemctl --user start sajag.target
+#                 (after a manual cutover only sajag-models.target is active)
+# Lingering is required for it to start at boot without a login session
+# (loginctl enable-linger $USER).
+[Unit]
+Description=Sajag city operations stack (compose services, model hosts, AI services, bring-up)
+Wants=sajag-models.target sajag-up.service sajag-ai.target
+
+[Install]
+WantedBy=default.target

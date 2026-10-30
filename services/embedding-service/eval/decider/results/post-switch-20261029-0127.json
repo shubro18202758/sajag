@@ -1,0 +1,450 @@
+{
+ "label": "SIMULATED",
+ "reference": {
+  "name": "v1-27b-live:served",
+  "model": "pplx-decider-v1-27b",
+  "requests": 60,
+  "errors": 0,
+  "accuracy_on_labelled": "23/26",
+  "wrong_on_labelled": [
+   {
+    "id": "dss-puja-crowd-park-circus",
+    "question": "coa_strategy",
+    "expected": "aggressive",
+    "got": "standard"
+   },
+   {
+    "id": "dss-eden-gardens-egress",
+    "question": "coa_strategy",
+    "expected": "aggressive",
+    "got": "standard"
+   },
+   {
+    "id": "dss-fire-bagbazar",
+    "question": "coa_strategy",
+    "expected": "aggressive",
+    "got": "standard"
+   }
+  ],
+  "low_confidence_gated_share": 0.6,
+  "mean_confidence": {
+   "dss_coa/coa_strategy": 0.513,
+   "dss_coa/disruption_tolerance": 0.3177,
+   "escort_departure/departure": 0.5019,
+   "escort_incident/action": 0.4305,
+   "post_clearance/restoration_posture": 0.4349,
+   "pre_movement/disruption_tolerance": 0.5457,
+   "pre_movement/route_strategy": 0.7703,
+   "probe/readiness": 0.2462,
+   "probe/reroute": 0.9685,
+   "tool_selection/decision_confidence": 0.286,
+   "tool_selection/next_tool": 0.914
+  },
+  "wall_ms_p50": 1292.4,
+  "wall_ms_p95": 2097.9,
+  "server_ms_p50": 1290.9,
+  "server_ms_p95": 2093.5,
+  "state_tokens_mean": 648.2
+ },
+ "candidates": {
+  "pplx-decider-v1.2-live-20261029-0127:served": {
+   "model": "pplx-decider-v1.2",
+   "runtime": "pplx_decider",
+   "temperature": null,
+   "cold_load_s": null,
+   "first_call_ms": null,
+   "peak_allocated_gib": null,
+   "peak_reserved_gib": null,
+   "rss_gib": null,
+   "rss_peak_gib": null,
+   "after_load": null,
+   "fast_path": null,
+   "requests": 60,
+   "errors": 0,
+   "accuracy_on_labelled": "22/26",
+   "wrong_on_labelled": [
+    {
+     "id": "tool-highlight-thanthania",
+     "question": "next_tool",
+     "expected": "canvas_highlight",
+     "got": "query_segments_in_bbox"
+    },
+    {
+     "id": "dss-unverified-flooding-moulali",
+     "question": "coa_strategy",
+     "expected": "information",
+     "got": "baseline"
+    },
+    {
+     "id": "dss-eden-gardens-egress",
+     "question": "coa_strategy",
+     "expected": "aggressive",
+     "got": "standard"
+    },
+    {
+     "id": "dss-fire-bagbazar",
+     "question": "coa_strategy",
+     "expected": "aggressive",
+     "got": "standard"
+    }
+   ],
+   "low_confidence_gated_share": 0.433,
+   "mean_confidence": {
+    "dss_coa/coa_strategy": 0.5009,
+    "dss_coa/disruption_tolerance": 0.573,
+    "escort_departure/departure": 0.5869,
+    "escort_incident/action": 0.481,
+    "post_clearance/restoration_posture": 0.5289,
+    "pre_movement/disruption_tolerance": 0.4217,
+    "pre_movement/route_strategy": 0.7539,
+    "probe/readiness": 0.4626,
+    "probe/reroute": 0.9842,
+    "tool_selection/decision_confidence": 0.8833,
+    "tool_selection/next_tool": 0.8486
+   },
+   "wall_ms_p50": 739.2,
+   "wall_ms_p95": 1047.5,
+   "server_ms_p50": 737.4,
+   "server_ms_p95": 1045.5,
+   "state_tokens_mean": 373.9,
+   "vs_reference": {
+    "by_type": {
+     "choice": {
+      "agree": 0.8305,
+      "dp": 0.1258,
+      "n": 59
+     },
+     "noul": {
+      "agree": 0.6286,
+      "dp": 0.1638,
+      "n": 35
+     },
+     "score": {
+      "agree": 0.575,
+      "dp": 0.2845,
+      "dvalue": 0.2932,
+      "n": 40
+     }
+    },
+    "by_question_set": {
+     "dss_coa/coa_strategy": {
+      "agree": 0.75,
+      "dp": 0.1606,
+      "n": 12
+     },
+     "dss_coa/disruption_tolerance": {
+      "agree": 0.8333,
+      "dvalue": 0.1516,
+      "ref_v": 0.4574,
+      "cand_v": 0.4303,
+      "n": 12
+     },
+     "dss_coa/urgency": {
+      "agree": 0.9167,
+      "dp": 0.0959,
+      "ref_p": 0.6473,
+      "cand_p": 0.5743,
+      "n": 12
+     },
+     "escort_departure/departure": {
+      "agree": 0.6667,
+      "dp": 0.1409,
+      "n": 6
+     },
+     "escort_incident/action": {
+      "agree": 0.625,
+      "dp": 0.1802,
+      "n": 8
+     },
+     "escort_incident/urgency": {
+      "agree": 0.75,
+      "dp": 0.2771,
+      "ref_p": 0.4786,
+      "cand_p": 0.2016,
+      "n": 8
+     },
+     "post_clearance/restoration_posture": {
+      "agree": 1.0,
+      "dp": 0.1501,
+      "n": 5
+     },
+     "pre_movement/disruption_tolerance": {
+      "agree": 0.9167,
+      "dvalue": 0.1895,
+      "ref_v": 0.7728,
+      "cand_v": 0.6941,
+      "n": 12
+     },
+     "pre_movement/route_strategy": {
+      "agree": 0.9167,
+      "dp": 0.1039,
+      "n": 12
+     },
+     "pre_movement/urgency": {
+      "agree": 0.25,
+      "dp": 0.1542,
+      "ref_p": 0.5374,
+      "cand_p": 0.3833,
+      "n": 12
+     },
+     "probe/probe": {
+      "agree": 1.0,
+      "dp": 0.2814,
+      "ref_p": 0.3491,
+      "cand_p": 0.0677,
+      "n": 1
+     },
+     "probe/readiness": {
+      "agree": 0.0,
+      "dvalue": 0.3103,
+      "ref_v": 0.3812,
+      "cand_v": 0.6916,
+      "n": 2
+     },
+     "probe/reroute": {
+      "agree": 1.0,
+      "dp": 0.0104,
+      "n": 2
+     },
+     "probe/urgency": {
+      "agree": 0.5,
+      "dp": 0.1171,
+      "ref_p": 0.5422,
+      "cand_p": 0.5667,
+      "n": 2
+     },
+     "tool_selection/decision_confidence": {
+      "agree": 0.1429,
+      "dvalue": 0.5011,
+      "ref_v": 0.4406,
+      "cand_v": 0.9416,
+      "n": 14
+     },
+     "tool_selection/next_tool": {
+      "agree": 0.9286,
+      "dp": 0.085,
+      "n": 14
+     }
+    },
+    "disagreements": [
+     {
+      "id": "pm-howrah-station-transfer-y",
+      "question": "disruption_tolerance",
+      "ref": 0.786228133068792,
+      "ref_p": 0.786,
+      "cand": 0.3996518016069054,
+      "cand_p": 0.6
+     },
+     {
+      "id": "pm-high-tide-waterlogging-z",
+      "question": "route_strategy",
+      "ref": "route_8c7c68cff497",
+      "ref_p": 0.585,
+      "cand": "delay_departure",
+      "cand_p": 0.731
+     },
+     {
+      "id": "tool-live-chowringhee",
+      "question": "decision_confidence",
+      "ref": 0.29956903160902765,
+      "ref_p": 0.7,
+      "cand": 0.9644473467766266,
+      "cand_p": 0.964
+     },
+     {
+      "id": "tool-routes-nabanna-airport",
+      "question": "decision_confidence",
+      "ref": 0.5,
+      "ref_p": 0.5,
+      "cand": 0.9882358183755526,
+      "cand_p": 0.988
+     },
+     {
+      "id": "tool-forecast-em-bypass",
+      "question": "decision_confidence",
+      "ref": 0.34913192098546497,
+      "ref_p": 0.651,
+      "cand": 0.8024376391638028,
+      "cand_p": 0.802
+     },
+     {
+      "id": "tool-eta-redroad-eden",
+      "question": "decision_confidence",
+      "ref": 0.2878243155584147,
+      "ref_p": 0.712,
+      "cand": 0.9628640829983338,
+      "cand_p": 0.963
+     },
+     {
+      "id": "tool-diversions-park-circus",
+      "question": "decision_confidence",
+      "ref": 0.41587271047017843,
+      "ref_p": 0.584,
+      "cand": 0.955827530638026,
+      "cand_p": 0.956
+     },
+     {
+      "id": "tool-units-esplanade",
+      "question": "decision_confidence",
+      "ref": 0.41587271047017843,
+      "ref_p": 0.584,
+      "cand": 0.9749678479058074,
+      "cand_p": 0.975
+     },
+     {
+      "id": "tool-signal-shyambazar",
+      "question": "decision_confidence",
+      "ref": 0.41587271047017843,
+      "ref_p": 0.584,
+      "cand": 0.957697628882305,
+      "cand_p": 0.958
+     },
+     {
+      "id": "tool-situation-log",
+      "question": "decision_confidence",
+      "ref": 0.4436175989026547,
+      "ref_p": 0.556,
+      "cand": 0.9952037836027501,
+      "cand_p": 0.995
+     },
+     {
+      "id": "tool-highlight-thanthania",
+      "question": "next_tool",
+      "ref": "canvas_highlight",
+      "ref_p": 0.626,
+      "cand": "query_segments_in_bbox",
+      "cand_p": 0.346
+     },
+     {
+      "id": "tool-highlight-thanthania",
+      "question": "decision_confidence",
+      "ref": 0.5,
+      "ref_p": 0.5,
+      "cand": 0.7118236806445217,
+      "cand_p": 0.712
+     },
+     {
+      "id": "tool-scenarios-exide",
+      "question": "decision_confidence",
+      "ref": 0.2878243155584147,
+      "ref_p": 0.712,
+      "cand": 0.9714353482640864,
+      "cand_p": 0.971
+     },
+     {
+      "id": "tool-history-park-street",
+      "question": "decision_confidence",
+      "ref": 0.26517911955180407,
+      "ref_p": 0.735,
+      "cand": 0.9322860171475558,
+      "cand_p": 0.932
+     },
+     {
+      "id": "tool-corridor-events-babughat",
+      "question": "decision_confidence",
+      "ref": 0.40218641155402624,
+      "ref_p": 0.598,
+      "cand": 0.9887500193517186,
+      "cand_p": 0.989
+     },
+     {
+      "id": "dss-waterlogging-chowringhee-high-tide",
+      "question": "disruption_tolerance",
+      "ref": 0.4436175989026547,
+      "ref_p": 0.556,
+      "cand": 0.578468638016839,
+      "cand_p": 0.578
+     },
+     {
+      "id": "dss-howrah-bridge-breakdown",
+      "question": "disruption_tolerance",
+      "ref": 0.4717187442863362,
+      "ref_p": 0.528,
+      "cand": 0.6733566723274192,
+      "cand_p": 0.673
+     },
+     {
+      "id": "dss-puja-crowd-park-circus",
+      "question": "coa_strategy",
+      "ref": "standard",
+      "ref_p": 0.603,
+      "cand": "aggressive",
+      "cand_p": 0.486
+     },
+     {
+      "id": "dss-unverified-flooding-moulali",
+      "question": "coa_strategy",
+      "ref": "information",
+      "ref_p": 0.702,
+      "cand": "baseline",
+      "cand_p": 0.696
+     },
+     {
+      "id": "dss-gangasagar-babughat",
+      "question": "coa_strategy",
+      "ref": "baseline",
+      "ref_p": 0.486,
+      "cand": "standard",
+      "cand_p": 0.396
+     },
+     {
+      "id": "esc-inc-mild-ruby",
+      "question": "action",
+      "ref": "continue_monitoring",
+      "ref_p": 0.364,
+      "cand": "escalate_operator",
+      "cand_p": 0.385
+     },
+     {
+      "id": "esc-inc-near-destination-airport",
+      "question": "action",
+      "ref": "activate_plan_b",
+      "ref_p": 0.524,
+      "cand": "escalate_operator",
+      "cand_p": 0.525
+     },
+     {
+      "id": "esc-inc-holding-gariahat",
+      "question": "action",
+      "ref": "hold_position",
+      "ref_p": 0.406,
+      "cand": "escalate_operator",
+      "cand_p": 0.787
+     },
+     {
+      "id": "esc-dep-hot-ahead",
+      "question": "departure",
+      "ref": "hold_departure",
+      "ref_p": 0.558,
+      "cand": "activate_plan_b",
+      "cand_p": 0.801
+     },
+     {
+      "id": "esc-dep-resume-midway",
+      "question": "departure",
+      "ref": "hold_departure",
+      "ref_p": 0.482,
+      "cand": "activate_plan_b",
+      "cand_p": 0.458
+     },
+     {
+      "id": "probe-corridor-checkpoint",
+      "question": "readiness",
+      "ref": 1.6826191160180386,
+      "ref_p": 0.359,
+      "cand": 3.043896967136329,
+      "cand_p": 0.53
+     },
+     {
+      "id": "probe-corridor-checkpoint-rain",
+      "question": "readiness",
+      "ref": 1.3672514029783955,
+      "ref_p": 0.324,
+      "cand": 2.4887252824198414,
+      "cand_p": 0.453
+     }
+    ]
+   }
+  }
+ }
+}

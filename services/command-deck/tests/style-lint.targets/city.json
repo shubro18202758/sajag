@@ -1,0 +1,5 @@
+{
+	"style": ["src/lib/v3/public/EmergencyNumbers.svelte"],
+	"glyph": ["src/lib/v3/public/EmergencyNumbers.svelte"],
+	"copy": ["src/lib/v3/packs.city.ts"]
+}

@@ -1,0 +1,135 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Sajag: prototype evidence, Mumbai</title>
+<style>
+@page { size: A4; margin: 14mm 13mm; } @page :first { margin: 0; }
+body { margin: 0; font-family: Inter, 'Noto Sans Devanagari', 'Lohit Devanagari', sans-serif; color: #111; font-size: 10.5pt; line-height: 1.45; }
+h1 { font-size: 28pt; margin: 14mm 0 4mm; } h2 { font-size: 15pt; margin: 0 0 3mm; border-bottom: 1px solid #ddd; padding-bottom: 2mm; }
+section { page-break-inside: avoid; margin-bottom: 8mm; } section.cover { page-break-after: always; background: #000; color: #fff;
+  margin: 0; padding: 20mm 18mm 14mm; height: 296mm; box-sizing: border-box; overflow: hidden; }
+.cover .lockup { height: 14mm; } .cover .tag { font-size: 30pt; font-weight: 700; margin: 6mm 0 2mm; }
+.cover .tag b { color: #a6a6a6; } .cover .line { font-size: 16pt; font-weight: 600; margin: 0 0 8mm; }
+.cover .sub { font-size: 13pt; color: #cbcbcb; max-width: 150mm; } .cover .name { color: #a6a6a6; } .cover .meta { color: #a6a6a6; margin-top: 6mm; }
+.cover figure.hero { margin: 8mm 0 0; } .cover figure.hero img { width: 100%; height: 104mm; max-height: none; object-fit: cover; object-position: 62% 50%; border: 0; border-radius: 0; background: #000; }
+.cover figure.hero figcaption { color: #8a8a8a; font-size: 7.5pt; }
+table { border-collapse: collapse; width: 100%; margin: 2mm 0 4mm; font-size: 9.5pt; } th, td { border-bottom: 1px solid #e3e3e3; text-align: left; padding: 1.6mm 2mm; vertical-align: top; }
+th { background: #f3f3f3; } .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+figure { margin: 0; } figure img { width: 100%; max-height: 92mm; object-fit: contain; background: #f6f6f6; border: 1px solid #ddd; border-radius: 2mm; } figcaption { font-size: 8.5pt; color: #555; margin-top: 1mm; }
+figure.wide img { max-height: 110mm; object-fit: contain; } .note { font-size: 8.8pt; color: #555; } .facts li { margin-bottom: 1.5mm; }
+.missing { border: 1px dashed #bbb; padding: 10mm; color: #999; text-align: center; } .sources { font-size: 8.8pt; }
+mark.ph { background: #e8eefc; color: #2b4c9a; padding: 0 0.6mm; border-radius: 0.6mm; }
+</style></head><body>
+<section class="cover">
+  <img class="lockup" src="../deck/assets/lockup-night.png" alt="Sajag">
+  <h1>Prototype evidence · Mumbai</h1>
+  <p class="tag">Not by stopping. <b>By steering.</b></p>
+  <p class="line">For the city that never stops.</p>
+  <p class="sub">One live picture of Mumbai's roads, rain, tide and crowds for Mumbai Traffic Police, the BMC and its 1916
+  disaster control, ambulance (108) crews and BEST. On-premises open-source AI proposes; a named officer decides.</p>
+  <p class="name">Sajag (सजग): Hindi and Marathi for “alert, watchful”.</p>
+  <figure class="hero"><img class="" src="../deck/assets/sea-link-night.jpg" alt="Bandra–Worli Sea Link at dusk"><figcaption>Reference photo · not live · Bandra–Worli Sea Link at dusk · yatriksheth · CC BY-SA 4.0 · Wikimedia Commons</figcaption></figure>
+  <p class="meta">30 October 2026 · github.com/shubro18202758/sajag · MIT licence</p>
+</section>
+<section>
+  <h2>1 · What exists today</h2>
+  <ul class="facts">
+    <li><b>A working system on one on-premises AI computer</b>: the live stack reports READY 12/12: road store, live traffic ingest, decision engine,
+        operator console (English, Marathi, Hindi), event emulator, OSINT ingest, local language and embedding model hosts.</li>
+    <li><b>Five AI services</b> beside it: corridor forecasting (Chronos-2), a waterlogging nowcast (rain × Apollo Bunder tide × terrain × BMC pumps),
+        a signal-timing traffic twin, voice in Marathi, Hindi and English (speech-to-text and read-aloud) and camera road state (Qwen3-VL).</li>
+    <li><b>Real Mumbai roads</b>: 72 junctions and 86 road segments (202 km) of Mumbai&#x27;s arterials, subways and sea links from OpenStreetMap; Mantralaya → Mumbai Airport T2 is 27.6 km on it; a 234-place gazetteer in English, Marathi and Hindi (BMC wards, police stations, hospitals, stations, subways and low spots, pumping stations, pandals and visarjan points).</li>
+    <li><b>Open feeds wired in</b>: Open-Meteo rainfall and air (LIVE), WAQI and OpenAQ air stations (LIVE), NASA FIRMS fire hotspots (LIVE), NDMA Sachet alerts for Maharashtra (LIVE), IMD where reachable, Mumbai news in English, Marathi and Hindi (aggregate only), the Apollo Bunder tide (MODELLED), Copernicus 30 m terrain, BMC storm-water pumps and MTP signal controllers (EMULATED).</li>
+    <li><b>Quality</b>: 69 automated gates green: 6,443 Python tests, 121 Rust tests, 46 console unit suites, contract replays and type checks.</li>
+  </ul>
+  <p class="note">Labels used throughout: <b>LIVE</b> (a real open feed), <b>OBSERVED</b> (a measured record), <b>MODELLED</b> (computed
+  under stated assumptions), <b>SIMULATED</b> (an exercise scenario), <b>EMULATED</b> (a stand-in for a feed that needs an agency's access),
+  <b>Reference photo · not live</b>.</p>
+</section>
+<section>
+  <h2>2 · The problem, in Mumbai</h2>
+  <table><thead><tr><th>What</th><th>Fact</th><th>Source</th></tr></thead><tbody><tr><td>Rain at high tide</td><td>Waterlogging is unavoidable when a heavy burst coincides with a high tide of about 4.5 m: the sea outfalls close and the water has nowhere to go</td><td>BMC chief engineer via Free Press Journal (2025); India TV explainer (27 May 2025)</td></tr><tr><td>Known flooding spots</td><td>Hundreds, by year: 386 chronic flooding spots in one count; 453 → 498 waterlogging spots in a later one. Hindmata, Dadar TT, King&#x27;s Circle, Sion, Kurla, Parel, Andheri and Milan subways recur</td><td>BMC counts via Free Press Journal</td></tr><tr><td>26 May 2025</td><td>Earliest monsoon onset in decades; Colaba 135.4 mm in 24 h to 08:30; ~90 mm in 90 minutes flooded the new Acharya Atre Chowk Metro Line 3 station; Hindmata and Dadar TT flooded</td><td>IMD; Free Press Journal; DT Next; Deccan Herald</td></tr><tr><td>18–19 Aug 2025</td><td>Red alert; Vikhroli ~223–230 mm and Santacruz ~207–238 mm in 24 h; the Mithi at ~3.9 m against a 4 m danger mark; 350–500 people evacuated near Kurla; tracks under water at Sion and Kurla; Andheri Subway closed</td><td>IMD (windows differ); The Statesman; Hindustan Times; Mongabay</td></tr><tr><td>Pumps</td><td>BMC runs 6 major and 10 mini storm-water pumping stations (Haji Ali, Irla, Love Grove, Cleveland Bunder, Britannia, Gazdarbandh among the major ones); in 2025 only 4 of 6 pumps at King&#x27;s Circle worked</td><td>Free Press Journal (2025)</td></tr><tr><td>Suburban rail</td><td>~68 lakh riders a day on average in 2025-26 (Central ~38.7 lakh, Western ~29.5 lakh); when tracks flood they pour onto roads and station forecourts</td><td>Railway data via Free Press Journal</td></tr><tr><td>Traffic</td><td>~126 h lost to peak-hour traffic in 2025; rush-hour speeds ~17–21 km/h; 18th most congested city in the world; worst day 16 Sep 2025</td><td>TomTom Traffic Index 2025</td></tr><tr><td>Crowds</td><td>Anant Chaturdashi visarjan, Lalbaug → Girgaon Chowpatty: restrictions on 53 roads (2024); also Wankhede egress, the Mumbai Marathon, New Year on Marine Drive</td><td>The Statesman (2024); Lokmat Times (green corridor, 2024)</td></tr><tr><td>Ambulance (108)</td><td>Context only: ~18.75 min to the patient in older Mumbai figures; 20–45 min at peak in Andheri, Kurla and South Mumbai</td><td>BW Healthcare World; The Bridge Chronicle</td></tr><tr><td>Population</td><td>Greater Mumbai 1.24 crore; urban agglomeration 1.84 crore</td><td>Census of India 2011</td></tr><tr><td>Coordination</td><td>Mumbai Traffic Police, the BMC and 1916, the railways, ambulance (108) and IMD each hold one piece; nobody holds one live picture of rain × tide × pumps × traffic × crowds</td><td>observed practice</td></tr></tbody></table>
+</section>
+<section>
+  <h2>3 · The screens</h2>
+  <div class="grid">
+    <figure><img class="" src="../screenshots/home.jpg" alt="Home: what needs the officer now, rain and tide, the next two hours"><figcaption>Home: what needs the officer now, rain and tide, the next two hours</figcaption></figure>
+    <figure><img class="" src="../screenshots/map-waterlogging.jpg" alt="Map: waterlogging risk on every road and subway, with its drivers labelled"><figcaption>Map: waterlogging risk on every road and subway, with its drivers labelled</figcaption></figure>
+    <figure><img class="" src="../screenshots/decide-waterlogging.jpg" alt="Decide: divert, hold BEST, open a green corridor, ask BMC for pumps"><figcaption>Decide: divert, hold BEST, open a green corridor, ask BMC for pumps</figcaption></figure>
+    <figure><img class="" src="../screenshots/decide-ai.jpg" alt="Decide: a signal-timing proposal tested in the traffic twin against doing nothing"><figcaption>Decide: a signal-timing proposal tested in the traffic twin against doing nothing</figcaption></figure>
+    <figure><img class="" src="../screenshots/map-escort.jpg" alt="A protected movement, Mantralaya → Mumbai Airport T2, with rolling holds"><figcaption>A protected movement, Mantralaya → Mumbai Airport T2, with rolling holds</figcaption></figure>
+    <figure><img class="" src="../screenshots/decide-stolen.jpg" alt="A stolen-vehicle chain (MH plates, masked); no fine for a theft victim"><figcaption>A stolen-vehicle chain (MH plates, masked); no fine for a theft victim</figcaption></figure>
+    <figure><img class="" src="../screenshots/voice-report.jpg" alt="A field report spoken in Marathi becomes a structured, unverified report"><figcaption>A field report spoken in Marathi becomes a structured, unverified report</figcaption></figure>
+    <figure><img class="" src="../screenshots/road-state.jpg" alt="Camera road state: roads and vehicles only; person questions are refused"><figcaption>Camera road state: roads and vehicles only; person questions are refused</figcaption></figure>
+    <figure><img class="" src="../screenshots/replay-2025-08-19.jpg" alt="Replay of the {{REPLAY_DATE}} storm (observed rain, MODELLED ponding)"><figcaption>Replay of the 18–19 August 2025 storm (observed rain, MODELLED ponding)</figcaption></figure>
+    <figure><img class="" src="../screenshots/citizen.jpg" alt="Citizen page: waterlogging on your road, with Listen"><figcaption>Citizen page: waterlogging on your road, with Listen</figcaption></figure>
+    <figure><img class="" src="../screenshots/home-mr.jpg" alt="The console in Marathi"><figcaption>The console in Marathi</figcaption></figure>
+    <figure><img class="" src="../screenshots/advisories.jpg" alt="Advisories in English, Marathi and Hindi"><figcaption>Advisories in English, Marathi and Hindi</figcaption></figure>
+  </div>
+</section>
+<section>
+  <h2>4 · Architecture</h2>
+  <figure class="wide"><img class="" src="../diagrams/01-2-system-context.png" alt="System context"><figcaption>System context: everything runs on premises; the console is the only network-facing port.</figcaption></figure>
+  <figure class="wide"><img class="" src="../diagrams/02-3-1-containers-and-ports.png" alt="Containers and ports"><figcaption>Services and ports.</figcaption></figure>
+</section>
+<section>
+  <h2>5 · The AI, measured</h2>
+  <table><thead><tr><th>Capability</th><th>Model (licence)</th><th>Result</th><th>Label</th></tr></thead><tbody><tr><td>Corridor forecasting</td><td>Chronos-2 (Apache-2.0)</td><td>MAE 0.043 V/C vs 0.095 for the seasonal baseline (−55%); p10–p90 coverage 0.80</td><td>SIMULATED history (Kolkata reference pack) until MTP detector data is connected</td></tr><tr><td>Waterlogging nowcast</td><td>rain × Apollo Bunder tide × DEM × BMC pumps</td><td>Replay of 18–19 August 2025: with the rain gauges&#x27; observed totals, the model flagged 9 of the 12 places reported flooded on its network (King&#x27;s Circle, Andheri Subway, Gandhi Market, Byculla, Dadar TT, Vile Parle, Hindmata, Chembur, Kurla by the Mithi) and missed Sion, Khar and Goregaon. Its own flag came after the first news report at most places (median 51 minutes late: the bucket model fills slowly); with the observed rain as a perfect 2-hour nowcast (hindsight) it would have led the first report at 8 of the 9 (median 69 minutes). The Open-Meteo archive carried a third of the gauges&#x27; rain and flagged nothing, which is the case for a live rain-gauge feed. A second replay, 26 May 2025, flagged 5 of 15 reported places.</td><td>observed rain, MODELLED ponding and tide, EMULATED pumps</td></tr><tr><td>Signal-timing twin</td><td>cell-transmission model + Webster / max-pressure</td><td>Bottleneck discharge exact; shockwave speed within 0.2% of theory; every proposal tested against doing nothing</td><td>MODELLED</td></tr><tr><td>Voice (Marathi, Hindi, English)</td><td>AI4Bharat IndicConformer 600M multilingual (Marathi, Hindi), Whisper large-v3-turbo (English), AI4Bharat Indic Parler-TTS</td><td>Marathi WER 7.1 %, place right in 56 of 56; Hindi WER 14.0 %, 50 of 52 (IndicConformer, synthetic voices); English WER 10.2 % (Whisper turbo)</td><td>synthetic and recorded test phrases</td></tr><tr><td>Road state from a still</td><td>Qwen3-VL-8B (Apache-2.0)</td><td>11 of 12 stills right (10 taken in Mumbai); 11 of 11 person, plate and road probes passed</td><td>Commons photos, credited; roads and vehicles only</td></tr><tr><td>Decision support</td><td>pplx-decider-v1.2 (Perplexity, Apache-2.0, 27B)</td><td>Answers in 1.0 s at p95; 22 of 26 labelled decisions on the Kolkata reference pack</td><td>proposals only; an officer decides</td></tr><tr><td>Memory and retrieval</td><td>pplx-embed-context-v1-4b + pplx-embed-v2-late-0.6b (MIT)</td><td>SOP recall@1 0.93 vs 0.71 for bge-m3; cross-script news dedup AUC 0.997 vs 0.56 (word overlap)</td><td>synthetic eval set on the Kolkata reference pack</td></tr><tr><td>Privacy (OSINT)</td><td>PII-Tracer (MIT) + rules</td><td>person recall 0.84 → 0.94; 0 of 122 place names redacted</td><td>synthetic eval set (Kolkata reference pack)</td></tr></tbody></table>
+  <p class="note">Every model runs on the one on-premises computer; numbers come from the services&#x27; own evaluation files in the repository (docs/ai/*.md). Rows marked &quot;Kolkata reference pack&quot; were measured on the engine&#x27;s first city and are engine facts, not Mumbai measurements.</p>
+</section>
+<section>
+  <h2>6 · Expected impact (MODELLED)</h2>
+  <table><thead><tr><th>Measure</th><th>Value</th><th>Basis</th></tr></thead><tbody><tr><td>Junction-freeze delay</td><td>100× less (range 25×–506×)</td><td>rolling holds of a couple of minutes instead of a long freeze (central case); delay scales with the square of the hold</td></tr><tr><td>Protected movement, Mantralaya → Mumbai Airport T2</td><td>192,820 → 1,928 commuter-minutes</td><td>10 junctions, 27.6 km on the Mumbai network</td></tr><tr><td>Ambulance (108)</td><td>≈ 33,000 minutes a year returned</td><td>12 crossing trips per movement-day (assumption)</td></tr><tr><td>Waterlogging warning</td><td>median 69 minutes ahead of the first report with a perfect 2-hour nowcast (hindsight); median 51 minutes late on the bucket model alone before deep water</td><td>replay of 18–19 August 2025 on observed rain</td></tr></tbody></table>
+  <p class="note">Model outputs on Sajag&#x27;s Mumbai OpenStreetMap network (72 junctions, 86 segments, 202 km) under stated assumptions (IMPACT_REPORT.md): not field measurements, and never a claim about lives saved.</p>
+</section>
+<section>
+  <h2>7 · Tests and quality</h2>
+  <table><thead><tr><th>Suite</th><th>Result</th></tr></thead><tbody><tr><td>Python services (all suites)</td><td>6,443 passed</td></tr><tr><td>signal-ingress (Rust)</td><td>121 passed</td></tr><tr><td>command-deck</td><td>46 unit suites, contract replays, svelte-check 0 errors over 1,040 files, design-token and copy lints (4,939 English strings)</td></tr><tr><td>Total</td><td>69 gates green</td></tr></tbody></table>
+</section>
+<section>
+  <h2>8 · Implementation and cost</h2>
+  <table><thead><tr><th>When</th><th>What</th></tr></thead><tbody>
+  <tr><td>Month 0–1</td><td>Read-only data MoU: Mumbai Traffic Police (CCTV stills, signal plans), the BMC (1916 disaster control, storm-water drains and pumps), Maharashtra SDMA (alerts), the ambulance (108) operator; nodal officers named.</td></tr>
+  <tr><td>Month 1–2</td><td>Install the on-premises unit in the pilot control room; finish the Mumbai City Pack for the pilot zone; switch adapters from EMULATED to LIVE as access arrives.</td></tr>
+  <tr><td>Month 2–4</td><td>Shadow mode before the monsoon: Sajag proposes, officers work as usual, weekly comparison.</td></tr>
+  <tr><td>Month 5–12</td><td>Live pilot on one zone, e.g. Dr Ambedkar Road (Dadar TT – Hindmata – King's Circle – Sion) and the WEH at Andheri, through the monsoon and Ganeshotsav; officers approve every action.</td></tr>
+  <tr><td>Month 12</td><td>Independent review; a city-wide plan across the 24 wards.</td></tr></tbody></table>
+  <table><thead><tr><th>Cost item (planning estimates, not quotes)</th><th>Pilot (12 months)</th></tr></thead><tbody>
+  <tr><td>On-premises AI units (2, one as backup)</td><td>₹8–10 lakh</td></tr>
+  <tr><td>Engineering (3 × 6 months + 1 × 6 months)</td><td>₹29 lakh</td></tr>
+  <tr><td>Water-level sensors at subways and low spots without BMC gauges (optional)</td><td>₹4 lakh (Mumbai estimate)</td></tr>
+  <tr><td>Training and SOP workshops</td><td>₹2 lakh</td></tr>
+  <tr><td>Backup connectivity</td><td>₹0.5 lakh</td></tr>
+  <tr><td>Contingency (15%)</td><td>≈ ₹6–7 lakh</td></tr>
+  <tr><td><b>Total pilot</b></td><td><b>≈ ₹45–55 lakh</b></td></tr>
+  <tr><td>City-wide, two years (24 wards)</td><td>≈ ₹2–2.5 crore; running ≈ ₹40–60 lakh a year (Mumbai estimates)</td></tr>
+  <tr><td>Software licences</td><td>₹0: open models, OpenStreetMap, Sajag (MIT)</td></tr></tbody></table>
+</section>
+<section>
+  <h2>9 · Scalability: a city is a folder</h2>
+  <p>Everything city-specific lives in a City Pack (<code>cities/&lt;id&gt;/</code>): the OpenStreetMap extract and corridors, gazetteer, agencies,
+  emergency numbers, plate format, languages, scenarios and impact parameters. The same engine runs the Mumbai pack and the Kolkata reference
+  pack. Next packs: Thane and Navi Mumbai (the same region, monsoon, tide and commuters), Pune (Mula–Mutha river floods and its own Ganeshotsav),
+  Nagpur and Nashik. Marathi and Hindi are already first-class. Per city: about 1–2 weeks of local data work, local adapters and SOPs.</p>
+  <h2>10 · Guardrails</h2>
+  <ul class="facts">
+    <li>Vehicles only: no faces, no persons; number plates masked until a named duty officer is on duty.</li>
+    <li>The AI proposes; a named officer approves every action; with no answer the current plan holds; every decision audited.</li>
+    <li>Honest labels on every number and every feed not yet connected.</li>
+    <li>Events, not people: news and social signals are aggregate and about places; posters are never stored or scored.</li>
+    <li>No e-challan can be approved against a theft victim.</li>
+    <li>On premises, with retention limits, in the spirit of the DPDP Act 2023.</li>
+  </ul>
+</section>
+<section class="sources">
+  <h2>Sources</h2>
+  <ol>
+    <li>Free Press Journal: BMC chronic-flooding and waterlogging spot counts; pumping stations and pumps (2025); the 26 May and 18–19 Aug 2025 floods; Ganeshotsav advisories; suburban ridership 2025-26 from railway data</li>
+    <li>India TV News, explainer on high tide and Mumbai flooding (27 May 2025)</li>
+    <li>DT Next, Deccan Herald, The Week, Watchers (26 May 2025 onset and rainfall)</li>
+    <li>The Statesman, Mongabay, Watchers, Business Today, Hindustan Times (18–19 Aug 2025 rain, the Mithi, evacuations)</li>
+    <li>TomTom Traffic Index 2025 (Mumbai) and coverage (Free Press Journal, NewsBytes)</li>
+    <li>The Statesman (2024 visarjan, 53 roads); Lokmat Times (green corridor, 2024)</li>
+    <li>BW Healthcare World; The Bridge Chronicle (ambulance response times, as reported)</li>
+    <li>Census of India 2011 (Greater Mumbai and urban agglomeration population)</li>
+    <li>Model cards: amazon/chronos-2, Qwen/Qwen3-VL-8B-Instruct, ai4bharat/indic-conformer-600m-multilingual, openai/whisper-large-v3-turbo, AI4Bharat Indic Parler-TTS, perplexity-ai/pplx-embed (Hugging Face)</li>
+    <li>OpenStreetMap contributors (ODbL 1.0); Copernicus DEM GLO-30; Open-Meteo; WAQI; OpenAQ; NASA FIRMS; NDMA Sachet</li>
+  </ol>
+</section></body></html>

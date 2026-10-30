@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- SYNTHETIC REPLICA of the NDMA SACHET all-India CAP RSS schema for Sajag tests (identifiers and text are fictional). -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Maharashtra: CAP Disaster Alert Feeds (synthetic)</title>
+    <link>https://sachet.ndma.gov.in/cap_public_website/rss/rss_maharashtra.xml</link>
+    <copyright>synthetic replica</copyright>
+    <item>
+      <title>Heavy rain likely at isolated places over Mumbai, Mumbai Suburban and Thane in next 3 hours.</title>
+      <description/>
+      <category>Met</category>
+      <link>https://sachet.ndma.gov.in/cap_public_website/FetchXMLFile?identifier=1999000000000101</link>
+      <author>synthetic-control-room@example.org (Synthetic Issuer)</author>
+      <guid isPermaLink="false">1999000000000101</guid>
+      <pubDate>Tue, 20 Oct 2026 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>पुढील २-३ तासांत पुणे आणि सातारा जिल्ह्यात काही ठिकाणी हलक्या पावसाची शक्यता आहे. मंत्रालय, मुंबई.</title>
+      <description/>
+      <category>Met</category>
+      <link>https://sachet.ndma.gov.in/cap_public_website/FetchXMLFile?identifier=1999000000000102</link>
+      <author>synthetic-control-room@example.org (Synthetic Issuer)</author>
+      <guid isPermaLink="false">1999000000000102</guid>
+      <pubDate>Tue, 20 Oct 2026 12:10:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>High waves are forecast along the Goa and Karnataka coast in the next 24 hours.</title>
+      <description/>
+      <category>Met</category>
+      <link>https://sachet.ndma.gov.in/cap_public_website/FetchXMLFile?identifier=1999000000000103</link>
+      <author>synthetic-control-room@example.org (Synthetic Issuer)</author>
+      <guid isPermaLink="false">1999000000000103</guid>
+      <pubDate>Tue, 20 Oct 2026 12:20:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

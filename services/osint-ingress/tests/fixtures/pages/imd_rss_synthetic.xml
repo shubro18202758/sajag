@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SYNTHETIC REPLICA of the WMO Alert Hub mirror of IMD's CAP RSS (in-imd-en) for Sajag tests: links, identifiers and texts are fictional. -->
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>India Meteorological Department CAP alerts (synthetic)</title>
+    <link>https://cap-sources.s3.amazonaws.com/in-imd-en/rss.xml</link>
+    <description>synthetic replica</description>
+    <item>
+      <title>Thunderstorm warning</title>
+      <link>https://cap-sources.s3.amazonaws.com/in-imd-en/2026-10-20-12-00-00-synthetic-0001.xml</link>
+      <description>Thunderstorm with lightning likely</description>
+      <pubDate>Tue, 20 Oct 2026 12:00:00 GMT</pubDate>
+      <guid>https://cap-sources.s3.amazonaws.com/in-imd-en/2026-10-20-12-00-00-synthetic-0001.xml</guid>
+    </item>
+    <item>
+      <title>Heavy rain warning</title>
+      <link>https://cap-sources.s3.amazonaws.com/in-imd-en/2026-10-20-12-05-00-synthetic-0002.xml</link>
+      <description>Heavy rain likely</description>
+      <pubDate>Tue, 20 Oct 2026 12:05:00 GMT</pubDate>
+      <guid>https://cap-sources.s3.amazonaws.com/in-imd-en/2026-10-20-12-05-00-synthetic-0002.xml</guid>
+    </item>
+    <item>
+      <title>Link off the mirror (never requested)</title>
+      <link>https://cap-mirror.example/in-imd-en/synthetic-0003.xml</link>
+      <description>Heavy rain likely over Mumbai</description>
+      <pubDate>Tue, 20 Oct 2026 12:10:00 GMT</pubDate>
+      <guid>synthetic-0003</guid>
+    </item>
+  </channel>
+</rss>

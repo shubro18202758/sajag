@@ -1,0 +1,188 @@
+{
+ "_sample": {
+  "pack": "Kolkata reference pack (cities/kolkata/, the second City Pack kept in the repository). Made on 28 Oct 2026, before the platform moved to Mumbai, as 'source' says; NOT a Mumbai capture. The Mumbai version of this file is pending.",
+  "source": "GET /hydro/tide?hours=24 on services/hydro, 28 Oct 2026",
+  "trimmed": "series thinned to hourly points"
+ },
+ "label": "MODELLED (approximate)",
+ "station": "Garden Reach (Hooghly), transferred from Diamond Harbour constants",
+ "now": {
+  "t": "2026-10-28T13:01:43.166212+00:00",
+  "level_m": 3.79,
+  "gate_closed": false,
+  "rising": false
+ },
+ "gate_close_level_m": 5.0,
+ "series": [
+  {
+   "t": "2026-10-28T13:00:00+00:00",
+   "level_m": 3.81,
+   "gate_closed": false
+  },
+  {
+   "t": "2026-10-28T14:00:00+00:00",
+   "level_m": 3.17,
+   "gate_closed": false
+  },
+  {
+   "t": "2026-10-28T15:00:00+00:00",
+   "level_m": 2.62,
+   "gate_closed": false
+  },
+  {
+   "t": "2026-10-28T16:00:00+00:00",
+   "level_m": 2.25,
+   "gate_closed": false
+  },
+  {
+   "t": "2026-10-28T17:00:00+00:00",
+   "level_m": 2.28,
+   "gate_closed": false
+  },
+  {
+   "t": "2026-10-28T18:00:00+00:00",
+   "level_m": 2.84,
+   "gate_closed": false
+  },
+  {
+   "t": "2026-10-28T19:00:00+00:00",
+   "level_m": 3.84,
+   "gate_closed": false
+  },
+  {
+   "t": "2026-10-28T20:00:00+00:00",
+   "level_m": 4.95,
+   "gate_closed": false
+  },
+  {
+   "t": "2026-10-28T21:00:00+00:00",
+   "level_m": 5.74,
+   "gate_closed": true
+  },
+  {
+   "t": "2026-10-28T22:00:00+00:00",
+   "level_m": 5.98,
+   "gate_closed": true
+  },
+  {
+   "t": "2026-10-28T23:00:00+00:00",
+   "level_m": 5.66,
+   "gate_closed": true
+  },
+  {
+   "t": "2026-10-29T00:00:00+00:00",
+   "level_m": 5.03,
+   "gate_closed": true
+  },
+  {
+   "t": "2026-10-29T01:00:00+00:00",
+   "level_m": 4.31,
+   "gate_closed": false
+  },
+  {
+   "t": "2026-10-29T02:00:00+00:00",
+   "level_m": 3.64,
+   "gate_closed": false
+  },
+  {
+   "t": "2026-10-29T03:00:00+00:00",
+   "level_m": 3.03,
+   "gate_closed": false
+  },
+  {
+   "t": "2026-10-29T04:00:00+00:00",
+   "level_m": 2.55,
+   "gate_closed": false
+  },
+  {
+   "t": "2026-10-29T05:00:00+00:00",
+   "level_m": 2.36,
+   "gate_closed": false
+  },
+  {
+   "t": "2026-10-29T06:00:00+00:00",
+   "level_m": 2.64,
+   "gate_closed": false
+  },
+  {
+   "t": "2026-10-29T07:00:00+00:00",
+   "level_m": 3.41,
+   "gate_closed": false
+  },
+  {
+   "t": "2026-10-29T08:00:00+00:00",
+   "level_m": 4.41,
+   "gate_closed": false
+  },
+  {
+   "t": "2026-10-29T09:00:00+00:00",
+   "level_m": 5.26,
+   "gate_closed": true
+  },
+  {
+   "t": "2026-10-29T10:00:00+00:00",
+   "level_m": 5.63,
+   "gate_closed": true
+  },
+  {
+   "t": "2026-10-29T11:00:00+00:00",
+   "level_m": 5.43,
+   "gate_closed": true
+  },
+  {
+   "t": "2026-10-29T12:00:00+00:00",
+   "level_m": 4.84,
+   "gate_closed": false
+  },
+  {
+   "t": "2026-10-29T13:00:00+00:00",
+   "level_m": 4.14,
+   "gate_closed": false
+  }
+ ],
+ "extremes": [
+  {
+   "kind": "low",
+   "at": "2026-10-28T16:27:17.118166+00:00",
+   "level_m": 2.21
+  },
+  {
+   "kind": "high",
+   "at": "2026-10-28T21:52:58.732064+00:00",
+   "level_m": 5.98
+  },
+  {
+   "kind": "low",
+   "at": "2026-10-29T04:56:50.914280+00:00",
+   "level_m": 2.36
+  },
+  {
+   "kind": "high",
+   "at": "2026-10-29T10:07:18.680483+00:00",
+   "level_m": 5.63
+  }
+ ],
+ "datum": "the third-party predictions' datum (approximately chart datum); levels are approximate",
+ "sources": [
+  {
+   "what": "M2/S2/K1/O1 observed at Diamond Harbour",
+   "ref": "Khan et al. (2021), Nat. Hazards Earth Syst. Sci. 21:2523–2541, Supplement Table S1",
+   "url": "https://nhess.copernicus.org/articles/21/2523/2021/nhess-21-2523-2021-supplement.pdf"
+  },
+  {
+   "what": "Garden Reach vs Diamond Harbour predicted high/low waters (lag, range, mean level)",
+   "ref": "tide-forecast.com predictions for 28 Oct 2026 (third-party; datum 'MLLW')",
+   "url": "https://www.tide-forecast.com/locations/Calcutta-Garden-Reach-India/tides/latest"
+  },
+  {
+   "what": "Gate-closure level ~5 m at Garden Reach",
+   "ref": "The Telegraph (Kolkata), port official quoted on Hooghly tide and sluice gates",
+   "url": "https://obeta.ttef.in/my-kolkata/news/hooghly-tide-helps-water-drain-out-faster-in-kolkata/cid/1864513"
+  },
+  {
+   "what": "Kidderpore spring/neap ranges, dry season and rains",
+   "ref": "Cunningham (1904), A Treatise on the Principles and Practice of Dock Engineering",
+   "url": "https://tekniskkulturarv.dk/book/c3fb3acc-28e6-490b-8092-5f3a342494c2?page=74"
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+# Build-context hygiene for infra/docker/Dockerfile.twin (compose: context
+# ../services/twin). The image takes only pyproject.toml and src/.
+tests
+.venv
+**/.venv
+**/__pycache__
+**/*.pyc
+**/.pytest_cache
+**/.ruff_cache
+**/.mypy_cache
+**/.claude
+**/*.log
+*.egg-info
+**/*.egg-info

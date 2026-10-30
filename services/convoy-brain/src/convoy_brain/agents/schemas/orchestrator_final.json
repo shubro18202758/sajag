@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OrchestratorFinalAnswer",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "action",
+    "reasoning",
+    "tool_calls_made",
+    "confidence",
+    "protocol_assessment"
+  ],
+  "properties": {
+    "action": { "type": "string", "maxLength": 64 },
+    "reasoning": { "type": "string", "maxLength": 1200 },
+    "tool_calls_made": { "type": "array", "maxItems": 8, "items": { "type": "string", "maxLength": 64 } },
+    "confidence": { "type": "string", "enum": ["high", "medium", "low"] },
+    "protocol_assessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "asl_status",
+        "protocol_violations",
+        "threat_level",
+        "plan_b_ready"
+      ],
+      "properties": {
+        "asl_status": {
+          "type": "string",
+          "enum": ["complete", "incomplete", "not_assessed"]
+        },
+        "protocol_violations": {
+          "type": "array",
+          "maxItems": 8,
+          "items": { "type": "string", "maxLength": 160 }
+        },
+        "threat_level": {
+          "type": "string",
+          "enum": ["not_assessed", "nominal", "guarded", "moderate", "elevated", "critical"]
+        },
+        "plan_b_ready": { "type": "boolean" }
+      }
+    }
+  }
+}

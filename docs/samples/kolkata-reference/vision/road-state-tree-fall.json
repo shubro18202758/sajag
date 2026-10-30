@@ -1,0 +1,28 @@
+{
+ "_sample": {
+  "pack": "Kolkata reference pack (cities/kolkata/, the second City Pack kept in the repository). Made on 28 Oct 2026, before the platform moved to Mumbai, as 'source' says; NOT a Mumbai capture. The Mumbai version of this file is pending.",
+  "source": "the real answer for services/vision/tests/fixtures/amphan_shyambazar_09.jpg (Shyambazar after Cyclone Amphan), as recorded in docs/ai/vision.md, 28 Oct 2026"
+ },
+ "state": "tree_fall",
+ "confidence": 0.95,
+ "vehicles_estimate": {
+  "cars": 3,
+  "buses": 0,
+  "two_wheelers": 2,
+  "autos": 0
+ },
+ "rationale": "Fallen tree branches and debris obstruct road. Several vehicles visible on road surface.",
+ "model": "Qwen3-VL-8B-Instruct (Q4_K_M GGUF, llama.cpp)",
+ "verification_state": "UNVERIFIED-CAMERA",
+ "requires_confirmation": true,
+ "label": "Camera still · AI reading · awaiting an officer's confirmation",
+ "filtered": false,
+ "image": {
+  "width": 1024,
+  "height": 768,
+  "format": "jpeg",
+  "resized": false,
+  "metadata": "stripped"
+ },
+ "latency_s": 3.08
+}

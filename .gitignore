@@ -1,0 +1,75 @@
+# Dependencies
+node_modules/
+.venv/
+.venvs/
+__pycache__/
+*.pyc
+*.pyo
+
+# Build outputs
+dist/
+dist-ssr/
+target/
+.svelte-kit/
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Environment
+.env
+.env.*
+*.local
+
+# ONNX model binaries (large files)
+*.onnx
+
+# Clone-local model experiments (downloaded artifacts + their NOTICEs;
+# the sanctioned home per the models-local policy — never committed)
+models-local/
+# …and the symlink a worktree or a fresh checkout points at the host's copy (a pattern with a slash misses a link)
+/models-local
+
+# Repetition-gate run workdirs — scripts/repetition_gate.sh mkdir -p's
+# WORKROOT="$VVIP_DIR/showcase/repetition" and every run drops a
+# <timestamp>Z-r<rounds>-<pid>/ dir (baseline.json, container snapshots,
+# round projections). Machine output, never a deliverable.
+showcase/repetition/
+
+# Test-run artifacts (screens-verify manifest + PNG shots under
+# tests/artifacts/screens/; anything a future gate writes there) —
+# regenerated per run, never committed.
+tests/artifacts/
+
+# Vite cache
+.vite/
+
+# Bun
+bun.lockb
+
+# Host-shared model home — a symlink into this host's original-stack models
+# dir (machine glue like .venvs; the configs previously tracked under
+# models/ moved there 2026-10-13, recorded as deletions). Never committed.
+/models
+.mimosa/
+.run-models/
+
+# workspace links (no trailing slash: they are symlinks)
+/.venvs
+/services/command-deck/node_modules

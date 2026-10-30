@@ -1,0 +1,38 @@
+{
+	"style": [
+		"src/lib/**",
+		"src/routes/**"
+	],
+	"glyph": [
+		"src/lib/**",
+		"src/routes/**"
+	],
+	"copy": [
+		"src/lib/i18n/packs.agent.ts",
+		"src/lib/i18n/packs.analysis.ts",
+		"src/lib/i18n/packs.assistant.ts",
+		"src/lib/i18n/packs.corridor.ts",
+		"src/lib/i18n/packs.decisions.ts",
+		"src/lib/i18n/packs.dss.ts",
+		"src/lib/i18n/packs.map.ts",
+		"src/lib/i18n/packs.osint.ts",
+		"src/lib/i18n/packs.ts",
+		"src/lib/i18n/packs.ui.ts",
+		"src/lib/i18n/packs.views.ts",
+		"src/lib/i18n/packs.wall.ts",
+		"src/lib/i18n/packs.workspace.ts",
+		"src/lib/i18n/strings.citizen.ts",
+		"src/lib/i18n/strings.ops.ts",
+		"src/lib/i18n/strings.ts",
+		"src/lib/v3/packs.v3.ts",
+		"src/lib/v3/decide/packs.decide.ts",
+		"src/lib/v3/object/packs.object.ts",
+		"src/lib/v3/map/packs.map3.ts",
+		"src/lib/v3/comms/packs.comms3.ts",
+		"src/lib/v3/public/packs.pub3.ts",
+		"src/lib/v3/assistant/packs.asst3.ts",
+		"src/lib/v3/plan/packs.plan.ts",
+		"src/lib/v3/shell/packs.shell.ts",
+		"src/lib/v3/media/packs.media.ts"
+	]
+}

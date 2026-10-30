@@ -1,0 +1,857 @@
+{
+ "about": "Synthetic Mumbai held-out corpus for parse-time person redaction: 50 short items (English news headlines with a lead sentence, Marathi and Hindi news in Devanagari, and r/mumbai-style social posts) about floods, local-train disruption, Ganeshotsav and visarjan traffic, road accidents, tree falls, wall collapses, fires and BEST, taxi and auto-rickshaw incidents. Every person in it is invented and private; no real person, official, politician, party or celebrity is named. It was written blind to the redaction code on 2026-10-30 by a separate agent that did not read any source or test file. Places are real Mumbai places, including places named after people (for example Shivaji Park, Dr Ambedkar Road, Senapati Bapat Marg, Lokmanya Tilak Terminus, Swatantryaveer Savarkar Marg, Gokhale Bridge, Jijamata Udyan, Nana Chowk, Annie Besant Road, Ganpatrao Kadam Marg, शिवाजी पार्क), which must be kept. For each case, 'names' lists every word of every private person's name exactly as written (honorifics alone are not listed; fused forms such as -rao/-ji/-राव/-जी are listed whole), 'ages' lists person ages as written, and 'keep' lists place names and ordinary phrases that must survive.",
+ "cases": [
+  {
+   "id": "m01",
+   "tier": "news_regional",
+   "text": "Biker hurt after skidding in waterlogged Andheri Subway — Prathamesh Salunkhe, 24, a delivery executive from Gundavali, fractured his wrist when his motorcycle skidded in knee-deep water at Andheri Subway on Tuesday night, police said.",
+   "names": [
+    "Prathamesh",
+    "Salunkhe"
+   ],
+   "ages": [
+    "24"
+   ],
+   "keep": [
+    "Andheri Subway",
+    "delivery executive",
+    "knee-deep water",
+    "Gundavali"
+   ]
+  },
+  {
+   "id": "m02",
+   "tier": "aggregator",
+   "text": "Tree crashes on BEST bus near Shivaji Park, conductor injured — A gulmohar tree uprooted by strong winds fell on a BEST bus near Shivaji Park on Sunday evening, injuring conductor Mangesh Thorat (46), who was rushed to Hinduja Hospital in Mahim.",
+   "names": [
+    "Mangesh",
+    "Thorat"
+   ],
+   "ages": [
+    "46"
+   ],
+   "keep": [
+    "Shivaji Park",
+    "BEST bus",
+    "gulmohar tree",
+    "Hinduja Hospital"
+   ]
+  },
+  {
+   "id": "m03",
+   "tier": "news_regional",
+   "text": "Hindmata under two feet of water as heavy showers lash Mumbai — Traffic on Dr Ambedkar Road was diverted towards Parel on Wednesday morning after severe waterlogging at Hindmata in Dadar East; the BMC deployed six dewatering pumps.",
+   "names": [],
+   "ages": [],
+   "keep": [
+    "Hindmata",
+    "Dr Ambedkar Road",
+    "waterlogging",
+    "Dadar East"
+   ]
+  },
+  {
+   "id": "m04",
+   "tier": "news_regional",
+   "text": "Kaali-peeli driver booked for rash driving on Senapati Bapat Marg — Taxi driver Rajendra Yadav, 52, was booked after his kaali-peeli rammed two parked scooters on Senapati Bapat Marg near Elphinstone Road; one of the owners, Sau. Vaishali Kadam of Prabhadevi, said her scooter was badly damaged.",
+   "names": [
+    "Rajendra",
+    "Yadav",
+    "Vaishali",
+    "Kadam"
+   ],
+   "ages": [
+    "52"
+   ],
+   "keep": [
+    "Senapati Bapat Marg",
+    "Elphinstone Road",
+    "Prabhadevi",
+    "kaali-peeli"
+   ]
+  },
+  {
+   "id": "m05",
+   "tier": "social_unverified",
+   "text": "PSA: Milan Subway flooded again, BEST buses turning back. My neighbour Kunal Shetye (31M) tried to wade through and dropped his phone lol. Take the Western Express Highway instead.",
+   "names": [
+    "Kunal",
+    "Shetye"
+   ],
+   "ages": [
+    "31"
+   ],
+   "keep": [
+    "Milan Subway",
+    "BEST buses",
+    "Western Express Highway"
+   ]
+  },
+  {
+   "id": "m06",
+   "tier": "news_regional",
+   "text": "दादर स्थानकाजवळ रुळांवर पाणी साचले; मध्य रेल्वेची लोकल वाहतूक विस्कळीत — मुसळधार पावसामुळे दादर स्थानकाजवळ रुळांवर पाणी साचल्याने सीएसएमटीकडे जाणाऱ्या लोकल गाड्या अर्धा तास उशिराने धावत होत्या, असे मध्य रेल्वेने सांगितले.",
+   "names": [],
+   "ages": [],
+   "keep": [
+    "दादर स्थानक",
+    "पाणी साचले",
+    "मध्य रेल्वे",
+    "सीएसएमटी"
+   ]
+  },
+  {
+   "id": "m07",
+   "tier": "news_regional",
+   "text": "परळमध्ये जुन्या चाळीचा सज्जा कोसळून ६२ वर्षीय महिला जखमी — परळ येथील जुन्या चाळीचा सज्जा कोसळल्याने श्रीमती सुमन परुळेकर (६२) जखमी झाल्या असून त्यांना केईएम रुग्णालयात दाखल करण्यात आले आहे.",
+   "names": [
+    "सुमन",
+    "परुळेकर"
+   ],
+   "ages": [
+    "६२"
+   ],
+   "keep": [
+    "परळ",
+    "केईएम रुग्णालय",
+    "चाळीचा सज्जा"
+   ]
+  },
+  {
+   "id": "m08",
+   "tier": "news_regional",
+   "text": "कुर्ला में ऑटो-रिक्शा पलटा, 28 वर्षीय यात्री घायल — एलबीएस मार्ग पर कुर्ला डिपो के पास तेज़ रफ़्तार ऑटो-रिक्शा पलटने से यात्री इरफ़ान अंसारी घायल हो गए; उनके साथ बैठे श्री रामप्रसाद मिश्रा को मामूली चोटें आईं।",
+   "names": [
+    "इरफ़ान",
+    "अंसारी",
+    "रामप्रसाद",
+    "मिश्रा"
+   ],
+   "ages": [
+    "28"
+   ],
+   "keep": [
+    "एलबीएस मार्ग",
+    "कुर्ला",
+    "ऑटो-रिक्शा"
+   ]
+  },
+  {
+   "id": "m09",
+   "tier": "aggregator",
+   "text": "Ganeshotsav: Devotee faints in Lalbaugcha Raja queue as wait crosses 20 hours — Sayali Gaikwad, 29, a nurse from Kalachowkie, fainted in the darshan queue at Lalbaugcha Raja on Saturday night and was revived by mandal volunteers before being taken to KEM Hospital.",
+   "names": [
+    "Sayali",
+    "Gaikwad"
+   ],
+   "ages": [
+    "29"
+   ],
+   "keep": [
+    "Lalbaugcha Raja",
+    "Kalachowkie",
+    "darshan queue",
+    "KEM Hospital"
+   ]
+  },
+  {
+   "id": "m10",
+   "tier": "news_regional",
+   "text": "Fire at furniture godown on LBS Marg in Kurla West; no casualties — Eight fire tenders were rushed to a furniture godown on LBS Marg in Kurla West late on Monday and the blaze was doused in about three hours, the Mumbai Fire Brigade said.",
+   "names": [],
+   "ages": [],
+   "keep": [
+    "LBS Marg",
+    "Kurla West",
+    "fire tenders",
+    "Mumbai Fire Brigade"
+   ]
+  },
+  {
+   "id": "m11",
+   "tier": "social_unverified",
+   "text": "Anyone else stuck at CSMT? 8:40 Kalyan fast cancelled, zero announcement. Some uncle fainted on platform 4 and a lady RPF constable, Rohini Bhosale, handled it like a boss. Respect.",
+   "names": [
+    "Rohini",
+    "Bhosale"
+   ],
+   "ages": [],
+   "keep": [
+    "CSMT",
+    "Kalyan fast",
+    "platform 4"
+   ]
+  },
+  {
+   "id": "m12",
+   "tier": "news_regional",
+   "text": "Labourer killed in retaining wall collapse at Kurar village — Shankar Lokhande, aged 60, was killed and his nephew Ganesh, 27, was injured when a retaining wall collapsed on their hutment in Kurar village, Malad East, early on Thursday.",
+   "names": [
+    "Shankar",
+    "Lokhande",
+    "Ganesh"
+   ],
+   "ages": [
+    "60",
+    "27"
+   ],
+   "keep": [
+    "Kurar village",
+    "Malad East",
+    "retaining wall"
+   ]
+  },
+  {
+   "id": "m13",
+   "tier": "news_regional",
+   "text": "गिरगाव चौपाटीवर विसर्जनादरम्यान दोन तरुण समुद्रात ओढले गेले; एकाला वाचवले — अनंत चतुर्दशीच्या रात्री गिरगाव चौपाटीवर विसर्जनासाठी गेलेले ओंकार सावंत (१९) आणि तेजस मोरे (२१) समुद्रात ओढले गेले; जीवरक्षकांनी तेजस मोरे याला वाचवले, तर ओंकार सावंत याचा शोध सुरू आहे.",
+   "names": [
+    "ओंकार",
+    "सावंत",
+    "तेजस",
+    "मोरे"
+   ],
+   "ages": [
+    "१९",
+    "२१"
+   ],
+   "keep": [
+    "गिरगाव चौपाटी",
+    "अनंत चतुर्दशी",
+    "जीवरक्षकांनी"
+   ]
+  },
+  {
+   "id": "m14",
+   "tier": "news_regional",
+   "text": "अंधेरी स्टेशन पर लोकल से गिरकर 45 साल के यात्री की मौत — पश्चिम रेलवे के अंधेरी स्टेशन पर सुबह की भीड़ में लोकल से गिरने के कारण सुरेश गुप्ता की मौत हो गई; उनकी पत्नी श्रीमती कमला गुप्ता ने रेलवे से मुआवज़े की मांग की है।",
+   "names": [
+    "सुरेश",
+    "गुप्ता",
+    "कमला"
+   ],
+   "ages": [
+    "45"
+   ],
+   "keep": [
+    "अंधेरी स्टेशन",
+    "पश्चिम रेलवे",
+    "लोकल"
+   ]
+  },
+  {
+   "id": "m15",
+   "tier": "aggregator",
+   "text": "Scooter skids on pothole near Gokhale Bridge, pillion rider hurt — Snehal Gawde's scooter skidded on a pothole near Gokhale Bridge in Andheri East on Friday evening; her pillion rider, 34-year-old colleague Ashwini Kamble, suffered head injuries and was admitted to Cooper Hospital.",
+   "names": [
+    "Snehal",
+    "Gawde",
+    "Ashwini",
+    "Kamble"
+   ],
+   "ages": [
+    "34"
+   ],
+   "keep": [
+    "Gokhale Bridge",
+    "Andheri East",
+    "pothole",
+    "Cooper Hospital"
+   ]
+  },
+  {
+   "id": "m16",
+   "tier": "social_unverified",
+   "text": "Rant: autowallahs outside Kurla station refusing short trips again. Asked for Kamani, guy said 'nahi jayega'. Even my friend Amey, who argues with everyone, gave up and walked. Fix this pls.",
+   "names": [
+    "Amey"
+   ],
+   "ages": [],
+   "keep": [
+    "Kurla station",
+    "Kamani",
+    "short trips"
+   ]
+  },
+  {
+   "id": "m17",
+   "tier": "aggregator",
+   "text": "Fish vendor hurt as speeding SUV crashes into stall near Mahim Causeway — Smt Lata Koli, 55, was injured when a speeding SUV crashed into her roadside stall near Mahim Causeway on Saturday morning; the driver, Hitesh Shah, 38, of Bandra, has been arrested.",
+   "names": [
+    "Lata",
+    "Koli",
+    "Hitesh",
+    "Shah"
+   ],
+   "ages": [
+    "55",
+    "38"
+   ],
+   "keep": [
+    "Fish vendor",
+    "Mahim Causeway",
+    "roadside stall",
+    "Bandra"
+   ]
+  },
+  {
+   "id": "m18",
+   "tier": "news_regional",
+   "text": "Hoarding panel falls on bikers on WEH near Jogeshwari — Biker Tushar Mhatre and his friend Akshay, both 26, were injured when a portion of a hoarding came down on the Western Express Highway near Jogeshwari during strong winds on Tuesday.",
+   "names": [
+    "Tushar",
+    "Mhatre",
+    "Akshay"
+   ],
+   "ages": [
+    "26"
+   ],
+   "keep": [
+    "Western Express Highway",
+    "Jogeshwari",
+    "hoarding",
+    "WEH"
+   ]
+  },
+  {
+   "id": "m19",
+   "tier": "news_regional",
+   "text": "सायन सर्कलजवळ बेस्ट बसची दुचाकीला धडक; ४२ वर्षांचा दुचाकीस्वार जखमी — सायन सर्कलजवळ भरधाव बेस्ट बसने दिलेल्या धडकेत दुचाकीस्वार संदीप पवार जखमी झाले असून त्यांच्यावर सायन रुग्णालयात उपचार सुरू आहेत; बसचालक माने साहेब यांनी तातडीने रुग्णवाहिका बोलावली.",
+   "names": [
+    "संदीप",
+    "पवार",
+    "माने"
+   ],
+   "ages": [
+    "४२"
+   ],
+   "keep": [
+    "सायन सर्कल",
+    "बेस्ट बस",
+    "सायन रुग्णालय"
+   ]
+  },
+  {
+   "id": "m20",
+   "tier": "news_regional",
+   "text": "Signal failure at Kurla hits Central line; commuters walk on tracks — Suburban services on the Central line were delayed by up to 40 minutes on Tuesday after a signal failure between Kurla and Sion, forcing hundreds of commuters to walk along the tracks towards Lokmanya Tilak Terminus.",
+   "names": [],
+   "ages": [],
+   "keep": [
+    "Lokmanya Tilak Terminus",
+    "signal failure",
+    "Kurla",
+    "Central line"
+   ]
+  },
+  {
+   "id": "m21",
+   "tier": "news_regional",
+   "text": "Retired mill worker run over by reversing tempo near Mahalaxmi station — Shri Ganpatrao Chavan, 78, a retired mill worker from Jacob Circle, died after a tempo reversed into him in a lane near Mahalaxmi station; the tempo driver, Salim Shaikh, fled, police said.",
+   "names": [
+    "Ganpatrao",
+    "Chavan",
+    "Salim",
+    "Shaikh"
+   ],
+   "ages": [
+    "78"
+   ],
+   "keep": [
+    "Mahalaxmi station",
+    "Jacob Circle",
+    "retired mill worker"
+   ]
+  },
+  {
+   "id": "m22",
+   "tier": "social_unverified",
+   "text": "Lost my wallet in a kaali-peeli from Dadar TT to Worli last night, driver Iqbal bhai called me within an hour and returned it. Mumbai still has good people. - Pooja, F(27)",
+   "names": [
+    "Iqbal",
+    "Pooja"
+   ],
+   "ages": [
+    "27"
+   ],
+   "keep": [
+    "kaali-peeli",
+    "Dadar TT",
+    "Worli"
+   ]
+  },
+  {
+   "id": "m23",
+   "tier": "aggregator",
+   "text": "सांताक्रूज़ के मिलन सबवे में पानी भरा, बेस्ट बस फंसी — भारी बारिश के बाद मिलन सबवे में पानी भरने से एक बेस्ट बस फंस गई; कंडक्टर श्री दिनेश यादव और चालक राजू पाटील ने यात्रियों को सुरक्षित बाहर निकाला।",
+   "names": [
+    "दिनेश",
+    "यादव",
+    "राजू",
+    "पाटील"
+   ],
+   "ages": [],
+   "keep": [
+    "मिलन सबवे",
+    "सांताक्रूज़",
+    "बेस्ट बस"
+   ]
+  },
+  {
+   "id": "m24",
+   "tier": "social_unverified",
+   "text": "Kranti Nagar near the Mithi river is being evacuated rn, cops going door to door. My colleague Shabana Khan (41F) lives there, says water came inside by 3am. Kurla folks stay safe.",
+   "names": [
+    "Shabana",
+    "Khan"
+   ],
+   "ages": [
+    "41"
+   ],
+   "keep": [
+    "Kranti Nagar",
+    "Mithi river",
+    "Kurla"
+   ]
+  },
+  {
+   "id": "m25",
+   "tier": "news_regional",
+   "text": "शिवाजी पार्कजवळ जुने झाड रिक्षावर कोसळले; चालक थोडक्यात बचावला — दादर येथील शिवाजी पार्कजवळ रविवारी सायंकाळी जुने झाड रिक्षावर कोसळले; रिक्षाचालक दत्तात्रय ऊर्फ दत्ता शिंदे थोडक्यात बचावले, असे पोलिसांनी सांगितले.",
+   "names": [
+    "दत्तात्रय",
+    "दत्ता",
+    "शिंदे"
+   ],
+   "ages": [],
+   "keep": [
+    "शिवाजी पार्क",
+    "दादर",
+    "रिक्षाचालक"
+   ]
+  },
+  {
+   "id": "m26",
+   "tier": "news_regional",
+   "text": "Constable hurt as barricade gives way during visarjan at Girgaon Chowpatty — Police constable Vaibhav Naik, 33, of the D B Marg police station suffered a leg injury when a barricade collapsed under the crowd at Girgaon Chowpatty on Anant Chaturdashi.",
+   "names": [
+    "Vaibhav",
+    "Naik"
+   ],
+   "ages": [
+    "33"
+   ],
+   "keep": [
+    "Girgaon Chowpatty",
+    "D B Marg police station",
+    "Anant Chaturdashi",
+    "visarjan"
+   ]
+  },
+  {
+   "id": "m27",
+   "tier": "social_unverified",
+   "text": "Andheri East folks, water is up to the knees outside Andheri Subway right now (9:15pm). My dad (62) went out to get milk and came back drenched. Ramesh bhau from B-wing says the BMC pump isn't working. Avoid!!",
+   "names": [
+    "Ramesh"
+   ],
+   "ages": [
+    "62"
+   ],
+   "keep": [
+    "Andheri Subway",
+    "Andheri East",
+    "BMC pump"
+   ]
+  },
+  {
+   "id": "m28",
+   "tier": "aggregator",
+   "text": "Speeding car rams divider at Haji Ali junction, two youths hurt — Rohan Mehta and Karan Desai, both 22, were injured when their car rammed a divider at Haji Ali junction around 2 am on Sunday; police suspect drunk driving.",
+   "names": [
+    "Rohan",
+    "Mehta",
+    "Karan",
+    "Desai"
+   ],
+   "ages": [
+    "22"
+   ],
+   "keep": [
+    "Haji Ali junction",
+    "divider",
+    "drunk driving"
+   ]
+  },
+  {
+   "id": "m29",
+   "tier": "news_regional",
+   "text": "घाटकोपर में गड्ढे की वजह से बाइक फिसली, युवक की मौत — घाटकोपर के पास सड़क के गड्ढे में बाइक फिसलने से 32 वर्षीय मोहम्मद आसिफ़ शेख की मौत हो गई; उनके भाई अनवर ने बीएमसी पर लापरवाही का आरोप लगाया है।",
+   "names": [
+    "मोहम्मद",
+    "आसिफ़",
+    "शेख",
+    "अनवर"
+   ],
+   "ages": [
+    "32"
+   ],
+   "keep": [
+    "घाटकोपर",
+    "गड्ढे",
+    "बीएमसी"
+   ]
+  },
+  {
+   "id": "m30",
+   "tier": "news_regional",
+   "text": "Water main burst floods Annie Besant Road near Worli Naka — A 1,200 mm water main burst near Worli Naka on Annie Besant Road on Thursday, flooding the stretch and slowing traffic towards Haji Ali for nearly four hours; shopkeeper Jignesh Patel said his basement godown was flooded.",
+   "names": [
+    "Jignesh",
+    "Patel"
+   ],
+   "ages": [],
+   "keep": [
+    "Annie Besant Road",
+    "Worli Naka",
+    "water main",
+    "Haji Ali"
+   ]
+  },
+  {
+   "id": "m31",
+   "tier": "news_regional",
+   "text": "कुर्ला पश्चिमेत चाळीतील घराला आग; आजींना शेजाऱ्यांनी वाचवले — कुर्ला पश्चिमेकडील एका चाळीतील घराला शुक्रवारी पहाटे आग लागली; शेजारी राहणारे विठ्ठलराव जाधव आणि त्यांचा मुलगा रोहित यांनी सौ. कुसुम लोंढे (वय ६०) यांना सुखरूप बाहेर काढले.",
+   "names": [
+    "विठ्ठलराव",
+    "जाधव",
+    "रोहित",
+    "कुसुम",
+    "लोंढे"
+   ],
+   "ages": [
+    "६०"
+   ],
+   "keep": [
+    "कुर्ला पश्चिम",
+    "आग",
+    "शेजाऱ्यांनी"
+   ]
+  },
+  {
+   "id": "m32",
+   "tier": "news_regional",
+   "text": "Head constable catches student slipping from moving train at Dadar — Head constable Ashok Gurav caught 19-year-old student Neha Rane as she slipped while trying to board a moving train at Dadar station on Monday; CCTV footage of the rescue has gone viral.",
+   "names": [
+    "Ashok",
+    "Gurav",
+    "Neha",
+    "Rane"
+   ],
+   "ages": [
+    "19"
+   ],
+   "keep": [
+    "Dadar station",
+    "moving train",
+    "CCTV footage"
+   ]
+  },
+  {
+   "id": "m33",
+   "tier": "social_unverified",
+   "text": "Who else saw the BEST double-decker stuck in the Hindmata water this morning? Driver Kadam saheb kept everyone calm and only opened the doors once the fire brigade arrived. Legend.",
+   "names": [
+    "Kadam"
+   ],
+   "ages": [],
+   "keep": [
+    "Hindmata",
+    "fire brigade",
+    "BEST double-decker"
+   ]
+  },
+  {
+   "id": "m34",
+   "tier": "aggregator",
+   "text": "Fire guts Bandra cottage in Ranwar village; elderly couple escapes — Peter Pereira, 71, and his wife Agnes, 68, escaped unhurt when a fire broke out in their ground-floor cottage in Ranwar village, Bandra, late on Sunday, the fire brigade said.",
+   "names": [
+    "Peter",
+    "Pereira",
+    "Agnes"
+   ],
+   "ages": [
+    "71",
+    "68"
+   ],
+   "keep": [
+    "Ranwar village",
+    "Bandra",
+    "fire brigade"
+   ]
+  },
+  {
+   "id": "m35",
+   "tier": "aggregator",
+   "text": "सायन स्थानकाबाहेर पिंपळाचे झाड कोसळले; भाजीविक्रेत्या महिलेचे नुकसान — सायन स्थानकाबाहेर बुधवारी दुपारी जुने पिंपळाचे झाड कोसळल्याने भाजीविक्रेत्या कमल दळवी (५८) थोडक्यात बचावल्या, मात्र त्यांच्या दुकानाचे मोठे नुकसान झाले.",
+   "names": [
+    "कमल",
+    "दळवी"
+   ],
+   "ages": [
+    "५८"
+   ],
+   "keep": [
+    "सायन स्थानक",
+    "पिंपळाचे झाड",
+    "भाजीविक्रेत्या"
+   ]
+  },
+  {
+   "id": "m36",
+   "tier": "news_regional",
+   "text": "भारी बारिश से किंग्स सर्कल और सायन में जलभराव, बेस्ट ने बदले बसों के रूट — माटुंगा के किंग्स सर्कल और सायन रोड पर घुटनों तक पानी भरने के बाद बेस्ट ने कई बसों के रूट बदल दिए हैं।",
+   "names": [],
+   "ages": [],
+   "keep": [
+    "किंग्स सर्कल",
+    "सायन",
+    "जलभराव",
+    "माटुंगा"
+   ]
+  },
+  {
+   "id": "m37",
+   "tier": "news_regional",
+   "text": "पश्चिम द्रुतगती महामार्गावर ट्रकची कारला धडक; कारचालक गंभीर जखमी — गोरेगावजवळ पश्चिम द्रुतगती महामार्गावर भरधाव ट्रकने दिलेल्या धडकेत कारचालक डॉ. मंदार कुलकर्णी (४५) गंभीर जखमी झाले; ट्रकचालक बबलू यादव याला पोलिसांनी ताब्यात घेतले आहे.",
+   "names": [
+    "मंदार",
+    "कुलकर्णी",
+    "बबलू",
+    "यादव"
+   ],
+   "ages": [
+    "४५"
+   ],
+   "keep": [
+    "पश्चिम द्रुतगती महामार्ग",
+    "गोरेगाव",
+    "ट्रकचालक"
+   ]
+  },
+  {
+   "id": "m38",
+   "tier": "news_regional",
+   "text": "BEST driver held after bus hits pedestrians outside Kurla station — BEST driver Sunil Satam, 50, was arrested after the bus he was driving hit three pedestrians outside Kurla station on Monday night; one of them, Pooja Mishra, 23, a college student, is critical.",
+   "names": [
+    "Sunil",
+    "Satam",
+    "Pooja",
+    "Mishra"
+   ],
+   "ages": [
+    "50",
+    "23"
+   ],
+   "keep": [
+    "Kurla station",
+    "pedestrians",
+    "college student"
+   ]
+  },
+  {
+   "id": "m39",
+   "tier": "social_unverified",
+   "text": "Tilak Nagar station FOB is a death trap after rain, slipped and twisted my ankle today. 34F btw. Shoutout to the chaiwala Bablu who helped me sit and got ice.",
+   "names": [
+    "Bablu"
+   ],
+   "ages": [
+    "34"
+   ],
+   "keep": [
+    "Tilak Nagar station",
+    "chaiwala"
+   ]
+  },
+  {
+   "id": "m40",
+   "tier": "news_regional",
+   "text": "Biker dies after hitting pothole on Swatantryaveer Savarkar Marg — Omkar Parab, 27, of Prabhadevi died after his motorcycle hit a pothole on Swatantryaveer Savarkar Marg near Siddhivinayak temple early on Wednesday; his mother, Sau. Rekha Parab, has demanded action against the contractor.",
+   "names": [
+    "Omkar",
+    "Parab",
+    "Rekha"
+   ],
+   "ages": [
+    "27"
+   ],
+   "keep": [
+    "Swatantryaveer Savarkar Marg",
+    "Siddhivinayak temple",
+    "Prabhadevi",
+    "pothole"
+   ]
+  },
+  {
+   "id": "m41",
+   "tier": "aggregator",
+   "text": "Visarjan advisory: roads around Lalbaug and Parel shut from 10 am — The Mumbai Traffic Police has closed Dr Babasaheb Ambedkar Road between Lalbaug and Byculla and diverted vehicles via Sant Gadge Maharaj Chowk for the Anant Chaturdashi processions.",
+   "names": [],
+   "ages": [],
+   "keep": [
+    "Dr Babasaheb Ambedkar Road",
+    "Sant Gadge Maharaj Chowk",
+    "Lalbaug",
+    "Mumbai Traffic Police"
+   ]
+  },
+  {
+   "id": "m42",
+   "tier": "news_regional",
+   "text": "हिंदमाता परिसरात पुन्हा पाणी साचले; मुलीला वडिलांनी खांद्यावर घेऊन शाळेत नेले — दादर पूर्वेतील हिंदमाता येथे गुडघाभर पाणी साचल्याने कु. सानिका घाडी (९) हिला तिचे वडील निलेश घाडी यांनी खांद्यावर घेऊन शाळेत पोहोचवले.",
+   "names": [
+    "सानिका",
+    "घाडी",
+    "निलेश"
+   ],
+   "ages": [
+    "९"
+   ],
+   "keep": [
+    "हिंदमाता",
+    "पाणी साचले",
+    "दादर पूर्व"
+   ]
+  },
+  {
+   "id": "m43",
+   "tier": "news_regional",
+   "text": "Security guard rescued from terrace in Lower Parel building fire — Security guard Bhagwan Satpute, 49, was rescued by fire brigade personnel from the terrace of a commercial building on Ganpatrao Kadam Marg in Lower Parel after a fire on the fourth floor on Tuesday.",
+   "names": [
+    "Bhagwan",
+    "Satpute"
+   ],
+   "ages": [
+    "49"
+   ],
+   "keep": [
+    "Ganpatrao Kadam Marg",
+    "Lower Parel",
+    "fire brigade"
+   ]
+  },
+  {
+   "id": "m44",
+   "tier": "social_unverified",
+   "text": "Update on the Kurla wall collapse: my cousin Tejas (24) is ok, just bruises. The lady next door, Sunita tai, is in Rajawadi hospital. Big thanks to the fire brigade guys.",
+   "names": [
+    "Tejas",
+    "Sunita"
+   ],
+   "ages": [
+    "24"
+   ],
+   "keep": [
+    "Kurla",
+    "wall collapse",
+    "Rajawadi hospital"
+   ]
+  },
+  {
+   "id": "m45",
+   "tier": "news_regional",
+   "text": "दादर टीटी सर्कल पर टैक्सी और बेस्ट बस की टक्कर, दो घायल — दादर टीटी सर्कल पर गुरुवार सुबह काली-पीली टैक्सी और बेस्ट बस की टक्कर में टैक्सी में बैठीं सुश्री प्रिया अग्रवाल घायल हो गईं; टैक्सी चालक श्यामलालजी को भी चोटें आईं।",
+   "names": [
+    "प्रिया",
+    "अग्रवाल",
+    "श्यामलालजी"
+   ],
+   "ages": [],
+   "keep": [
+    "दादर टीटी सर्कल",
+    "काली-पीली टैक्सी",
+    "बेस्ट बस"
+   ]
+  },
+  {
+   "id": "m46",
+   "tier": "aggregator",
+   "text": "Visitor hurt by falling branch at Jijamata Udyan in Byculla — Clara Fernandes, 36, a tourist from Vasai, suffered minor injuries when a dry branch fell on her near the entrance of Jijamata Udyan in Byculla on Sunday; the BMC has ordered tree trimming in the zoo.",
+   "names": [
+    "Clara",
+    "Fernandes"
+   ],
+   "ages": [
+    "36"
+   ],
+   "keep": [
+    "Jijamata Udyan",
+    "Byculla",
+    "dry branch",
+    "Vasai"
+   ]
+  },
+  {
+   "id": "m47",
+   "tier": "news_regional",
+   "text": "Residents rescued by hydraulic ladder in Nana Chowk high-rise fire — Residents of a 14-storey building near Nana Chowk in Grant Road were brought down using hydraulic ladders on Tuesday; among them was Dr Farhan Ansari, 44, who helped evacuate elderly neighbours.",
+   "names": [
+    "Farhan",
+    "Ansari"
+   ],
+   "ages": [
+    "44"
+   ],
+   "keep": [
+    "Nana Chowk",
+    "Grant Road",
+    "hydraulic ladder"
+   ]
+  },
+  {
+   "id": "m48",
+   "tier": "news_regional",
+   "text": "मिलन सबवे आणि अंधेरी सबवेमध्ये पाणी साचले; वाहतूक वळवली — मुसळधार पावसामुळे सांताक्रूझ येथील मिलन सबवे आणि अंधेरी सबवेमध्ये पाणी साचले असून वाहतूक पश्चिम द्रुतगती महामार्गाकडे वळवण्यात आली आहे.",
+   "names": [],
+   "ages": [],
+   "keep": [
+    "मिलन सबवे",
+    "अंधेरी सबवे",
+    "पाणी साचले",
+    "सांताक्रूझ"
+   ]
+  },
+  {
+   "id": "m49",
+   "tier": "social_unverified",
+   "text": "Daily WEH update: 45 mins Borivali to Andheri, bike accident near the Goregaon flyover. Biker looked okay, a traffic cop, Yadavji from the Goregaon chowki, was helping him. Drive safe y'all.",
+   "names": [
+    "Yadavji"
+   ],
+   "ages": [],
+   "keep": [
+    "WEH",
+    "Borivali",
+    "Goregaon flyover"
+   ]
+  },
+  {
+   "id": "m50",
+   "tier": "news_regional",
+   "text": "लोकमान्य तिलक टर्मिनस पर ट्रेन छह घंटे लेट, यात्रियों का हंगामा — लोकमान्य तिलक टर्मिनस पर गोरखपुर जाने वाली ट्रेन छह घंटे लेट होने पर यात्रियों ने हंगामा किया; यात्री रविशंकर तिवारी (60) ने बताया कि प्लेटफ़ॉर्म पर पीने का पानी तक नहीं था।",
+   "names": [
+    "रविशंकर",
+    "तिवारी"
+   ],
+   "ages": [
+    "60"
+   ],
+   "keep": [
+    "लोकमान्य तिलक टर्मिनस",
+    "प्लेटफ़ॉर्म",
+    "पीने का पानी"
+   ]
+  }
+ ]
+}

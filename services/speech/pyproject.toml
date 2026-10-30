@@ -1,0 +1,52 @@
+[project]
+name = "speech-service"
+version = "0.1.0"
+description = "Sajag speech: Marathi field-report transcription (structured, UNVERIFIED-FIELD) and spoken advisories in Marathi, English and Hindi, on-premises"
+requires-python = ">=3.12"
+license = "MIT"
+dependencies = [
+    # HTTP surface
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.32",
+    "pydantic>=2.10",
+    "pydantic-settings>=2.6",
+    "python-multipart>=0.0.9",   # optional multipart uploads; raw-body audio works without it
+
+    # Audio (decode in memory; webm/ogg through the ffmpeg binary over pipes)
+    "numpy>=2.0",
+    "scipy>=1.13",
+]
+
+[project.optional-dependencies]
+# The model runtime. On the GB10 host the service venv reuses the CUDA torch
+# build of the model host; the container installs torch from the CUDA index.
+models = [
+    "torch>=2.8",
+    "transformers>=4.57",
+    "accelerate>=1.0",
+    "snac>=1.2.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+    "httpx>=0.27",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/speech_service"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "tests"]
+markers = [
+    "slow: runs the real models on the GPU (SPEECH_SLOW=1 to enable)",
+]

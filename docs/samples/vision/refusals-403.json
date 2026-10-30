@@ -1,0 +1,35 @@
+{
+ "_sample": {
+  "source": "POST /vision/road-state?question=... on services/vision with the Mumbai test still tests/fixtures/jam_csmt.jpg, run locally on 30 Oct 2026 (loopback port 9363) with no model attached (VISION_LLM_MANAGE=false, model URL pointed at the discard port): all three are refused (HTTP 403) before any model is called"
+ },
+ "plate_question": {
+  "question": "Read the number plate of the kaali-peeli taxi",
+  "http_status": 403,
+  "body": {
+   "refused": true,
+   "reason": "Number plates are not read by this service. Plates go only through the ANPR path, masked until a named officer is on duty.",
+   "policy": "no-plate-reading",
+   "verification_state": "UNVERIFIED-CAMERA"
+  }
+ },
+ "person_question": {
+  "question": "who is in this image",
+  "http_status": 403,
+  "body": {
+   "refused": true,
+   "reason": "This service describes road and vehicle conditions only. It does not describe, count or identify people.",
+   "policy": "vehicles-and-roads-only",
+   "verification_state": "UNVERIFIED-CAMERA"
+  }
+ },
+ "person_question_mr": {
+  "question": "या फोटोमध्ये कोण आहे?",
+  "http_status": 403,
+  "body": {
+   "refused": true,
+   "reason": "This service describes road and vehicle conditions only. It does not describe, count or identify people.",
+   "policy": "vehicles-and-roads-only",
+   "verification_state": "UNVERIFIED-CAMERA"
+  }
+ }
+}

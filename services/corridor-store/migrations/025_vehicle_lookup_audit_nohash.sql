@@ -1,0 +1,29 @@
+-- 025_vehicle_lookup_audit_nohash.sql
+-- Drop the reversible mark hash from the full-mark lookup audit (FIX-AUDIT-A).
+--
+-- 024 stored mark_sha256, an UNSALTED sha256 of the canonical mark, beside
+-- mark_masked.  The mask keeps every character of a mark but three digits,
+-- so the hash is reversed by trying at most 1000 candidates (the audit's
+-- demo recovered a mark in under a millisecond): it was the raw mark in
+-- disguise.  Orchestrator decision: drop it, not salt or pepper it.  The
+-- audit keeps who looked (officer), when (looked_up_at), the MASKED mark,
+-- whether a vehicle was found and the disclosure class; the column's
+-- length CHECK goes with it (PostgreSQL drops a column's own constraints).
+--
+-- SCHEMA ONLY, idempotent — safe on fresh installs and on the ledgered live
+-- install (024 precedes it; DROP COLUMN IF EXISTS is a no-op on a second
+-- run).  Deliberately SUBTRACTIVE, the one exception to the additive rule:
+-- existing rows lose only the hash, and no reader ever selected it (GET
+-- /vehicles/lookups never returned it).  024 itself never changes (its
+-- checksum is ledgered); this file supersedes its mark_sha256 column.
+--
+-- Grammar constraint (007 header): consumed by naive ';'-splitters — no ';'
+-- or '--' inside string literals, no dollar-quoted bodies, no block
+-- comments; tests apply this file statement by statement.
+--
+-- Ethics rails (C6): vehicles only. After 025 no column of
+-- corridor.vehicle_lookup_audit holds, or can be reversed into, a clear
+-- registration mark — mark_masked is mask_plate's output and nothing else
+-- about the mark is stored.
+
+ALTER TABLE corridor.vehicle_lookup_audit DROP COLUMN IF EXISTS mark_sha256;

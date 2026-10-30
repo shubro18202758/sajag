@@ -1,0 +1,2055 @@
+{
+ "schema": "sajag.corridors/1",
+ "about": "Mumbai's curated corridor network (City Pack cities/mumbai/): the junctions (landmarks.json ids and spellings where the junction is a landmark; English + Marathi names), the segments along the real OpenStreetMap roads between them, the station selection and the camera rules. scripts/gen_osm_network.py --city mumbai resolves every junction to the OSM node where its roads meet (nearest its anchor), traces every segment along its roads (one-ways honoured), and writes the seed SQL, scripts/data/osm_network.json (evidence), scripts/data/osm_network_map.json (the resolved table) and cities/mumbai/network.json. Road data (c) OpenStreetMap contributors, ODbL 1.0.",
+ "event_profiles": true,
+ "seed_junctions": "all",
+ "name_aliases": {},
+ "name_abbrev": {},
+ "connector_segment_ids": [],
+ "peak_segment_ids": [
+  1008,
+  1009,
+  1013,
+  1015,
+  1016,
+  1032,
+  1038,
+  1044,
+  1046,
+  1049,
+  1063,
+  1066,
+  1067
+ ],
+ "junctions": [
+  {
+   "key": "mantralaya",
+   "landmark": "mantralaya",
+   "at": [
+    18.9268,
+    72.8243
+   ],
+   "roads": [
+    "Madame Cama"
+   ],
+   "max_m": 250,
+   "name": "Mantralaya (Madame Cama Road)",
+   "name_mr": "मंत्रालय (मादाम कामा मार्ग)",
+   "junction_id": 1
+  },
+  {
+   "key": "churchgate_md",
+   "at": [
+    18.9325,
+    72.8237
+   ],
+   "roads": [
+    "Marine Drive",
+    "Veer Nariman"
+   ],
+   "max_m": 120,
+   "name": "Marine Drive (Veer Nariman Road, Churchgate)",
+   "name_mr": "मरीन ड्राइव्ह (वीर नरिमन मार्ग, चर्चगेट)",
+   "junction_id": 2
+  },
+  {
+   "key": "churchgate",
+   "landmark": "churchgate",
+   "at": [
+    18.9333,
+    72.8268
+   ],
+   "roads": [
+    "Veer Nariman",
+    "Maharshi Karve|Jamshedji Tata"
+   ],
+   "max_m": 150,
+   "name": "Churchgate (Veer Nariman Road)",
+   "name_mr": "चर्चगेट (वीर नरिमन मार्ग)",
+   "junction_id": 3
+  },
+  {
+   "key": "csmt",
+   "landmark": "csmt",
+   "at": [
+    18.9405,
+    72.8355
+   ],
+   "roads": [
+    "Dadabhai Naoroji"
+   ],
+   "max_m": 200,
+   "name": "CSMT junction (D N Road)",
+   "name_mr": "सीएसएमटी जंक्शन (दादाभाई नौरोजी मार्ग)",
+   "junction_id": 4
+  },
+  {
+   "key": "marine_lines",
+   "landmark": "marine_drive",
+   "at": [
+    18.94287,
+    72.82325
+   ],
+   "name": "Marine Drive (Coastal Road south end, Marine Lines)",
+   "name_mr": "मरीन ड्राइव्ह (सागरी किनारा मार्ग दक्षिण टोक, मरीन लाइन्स)",
+   "osm_node_id": 13338040638,
+   "evidence": "OSM node pinned in the pack (the crossing of the roads named)",
+   "junction_id": 5
+  },
+  {
+   "key": "girgaon_chowpatty",
+   "landmark": "girgaon_chowpatty",
+   "at": [
+    18.9545,
+    72.8135
+   ],
+   "roads": [
+    "Marine Drive"
+   ],
+   "max_m": 200,
+   "name": "Girgaon Chowpatty (Marine Drive)",
+   "name_mr": "गिरगाव चौपाटी (मरीन ड्राइव्ह)",
+   "junction_id": 6
+  },
+  {
+   "key": "opera_house",
+   "at": [
+    18.9555,
+    72.818
+   ],
+   "roads": [
+    "Jagannath|Raja Ram|Vithalbhai|Sandhurst|Charni"
+   ],
+   "max_m": 200,
+   "name": "Opera House (Jagannath Shankarsheth Marg)",
+   "name_mr": "ऑपेरा हाऊस (जगन्नाथ शंकरशेठ मार्ग)",
+   "junction_id": 7
+  },
+  {
+   "key": "kemps_corner",
+   "at": [
+    18.9615,
+    72.8085
+   ],
+   "roads": [
+    "Hughes|Patkar|Kemps"
+   ],
+   "max_m": 150,
+   "name": "Kemps Corner",
+   "name_mr": "केम्प्स कॉर्नर",
+   "junction_id": 8
+  },
+  {
+   "key": "raj_bhavan",
+   "landmark": "raj_bhavan",
+   "at": [
+    18.9455,
+    72.796
+   ],
+   "roads": [
+    "Walkeshwar|Raj Bhavan|Malabar|Gangadhar"
+   ],
+   "max_m": 600,
+   "name": "Raj Bhavan (Walkeshwar Road, Malabar Hill)",
+   "name_mr": "राजभवन (वाळकेश्वर मार्ग, मलबार हिल)",
+   "junction_id": 9
+  },
+  {
+   "key": "haji_ali",
+   "landmark": "haji_ali",
+   "at": [
+    18.9822,
+    72.8142
+   ],
+   "name": "Haji Ali junction",
+   "name_mr": "हाजी अली जंक्शन",
+   "osm_node_id": 6167841747,
+   "evidence": "OSM node pinned in the pack (the crossing of the roads named)",
+   "junction_id": 10
+  },
+  {
+   "key": "jacob_circle",
+   "at": [
+    18.978,
+    72.8262
+   ],
+   "name": "Jacob Circle (Sant Gadge Maharaj Chowk)",
+   "name_mr": "जेकब सर्कल (संत गाडगे महाराज चौक)",
+   "osm_node_id": 1286566733,
+   "evidence": "OSM node pinned in the pack (the crossing of the roads named)",
+   "junction_id": 11
+  },
+  {
+   "key": "nair",
+   "landmark": "nair_hospital",
+   "at": [
+    18.97,
+    72.8212
+   ],
+   "roads": [
+    "Nair"
+   ],
+   "max_m": 300,
+   "name": "Nair Hospital (Dr A R Nair Road, Mumbai Central)",
+   "name_mr": "नायर रुग्णालय (डॉ. आनंदराव नायर मार्ग, मुंबई सेंट्रल)",
+   "junction_id": 12
+  },
+  {
+   "key": "jj",
+   "landmark": "jj_hospital",
+   "at": [
+    18.9636,
+    72.8325
+   ],
+   "roads": [
+    "J\\.? ?J\\.?|Jeejeebhoy|Jamshetji"
+   ],
+   "max_m": 200,
+   "name": "JJ junction (JJ Hospital)",
+   "name_mr": "जे.जे. जंक्शन (जे.जे. रुग्णालय)",
+   "junction_id": 13
+  },
+  {
+   "key": "nagpada",
+   "at": [
+    18.969,
+    72.8285
+   ],
+   "roads": [
+    "Maulana Azad"
+   ],
+   "max_m": 250,
+   "name": "Nagpada junction (Maulana Azad Road)",
+   "name_mr": "नागपाडा जंक्शन (मौलाना आझाद मार्ग)",
+   "junction_id": 14
+  },
+  {
+   "key": "byculla",
+   "at": [
+    18.9795,
+    72.834
+   ],
+   "roads": [
+    "Ambedkar|Lalbaug Flyover",
+    "Keshavrao|Joshi|Mandlik"
+   ],
+   "max_m": 250,
+   "name": "Byculla (Dr Ambedkar Road, Jijamata Udyan)",
+   "name_mr": "भायखळा (डॉ. आंबेडकर मार्ग, जिजामाता उद्यान)",
+   "junction_id": 15
+  },
+  {
+   "key": "lalbaug",
+   "landmark": "lalbaug",
+   "at": [
+    18.9908,
+    72.8357
+   ],
+   "roads": [
+    "Ambedkar|Lalbaug",
+    "Sane Guruji"
+   ],
+   "max_m": 120,
+   "name": "Lalbaug (Dr Ambedkar Road)",
+   "name_mr": "लालबाग (डॉ. आंबेडकर मार्ग)",
+   "junction_id": 16
+  },
+  {
+   "key": "parel",
+   "landmark": "parel",
+   "at": [
+    18.9985,
+    72.838
+   ],
+   "roads": [
+    "Ambedkar|Lalbaug Flyover"
+   ],
+   "max_m": 250,
+   "name": "Parel (Dr Ambedkar Road)",
+   "name_mr": "परळ (डॉ. आंबेडकर मार्ग)",
+   "junction_id": 17
+  },
+  {
+   "key": "kem",
+   "landmark": "kem",
+   "at": [
+    19.0026,
+    72.842
+   ],
+   "roads": [
+    "Borges|Donde|Jerbai|Wadia"
+   ],
+   "max_m": 200,
+   "name": "KEM Hospital (Acharya Donde Marg)",
+   "name_mr": "केईएम रुग्णालय (आचार्य दोंदे मार्ग)",
+   "junction_id": 18
+  },
+  {
+   "key": "hindmata",
+   "landmark": "hindmata",
+   "at": [
+    19.0062,
+    72.8405
+   ],
+   "roads": [
+    "Ambedkar|Hindmata"
+   ],
+   "max_m": 150,
+   "name": "Hindmata (Dadar East)",
+   "name_mr": "हिंदमाता (दादर पूर्व)",
+   "junction_id": 19
+  },
+  {
+   "key": "dadar_tt",
+   "landmark": "dadar_tt",
+   "at": [
+    19.0176,
+    72.848
+   ],
+   "roads": [
+    "Ambedkar|Khodadad|Dadar TT",
+    "Tilak"
+   ],
+   "max_m": 80,
+   "junction_id": 20
+  },
+  {
+   "key": "kings_circle",
+   "landmark": "kings_circle",
+   "at": [
+    19.0278,
+    72.8565
+   ],
+   "roads": [
+    "Laxmibai|King",
+    "Nathalal"
+   ],
+   "max_m": 120,
+   "junction_id": 21
+  },
+  {
+   "key": "sion_hospital",
+   "landmark": "sion_hospital",
+   "at": [
+    19.0345,
+    72.8597
+   ],
+   "roads": [
+    "Ambedkar|Laxmibai|Sion Hospital|Kelkar"
+   ],
+   "max_m": 200,
+   "name": "Sion Hospital (LTMGH) junction",
+   "name_mr": "सायन रुग्णालय जंक्शन",
+   "junction_id": 22
+  },
+  {
+   "key": "sion_circle",
+   "landmark": "sion_circle",
+   "at": [
+    19.0423,
+    72.8634
+   ],
+   "roads": [
+    "Sion Circle|Laxmibai"
+   ],
+   "max_m": 100,
+   "junction_id": 23
+  },
+  {
+   "key": "worli_naka",
+   "landmark": "worli_naka",
+   "at": [
+    19.0063,
+    72.8183
+   ],
+   "roads": [
+    "Annie Besant",
+    "Budhkar"
+   ],
+   "max_m": 80,
+   "junction_id": 24
+  },
+  {
+   "key": "atre_chowk",
+   "landmark": "acharya_atre_chowk",
+   "at": [
+    19.0013,
+    72.8157
+   ],
+   "roads": [
+    "Annie Besant",
+    "Thadani"
+   ],
+   "max_m": 80,
+   "junction_id": 25
+  },
+  {
+   "key": "lower_parel",
+   "at": [
+    19.005,
+    72.83
+   ],
+   "roads": [
+    "Senapati|Tulsi",
+    "Budhkar|Lower Parel|Joshi|Delisle|Ganpatrao|Kamala"
+   ],
+   "max_m": 400,
+   "name": "Lower Parel (Senapati Bapat Marg)",
+   "name_mr": "लोअर परळ (सेनापती बापट मार्ग)",
+   "junction_id": 26
+  },
+  {
+   "key": "dadar_west",
+   "landmark": "dadar",
+   "at": [
+    19.0205,
+    72.843
+   ],
+   "name": "Dadar West (Tilak Bridge, Senapati Bapat Marg)",
+   "name_mr": "दादर पश्चिम (टिळक पूल, सेनापती बापट मार्ग)",
+   "osm_node_id": 245661134,
+   "evidence": "OSM node pinned in the pack (the crossing of the roads named)",
+   "junction_id": 27
+  },
+  {
+   "key": "sealink_worli_n",
+   "at": [
+    19.01598,
+    72.81178
+   ],
+   "name": "Sea Link, Worli end (Coastal Road merge, northbound)",
+   "name_mr": "सागरी सेतू, वरळी टोक (सागरी किनारा मार्ग संगम, उत्तरेकडे)",
+   "osm_node_id": 1650382591,
+   "evidence": "OSM node pinned in the pack (the crossing of the roads named)",
+   "junction_id": 28
+  },
+  {
+   "key": "sealink_worli_s",
+   "at": [
+    19.01712,
+    72.81233
+   ],
+   "name": "Sea Link, Worli end (Coastal Road fork, southbound)",
+   "name_mr": "सागरी सेतू, वरळी टोक (सागरी किनारा मार्ग फाटा, दक्षिणेकडे)",
+   "osm_node_id": 457459035,
+   "evidence": "OSM node pinned in the pack (the crossing of the roads named)",
+   "junction_id": 29
+  },
+  {
+   "key": "worli_seaface",
+   "at": [
+    19.01274,
+    72.81672
+   ],
+   "name": "Worli (Sea Link toll plaza, Khan Abdul Gaffar Khan Road)",
+   "name_mr": "वरळी (सागरी सेतू पथकर नाका, खान अब्दुल गफार खान मार्ग)",
+   "osm_node_id": 1650382577,
+   "evidence": "OSM node pinned in the pack (the crossing of the roads named)",
+   "junction_id": 30
+  },
+  {
+   "key": "sealink_bandra_n",
+   "landmark": "sea_link",
+   "at": [
+    19.04515,
+    72.82806
+   ],
+   "name": "Bandra–Worli Sea Link, Bandra end (northbound)",
+   "name_mr": "वांद्रे–वरळी सागरी सेतू, वांद्रे टोक (उत्तरेकडे)",
+   "osm_node_id": 583309182,
+   "evidence": "OSM node pinned in the pack (the crossing of the roads named)",
+   "junction_id": 31
+  },
+  {
+   "key": "sealink_bandra_s",
+   "at": [
+    19.04591,
+    72.8292
+   ],
+   "name": "Bandra–Worli Sea Link, Bandra end (southbound)",
+   "name_mr": "वांद्रे–वरळी सागरी सेतू, वांद्रे टोक (दक्षिणेकडे)",
+   "osm_node_id": 4089098764,
+   "evidence": "OSM node pinned in the pack (the crossing of the roads named)",
+   "junction_id": 32
+  },
+  {
+   "key": "mahim",
+   "at": [
+    19.042,
+    72.8402
+   ],
+   "roads": [
+    "Lady Jam",
+    "Savarkar|Mahim"
+   ],
+   "max_m": 150,
+   "name": "Mahim (Lady Jamshetji Road, causeway south end)",
+   "name_mr": "माहीम (लेडी जमशेटजी मार्ग, कॉजवे दक्षिण टोक)",
+   "junction_id": 33
+  },
+  {
+   "key": "bwsl_merge",
+   "at": [
+    19.05092,
+    72.8406
+   ],
+   "name": "Bandra (Sea Link flyover – Western Express Highway merge)",
+   "name_mr": "वांद्रे (सागरी सेतू उड्डाणपूल – पश्चिम द्रुतगती महामार्ग संगम)",
+   "osm_node_id": 593054810,
+   "evidence": "OSM node pinned in the pack (the crossing of the roads named)",
+   "junction_id": 34
+  },
+  {
+   "key": "mahim_causeway",
+   "landmark": "mahim_causeway",
+   "at": [
+    19.0505,
+    72.8405
+   ],
+   "name": "Mahim Causeway, Bandra end (SV Road)",
+   "name_mr": "माहीम कॉजवे, वांद्रे टोक (स्वामी विवेकानंद मार्ग)",
+   "osm_node_id": 473040979,
+   "evidence": "OSM node pinned in the pack (the crossing of the roads named)",
+   "junction_id": 35
+  },
+  {
+   "key": "bandra_sv",
+   "landmark": "bandra",
+   "at": [
+    19.0541,
+    72.8379
+   ],
+   "roads": [
+    "Swami Vivekanand",
+    "Hill Road|Station Road"
+   ],
+   "max_m": 80,
+   "name": "Bandra (SV Road, Hill Road)",
+   "name_mr": "वांद्रे (स्वामी विवेकानंद मार्ग, हिल रोड)",
+   "junction_id": 36
+  },
+  {
+   "key": "kalanagar",
+   "landmark": "kalanagar",
+   "at": [
+    19.0585,
+    72.8466
+   ],
+   "name": "Kalanagar junction (Western Express Highway)",
+   "name_mr": "कलानगर जंक्शन (पश्चिम द्रुतगती महामार्ग)",
+   "osm_node_id": 6243685414,
+   "evidence": "OSM node pinned in the pack (the crossing of the roads named)",
+   "junction_id": 37
+  },
+  {
+   "key": "bkc",
+   "landmark": "bkc",
+   "at": [
+    19.0635,
+    72.864
+   ],
+   "roads": [
+    "Bandra Kurla Complex Road"
+   ],
+   "max_m": 300,
+   "name": "BKC (Bandra Kurla Complex Road)",
+   "name_mr": "वांद्रे कुर्ला संकुल (बीकेसी मार्ग)",
+   "junction_id": 38
+  },
+  {
+   "key": "vakola",
+   "at": [
+    19.0775,
+    72.847
+   ],
+   "name": "Vakola (Western Express Highway)",
+   "name_mr": "वाकोला (पश्चिम द्रुतगती महामार्ग)",
+   "osm_node_id": 2899067852,
+   "evidence": "OSM node pinned in the pack (the crossing of the roads named)",
+   "junction_id": 39
+  },
+  {
+   "key": "santacruz_sv",
+   "at": [
+    19.0841,
+    72.838
+   ],
+   "roads": [
+    "Swami Vivekanand",
+    "Juhu Tara"
+   ],
+   "max_m": 80,
+   "name": "Santacruz (SV Road, Juhu Tara Road)",
+   "name_mr": "सांताक्रूझ (स्वामी विवेकानंद मार्ग, जुहू तारा मार्ग)",
+   "junction_id": 40
+  },
+  {
+   "key": "santacruz_milan",
+   "at": [
+    19.08972,
+    72.83824
+   ],
+   "name": "Santacruz (SV Road, Linking Road, Milan Subway road)",
+   "name_mr": "सांताक्रूझ (स्वामी विवेकानंद मार्ग, लिंकिंग रोड, मिलन सबवे मार्ग)",
+   "osm_node_id": 245669231,
+   "evidence": "OSM node pinned in the pack (the crossing of the roads named)",
+   "junction_id": 41
+  },
+  {
+   "key": "milan_subway",
+   "landmark": "milan_subway",
+   "at": [
+    19.0905,
+    72.8426
+   ],
+   "roads": [
+    "Milan Subway"
+   ],
+   "max_m": 60,
+   "name": "Milan Subway (Santacruz)",
+   "name_mr": "मिलन सबवे (सांताक्रूझ)",
+   "junction_id": 42
+  },
+  {
+   "key": "vileparle_sv",
+   "landmark": "cooper_hospital",
+   "at": [
+    19.1081,
+    72.8404
+   ],
+   "roads": [
+    "Swami Vivekanand",
+    "Irla"
+   ],
+   "max_m": 80,
+   "name": "Irla junction (SV Road, for Cooper Hospital)",
+   "name_mr": "इर्ला जंक्शन (स्वामी विवेकानंद मार्ग, कूपर रुग्णालयाकडे)",
+   "junction_id": 43
+  },
+  {
+   "key": "andheri_sv",
+   "at": [
+    19.1164,
+    72.8439
+   ],
+   "roads": [
+    "Swami Vivekanand",
+    "Gokhale|Barfiwala"
+   ],
+   "max_m": 80,
+   "name": "Andheri West (SV Road, Gokhale Bridge)",
+   "name_mr": "अंधेरी पश्चिम (स्वामी विवेकानंद मार्ग, गोखले पूल)",
+   "junction_id": 44
+  },
+  {
+   "key": "andheri_east",
+   "landmark": "andheri",
+   "at": [
+    19.119,
+    72.8509
+   ],
+   "roads": [
+    "Mathuradas",
+    "Teli|Radahakrishnan"
+   ],
+   "max_m": 80,
+   "name": "Andheri East (Andheri–Kurla Road, Teli Galli)",
+   "name_mr": "अंधेरी पूर्व (अंधेरी–कुर्ला मार्ग, तेली गल्ली)",
+   "junction_id": 45
+  },
+  {
+   "key": "gokhale_east",
+   "at": [
+    19.1148,
+    72.8474
+   ],
+   "name": "Andheri East (Gokhale Bridge landing, Sahar Road)",
+   "name_mr": "अंधेरी पूर्व (गोखले पूल उतार, सहार मार्ग)",
+   "osm_node_id": 5488442638,
+   "evidence": "OSM node pinned in the pack (the crossing of the roads named)",
+   "junction_id": 46
+  },
+  {
+   "key": "andheri_subway",
+   "landmark": "andheri_subway",
+   "at": [
+    19.1128,
+    72.8482
+   ],
+   "roads": [
+    "Sahar Road"
+   ],
+   "max_m": 40,
+   "name": "Andheri Subway (Andheri East approach, Sahar Road)",
+   "name_mr": "अंधेरी सबवे (अंधेरी पूर्व बाजू, सहार मार्ग)",
+   "junction_id": 47
+  },
+  {
+   "key": "airport_weh",
+   "at": [
+    19.1006,
+    72.8547
+   ],
+   "roads": [
+    "Western Express",
+    "Sahar Elevated"
+   ],
+   "max_m": 120,
+   "name": "Western Express Highway (Sahar Elevated Road)",
+   "name_mr": "पश्चिम द्रुतगती महामार्ग (सहार उन्नत मार्ग)",
+   "junction_id": 48
+  },
+  {
+   "key": "airport_t2",
+   "landmark": "airport_t2",
+   "at": [
+    19.0995,
+    72.8735
+   ],
+   "roads": [
+    "Sahar Elevated"
+   ],
+   "max_m": 400,
+   "name": "Mumbai Airport T2 (departure forecourt)",
+   "name_mr": "मुंबई विमानतळ टी२ (प्रस्थान प्रांगण)",
+   "junction_id": 49
+  },
+  {
+   "key": "weh_andheri",
+   "landmark": "weh_andheri",
+   "at": [
+    19.116,
+    72.8552
+   ],
+   "name": "Andheri (Western Express Highway, Andheri–Kurla Road)",
+   "name_mr": "अंधेरी (पश्चिम द्रुतगती महामार्ग, अंधेरी–कुर्ला मार्ग)",
+   "osm_node_id": 3878413319,
+   "evidence": "OSM node pinned in the pack (the crossing of the roads named)",
+   "junction_id": 50
+  },
+  {
+   "key": "jvlr_weh",
+   "at": [
+    19.1395,
+    72.8555
+   ],
+   "name": "Jogeshwari (WEH – JVLR junction)",
+   "name_mr": "जोगेश्वरी (प. द्रुतगती महामार्ग – जेव्हीएलआर जंक्शन)",
+   "osm_node_id": 2250992787,
+   "evidence": "OSM node pinned in the pack (the crossing of the roads named)",
+   "junction_id": 51
+  },
+  {
+   "key": "goregaon_weh",
+   "at": [
+    19.165,
+    72.8584
+   ],
+   "roads": [
+    "Western Express|Aarey Flyover"
+   ],
+   "max_m": 200,
+   "name": "Goregaon (Western Express Highway, Aarey)",
+   "name_mr": "गोरेगाव (पश्चिम द्रुतगती महामार्ग, आरे)",
+   "junction_id": 52
+  },
+  {
+   "key": "borivali_weh",
+   "landmark": "borivali",
+   "at": [
+    19.229,
+    72.865
+   ],
+   "roads": [
+    "Western Express"
+   ],
+   "max_m": 700,
+   "name": "Borivali (Western Express Highway)",
+   "name_mr": "बोरिवली (पश्चिम द्रुतगती महामार्ग)",
+   "junction_id": 53
+  },
+  {
+   "key": "saki_naka",
+   "at": [
+    19.1037,
+    72.8875
+   ],
+   "roads": [
+    "Mathuradas|Andheri Kurla",
+    "Saki Vihar|Baji Pasalkar"
+   ],
+   "max_m": 200,
+   "name": "Saki Naka (Andheri–Kurla Road)",
+   "name_mr": "साकीनाका (अंधेरी–कुर्ला मार्ग)",
+   "junction_id": 54
+  },
+  {
+   "key": "powai",
+   "landmark": "powai",
+   "at": [
+    19.1262,
+    72.8935
+   ],
+   "roads": [
+    "Jogeshwari|JVLR|L and T|Adi Sank",
+    "Saki Vihar|Baji Pasalkar"
+   ],
+   "max_m": 300,
+   "name": "Powai (JVLR, Saki Vihar Road)",
+   "name_mr": "पवई (जेव्हीएलआर, साकी विहार मार्ग)",
+   "junction_id": 55
+  },
+  {
+   "key": "gandhinagar",
+   "at": [
+    19.1255,
+    72.9235
+   ],
+   "roads": [
+    "Lal Bahadur",
+    "Jogeshwari|JVLR|Gandhinagar"
+   ],
+   "max_m": 300,
+   "name": "Gandhinagar (LBS Marg – JVLR, Powai)",
+   "name_mr": "गांधीनगर (एलबीएस मार्ग – जेव्हीएलआर, पवई)",
+   "junction_id": 56
+  },
+  {
+   "key": "vikhroli_eeh",
+   "at": [
+    19.1245,
+    72.9375
+   ],
+   "roads": [
+    "Eastern Express",
+    "Jogeshwari|JVLR"
+   ],
+   "max_m": 400,
+   "name": "Vikhroli (EEH – JVLR junction)",
+   "name_mr": "विक्रोळी (पू. द्रुतगती महामार्ग – जेव्हीएलआर जंक्शन)",
+   "junction_id": 57
+  },
+  {
+   "key": "kamani",
+   "at": [
+    19.0856,
+    72.8809
+   ],
+   "roads": [
+    "Lal Bahadur|LBS",
+    "Mathuradas|Andheri Kurla"
+   ],
+   "max_m": 200,
+   "name": "Kurla (LBS Marg, Kamani)",
+   "name_mr": "कुर्ला (एलबीएस मार्ग, कमानी)",
+   "junction_id": 58
+  },
+  {
+   "key": "kurla",
+   "landmark": "kurla",
+   "at": [
+    19.07076,
+    72.87536
+   ],
+   "name": "Kurla (LBS Marg, BKC Road)",
+   "name_mr": "कुर्ला (एलबीएस मार्ग, बीकेसी मार्ग)",
+   "osm_node_id": 2622177275,
+   "evidence": "OSM node pinned in the pack (the crossing of the roads named)",
+   "junction_id": 59
+  },
+  {
+   "key": "sclr_ramp",
+   "at": [
+    19.07608,
+    72.87439
+   ],
+   "name": "Kurla West (SCLR, Kaustubh Rane flyover)",
+   "name_mr": "कुर्ला पश्चिम (एससीएलआर, कौस्तुभ राणे उड्डाणपूल)",
+   "osm_node_id": 2804548109,
+   "evidence": "OSM node pinned in the pack (the crossing of the roads named)",
+   "junction_id": 60
+  },
+  {
+   "key": "kurla_sclr",
+   "at": [
+    19.07611,
+    72.87745
+   ],
+   "name": "Kurla (LBS Marg, SCLR)",
+   "name_mr": "कुर्ला (एलबीएस मार्ग, सांताक्रूझ–चेंबूर जोड रस्ता)",
+   "osm_node_id": 2622177290,
+   "evidence": "OSM node pinned in the pack (the crossing of the roads named)",
+   "junction_id": 61
+  },
+  {
+   "key": "ghatkopar_lbs",
+   "at": [
+    19.0935,
+    72.9
+   ],
+   "roads": [
+    "Lal Bahadur",
+    "Ghatkopar|Andheri Link"
+   ],
+   "max_m": 300,
+   "name": "Ghatkopar West (LBS Marg)",
+   "name_mr": "घाटकोपर पश्चिम (एलबीएस मार्ग)",
+   "junction_id": 62
+  },
+  {
+   "key": "lbs_fork",
+   "at": [
+    19.0535,
+    72.8677
+   ],
+   "roads": [
+    "Lal Bahadur"
+   ],
+   "max_m": 200,
+   "name": "Sion (LBS Marg – Eastern Express Highway fork)",
+   "name_mr": "सायन (एलबीएस मार्ग – पू. द्रुतगती महामार्ग फाटा)",
+   "junction_id": 63
+  },
+  {
+   "key": "priyadarshini",
+   "at": [
+    19.0545,
+    72.893
+   ],
+   "roads": [
+    "Eastern Express|C S M T Kurla",
+    "Sion Panvel|Sion-Panvel"
+   ],
+   "max_m": 400,
+   "name": "Priyadarshini (EEH – Sion–Panvel Highway)",
+   "name_mr": "प्रियदर्शिनी (पू. द्रुतगती महामार्ग – सायन–पनवेल महामार्ग)",
+   "junction_id": 64
+  },
+  {
+   "key": "amar_mahal",
+   "at": [
+    19.066,
+    72.8995
+   ],
+   "roads": [
+    "Eastern Express|Amar Mahal",
+    "Santa Cruz|SCLR|Ghatkopar Mahul|Chemburkar"
+   ],
+   "max_m": 300,
+   "name": "Amar Mahal junction (EEH, SCLR)",
+   "name_mr": "अमर महल जंक्शन (पू. द्रुतगती महामार्ग, एससीएलआर)",
+   "junction_id": 65
+  },
+  {
+   "key": "chheda_nagar",
+   "at": [
+    19.075,
+    72.9125
+   ],
+   "roads": [
+    "Eastern Express|Kamraj",
+    "Mankhurd - EEH|Eastern Freeway"
+   ],
+   "max_m": 400,
+   "name": "Chheda Nagar (EEH, Eastern Freeway link)",
+   "name_mr": "छेडा नगर (पू. द्रुतगती महामार्ग, पूर्व मुक्त मार्ग जोड)",
+   "junction_id": 66
+  },
+  {
+   "key": "ghatkopar_eeh",
+   "at": [
+    19.0845,
+    72.9205
+   ],
+   "name": "Ghatkopar (Eastern Express Highway)",
+   "name_mr": "घाटकोपर (पूर्व द्रुतगती महामार्ग)",
+   "osm_node_id": 2264152068,
+   "evidence": "OSM node pinned in the pack (the crossing of the roads named)",
+   "junction_id": 67
+  },
+  {
+   "key": "chembur",
+   "at": [
+    19.0505,
+    72.901
+   ],
+   "roads": [
+    "Sion Panvel|Sion-Panvel"
+   ],
+   "max_m": 500,
+   "name": "Chembur (Sion–Panvel Highway)",
+   "name_mr": "चेंबूर (सायन–पनवेल महामार्ग)",
+   "junction_id": 68
+  },
+  {
+   "key": "mankhurd",
+   "at": [
+    19.0515,
+    72.9365
+   ],
+   "roads": [
+    "Sion Panvel|Mankhurd Flyover|Sion-Panvel",
+    "Ghatkopar - Mankhurd|GMLR"
+   ],
+   "max_m": 400,
+   "name": "Mankhurd (Sion–Panvel Highway, GMLR)",
+   "name_mr": "मानखुर्द (सायन–पनवेल महामार्ग, जीएमएलआर)",
+   "junction_id": 69
+  },
+  {
+   "key": "chembur_ef",
+   "at": [
+    19.063,
+    72.915
+   ],
+   "roads": [
+    "Eastern Freeway",
+    "Ghatkopar - Mankhurd|Mankhurd - EEH|GMLR"
+   ],
+   "max_m": 400,
+   "name": "Eastern Freeway north end (Chembur, GMLR)",
+   "name_mr": "पूर्व मुक्त मार्ग उत्तर टोक (चेंबूर, जीएमएलआर)",
+   "junction_id": 70
+  },
+  {
+   "key": "orange_gate",
+   "at": [
+    18.9581,
+    72.8428
+   ],
+   "roads": [
+    "Eastern Freeway",
+    "Mello|Rafi|Barrister|Nath Pai"
+   ],
+   "max_m": 300,
+   "name": "Eastern Freeway south end (P D'Mello Road, Orange Gate)",
+   "name_mr": "पूर्व मुक्त मार्ग दक्षिण टोक (पी. डिमेलो मार्ग, ऑरेंज गेट)",
+   "junction_id": 71
+  },
+  {
+   "key": "atal_setu",
+   "landmark": "atal_setu",
+   "at": [
+    18.9955,
+    72.856
+   ],
+   "roads": [
+    "Eastern Freeway",
+    "MTHL"
+   ],
+   "max_m": 600,
+   "name": "Atal Setu interchange (Eastern Freeway, Sewri)",
+   "name_mr": "अटल सेतू आंतरबदल (पूर्व मुक्त मार्ग, शिवडी)",
+   "junction_id": 72
+  }
+ ],
+ "segments": [
+  {
+   "segment_id": 1001,
+   "road_name": "Marine Drive",
+   "from": "mantralaya",
+   "to": "churchgate_md",
+   "follow": "Marine Drive|Madame Cama|Netaji Subhash",
+   "oneway": false
+  },
+  {
+   "segment_id": 1002,
+   "road_name": "Marine Drive",
+   "from": "churchgate_md",
+   "to": "marine_lines",
+   "follow": "Marine Drive|Netaji Subhash",
+   "oneway": false
+  },
+  {
+   "segment_id": 1003,
+   "road_name": "Marine Drive",
+   "from": "marine_lines",
+   "to": "girgaon_chowpatty",
+   "follow": "Marine Drive|Netaji Subhash",
+   "oneway": false
+  },
+  {
+   "segment_id": 1004,
+   "road_name": "Veer Nariman Road",
+   "from": "churchgate_md",
+   "to": "churchgate",
+   "follow": "Veer Nariman",
+   "oneway": false
+  },
+  {
+   "segment_id": 1005,
+   "road_name": "Veer Nariman Road - D N Road",
+   "from": "churchgate",
+   "to": "csmt",
+   "follow": "Veer Nariman|Dadabhai Naoroji|Hutatma|Mahatma Gandhi",
+   "oneway": false,
+   "name_note": "OSM names the stretch past Hutatma Chowk and Flora Fountain Dr Dadabhai Naoroji Road: this connector is Veer Nariman Road then D N Road to CSMT"
+  },
+  {
+   "segment_id": 1006,
+   "road_name": "Mumbai Coastal Road (northbound)",
+   "from": "marine_lines",
+   "to": "sealink_worli_n",
+   "follow": "Coastal",
+   "oneway": true,
+   "min_class": "motorway"
+  },
+  {
+   "segment_id": 1007,
+   "road_name": "Mumbai Coastal Road (southbound)",
+   "from": "sealink_worli_s",
+   "to": "marine_lines",
+   "follow": "Coastal",
+   "oneway": true,
+   "min_class": "motorway"
+  },
+  {
+   "segment_id": 1008,
+   "road_name": "Bandra-Worli Sea Link (northbound)",
+   "from": "sealink_worli_n",
+   "to": "sealink_bandra_n",
+   "follow": "Sea Link",
+   "oneway": true,
+   "min_class": "motorway"
+  },
+  {
+   "segment_id": 1009,
+   "road_name": "Bandra-Worli Sea Link (southbound)",
+   "from": "sealink_bandra_s",
+   "to": "sealink_worli_s",
+   "follow": "Sea Link|Western Express",
+   "oneway": true,
+   "min_class": "motorway"
+  },
+  {
+   "segment_id": 1010,
+   "road_name": "Sea Link Worli exit ramp",
+   "from": "sealink_worli_s",
+   "to": "worli_seaface",
+   "follow": "Sea Link|Khan Abdul",
+   "oneway": true
+  },
+  {
+   "segment_id": 1011,
+   "road_name": "Sea Link approach (northbound, Western Freeway)",
+   "from": "sealink_bandra_n",
+   "to": "bwsl_merge",
+   "follow": "Western Express|Sea Link|Western Freeway",
+   "oneway": true,
+   "name_note": "OSM names the Bandra landing of the Sea Link Western Express Highway, Western Freeway and Bandra Worli Sea Link Flyover: one approach carriageway to the Western Express Highway"
+  },
+  {
+   "segment_id": 1012,
+   "road_name": "Sea Link southbound approach ramp",
+   "from": "mahim_causeway",
+   "to": "sealink_bandra_s",
+   "follow": "Western Express|Sea Link|Western Freeway",
+   "oneway": true,
+   "name_note": "OSM leaves the SV Road ramp onto the Sea Link unnamed (motorway_link) and names the landing Western Express Highway"
+  },
+  {
+   "segment_id": 1013,
+   "road_name": "Western Express Highway",
+   "from": "bwsl_merge",
+   "to": "kalanagar",
+   "follow": "Western Express|Kalanagar",
+   "oneway": false,
+   "name_note": "OSM names the stretch past Kalanagar Kalanagar Flyover and leaves the Vakola service carriageway unnamed"
+  },
+  {
+   "segment_id": 1014,
+   "road_name": "Western Express Highway",
+   "from": "kalanagar",
+   "to": "vakola",
+   "follow": "Western Express|Kalina-Vakola",
+   "oneway": false,
+   "name_note": "OSM names the stretch past Kalanagar Kalanagar Flyover and leaves the Vakola service carriageway unnamed"
+  },
+  {
+   "segment_id": 1015,
+   "road_name": "Western Express Highway",
+   "from": "vakola",
+   "to": "airport_weh",
+   "follow": "Western Express|Airport Flyover",
+   "oneway": false,
+   "name_note": "OSM names the stretch past Kalanagar Kalanagar Flyover and leaves the Vakola service carriageway unnamed"
+  },
+  {
+   "segment_id": 1016,
+   "road_name": "Western Express Highway",
+   "from": "airport_weh",
+   "to": "weh_andheri",
+   "follow": "Western Express|Andheri Flyover",
+   "oneway": false,
+   "name_note": "OSM names the stretch past Kalanagar Kalanagar Flyover and leaves the Vakola service carriageway unnamed"
+  },
+  {
+   "segment_id": 1017,
+   "road_name": "Western Express Highway",
+   "from": "weh_andheri",
+   "to": "jvlr_weh",
+   "follow": "Western Express|Andheri Flyover",
+   "oneway": false,
+   "name_note": "OSM names the stretch past Kalanagar Kalanagar Flyover and leaves the Vakola service carriageway unnamed"
+  },
+  {
+   "segment_id": 1018,
+   "road_name": "Western Express Highway",
+   "from": "jvlr_weh",
+   "to": "goregaon_weh",
+   "follow": "Western Express|Aarey Flyover",
+   "oneway": false,
+   "name_note": "OSM names the stretch past Kalanagar Kalanagar Flyover and leaves the Vakola service carriageway unnamed"
+  },
+  {
+   "segment_id": 1019,
+   "road_name": "Western Express Highway",
+   "from": "goregaon_weh",
+   "to": "borivali_weh",
+   "follow": "Western Express|Mahindra|Flyover",
+   "oneway": false,
+   "name_note": "OSM names the stretch past Kalanagar Kalanagar Flyover and leaves the Vakola service carriageway unnamed"
+  },
+  {
+   "segment_id": 1020,
+   "road_name": "Sahar Elevated Road",
+   "from": "airport_weh",
+   "to": "airport_t2",
+   "follow": "Sahar Elevated",
+   "oneway": false
+  },
+  {
+   "segment_id": 1021,
+   "road_name": "Mahim Causeway",
+   "from": "mahim",
+   "to": "mahim_causeway",
+   "follow": "Mahim|Swami Vivekanand|Lady Jam|Causeway",
+   "oneway": false,
+   "name_note": "OSM names most of this Lady Jamshedji Road; the causeway itself (Mahim Causeway) is the short creek crossing at its north end"
+  },
+  {
+   "segment_id": 1022,
+   "road_name": "Swami Vivekanand Road",
+   "from": "mahim_causeway",
+   "to": "bandra_sv",
+   "follow": "Swami Vivekanand",
+   "oneway": false
+  },
+  {
+   "segment_id": 1023,
+   "road_name": "Swami Vivekanand Road",
+   "from": "bandra_sv",
+   "to": "santacruz_sv",
+   "follow": "Swami Vivekanand",
+   "oneway": false
+  },
+  {
+   "segment_id": 1024,
+   "road_name": "Swami Vivekanand Road",
+   "from": "santacruz_sv",
+   "to": "santacruz_milan",
+   "follow": "Swami Vivekanand",
+   "oneway": false
+  },
+  {
+   "segment_id": 1025,
+   "road_name": "Swami Vivekanand Road",
+   "from": "santacruz_milan",
+   "to": "vileparle_sv",
+   "follow": "Swami Vivekanand",
+   "oneway": false
+  },
+  {
+   "segment_id": 1026,
+   "road_name": "Swami Vivekanand Road",
+   "from": "vileparle_sv",
+   "to": "andheri_sv",
+   "follow": "Swami Vivekanand",
+   "oneway": false
+  },
+  {
+   "segment_id": 1027,
+   "road_name": "P V Avsare Marg (Milan Subway road)",
+   "from": "santacruz_milan",
+   "to": "milan_subway",
+   "follow": "Milan|Avsare|Avasare",
+   "oneway": false,
+   "name_note": "OSM spells the road P V Avsare Marg and PV Avasare Marg; it ends at the Milan Subway under the Western Railway"
+  },
+  {
+   "segment_id": 1028,
+   "road_name": "G K Gokhale Bridge",
+   "from": "andheri_sv",
+   "to": "gokhale_east",
+   "follow": "Gokhale|Phadke|Sahar",
+   "oneway": false
+  },
+  {
+   "segment_id": 1029,
+   "road_name": "Teli Galli - N S Phadke Marg",
+   "from": "gokhale_east",
+   "to": "andheri_east",
+   "follow": "Teli|Sahar|Phadke|Radahakrishnan",
+   "oneway": false,
+   "name_note": "N S Phadke Marg from the Gokhale Bridge landing, then Teli Gali to the Andheri-Kurla Road"
+  },
+  {
+   "segment_id": 1030,
+   "road_name": "Sahar Road (Andheri Subway approach)",
+   "from": "gokhale_east",
+   "to": "andheri_subway",
+   "follow": "Sahar Road",
+   "oneway": false
+  },
+  {
+   "segment_id": 1031,
+   "road_name": "Andheri-Kurla Road",
+   "from": "andheri_east",
+   "to": "weh_andheri",
+   "follow": "Mathuradas|Andheri Kurla",
+   "oneway": false,
+   "name_note": "OSM names the Andheri-Kurla Road Mathuradas Vasanji Road (Andheri Kurla Road)"
+  },
+  {
+   "segment_id": 1032,
+   "road_name": "Andheri-Kurla Road",
+   "from": "weh_andheri",
+   "to": "saki_naka",
+   "follow": "Mathuradas|Andheri Kurla",
+   "oneway": false,
+   "name_note": "OSM names the Andheri-Kurla Road Mathuradas Vasanji Road (Andheri Kurla Road)"
+  },
+  {
+   "segment_id": 1033,
+   "road_name": "Andheri-Kurla Road",
+   "from": "saki_naka",
+   "to": "kamani",
+   "follow": "Mathuradas|Andheri Kurla",
+   "oneway": false,
+   "name_note": "OSM names the Andheri-Kurla Road Mathuradas Vasanji Road (Andheri Kurla Road)"
+  },
+  {
+   "segment_id": 1034,
+   "road_name": "Saki Vihar Road",
+   "from": "saki_naka",
+   "to": "powai",
+   "follow": "Saki Vihar|Baji Pasalkar",
+   "oneway": false,
+   "name_note": "OSM names Saki Vihar Road Baji Pasalkar Marg (Saki Vihar Road)"
+  },
+  {
+   "segment_id": 1035,
+   "road_name": "Jogeshwari-Vikhroli Link Road",
+   "from": "jvlr_weh",
+   "to": "powai",
+   "follow": "Jogeshwari|JVLR|Sant Gadge|Adi Sank|L and T",
+   "oneway": false
+  },
+  {
+   "segment_id": 1036,
+   "road_name": "Jogeshwari-Vikhroli Link Road",
+   "from": "powai",
+   "to": "gandhinagar",
+   "follow": "Jogeshwari|JVLR|Adi Sank|L and T|Gandhinagar",
+   "oneway": false
+  },
+  {
+   "segment_id": 1037,
+   "road_name": "Jogeshwari-Vikhroli Link Road",
+   "from": "gandhinagar",
+   "to": "vikhroli_eeh",
+   "follow": "Jogeshwari|JVLR|Gandhinagar|Vikroli",
+   "oneway": false
+  },
+  {
+   "segment_id": 1038,
+   "road_name": "Lal Bahadur Shastri Marg",
+   "from": "lbs_fork",
+   "to": "kurla",
+   "follow": "Lal Bahadur|LBS",
+   "oneway": false,
+   "name_note": "OSM names the LBS Marg stretch north of Kurla Magan Nathuram Road"
+  },
+  {
+   "segment_id": 1039,
+   "road_name": "Lal Bahadur Shastri Marg",
+   "from": "kurla",
+   "to": "kurla_sclr",
+   "follow": "Lal Bahadur|LBS",
+   "oneway": false,
+   "name_note": "OSM names the LBS Marg stretch north of Kurla Magan Nathuram Road"
+  },
+  {
+   "segment_id": 1040,
+   "road_name": "Lal Bahadur Shastri Marg",
+   "from": "kurla_sclr",
+   "to": "kamani",
+   "follow": "Lal Bahadur|LBS",
+   "oneway": false,
+   "name_note": "OSM names the LBS Marg stretch north of Kurla Magan Nathuram Road"
+  },
+  {
+   "segment_id": 1041,
+   "road_name": "Lal Bahadur Shastri Marg",
+   "from": "kamani",
+   "to": "ghatkopar_lbs",
+   "follow": "Lal Bahadur|LBS",
+   "oneway": false,
+   "name_note": "OSM names the LBS Marg stretch north of Kurla Magan Nathuram Road"
+  },
+  {
+   "segment_id": 1042,
+   "road_name": "Lal Bahadur Shastri Marg",
+   "from": "ghatkopar_lbs",
+   "to": "gandhinagar",
+   "follow": "Lal Bahadur|LBS",
+   "oneway": false,
+   "name_note": "OSM names the LBS Marg stretch north of Kurla Magan Nathuram Road"
+  },
+  {
+   "segment_id": 1043,
+   "road_name": "Eastern Express Highway (Sion)",
+   "from": "sion_circle",
+   "to": "lbs_fork",
+   "follow": "Sion Panvel|Lal Bahadur|Sion Flyover|NH ?48|Eastern Express",
+   "oneway": false,
+   "name_note": "OSM names this Sion Circle, Sion Panvel Highway and Sion Bandra Link Road: the NH48 carriageway from Sion Circle to the LBS Marg fork"
+  },
+  {
+   "segment_id": 1044,
+   "road_name": "Eastern Express Highway",
+   "from": "lbs_fork",
+   "to": "priyadarshini",
+   "follow": "Eastern Express|C S M T Kurla|NH ?48",
+   "oneway": false,
+   "name_note": "OSM names the NH48 carriageway between Sion and Chembur Sion Panvel Highway and Annabhau Sathe Flyover, and the Chembur stretch Ramakrishna Chemburkar Marg and Chembur Flyover: the Eastern Express Highway corridor"
+  },
+  {
+   "segment_id": 1045,
+   "road_name": "Eastern Express Highway",
+   "from": "priyadarshini",
+   "to": "amar_mahal",
+   "follow": "Eastern Express|Amar Mahal|NH ?48",
+   "oneway": false,
+   "name_note": "OSM names the NH48 carriageway between Sion and Chembur Sion Panvel Highway and Annabhau Sathe Flyover, and the Chembur stretch Ramakrishna Chemburkar Marg and Chembur Flyover: the Eastern Express Highway corridor"
+  },
+  {
+   "segment_id": 1046,
+   "road_name": "Eastern Express Highway",
+   "from": "amar_mahal",
+   "to": "chheda_nagar",
+   "follow": "Eastern Express|Kamraj|NH ?48",
+   "oneway": false,
+   "name_note": "OSM names the NH48 carriageway between Sion and Chembur Sion Panvel Highway and Annabhau Sathe Flyover, and the Chembur stretch Ramakrishna Chemburkar Marg and Chembur Flyover: the Eastern Express Highway corridor"
+  },
+  {
+   "segment_id": 1047,
+   "road_name": "Eastern Express Highway",
+   "from": "chheda_nagar",
+   "to": "ghatkopar_eeh",
+   "follow": "Eastern Express|Ghatkopar Flyover|NH ?48",
+   "oneway": false,
+   "name_note": "OSM names the NH48 carriageway between Sion and Chembur Sion Panvel Highway and Annabhau Sathe Flyover, and the Chembur stretch Ramakrishna Chemburkar Marg and Chembur Flyover: the Eastern Express Highway corridor"
+  },
+  {
+   "segment_id": 1048,
+   "road_name": "Eastern Express Highway",
+   "from": "ghatkopar_eeh",
+   "to": "vikhroli_eeh",
+   "follow": "Eastern Express|Vikhroli Flyover|NH ?48",
+   "oneway": false,
+   "name_note": "OSM names the NH48 carriageway between Sion and Chembur Sion Panvel Highway and Annabhau Sathe Flyover, and the Chembur stretch Ramakrishna Chemburkar Marg and Chembur Flyover: the Eastern Express Highway corridor"
+  },
+  {
+   "segment_id": 1049,
+   "road_name": "Santacruz-Chembur Link Road",
+   "from": "vakola",
+   "to": "sclr_ramp",
+   "follow": "Santa Cruz|SCLR|Chembur Link|Kalina|Vidyanagari|Hans Bhugra|CST",
+   "oneway": false
+  },
+  {
+   "segment_id": 1050,
+   "road_name": "Santacruz-Chembur Link Road",
+   "from": "sclr_ramp",
+   "to": "amar_mahal",
+   "follow": "Santa Cruz|SCLR|Chembur Link|Rane",
+   "oneway": false
+  },
+  {
+   "segment_id": 1051,
+   "road_name": "Santacruz-Chembur Link Road (Kurla ramp)",
+   "from": "sclr_ramp",
+   "to": "kurla_sclr",
+   "follow": "Santa Cruz|SCLR|Chembur Link",
+   "oneway": false
+  },
+  {
+   "segment_id": 1052,
+   "road_name": "Bandra Kurla Complex Road",
+   "from": "kalanagar",
+   "to": "bkc",
+   "follow": "Bandra Kurla|BKC|Kalanagar",
+   "oneway": false
+  },
+  {
+   "segment_id": 1053,
+   "road_name": "Bandra Kurla Complex Road",
+   "from": "bkc",
+   "to": "kurla",
+   "follow": "Bandra Kurla|BKC",
+   "oneway": false
+  },
+  {
+   "segment_id": 1054,
+   "road_name": "Sion-Panvel Highway",
+   "from": "priyadarshini",
+   "to": "chembur",
+   "follow": "Sion Panvel|Sion-Panvel",
+   "oneway": false
+  },
+  {
+   "segment_id": 1055,
+   "road_name": "Sion-Panvel Highway",
+   "from": "chembur",
+   "to": "mankhurd",
+   "follow": "Sion Panvel|Sion-Panvel|Mankhurd Flyover",
+   "oneway": false
+  },
+  {
+   "segment_id": 1056,
+   "road_name": "Ghatkopar-Mankhurd Link Road",
+   "from": "mankhurd",
+   "to": "chembur_ef",
+   "follow": "Ghatkopar - Mankhurd|GMLR",
+   "oneway": false
+  },
+  {
+   "segment_id": 1057,
+   "road_name": "Mankhurd - EEH link road",
+   "from": "chembur_ef",
+   "to": "chheda_nagar",
+   "follow": "Mankhurd - EEH|Eastern Freeway|Ghatkopar - Mankhurd",
+   "oneway": false
+  },
+  {
+   "segment_id": 1058,
+   "road_name": "Eastern Freeway",
+   "from": "orange_gate",
+   "to": "atal_setu",
+   "follow": "Eastern Freeway",
+   "oneway": false,
+   "min_class": "motorway"
+  },
+  {
+   "segment_id": 1059,
+   "road_name": "Eastern Freeway",
+   "from": "atal_setu",
+   "to": "chembur_ef",
+   "follow": "Eastern Freeway",
+   "oneway": false,
+   "min_class": "motorway"
+  },
+  {
+   "segment_id": 1060,
+   "road_name": "P D Mello Road",
+   "from": "csmt",
+   "to": "orange_gate",
+   "follow": "Mello|Shahid Bhagat|Frere|Wadi Bunder|Rafi|Walchand|Mahapalika",
+   "oneway": false
+  },
+  {
+   "segment_id": 1061,
+   "road_name": "D N Road - JJ Flyover (Mohammed Ali Road)",
+   "from": "csmt",
+   "to": "jj",
+   "follow": "J\\.? ?J\\.? Flyover|Mohammed Ali|Dadabhai Naoroji|Lokmanya Tilak|Jeejeebhoy|Carnac|Abdul Rehman",
+   "oneway": false,
+   "name_note": "OSM names the elevated road over Mohammed Ali Road J. J. Flyover"
+  },
+  {
+   "segment_id": 1062,
+   "road_name": "Sir JJ Road - Dr Ambedkar Road",
+   "from": "jj",
+   "to": "byculla",
+   "follow": "Jeejeebhoy|Ambedkar|J\\.? ?J",
+   "oneway": false,
+   "name_note": "OSM names Sir JJ Road Sir Jamshetji Jeejeebhoy Road and Dr Ambedkar Road Dr Babasaheb Ambedkar Marg"
+  },
+  {
+   "segment_id": 1063,
+   "road_name": "Dr Ambedkar Road",
+   "from": "byculla",
+   "to": "lalbaug",
+   "follow": "Ambedkar|Lalbaug",
+   "oneway": false,
+   "name_note": "OSM names Dr Ambedkar Road north of Kings Circle Laxmibai Kelkar Marg"
+  },
+  {
+   "segment_id": 1064,
+   "road_name": "Dr Ambedkar Road",
+   "from": "lalbaug",
+   "to": "parel",
+   "follow": "Ambedkar|Lalbaug",
+   "oneway": false,
+   "name_note": "OSM names Dr Ambedkar Road north of Kings Circle Laxmibai Kelkar Marg"
+  },
+  {
+   "segment_id": 1065,
+   "road_name": "Dr Ambedkar Road",
+   "from": "parel",
+   "to": "hindmata",
+   "follow": "Ambedkar|Hindmata",
+   "oneway": false,
+   "name_note": "OSM names Dr Ambedkar Road north of Kings Circle Laxmibai Kelkar Marg"
+  },
+  {
+   "segment_id": 1066,
+   "road_name": "Dr Ambedkar Road (Hindmata - Dadar TT)",
+   "from": "hindmata",
+   "to": "dadar_tt",
+   "follow": "Ambedkar|Hindmata|Dadar TT",
+   "oneway": false
+  },
+  {
+   "segment_id": 1067,
+   "road_name": "Dr Ambedkar Road",
+   "from": "dadar_tt",
+   "to": "kings_circle",
+   "follow": "Ambedkar|Khodadad|King|Laxmibai",
+   "oneway": false,
+   "name_note": "OSM names Dr Ambedkar Road north of Kings Circle Laxmibai Kelkar Marg"
+  },
+  {
+   "segment_id": 1068,
+   "road_name": "Dr Ambedkar Road",
+   "from": "kings_circle",
+   "to": "sion_hospital",
+   "follow": "Ambedkar|King|Laxmibai|Sion Hospital",
+   "oneway": false,
+   "name_note": "OSM names Dr Ambedkar Road north of Kings Circle Laxmibai Kelkar Marg"
+  },
+  {
+   "segment_id": 1069,
+   "road_name": "Dr Ambedkar Road",
+   "from": "sion_hospital",
+   "to": "sion_circle",
+   "follow": "Ambedkar|Laxmibai|Sion",
+   "oneway": false,
+   "name_note": "OSM names Dr Ambedkar Road north of Kings Circle Laxmibai Kelkar Marg"
+  },
+  {
+   "segment_id": 1070,
+   "road_name": "Dr E Borges Road",
+   "from": "hindmata",
+   "to": "kem",
+   "follow": "Borges|Donde|Jerbai|Wadia",
+   "oneway": false,
+   "name_note": "the route to KEM Hospital runs on Acharya Donde Marg past Wadia Chowk (OSM names)"
+  },
+  {
+   "segment_id": 1071,
+   "road_name": "Tilak Bridge",
+   "from": "dadar_west",
+   "to": "dadar_tt",
+   "follow": "Tilak",
+   "oneway": false
+  },
+  {
+   "segment_id": 1072,
+   "road_name": "Senapati Bapat Marg",
+   "from": "lower_parel",
+   "to": "dadar_west",
+   "follow": "Senapati|Tulsi",
+   "oneway": false
+  },
+  {
+   "segment_id": 1073,
+   "road_name": "Lady Jamshetji Road - Senapati Bapat Marg",
+   "from": "dadar_west",
+   "to": "mahim",
+   "follow": "Lady Jam|Senapati|Gokhale|Ranade|Savarkar",
+   "oneway": false,
+   "name_note": "Ranade Road and Gokhale Road from Dadar West, then Lady Jamshedji Road to Mahim (OSM names)"
+  },
+  {
+   "segment_id": 1074,
+   "road_name": "Pandurang Budhkar Marg",
+   "from": "worli_naka",
+   "to": "lower_parel",
+   "follow": "Budhkar|Ganpatrao|Kadam|Senapati",
+   "oneway": false
+  },
+  {
+   "segment_id": 1075,
+   "road_name": "Dr Annie Besant Road",
+   "from": "haji_ali",
+   "to": "atre_chowk",
+   "follow": "Annie Besant|Lala Lajpat",
+   "oneway": false
+  },
+  {
+   "segment_id": 1076,
+   "road_name": "Dr Annie Besant Road",
+   "from": "atre_chowk",
+   "to": "worli_naka",
+   "follow": "Annie Besant",
+   "oneway": false
+  },
+  {
+   "segment_id": 1077,
+   "road_name": "Dr Annie Besant Road - Khan Abdul Gaffar Khan Road",
+   "from": "worli_naka",
+   "to": "worli_seaface",
+   "follow": "Annie Besant|Khan Abdul|Thadani|Worli",
+   "oneway": false,
+   "name_note": "Annie Besant Road, Dr R G Thadani Marg and Khan Abdul Gaffar Khan Marg to the Sea Link toll plaza (OSM names)"
+  },
+  {
+   "segment_id": 1078,
+   "road_name": "Keshavrao Khadye Marg",
+   "from": "jacob_circle",
+   "to": "byculla",
+   "follow": "Keshavrao|Joshi|Mandlik",
+   "oneway": false
+  },
+  {
+   "segment_id": 1079,
+   "road_name": "Sane Guruji Marg (Arthur Road)",
+   "from": "jacob_circle",
+   "to": "lalbaug",
+   "follow": "Sane Guruji|Arthur",
+   "oneway": false
+  },
+  {
+   "segment_id": 1080,
+   "road_name": "Dr A R Nair Road",
+   "from": "jacob_circle",
+   "to": "nair",
+   "follow": "Nair|Bellasis",
+   "oneway": false,
+   "name_note": "OSM names it Dr Anand Rao Nair Marg, reached from Jacob Circle along Sane Guruji Marg"
+  },
+  {
+   "segment_id": 1081,
+   "road_name": "Sir JJ Road - Maulana Azad Road",
+   "from": "jj",
+   "to": "nagpada",
+   "follow": "Jeejeebhoy|J\\.? ?J|Maulana Azad|Dimtimkar|Ripon|Mirza Ghalib|Sankli",
+   "oneway": false,
+   "name_note": "Dimtimkar Road and J Boman Behram Marg from JJ to Nagpada (OSM names)"
+  },
+  {
+   "segment_id": 1082,
+   "road_name": "Maulana Azad Road - Vallabhbhai Patel Road",
+   "from": "nagpada",
+   "to": "opera_house",
+   "follow": "Maulana Azad|Duncan|Vallabhbhai|Patel|Vithalbhai|Girgaon|Raja Ram|Jagannath|Shankarsheth|Sandhurst",
+   "oneway": false
+  },
+  {
+   "segment_id": 1083,
+   "road_name": "Jagannath Shankarsheth Marg",
+   "from": "opera_house",
+   "to": "girgaon_chowpatty",
+   "follow": "Jagannath|Shankarsheth|Marine Drive|Purandare|Chowpatty|Vallabhbhai|Raja Ram",
+   "oneway": false,
+   "name_note": "Jagannath Shankarsheth Marg, then Sardar Vallabhbhai Patel Road over Warerkar Bridge to Girgaon Chowpatty (OSM names)"
+  },
+  {
+   "segment_id": 1084,
+   "road_name": "N S Patkar Marg - Hughes Road",
+   "from": "girgaon_chowpatty",
+   "to": "kemps_corner",
+   "follow": "Patkar|Hughes|Kemps|Babulnath|Purandare|Marine Drive|Vallabhbhai",
+   "oneway": false,
+   "name_note": "OSM spells it N Spatkar Marg / Hughes Road (N Spatkar Marg)"
+  },
+  {
+   "segment_id": 1085,
+   "road_name": "Peddar Road (Dr G Deshmukh Marg)",
+   "from": "kemps_corner",
+   "to": "haji_ali",
+   "follow": "Deshmukh|Peddar|Pedder|Lala Lajpat|Warden|Bhulabhai|Kemps",
+   "oneway": false,
+   "name_note": "OSM names Peddar Road Gopalrao Deshmukh Marg, then Warden Road (Bhula Bhai Desai Marg) to Haji Ali"
+  },
+  {
+   "segment_id": 1086,
+   "road_name": "Walkeshwar Road (Raj Bhavan approach)",
+   "from": "girgaon_chowpatty",
+   "to": "raj_bhavan",
+   "follow": "Walkeshwar|Nepean|Malabar|Dabholkar|Gangadhar|Hire|Raj Bhavan",
+   "oneway": false
+  }
+ ],
+ "cameras": {
+  "overrides": {
+   "csmt": {
+    "approaches": 1,
+    "kind": "cctv"
+   },
+   "girgaon_chowpatty": {
+    "approaches": 1,
+    "kind": "cctv"
+   },
+   "jacob_circle": {
+    "approaches": 1,
+    "kind": "cctv"
+   },
+   "nagpada": {
+    "approaches": 1,
+    "kind": "cctv"
+   },
+   "weh_andheri": {
+    "approaches": 1,
+    "kind": "cctv"
+   },
+   "powai": {
+    "approaches": 1,
+    "kind": "cctv"
+   },
+   "priyadarshini": {
+    "approaches": 1,
+    "kind": "cctv"
+   },
+   "chembur_ef": {
+    "approaches": 1,
+    "kind": "cctv"
+   },
+   "orange_gate": {
+    "approaches": 1,
+    "kind": "cctv"
+   }
+  },
+  "auto": true,
+  "approaches": 2,
+  "note": "Every camera site is MODELLED (real CCTV / ANPR positions are not public): stop-line sites on the two main approaches of each junction OpenStreetMap marks as signalised (EM-Jnn, EM-JnnB), bridge-head sites and watchlist sweep sites. Source 'emulated' in the store.",
+  "extra": [
+   {
+    "camera_id": "EM-BR-SEALINK-W",
+    "kind": "anpr",
+    "mode": "bridge",
+    "segment_id": 1008,
+    "head": "start",
+    "label": "Modelled site Bandra-Worli Sea Link: Worli head, northbound"
+   },
+   {
+    "camera_id": "EM-BR-SEALINK-B",
+    "kind": "anpr",
+    "mode": "bridge",
+    "segment_id": 1009,
+    "head": "start",
+    "label": "Modelled site Bandra-Worli Sea Link: Bandra head, southbound"
+   },
+   {
+    "camera_id": "EM-BR-COASTAL-S",
+    "kind": "anpr",
+    "mode": "bridge",
+    "segment_id": 1006,
+    "head": "start",
+    "label": "Modelled site Mumbai Coastal Road: Marine Drive head, northbound"
+   },
+   {
+    "camera_id": "EM-BR-COASTAL-N",
+    "kind": "anpr",
+    "mode": "bridge",
+    "segment_id": 1007,
+    "head": "start",
+    "label": "Modelled site Mumbai Coastal Road: Worli head, southbound"
+   },
+   {
+    "camera_id": "EM-CAM-01",
+    "kind": "anpr",
+    "mode": "sweep",
+    "segment_id": 1014,
+    "label": "Modelled ANPR sweep site 1: Western Express Highway (Kalanagar - Vakola)"
+   },
+   {
+    "camera_id": "EM-CAM-02",
+    "kind": "anpr",
+    "mode": "sweep",
+    "segment_id": 1015,
+    "label": "Modelled ANPR sweep site 2: Western Express Highway (Vakola - Vile Parle)"
+   },
+   {
+    "camera_id": "EM-CAM-03",
+    "kind": "anpr",
+    "mode": "sweep",
+    "segment_id": 1016,
+    "label": "Modelled ANPR sweep site 3: Western Express Highway (Vile Parle - Andheri)"
+   },
+   {
+    "camera_id": "EM-CAM-04",
+    "kind": "anpr",
+    "mode": "sweep",
+    "segment_id": 1017,
+    "label": "Modelled ANPR sweep site 4: Western Express Highway (Andheri - Jogeshwari)"
+   }
+  ]
+ },
+ "stations": {
+  "source": "osm",
+  "note": "OpenStreetMap objects (police stations, traffic divisions, fire stations, hospitals tagged emergency=yes) at their OSM position; name_mr is OSM name:mr where OSM carries one, else this pack's Marathi name.",
+  "osm": [
+   {
+    "osm_ref": "way/207376649",
+    "name_mr": "आझाद मैदान पोलीस ठाणे"
+   },
+   {
+    "osm_ref": "node/3008501715",
+    "name_mr": "मुंबई पोलीस आयुक्त कार्यालय (क्रॉफर्ड मार्केट)",
+    "name": "Mumbai Police Commissioner's Office (Crawford Market)"
+   },
+   {
+    "osm_ref": "way/1468852699",
+    "name_mr": "कुलाबा वाहतूक विभाग",
+    "agency": "traffic"
+   },
+   {
+    "osm_ref": "way/39834520",
+    "name_mr": "गावदेवी पोलीस ठाणे"
+   },
+   {
+    "osm_ref": "way/48754898",
+    "name_mr": "ताडदेव पोलीस ठाणे"
+   },
+   {
+    "osm_ref": "way/1442619090",
+    "name_mr": "नागपाडा पोलीस ठाणे"
+   },
+   {
+    "osm_ref": "way/829610657",
+    "name_mr": "भायखळा पोलीस ठाणे"
+   },
+   {
+    "osm_ref": "way/353810415",
+    "name_mr": "वरळी पोलीस ठाणे"
+   },
+   {
+    "osm_ref": "way/354066127",
+    "name_mr": "दादर पोलीस ठाणे"
+   },
+   {
+    "osm_ref": "way/135732933",
+    "name_mr": "शिवाजी पार्क पोलीस ठाणे"
+   },
+   {
+    "osm_ref": "way/1381366790",
+    "name_mr": "माहीम वाहतूक विभाग",
+    "agency": "traffic"
+   },
+   {
+    "osm_ref": "node/5057817507",
+    "name_mr": "माटुंगा पोलीस ठाणे"
+   },
+   {
+    "osm_ref": "node/4848773734",
+    "name_mr": "सायन पोलीस ठाणे",
+    "name": "Sion Police Station"
+   },
+   {
+    "osm_ref": "way/1334676842",
+    "name_mr": "वांद्रे पोलीस ठाणे"
+   },
+   {
+    "osm_ref": "way/1149824750",
+    "name_mr": "खेरवाडी पोलीस ठाणे"
+   },
+   {
+    "osm_ref": "node/5506320530",
+    "name_mr": "बीकेसी पोलीस ठाणे"
+   },
+   {
+    "osm_ref": "way/196092411",
+    "name_mr": "सांताक्रूझ पोलीस ठाणे"
+   },
+   {
+    "osm_ref": "way/627802514",
+    "name_mr": "नेहरू नगर (कुर्ला) पोलीस ठाणे",
+    "name": "Nehru Nagar Police Station (Kurla)"
+   },
+   {
+    "osm_ref": "node/2930732807",
+    "name_mr": "टिळक नगर पोलीस ठाणे"
+   },
+   {
+    "osm_ref": "node/3205956099",
+    "name_mr": "चेंबूर पोलीस ठाणे",
+    "name": "Chembur Police Station"
+   },
+   {
+    "osm_ref": "node/3602876220",
+    "name_mr": "विक्रोळी पोलीस ठाणे"
+   },
+   {
+    "osm_ref": "node/985121043",
+    "name_mr": "गोरेगाव (पूर्व) पोलीस ठाणे"
+   },
+   {
+    "osm_ref": "way/312763210",
+    "name_mr": "बोरिवली पोलीस ठाणे"
+   },
+   {
+    "osm_ref": "node/700725781",
+    "name_mr": "भायखळा अग्निशमन केंद्र (मुंबई अग्निशमन दल मुख्यालय)",
+    "name": "Byculla Fire Station (Mumbai Fire Brigade HQ)"
+   },
+   {
+    "osm_ref": "node/2168679530",
+    "name_mr": "फोर्ट अग्निशमन केंद्र",
+    "name": "Fort Fire Station"
+   },
+   {
+    "osm_ref": "way/116072855",
+    "name_mr": "दादर अग्निशमन केंद्र",
+    "name": "Dadar Fire Station"
+   },
+   {
+    "osm_ref": "way/434887905",
+    "name_mr": "वांद्रे अग्निशमन केंद्र",
+    "name": "Bandra Fire Station"
+   },
+   {
+    "osm_ref": "way/1479265653",
+    "name_mr": "अंधेरी अग्निशमन केंद्र"
+   },
+   {
+    "osm_ref": "way/353174234",
+    "name_mr": "कुर्ला अग्निशमन केंद्र",
+    "name": "Kurla Fire Station"
+   },
+   {
+    "osm_ref": "node/2311428475",
+    "name_mr": "चेंबूर अग्निशमन केंद्र"
+   },
+   {
+    "osm_ref": "way/1330412751",
+    "name_mr": "विक्रोळी अग्निशमन केंद्र",
+    "name": "Vikhroli Fire Station"
+   },
+   {
+    "osm_ref": "way/49681498",
+    "name_mr": "लोकमान्य टिळक रुग्णालय (सायन)",
+    "name": "Sion Hospital (Lokmanya Tilak Municipal General Hospital)"
+   },
+   {
+    "osm_ref": "way/31144296",
+    "name_mr": "लीलावती रुग्णालय",
+    "name": "Lilavati Hospital"
+   }
+  ]
+ },
+ "osm_extracts": [
+  {
+   "label": "airport",
+   "note": "the airport's terminal approach roads (Sahar Elevated Road forecourt, T2; highway=service, often unnamed in OSM) between the Western Express Highway and the T2 departure forecourt",
+   "query": "[out:json][timeout:120][bbox:19.090,72.855,19.110,72.885];\nway[\"highway\"~\"^(primary|secondary|tertiary|unclassified|residential|service|road)(_link)?$\"];\nout body geom;\n"
+  },
+  {
+   "label": "subways",
+   "note": "the local roads through the railway subways at Milan (Santacruz) and Andheri, which the waterlogging layer closes (residential / unclassified in OSM)",
+   "query": "[out:json][timeout:120][bbox:19.080,72.835,19.125,72.856];\nway[\"highway\"~\"^(tertiary|unclassified|residential|living_street|road|service)(_link)?$\"];\nout body geom;\n"
+  }
+ ]
+}

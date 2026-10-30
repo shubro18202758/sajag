@@ -1,0 +1,239 @@
+{
+ "label": "SIMULATED",
+ "reference": {
+  "name": "flash-v1.2:per_question",
+  "model": "pplx-decider-flash-v1.2",
+  "requests": 60,
+  "errors": 0,
+  "accuracy_on_labelled": "22/26",
+  "wrong_on_labelled": [
+   {
+    "id": "dss-puja-crowd-park-circus",
+    "question": "coa_strategy",
+    "expected": "aggressive",
+    "got": "standard"
+   },
+   {
+    "id": "dss-unverified-flooding-moulali",
+    "question": "coa_strategy",
+    "expected": "information",
+    "got": "minimal"
+   },
+   {
+    "id": "dss-eden-gardens-egress",
+    "question": "coa_strategy",
+    "expected": "aggressive",
+    "got": "standard"
+   },
+   {
+    "id": "dss-fire-bagbazar",
+    "question": "coa_strategy",
+    "expected": "aggressive",
+    "got": "standard"
+   }
+  ],
+  "low_confidence_gated_share": 0.783,
+  "mean_confidence": {
+   "dss_coa/coa_strategy": 0.4619,
+   "dss_coa/disruption_tolerance": 0.3755,
+   "escort_departure/departure": 0.5259,
+   "escort_incident/action": 0.4529,
+   "post_clearance/restoration_posture": 0.4614,
+   "pre_movement/disruption_tolerance": 0.1918,
+   "pre_movement/route_strategy": 0.6382,
+   "probe/readiness": 0.1511,
+   "probe/reroute": 0.8304,
+   "tool_selection/decision_confidence": 0.1436,
+   "tool_selection/next_tool": 0.93
+  },
+  "wall_ms_p50": 257.2,
+  "wall_ms_p95": 402.8,
+  "server_ms_p50": null,
+  "server_ms_p95": null,
+  "state_tokens_mean": 597.4
+ },
+ "candidates": {
+  "flash-v1.2-http9182:served": {
+   "model": "pplx-decider-flash-v1.2",
+   "runtime": "pplx_decider",
+   "temperature": null,
+   "cold_load_s": null,
+   "first_call_ms": null,
+   "peak_allocated_gib": null,
+   "peak_reserved_gib": null,
+   "rss_gib": null,
+   "rss_peak_gib": null,
+   "after_load": null,
+   "fast_path": null,
+   "requests": 60,
+   "errors": 0,
+   "accuracy_on_labelled": "22/26",
+   "wrong_on_labelled": [
+    {
+     "id": "dss-puja-crowd-park-circus",
+     "question": "coa_strategy",
+     "expected": "aggressive",
+     "got": "standard"
+    },
+    {
+     "id": "dss-unverified-flooding-moulali",
+     "question": "coa_strategy",
+     "expected": "information",
+     "got": "minimal"
+    },
+    {
+     "id": "dss-eden-gardens-egress",
+     "question": "coa_strategy",
+     "expected": "aggressive",
+     "got": "standard"
+    },
+    {
+     "id": "dss-fire-bagbazar",
+     "question": "coa_strategy",
+     "expected": "aggressive",
+     "got": "standard"
+    }
+   ],
+   "low_confidence_gated_share": 0.783,
+   "mean_confidence": {
+    "dss_coa/coa_strategy": 0.4619,
+    "dss_coa/disruption_tolerance": 0.3755,
+    "escort_departure/departure": 0.5259,
+    "escort_incident/action": 0.4529,
+    "post_clearance/restoration_posture": 0.4614,
+    "pre_movement/disruption_tolerance": 0.1918,
+    "pre_movement/route_strategy": 0.6382,
+    "probe/readiness": 0.1511,
+    "probe/reroute": 0.8304,
+    "tool_selection/decision_confidence": 0.1436,
+    "tool_selection/next_tool": 0.93
+   },
+   "wall_ms_p50": 250.8,
+   "wall_ms_p95": 391.8,
+   "server_ms_p50": 249.9,
+   "server_ms_p95": 390.3,
+   "state_tokens_mean": 597.4,
+   "vs_reference": {
+    "by_type": {
+     "choice": {
+      "agree": 1.0,
+      "dp": 0.0,
+      "n": 59
+     },
+     "noul": {
+      "agree": 1.0,
+      "dp": 0.0,
+      "n": 35
+     },
+     "score": {
+      "agree": 1.0,
+      "dp": 0.0,
+      "dvalue": 0.0,
+      "n": 40
+     }
+    },
+    "by_question_set": {
+     "dss_coa/coa_strategy": {
+      "agree": 1.0,
+      "dp": 0.0,
+      "n": 12
+     },
+     "dss_coa/disruption_tolerance": {
+      "agree": 1.0,
+      "dvalue": 0.0,
+      "ref_v": 0.332,
+      "cand_v": 0.332,
+      "n": 12
+     },
+     "dss_coa/urgency": {
+      "agree": 1.0,
+      "dp": 0.0,
+      "ref_p": 0.4797,
+      "cand_p": 0.4797,
+      "n": 12
+     },
+     "escort_departure/departure": {
+      "agree": 1.0,
+      "dp": 0.0,
+      "n": 6
+     },
+     "escort_incident/action": {
+      "agree": 1.0,
+      "dp": 0.0,
+      "n": 8
+     },
+     "escort_incident/urgency": {
+      "agree": 1.0,
+      "dp": 0.0,
+      "ref_p": 0.2322,
+      "cand_p": 0.2322,
+      "n": 8
+     },
+     "post_clearance/restoration_posture": {
+      "agree": 1.0,
+      "dp": 0.0,
+      "n": 5
+     },
+     "pre_movement/disruption_tolerance": {
+      "agree": 1.0,
+      "dvalue": 0.0,
+      "ref_v": 0.53,
+      "cand_v": 0.53,
+      "n": 12
+     },
+     "pre_movement/route_strategy": {
+      "agree": 1.0,
+      "dp": 0.0,
+      "n": 12
+     },
+     "pre_movement/urgency": {
+      "agree": 1.0,
+      "dp": 0.0,
+      "ref_p": 0.3537,
+      "cand_p": 0.3537,
+      "n": 12
+     },
+     "probe/probe": {
+      "agree": 1.0,
+      "dp": 0.0,
+      "ref_p": 0.4499,
+      "cand_p": 0.4499,
+      "n": 1
+     },
+     "probe/readiness": {
+      "agree": 1.0,
+      "dvalue": 0.0,
+      "ref_v": 0.4364,
+      "cand_v": 0.4364,
+      "n": 2
+     },
+     "probe/reroute": {
+      "agree": 1.0,
+      "dp": 0.0,
+      "n": 2
+     },
+     "probe/urgency": {
+      "agree": 1.0,
+      "dp": 0.0,
+      "ref_p": 0.7093,
+      "cand_p": 0.7093,
+      "n": 2
+     },
+     "tool_selection/decision_confidence": {
+      "agree": 1.0,
+      "dvalue": 0.0,
+      "ref_v": 0.4579,
+      "cand_v": 0.4579,
+      "n": 14
+     },
+     "tool_selection/next_tool": {
+      "agree": 1.0,
+      "dp": 0.0,
+      "n": 14
+     }
+    },
+    "disagreements": []
+   }
+  }
+ }
+}

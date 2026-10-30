@@ -1,0 +1,139 @@
+{
+ "label": "SIMULATED",
+ "reference": {
+  "name": "v1-27b-live:served",
+  "model": "pplx-decider-v1-27b",
+  "requests": 60,
+  "errors": 0,
+  "accuracy_on_labelled": "23/26",
+  "wrong_on_labelled": [
+   {
+    "id": "dss-puja-crowd-park-circus",
+    "question": "coa_strategy",
+    "expected": "aggressive",
+    "got": "standard"
+   },
+   {
+    "id": "dss-eden-gardens-egress",
+    "question": "coa_strategy",
+    "expected": "aggressive",
+    "got": "standard"
+   },
+   {
+    "id": "dss-fire-bagbazar",
+    "question": "coa_strategy",
+    "expected": "aggressive",
+    "got": "standard"
+   }
+  ],
+  "low_confidence_gated_share": 0.6,
+  "mean_confidence": {
+   "dss_coa/coa_strategy": 0.513,
+   "dss_coa/disruption_tolerance": 0.3177,
+   "escort_departure/departure": 0.5019,
+   "escort_incident/action": 0.4305,
+   "post_clearance/restoration_posture": 0.4349,
+   "pre_movement/disruption_tolerance": 0.5457,
+   "pre_movement/route_strategy": 0.7703,
+   "probe/readiness": 0.2462,
+   "probe/reroute": 0.9685,
+   "tool_selection/decision_confidence": 0.286,
+   "tool_selection/next_tool": 0.914
+  },
+  "wall_ms_p50": 1292.4,
+  "wall_ms_p95": 2097.9,
+  "server_ms_p50": 1290.9,
+  "server_ms_p95": 2093.5,
+  "state_tokens_mean": 648.2
+ },
+ "candidates": {
+  "v1-27b-live-repeat:served": {
+   "model": "pplx-decider-v1-27b",
+   "runtime": "autojev (pre-backend host)",
+   "temperature": null,
+   "cold_load_s": null,
+   "first_call_ms": null,
+   "peak_allocated_gib": null,
+   "peak_reserved_gib": null,
+   "rss_gib": null,
+   "rss_peak_gib": null,
+   "after_load": null,
+   "fast_path": null,
+   "requests": 5,
+   "errors": 0,
+   "accuracy_on_labelled": "3/3",
+   "wrong_on_labelled": [],
+   "low_confidence_gated_share": 0.6,
+   "mean_confidence": {
+    "escort_departure/departure": 0.8807,
+    "post_clearance/restoration_posture": 0.3221,
+    "probe/readiness": 0.2462,
+    "probe/reroute": 0.9685
+   },
+   "wall_ms_p50": 580.8,
+   "wall_ms_p95": 1042.9,
+   "server_ms_p50": 579.2,
+   "server_ms_p95": 1041.4,
+   "state_tokens_mean": 372.4,
+   "vs_reference": {
+    "by_type": {
+     "choice": {
+      "agree": 1.0,
+      "dp": 0.0,
+      "n": 4
+     },
+     "noul": {
+      "agree": 1.0,
+      "dp": 0.0,
+      "n": 3
+     },
+     "score": {
+      "agree": 1.0,
+      "dp": 0.0,
+      "dvalue": 0.0,
+      "n": 2
+     }
+    },
+    "by_question_set": {
+     "escort_departure/departure": {
+      "agree": 1.0,
+      "dp": 0.0,
+      "n": 1
+     },
+     "post_clearance/restoration_posture": {
+      "agree": 1.0,
+      "dp": 0.0,
+      "n": 1
+     },
+     "probe/probe": {
+      "agree": 1.0,
+      "dp": 0.0,
+      "ref_p": 0.3491,
+      "cand_p": 0.3491,
+      "n": 1
+     },
+     "probe/readiness": {
+      "agree": 1.0,
+      "dvalue": 0.0,
+      "ref_v": 0.3812,
+      "cand_v": 0.3812,
+      "n": 2
+     },
+     "probe/reroute": {
+      "agree": 1.0,
+      "dp": 0.0,
+      "n": 2
+     },
+     "probe/urgency": {
+      "agree": 1.0,
+      "dp": 0.0,
+      "ref_p": 0.5422,
+      "cand_p": 0.5422,
+      "n": 2
+     }
+    },
+    "disagreements": []
+   }
+  }
+ }
+}

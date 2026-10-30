@@ -1,0 +1,106 @@
+# OSINT ingress compose stanza (plan R7: a service-owned file, no shared-file
+# edits). ARGUS STACK ONLY (project sajag), layered over the three argus
+# files, and ACTIVE ONLY WHEN SAJAG_OSINT=1: scripts/sajag_env.sh appends this
+# file to SAJAG_COMPOSE_FILES only when SAJAG_OSINT=1 is set (in
+# ~/.config/sajag/sajag.env: scripts/sajag_env.sh --set SAJAG_OSINT 1), so with
+# the flag at 0 — the default — a boot never reads it and scripts/sajag_up.sh
+# removes a stale sajag-osint-ingress container left by an earlier
+# flag-1 boot. By hand (from the repository root):
+#   docker compose -p sajag -f infra/compose.yml \
+#     -f infra/compose.gb10-override.yml -f infra/compose.argus-override.yml \
+#     -f infra/compose.osint-ingress.yml up -d osint-ingress
+#
+# What it runs: osint-ingress, the event-emulator's cousin for REAL open
+# signals (NDMA SACHET CAP, Google News RSS, GDELT, r/mumbai), redacted at
+# parse (person names and ages → [PERSON]/[AGE]; poster handles dropped) and
+# posted as RawOsintSignals to the oracle's machine-ingest path
+# POST /api/v1/osint/signals over loopback (contract C-T). Events are about
+# places and situations, never persons. Readiness (scripts/sajag_up.sh
+# check_osint) keys on GET /health oracle.reachable: connector failures (no
+# egress at a venue, a GDELT 429) show in DETAIL and never make it non-READY.
+#
+# Topology: host-networked like its argus peers (GB10 drops bridge-to-host-
+# gateway traffic — see compose.argus-override.yml). The service binds
+# 127.0.0.1:8193 ITSELF (HOST/PORT): loopback only, no published port; the
+# oracle it posts to is the fixed loopback endpoint below (the service refuses
+# any non-loopback oracle URL).
+#
+# EGRESS is limited to the allow-listed source hosts IN CODE
+# (services/osint-ingress/src/osint_ingress/safe_http.py ALLOWED_HOSTS,
+# reported in GET /health egress_allowlist): compose cannot filter by domain.
+# PROJ_NETWORK=OFF keeps pyproj from fetching grids, so that list stays the
+# only egress. No secret is read: the service needs none.
+#
+# Hardening: read-only root filesystem (writes go to the osint_cache volume
+# and a /tmp tmpfs only), every capability dropped, no-new-privileges, a
+# non-root user (uid 10003, the image), a 768M memory cap, and rotated
+# json-file logs (the box's disk is shared).
+#
+# OSINT_MODE (compose interpolation; persist it in sajag.env to survive a
+# reboot): live (default) fetches on the schedule; offline parses only the
+# newest cached sample of each source, honestly labelled cached-sample.
+
+services:
+  osint-ingress:
+    container_name: sajag-osint-ingress
+    image: sajag-osint-ingress:latest
+    restart: unless-stopped
+    build:
+      context: ..
+      dockerfile: infra/docker/Dockerfile.osint-ingress
+    network_mode: host
+    environment:
+      HOST: 127.0.0.1
+      PORT: "8193"
+      # the live oracle on loopback (traffic-oracle, host-net :8191) — named
+      # explicitly, never left to a default
+      OSINT_ORACLE_URL: http://127.0.0.1:8191
+      # PII-Tracer spans from the embedding service on top of the rules (fails open to the rules)
+      OSINT_PII_MODEL: "1"
+      OSINT_PII_URL: http://127.0.0.1:8205
+      OSINT_MODE: ${OSINT_MODE:-live}
+      OSINT_CACHE_DIR: /var/cache/osint-ingress
+      OSINT_GAZETTEER_PATH: /repo/VVIP/scripts/data/osint_gazetteer.json
+      OSINT_NETWORK_PATH: /repo/VVIP/scripts/data/osm_network.json
+      PROJ_NETWORK: "OFF"
+    volumes:
+      - osint_cache:/var/cache/osint-ingress
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    depends_on:
+      # the oracle's healthcheck (compose.argus-override.yml): /health answers
+      # on its port — osint-ingress starts posting only to an oracle that is up
+      traffic-oracle:
+        condition: service_healthy
+    healthcheck:
+      # healthy = the HTTP service answers /health with its contract shape.
+      # Connectivity only: /health also says 'degraded' for conditions a
+      # container restart cannot fix (no egress, the oracle down) — those stay
+      # visible in /health and in scripts/sajag_up.sh --status instead of
+      # flapping the container's health.
+      test:
+        - CMD
+        - python
+        - -c
+        - "import json,os,sys,urllib.request as u; d=json.load(u.urlopen('http://127.0.0.1:%s/health' % os.environ.get('PORT', '8193'), timeout=3)); sys.exit(0 if 'oracle' in d and 'status' in d else 1)"
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+    deploy:
+      resources:
+        limits:
+          memory: 768M
+
+volumes:
+  osint_cache:

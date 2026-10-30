@@ -1,0 +1,298 @@
+/**
+ * The AI-surfaces string pack — every string the forecast, waterlogging and signal-timing surfaces print on Home,
+ * the Map and Decide. EN here; HI and MR in ./packs.ai.hi.ts and ./packs.ai.mr.ts, complete for every key
+ * (tests/ai-ops.unit.mjs and tests/mr-script.unit.mjs check it). Registered additively through registerPack();
+ * every key starts with `ai_`.
+ *
+ * Copy rules (as packs.map3): sentence case, no ALL-CAPS word outside the acronym list, at most one " · " per
+ * string, titles ≤ 32 characters. Honest labels say what a number is: live, observed, modelled, emulated,
+ * simulated, hindsight. Numbers and times stay in Latin digits in all three languages (the console's rule).
+ * A proposal is always a proposal; a named officer decides; if no one decides, the current plan holds.
+ */
+import { registerPack } from '$lib/i18n/strings';
+import { langChunks } from '$lib/i18n/load';
+
+type Fn = (...args: unknown[]) => string;
+export type AiPack = Record<string, string | Fn>;
+
+const s = (v: unknown) => String(v ?? '');
+/** "1 road" / "6 roads" (EN only; HI and MR carry no plural ending here). */
+const roads = (n: unknown) => `${s(n)} ${Number(n) === 1 ? 'road' : 'roads'}`;
+
+const en = {
+	// ── honest labels ──
+	ai_prov_live: 'Live',
+	ai_prov_live_tip: 'From a live feed. The rain nowcast is a model product, not a rain gauge.',
+	ai_prov_observed: 'Observed',
+	ai_prov_observed_tip: 'Measured and published by IMD.',
+	ai_prov_archive: 'Archive',
+	ai_prov_archive_tip: 'A gridded reanalysis archive, not a rain gauge.',
+	ai_prov_modelled: 'Modelled',
+	ai_prov_modelled_tip: 'Computed by a model, not measured.',
+	ai_prov_hindsight: 'Hindsight',
+	ai_prov_hindsight_tip: 'Observed rain replayed as if it had been a perfect nowcast. Not today’s city.',
+	ai_prov_emulated: 'Emulated',
+	ai_prov_emulated_tip: 'A stand-in for a feed the platform cannot read yet.',
+	ai_prov_simulated: 'Simulated',
+	ai_prov_simulated_tip: 'A simulated scenario, not recorded traffic.',
+	ai_prov_unavailable: 'Unavailable',
+	ai_prov_unavailable_tip: 'The feed did not answer. Nothing is shown as zero.',
+	ai_tag: 'AI proposal',
+
+	// ── map layers (the Layers sheet) ──
+	ai_sheet: 'Forecasts',
+	ai_l_waterlog: 'Waterlogging risk',
+	ai_l_waterlog_about: 'Roads at risk of water in the next 2 hours',
+	ai_l_waterlog_sub: (n: unknown) => `${roads(n)} at risk in the next 2 hours`,
+	ai_l_waterlog_dry: 'No road at risk in the next 2 hours',
+	ai_l_waterlog_hs: (n: unknown) => `${roads(n)} under water in the replay`,
+	ai_l_forecast: 'Traffic forecast',
+	ai_l_forecast_about: 'Roads forecast to cross 0.8 V/C within 2 hours',
+	ai_l_forecast_sub: (n: unknown) => `${roads(n)} forecast to cross 0.8 V/C`,
+	ai_l_forecast_none: 'No road forecast to cross 0.8 V/C',
+
+	// ── the Rain · Tide chip ──
+	ai_rt_aria: 'Rain and tide now',
+	ai_rt_rain: (mm: unknown) => `Rain ${s(mm)} mm/h`,
+	ai_rt_rain_next: (mm: unknown) => `${s(mm)} mm in the next hour`,
+	ai_rt_rain_none: 'Rain feed unavailable',
+	ai_rt_tide: (m: unknown) => `Tide ${s(m)} m`,
+	ai_rt_rising: 'rising',
+	ai_rt_falling: 'falling',
+	ai_rt_gates_open: 'Outfall gates open',
+	ai_rt_gates_shut: 'Outfall gates shut',
+	ai_rt_high: (time: unknown, m: unknown) => `High water ${s(time)}, ${s(m)} m`,
+	ai_rt_close: (time: unknown) => `Gates shut from ${s(time)}`,
+	ai_rt_pumps: (a: unknown, t: unknown) => `Pumps ${s(a)} of ${s(t)} available`,
+	ai_rt_risk: (n: unknown) => `${roads(n)} at risk in 2 h`,
+	ai_rt_risk_none: 'No road at risk in 2 h',
+	ai_rt_hydro_down: 'Waterlogging nowcast unavailable',
+	ai_rt_tide_down: 'Tide model unavailable',
+	ai_rt_hindsight: 'Replay a recorded storm',
+	ai_rt_hindsight_tip: 'Show a recorded storm night on the map: IMD observed rain, modelled ponding',
+	ai_rt_live: 'Back to live',
+	ai_rt_hs_title: 'Hindsight: a recorded storm',
+	ai_rt_hs_note: 'IMD observed rain, modelled ponding. Not today’s city.',
+	ai_rt_hs_at: (time: unknown) => `Roads at ${s(time)} IST`,
+	ai_rt_hs_counts: (deep: unknown, imp: unknown) => `${s(deep)} deep, ${s(imp)} impassable`,
+	ai_rt_hs_step: 'Time on the replay night',
+	ai_rt_loading: 'Loading the replay',
+	ai_rt_failed: 'The replay did not load.',
+
+	// ── a road on the map ──
+	ai_sel_road: 'Road',
+	ai_risk_0: 'Dry',
+	ai_risk_1: 'Shallow water',
+	ai_risk_2: 'Deep water',
+	ai_risk_3: 'Impassable',
+	ai_risk_tag: (c: unknown) => `Waterlogging risk ${s(c)}`,
+	ai_stat_depth: 'Depth band',
+	ai_stat_deep_in: 'Deep water in',
+	ai_stat_rain2h: 'Rain, next 2 h',
+	ai_stat_peak: 'Modelled peak',
+	ai_stat_first_deep: 'First deep at',
+	ai_fc_title: 'Next 2 hours · V/C',
+	ai_fc_lead: (m: unknown) => `+${s(m)} min`,
+	ai_fc_band: (a: unknown, b: unknown) => `${s(a)}–${s(b)}`,
+	ai_fc_over: 'Over 0.8',
+	ai_fc_likely: 'Likely over 0.8',
+	ai_fc_possible: 'May reach 0.8',
+	ai_fc_under: 'Under 0.8',
+	ai_fc_none: 'No forecast for this road',
+	ai_fc_note: 'Median with the p10–p90 band.',
+	ai_fc_now: (vc: unknown) => `Now ${s(vc)}`,
+	ai_fc_loading: 'Loading the forecast',
+
+	// ── Decide ──
+	ai_d_section: 'AI proposals',
+	ai_d_sub: 'Forecast, waterlogging and signal timing. You decide each one.',
+	ai_d_none: 'No AI proposal waits.',
+	ai_d_exercise: 'Exercise: a recorded storm',
+	ai_d_exercise_tip: 'Practise on the waterlogging proposals of a recorded storm night (hindsight). Decisions stay on this console.',
+	ai_d_exercise_off: 'Hide the exercise',
+	ai_d_exercise_tag: 'Exercise',
+	ai_d_waiting: (n: unknown) => `${s(n)} waiting`,
+	ai_d_feed_down: (what: unknown) => `${s(what)} unavailable`,
+	ai_src_forecast: 'Traffic forecast',
+	ai_src_hydro: 'Waterlogging nowcast',
+	ai_src_twin: 'Signal-timing twin',
+	ai_k_pre_emptive_diversion: 'Pre-emptive diversion',
+	ai_k_waterlogging_reroute: 'Waterlogging reroute',
+	ai_k_ambulance_window: 'Ambulance (108) window',
+	ai_k_live_wire_hazard: 'Live-wire hazard request',
+	ai_k_public_advisory_draft: 'Public advisory draft',
+	ai_k_signal: 'Signal timing',
+	ai_t_pre_emptive_diversion: (p: unknown) => `${s(p)}: heavy traffic ahead`,
+	ai_t_waterlogging_reroute: (p: unknown) => `${s(p)}: reroute around water`,
+	ai_t_ambulance_window: (p: unknown) => `${s(p)}: ambulance window`,
+	ai_t_live_wire_hazard: (p: unknown) => `${s(p)}: live-wire check`,
+	ai_t_public_advisory_draft: 'Waterlogging advisory for the public',
+	ai_t_signal: (p: unknown) => `${s(p)}: re-time the signal`,
+	ai_w_in: (m: unknown) => `crosses in ${s(m)} min`,
+	ai_w_deep_in: (m: unknown) => `deep water in ${s(m)} min`,
+	ai_w_deep_now: 'deep water now',
+	ai_w_twin: (pct: unknown) => `delay ${s(pct)}% in the twin`,
+	ai_w_draft: 'draft waits for approval',
+	ai_q_approved: 'Approved',
+	ai_q_rejected: 'Rejected',
+
+	// ── the AI decision sheet ──
+	ai_s_what_fc: (road: unknown, now: unknown, p50: unknown, min: unknown, a: unknown, b: unknown) =>
+		`${s(road)}: V/C ${s(now)} now, forecast ${s(p50)} in ${s(min)} min (band ${s(a)}–${s(b)}).`,
+	ai_s_what_fc_detour: (via: unknown) => `Proposed diversion via ${s(via)}.`,
+	ai_s_what_fc_nodetour: 'No reasonable detour on the city network: a signal-timing review is proposed instead.',
+	ai_s_what_hy: (road: unknown, c: unknown, band: unknown) => `${s(road)}: waterlogging risk ${s(c)} (${s(band)}).`,
+	ai_s_what_hy_deep: (m: unknown) => `Deep water in about ${s(m)} min.`,
+	ai_s_what_hy_now: 'Deep water now.',
+	ai_s_what_reroute: (via: unknown) => `Proposed reroute via ${s(via)}.`,
+	ai_s_what_noroute: 'No detour avoids the other flagged roads: closing to small vehicles is proposed, for the officer on site to decide.',
+	ai_s_what_amb: (m: unknown) => `Passable for about ${s(m)} min more: a note for ambulance (108) crews with the detour.`,
+	ai_s_what_wire: 'Standing water and overhead lines: a request to the power utility to inspect and, where needed, isolate supply along this road.',
+	ai_s_what_adv: 'One public advisory in Marathi and English naming the places at risk.',
+	ai_s_draft_mr: 'Marathi draft',
+	ai_s_draft_en: 'English draft',
+	ai_s_service: 'The service’s words',
+	ai_s_figs: 'Evidence',
+	ai_s_fig_vc_now: 'V/C now',
+	ai_s_fig_vc_at: (m: unknown) => `V/C in ${s(m)} min`,
+	ai_s_fig_band: 'p10–p90',
+	ai_s_fig_share: 'Share to divert',
+	ai_s_fig_risk: 'Risk class',
+	ai_s_fig_depth: 'Depth band',
+	ai_s_fig_deep: 'Deep water in',
+	ai_s_fig_detour: 'Detour length',
+	ai_s_fig_delay: 'Delay at the junction',
+	ai_s_fig_cross: 'Cross street',
+	ai_s_fig_network: 'Whole network',
+	ai_s_fig_duration: 'For',
+	ai_tc_title: (m: unknown) => `In the twin, over ${s(m)} min`,
+	ai_tc_none: 'Do nothing',
+	ai_tc_with: 'With the change',
+	ai_tc_focus: 'Delay at the junction (veh·h)',
+	ai_tc_queue: 'Longest queue (m)',
+	ai_tc_cross: 'Cross-street delay (veh·h)',
+	ai_tc_net: 'Network delay (veh·h)',
+	ai_tc_conf: (score: unknown, level: unknown) => `Confidence ${s(score)}, ${s(level)}`,
+	ai_conf_low: 'low',
+	ai_conf_medium: 'medium',
+	ai_conf_high: 'high',
+	ai_tc_note: 'A traffic model, not measured traffic. Confidence is a modelled heuristic, not a probability.',
+	ai_s_why: 'How this was worked out',
+	ai_s_why_fc: 'Chronos-2 forecasts V/C for every road in 15-minute steps from its history, with rain, tide and events as inputs. The history is simulated until Mumbai traffic is recorded.',
+	ai_s_why_hy: 'A ponding model: rain against drainage capacity, halved while a high tide in the Arabian Sea shuts the outfall gates, scaled by pump availability and the road’s terrain.',
+	ai_s_why_tw: 'Each candidate timing was run against doing nothing in a cell-transmission model of the whole network; it passed only if the whole network did not get worse.',
+	ai_c_title: 'What changes if you approve',
+	ai_c_obj: 'This proposal',
+	ai_c_now: 'Proposed',
+	ai_c_after_platform: 'Approved, in the decision log with your name',
+	ai_c_after_console: 'Approved, kept on this console',
+	ai_c_after_exercise: 'Approved in the exercise, this console only',
+	ai_c_div: (via: unknown) => `Diversion via ${s(via)}`,
+	ai_c_div_after: 'Brief the field units: the console sends no order',
+	ai_c_close: 'Close to small vehicles',
+	ai_c_close_after: 'The officer on site decides it',
+	ai_c_watch: 'Signal timing review',
+	ai_c_watch_after: 'Ask the twin, then decide that separately',
+	ai_c_adv: 'Public advisory',
+	ai_c_adv_after: 'Publish it from Comms after approval',
+	ai_c_amb: 'Ambulance (108) control',
+	ai_c_amb_after: 'Relay the window and the detour to 108 control',
+	ai_c_wire: 'Power utility (BEST, island city)',
+	ai_c_wire_after: 'Ask the utility to inspect and isolate supply',
+	ai_c_signal: (p: unknown) => `Signal at ${s(p)}`,
+	ai_c_signal_after: 'Timing recorded as approved: the signal adapter is emulated, so no controller changes',
+	ai_c_none: 'No change yet',
+	ai_c_unchanged: 'Roads, signals, dispatches and public messages',
+	ai_c_hold: 'If no one decides, the current plan holds.',
+	ai_b_approve: 'Approve',
+	ai_b_reject: 'Reject…',
+	ai_b_reject_go: 'Reject',
+	ai_b_reason: 'Why reject it?',
+	ai_b_reason_ph: 'For example: the field team has closed the road already',
+	ai_r_officer: 'Name the duty officer first.',
+	ai_r_reason: 'A reason is needed to reject.',
+	ai_r_already: (o: unknown) => `Already decided by ${s(o)}.`,
+	ai_r_signin: 'Sign in as the duty officer to decide.',
+	ai_r_failed: 'No confirmation came back. Nothing was recorded.',
+	ai_o_by: (o: unknown, t: unknown) => `${s(o)} · ${s(t)}`,
+	ai_o_platform: 'Recorded in the decision log.',
+	ai_o_console: 'Kept on this console: the decision log for AI proposals is not deployed yet.',
+	ai_o_exercise: 'Exercise: kept on this console only.',
+	ai_o_signal: 'The signal adapter is emulated: no controller changed.',
+	ai_o_next: 'Next decision',
+
+	// ── Home: the next two hours ──
+	ai_h_title: 'Next 2 hours',
+	ai_h_aria: 'The next two hours: traffic forecast, waterlogging and the tide',
+	ai_h_cross: (n: unknown) => `${roads(n)} forecast over 0.8 V/C`,
+	ai_h_cross_none: 'No road forecast over 0.8 V/C',
+	ai_h_cross_row: (min: unknown, vc: unknown) => `${s(vc)} in ${s(min)} min`,
+	ai_h_risk: (n: unknown) => `${roads(n)} at waterlogging risk`,
+	ai_h_risk_none: 'No road at waterlogging risk',
+	ai_h_tide: (m: unknown, dir: unknown) => `Tide ${s(m)} m, ${s(dir)}`,
+	ai_h_twin: (n: unknown) => `${s(n)} signal-timing ${Number(n) === 1 ? 'proposal' : 'proposals'} waiting`,
+	ai_h_twin_none: 'No signal-timing proposal waiting',
+	ai_h_how: 'How these are made',
+	ai_h_how_forecast: 'Traffic forecast',
+	ai_h_how_water: 'Waterlogging',
+	ai_h_how_tide: 'Tide and gates',
+	ai_h_how_twin: 'Signal timing',
+	ai_h_decide: 'Review in Decide',
+	ai_h_map: 'Open the map',
+	ai_h_down: 'The forecast services are not answering. Decisions still work.',
+	ai_h_replay: 'Replay a recorded storm',
+	ai_h_replay_sub: 'A night of IMD-observed rain: which roads the model flagged, and when',
+
+	// ── the replay ──
+	ai_rp_title: 'Replay: a recorded storm night',
+	ai_rp_label: 'IMD observed rain · modelled ponding',
+	ai_rp_rain: (peak: unknown) => `IMD observed rain over the night, ${s(peak)} mm in the peak hour`,
+	ai_rp_first: 'First road deep (IST), before the peak hour',
+	ai_rp_hits: 'Reported places on the network that the model flagged',
+	ai_rp_hits_note: 'On a night like this, much of the city floods at once: this shows the model was not blind to it, not that it tells streets apart finely.',
+	ai_rp_chart: 'Roads deep or impassable as the water rose',
+	ai_rp_chart_alt: (deep: unknown, imp: unknown, t: unknown) => `By ${s(t)} IST: ${s(deep)} roads deep and ${s(imp)} impassable.`,
+	ai_rp_gates: 'Gates shut, modelled tide',
+	ai_rp_peak: 'Peak hour, IMD',
+	ai_rp_deep: 'Deep',
+	ai_rp_imp: 'Impassable',
+	ai_rp_reported: 'Places the news reported waterlogged',
+	ai_rp_flag_at: (t: unknown) => `flagged ${s(t)}`,
+	ai_rp_not_flagged: 'not flagged',
+	ai_rp_off: (list: unknown) => `Off the network, not scored: ${s(list)}`,
+	ai_rp_archive: (mm: unknown) => `The gridded archive held ${s(mm)} mm for the same hours: fed only that, the model flags no road. A gauge feed is the pilot’s first need.`,
+	ai_rp_map: 'Show on the map',
+	ai_rp_close: 'Close',
+	ai_rp_loading: 'Running the replay',
+	ai_rp_failed: 'The replay did not run.',
+	ai_rp_sources: 'Sources',
+	ai_lg_detour: 'Detour',
+	ai_lg_water: 'Waterlogging risk, modelled',
+	ai_lg_forecast: 'Forecast over 0.8 V/C',
+	ai_s_run_at: (t: unknown) => `From the forecast run of ${s(t)} IST.`,
+	ai_s_hs_at: (t: unknown) => `As the model would have seen it at ${s(t)} IST on the replay night (hindsight).`,
+	ai_d_exercise_none: 'This hydro service returns no proposals with its replay, so there is no exercise to show.',
+	ai_retry: 'Try again',
+};
+
+export type AiKey = keyof typeof en;
+
+registerPack('en', en);
+
+export const AI_PACK_KEYS: readonly AiKey[] = Object.keys(en) as AiKey[];
+export const AI_PACKS: Record<string, AiPack> = { en };
+
+/** Register one language chunk (lib/i18n/load.ts's landing site; additive, first registration wins). */
+export function adopt(code: 'hi' | 'mr', pack: AiPack): void {
+	AI_PACKS[code] = pack;
+	registerPack(code, pack);
+}
+
+if (process.env.NODE_ENV !== 'production' || import.meta.env.SSR !== false) {
+	adopt('hi', (await import('./packs.ai.hi')).hi);
+	adopt('mr', (await import('./packs.ai.mr')).mr);
+} else {
+	await langChunks('packs.ai', (code) =>
+		code === 'hi' ? import('./packs.ai.hi').then((c) => adopt('hi', c.hi)) : import('./packs.ai.mr').then((c) => adopt('mr', c.mr)),
+	);
+}

@@ -1,0 +1,65 @@
+# Sajag AI services (forecast stream): corridor forecasting and the waterlogging nowcast.
+# Layer over the base fleet, e.g.:
+#   docker compose -p sajag -f infra/compose.yml -f infra/compose.gb10-override.yml \
+#     -f infra/compose.argus-override.yml -f infra/compose.ai.yml up -d forecast hydro
+#
+# NETWORK EXPOSURE. Loopback only: like the oracle and the emulator in the argus stack, both run on the
+# host network and BIND 127.0.0.1 (HOST env), so neither port is reachable from the LAN; the deck reaches
+# them through its loopback proxy.
+#   forecast  127.0.0.1:8195   reads the oracle (GET only) at 127.0.0.1:8191 and the hydro service
+#   hydro     127.0.0.1:8197   calls Open-Meteo (no key; cached, rate-limited)
+#
+# GPU. forecast reserves the GPU (Chronos-2 ~0.5 GiB of weights, ~1.6 GiB peak in a 65-segment batch;
+# freed after SAJAG_FORECAST_IDLE_UNLOAD_SEC idle). Weights come from the host's Hugging Face cache,
+# mounted read-only (HF_HUB_OFFLINE=1): nothing is downloaded at run time.
+services:
+  forecast:
+    container_name: sajag-forecast
+    restart: unless-stopped
+    build:
+      context: ../services/forecast
+      dockerfile: ../../infra/docker/Dockerfile.forecast
+    image: sajag-forecast:latest
+    network_mode: host
+    environment:
+      HOST: 127.0.0.1
+      PORT: "8195"
+      SAJAG_FORECAST_ORACLE_URL: http://127.0.0.1:${SAJAG_ORACLE_PORT:-8191}
+      SAJAG_FORECAST_HYDRO_URL: http://127.0.0.1:8197
+      SAJAG_FORECAST_DATA_SOURCE: ${SAJAG_FORECAST_DATA_SOURCE:-auto}
+      SAJAG_FORECAST_MODEL: ${SAJAG_FORECAST_MODEL:-chronos2}
+      SAJAG_FORECAST_IDLE_UNLOAD_SEC: "600"
+      SAJAG_FORECAST_DECK_ORIGINS_CSV: http://127.0.0.1:5373,http://localhost:5373
+    volumes:
+      - ${HOME}/.cache/huggingface/hub:/home/forecast/.cache/huggingface/hub:ro
+    deploy:
+      resources:
+        limits:
+          memory: 6G
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    depends_on:
+      hydro:
+        condition: service_started
+
+  hydro:
+    container_name: sajag-hydro
+    restart: unless-stopped
+    build:
+      context: ../services/hydro
+      dockerfile: ../../infra/docker/Dockerfile.hydro
+    image: sajag-hydro:latest
+    network_mode: host
+    environment:
+      HOST: 127.0.0.1
+      PORT: "8197"
+      SAJAG_HYDRO_RAIN_CACHE_SEC: "600"
+      SAJAG_HYDRO_MIN_CALL_INTERVAL_SEC: "30"
+      SAJAG_HYDRO_MAX_CALLS_PER_DAY: "2000"
+    deploy:
+      resources:
+        limits:
+          memory: 512M

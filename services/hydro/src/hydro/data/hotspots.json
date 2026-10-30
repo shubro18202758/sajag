@@ -1,0 +1,253 @@
+{
+ "schema": "sajag.hydro.hotspots/1",
+ "city": "mumbai",
+ "note": "Places news and BMC releases name as waterlogged during heavy rain. BMC counts hundreds of known flooding spots (386–498 by year; FPJ). Coordinates are the canonical landmark or network junction where one exists, else placed by hand (approximate). An unverified spot carries half weight in the susceptibility score.",
+ "sources": {
+  "fpj_20250819": {
+   "publisher": "Free Press Journal",
+   "date": "2025-08-19",
+   "time_ist": "08:39",
+   "url": "https://www.freepressjournal.in/mumbai/mumbai-rains-city-reels-under-relentless-downpour-sion-matunga-dadar-byculla-flooded-andheri-subway-closed-schools-colleges-shut-as-imd-issues-red-alert"
+  },
+  "indiacom_20250819": {
+   "publisher": "India.com",
+   "date": "2025-08-19",
+   "time_ist": "10:20",
+   "url": "https://www.india.com/news/india/mumbai-rains-roads-subways-closed-mumbai-palghar-thane-raigad-nasik-pune-satara-mrunaltai-gore-flyover-at-goregaon-lokhandwala-veera-desai-roadandheri-matunga-chembur-khar-dadar-east-kurla-8019474/"
+  },
+  "indiacom_20250816": {
+   "publisher": "India.com (live updates)",
+   "date": "2025-08-16",
+   "time_ist": "10:29",
+   "url": "https://www.india.com/maharashtra/mumbai-rains-live-updates-waterlogging-bandra-vile-parle-sion-andheri-rainwater-enters-andheri-and-milan-subways-dadar-and-bandra-stations-local-train-services-on-harbour-central-lines-traffic-i-8013871/"
+  },
+  "bt_20250819": {
+   "publisher": "Business Today",
+   "date": "2025-08-19",
+   "time_ist": "15:53",
+   "url": "https://www.businesstoday.in/india/story/mumbai-rains-inundate-roads-lead-to-flight-and-train-delays-350-people-from-kurla-relocated-top-points-490083-2025-08-19"
+  },
+  "watchers_20250819": {
+   "publisher": "Watchers",
+   "date": "2025-08-19",
+   "time_ist": "20:05",
+   "url": "https://watchers.news/2025/08/19/extreme-rainfall-paralyzes-mumbai-three-dead-two-missing/"
+  },
+  "pti_20250528": {
+   "publisher": "PTI via The Week",
+   "date": "2025-05-28",
+   "url": "https://www.theweek.in/wire-updates/national/2025/05/28/bom2-mh-waterlogging-penalty.html"
+  },
+  "fpj_20230519": {
+   "publisher": "Free Press Journal (BMC chronic flooding areas)",
+   "date": "2023-05-19",
+   "url": "https://www.freepressjournal.in/mumbai/mumbai-bmc-identifies-new-flooding-spots-promises-relief-by-2025"
+  },
+  "fpj_spots_2025": {
+   "publisher": "Free Press Journal (BMC: waterlogging spots 453 → 498)",
+   "date": "2025",
+   "url": "https://www.freepressjournal.in/mumbai/bmc-boosts-dewatering-pumps-to-547-mithi-river-desilting-pending-as-waterlogging-spots-rise-10"
+  }
+ },
+ "hotspots": [
+  {
+   "id": "hindmata",
+   "name": "Hindmata (Dadar East)",
+   "lat": 19.00561,
+   "lon": 72.83976,
+   "coord": "landmark:hindmata",
+   "sources": [
+    "indiacom_20250819",
+    "pti_20250528"
+   ]
+  },
+  {
+   "id": "dadar_tt",
+   "name": "Dadar TT Circle / Hindu Colony (Dadar East)",
+   "lat": 19.01753,
+   "lon": 72.84811,
+   "coord": "landmark:dadar_tt",
+   "sources": [
+    "indiacom_20250819",
+    "fpj_20250819"
+   ]
+  },
+  {
+   "id": "kings_circle",
+   "name": "King's Circle (Matunga)",
+   "lat": 19.0278,
+   "lon": 72.85649,
+   "coord": "landmark:kings_circle",
+   "sources": [
+    "fpj_20250819",
+    "indiacom_20250819",
+    "indiacom_20250816"
+   ]
+  },
+  {
+   "id": "gandhi_market",
+   "name": "Gandhi Market (Matunga–Sion, B A Road)",
+   "lat": 19.0306,
+   "lon": 72.859,
+   "coord": "approximate (±0.5 km)",
+   "sources": [
+    "fpj_20250819",
+    "indiacom_20250819",
+    "pti_20250528"
+   ]
+  },
+  {
+   "id": "sion_circle",
+   "name": "Sion",
+   "lat": 19.04231,
+   "lon": 72.86345,
+   "coord": "landmark:sion_circle",
+   "sources": [
+    "indiacom_20250816"
+   ],
+   "note": "Sion–King's Circle waterlogging (16 Aug 2025)"
+  },
+  {
+   "id": "parel",
+   "name": "Parel",
+   "lat": 18.99789,
+   "lon": 72.83762,
+   "coord": "landmark:parel",
+   "sources": [
+    "indiacom_20250819"
+   ],
+   "note": "40–65 mm in an hour reported over Parel, Dadar, Worli, Mumbai Central (19 Aug 2025)"
+  },
+  {
+   "id": "byculla",
+   "name": "Byculla",
+   "lat": 18.97917,
+   "lon": 72.83388,
+   "coord": "network junction:byculla",
+   "sources": [
+    "fpj_20250819",
+    "watchers_20250819"
+   ]
+  },
+  {
+   "id": "wadala",
+   "name": "Wadala",
+   "lat": 19.017,
+   "lon": 72.865,
+   "coord": "approximate (±0.5 km)",
+   "sources": [
+    "watchers_20250819"
+   ]
+  },
+  {
+   "id": "kurla_kranti_nagar",
+   "name": "Kurla (Kranti Nagar, by the Mithi)",
+   "lat": 19.073,
+   "lon": 72.878,
+   "coord": "landmark:mithi_kurla",
+   "sources": [
+    "bt_20250819",
+    "watchers_20250819"
+   ]
+  },
+  {
+   "id": "chembur",
+   "name": "Chembur",
+   "lat": 19.062,
+   "lon": 72.9,
+   "coord": "landmark:chembur",
+   "sources": [
+    "indiacom_20250819",
+    "watchers_20250819"
+   ]
+  },
+  {
+   "id": "chunabhatti",
+   "name": "Chunabhatti",
+   "lat": 19.0526,
+   "lon": 72.8726,
+   "coord": "approximate (±0.5 km)",
+   "sources": [
+    "pti_20250528",
+    "indiacom_20250816"
+   ]
+  },
+  {
+   "id": "andheri_subway",
+   "name": "Andheri Subway",
+   "lat": 19.1148,
+   "lon": 72.84742,
+   "coord": "landmark:andheri_subway",
+   "sources": [
+    "fpj_20250819",
+    "indiacom_20250819",
+    "indiacom_20250816"
+   ]
+  },
+  {
+   "id": "milan_subway",
+   "name": "Milan Subway (Santacruz)",
+   "lat": 19.09048,
+   "lon": 72.84261,
+   "coord": "landmark:milan_subway",
+   "sources": [
+    "indiacom_20250816"
+   ]
+  },
+  {
+   "id": "vile_parle",
+   "name": "Vile Parle (SV Road, Irla)",
+   "lat": 19.10808,
+   "lon": 72.84042,
+   "coord": "network junction:vileparle_sv",
+   "sources": [
+    "fpj_20250819",
+    "indiacom_20250816"
+   ]
+  },
+  {
+   "id": "yellow_gate",
+   "name": "Yellow Gate (P D'Mello Road)",
+   "lat": 18.9447,
+   "lon": 72.8405,
+   "coord": "approximate (±0.5 km)",
+   "sources": [
+    "pti_20250528"
+   ]
+  },
+  {
+   "id": "kalanagar",
+   "name": "Kalanagar (Bandra East)",
+   "lat": 19.05846,
+   "lon": 72.84645,
+   "coord": "landmark:kalanagar",
+   "sources": [
+    "fpj_20230519"
+   ],
+   "unverified": true,
+   "note": "'Bandra West/Bandra' named as a chronic area; the junction itself is not named in the cited list"
+  },
+  {
+   "id": "dharavi_junction",
+   "name": "Dharavi junction (Sion–Mahim link)",
+   "lat": 19.0418,
+   "lon": 72.853,
+   "coord": "approximate (±0.5 km)",
+   "sources": [
+    "fpj_20230519"
+   ],
+   "unverified": true,
+   "note": "'Dharavi' named as a chronic area; the junction is not named"
+  },
+  {
+   "id": "national_college",
+   "name": "Near National College (Bandra, SV Road)",
+   "lat": 19.061,
+   "lon": 72.8366,
+   "coord": "approximate (±0.5 km)",
+   "sources": [],
+   "unverified": true,
+   "note": "named in BMC/FPJ reporting summarised in the city brief; no URL in hand"
+  }
+ ]
+}

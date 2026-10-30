@@ -1,0 +1,235 @@
+# Sajag platform — Prometheus Alert Rules
+# Monitors the GB10 unified-memory model stack, LLM performance, MCP tools,
+# API latency, spatial DB. Retuned for the models-stack topology (C10):
+# decider :8083 / Gemma llama-server :8084 / embeddings :8085 all on the host;
+# the retired Ollama/VRAM serialization regime is gone. Budget reference:
+# models-config/MEMORY_BUDGET.md.
+
+groups:
+  # ─── GPU / Unified Memory Alerts ─────────────────────────────────
+  # NOTE (GB10): nvidia-smi reports memory.total as N/A on this SoC — the
+  # unified pool is read from /proc/meminfo (121.44 GiB). The nvidia_gpu_*
+  # rules below stay for portability to discrete-GPU nodes; on GB10 they are
+  # inactive unless the exporter provides the metrics.
+  - name: gpu_vram
+    interval: 5s
+    rules:
+      - alert: VRAMUsageCritical
+        expr: nvidia_gpu_memory_used_bytes / nvidia_gpu_memory_total_bytes > 0.92
+        for: 30s
+        labels:
+          severity: critical
+        annotations:
+          summary: "GPU memory usage exceeds 92% (discrete-GPU nodes)"
+          description: "Memory at {{ $value | humanizePercentage }} — risk of OOM cascade. GB10 note: unified pool budget lives in models-config/MEMORY_BUDGET.md."
+
+      - alert: VRAMUsageHigh
+        expr: nvidia_gpu_memory_used_bytes / nvidia_gpu_memory_total_bytes > 0.80
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "GPU memory usage above 80% (discrete-GPU nodes)"
+          description: "Memory at {{ $value | humanizePercentage }}."
+
+      - alert: GPUTemperatureHigh
+        expr: nvidia_gpu_temperature_celsius > 85
+        for: 30s
+        labels:
+          severity: warning
+        annotations:
+          summary: "GPU temperature {{ $value }}°C — thermal throttling imminent"
+
+  # ─── Model Stack / LLM Alerts (models stream) ────────────────────
+  - name: llm_performance
+    interval: 10s
+    rules:
+      - alert: LLMTokenRateLow
+        expr: rate(vvip_llm_tokens_generated_total[1m]) < 5
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Gemma token generation below 5 tok/sec"
+          description: "Current rate: {{ $value }} tok/sec (llama-server :8084, sajag-tactical). May indicate unified-memory bandwidth contention with the 27B decider."
+
+      - alert: LLMInferenceLatencyHigh
+        expr: histogram_quantile(0.99, rate(vvip_llm_inference_duration_seconds_bucket[5m])) > 30
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "LLM p99 inference latency exceeds 30s"
+
+      - alert: ModelHostUnreachable
+        expr: up{job="model-host"} == 0 or model_host_loaded == 0
+        for: 30s
+        labels:
+          severity: critical
+        annotations:
+          summary: "model-host (:8083, the decider) unreachable or unloaded"
+          description: "Strategic tier down — brain must fall back to Gemma-only tactical mode (C1 degradation) and alert the operator."
+
+      - alert: DeciderP95LatencyHigh
+        expr: model_host_decide_latency_p95_ms > 3000
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Decider p95 decide latency above the 3 s degradation threshold"
+          description: "p95 = {{ $value }} ms. Above 3 s, convoy-brain switches to Gemma-only tactical fallback and pre-movement checkpoints must shrink state (risk register item #1)."
+
+      - alert: LlamaServerUnreachable
+        expr: up{job="llama-server"} == 0
+        for: 30s
+        labels:
+          severity: critical
+        annotations:
+          summary: "llama-server (:8084, Gemma 4 12B) unreachable"
+          description: "Tactical tier down — agents, tool-arg drafting and all prose generation are unavailable. Restart: ./infra/scripts/serve_models.sh start"
+
+      - alert: EmbeddingServiceUnreachable
+        expr: up{job="embedding-service"} == 0
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "embedding-service (:8085) unreachable"
+          description: "Memory tier (T1) retrieval degraded; incident/AAR recall and adaptive similarity unavailable until restart."
+
+  # ─── MCP Tool Execution Alerts ──────────────────────────────────
+  - name: mcp_tools
+    interval: 10s
+    rules:
+      - alert: MCPToolTimeout
+        expr: rate(vvip_mcp_tool_errors_total{error="timeout"}[5m]) > 0.1
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "MCP tool timeouts increasing — {{ $labels.tool_name }}"
+
+      - alert: MCPToolErrorRate
+        expr: rate(vvip_mcp_tool_errors_total[5m]) / rate(vvip_mcp_tool_calls_total[5m]) > 0.2
+        for: 3m
+        labels:
+          severity: critical
+        annotations:
+          summary: "MCP tool error rate >20% for {{ $labels.tool_name }}"
+
+  # ─── Reasoning Loop Detection ───────────────────────────────────
+  - name: reasoning_anomalies
+    interval: 10s
+    rules:
+      - alert: ReasoningLoopDetected
+        expr: vvip_orchestrator_tool_rounds_total > 5
+        for: 0s
+        labels:
+          severity: critical
+        annotations:
+          summary: "Orchestrator hit max tool rounds ({{ $value }}/6) — possible reasoning loop"
+          description: "Movement {{ $labels.movement_id }}. ReAct cycle may be stuck."
+
+      - alert: NonDeterministicFailure
+        expr: increase(vvip_orchestrator_nondeterministic_errors_total[10m]) > 3
+        for: 0s
+        labels:
+          severity: warning
+        annotations:
+          summary: "Multiple non-deterministic failures detected in 10 minutes"
+
+  # ─── API Bottleneck Alerts ──────────────────────────────────────
+  - name: api_performance
+    interval: 10s
+    rules:
+      - alert: ConvoyBrainLatencyHigh
+        expr: histogram_quantile(0.95, rate(vvip_api_request_duration_seconds_bucket{service="convoy-brain"}[5m])) > 5
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "convoy-brain p95 latency >5s on {{ $labels.endpoint }}"
+
+      - alert: TrafficOracleLatencyHigh
+        expr: histogram_quantile(0.95, rate(vvip_api_request_duration_seconds_bucket{service="traffic-oracle"}[5m])) > 2
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "traffic-oracle p95 latency >2s on {{ $labels.endpoint }}"
+
+      - alert: APIErrorRateHigh
+        expr: rate(vvip_api_requests_total{status=~"5.."}[5m]) / rate(vvip_api_requests_total[5m]) > 0.05
+        for: 3m
+        labels:
+          severity: critical
+        annotations:
+          summary: "API 5xx error rate >5% on {{ $labels.service }}"
+
+  # ─── Spatial DB Multi-Hop Query Alerts ──────────────────────────
+  - name: spatial_db
+    interval: 10s
+    rules:
+      - alert: PgRoutingQuerySlow
+        expr: histogram_quantile(0.95, rate(vvip_pgrouting_query_duration_seconds_bucket[5m])) > 1
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "pgRouting p95 query time >1s for {{ $labels.query_type }}"
+
+      - alert: PgVectorSearchSlow
+        expr: histogram_quantile(0.95, rate(vvip_pgvector_search_duration_seconds_bucket[5m])) > 0.5
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "pgvector HNSW search p95 >500ms"
+
+      - alert: DatabaseConnectionPoolExhausted
+        expr: vvip_db_pool_available_connections < 5
+        for: 30s
+        labels:
+          severity: critical
+        annotations:
+          summary: "PostGIS connection pool nearly exhausted ({{ $value }} remaining)"
+
+  # ─── Stream Processor Alerts ────────────────────────────────────
+  - name: stream_processor
+    interval: 5s
+    rules:
+      - alert: IngestionBackpressure
+        expr: vvip_ingress_channel_utilization > 0.8
+        for: 30s
+        labels:
+          severity: warning
+        annotations:
+          summary: "signal-ingress channel >80% full — backpressure building"
+
+      - alert: AnomalyRateSpike
+        expr: rate(vvip_anomaly_detections_total[5m]) / rate(vvip_observations_processed_total[5m]) > 0.3
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Anomaly rate >30% — potential data source corruption"
+
+  # ─── Container Health ───────────────────────────────────────────
+  - name: container_health
+    interval: 15s
+    rules:
+      - alert: ContainerMemoryHigh
+        expr: container_memory_usage_bytes / container_spec_memory_limit_bytes > 0.85
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Container {{ $labels.name }} using >85% memory limit"
+
+      - alert: ContainerRestarting
+        expr: increase(container_restart_count[15m]) > 2
+        for: 0s
+        labels:
+          severity: critical
+        annotations:
+          summary: "Container {{ $labels.name }} restarted {{ $value }} times in 15m"

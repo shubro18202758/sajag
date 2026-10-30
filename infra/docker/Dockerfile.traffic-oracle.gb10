@@ -1,0 +1,69 @@
+# Build traffic-oracle Python service — GB10/arm64 variant.
+#
+# Same dependency set as Dockerfile.traffic-oracle, but mirrors the repo's
+# directory tree inside the image. Why: traffic_oracle computes repo-rooted
+# paths from the package depth — simulation/network.py resolves
+# parents[5]/services/corridor-store/seed/sample_corridor.sql (the seed
+# network the C5 twin parses) and simulation/__main__.py resolves
+# parents[5]/scripts. With the original WORKDIR /app layout parents[5]
+# doesn't exist and the container dies at import (IndexError, observed on
+# this host). Building at /repo/VVIP/services/traffic-oracle makes both
+# resolve exactly as they do on the host. The same tree carries the OSINT
+# libraries and their data files (below), at their repo paths.
+# Base and tool images are pinned by digest (python 3.12.15-slim, uv 0.13.5) so a
+# rebuild is reproducible; bump them deliberately, never by a floating tag.
+FROM python:3.12-slim@sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704 AS base
+
+COPY --from=ghcr.io/astral-sh/uv:0.13.5@sha256:32a7bb39b496babbd997b0a39a4d66c126bdaf5661b302bf6f06abda8deca6ff /uv /usr/local/bin/uv
+
+WORKDIR /repo/VVIP/services/traffic-oracle
+
+COPY services/traffic-oracle/pyproject.toml ./
+
+RUN uv pip install --system --no-cache -r pyproject.toml
+
+COPY services/traffic-oracle/src/ src/
+
+# Seed network for the simulation twin (parsed at runtime via parents[5]).
+COPY services/corridor-store/seed/ /repo/VVIP/services/corridor-store/seed/
+
+# Zero-shot foundation forecaster artifact (t0-alpha ONNX INT8, Apache-2.0) —
+# BAKED into the image per the hosting decision (2026-10-19) so the
+# foundation rung serves live with quantiles without mounts or host paths.
+# Provenance, license and sha256 in models-local/t0/NOTICE (copied along).
+COPY models-local/t0/ /repo/VVIP/models-local/t0/
+ENV VVIP_FOUNDATION_MODEL_PATH=/repo/VVIP/models-local/t0/t0-alpha-grouped-int8.onnx
+
+# OSINT libraries (plan §4 / R6): POST /api/v1/osint/signals resolves, fuses
+# and classifies server-side, so the oracle imports osint_common, osint_geo
+# and osint_analysis — copied into the repo-mirroring tree and added to
+# PYTHONPATH, never installed as wheels. Their runtime dependencies (pydantic,
+# shapely, pyproj, numpy, scikit-learn, networkx) are already in the oracle's
+# pyproject above, so no dependency is added here. The gazetteer and the
+# real-road network JSON load from /repo/VVIP/scripts/data (the libraries walk
+# up from their own files to the repo root). The oracle core (events/, city/)
+# never imports osint_*: without these the OSINT routers self-skip and their
+# stubs answer 503, as in the x86 Dockerfile.traffic-oracle (unchanged).
+COPY services/osint-common/src/ /repo/VVIP/services/osint-common/src/
+COPY services/osint-geo/src/ /repo/VVIP/services/osint-geo/src/
+COPY services/osint-analysis/src/ /repo/VVIP/services/osint-analysis/src/
+COPY scripts/data/osint_gazetteer.json scripts/data/osm_network.json /repo/VVIP/scripts/data/
+
+ENV PYTHONUNBUFFERED=1
+# The oracle's own src stays the FIRST entry: the sandboxes' sbx_stack.sh
+# (img_src) mounts a checkout's oracle src over the path it names.
+ENV PYTHONPATH=/repo/VVIP/services/traffic-oracle/src:/repo/VVIP/services/osint-common/src:/repo/VVIP/services/osint-geo/src:/repo/VVIP/services/osint-analysis/src
+
+# Non-root runtime (uid 10004; the emulator is 10002, osint-ingress 10003).
+# COPY keeps the checkout's mode bits and POSIX ACLs (0640/2750 on this host,
+# other::---): make the tree world-readable, byte-compile it while still root
+# (the runtime user cannot write __pycache__ under /repo), and give the user
+# a real, writable HOME — onnxruntime keeps its device-id/telemetry cache in
+# ~/.cache. The service writes nothing else outside /tmp (no volume, no host
+# path: compose mounts none for the oracle).
+RUN chmod -R a+rX /repo/VVIP \
+ && python -m compileall -q /repo/VVIP/services \
+ && useradd --system --uid 10004 --create-home --home-dir /home/oracle \
+        --shell /usr/sbin/nologin oracle
+USER oracle
+CMD ["python", "-m", "traffic_oracle"]

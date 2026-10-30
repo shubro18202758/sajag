@@ -1,0 +1,73 @@
+# ai-media stream compose stanza: the speech (8194) and vision (8196) services.
+# Run layered over the base fleet, e.g.
+#   docker compose -p sajag -f infra/compose.yml -f infra/compose.ai-media.yml up -d speech vision
+#
+# Both answer on loopback only; the command deck reaches them through its own
+# server-side proxy.
+#
+# speech  — bridge network, published as 127.0.0.1:8194. Needs the GPU (NVIDIA
+#           Container Toolkit) and the host's Hugging Face cache, mounted
+#           read-only with HF_HUB_OFFLINE=1:
+#           marathiAI/tugstugi_marathiai-asr_whisper-medium, kenpath/svara-tts-v1
+#           and hubertsiuzdak/snac_24khz must be present.
+#           Models load on first use and unload after SPEECH_IDLE_UNLOAD_S.
+#           (Image validated: builds on linux/arm64, torch 2.14.1+cu130 sees the GPU.)
+# vision  — host network (like traffic-oracle/convoy-brain in the gb10
+#           override): the Qwen3-VL llama-server runs on the host and binds
+#           127.0.0.1 only, which a bridge container cannot reach. The service
+#           binds 127.0.0.1:8196 itself. Start the model server on the host
+#           with services/vision/scripts/serve_llm.sh start (127.0.0.1:8201).
+services:
+  speech:
+    build:
+      context: ../services/speech
+      dockerfile: ../../infra/docker/Dockerfile.speech
+    container_name: sajag-speech
+    environment:
+      SPEECH_HOST: 0.0.0.0            # inside the container; published on loopback below
+      SPEECH_PORT: "8194"
+      SPEECH_CITY_DIR: /app/cities/mumbai
+      SPEECH_TTS_CACHE_DIR: /cache/tts
+      SPEECH_IDLE_UNLOAD_S: "600"
+      # In the container TTS runs in transformers (self-contained, ~3.5x slower
+      # than real time on the shared GPU). On bare metal the service prefers
+      # the llama.cpp GGUF backend (SPEECH_TTS_BACKEND=auto), ~1.3x real time.
+      SPEECH_TTS_BACKEND: transformers
+      HF_HOME: /hf
+      HF_HUB_OFFLINE: "1"
+    ports:
+      - "127.0.0.1:8194:8194"
+    volumes:
+      - ../cities/mumbai:/app/cities/mumbai:ro
+      - ${HOME}/.cache/huggingface:/hf:ro
+      - speech_tts_cache:/cache/tts
+    deploy:
+      resources:
+        limits:
+          memory: 20G
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    restart: unless-stopped
+
+  vision:
+    build:
+      context: ../services/vision
+      dockerfile: ../../infra/docker/Dockerfile.vision
+    container_name: sajag-vision
+    network_mode: host
+    environment:
+      VISION_HOST: 127.0.0.1
+      VISION_PORT: "8196"
+      VISION_LLM_MANAGE: "0"
+      VISION_LLM_URL: http://127.0.0.1:8201
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+    restart: unless-stopped
+
+volumes:
+  speech_tts_cache:

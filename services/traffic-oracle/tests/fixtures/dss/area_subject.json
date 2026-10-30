@@ -1,0 +1,39 @@
+{
+  "synthetic": true,
+  "about": "SYNTHETIC district-level subject with NO road anchor (OS-6): an official district weather alert replica, area-level, no segment and no junction. Every dispatch, closure, diversion and signal-hold COA must be infeasible up front with 'no road anchor: area-level report'.",
+  "dss_input_event": {
+    "osint_event_id": "synthetic-area-kolkata-district",
+    "event_class": "weather_hazard",
+    "correlated_classes": ["weather_hazard"],
+    "subtype": "heavy_rain_warning",
+    "sajag_event_kind": "hazard",
+    "sajag_incident_kind": "weather",
+    "toponym": "Kolkata district",
+    "segment_id": null,
+    "junction_id": null,
+    "area_level": true,
+    "rep_lonlat": [88.3639, 22.5726],
+    "geocode_confidence": 0.4,
+    "credibility": 0.95,
+    "verification_state": "OFFICIAL-VERIFIED",
+    "source_count": 1,
+    "source_tiers": ["official"],
+    "independent_publishers": 1,
+    "cross_type_corroborated": false,
+    "attach": {"novel": true},
+    "sources": [
+      {"source": "sachet_cap", "publisher": "sachet.ndma.gov.in", "url": null,
+       "title": "Synthetic replica: heavy rain and waterlogging warning for Kolkata district",
+       "event_class": "weather_hazard", "credibility": 0.95, "fetch_mode": "cached-sample"}
+    ],
+    "labels": ["OFFICIAL-VERIFIED"],
+    "note": "1 official alert (synthetic replica): heavy rain and waterlogging warning for Kolkata district"
+  },
+  "seed": 20261024,
+  "units": {
+    "police": {"free": 3, "eta_sec": 400},
+    "ambulance": {"free": 2, "eta_sec": 450},
+    "traffic": {"free": 2, "eta_sec": 380},
+    "fire": {"free": 1, "eta_sec": 600}
+  }
+}

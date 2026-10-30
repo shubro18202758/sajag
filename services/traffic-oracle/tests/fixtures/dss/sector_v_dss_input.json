@@ -1,0 +1,63 @@
+{
+  "synthetic": true,
+  "about": "SYNTHETIC replica of the PoC's out/dss_input.json structure (OS-6, plan R13): the correlated affray+collision situation at segment 1045, credibility 0.65 NEWS-REPORTED, two fictional publishers. No real publisher, person or URL.",
+  "dss_input_event": {
+    "osint_event_id": "synthetic-sector-v-1045",
+    "event_class": "road_accident",
+    "correlated_classes": ["road_accident", "public_conflict"],
+    "subtype": "affray+collision",
+    "sajag_event_kind": "road_accident",
+    "sajag_incident_kind": "accident",
+    "toponym": "Sector V, Salt Lake",
+    "segment_id": 1045,
+    "junction_id": null,
+    "area_level": false,
+    "rep_lonlat": [88.449, 22.579],
+    "geocode_confidence": 0.719,
+    "credibility": 0.65,
+    "verification_state": "NEWS-REPORTED",
+    "source_count": 4,
+    "source_tiers": ["aggregator"],
+    "independent_publishers": 2,
+    "cross_type_corroborated": false,
+    "attach": {"novel": true},
+    "sources": [
+      {"source": "google_news_rss", "publisher": "news-a.example", "url": null,
+       "title": "Car crashes into three vehicles near Sector V, Salt Lake; 3 injured",
+       "event_class": "road_accident", "credibility": 0.6, "fetch_mode": "cached-sample"},
+      {"source": "google_news_rss", "publisher": "news-b.example", "url": null,
+       "title": "Multi-vehicle crash on the New Town link road near Sector V leaves three injured",
+       "event_class": "road_accident", "credibility": 0.6, "fetch_mode": "cached-sample"},
+      {"source": "google_news_rss", "publisher": "news-b.example", "url": null,
+       "title": "Sector V accident: vehicles collided on the New Town link road, one lane blocked",
+       "event_class": "road_accident", "credibility": 0.6, "fetch_mode": "cached-sample"},
+      {"source": "google_news_rss", "publisher": "news-b.example", "url": null,
+       "title": "Driver beaten by mob after a crash near Sector V, Salt Lake",
+       "event_class": "public_conflict", "credibility": 0.6, "fetch_mode": "cached-sample"}
+    ],
+    "labels": ["NEWS-REPORTED"],
+    "note": "4 report(s) across 2 related class(es) ['road_accident', 'public_conflict'] CORRELATED into one situation at Sector V, Salt Lake: Car crashes into three vehicles near Sector V, Salt Lake; 3 injured"
+  },
+  "seed": 20261024,
+  "segment_model": {
+    "segment_id": 1045,
+    "name": "Sector V - New Town link",
+    "road_class": "primary",
+    "lanes": 3,
+    "base_demand_veh_h": 2800,
+    "free_speed_kmh": 55,
+    "length_km": 1.2,
+    "parallel_routes": ["Salt Lake Bypass", "Narkelbagan Road"],
+    "neighbours": ["Sector V", "New Town", "Narkelbagan"],
+    "source": "poc-fixture"
+  },
+  "anchors": {
+    "hold_junction_id": 28,
+    "place_urn": "place:sector_v_salt_lake_106"
+  },
+  "units": {
+    "police": {"free": 1, "fielded": 2, "committed": 1, "eta_sec": 420, "unit_ids": ["PCR-EM-02"]},
+    "ambulance": {"free": 1, "fielded": 1, "committed": 0, "eta_sec": 480, "unit_ids": ["108-EM-01"]},
+    "traffic": {"free": 2, "fielded": 2, "committed": 0, "eta_sec": 360, "unit_ids": ["TP-EM-01", "TP-EM-02"]}
+  }
+}

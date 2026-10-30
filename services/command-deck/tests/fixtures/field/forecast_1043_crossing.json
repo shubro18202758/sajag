@@ -1,0 +1,243 @@
+{
+ "origin": "2026-10-28T12:00:00+00:00",
+ "model": "chronos-2",
+ "threshold_vc": 0.8,
+ "horizon_min": 120,
+ "segment": {
+  "segment_id": 1043,
+  "road_name": "VIP Road (Kazi Nazrul Islam Avenue)",
+  "place": "Kolkata Airport (VIP Road gate)",
+  "from_junction": 37,
+  "to_junction": 38,
+  "data_label": "SIMULATED",
+  "history_source": "synthetic Kolkata history (seed 1690)",
+  "history_steps": 1344,
+  "notes": [],
+  "now": {
+   "t": "2026-10-28T12:00:00+00:00",
+   "vc": 0.799,
+   "speed_kmh": 48.7
+  },
+  "steps": [
+   {
+    "t": "2026-10-28T12:15:00+00:00",
+    "lead_min": 15,
+    "vc": {
+     "p10": 0.789,
+     "p50": 0.836,
+     "p90": 0.888
+    },
+    "speed_kmh": {
+     "p10": 44.3,
+     "p50": 46.9,
+     "p90": 49.1
+    },
+    "baseline_vc_p50": 1.012
+   },
+   {
+    "t": "2026-10-28T12:30:00+00:00",
+    "lead_min": 30,
+    "vc": {
+     "p10": 0.791,
+     "p50": 0.847,
+     "p90": 0.909
+    },
+    "speed_kmh": {
+     "p10": 43.2,
+     "p50": 46.4,
+     "p90": 49.0
+    },
+    "baseline_vc_p50": 0.998
+   },
+   {
+    "t": "2026-10-28T12:45:00+00:00",
+    "lead_min": 45,
+    "vc": {
+     "p10": 0.788,
+     "p50": 0.854,
+     "p90": 0.92
+    },
+    "speed_kmh": {
+     "p10": 42.6,
+     "p50": 46.0,
+     "p90": 49.2
+    },
+    "baseline_vc_p50": 0.981
+   },
+   {
+    "t": "2026-10-28T13:00:00+00:00",
+    "lead_min": 60,
+    "vc": {
+     "p10": 0.786,
+     "p50": 0.85,
+     "p90": 0.918
+    },
+    "speed_kmh": {
+     "p10": 42.7,
+     "p50": 46.2,
+     "p90": 49.2
+    },
+    "baseline_vc_p50": 0.933
+   },
+   {
+    "t": "2026-10-28T13:15:00+00:00",
+    "lead_min": 75,
+    "vc": {
+     "p10": 0.774,
+     "p50": 0.842,
+     "p90": 0.911
+    },
+    "speed_kmh": {
+     "p10": 43.1,
+     "p50": 46.6,
+     "p90": 49.8
+    },
+    "baseline_vc_p50": 0.916
+   },
+   {
+    "t": "2026-10-28T13:30:00+00:00",
+    "lead_min": 90,
+    "vc": {
+     "p10": 0.76,
+     "p50": 0.828,
+     "p90": 0.901
+    },
+    "speed_kmh": {
+     "p10": 43.6,
+     "p50": 47.3,
+     "p90": 50.4
+    },
+    "baseline_vc_p50": 0.901
+   },
+   {
+    "t": "2026-10-28T13:45:00+00:00",
+    "lead_min": 105,
+    "vc": {
+     "p10": 0.741,
+     "p50": 0.812,
+     "p90": 0.88
+    },
+    "speed_kmh": {
+     "p10": 44.7,
+     "p50": 48.1,
+     "p90": 51.1
+    },
+    "baseline_vc_p50": 0.86
+   },
+   {
+    "t": "2026-10-28T14:00:00+00:00",
+    "lead_min": 120,
+    "vc": {
+     "p10": 0.718,
+     "p50": 0.789,
+     "p90": 0.856
+    },
+    "speed_kmh": {
+     "p10": 45.9,
+     "p50": 49.1,
+     "p90": 52.0
+    },
+    "baseline_vc_p50": 0.875
+   }
+  ],
+  "crossing": {
+   "threshold": 0.8,
+   "at": "2026-10-28T12:15:00+00:00",
+   "in_min": 15,
+   "vc_p10": 0.789,
+   "vc_p50": 0.836,
+   "vc_p90": 0.888,
+   "baseline_vc_p50": 1.012
+  },
+  "above_threshold_now": false,
+  "covariates": {
+   "rain": {
+    "label": "SIMULATED",
+    "next_2h_mm": 0.0,
+    "source": "simulated world"
+   },
+   "gate_closed": {
+    "label": "SIMULATED",
+    "next_2h_steps_closed": 0,
+    "source": "Garden Reach tide model (approximate)"
+   },
+   "event": {
+    "label": "SIMULATED",
+    "active_next_2h": false,
+    "source": "simulated calendar (Puja nights, match egress)"
+   }
+  },
+  "model": "chronos-2",
+  "proposal_id": "fc-1043-20261028T1200Z"
+ },
+ "proposal": {
+  "proposal_id": "fc-1043-20261028T1200Z",
+  "kind": "pre_emptive_diversion",
+  "subject_urn": "segment:1043",
+  "state": "proposed",
+  "generated_at": "2026-10-28T12:00:00+00:00",
+  "expires_at": "2026-10-28T12:15:00+00:00",
+  "horizon_min": 120,
+  "summary": "Kolkata Airport (VIP Road gate): V/C forecast 0.84 in 15 min (p10–p90 0.79–0.89) on VIP Road (Kazi Nazrul Islam Avenue); no reasonable detour on the city network — propose a signal-timing review.",
+  "situation": {
+   "segment_id": 1043,
+   "road_name": "VIP Road (Kazi Nazrul Islam Avenue)",
+   "place": "Kolkata Airport (VIP Road gate)",
+   "junction_id": 38,
+   "vc_now": 0.799,
+   "crossing_at": "2026-10-28T12:15:00+00:00",
+   "in_min": 15,
+   "vc_p10": 0.79,
+   "vc_p50": 0.84,
+   "vc_p90": 0.89,
+   "threshold": 0.8,
+   "baseline_vc_p50": 1.012
+  },
+  "actions": [
+   {
+    "verb": "monitor",
+    "target_urn": "segment:1043",
+    "params": {
+     "review": "signal timing at Kolkata Airport (VIP Road gate)",
+     "window_min": 120
+    },
+    "requires_officer": true,
+    "reversible": true
+   },
+   {
+    "verb": "advisory",
+    "target_urn": "junction:38",
+    "params": {
+     "draft_en": "Heavy traffic expected near Kolkata Airport (VIP Road gate) in about 15 minutes. Please plan ahead.",
+     "channel": "public advisory (after officer approval)"
+    },
+    "requires_officer": true,
+    "reversible": true
+   }
+  ],
+  "expected_effect": {
+   "suggested_share": 0.07,
+   "note": "share of the flow that would have to divert to hold the forecast median just under the threshold (MODELLED, proportional; not simulated in the twin)"
+  },
+  "recommendation": {
+   "decision": "await_officer"
+  },
+  "human_gate": {
+   "state": "proposed",
+   "required_role": "duty_officer",
+   "officer": null,
+   "decided_at": null
+  },
+  "labels": [
+   "SIMULATED",
+   "MODELLED"
+  ],
+  "provenance": {
+   "model": "chronos-2",
+   "data": "SIMULATED",
+   "history_source": "synthetic Kolkata history (seed 1690)"
+  }
+ },
+ "data_note": "Forecast on simulated traffic: the history is the platform's SIMULATED Kolkata history (or the oracle's simulated feed). Covariates come from the same simulated world.",
+ "_fixture": "segment 1043 and its proposal from GET /forecast/segments?horizon_min=120 (Chronos-2, SIMULATED history), 28 Oct 2026, in the /forecast/segment/{id} shape"
+}

@@ -1,0 +1,212 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1480 1060" width="1480" height="1060" font-family="Inter, 'Noto Sans Devanagari', system-ui, sans-serif" role="img" aria-label="Sajag — the shell (every operator page) — low-fidelity wireframe">
+  <title>Sajag — the shell (every operator page) — low-fidelity wireframe</title>
+  <defs>
+    <pattern id="hatch" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="14" height="14" fill="#EFEFEF"/>
+      <line x1="0" y1="0" x2="0" y2="14" stroke="#E0E0E0" stroke-width="5"/>
+    </pattern>
+    <pattern id="hatchband" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="8" height="8" fill="#E4E4E4"/>
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#CFCFCF" stroke-width="3"/>
+    </pattern>
+  </defs>
+  <rect width="1480" height="1060" fill="#FFFFFF"/>
+  <text x="20" y="32" font-size="21" font-weight="700" fill="#262626">Sajag — the shell (every operator page)</text>
+  <text x="20" y="56" font-size="13" font-weight="400" fill="#5E5E5E">Low-fidelity wireframe at 1440 px wide: rail 76 px, top bar 60 px, gutter 24 px. Greyscale; colour only for meaning.</text>
+  <!-- frame -->
+  <rect x="20" y="78" width="1440" height="900" rx="0" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.5"/>
+  <!-- AppRail: 76 px below 1500 px wide (88 px at &gt;= 1500); icon + label, never icon-only -->
+  <rect x="20" y="78" width="76" height="900" rx="0" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1.2"/>
+  <rect x="36" y="90" width="44" height="44" rx="10" fill="#1A1A1A" stroke="#4A4A4A" stroke-width="1.2"/>
+  <text x="58" y="119" font-size="20" font-weight="700" text-anchor="middle" fill="#262626">S</text>
+  <rect x="28" y="148" width="60" height="56" rx="10" fill="#DCDCDC" stroke="#989898" stroke-width="1.6"/>
+  <circle cx="58" cy="168" r="8" fill="#CFCFCF" stroke="#8E8E8E" stroke-width="1"/>
+  <text x="58" y="194" font-size="10.5" font-weight="700" text-anchor="middle" fill="#262626">Home</text>
+  <rect x="28" y="212" width="60" height="56" rx="10" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1"/>
+  <circle cx="58" cy="232" r="8" fill="#DCDCDC" stroke="#989898" stroke-width="1"/>
+  <text x="58" y="258" font-size="10.5" font-weight="500" text-anchor="middle" fill="#262626">Map</text>
+  <rect x="28" y="276" width="60" height="56" rx="10" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1"/>
+  <circle cx="58" cy="296" r="8" fill="#DCDCDC" stroke="#989898" stroke-width="1"/>
+  <text x="58" y="322" font-size="10.5" font-weight="500" text-anchor="middle" fill="#262626">Decide</text>
+  <circle cx="74" cy="287" r="8" fill="#C2410C"/>
+  <text x="74" y="291" font-size="9.5" font-weight="700" text-anchor="middle" fill="#FFFFFF">3</text>
+  <rect x="28" y="340" width="60" height="56" rx="10" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1"/>
+  <circle cx="58" cy="360" r="8" fill="#DCDCDC" stroke="#989898" stroke-width="1"/>
+  <text x="58" y="386" font-size="10.5" font-weight="500" text-anchor="middle" fill="#262626">Plan</text>
+  <rect x="28" y="404" width="60" height="56" rx="10" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1"/>
+  <circle cx="58" cy="424" r="8" fill="#DCDCDC" stroke="#989898" stroke-width="1"/>
+  <text x="58" y="450" font-size="10.5" font-weight="500" text-anchor="middle" fill="#262626">Assistant</text>
+  <rect x="28" y="468" width="60" height="56" rx="10" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1"/>
+  <circle cx="58" cy="488" r="8" fill="#DCDCDC" stroke="#989898" stroke-width="1"/>
+  <text x="58" y="514" font-size="10.5" font-weight="500" text-anchor="middle" fill="#262626">Advisories</text>
+  <line x1="34" y1="894" x2="82" y2="894" stroke="#B5B5B5" stroke-width="1.2"/>
+  <rect x="28" y="906" width="60" height="56" rx="10" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1.2"/>
+  <circle cx="58" cy="926" r="8" fill="#DCDCDC" stroke="#989898" stroke-width="1"/>
+  <text x="58" y="952" font-size="10.5" font-weight="500" text-anchor="middle" fill="#262626">Analyst</text>
+  <!-- TopBar: 60 px; title | search (the prominent element) | Report, language, alerts, officer -->
+  <rect x="96" y="78" width="1364" height="60" rx="0" fill="#F4F4F4" stroke="#ABABAB" stroke-width="1.2"/>
+  <text x="120" y="115" font-size="16" font-weight="700" fill="#262626">Screen title</text>
+  <rect x="360" y="88" width="560" height="40" rx="20" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.2"/>
+  <circle cx="382" cy="108" r="7" fill="#DCDCDC" stroke="#989898" stroke-width="1"/>
+  <text x="400" y="113" font-size="12.5" font-weight="400" fill="#5E5E5E">Search a place, road, event or vehicle mark</text>
+  <rect x="860" y="97" width="48" height="22" rx="11" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.2"/>
+  <text x="884" y="112" font-size="10" font-weight="600" text-anchor="middle" fill="#5E5E5E">Ctrl K</text>
+  <rect x="932" y="92" width="90" height="32" rx="16" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.2"/>
+  <rect x="948.8" y="99.8" width="6.4" height="10.4" rx="3.2" fill="#262626"/>
+  <path d="M946.4,107 a5.6,5.6 0 0 0 11.2,0" fill="none" stroke="#262626" stroke-width="1.3"/>
+  <line x1="952" y1="112.6" x2="952" y2="115.8" stroke="#262626" stroke-width="1.3"/>
+  <text x="966" y="113" font-size="11.5" font-weight="600" fill="#262626">Report</text>
+  <rect x="1032" y="92" width="132" height="32" rx="16" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.2"/>
+  <text x="1044" y="113" font-size="11.5" font-weight="400" fill="#5E5E5E">मराठी</text>
+  <text x="1084" y="113" font-size="11.5" font-weight="400" fill="#5E5E5E">·</text>
+  <text x="1093" y="113" font-size="11.5" font-weight="700" fill="#262626">EN</text>
+  <text x="1116" y="113" font-size="11.5" font-weight="400" fill="#5E5E5E">·</text>
+  <text x="1126" y="113" font-size="11.5" font-weight="400" fill="#5E5E5E">हिंदी</text>
+  <circle cx="1188" cy="108" r="13" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1"/>
+  <path d="M1182,112 q0,-11 6,-11 q6,0 6,11 z" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.2"/>
+  <rect x="1212" y="88" width="236" height="40" rx="20" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <circle cx="1232" cy="108" r="11" fill="#DCDCDC" stroke="#989898" stroke-width="1"/>
+  <text x="1250" y="105" font-size="11.5" font-weight="650" fill="#262626">Name the duty officer</text>
+  <text x="1250" y="119" font-size="10" font-weight="400" fill="#5E5E5E">Plates hidden</text>
+  <rect x="96" y="138" width="1364" height="36" rx="0" fill="#F4F4F4" stroke="#ABABAB" stroke-width="1.2" stroke-dasharray="6 5"/>
+  <text x="120" y="161" font-size="12" font-weight="400" fill="#5E5E5E">LiveBand (36 px): only while something is live — a movement, a pursuit, a decision with a deadline.</text>
+  <!-- the screen -->
+  <rect x="96" y="174" width="1364" height="804" rx="0" fill="#F4F4F4" stroke="#ABABAB" stroke-width="1.2"/>
+  <text x="120" y="208" font-size="15" font-weight="650" fill="#262626">Screen (main): one job per screen, at most one primary button</text>
+  <rect x="120" y="228" width="560" height="220" rx="8" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1.2"/>
+  <text x="136" y="254" font-size="13" font-weight="650" fill="#262626">Page content</text>
+  <rect x="136" y="272" width="380" height="5" rx="2.5" fill="#DCDCDC"/>
+  <rect x="136" y="283" width="380" height="5" rx="2.5" fill="#DCDCDC"/>
+  <rect x="136" y="294" width="228" height="5" rx="2.5" fill="#DCDCDC"/>
+  <rect x="136" y="380" width="200" height="48" rx="24" fill="#262626" stroke="#262626" stroke-width="1.2"/>
+  <text x="236" y="408.7" font-size="13" font-weight="650" text-anchor="middle" fill="#FFFFFF">Primary action</text>
+  <rect x="348" y="384" width="120" height="40" rx="20" fill="#FFFFFF" stroke="#8E8E8E" stroke-width="1.2"/>
+  <text x="408" y="408.7" font-size="13" font-weight="650" text-anchor="middle" fill="#262626">Secondary</text>
+  <text x="696" y="254" font-size="12" font-weight="400" fill="#5E5E5E">Rail 76 px · top bar 60 px · gutter 24 px</text>
+  <text x="696" y="272" font-size="12" font-weight="400" fill="#5E5E5E">(88 · 68 · 32 px at &gt;= 1500 px wide)</text>
+  <rect x="696" y="296" width="190" height="28" rx="14" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.2" stroke-dasharray="6 5"/>
+  <text x="791" y="315" font-size="11.5" font-weight="600" text-anchor="middle" fill="#262626">Skip to main content</text>
+  <text x="696" y="344" font-size="11.5" font-weight="400" fill="#5E5E5E">the first focus stop; shown at the top left only on focus</text>
+  <text x="120" y="484" font-size="14" font-weight="650" fill="#262626">What the shell guarantees</text>
+  <circle cx="130" cy="510" r="10" fill="#4A4A4A"/>
+  <text x="130" y="514" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">1</text>
+  <text x="150" y="514" font-size="12.5" font-weight="400" fill="#262626">Rail, in the order of the officer's jobs: Home · Map · Decide · Plan · Assistant · Advisories; Analyst separated at the bottom</text>
+  <text x="150" y="531.5" font-size="12.5" font-weight="400" fill="#262626">(visible to every officer). The Sajag mark sits on top: white, with its one blue dot.</text>
+  <circle cx="130" cy="553" r="10" fill="#4A4A4A"/>
+  <text x="130" y="557" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">2</text>
+  <text x="150" y="557" font-size="12.5" font-weight="400" fill="#262626">Decide carries the only badge, in orange: the decisions waiting for a named officer (also spoken in words for screen</text>
+  <text x="150" y="574.5" font-size="12.5" font-weight="400" fill="#262626">readers).</text>
+  <circle cx="130" cy="596" r="10" fill="#4A4A4A"/>
+  <text x="130" y="600" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">3</text>
+  <text x="150" y="600" font-size="12.5" font-weight="400" fill="#262626">Title of the screen: one line, it truncates; the search and every control keep their pixels.</text>
+  <circle cx="130" cy="621.5" r="10" fill="#4A4A4A"/>
+  <text x="130" y="625.5" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">4</text>
+  <text x="150" y="625.5" font-size="12.5" font-weight="400" fill="#262626">Search, the prominent element (Ctrl K, Cmd K or /): Mumbai places, roads, events and vehicle marks.</text>
+  <circle cx="130" cy="647" r="10" fill="#4A4A4A"/>
+  <text x="130" y="651" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">5</text>
+  <text x="150" y="651" font-size="12.5" font-weight="400" fill="#262626">Report: hold to speak a field report in Marathi, English or Hindi. It reaches the board as "Field report · unverified" for an</text>
+  <text x="150" y="668.5" font-size="12.5" font-weight="400" fill="#262626">officer to confirm (see wf-voice).</text>
+  <circle cx="130" cy="690" r="10" fill="#4A4A4A"/>
+  <text x="130" y="694" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">6</text>
+  <text x="150" y="694" font-size="12.5" font-weight="400" fill="#262626">Language: मराठी · English · हिंदी, with the data status and the exercise-data switch in the same menu. Console numbers stay</text>
+  <text x="150" y="711.5" font-size="12.5" font-weight="400" fill="#262626">in Latin digits in all three.</text>
+  <circle cx="130" cy="733" r="10" fill="#4A4A4A"/>
+  <text x="130" y="737" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">7</text>
+  <text x="150" y="737" font-size="12.5" font-weight="400" fill="#262626">Alerts bell: the last 50 alerts, read state per browser; a soft chime for each new decision (emulated ones chime only while</text>
+  <text x="150" y="754.5" font-size="12.5" font-weight="400" fill="#262626">the console runs on exercise data).</text>
+  <circle cx="130" cy="776" r="10" fill="#4A4A4A"/>
+  <text x="130" y="780" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">8</text>
+  <text x="150" y="780" font-size="12.5" font-weight="400" fill="#262626">Officer pill: "Name the duty officer · Plates hidden" until someone is named; then "On duty: &lt;name&gt;" and plates show to</text>
+  <text x="150" y="797.5" font-size="12.5" font-weight="400" fill="#262626">that name only. Every decision records the name.</text>
+  <circle cx="130" cy="819" r="10" fill="#4A4A4A"/>
+  <text x="130" y="823" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">9</text>
+  <text x="150" y="823" font-size="12.5" font-weight="400" fill="#262626">Keys: G then H / M / D / P / A / V moves between screens; Esc closes, then clears. No single key approves, unmasks,</text>
+  <text x="150" y="840.5" font-size="12.5" font-weight="400" fill="#262626">dispatches or publishes.</text>
+  <rect x="980" y="400" width="456" height="320" rx="12" fill="#FFFFFF" stroke="#ABABAB" stroke-width="1.2"/>
+  <text x="1000" y="430" font-size="13.5" font-weight="650" fill="#262626">Honest labels: one small tag, never a banner</text>
+  <rect x="1000" y="446" width="41.4" height="20" rx="10" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1"/>
+  <text x="1020.7" y="459.8" font-size="10.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Live</text>
+  <text x="1053.4" y="460" font-size="11" font-weight="400" fill="#5E5E5E">from a real live feed (e.g. the rain nowcast)</text>
+  <rect x="1000" y="482" width="67.2" height="20" rx="10" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="1033.6" y="495.8" font-size="10.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Modelled</text>
+  <text x="1079.2" y="496" font-size="11" font-weight="400" fill="#5E5E5E">a computed estimate (tide, ponding, the twin)</text>
+  <rect x="1000" y="518" width="75.4" height="20" rx="10" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="1037.7" y="531.8" font-size="10.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Simulated</text>
+  <text x="1087.4" y="532" font-size="11" font-weight="400" fill="#5E5E5E">a scenario (traffic until Mumbai is recorded)</text>
+  <rect x="1000" y="554" width="71.6" height="20" rx="10" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="1035.8" y="567.8" font-size="10.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Emulated</text>
+  <text x="1083.6" y="568" font-size="11" font-weight="400" fill="#5E5E5E">a feed stand-in (e.g. pump status)</text>
+  <rect x="1000" y="590" width="161.6" height="20" rx="10" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="1080.8" y="603.8" font-size="10.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Field report · unverified</text>
+  <text x="1173.6" y="604" font-size="11" font-weight="400" fill="#5E5E5E">a claim from the field, not yet confirmed</text>
+  <rect x="1000" y="626" width="209.1" height="20" rx="10" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="1104.5" y="639.8" font-size="10.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Camera · AI reading · unverified</text>
+  <text x="1221.1" y="640" font-size="11" font-weight="400" fill="#5E5E5E">a vision model's reading of a still</text>
+  <rect x="1000" y="662" width="171.2" height="20" rx="10" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="1085.6" y="675.8" font-size="10.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Reference photo · not live</text>
+  <text x="1183.2" y="676" font-size="11" font-weight="400" fill="#5E5E5E">illustration, never a live frame</text>
+  <text x="1000" y="704" font-size="11" font-weight="400" fill="#5E5E5E">Solid outline: live or observed. Dashed: anything else.</text>
+  <rect x="980" y="736" width="456" height="170" rx="12" fill="#FFFFFF" stroke="#ABABAB" stroke-width="1.2"/>
+  <text x="1000" y="766" font-size="13.5" font-weight="650" fill="#262626">Colour carries meaning, nothing else</text>
+  <rect x="1000" y="777" width="14" height="14" rx="7" fill="#C2410C"/>
+  <text x="1024" y="788" font-size="12" font-weight="400" fill="#262626">Orange: needs a named officer's decision</text>
+  <rect x="1000" y="800" width="14" height="14" rx="7" fill="#B91C1C"/>
+  <text x="1024" y="811" font-size="12" font-weight="400" fill="#262626">Red: danger, impassable water, a stolen vehicle</text>
+  <rect x="1000" y="823" width="14" height="14" rx="7" fill="#15803D"/>
+  <text x="1024" y="834" font-size="12" font-weight="400" fill="#262626">Green: approved, healthy</text>
+  <rect x="1000" y="846" width="14" height="14" rx="7" fill="#1D5FD1"/>
+  <text x="1024" y="857" font-size="12" font-weight="400" fill="#262626">Blue: a link, or text an AI wrote</text>
+  <rect x="1000" y="869" width="14" height="14" rx="7" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.2"/>
+  <text x="1024" y="880" font-size="12" font-weight="400" fill="#262626">White and grey: everything else (no yellow)</text>
+  <rect x="1032" y="142" width="270" height="168" rx="12" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.2" stroke-dasharray="6 5"/>
+  <text x="1048" y="166" font-size="12.5" font-weight="650" fill="#262626">Language and data</text>
+  <text x="1048" y="188" font-size="11" font-weight="600" fill="#5E5E5E">Language</text>
+  <rect x="1048" y="196" width="51.7" height="26" rx="13" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1"/>
+  <text x="1073.8" y="213.1" font-size="11.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">मराठी</text>
+  <rect x="1107.7" y="196" width="66.6" height="26" rx="13" fill="#262626" stroke="#262626" stroke-width="1.1"/>
+  <text x="1141" y="213.1" font-size="11.5" font-weight="600" text-anchor="middle" fill="#FFFFFF">English</text>
+  <rect x="1182.3" y="196" width="46.8" height="26" rx="13" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1"/>
+  <text x="1205.7" y="213.1" font-size="11.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">हिंदी</text>
+  <text x="1048" y="246" font-size="11" font-weight="400" fill="#262626">Data status: rain live · tide modelled ·</text>
+  <text x="1048" y="262" font-size="11" font-weight="400" fill="#262626">pumps emulated · traffic simulated</text>
+  <text x="1048" y="288" font-size="11" font-weight="400" fill="#5E5E5E">Exercise data in use (flask in the bar)</text>
+  <text x="1312" y="178" font-size="11" font-weight="600" fill="#5E5E5E">Once named:</text>
+  <rect x="1312" y="184" width="136" height="70" rx="12" fill="#FFFFFF" stroke="#ABABAB" stroke-width="1.2"/>
+  <text x="1324" y="206" font-size="11.5" font-weight="650" fill="#262626">On duty: A. Patil</text>
+  <text x="1324" y="224" font-size="10.5" font-weight="400" fill="#5E5E5E">plates shown to</text>
+  <text x="1324" y="240" font-size="10.5" font-weight="400" fill="#5E5E5E">A. Patil · Sign out</text>
+  <text x="1312" y="270" font-size="10" font-weight="400" fill="#5E5E5E">A. Patil is a sample name.</text>
+  <circle cx="92" cy="140" r="10" fill="#4A4A4A"/>
+  <text x="92" y="144" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">1</text>
+  <circle cx="106" cy="300" r="10" fill="#4A4A4A"/>
+  <text x="106" y="304" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">2</text>
+  <circle cx="250" cy="108" r="10" fill="#4A4A4A"/>
+  <text x="250" y="112" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">3</text>
+  <circle cx="364" cy="86" r="10" fill="#4A4A4A"/>
+  <text x="364" y="90" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">4</text>
+  <circle cx="936" cy="86" r="10" fill="#4A4A4A"/>
+  <text x="936" y="90" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">5</text>
+  <circle cx="1036" cy="86" r="10" fill="#4A4A4A"/>
+  <text x="1036" y="90" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">6</text>
+  <circle cx="1188" cy="132" r="10" fill="#4A4A4A"/>
+  <text x="1188" y="136" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">7</text>
+  <circle cx="1444" cy="132" r="10" fill="#4A4A4A"/>
+  <text x="1444" y="136" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">8</text>
+  <rect x="20" y="1000" width="14" height="14" rx="3" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1.2"/>
+  <text x="42" y="1011" font-size="12" font-weight="400" fill="#5E5E5E">layout region</text>
+  <rect x="139.9" y="1000" width="14" height="14" rx="3" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <text x="161.9" y="1011" font-size="12" font-weight="400" fill="#5E5E5E">dashed: modelled, simulated, emulated or unverified (or shown only when needed)</text>
+  <rect x="668.7" y="1000" width="14" height="14" rx="3" fill="url(#hatch)" stroke="#9A9A9A" stroke-width="1.2"/>
+  <text x="690.7" y="1011" font-size="12" font-weight="400" fill="#5E5E5E">map or picture</text>
+  <rect x="798.9" y="1000" width="14" height="14" rx="7" fill="#C2410C"/>
+  <text x="820.9" y="1011" font-size="12" font-weight="400" fill="#5E5E5E">needs an officer</text>
+  <rect x="939.4" y="1000" width="14" height="14" rx="7" fill="#B91C1C"/>
+  <text x="961.4" y="1011" font-size="12" font-weight="400" fill="#5E5E5E">danger</text>
+  <rect x="1020.4" y="1000" width="14" height="14" rx="7" fill="#15803D"/>
+  <text x="1042.4" y="1011" font-size="12" font-weight="400" fill="#5E5E5E">approved</text>
+  <rect x="1115.1" y="1000" width="14" height="14" rx="7" fill="#1D5FD1"/>
+  <text x="1137.1" y="1011" font-size="12" font-weight="400" fill="#5E5E5E">link / AI-written</text>
+  <rect x="1263" y="1000" width="14" height="14" rx="7" fill="#262626"/>
+  <text x="1285" y="1011" font-size="12" font-weight="400" fill="#5E5E5E">the one primary action</text>
+  <text x="20" y="1036" font-size="12" font-weight="400" fill="#5E5E5E">Rail and top bar sit at the same pixels on every operator page. The public pages (citizen, driver, welcome) use their own light shell with no sign-in.</text>
+</svg>

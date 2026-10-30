@@ -1,0 +1,31 @@
+{
+	"urn": "place:sector_v_salt_lake_106",
+	"kind": "place",
+	"id": "sector_v_salt_lake_106",
+	"label": "Sector V (Salt Lake)",
+	"lon": 88.4414,
+	"lat": 22.5799,
+	"state": "landmark",
+	"band": null,
+	"source": "osint",
+	"verification_state": null,
+	"credibility": null,
+	"t": "2026-10-20T13:59:00.000Z",
+	"age_sec": 387601.4,
+	"links": ["osint_event:8ec6f567-9366-47ae-8fde-38aa421a3219"],
+	"props": {
+		"feature_type": "landmark",
+		"canonical_name": "Sector V (Salt Lake)",
+		"surface_forms": [
+			"sector v",
+			"sector five",
+			"sector v crossing",
+			"sector v salt lake",
+			"সেক্টর ফাইভ",
+			"সল্টলেক সেক্টর ফাইভ"
+		],
+		"segment_id": null,
+		"junction_id": null,
+		"osint_event_count": 1
+	}
+}

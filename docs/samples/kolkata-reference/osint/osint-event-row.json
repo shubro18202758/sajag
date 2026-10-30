@@ -1,0 +1,54 @@
+{
+ "_sample": {
+  "pack": "Kolkata reference pack (cities/kolkata/, the second City Pack kept in the repository). Made on 28 Oct 2026, before the platform moved to Mumbai, as 'source' says; NOT a Mumbai capture. The Mumbai version of this file is pending.",
+  "source": "constructed for this documentation in the shape of GET /api/v1/osint/events (contract C-T) and validated with osint_common.types.OsintEventRow on 28 Oct 2026. Reconstructed by hand from the PTI and IANS reports of 23 Sep 2025 cited in docs/ai/hydro.md; NOT an output of the OSINT pipeline. The place, segment and coordinates are the network's own.",
+  "rules": "aggregate only: no person, author, handle or plate; a single social source is never surfaced"
+ },
+ "fused_event_id": "fx-rashbehari-0923",
+ "event_class": "urban_flooding",
+ "correlated_classes": [
+  "urban_flooding",
+  "weather_hazard"
+ ],
+ "subtype": "waterlogging",
+ "sajag_event_kind": "flooding",
+ "sajag_incident_kind": null,
+ "label": "Waterlogging reported at Rash Behari Avenue (Gariahat)",
+ "summary": "PTI and IANS reported waterlogging at Rashbehari Avenue and Gariahat after the overnight rain of 22-23 Sep 2025.",
+ "rep_lon": 88.366,
+ "rep_lat": 22.519,
+ "toponym": "Gariahat crossing",
+ "segment_id": 1033,
+ "junction_id": null,
+ "geocode_confidence": 0.86,
+ "area_level": false,
+ "window_start": "2025-09-22T21:15:00Z",
+ "window_end": "2025-09-23T06:30:00Z",
+ "credibility": 0.62,
+ "verification_state": "NEWS-REPORTED",
+ "source_count": 2,
+ "source_tiers": [
+  "news_wire"
+ ],
+ "independent_publishers": 2,
+ "cross_type_corroborated": false,
+ "second_order": [
+  {
+   "kind": "ambulance_route",
+   "urn": "segment:1033",
+   "segment_id": 1033,
+   "note": "On a modelled ambulance (108) route"
+  }
+ ],
+ "labels": [
+  "NEWS-REPORTED"
+ ],
+ "osint_event_id": "5f15346e-f32b-5ae6-98c1-7b298e04a138",
+ "urn": "osint_event:5f15346e-f32b-5ae6-98c1-7b298e04a138",
+ "attach": {
+  "novel": true,
+  "corroborates_live_urn": null
+ },
+ "promoted_event_id": null,
+ "dss": null
+}

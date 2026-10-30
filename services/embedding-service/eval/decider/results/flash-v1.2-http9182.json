@@ -1,0 +1,2402 @@
+{
+ "target": "http://127.0.0.1:9182",
+ "model": "pplx-decider-flash-v1.2",
+ "runtime": "pplx_decider",
+ "question_mode": "per_question",
+ "health_before": {
+  "loaded": true,
+  "loading": false,
+  "load_error": null,
+  "resident_rss_gib": 1.872,
+  "cuda_reserved_gib": 8.629,
+  "p95_decide_latency_ms": 1158.669,
+  "queue_depth": 0,
+  "decides_total": 1,
+  "decides_failed": 0,
+  "model": "pplx-decider-flash-v1.2",
+  "runtime": "pplx_decider",
+  "question_mode": "per_question"
+ },
+ "health_after": {
+  "loaded": true,
+  "loading": false,
+  "load_error": null,
+  "resident_rss_gib": 1.876,
+  "cuda_reserved_gib": 9.256,
+  "p95_decide_latency_ms": 401.506,
+  "queue_depth": 0,
+  "decides_total": 61,
+  "decides_failed": 0,
+  "model": "pplx-decider-flash-v1.2",
+  "runtime": "pplx_decider",
+  "question_mode": "per_question"
+ },
+ "modes": {
+  "served": {
+   "results": [
+    {
+     "id": "pm-nabanna-airport-zplus",
+     "kind": "pre_movement",
+     "status": 200,
+     "answers": {
+      "route_strategy": {
+       "value": "route_e9e430199916",
+       "probability": 0.879435372122592,
+       "confidence": 0.8392471628301227,
+       "distribution": {
+        "route_e9e430199916": 0.879435372122592,
+        "route_3f2df115dff1": 0.038169266439134174,
+        "route_c098b50edbbe": 0.006770139656911446,
+        "delay_departure": 0.07562522178136234
+       }
+      },
+      "urgency": {
+       "value": 0.39116154286746807,
+       "probability": 0.39116154286746807,
+       "confidence": null,
+       "distribution": {
+        "false": 0.6088384571325319,
+        "true": 0.39116154286746807
+       }
+      },
+      "disruption_tolerance": {
+       "value": 0.5699255806163299,
+       "probability": 0.5699255806163299,
+       "confidence": 0.13985116123265984,
+       "distribution": {
+        "0": 0.4300744193836701,
+        "1": 0.5699255806163299
+       }
+      }
+     },
+     "state_tokens": 1079,
+     "latency_ms": 416.566,
+     "wall_ms": 418.2,
+     "error": null
+    },
+    {
+     "id": "pm-nabanna-airport-peak-red",
+     "kind": "pre_movement",
+     "status": 200,
+     "answers": {
+      "route_strategy": {
+       "value": "delay_departure",
+       "probability": 0.5725024427846438,
+       "confidence": 0.3587536641769657,
+       "distribution": {
+        "route_e9e430199916": 0.2094507397629431,
+        "route_3f2df115dff1": 0.2180468174524131,
+        "delay_departure": 0.5725024427846438
+       }
+      },
+      "urgency": {
+       "value": 0.4104779362678528,
+       "probability": 0.4104779362678528,
+       "confidence": null,
+       "distribution": {
+        "false": 0.5895220637321472,
+        "true": 0.4104779362678528
+       }
+      },
+      "disruption_tolerance": {
+       "value": 0.655552903148705,
+       "probability": 0.655552903148705,
+       "confidence": 0.3111058062974099,
+       "distribution": {
+        "0": 0.34444709685129504,
+        "1": 0.655552903148705
+       }
+      }
+     },
+     "state_tokens": 973,
+     "latency_ms": 368.135,
+     "wall_ms": 369.6,
+     "error": null
+    },
+    {
+     "id": "pm-redroad-parade-z",
+     "kind": "pre_movement",
+     "status": 200,
+     "answers": {
+      "route_strategy": {
+       "value": "route_5f4233443586",
+       "probability": 0.9471767195695528,
+       "confidence": 0.9207650793543293,
+       "distribution": {
+        "route_5f4233443586": 0.9471767195695528,
+        "route_b53c100135f5": 0.026411640215223586,
+        "delay_departure": 0.026411640215223586
+       }
+      },
+      "urgency": {
+       "value": 0.2523777484893799,
+       "probability": 0.2523777484893799,
+       "confidence": null,
+       "distribution": {
+        "false": 0.7476222515106201,
+        "true": 0.2523777484893799
+       }
+      },
+      "disruption_tolerance": {
+       "value": 0.4498924881155782,
+       "probability": 0.5501075118844219,
+       "confidence": 0.10021502376884361,
+       "distribution": {
+        "0": 0.5501075118844219,
+        "1": 0.4498924881155782
+       }
+      }
+     },
+     "state_tokens": 913,
+     "latency_ms": 322.537,
+     "wall_ms": 323.7,
+     "error": null
+    },
+    {
+     "id": "pm-eden-gardens-match-y",
+     "kind": "pre_movement",
+     "status": 200,
+     "answers": {
+      "route_strategy": {
+       "value": "route_6a8ca8bc78a6",
+       "probability": 0.3686201969999687,
+       "confidence": 0.1581602626666249,
+       "distribution": {
+        "route_6a8ca8bc78a6": 0.3686201969999687,
+        "route_29ed25456c4d": 0.2781663612153609,
+        "route_ca62f872151b": 0.013084295559157218,
+        "delay_departure": 0.34012914622551316
+       }
+      },
+      "urgency": {
+       "value": 0.4399595260620117,
+       "probability": 0.4399595260620117,
+       "confidence": null,
+       "distribution": {
+        "false": 0.5600404739379883,
+        "true": 0.4399595260620117
+       }
+      },
+      "disruption_tolerance": {
+       "value": 0.5600404739379883,
+       "probability": 0.5600404739379883,
+       "confidence": 0.12008094787597656,
+       "distribution": {
+        "0": 0.4399595260620117,
+        "1": 0.5600404739379883
+       }
+      }
+     },
+     "state_tokens": 1073,
+     "latency_ms": 401.506,
+     "wall_ms": 402.6,
+     "error": null
+    },
+    {
+     "id": "pm-sskm-hospital-x",
+     "kind": "pre_movement",
+     "status": 200,
+     "answers": {
+      "route_strategy": {
+       "value": "route_0ea9ea25565e",
+       "probability": 0.8507194239914203,
+       "confidence": 0.7760791359871303,
+       "distribution": {
+        "route_0ea9ea25565e": 0.8507194239914203,
+        "route_2d9bcb6dd859": 0.08945172613306814,
+        "delay_departure": 0.0598288498755116
+       }
+      },
+      "urgency": {
+       "value": 0.4104779362678528,
+       "probability": 0.4104779362678528,
+       "confidence": null,
+       "distribution": {
+        "false": 0.5895220637321472,
+        "true": 0.4104779362678528
+       }
+      },
+      "disruption_tolerance": {
+       "value": 0.6088384571325319,
+       "probability": 0.6088384571325319,
+       "confidence": 0.21767691426506386,
+       "distribution": {
+        "0": 0.39116154286746807,
+        "1": 0.6088384571325319
+       }
+      }
+     },
+     "state_tokens": 928,
+     "latency_ms": 320.724,
+     "wall_ms": 322.3,
+     "error": null
+    },
+    {
+     "id": "pm-sector-v-summit-z",
+     "kind": "pre_movement",
+     "status": 200,
+     "answers": {
+      "route_strategy": {
+       "value": "route_1023855a86b2",
+       "probability": 0.6925910840293594,
+       "confidence": 0.6157388550366992,
+       "distribution": {
+        "route_ccd178547880": 0.20722502856003175,
+        "route_1023855a86b2": 0.6925910840293594,
+        "route_234c0e7bf51d": 0.026643015940543562,
+        "route_fb088aef73c1": 0.008993987161554157,
+        "delay_departure": 0.0645468843085111
+       }
+      },
+      "urgency": {
+       "value": 0.3354226948698784,
+       "probability": 0.3354226948698784,
+       "confidence": null,
+       "distribution": {
+        "false": 0.6645773051301216,
+        "true": 0.3354226948698784
+       }
+      },
+      "disruption_tolerance": {
+       "value": 0.5501075118844219,
+       "probability": 0.5501075118844219,
+       "confidence": 0.10021502376884361,
+       "distribution": {
+        "0": 0.4498924881155782,
+        "1": 0.5501075118844219
+       }
+      }
+     },
+     "state_tokens": 1227,
+     "latency_ms": 481.448,
+     "wall_ms": 483.2,
+     "error": null
+    },
+    {
+     "id": "pm-howrah-station-transfer-y",
+     "kind": "pre_movement",
+     "status": 200,
+     "answers": {
+      "route_strategy": {
+       "value": "route_1f910a6e696f",
+       "probability": 0.9285592298424359,
+       "confidence": 0.8928388447636538,
+       "distribution": {
+        "route_1f910a6e696f": 0.9285592298424359,
+        "route_7e4d022600e5": 0.035720385078782065,
+        "delay_departure": 0.035720385078782065
+       }
+      },
+      "urgency": {
+       "value": 0.26785586082505763,
+       "probability": 0.26785586082505763,
+       "confidence": null,
+       "distribution": {
+        "false": 0.7321441391749424,
+        "true": 0.26785586082505763
+       }
+      },
+      "disruption_tolerance": {
+       "value": 0.3535851240158081,
+       "probability": 0.6464148759841919,
+       "confidence": 0.2928297519683838,
+       "distribution": {
+        "0": 0.6464148759841919,
+        "1": 0.3535851240158081
+       }
+      }
+     },
+     "state_tokens": 917,
+     "latency_ms": 325.601,
+     "wall_ms": 327.2,
+     "error": null
+    },
+    {
+     "id": "pm-puja-saptami-zplus",
+     "kind": "pre_movement",
+     "status": 200,
+     "answers": {
+      "route_strategy": {
+       "value": "route_81d4c463d5ba",
+       "probability": 0.7380281650474377,
+       "confidence": 0.6070422475711565,
+       "distribution": {
+        "route_81d4c463d5ba": 0.7380281650474377,
+        "route_4c78a8246ad7": 0.04985732530534833,
+        "delay_departure": 0.21211450964721396
+       }
+      },
+      "urgency": {
+       "value": 0.4104779362678528,
+       "probability": 0.4104779362678528,
+       "confidence": null,
+       "distribution": {
+        "false": 0.5895220637321472,
+        "true": 0.4104779362678528
+       }
+      },
+      "disruption_tolerance": {
+       "value": 0.6645770867042865,
+       "probability": 0.6645770867042865,
+       "confidence": 0.3291541734085731,
+       "distribution": {
+        "0": 0.33542291329571344,
+        "1": 0.6645770867042865
+       }
+      }
+     },
+     "state_tokens": 954,
+     "latency_ms": 362.22,
+     "wall_ms": 363.6,
+     "error": null
+    },
+    {
+     "id": "pm-victoria-memorial-ceremony-z",
+     "kind": "pre_movement",
+     "status": 200,
+     "answers": {
+      "route_strategy": {
+       "value": "route_183d0d790e1a",
+       "probability": 0.9315844999823691,
+       "confidence": 0.9087793333098255,
+       "distribution": {
+        "route_183d0d790e1a": 0.9315844999823691,
+        "route_ec06f289a058": 0.035836760822456126,
+        "route_b4816b0bae2c": 0.004425907614709435,
+        "delay_departure": 0.028152831580465307
+       }
+      },
+      "urgency": {
+       "value": 0.20960677847852144,
+       "probability": 0.20960677847852144,
+       "confidence": null,
+       "distribution": {
+        "false": 0.7903932215214786,
+        "true": 0.20960677847852144
+       }
+      },
+      "disruption_tolerance": {
+       "value": 0.39116154286746807,
+       "probability": 0.6088384571325319,
+       "confidence": 0.21767691426506386,
+       "distribution": {
+        "0": 0.6088384571325319,
+        "1": 0.39116154286746807
+       }
+      }
+     },
+     "state_tokens": 1041,
+     "latency_ms": 390.283,
+     "wall_ms": 391.8,
+     "error": null
+    },
+    {
+     "id": "pm-salt-lake-stadium-x-unknown",
+     "kind": "pre_movement",
+     "status": 200,
+     "answers": {
+      "route_strategy": {
+       "value": "route_80c35c3228f2",
+       "probability": 0.8777008514397291,
+       "confidence": 0.7554017028794582,
+       "distribution": {
+        "route_80c35c3228f2": 0.8777008514397291,
+        "delay_departure": 0.12229914856027096
+       }
+      },
+      "urgency": {
+       "value": 0.4498924881155782,
+       "probability": 0.4498924881155782,
+       "confidence": null,
+       "distribution": {
+        "false": 0.5501075118844219,
+        "true": 0.4498924881155782
+       }
+      },
+      "disruption_tolerance": {
+       "value": 0.48994603693163613,
+       "probability": 0.5100539630683638,
+       "confidence": 0.02010792613672774,
+       "distribution": {
+        "0": 0.5100539630683638,
+        "1": 0.48994603693163613
+       }
+      }
+     },
+     "state_tokens": 765,
+     "latency_ms": 282.17,
+     "wall_ms": 283.1,
+     "error": null
+    },
+    {
+     "id": "pm-airport-nabanna-night-zplus",
+     "kind": "pre_movement",
+     "status": 200,
+     "answers": {
+      "route_strategy": {
+       "value": "route_3f2df115dff1",
+       "probability": 0.7457713594622956,
+       "confidence": 0.6186570391934433,
+       "distribution": {
+        "route_3f2df115dff1": 0.7457713594622956,
+        "route_e9e430199916": 0.22313669359351643,
+        "delay_departure": 0.03109194694418806
+       }
+      },
+      "urgency": {
+       "value": 0.2758168578147888,
+       "probability": 0.2758168578147888,
+       "confidence": null,
+       "distribution": {
+        "false": 0.7241831421852112,
+        "true": 0.2758168578147888
+       }
+      },
+      "disruption_tolerance": {
+       "value": 0.4202447533607483,
+       "probability": 0.5797552466392517,
+       "confidence": 0.15951049327850342,
+       "distribution": {
+        "0": 0.5797552466392517,
+        "1": 0.4202447533607483
+       }
+      }
+     },
+     "state_tokens": 919,
+     "latency_ms": 324.978,
+     "wall_ms": 326.0,
+     "error": null
+    },
+    {
+     "id": "pm-high-tide-waterlogging-z",
+     "kind": "pre_movement",
+     "status": 200,
+     "answers": {
+      "route_strategy": {
+       "value": "delay_departure",
+       "probability": 0.4712846489824943,
+       "confidence": 0.20692697347374142,
+       "distribution": {
+        "route_3cc63f44c2f9": 0.23786505630009128,
+        "route_8c7c68cff497": 0.2908502947174144,
+        "delay_departure": 0.4712846489824943
+       }
+      },
+      "urgency": {
+       "value": 0.39116154286746807,
+       "probability": 0.39116154286746807,
+       "confidence": null,
+       "distribution": {
+        "false": 0.6088384571325319,
+        "true": 0.39116154286746807
+       }
+      },
+      "disruption_tolerance": {
+       "value": 0.6464148759841919,
+       "probability": 0.6464148759841919,
+       "confidence": 0.2928297519683838,
+       "distribution": {
+        "0": 0.3535851240158081,
+        "1": 0.6464148759841919
+       }
+      }
+     },
+     "state_tokens": 965,
+     "latency_ms": 362.647,
+     "wall_ms": 363.7,
+     "error": null
+    },
+    {
+     "id": "tool-fly-howrah-bridge",
+     "kind": "tool_selection",
+     "status": 200,
+     "answers": {
+      "next_tool": {
+       "value": "canvas_fly_to",
+       "probability": 0.976109248184902,
+       "confidence": 0.9752854291567952,
+       "distribution": {
+        "predict_traffic_flow": 0.0007003107327590133,
+        "find_convoy_routes": 0.0026407592905986917,
+        "plan_diversions": 0.00033952367910310323,
+        "evaluate_scenarios": 0.000415153910159918,
+        "predict_eta": 0.0004876186340519614,
+        "query_shortest_path": 0.0008563076103610235,
+        "query_k_shortest_paths": 0.0005962378816969131,
+        "query_segments_in_bbox": 0.0003009306909605846,
+        "query_segment_details": 0.0005501534804222242,
+        "get_live_traffic": 0.000891451416308568,
+        "get_historical_pattern": 0.00036796417452880474,
+        "simulate_twin": 0.0003534580689985075,
+        "get_active_corridor_events": 0.000415153910159918,
+        "city_query_entities": 0.0015037627611921378,
+        "city_get_dossier": 0.0008225493213405158,
+        "city_feed": 0.0005727323480872872,
+        "get_signal_state": 0.0002890670967714471,
+        "list_units": 0.000415153910159918,
+        "list_dispatches": 0.0005962378816969131,
+        "get_interception_plan": 0.0002890670967714471,
+        "get_situation_log": 0.0003009306909605846,
+        "list_enforcement_recommendations": 0.0002562094257677264,
+        "city_decision_support": 0.0007003107327590133,
+        "canvas_fly_to": 0.976109248184902,
+        "canvas_track_entity": 0.0009661250917874951,
+        "canvas_highlight": 0.00379261786537543,
+        "canvas_annotate": 0.0002890670967714471,
+        "canvas_set_sensor": 0.0008563076103610235,
+        "canvas_toggle_layer": 0.001992755765404278,
+        "final_answer": 0.0013328336397821832
+       }
+      },
+      "decision_confidence": {
+       "value": 0.4799004793167114,
+       "probability": 0.5200995206832886,
+       "confidence": 0.04019904136657715,
+       "distribution": {
+        "0": 0.5200995206832886,
+        "1": 0.4799004793167114
+       }
+      }
+     },
+     "state_tokens": 466,
+     "latency_ms": 236.334,
+     "wall_ms": 237.4,
+     "error": null
+    },
+    {
+     "id": "tool-live-chowringhee",
+     "kind": "tool_selection",
+     "status": 200,
+     "answers": {
+      "next_tool": {
+       "value": "get_live_traffic",
+       "probability": 0.9547277195111534,
+       "confidence": 0.9531666063908484,
+       "distribution": {
+        "predict_traffic_flow": 0.007965425051388454,
+        "find_convoy_routes": 0.0014708230222661716,
+        "plan_diversions": 0.0013571407959277052,
+        "evaluate_scenarios": 0.0006579668674130505,
+        "predict_eta": 0.0014708230222661716,
+        "query_shortest_path": 0.0006320277904413813,
+        "query_k_shortest_paths": 0.0005831773658424727,
+        "query_segments_in_bbox": 0.0031582679253681,
+        "query_segment_details": 0.003709542840059096,
+        "get_live_traffic": 0.9547277195111534,
+        "get_historical_pattern": 0.0012028773571863295,
+        "simulate_twin": 0.0005601867393901197,
+        "get_active_corridor_events": 0.0049158105602759485,
+        "city_query_entities": 0.0011099045993294336,
+        "city_get_dossier": 0.0009449622097129972,
+        "city_feed": 0.0007423480008769538,
+        "get_signal_state": 0.0006071115965781722,
+        "list_units": 0.0005168888011395372,
+        "list_dispatches": 0.0009449622097129972,
+        "get_interception_plan": 0.0005381024061147273,
+        "get_situation_log": 0.00083755034472295,
+        "list_enforcement_recommendations": 0.0006579668674130505,
+        "city_decision_support": 0.0013571407959277052,
+        "canvas_fly_to": 0.0006320277904413813,
+        "canvas_track_entity": 0.0006579668674130505,
+        "canvas_highlight": 0.0013036381827690414,
+        "canvas_annotate": 0.0002359253579803854,
+        "canvas_set_sensor": 0.001066148741462721,
+        "canvas_toggle_layer": 0.0018722651484434014,
+        "final_answer": 0.0035633012309830786
+       }
+      },
+      "decision_confidence": {
+       "value": 0.34444709685129504,
+       "probability": 0.655552903148705,
+       "confidence": 0.3111058062974099,
+       "distribution": {
+        "0": 0.655552903148705,
+        "1": 0.34444709685129504
+       }
+      }
+     },
+     "state_tokens": 482,
+     "latency_ms": 239.52,
+     "wall_ms": 240.6,
+     "error": null
+    },
+    {
+     "id": "tool-routes-nabanna-airport",
+     "kind": "tool_selection",
+     "status": 200,
+     "answers": {
+      "next_tool": {
+       "value": "find_convoy_routes",
+       "probability": 0.980962904177598,
+       "confidence": 0.9803064525975151,
+       "distribution": {
+        "predict_traffic_flow": 0.000826639790235015,
+        "find_convoy_routes": 0.980962904177598,
+        "plan_diversions": 0.0028761973136215645,
+        "evaluate_scenarios": 0.0008605659518708228,
+        "predict_eta": 0.000826639790235015,
+        "query_shortest_path": 0.0016378313831801408,
+        "query_k_shortest_paths": 0.0018478755970132476,
+        "query_segments_in_bbox": 0.00036979406752624475,
+        "query_segment_details": 0.00043434127239298976,
+        "get_live_traffic": 0.0007940511242748606,
+        "get_historical_pattern": 0.0004707245249944396,
+        "simulate_twin": 0.00034121192230761446,
+        "get_active_corridor_events": 0.0005528890357050484,
+        "city_query_entities": 0.0003849707842768683,
+        "city_get_dossier": 0.0004007702066040495,
+        "city_feed": 0.0004007702066040495,
+        "get_signal_state": 0.00027905187189966585,
+        "list_units": 0.0002905047243192873,
+        "list_dispatches": 0.0006493957108009888,
+        "get_interception_plan": 0.0003024270506431642,
+        "get_situation_log": 0.0002680510601892935,
+        "list_enforcement_recommendations": 0.00034121192230761446,
+        "city_decision_support": 0.000826639790235015,
+        "canvas_fly_to": 0.00023758201171782405,
+        "canvas_track_entity": 0.00034121192230761446,
+        "canvas_highlight": 0.00041721823691773116,
+        "canvas_annotate": 6.0521246403827035e-05,
+        "canvas_set_sensor": 0.00043434127239298976,
+        "canvas_toggle_layer": 0.0005528890357050484,
+        "final_answer": 0.0010107769957199556
+       }
+      },
+      "decision_confidence": {
+       "value": 0.6278197578245474,
+       "probability": 0.6278197578245474,
+       "confidence": 0.2556395156490947,
+       "distribution": {
+        "0": 0.37218024217545265,
+        "1": 0.6278197578245474
+       }
+      }
+     },
+     "state_tokens": 490,
+     "latency_ms": 238.653,
+     "wall_ms": 240.3,
+     "error": null
+    },
+    {
+     "id": "tool-forecast-em-bypass",
+     "kind": "tool_selection",
+     "status": 200,
+     "answers": {
+      "next_tool": {
+       "value": "predict_traffic_flow",
+       "probability": 0.9589469598429592,
+       "confidence": 0.9575313377685785,
+       "distribution": {
+        "predict_traffic_flow": 0.9589469598429592,
+        "find_convoy_routes": 0.0014190823649002432,
+        "plan_diversions": 0.0012081932380174191,
+        "evaluate_scenarios": 0.0008412517172364805,
+        "predict_eta": 0.0014190823649002432,
+        "query_shortest_path": 0.0004245932632575853,
+        "query_k_shortest_paths": 0.00033355404661235564,
+        "query_segments_in_bbox": 0.0011605626126824271,
+        "query_segment_details": 0.002038065125932814,
+        "get_live_traffic": 0.01349601843282709,
+        "get_historical_pattern": 0.0025943284405529265,
+        "simulate_twin": 0.0008412517172364805,
+        "get_active_corridor_events": 0.0014773230815307967,
+        "city_query_entities": 0.0008757775876115202,
+        "city_get_dossier": 0.0009880914692126557,
+        "city_feed": 0.0007162337239625736,
+        "get_signal_state": 0.0006608745772770869,
+        "list_units": 0.00044201903435908,
+        "list_dispatches": 0.0008412517172364805,
+        "get_interception_plan": 0.0004078545171043104,
+        "get_situation_log": 0.0007162337239625736,
+        "list_enforcement_recommendations": 0.0005626623731376543,
+        "city_decision_support": 0.0012081932380174191,
+        "canvas_fly_to": 0.0006348208892487679,
+        "canvas_track_entity": 0.0005857543392804084,
+        "canvas_highlight": 0.0008080869746585408,
+        "canvas_annotate": 0.0006097943334949797,
+        "canvas_set_sensor": 0.0011148096498721893,
+        "canvas_toggle_layer": 0.0012081932380174191,
+        "final_answer": 0.0014190823649002432
+       }
+      },
+      "decision_confidence": {
+       "value": 0.3090801239013672,
+       "probability": 0.6909198760986328,
+       "confidence": 0.3818397521972656,
+       "distribution": {
+        "0": 0.6909198760986328,
+        "1": 0.3090801239013672
+       }
+      }
+     },
+     "state_tokens": 486,
+     "latency_ms": 237.634,
+     "wall_ms": 239.2,
+     "error": null
+    },
+    {
+     "id": "tool-eta-redroad-eden",
+     "kind": "tool_selection",
+     "status": 200,
+     "answers": {
+      "next_tool": {
+       "value": "predict_eta",
+       "probability": 0.9409403022833158,
+       "confidence": 0.9389037609827405,
+       "distribution": {
+        "predict_traffic_flow": 0.0015710089389664686,
+        "find_convoy_routes": 0.029602566135998442,
+        "plan_diversions": 0.001234160788793267,
+        "evaluate_scenarios": 0.0010507523177460789,
+        "predict_eta": 0.9409403022833158,
+        "query_shortest_path": 0.0035118429915039994,
+        "query_k_shortest_paths": 0.0017724827370164458,
+        "query_segments_in_bbox": 0.0004893411982480281,
+        "query_segment_details": 0.000894600569471203,
+        "get_live_traffic": 0.002445257610225157,
+        "get_historical_pattern": 0.001234160788793267,
+        "simulate_twin": 0.0005747555730595641,
+        "get_active_corridor_events": 0.0007316276410330464,
+        "city_query_entities": 0.0007929134887282304,
+        "city_get_dossier": 0.000894600569471203,
+        "city_feed": 0.0008593326692896856,
+        "get_signal_state": 0.0006750787320912036,
+        "list_units": 0.0006484650292550937,
+        "list_dispatches": 0.0017026068950164656,
+        "get_interception_plan": 0.0005303315509458851,
+        "get_situation_log": 0.0006750787320912036,
+        "list_enforcement_recommendations": 0.0005520969637895887,
+        "city_decision_support": 0.0015710089389664686,
+        "canvas_fly_to": 0.0004001960330589298,
+        "canvas_track_entity": 0.000894600569471203,
+        "canvas_highlight": 0.0006750787320912036,
+        "canvas_annotate": 0.00013509565388347282,
+        "canvas_set_sensor": 0.0004515192917977749,
+        "canvas_toggle_layer": 0.0004893411982480281,
+        "final_answer": 0.0019997953776336157
+       }
+      },
+      "decision_confidence": {
+       "value": 0.31773463838501687,
+       "probability": 0.6822653616149831,
+       "confidence": 0.36453072322996627,
+       "distribution": {
+        "0": 0.6822653616149831,
+        "1": 0.31773463838501687
+       }
+      }
+     },
+     "state_tokens": 476,
+     "latency_ms": 237.716,
+     "wall_ms": 239.3,
+     "error": null
+    },
+    {
+     "id": "tool-diversions-park-circus",
+     "kind": "tool_selection",
+     "status": 200,
+     "answers": {
+      "next_tool": {
+       "value": "plan_diversions",
+       "probability": 0.9615098458791388,
+       "confidence": 0.960182599185316,
+       "distribution": {
+        "predict_traffic_flow": 0.002934860729673872,
+        "find_convoy_routes": 0.0023055820388510973,
+        "plan_diversions": 0.9615098458791388,
+        "evaluate_scenarios": 0.0013128983156296772,
+        "predict_eta": 0.0008435000857231188,
+        "query_shortest_path": 0.000541924927854531,
+        "query_k_shortest_paths": 0.0007181479486732567,
+        "query_segments_in_bbox": 0.0006114240702905265,
+        "query_segment_details": 0.0007181479486732567,
+        "get_live_traffic": 0.004387991682014253,
+        "get_historical_pattern": 0.0014812713337287705,
+        "simulate_twin": 0.000747621460315444,
+        "get_active_corridor_events": 0.001811230239251788,
+        "city_query_entities": 0.0008102466844410958,
+        "city_get_dossier": 0.0009907322528948759,
+        "city_feed": 0.000914157095120148,
+        "get_signal_state": 0.0008435000857231188,
+        "list_units": 0.000564166194773137,
+        "list_dispatches": 0.0015420642386272765,
+        "get_interception_plan": 0.0004613895530799594,
+        "get_situation_log": 0.0006898363785289658,
+        "list_enforcement_recommendations": 0.0005205606176841119,
+        "city_decision_support": 0.0023055820388510973,
+        "canvas_fly_to": 0.000500038514283208,
+        "canvas_track_entity": 0.000564166194773137,
+        "canvas_highlight": 0.0008781182240234605,
+        "canvas_annotate": 0.0003212606133324105,
+        "canvas_set_sensor": 0.0010737224197138711,
+        "canvas_toggle_layer": 0.002708020552317489,
+        "final_answer": 0.004387991682014253
+       }
+      },
+      "decision_confidence": {
+       "value": 0.4698708653450012,
+       "probability": 0.5301291346549988,
+       "confidence": 0.06025826930999756,
+       "distribution": {
+        "0": 0.5301291346549988,
+        "1": 0.4698708653450012
+       }
+      }
+     },
+     "state_tokens": 482,
+     "latency_ms": 235.61,
+     "wall_ms": 237.1,
+     "error": null
+    },
+    {
+     "id": "tool-units-esplanade",
+     "kind": "tool_selection",
+     "status": 200,
+     "answers": {
+      "next_tool": {
+       "value": "list_units",
+       "probability": 0.9191348337679864,
+       "confidence": 0.916346379759986,
+       "distribution": {
+        "predict_traffic_flow": 0.0009470698170039196,
+        "find_convoy_routes": 0.002033623687284212,
+        "plan_diversions": 0.0005393026037151723,
+        "evaluate_scenarios": 0.0008394187157648398,
+        "predict_eta": 0.0008394187157648398,
+        "query_shortest_path": 0.0006334377126598514,
+        "query_k_shortest_paths": 0.0006594343576753461,
+        "query_segments_in_bbox": 0.003040527190929324,
+        "query_segment_details": 0.0011580332790281128,
+        "get_live_traffic": 0.001802466650694874,
+        "get_historical_pattern": 0.0010264026026691807,
+        "simulate_twin": 0.0009097333893205611,
+        "get_active_corridor_events": 0.001205560179216017,
+        "city_query_entities": 0.03010331573682915,
+        "city_get_dossier": 0.003165312064892316,
+        "city_feed": 0.0013065456889614425,
+        "get_signal_state": 0.0008063262664718425,
+        "list_units": 0.9191348337679864,
+        "list_dispatches": 0.003717816339560693,
+        "get_interception_plan": 0.0006084656388013444,
+        "get_situation_log": 0.0011580332790281128,
+        "list_enforcement_recommendations": 0.0007440037368849347,
+        "city_decision_support": 0.0022039730485282406,
+        "canvas_fly_to": 0.003165312064892316,
+        "canvas_track_entity": 0.0019534517218456134,
+        "canvas_highlight": 0.002033623687284212,
+        "canvas_annotate": 0.00033282712657435777,
+        "canvas_set_sensor": 0.0028055186701725294,
+        "canvas_toggle_layer": 0.0053394706864703005,
+        "final_answer": 0.005786741573089954
+       }
+      },
+      "decision_confidence": {
+       "value": 0.48994603693163613,
+       "probability": 0.5100539630683638,
+       "confidence": 0.02010792613672774,
+       "distribution": {
+        "0": 0.5100539630683638,
+        "1": 0.48994603693163613
+       }
+      }
+     },
+     "state_tokens": 466,
+     "latency_ms": 237.516,
+     "wall_ms": 239.1,
+     "error": null
+    },
+    {
+     "id": "tool-signal-shyambazar",
+     "kind": "tool_selection",
+     "status": 200,
+     "answers": {
+      "next_tool": {
+       "value": "get_signal_state",
+       "probability": 0.9744704949270798,
+       "confidence": 0.9735901671659446,
+       "distribution": {
+        "predict_traffic_flow": 0.0005717711398937412,
+        "find_convoy_routes": 0.0006450977704889799,
+        "plan_diversions": 0.0004144570880650631,
+        "evaluate_scenarios": 0.00044917469600283647,
+        "predict_eta": 0.000506778972705914,
+        "query_shortest_path": 0.0002885820396702937,
+        "query_k_shortest_paths": 0.0004314668498170797,
+        "query_segments_in_bbox": 0.0011328568673102527,
+        "query_segment_details": 0.0030964957944726963,
+        "get_live_traffic": 0.002432560163443385,
+        "get_historical_pattern": 0.0008211687742143725,
+        "simulate_twin": 0.0004144570880650631,
+        "get_active_corridor_events": 0.0015628512671249887,
+        "city_query_entities": 0.0008899551493342366,
+        "city_get_dossier": 0.0011793504663920244,
+        "city_feed": 0.0007278285466094355,
+        "get_signal_state": 0.9744704949270798,
+        "list_units": 0.0003528648301388687,
+        "list_dispatches": 0.0008211687742143725,
+        "get_interception_plan": 0.0003528648301388687,
+        "get_situation_log": 0.0006715732323637854,
+        "list_enforcement_recommendations": 0.0004868002129790968,
+        "city_decision_support": 0.0008211687742143725,
+        "canvas_fly_to": 0.001045296136204148,
+        "canvas_track_entity": 0.0006991352565770073,
+        "canvas_highlight": 0.0011328568673102527,
+        "canvas_annotate": 8.988815700642552e-05,
+        "canvas_set_sensor": 0.0011793504663920244,
+        "canvas_toggle_layer": 0.0009264798721998759,
+        "final_answer": 0.00138520498957067
+       }
+      },
+      "decision_confidence": {
+       "value": 0.46987064272550816,
+       "probability": 0.5301293572744918,
+       "confidence": 0.06025871454898368,
+       "distribution": {
+        "0": 0.5301293572744918,
+        "1": 0.46987064272550816
+       }
+      }
+     },
+     "state_tokens": 476,
+     "latency_ms": 234.901,
+     "wall_ms": 236.5,
+     "error": null
+    },
+    {
+     "id": "tool-situation-log",
+     "kind": "tool_selection",
+     "status": 200,
+     "answers": {
+      "next_tool": {
+       "value": "get_situation_log",
+       "probability": 0.9790760524459695,
+       "confidence": 0.978354537013072,
+       "distribution": {
+        "predict_traffic_flow": 0.00045129736178922724,
+        "find_convoy_routes": 0.00034055561171971544,
+        "plan_diversions": 0.00028994596397583763,
+        "evaluate_scenarios": 0.0005744731431708054,
+        "predict_eta": 0.0003545323791031954,
+        "query_shortest_path": 0.000155440991056246,
+        "query_k_shortest_paths": 0.00018628209188986325,
+        "query_segments_in_bbox": 0.00022777705888039895,
+        "query_segment_details": 0.000489100943901674,
+        "get_live_traffic": 0.0008941613053884924,
+        "get_historical_pattern": 0.0011849243304205644,
+        "simulate_twin": 0.0002371252542517041,
+        "get_active_corridor_events": 0.0015083339417776172,
+        "city_query_entities": 0.00034055561171971544,
+        "city_get_dossier": 0.0005300711687520123,
+        "city_feed": 0.0010933392191360967,
+        "get_signal_state": 0.0003842302813085844,
+        "list_units": 0.0003142337252392718,
+        "list_dispatches": 0.0026487870306527287,
+        "get_interception_plan": 0.00032712986723919485,
+        "get_situation_log": 0.9790760524459695,
+        "list_enforcement_recommendations": 0.0005744731431708054,
+        "city_decision_support": 0.0007925238460033238,
+        "canvas_fly_to": 0.00045129736178922724,
+        "canvas_track_entity": 0.0005300711687520123,
+        "canvas_highlight": 0.00041641589199526325,
+        "canvas_annotate": 9.787808794914837e-05,
+        "canvas_set_sensor": 0.00019786668412955733,
+        "canvas_toggle_layer": 0.00028994596397583763,
+        "final_answer": 0.005041178124892316
+       }
+      },
+      "decision_confidence": {
+       "value": 0.5401346683502197,
+       "probability": 0.5401346683502197,
+       "confidence": 0.08026933670043945,
+       "distribution": {
+        "0": 0.4598653316497803,
+        "1": 0.5401346683502197
+       }
+      }
+     },
+     "state_tokens": 476,
+     "latency_ms": 237.22,
+     "wall_ms": 238.2,
+     "error": null
+    },
+    {
+     "id": "tool-highlight-thanthania",
+     "kind": "tool_selection",
+     "status": 200,
+     "answers": {
+      "next_tool": {
+       "value": "canvas_highlight",
+       "probability": 0.7839281777104868,
+       "confidence": 0.776477425217745,
+       "distribution": {
+        "predict_traffic_flow": 0.0014767133808851357,
+        "find_convoy_routes": 0.002392819916350297,
+        "plan_diversions": 0.001160083603726232,
+        "evaluate_scenarios": 0.001308859013116139,
+        "predict_eta": 0.0013625759544847128,
+        "query_shortest_path": 0.0007453210044339905,
+        "query_k_shortest_paths": 0.0010282198486086613,
+        "query_segments_in_bbox": 0.016495498356225914,
+        "query_segment_details": 0.005568449540396621,
+        "get_live_traffic": 0.0030459105884624448,
+        "get_historical_pattern": 0.0017344733251420693,
+        "simulate_twin": 0.0010704190069611816,
+        "get_active_corridor_events": 0.003724398660721639,
+        "city_query_entities": 0.00403637636507558,
+        "city_get_dossier": 0.0035775716946273616,
+        "city_feed": 0.0022078750803696625,
+        "get_signal_state": 0.0009487466568535253,
+        "list_units": 0.0009876841488360092,
+        "list_dispatches": 0.0018056579203754946,
+        "get_interception_plan": 0.0009487466568535253,
+        "get_situation_log": 0.0018797631432841755,
+        "list_enforcement_recommendations": 0.000911344159139699,
+        "city_decision_support": 0.0024910236936242624,
+        "canvas_fly_to": 0.10492644750948774,
+        "canvas_track_entity": 0.0018797631432841755,
+        "canvas_highlight": 0.7839281777104868,
+        "canvas_annotate": 0.006034898273919323,
+        "canvas_set_sensor": 0.004202033975660582,
+        "canvas_toggle_layer": 0.03542045974935054,
+        "final_answer": 0.002699687919256442
+       }
+      },
+      "decision_confidence": {
+       "value": 0.37218024217545265,
+       "probability": 0.6278197578245474,
+       "confidence": 0.2556395156490947,
+       "distribution": {
+        "0": 0.6278197578245474,
+        "1": 0.37218024217545265
+       }
+      }
+     },
+     "state_tokens": 474,
+     "latency_ms": 235.85,
+     "wall_ms": 237.0,
+     "error": null
+    },
+    {
+     "id": "tool-scenarios-exide",
+     "kind": "tool_selection",
+     "status": 200,
+     "answers": {
+      "next_tool": {
+       "value": "evaluate_scenarios",
+       "probability": 0.9528358091619004,
+       "confidence": 0.95120945775369,
+       "distribution": {
+        "predict_traffic_flow": 0.0015281528642099606,
+        "find_convoy_routes": 0.0070460206703599,
+        "plan_diversions": 0.00794964013400629,
+        "evaluate_scenarios": 0.9528358091619004,
+        "predict_eta": 0.002378552713628486,
+        "query_shortest_path": 0.0007116693386251005,
+        "query_k_shortest_paths": 0.0009817946814537663,
+        "query_segments_in_bbox": 0.00040525536050744576,
+        "query_segment_details": 0.000740876953675314,
+        "get_live_traffic": 0.0015908698733317391,
+        "get_historical_pattern": 0.0011531666518769486,
+        "simulate_twin": 0.0021081883701413763,
+        "get_active_corridor_events": 0.001200493788107824,
+        "city_query_entities": 0.000740876953675314,
+        "city_get_dossier": 0.0008701964497446084,
+        "city_feed": 0.000740876953675314,
+        "get_signal_state": 0.0006566629820173999,
+        "list_units": 0.0005370361093389566,
+        "list_dispatches": 0.001200493788107824,
+        "get_interception_plan": 0.0006836131293285859,
+        "get_situation_log": 0.0007116693386251005,
+        "list_enforcement_recommendations": 0.000582021434929176,
+        "city_decision_support": 0.002908384460693781,
+        "canvas_fly_to": 0.00042188744310411175,
+        "canvas_track_entity": 0.0006307753573606814,
+        "canvas_highlight": 0.0007116693386251005,
+        "canvas_annotate": 0.00015434812116025748,
+        "canvas_set_sensor": 0.00060590822942677,
+        "canvas_toggle_layer": 0.0007116693386251005,
+        "final_answer": 0.006501420009737429
+       }
+      },
+      "decision_confidence": {
+       "value": 0.5,
+       "probability": 0.5,
+       "confidence": 0.0,
+       "distribution": {
+        "0": 0.5,
+        "1": 0.5
+       }
+      }
+     },
+     "state_tokens": 504,
+     "latency_ms": 245.454,
+     "wall_ms": 246.5,
+     "error": null
+    },
+    {
+     "id": "tool-history-park-street",
+     "kind": "tool_selection",
+     "status": 200,
+     "answers": {
+      "next_tool": {
+       "value": "get_historical_pattern",
+       "probability": 0.818167524487104,
+       "confidence": 0.8118974391245903,
+       "distribution": {
+        "predict_traffic_flow": 0.03848469428722424,
+        "find_convoy_routes": 0.0027065240760299715,
+        "plan_diversions": 0.0012107528113261782,
+        "evaluate_scenarios": 0.002304307530327458,
+        "predict_eta": 0.002126204204435264,
+        "query_shortest_path": 0.0010731289533624775,
+        "query_k_shortest_paths": 0.0010308229291299945,
+        "query_segments_in_bbox": 0.0047529300053061945,
+        "query_segment_details": 0.01062472202227216,
+        "get_live_traffic": 0.03696750656254468,
+        "get_historical_pattern": 0.818167524487104,
+        "simulate_twin": 0.007701498053738309,
+        "get_active_corridor_events": 0.006050179861889831,
+        "city_query_entities": 0.005811663040724035,
+        "city_get_dossier": 0.009045792270735752,
+        "city_feed": 0.0029332387124858584,
+        "get_signal_state": 0.0027065240760299715,
+        "list_units": 0.0012107528113261782,
+        "list_dispatches": 0.002398878909054139,
+        "get_interception_plan": 0.0008097988479305428,
+        "get_situation_log": 0.004385566575322371,
+        "list_enforcement_recommendations": 0.0012107528113261782,
+        "city_decision_support": 0.0047529300053061945,
+        "canvas_fly_to": 0.0037338296328101417,
+        "canvas_track_entity": 0.0018102292887874703,
+        "canvas_highlight": 0.0029332387124858584,
+        "canvas_annotate": 0.0008776328882601616,
+        "canvas_set_sensor": 0.002042382615964185,
+        "canvas_toggle_layer": 0.002213465865486514,
+        "final_answer": 0.017922527151273716
+       }
+      },
+      "decision_confidence": {
+       "value": 0.4799004793167114,
+       "probability": 0.5200995206832886,
+       "confidence": 0.04019904136657715,
+       "distribution": {
+        "0": 0.5200995206832886,
+        "1": 0.4799004793167114
+       }
+      }
+     },
+     "state_tokens": 472,
+     "latency_ms": 233.285,
+     "wall_ms": 234.3,
+     "error": null
+    },
+    {
+     "id": "tool-final-after-routes",
+     "kind": "tool_selection",
+     "status": 200,
+     "answers": {
+      "next_tool": {
+       "value": "final_answer",
+       "probability": 0.8768627331627764,
+       "confidence": 0.872616620513217,
+       "distribution": {
+        "predict_traffic_flow": 0.005093901821991234,
+        "find_convoy_routes": 0.006228588342162626,
+        "plan_diversions": 0.003272688143065187,
+        "evaluate_scenarios": 0.0043368977660231105,
+        "predict_eta": 0.03655727574162921,
+        "query_shortest_path": 0.009312535603123203,
+        "query_k_shortest_paths": 0.017024919490368818,
+        "query_segments_in_bbox": 0.0009791966445050883,
+        "query_segment_details": 0.002102608807586304,
+        "get_live_traffic": 0.004700184313019977,
+        "get_historical_pattern": 0.0026764883216544564,
+        "simulate_twin": 0.001246455462099736,
+        "get_active_corridor_events": 0.0017195683287507821,
+        "city_query_entities": 0.0019400948977895999,
+        "city_get_dossier": 0.0016517774819796824,
+        "city_feed": 0.0017901410357641927,
+        "get_signal_state": 0.0009791966445050883,
+        "list_units": 0.001246455462099736,
+        "list_dispatches": 0.002188902121616011,
+        "get_interception_plan": 0.0011501150411754697,
+        "get_situation_log": 0.0013508667236198728,
+        "list_enforcement_recommendations": 0.0015241084206273734,
+        "city_decision_support": 0.002372258329982429,
+        "canvas_fly_to": 0.001406307652253814,
+        "canvas_track_entity": 0.0016517774819796824,
+        "canvas_highlight": 0.0017901410357641927,
+        "canvas_annotate": 0.0006818041314295522,
+        "canvas_set_sensor": 0.002469618316189678,
+        "canvas_toggle_layer": 0.0036923932744674596,
+        "final_answer": 0.8768627331627764
+       }
+      },
+      "decision_confidence": {
+       "value": 0.5401346683502197,
+       "probability": 0.5401346683502197,
+       "confidence": 0.08026933670043945,
+       "distribution": {
+        "0": 0.4598653316497803,
+        "1": 0.5401346683502197
+       }
+      }
+     },
+     "state_tokens": 504,
+     "latency_ms": 244.232,
+     "wall_ms": 245.2,
+     "error": null
+    },
+    {
+     "id": "tool-corridor-events-babughat",
+     "kind": "tool_selection",
+     "status": 200,
+     "answers": {
+      "next_tool": {
+       "value": "get_active_corridor_events",
+       "probability": 0.9749544134316208,
+       "confidence": 0.9740907725154698,
+       "distribution": {
+        "predict_traffic_flow": 0.0005278397255348957,
+        "find_convoy_routes": 0.001627800249314195,
+        "plan_diversions": 0.0003530400741622295,
+        "evaluate_scenarios": 0.0005955327354936215,
+        "predict_eta": 0.0004678412739527557,
+        "query_shortest_path": 0.00024581791963966743,
+        "query_k_shortest_paths": 0.0003826127978494212,
+        "query_segments_in_bbox": 0.001911931530045904,
+        "query_segment_details": 0.0013312567663741508,
+        "get_live_traffic": 0.001278775106963643,
+        "get_historical_pattern": 0.0004316811307564687,
+        "simulate_twin": 0.00032575272887123345,
+        "get_active_corridor_events": 0.9749544134316208,
+        "city_query_entities": 0.001911931530045904,
+        "city_get_dossier": 0.0008903971019587837,
+        "city_feed": 0.0005955327354936215,
+        "get_signal_state": 0.0004493977682543576,
+        "list_units": 0.00032575272887123345,
+        "list_dispatches": 0.001385892924249015,
+        "get_interception_plan": 0.0003826127978494212,
+        "get_situation_log": 0.000699482426058888,
+        "list_enforcement_recommendations": 0.00048704194494062115,
+        "city_decision_support": 0.0009649824813767522,
+        "canvas_fly_to": 0.0006199737260294704,
+        "canvas_track_entity": 0.0005278397255348957,
+        "canvas_highlight": 0.0005278397255348957,
+        "canvas_annotate": 0.00011219953550167657,
+        "canvas_set_sensor": 0.000699482426058888,
+        "canvas_toggle_layer": 0.001627800249314195,
+        "final_answer": 0.0033575447023483835
+       }
+      },
+      "decision_confidence": {
+       "value": 0.46987064272550816,
+       "probability": 0.5301293572744918,
+       "confidence": 0.06025871454898368,
+       "distribution": {
+        "0": 0.5301293572744918,
+        "1": 0.46987064272550816
+       }
+      }
+     },
+     "state_tokens": 480,
+     "latency_ms": 236.773,
+     "wall_ms": 237.8,
+     "error": null
+    },
+    {
+     "id": "dss-waterlogging-chowringhee-high-tide",
+     "kind": "dss_coa",
+     "status": 200,
+     "answers": {
+      "coa_strategy": {
+       "value": "standard",
+       "probability": 0.6129754758887906,
+       "confidence": 0.5162193448609883,
+       "distribution": {
+        "baseline": 0.026604369183613474,
+        "minimal": 0.09636585378510559,
+        "standard": 0.6129754758887906,
+        "aggressive": 0.21541690746166964,
+        "information": 0.04863739368082064
+       }
+      },
+      "urgency": {
+       "value": 0.6088384571325319,
+       "probability": 0.6088384571325319,
+       "confidence": null,
+       "distribution": {
+        "false": 0.39116154286746807,
+        "true": 0.6088384571325319
+       }
+      },
+      "disruption_tolerance": {
+       "value": 0.43007418096507677,
+       "probability": 0.5699258190349232,
+       "confidence": 0.13985163806984646,
+       "distribution": {
+        "0": 0.5699258190349232,
+        "1": 0.43007418096507677
+       }
+      }
+     },
+     "state_tokens": 711,
+     "latency_ms": 303.646,
+     "wall_ms": 304.6,
+     "error": null
+    },
+    {
+     "id": "dss-howrah-bridge-breakdown",
+     "kind": "dss_coa",
+     "status": 200,
+     "answers": {
+      "coa_strategy": {
+       "value": "standard",
+       "probability": 0.6354615435532942,
+       "confidence": 0.5443269294416178,
+       "distribution": {
+        "baseline": 0.02649303482528405,
+        "minimal": 0.12215437654867195,
+        "standard": 0.6354615435532942,
+        "aggressive": 0.14347624063642878,
+        "information": 0.07241480443632105
+       }
+      },
+      "urgency": {
+       "value": 0.7767550945281982,
+       "probability": 0.7767550945281982,
+       "confidence": null,
+       "distribution": {
+        "false": 0.22324490547180176,
+        "true": 0.7767550945281982
+       }
+      },
+      "disruption_tolerance": {
+       "value": 0.5100537094489845,
+       "probability": 0.5100537094489845,
+       "confidence": 0.020107418897969076,
+       "distribution": {
+        "0": 0.48994629055101546,
+        "1": 0.5100537094489845
+       }
+      }
+     },
+     "state_tokens": 651,
+     "latency_ms": 287.053,
+     "wall_ms": 288.1,
+     "error": null
+    },
+    {
+     "id": "dss-puja-crowd-park-circus",
+     "kind": "dss_coa",
+     "status": 200,
+     "answers": {
+      "coa_strategy": {
+       "value": "standard",
+       "probability": 0.49614473253218955,
+       "confidence": 0.3701809156652369,
+       "distribution": {
+        "baseline": 0.012765463203835056,
+        "minimal": 0.042664955506754004,
+        "standard": 0.49614473253218955,
+        "aggressive": 0.4057598932504674,
+        "information": 0.042664955506754004
+       }
+      },
+      "urgency": {
+       "value": 0.8158052563667297,
+       "probability": 0.8158052563667297,
+       "confidence": null,
+       "distribution": {
+        "false": 0.18419474363327026,
+        "true": 0.8158052563667297
+       }
+      },
+      "disruption_tolerance": {
+       "value": 0.4300744193836701,
+       "probability": 0.5699255806163299,
+       "confidence": 0.13985116123265984,
+       "distribution": {
+        "0": 0.5699255806163299,
+        "1": 0.4300744193836701
+       }
+      }
+     },
+     "state_tokens": 697,
+     "latency_ms": 302.778,
+     "wall_ms": 303.8,
+     "error": null
+    },
+    {
+     "id": "dss-unverified-flooding-moulali",
+     "kind": "dss_coa",
+     "status": 200,
+     "answers": {
+      "coa_strategy": {
+       "value": "minimal",
+       "probability": 0.38669421962750994,
+       "confidence": 0.2333677745343874,
+       "distribution": {
+        "baseline": 0.22923768875326928,
+        "minimal": 0.38669421962750994,
+        "standard": 0.02136410197094561,
+        "aggressive": 0.0058981314765903,
+        "information": 0.35680585817168486
+       }
+      },
+      "urgency": {
+       "value": 0.0682190338307907,
+       "probability": 0.0682190338307907,
+       "confidence": null,
+       "distribution": {
+        "false": 0.9317809661692094,
+        "true": 0.0682190338307907
+       }
+      },
+      "disruption_tolerance": {
+       "value": 0.1266825849799376,
+       "probability": 0.8733174150200624,
+       "confidence": 0.7466348300401249,
+       "distribution": {
+        "0": 0.8733174150200624,
+        "1": 0.1266825849799376
+       }
+      }
+     },
+     "state_tokens": 664,
+     "latency_ms": 294.857,
+     "wall_ms": 295.9,
+     "error": null
+    },
+    {
+     "id": "dss-collision-sector-v",
+     "kind": "dss_coa",
+     "status": 200,
+     "answers": {
+      "coa_strategy": {
+       "value": "information",
+       "probability": 0.5089358549945617,
+       "confidence": 0.3861698187432021,
+       "distribution": {
+        "baseline": 0.021218051560853147,
+        "minimal": 0.10184747450651903,
+        "standard": 0.35436662074492126,
+        "aggressive": 0.013631998193144847,
+        "information": 0.5089358549945617
+       }
+      },
+      "urgency": {
+       "value": 0.5501075118844219,
+       "probability": 0.5501075118844219,
+       "confidence": null,
+       "distribution": {
+        "false": 0.44989248811557814,
+        "true": 0.5501075118844219
+       }
+      },
+      "disruption_tolerance": {
+       "value": 0.24486452341079712,
+       "probability": 0.7551354765892029,
+       "confidence": 0.5102709531784058,
+       "distribution": {
+        "0": 0.7551354765892029,
+        "1": 0.24486452341079712
+       }
+      }
+     },
+     "state_tokens": 617,
+     "latency_ms": 255.591,
+     "wall_ms": 256.6,
+     "error": null
+    },
+    {
+     "id": "dss-eden-gardens-egress",
+     "kind": "dss_coa",
+     "status": 200,
+     "answers": {
+      "coa_strategy": {
+       "value": "standard",
+       "probability": 0.5427975260763439,
+       "confidence": 0.42849690759542985,
+       "distribution": {
+        "baseline": 0.01850720563930294,
+        "minimal": 0.04859241279186356,
+        "standard": 0.5427975260763439,
+        "aggressive": 0.34873173939927443,
+        "information": 0.0413711160932152
+       }
+      },
+      "urgency": {
+       "value": 0.699442309107918,
+       "probability": 0.699442309107918,
+       "confidence": null,
+       "distribution": {
+        "false": 0.30055769089208195,
+        "true": 0.699442309107918
+       }
+      },
+      "disruption_tolerance": {
+       "value": 0.39116154286746807,
+       "probability": 0.6088384571325319,
+       "confidence": 0.21767691426506386,
+       "distribution": {
+        "0": 0.6088384571325319,
+        "1": 0.39116154286746807
+       }
+      }
+     },
+     "state_tokens": 652,
+     "latency_ms": 289.053,
+     "wall_ms": 290.0,
+     "error": null
+    },
+    {
+     "id": "dss-tree-fall-em-bypass",
+     "kind": "dss_coa",
+     "status": 200,
+     "answers": {
+      "coa_strategy": {
+       "value": "standard",
+       "probability": 0.6289469388852922,
+       "confidence": 0.5361836736066152,
+       "distribution": {
+        "baseline": 0.02841791042774471,
+        "minimal": 0.16679235733624095,
+        "standard": 0.6289469388852922,
+        "aggressive": 0.09497879127111614,
+        "information": 0.08086400207960599
+       }
+      },
+      "urgency": {
+       "value": 0.5699255806163299,
+       "probability": 0.5699255806163299,
+       "confidence": null,
+       "distribution": {
+        "false": 0.4300744193836701,
+        "true": 0.5699255806163299
+       }
+      },
+      "disruption_tolerance": {
+       "value": 0.4300744193836701,
+       "probability": 0.5699255806163299,
+       "confidence": 0.13985116123265984,
+       "distribution": {
+        "0": 0.5699255806163299,
+        "1": 0.4300744193836701
+       }
+      }
+     },
+     "state_tokens": 675,
+     "latency_ms": 292.492,
+     "wall_ms": 293.5,
+     "error": null
+    },
+    {
+     "id": "dss-gangasagar-babughat",
+     "kind": "dss_coa",
+     "status": 200,
+     "answers": {
+      "coa_strategy": {
+       "value": "minimal",
+       "probability": 0.3737976993926812,
+       "confidence": 0.2172471242408515,
+       "distribution": {
+        "baseline": 0.18866180600494195,
+        "minimal": 0.3737976993926812,
+        "standard": 0.3590614350524702,
+        "aggressive": 0.02425632526420214,
+        "information": 0.0542227342857045
+       }
+      },
+      "urgency": {
+       "value": 0.19031559214466204,
+       "probability": 0.19031559214466204,
+       "confidence": null,
+       "distribution": {
+        "false": 0.809684407855338,
+        "true": 0.19031559214466204
+       }
+      },
+      "disruption_tolerance": {
+       "value": 0.23029708862304688,
+       "probability": 0.7697029113769531,
+       "confidence": 0.5394058227539062,
+       "distribution": {
+        "0": 0.7697029113769531,
+        "1": 0.23029708862304688
+       }
+      }
+     },
+     "state_tokens": 651,
+     "latency_ms": 289.992,
+     "wall_ms": 291.1,
+     "error": null
+    },
+    {
+     "id": "dss-fire-bagbazar",
+     "kind": "dss_coa",
+     "status": 200,
+     "answers": {
+      "coa_strategy": {
+       "value": "standard",
+       "probability": 0.6596540175770185,
+       "confidence": 0.574567521971273,
+       "distribution": {
+        "baseline": 0.02249154994734628,
+        "minimal": 0.07517161178306707,
+        "standard": 0.6596540175770185,
+        "aggressive": 0.09961593840485845,
+        "information": 0.1430668822877097
+       }
+      },
+      "urgency": {
+       "value": 0.7697029113769531,
+       "probability": 0.7697029113769531,
+       "confidence": null,
+       "distribution": {
+        "false": 0.23029708862304688,
+        "true": 0.7697029113769531
+       }
+      },
+      "disruption_tolerance": {
+       "value": 0.6088384571325319,
+       "probability": 0.6088384571325319,
+       "confidence": 0.21767691426506386,
+       "distribution": {
+        "0": 0.39116154286746807,
+        "1": 0.6088384571325319
+       }
+      }
+     },
+     "state_tokens": 638,
+     "latency_ms": 286.559,
+     "wall_ms": 287.6,
+     "error": null
+    },
+    {
+     "id": "dss-signal-failure-shyambazar",
+     "kind": "dss_coa",
+     "status": 200,
+     "answers": {
+      "coa_strategy": {
+       "value": "standard",
+       "probability": 0.5117355074838168,
+       "confidence": 0.38966938435477094,
+       "distribution": {
+        "baseline": 0.03320731278297643,
+        "minimal": 0.1303585342564188,
+        "standard": 0.5117355074838168,
+        "aggressive": 0.02133475093545906,
+        "information": 0.3033638945413289
+       }
+      },
+      "urgency": {
+       "value": 0.5,
+       "probability": 0.5,
+       "confidence": null,
+       "distribution": {
+        "false": 0.5,
+        "true": 0.5
+       }
+      },
+      "disruption_tolerance": {
+       "value": 0.3535851240158081,
+       "probability": 0.6464148759841919,
+       "confidence": 0.2928297519683838,
+       "distribution": {
+        "0": 0.6464148759841919,
+        "1": 0.3535851240158081
+       }
+      }
+     },
+     "state_tokens": 629,
+     "latency_ms": 284.12,
+     "wall_ms": 285.3,
+     "error": null
+    },
+    {
+     "id": "dss-general-news-no-traffic",
+     "kind": "dss_coa",
+     "status": 200,
+     "answers": {
+      "coa_strategy": {
+       "value": "baseline",
+       "probability": 0.808396239029156,
+       "confidence": 0.760495298786445,
+       "distribution": {
+        "baseline": 0.808396239029156,
+        "minimal": 0.1684144476525124,
+        "standard": 0.005742252472374879,
+        "aggressive": 0.002370229511759931,
+        "information": 0.015076831334196761
+       }
+      },
+      "urgency": {
+       "value": 0.05649336301177674,
+       "probability": 0.05649336301177674,
+       "confidence": null,
+       "distribution": {
+        "false": 0.9435066369882232,
+        "true": 0.05649336301177674
+       }
+      },
+      "disruption_tolerance": {
+       "value": 0.038505364639744515,
+       "probability": 0.9614946353602555,
+       "confidence": 0.922989270720511,
+       "distribution": {
+        "0": 0.9614946353602555,
+        "1": 0.038505364639744515
+       }
+      }
+     },
+     "state_tokens": 593,
+     "latency_ms": 255.883,
+     "wall_ms": 256.9,
+     "error": null
+    },
+    {
+     "id": "dss-marathon-red-road",
+     "kind": "dss_coa",
+     "status": 200,
+     "answers": {
+      "coa_strategy": {
+       "value": "minimal",
+       "probability": 0.6682389888871434,
+       "confidence": 0.5852987361089292,
+       "distribution": {
+        "baseline": 0.1844853154642469,
+        "minimal": 0.6682389888871434,
+        "standard": 0.10505392459632998,
+        "aggressive": 0.016515533769758204,
+        "information": 0.025706237282521516
+       }
+      },
+      "urgency": {
+       "value": 0.15065034774987854,
+       "probability": 0.15065034774987854,
+       "confidence": null,
+       "distribution": {
+        "false": 0.8493496522501215,
+        "true": 0.15065034774987854
+       }
+      },
+      "disruption_tolerance": {
+       "value": 0.19031559214466204,
+       "probability": 0.809684407855338,
+       "confidence": 0.6193688157106759,
+       "distribution": {
+        "0": 0.809684407855338,
+        "1": 0.19031559214466204
+       }
+      }
+     },
+     "state_tokens": 648,
+     "latency_ms": 288.026,
+     "wall_ms": 289.2,
+     "error": null
+    },
+    {
+     "id": "esc-inc-chingrighata-crossing",
+     "kind": "escort_incident",
+     "status": 200,
+     "answers": {
+      "action": {
+       "value": "activate_plan_b",
+       "probability": 0.6645047130482711,
+       "confidence": 0.5806308913103388,
+       "distribution": {
+        "continue_monitoring": 0.020905750067026822,
+        "hold_position": 0.048650827711921446,
+        "activate_plan_b": 0.6645047130482711,
+        "emergency_reroute": 0.19882169551050008,
+        "escalate_operator": 0.06711701366228064
+       }
+      },
+      "urgency": {
+       "value": 0.17822742299939864,
+       "probability": 0.17822742299939864,
+       "confidence": null,
+       "distribution": {
+        "false": 0.8217725770006014,
+        "true": 0.17822742299939864
+       }
+      }
+     },
+     "state_tokens": 677,
+     "latency_ms": 251.14,
+     "wall_ms": 252.2,
+     "error": null
+    },
+    {
+     "id": "esc-inc-hold-expired-park-street",
+     "kind": "escort_incident",
+     "status": 200,
+     "answers": {
+      "action": {
+       "value": "activate_plan_b",
+       "probability": 0.6954313114871638,
+       "confidence": 0.6192891393589547,
+       "distribution": {
+        "continue_monitoring": 0.02018767092901294,
+        "hold_position": 0.06481164874914053,
+        "activate_plan_b": 0.6954313114871638,
+        "emergency_reroute": 0.1336823292174096,
+        "escalate_operator": 0.0858870396172732
+       }
+      },
+      "urgency": {
+       "value": 0.20960677847852144,
+       "probability": 0.20960677847852144,
+       "confidence": null,
+       "distribution": {
+        "false": 0.7903932215214786,
+        "true": 0.20960677847852144
+       }
+      }
+     },
+     "state_tokens": 711,
+     "latency_ms": 251.474,
+     "wall_ms": 252.6,
+     "error": null
+    },
+    {
+     "id": "esc-inc-deferred-howrah",
+     "kind": "escort_incident",
+     "status": 200,
+     "answers": {
+      "action": {
+       "value": "activate_plan_b",
+       "probability": 0.5966565786795789,
+       "confidence": 0.4958207233494736,
+       "distribution": {
+        "continue_monitoring": 0.038717971405922515,
+        "hold_position": 0.06273738481811836,
+        "activate_plan_b": 0.5966565786795789,
+        "emergency_reroute": 0.24628191430216773,
+        "escalate_operator": 0.05560615079421254
+       }
+      },
+      "urgency": {
+       "value": 0.1965908168730383,
+       "probability": 0.1965908168730383,
+       "confidence": null,
+       "distribution": {
+        "false": 0.8034091831269616,
+        "true": 0.1965908168730383
+       }
+      }
+     },
+     "state_tokens": 697,
+     "latency_ms": 255.029,
+     "wall_ms": 256.1,
+     "error": null
+    },
+    {
+     "id": "esc-inc-mild-ruby",
+     "kind": "escort_incident",
+     "status": 200,
+     "answers": {
+      "action": {
+       "value": "emergency_reroute",
+       "probability": 0.4829731727532498,
+       "confidence": 0.3537164659415622,
+       "distribution": {
+        "continue_monitoring": 0.10061855168993925,
+        "hold_position": 0.13881002780228935,
+        "activate_plan_b": 0.07005962193189924,
+        "emergency_reroute": 0.4829731727532498,
+        "escalate_operator": 0.20753862582262236
+       }
+      },
+      "urgency": {
+       "value": 0.2523777484893799,
+       "probability": 0.2523777484893799,
+       "confidence": null,
+       "distribution": {
+        "false": 0.7476222515106201,
+        "true": 0.2523777484893799
+       }
+      }
+     },
+     "state_tokens": 667,
+     "latency_ms": 245.795,
+     "wall_ms": 246.7,
+     "error": null
+    },
+    {
+     "id": "esc-inc-no-planb-majerhat",
+     "kind": "escort_incident",
+     "status": 200,
+     "answers": {
+      "action": {
+       "value": "emergency_reroute",
+       "probability": 0.44124097475360086,
+       "confidence": 0.30155121844200106,
+       "distribution": {
+        "continue_monitoring": 0.037943637023615535,
+        "hold_position": 0.16142856292958813,
+        "activate_plan_b": 0.026419738890764842,
+        "emergency_reroute": 0.44124097475360086,
+        "escalate_operator": 0.33296708640243067
+       }
+      },
+      "urgency": {
+       "value": 0.31773463838501687,
+       "probability": 0.31773463838501687,
+       "confidence": null,
+       "distribution": {
+        "false": 0.6822653616149832,
+        "true": 0.31773463838501687
+       }
+      }
+     },
+     "state_tokens": 671,
+     "latency_ms": 247.357,
+     "wall_ms": 248.4,
+     "error": null
+    },
+    {
+     "id": "esc-inc-near-destination-airport",
+     "kind": "escort_incident",
+     "status": 200,
+     "answers": {
+      "action": {
+       "value": "activate_plan_b",
+       "probability": 0.4982389955138262,
+       "confidence": 0.3727987443922827,
+       "distribution": {
+        "continue_monitoring": 0.0364778670499802,
+        "hold_position": 0.08837335601806844,
+        "activate_plan_b": 0.4982389955138262,
+        "emergency_reroute": 0.3074849820868655,
+        "escalate_operator": 0.06942479933125967
+       }
+      },
+      "urgency": {
+       "value": 0.2163481349841316,
+       "probability": 0.2163481349841316,
+       "confidence": null,
+       "distribution": {
+        "false": 0.7836518650158684,
+        "true": 0.2163481349841316
+       }
+      }
+     },
+     "state_tokens": 675,
+     "latency_ms": 250.972,
+     "wall_ms": 251.9,
+     "error": null
+    },
+    {
+     "id": "esc-inc-holding-gariahat",
+     "kind": "escort_incident",
+     "status": 200,
+     "answers": {
+      "action": {
+       "value": "escalate_operator",
+       "probability": 0.5027065779509661,
+       "confidence": 0.37838322243870753,
+       "distribution": {
+        "continue_monitoring": 0.031335390520554215,
+        "hold_position": 0.12805863976369353,
+        "activate_plan_b": 0.039887975158393846,
+        "emergency_reroute": 0.2980114166063924,
+        "escalate_operator": 0.5027065779509661
+       }
+      },
+      "urgency": {
+       "value": 0.2839227149532607,
+       "probability": 0.2839227149532607,
+       "confidence": null,
+       "distribution": {
+        "false": 0.7160772850467393,
+        "true": 0.2839227149532607
+       }
+      }
+     },
+     "state_tokens": 705,
+     "latency_ms": 254.572,
+     "wall_ms": 255.6,
+     "error": null
+    },
+    {
+     "id": "esc-inc-severe-esplanade",
+     "kind": "escort_incident",
+     "status": 200,
+     "answers": {
+      "action": {
+       "value": "activate_plan_b",
+       "probability": 0.616763850863556,
+       "confidence": 0.520954813579445,
+       "distribution": {
+        "continue_monitoring": 0.01586891018904817,
+        "hold_position": 0.057480072667154124,
+        "activate_plan_b": 0.616763850863556,
+        "emergency_reroute": 0.21674825977807619,
+        "escalate_operator": 0.0931389065021655
+       }
+      },
+      "urgency": {
+       "value": 0.20302108535233393,
+       "probability": 0.20302108535233393,
+       "confidence": null,
+       "distribution": {
+        "false": 0.796978914647666,
+        "true": 0.20302108535233393
+       }
+      }
+     },
+     "state_tokens": 673,
+     "latency_ms": 249.877,
+     "wall_ms": 250.8,
+     "error": null
+    },
+    {
+     "id": "esc-dep-clear",
+     "kind": "escort_departure",
+     "status": 200,
+     "answers": {
+      "departure": {
+       "value": "proceed",
+       "probability": 0.8494578663219352,
+       "confidence": 0.7741867994829028,
+       "distribution": {
+        "proceed": 0.8494578663219352,
+        "hold_departure": 0.06474428672152971,
+        "activate_plan_b": 0.08579784695653503
+       }
+      }
+     },
+     "state_tokens": 325,
+     "latency_ms": 125.461,
+     "wall_ms": 126.6,
+     "error": null
+    },
+    {
+     "id": "esc-dep-hot-ahead",
+     "kind": "escort_departure",
+     "status": 200,
+     "answers": {
+      "departure": {
+       "value": "activate_plan_b",
+       "probability": 0.43972738562795755,
+       "confidence": 0.15959107844193632,
+       "distribution": {
+        "proceed": 0.4057399811926476,
+        "hold_departure": 0.1545326331793949,
+        "activate_plan_b": 0.43972738562795755
+       }
+      }
+     },
+     "state_tokens": 347,
+     "latency_ms": 127.575,
+     "wall_ms": 128.6,
+     "error": null
+    },
+    {
+     "id": "esc-dep-hot-no-planb",
+     "kind": "escort_departure",
+     "status": 200,
+     "answers": {
+      "departure": {
+       "value": "proceed",
+       "probability": 0.6536167033175027,
+       "confidence": 0.480425054976254,
+       "distribution": {
+        "proceed": 0.6536167033175027,
+        "hold_departure": 0.29239268744696045,
+        "activate_plan_b": 0.05399060923553682
+       }
+      }
+     },
+     "state_tokens": 341,
+     "latency_ms": 126.026,
+     "wall_ms": 127.0,
+     "error": null
+    },
+    {
+     "id": "esc-dep-not-reporting",
+     "kind": "escort_departure",
+     "status": 200,
+     "answers": {
+      "departure": {
+       "value": "proceed",
+       "probability": 0.8314902906341894,
+       "confidence": 0.7472354359512842,
+       "distribution": {
+        "proceed": 0.8314902906341894,
+        "hold_departure": 0.07749176885920418,
+        "activate_plan_b": 0.0910179405066064
+       }
+      }
+     },
+     "state_tokens": 319,
+     "latency_ms": 115.822,
+     "wall_ms": 116.9,
+     "error": null
+    },
+    {
+     "id": "esc-dep-borderline",
+     "kind": "escort_departure",
+     "status": 200,
+     "answers": {
+      "departure": {
+       "value": "proceed",
+       "probability": 0.8866911812738842,
+       "confidence": 0.8300367719108264,
+       "distribution": {
+        "proceed": 0.8866911812738842,
+        "hold_departure": 0.08955853115466965,
+        "activate_plan_b": 0.023750287571446108
+       }
+      }
+     },
+     "state_tokens": 322,
+     "latency_ms": 124.609,
+     "wall_ms": 125.7,
+     "error": null
+    },
+    {
+     "id": "esc-dep-resume-midway",
+     "kind": "escort_departure",
+     "status": 200,
+     "answers": {
+      "departure": {
+       "value": "proceed",
+       "probability": 0.44260906831080127,
+       "confidence": 0.1639136024662019,
+       "distribution": {
+        "proceed": 0.44260906831080127,
+        "hold_departure": 0.22339181443404046,
+        "activate_plan_b": 0.33399911725515824
+       }
+      }
+     },
+     "state_tokens": 346,
+     "latency_ms": 126.237,
+     "wall_ms": 127.4,
+     "error": null
+    },
+    {
+     "id": "pc-nabanna-airport",
+     "kind": "post_clearance",
+     "status": 200,
+     "answers": {
+      "restoration_posture": {
+       "value": "immediate_full_restoration",
+       "probability": 0.9660753976638348,
+       "confidence": 0.9491130964957522,
+       "distribution": {
+        "immediate_full_restoration": 0.9660753976638348,
+        "staged_reverse_order_restoration": 0.020328259871768443,
+        "signal_assisted_recovery": 0.013596342464396768
+       }
+      }
+     },
+     "state_tokens": 126,
+     "latency_ms": 71.689,
+     "wall_ms": 72.9,
+     "error": null
+    },
+    {
+     "id": "pc-eden-egress",
+     "kind": "post_clearance",
+     "status": 200,
+     "answers": {
+      "restoration_posture": {
+       "value": "staged_reverse_order_restoration",
+       "probability": 0.4783049595103407,
+       "confidence": 0.21745743926551103,
+       "distribution": {
+        "immediate_full_restoration": 0.34670657436112423,
+        "staged_reverse_order_restoration": 0.4783049595103407,
+        "signal_assisted_recovery": 0.17498846612853505
+       }
+      }
+     },
+     "state_tokens": 144,
+     "latency_ms": 79.785,
+     "wall_ms": 80.9,
+     "error": null
+    },
+    {
+     "id": "pc-victoria-short",
+     "kind": "post_clearance",
+     "status": 200,
+     "answers": {
+      "restoration_posture": {
+       "value": "immediate_full_restoration",
+       "probability": 0.41694724064750915,
+       "confidence": 0.12542086097126373,
+       "distribution": {
+        "immediate_full_restoration": 0.41694724064750915,
+        "staged_reverse_order_restoration": 0.3549850794664073,
+        "signal_assisted_recovery": 0.2280676798860836
+       }
+      }
+     },
+     "state_tokens": 140,
+     "latency_ms": 78.053,
+     "wall_ms": 79.1,
+     "error": null
+    },
+    {
+     "id": "pc-puja-night",
+     "kind": "post_clearance",
+     "status": 200,
+     "answers": {
+      "restoration_posture": {
+       "value": "staged_reverse_order_restoration",
+       "probability": 0.426756697095731,
+       "confidence": 0.1401350456435965,
+       "distribution": {
+        "immediate_full_restoration": 0.22423072981146783,
+        "staged_reverse_order_restoration": 0.426756697095731,
+        "signal_assisted_recovery": 0.3490125730928012
+       }
+      }
+     },
+     "state_tokens": 144,
+     "latency_ms": 79.639,
+     "wall_ms": 80.8,
+     "error": null
+    },
+    {
+     "id": "pc-signals-ready",
+     "kind": "post_clearance",
+     "status": 200,
+     "answers": {
+      "restoration_posture": {
+       "value": "immediate_full_restoration",
+       "probability": 0.9165690727575537,
+       "confidence": 0.8748536091363306,
+       "distribution": {
+        "immediate_full_restoration": 0.9165690727575537,
+        "staged_reverse_order_restoration": 0.036706211267134047,
+        "signal_assisted_recovery": 0.04672471597531217
+       }
+      }
+     },
+     "state_tokens": 143,
+     "latency_ms": 79.194,
+     "wall_ms": 80.2,
+     "error": null
+    },
+    {
+     "id": "probe-health",
+     "kind": "probe",
+     "status": 200,
+     "answers": {
+      "probe": {
+       "value": 0.44989223927580596,
+       "probability": 0.44989223927580596,
+       "confidence": null,
+       "distribution": {
+        "false": 0.550107760724194,
+        "true": 0.44989223927580596
+       }
+      }
+     },
+     "state_tokens": 106,
+     "latency_ms": 70.353,
+     "wall_ms": 71.3,
+     "error": null
+    },
+    {
+     "id": "probe-corridor-checkpoint",
+     "kind": "probe",
+     "status": 200,
+     "answers": {
+      "urgency": {
+       "value": 0.6088384571325319,
+       "probability": 0.6088384571325319,
+       "confidence": null,
+       "distribution": {
+        "false": 0.39116154286746807,
+        "true": 0.6088384571325319
+       }
+      },
+      "reroute": {
+       "value": "ajc_bose_road",
+       "probability": 0.7912768968453407,
+       "confidence": 0.6869153452680111,
+       "distribution": {
+        "em_bypass": 0.20156837138583925,
+        "chowringhee": 0.007154731768819983,
+        "ajc_bose_road": 0.7912768968453407
+       }
+      },
+      "readiness": {
+       "value": 2.0574644067505656,
+       "probability": 0.3616186434271729,
+       "confidence": 0.30225906474777653,
+       "distribution": {
+        "0": 0.11726051743716773,
+        "1": 0.15539132290171567,
+        "2": 0.3616186434271729,
+        "3": 0.2840822679412703,
+        "4": 0.08164724829267335
+       }
+      }
+     },
+     "state_tokens": 662,
+     "latency_ms": 247.544,
+     "wall_ms": 248.6,
+     "error": null
+    },
+    {
+     "id": "probe-corridor-checkpoint-rain",
+     "kind": "probe",
+     "status": 200,
+     "answers": {
+      "urgency": {
+       "value": 0.809684407855338,
+       "probability": 0.809684407855338,
+       "confidence": null,
+       "distribution": {
+        "false": 0.19031559214466198,
+        "true": 0.809684407855338
+       }
+      },
+      "reroute": {
+       "value": "ajc_bose_road",
+       "probability": 0.9825850917345722,
+       "confidence": 0.9738776376018583,
+       "distribution": {
+        "em_bypass": 0.010435342992788369,
+        "chowringhee": 0.006979565272639385,
+        "ajc_bose_road": 0.9825850917345722
+       }
+      },
+      "readiness": {
+       "value": 1.4335725987915309,
+       "probability": 0.3036481692843412,
+       "confidence": 0.0,
+       "distribution": {
+        "0": 0.3036481692843412,
+        "1": 0.2201041695460056,
+        "2": 0.2691330869625049,
+        "3": 0.15325604150807795,
+        "4": 0.053858532699070386
+       }
+      }
+     },
+     "state_tokens": 590,
+     "latency_ms": 230.531,
+     "wall_ms": 231.6,
+     "error": null
+    }
+   ],
+   "wall_ms_p50": 250.8,
+   "wall_ms_p95": 391.8,
+   "server_ms_p50": 249.9,
+   "server_ms_p95": 390.3,
+   "errors": 0
+  }
+ },
+ "name": "flash-v1.2-http9182",
+ "label": "SIMULATED",
+ "requests": 60,
+ "finished": "2026-10-28T20:20:44+0530"
+}

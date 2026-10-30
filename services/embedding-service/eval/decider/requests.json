@@ -1,0 +1,2016 @@
+{
+ "label": "SIMULATED",
+ "requests": [
+  {
+   "id": "pm-mantralaya-airport-zplus",
+   "kind": "pre_movement",
+   "label": "SIMULATED",
+   "state": "TRIGGER: pre_movement\nPre-movement route decision: Z+ protected movement departing 2026-11-02T08:30:00+05:30.\nCorridor status: amber (212 live observations on 64 corridor segments).\nCandidates in tactical rank order (lane floor 6 for Z+):\n- route_e9e430199916: 41 segments, 24.6 km, ETA 38 min, weighted score 0.82, compliant\n- route_3f2df115dff1: 47 segments, 27.9 km, ETA 44 min, weighted score 0.74, compliant\n- route_c098b50edbbe: 39 segments, 23.8 km, ETA 41 min, weighted score 0.61, conditional (3 segment(s) below the floor)\nOption delay_departure: hold the plan and depart later.\nphase: pre_movement\nvvip_class: Z+",
+   "questions": {
+    "route_strategy": {
+     "type": "choice",
+     "instructions": "Pre-movement planning for a VVIP convoy. Weigh security protocol compliance for the VVIP class against public disruption. Which candidate strategy should lead?",
+     "options": [
+      "route_e9e430199916",
+      "route_3f2df115dff1",
+      "route_c098b50edbbe",
+      "delay_departure"
+     ]
+    },
+    "urgency": {
+     "type": "noul",
+     "instructions": "How urgent is it to lock this plan now rather than waiting for better traffic conditions? (noul = none-of-the-above likelihood, i.e. probability the situation defies the listed strategy options)"
+    },
+    "disruption_tolerance": {
+     "type": "score",
+     "instructions": "Acceptable level of public-traffic disruption for this movement, 0.0 (minimize at all costs) to 1.0 (security dominates completely).",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "pm-mantralaya-airport-peak-red",
+   "kind": "pre_movement",
+   "label": "SIMULATED",
+   "state": "TRIGGER: pre_movement\nPre-movement route decision: Z+ protected movement departing 2026-11-02T18:15:00+05:30.\nCorridor status: red (230 live observations on 64 corridor segments).\nCandidates in tactical rank order (lane floor 6 for Z+):\n- route_e9e430199916: 41 segments, 24.6 km, ETA 71 min, weighted score 0.41, conditional (6 segment(s) below the floor)\n- route_3f2df115dff1: 47 segments, 27.9 km, ETA 69 min, weighted score 0.38, conditional (4 segment(s) below the floor)\nOption delay_departure: hold the plan and depart later.\nphase: pre_movement\nvvip_class: Z+",
+   "questions": {
+    "route_strategy": {
+     "type": "choice",
+     "instructions": "Pre-movement planning for a VVIP convoy. Weigh security protocol compliance for the VVIP class against public disruption. Which candidate strategy should lead?",
+     "options": [
+      "route_e9e430199916",
+      "route_3f2df115dff1",
+      "delay_departure"
+     ]
+    },
+    "urgency": {
+     "type": "noul",
+     "instructions": "How urgent is it to lock this plan now rather than waiting for better traffic conditions? (noul = none-of-the-above likelihood, i.e. probability the situation defies the listed strategy options)"
+    },
+    "disruption_tolerance": {
+     "type": "score",
+     "instructions": "Acceptable level of public-traffic disruption for this movement, 0.0 (minimize at all costs) to 1.0 (security dominates completely).",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "pm-shivajipark-parade-z",
+   "kind": "pre_movement",
+   "label": "SIMULATED",
+   "state": "TRIGGER: pre_movement\nPre-movement route decision: Z protected movement departing 2027-01-26T07:00:00+05:30.\nCorridor status: green (96 live observations on 22 corridor segments).\nCandidates in tactical rank order (lane floor 4 for Z):\n- route_5f4233443586: 12 segments, 5.4 km, ETA 11 min, weighted score 0.91, compliant\n- route_b53c100135f5: 15 segments, 6.8 km, ETA 14 min, weighted score 0.79, compliant\nOption delay_departure: hold the plan and depart later.\nphase: pre_movement\nvvip_class: Z",
+   "questions": {
+    "route_strategy": {
+     "type": "choice",
+     "instructions": "Pre-movement planning for a VVIP convoy. Weigh security protocol compliance for the VVIP class against public disruption. Which candidate strategy should lead?",
+     "options": [
+      "route_5f4233443586",
+      "route_b53c100135f5",
+      "delay_departure"
+     ]
+    },
+    "urgency": {
+     "type": "noul",
+     "instructions": "How urgent is it to lock this plan now rather than waiting for better traffic conditions? (noul = none-of-the-above likelihood, i.e. probability the situation defies the listed strategy options)"
+    },
+    "disruption_tolerance": {
+     "type": "score",
+     "instructions": "Acceptable level of public-traffic disruption for this movement, 0.0 (minimize at all costs) to 1.0 (security dominates completely).",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "pm-wankhede-match-y",
+   "kind": "pre_movement",
+   "label": "SIMULATED",
+   "state": "TRIGGER: pre_movement\nPre-movement route decision: Y protected movement departing 2026-11-08T21:40:00+05:30.\nCorridor status: red (140 live observations on 30 corridor segments).\nCandidates in tactical rank order (lane floor 2 for Y):\n- route_6a8ca8bc78a6: 18 segments, 7.2 km, ETA 26 min, weighted score 0.55, compliant\n- route_29ed25456c4d: 21 segments, 8.9 km, ETA 24 min, weighted score 0.58, compliant\n- route_ca62f872151b: 16 segments, 6.6 km, ETA 31 min, weighted score 0.44, conditional (2 segment(s) below the floor)\nOption delay_departure: hold the plan and depart later.\nphase: pre_movement\nvvip_class: Y",
+   "questions": {
+    "route_strategy": {
+     "type": "choice",
+     "instructions": "Pre-movement planning for a VVIP convoy. Weigh security protocol compliance for the VVIP class against public disruption. Which candidate strategy should lead?",
+     "options": [
+      "route_6a8ca8bc78a6",
+      "route_29ed25456c4d",
+      "route_ca62f872151b",
+      "delay_departure"
+     ]
+    },
+    "urgency": {
+     "type": "noul",
+     "instructions": "How urgent is it to lock this plan now rather than waiting for better traffic conditions? (noul = none-of-the-above likelihood, i.e. probability the situation defies the listed strategy options)"
+    },
+    "disruption_tolerance": {
+     "type": "score",
+     "instructions": "Acceptable level of public-traffic disruption for this movement, 0.0 (minimize at all costs) to 1.0 (security dominates completely).",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "pm-kem-hospital-x",
+   "kind": "pre_movement",
+   "label": "SIMULATED",
+   "state": "TRIGGER: pre_movement\nPre-movement route decision: X protected movement departing 2026-11-03T11:00:00+05:30.\nCorridor status: amber (75 live observations on 18 corridor segments).\nCandidates in tactical rank order (lane floor 1 for X):\n- route_0ea9ea25565e: 10 segments, 4.1 km, ETA 13 min, weighted score 0.77, compliant\n- route_2d9bcb6dd859: 13 segments, 5.0 km, ETA 12 min, weighted score 0.80, conditional (1 segment(s) below the floor)\nOption delay_departure: hold the plan and depart later.\nphase: pre_movement\nvvip_class: X",
+   "questions": {
+    "route_strategy": {
+     "type": "choice",
+     "instructions": "Pre-movement planning for a VVIP convoy. Weigh security protocol compliance for the VVIP class against public disruption. Which candidate strategy should lead?",
+     "options": [
+      "route_0ea9ea25565e",
+      "route_2d9bcb6dd859",
+      "delay_departure"
+     ]
+    },
+    "urgency": {
+     "type": "noul",
+     "instructions": "How urgent is it to lock this plan now rather than waiting for better traffic conditions? (noul = none-of-the-above likelihood, i.e. probability the situation defies the listed strategy options)"
+    },
+    "disruption_tolerance": {
+     "type": "score",
+     "instructions": "Acceptable level of public-traffic disruption for this movement, 0.0 (minimize at all costs) to 1.0 (security dominates completely).",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "pm-bkc-summit-z",
+   "kind": "pre_movement",
+   "label": "SIMULATED",
+   "state": "TRIGGER: pre_movement\nPre-movement route decision: Z protected movement departing 2026-11-12T09:45:00+05:30.\nCorridor status: amber (180 live observations on 40 corridor segments).\nCandidates in tactical rank order (lane floor 4 for Z):\n- route_ccd178547880: 22 segments, 13.2 km, ETA 29 min, weighted score 0.73, compliant\n- route_1023855a86b2: 25 segments, 14.8 km, ETA 27 min, weighted score 0.75, compliant\n- route_234c0e7bf51d: 20 segments, 12.9 km, ETA 33 min, weighted score 0.66, compliant\n- route_fb088aef73c1: 28 segments, 16.1 km, ETA 35 min, weighted score 0.52, conditional (2 segment(s) below the floor)\nOption delay_departure: hold the plan and depart later.\nphase: pre_movement\nvvip_class: Z",
+   "questions": {
+    "route_strategy": {
+     "type": "choice",
+     "instructions": "Pre-movement planning for a VVIP convoy. Weigh security protocol compliance for the VVIP class against public disruption. Which candidate strategy should lead?",
+     "options": [
+      "route_ccd178547880",
+      "route_1023855a86b2",
+      "route_234c0e7bf51d",
+      "route_fb088aef73c1",
+      "delay_departure"
+     ]
+    },
+    "urgency": {
+     "type": "noul",
+     "instructions": "How urgent is it to lock this plan now rather than waiting for better traffic conditions? (noul = none-of-the-above likelihood, i.e. probability the situation defies the listed strategy options)"
+    },
+    "disruption_tolerance": {
+     "type": "score",
+     "instructions": "Acceptable level of public-traffic disruption for this movement, 0.0 (minimize at all costs) to 1.0 (security dominates completely).",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "pm-csmt-transfer-y",
+   "kind": "pre_movement",
+   "label": "SIMULATED",
+   "state": "TRIGGER: pre_movement\nPre-movement route decision: Y protected movement departing 2026-11-05T06:20:00+05:30.\nCorridor status: green (58 live observations on 26 corridor segments).\nCandidates in tactical rank order (lane floor 2 for Y):\n- route_1f910a6e696f: 14 segments, 6.3 km, ETA 15 min, weighted score 0.86, compliant\n- route_7e4d022600e5: 17 segments, 7.5 km, ETA 18 min, weighted score 0.71, compliant\nOption delay_departure: hold the plan and depart later.\nphase: pre_movement\nvvip_class: Y",
+   "questions": {
+    "route_strategy": {
+     "type": "choice",
+     "instructions": "Pre-movement planning for a VVIP convoy. Weigh security protocol compliance for the VVIP class against public disruption. Which candidate strategy should lead?",
+     "options": [
+      "route_1f910a6e696f",
+      "route_7e4d022600e5",
+      "delay_departure"
+     ]
+    },
+    "urgency": {
+     "type": "noul",
+     "instructions": "How urgent is it to lock this plan now rather than waiting for better traffic conditions? (noul = none-of-the-above likelihood, i.e. probability the situation defies the listed strategy options)"
+    },
+    "disruption_tolerance": {
+     "type": "score",
+     "instructions": "Acceptable level of public-traffic disruption for this movement, 0.0 (minimize at all costs) to 1.0 (security dominates completely).",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "pm-ganeshotsav-visarjan-zplus",
+   "kind": "pre_movement",
+   "label": "SIMULATED",
+   "state": "TRIGGER: pre_movement\nPre-movement route decision: Z+ protected movement departing 2026-09-25T20:00:00+05:30.\nCorridor status: red (260 live observations on 52 corridor segments).\nCandidates in tactical rank order (lane floor 6 for Z+):\n- route_81d4c463d5ba: 30 segments, 15.5 km, ETA 52 min, weighted score 0.47, compliant\n- route_4c78a8246ad7: 33 segments, 17.0 km, ETA 49 min, weighted score 0.49, conditional (5 segment(s) below the floor)\nOption delay_departure: hold the plan and depart later.\nphase: pre_movement\nvvip_class: Z+",
+   "questions": {
+    "route_strategy": {
+     "type": "choice",
+     "instructions": "Pre-movement planning for a VVIP convoy. Weigh security protocol compliance for the VVIP class against public disruption. Which candidate strategy should lead?",
+     "options": [
+      "route_81d4c463d5ba",
+      "route_4c78a8246ad7",
+      "delay_departure"
+     ]
+    },
+    "urgency": {
+     "type": "noul",
+     "instructions": "How urgent is it to lock this plan now rather than waiting for better traffic conditions? (noul = none-of-the-above likelihood, i.e. probability the situation defies the listed strategy options)"
+    },
+    "disruption_tolerance": {
+     "type": "score",
+     "instructions": "Acceptable level of public-traffic disruption for this movement, 0.0 (minimize at all costs) to 1.0 (security dominates completely).",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "pm-gateway-ceremony-z",
+   "kind": "pre_movement",
+   "label": "SIMULATED",
+   "state": "TRIGGER: pre_movement\nPre-movement route decision: Z protected movement departing 2026-12-16T08:00:00+05:30.\nCorridor status: green (88 live observations on 20 corridor segments).\nCandidates in tactical rank order (lane floor 4 for Z):\n- route_183d0d790e1a: 9 segments, 3.8 km, ETA 9 min, weighted score 0.92, compliant\n- route_ec06f289a058: 11 segments, 4.4 km, ETA 10 min, weighted score 0.88, compliant\n- route_b4816b0bae2c: 12 segments, 4.9 km, ETA 12 min, weighted score 0.81, compliant\nOption delay_departure: hold the plan and depart later.\nphase: pre_movement\nvvip_class: Z",
+   "questions": {
+    "route_strategy": {
+     "type": "choice",
+     "instructions": "Pre-movement planning for a VVIP convoy. Weigh security protocol compliance for the VVIP class against public disruption. Which candidate strategy should lead?",
+     "options": [
+      "route_183d0d790e1a",
+      "route_ec06f289a058",
+      "route_b4816b0bae2c",
+      "delay_departure"
+     ]
+    },
+    "urgency": {
+     "type": "noul",
+     "instructions": "How urgent is it to lock this plan now rather than waiting for better traffic conditions? (noul = none-of-the-above likelihood, i.e. probability the situation defies the listed strategy options)"
+    },
+    "disruption_tolerance": {
+     "type": "score",
+     "instructions": "Acceptable level of public-traffic disruption for this movement, 0.0 (minimize at all costs) to 1.0 (security dominates completely).",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "pm-brabourne-stadium-x-unknown",
+   "kind": "pre_movement",
+   "label": "SIMULATED",
+   "state": "TRIGGER: pre_movement\nPre-movement route decision: X protected movement departing 2026-11-20T16:30:00+05:30.\nCorridor status: unknown (0 live observations on n/a corridor segments).\nCandidates in tactical rank order (lane floor 1 for X):\n- route_80c35c3228f2: 19 segments, 9.6 km, ETA 22 min, weighted score 0.64, compliant\nOption delay_departure: hold the plan and depart later.\nphase: pre_movement\nvvip_class: X",
+   "questions": {
+    "route_strategy": {
+     "type": "choice",
+     "instructions": "Pre-movement planning for a VVIP convoy. Weigh security protocol compliance for the VVIP class against public disruption. Which candidate strategy should lead?",
+     "options": [
+      "route_80c35c3228f2",
+      "delay_departure"
+     ]
+    },
+    "urgency": {
+     "type": "noul",
+     "instructions": "How urgent is it to lock this plan now rather than waiting for better traffic conditions? (noul = none-of-the-above likelihood, i.e. probability the situation defies the listed strategy options)"
+    },
+    "disruption_tolerance": {
+     "type": "score",
+     "instructions": "Acceptable level of public-traffic disruption for this movement, 0.0 (minimize at all costs) to 1.0 (security dominates completely).",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "pm-airport-mantralaya-night-zplus",
+   "kind": "pre_movement",
+   "label": "SIMULATED",
+   "state": "TRIGGER: pre_movement\nPre-movement route decision: Z+ protected movement departing 2026-11-04T23:10:00+05:30.\nCorridor status: green (120 live observations on 64 corridor segments).\nCandidates in tactical rank order (lane floor 6 for Z+):\n- route_3f2df115dff1: 47 segments, 27.9 km, ETA 33 min, weighted score 0.88, compliant\n- route_e9e430199916: 41 segments, 24.6 km, ETA 31 min, weighted score 0.86, compliant\nOption delay_departure: hold the plan and depart later.\nphase: pre_movement\nvvip_class: Z+",
+   "questions": {
+    "route_strategy": {
+     "type": "choice",
+     "instructions": "Pre-movement planning for a VVIP convoy. Weigh security protocol compliance for the VVIP class against public disruption. Which candidate strategy should lead?",
+     "options": [
+      "route_3f2df115dff1",
+      "route_e9e430199916",
+      "delay_departure"
+     ]
+    },
+    "urgency": {
+     "type": "noul",
+     "instructions": "How urgent is it to lock this plan now rather than waiting for better traffic conditions? (noul = none-of-the-above likelihood, i.e. probability the situation defies the listed strategy options)"
+    },
+    "disruption_tolerance": {
+     "type": "score",
+     "instructions": "Acceptable level of public-traffic disruption for this movement, 0.0 (minimize at all costs) to 1.0 (security dominates completely).",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "pm-high-tide-waterlogging-z",
+   "kind": "pre_movement",
+   "label": "SIMULATED",
+   "state": "TRIGGER: pre_movement\nPre-movement route decision: Z protected movement departing 2026-09-14T17:30:00+05:30.\nCorridor status: red (150 live observations on 34 corridor segments).\nCandidates in tactical rank order (lane floor 4 for Z):\n- route_3cc63f44c2f9: 20 segments, 9.1 km, ETA 47 min, weighted score 0.36, conditional (4 segment(s) below the floor)\n- route_8c7c68cff497: 24 segments, 11.3 km, ETA 39 min, weighted score 0.43, conditional (2 segment(s) below the floor)\nOption delay_departure: hold the plan and depart later.\nphase: pre_movement\nvvip_class: Z",
+   "questions": {
+    "route_strategy": {
+     "type": "choice",
+     "instructions": "Pre-movement planning for a VVIP convoy. Weigh security protocol compliance for the VVIP class against public disruption. Which candidate strategy should lead?",
+     "options": [
+      "route_3cc63f44c2f9",
+      "route_8c7c68cff497",
+      "delay_departure"
+     ]
+    },
+    "urgency": {
+     "type": "noul",
+     "instructions": "How urgent is it to lock this plan now rather than waiting for better traffic conditions? (noul = none-of-the-above likelihood, i.e. probability the situation defies the listed strategy options)"
+    },
+    "disruption_tolerance": {
+     "type": "score",
+     "instructions": "Acceptable level of public-traffic disruption for this movement, 0.0 (minimize at all costs) to 1.0 (security dominates completely).",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "tool-fly-sea-link",
+   "kind": "tool_selection",
+   "label": "SIMULATED",
+   "state": "TRIGGER: operator_chat\nOperator request: Fly the map to the Bandra–Worli Sea Link.\ntools_already_called: []\nvvip_class: Z+",
+   "questions": {
+    "next_tool": {
+     "type": "choice",
+     "instructions": "You are orchestrating a VVIP convoy command center. Given the state document, choose the single next tool to invoke from the menu, or 'final_answer' when enough data has been gathered to answer the operator without another tool call.",
+     "options": [
+      "predict_traffic_flow",
+      "find_convoy_routes",
+      "plan_diversions",
+      "evaluate_scenarios",
+      "predict_eta",
+      "query_shortest_path",
+      "query_k_shortest_paths",
+      "query_segments_in_bbox",
+      "query_segment_details",
+      "get_live_traffic",
+      "get_historical_pattern",
+      "simulate_twin",
+      "get_active_corridor_events",
+      "city_query_entities",
+      "city_get_dossier",
+      "city_feed",
+      "get_signal_state",
+      "list_units",
+      "list_dispatches",
+      "get_interception_plan",
+      "get_situation_log",
+      "list_enforcement_recommendations",
+      "city_decision_support",
+      "canvas_fly_to",
+      "canvas_track_entity",
+      "canvas_highlight",
+      "canvas_annotate",
+      "canvas_set_sensor",
+      "canvas_toggle_layer",
+      "final_answer"
+     ]
+    },
+    "decision_confidence": {
+     "type": "score",
+     "instructions": "How confident are you that the choice above is the right next step? 0.0 = guessing, 1.0 = certain.",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {
+    "next_tool": "canvas_fly_to"
+   }
+  },
+  {
+   "id": "tool-live-ambedkar-road",
+   "kind": "tool_selection",
+   "label": "SIMULATED",
+   "state": "TRIGGER: operator_chat\nOperator request: What is the live traffic like on Dr Ambedkar Road near Dadar TT right now?\ntools_already_called: []\nvvip_class: none",
+   "questions": {
+    "next_tool": {
+     "type": "choice",
+     "instructions": "You are orchestrating a VVIP convoy command center. Given the state document, choose the single next tool to invoke from the menu, or 'final_answer' when enough data has been gathered to answer the operator without another tool call.",
+     "options": [
+      "predict_traffic_flow",
+      "find_convoy_routes",
+      "plan_diversions",
+      "evaluate_scenarios",
+      "predict_eta",
+      "query_shortest_path",
+      "query_k_shortest_paths",
+      "query_segments_in_bbox",
+      "query_segment_details",
+      "get_live_traffic",
+      "get_historical_pattern",
+      "simulate_twin",
+      "get_active_corridor_events",
+      "city_query_entities",
+      "city_get_dossier",
+      "city_feed",
+      "get_signal_state",
+      "list_units",
+      "list_dispatches",
+      "get_interception_plan",
+      "get_situation_log",
+      "list_enforcement_recommendations",
+      "city_decision_support",
+      "canvas_fly_to",
+      "canvas_track_entity",
+      "canvas_highlight",
+      "canvas_annotate",
+      "canvas_set_sensor",
+      "canvas_toggle_layer",
+      "final_answer"
+     ]
+    },
+    "decision_confidence": {
+     "type": "score",
+     "instructions": "How confident are you that the choice above is the right next step? 0.0 = guessing, 1.0 = certain.",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {
+    "next_tool": "get_live_traffic"
+   }
+  },
+  {
+   "id": "tool-routes-mantralaya-airport",
+   "kind": "tool_selection",
+   "label": "SIMULATED",
+   "state": "TRIGGER: operator_chat\nOperator request: Find convoy routes for the Z+ movement from Mantralaya to Mumbai Airport T2 that avoid the Sea Link.\ntools_already_called: []\nvvip_class: Z+",
+   "questions": {
+    "next_tool": {
+     "type": "choice",
+     "instructions": "You are orchestrating a VVIP convoy command center. Given the state document, choose the single next tool to invoke from the menu, or 'final_answer' when enough data has been gathered to answer the operator without another tool call.",
+     "options": [
+      "predict_traffic_flow",
+      "find_convoy_routes",
+      "plan_diversions",
+      "evaluate_scenarios",
+      "predict_eta",
+      "query_shortest_path",
+      "query_k_shortest_paths",
+      "query_segments_in_bbox",
+      "query_segment_details",
+      "get_live_traffic",
+      "get_historical_pattern",
+      "simulate_twin",
+      "get_active_corridor_events",
+      "city_query_entities",
+      "city_get_dossier",
+      "city_feed",
+      "get_signal_state",
+      "list_units",
+      "list_dispatches",
+      "get_interception_plan",
+      "get_situation_log",
+      "list_enforcement_recommendations",
+      "city_decision_support",
+      "canvas_fly_to",
+      "canvas_track_entity",
+      "canvas_highlight",
+      "canvas_annotate",
+      "canvas_set_sensor",
+      "canvas_toggle_layer",
+      "final_answer"
+     ]
+    },
+    "decision_confidence": {
+     "type": "score",
+     "instructions": "How confident are you that the choice above is the right next step? 0.0 = guessing, 1.0 = certain.",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {
+    "next_tool": "find_convoy_routes"
+   }
+  },
+  {
+   "id": "tool-forecast-weh",
+   "kind": "tool_selection",
+   "label": "SIMULATED",
+   "state": "TRIGGER: operator_chat\nOperator request: Predict the traffic flow on the Western Express Highway near Andheri for the next 30 minutes.\ntools_already_called: []\nvvip_class: none",
+   "questions": {
+    "next_tool": {
+     "type": "choice",
+     "instructions": "You are orchestrating a VVIP convoy command center. Given the state document, choose the single next tool to invoke from the menu, or 'final_answer' when enough data has been gathered to answer the operator without another tool call.",
+     "options": [
+      "predict_traffic_flow",
+      "find_convoy_routes",
+      "plan_diversions",
+      "evaluate_scenarios",
+      "predict_eta",
+      "query_shortest_path",
+      "query_k_shortest_paths",
+      "query_segments_in_bbox",
+      "query_segment_details",
+      "get_live_traffic",
+      "get_historical_pattern",
+      "simulate_twin",
+      "get_active_corridor_events",
+      "city_query_entities",
+      "city_get_dossier",
+      "city_feed",
+      "get_signal_state",
+      "list_units",
+      "list_dispatches",
+      "get_interception_plan",
+      "get_situation_log",
+      "list_enforcement_recommendations",
+      "city_decision_support",
+      "canvas_fly_to",
+      "canvas_track_entity",
+      "canvas_highlight",
+      "canvas_annotate",
+      "canvas_set_sensor",
+      "canvas_toggle_layer",
+      "final_answer"
+     ]
+    },
+    "decision_confidence": {
+     "type": "score",
+     "instructions": "How confident are you that the choice above is the right next step? 0.0 = guessing, 1.0 = certain.",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {
+    "next_tool": "predict_traffic_flow"
+   }
+  },
+  {
+   "id": "tool-eta-marinedrive-wankhede",
+   "kind": "tool_selection",
+   "label": "SIMULATED",
+   "state": "TRIGGER: operator_chat\nOperator request: What is the ETA for the convoy from Marine Drive to Wankhede Stadium?\ntools_already_called: []\nvvip_class: Z",
+   "questions": {
+    "next_tool": {
+     "type": "choice",
+     "instructions": "You are orchestrating a VVIP convoy command center. Given the state document, choose the single next tool to invoke from the menu, or 'final_answer' when enough data has been gathered to answer the operator without another tool call.",
+     "options": [
+      "predict_traffic_flow",
+      "find_convoy_routes",
+      "plan_diversions",
+      "evaluate_scenarios",
+      "predict_eta",
+      "query_shortest_path",
+      "query_k_shortest_paths",
+      "query_segments_in_bbox",
+      "query_segment_details",
+      "get_live_traffic",
+      "get_historical_pattern",
+      "simulate_twin",
+      "get_active_corridor_events",
+      "city_query_entities",
+      "city_get_dossier",
+      "city_feed",
+      "get_signal_state",
+      "list_units",
+      "list_dispatches",
+      "get_interception_plan",
+      "get_situation_log",
+      "list_enforcement_recommendations",
+      "city_decision_support",
+      "canvas_fly_to",
+      "canvas_track_entity",
+      "canvas_highlight",
+      "canvas_annotate",
+      "canvas_set_sensor",
+      "canvas_toggle_layer",
+      "final_answer"
+     ]
+    },
+    "decision_confidence": {
+     "type": "score",
+     "instructions": "How confident are you that the choice above is the right next step? 0.0 = guessing, 1.0 = certain.",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {
+    "next_tool": "predict_eta"
+   }
+  },
+  {
+   "id": "tool-diversions-lalbaug",
+   "kind": "tool_selection",
+   "label": "SIMULATED",
+   "state": "TRIGGER: operator_chat\nOperator request: Plan traffic diversions around Lalbaug for the visarjan crowd tonight.\ntools_already_called: []\nvvip_class: none",
+   "questions": {
+    "next_tool": {
+     "type": "choice",
+     "instructions": "You are orchestrating a VVIP convoy command center. Given the state document, choose the single next tool to invoke from the menu, or 'final_answer' when enough data has been gathered to answer the operator without another tool call.",
+     "options": [
+      "predict_traffic_flow",
+      "find_convoy_routes",
+      "plan_diversions",
+      "evaluate_scenarios",
+      "predict_eta",
+      "query_shortest_path",
+      "query_k_shortest_paths",
+      "query_segments_in_bbox",
+      "query_segment_details",
+      "get_live_traffic",
+      "get_historical_pattern",
+      "simulate_twin",
+      "get_active_corridor_events",
+      "city_query_entities",
+      "city_get_dossier",
+      "city_feed",
+      "get_signal_state",
+      "list_units",
+      "list_dispatches",
+      "get_interception_plan",
+      "get_situation_log",
+      "list_enforcement_recommendations",
+      "city_decision_support",
+      "canvas_fly_to",
+      "canvas_track_entity",
+      "canvas_highlight",
+      "canvas_annotate",
+      "canvas_set_sensor",
+      "canvas_toggle_layer",
+      "final_answer"
+     ]
+    },
+    "decision_confidence": {
+     "type": "score",
+     "instructions": "How confident are you that the choice above is the right next step? 0.0 = guessing, 1.0 = certain.",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {
+    "next_tool": "plan_diversions"
+   }
+  },
+  {
+   "id": "tool-units-csmt",
+   "kind": "tool_selection",
+   "label": "SIMULATED",
+   "state": "TRIGGER: operator_chat\nOperator request: Which units are available near CSMT?\ntools_already_called: []\nvvip_class: none",
+   "questions": {
+    "next_tool": {
+     "type": "choice",
+     "instructions": "You are orchestrating a VVIP convoy command center. Given the state document, choose the single next tool to invoke from the menu, or 'final_answer' when enough data has been gathered to answer the operator without another tool call.",
+     "options": [
+      "predict_traffic_flow",
+      "find_convoy_routes",
+      "plan_diversions",
+      "evaluate_scenarios",
+      "predict_eta",
+      "query_shortest_path",
+      "query_k_shortest_paths",
+      "query_segments_in_bbox",
+      "query_segment_details",
+      "get_live_traffic",
+      "get_historical_pattern",
+      "simulate_twin",
+      "get_active_corridor_events",
+      "city_query_entities",
+      "city_get_dossier",
+      "city_feed",
+      "get_signal_state",
+      "list_units",
+      "list_dispatches",
+      "get_interception_plan",
+      "get_situation_log",
+      "list_enforcement_recommendations",
+      "city_decision_support",
+      "canvas_fly_to",
+      "canvas_track_entity",
+      "canvas_highlight",
+      "canvas_annotate",
+      "canvas_set_sensor",
+      "canvas_toggle_layer",
+      "final_answer"
+     ]
+    },
+    "decision_confidence": {
+     "type": "score",
+     "instructions": "How confident are you that the choice above is the right next step? 0.0 = guessing, 1.0 = certain.",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {
+    "next_tool": "list_units"
+   }
+  },
+  {
+   "id": "tool-signal-sion-circle",
+   "kind": "tool_selection",
+   "label": "SIMULATED",
+   "state": "TRIGGER: operator_chat\nOperator request: Show me the signal state at Sion Circle.\ntools_already_called: []\nvvip_class: none",
+   "questions": {
+    "next_tool": {
+     "type": "choice",
+     "instructions": "You are orchestrating a VVIP convoy command center. Given the state document, choose the single next tool to invoke from the menu, or 'final_answer' when enough data has been gathered to answer the operator without another tool call.",
+     "options": [
+      "predict_traffic_flow",
+      "find_convoy_routes",
+      "plan_diversions",
+      "evaluate_scenarios",
+      "predict_eta",
+      "query_shortest_path",
+      "query_k_shortest_paths",
+      "query_segments_in_bbox",
+      "query_segment_details",
+      "get_live_traffic",
+      "get_historical_pattern",
+      "simulate_twin",
+      "get_active_corridor_events",
+      "city_query_entities",
+      "city_get_dossier",
+      "city_feed",
+      "get_signal_state",
+      "list_units",
+      "list_dispatches",
+      "get_interception_plan",
+      "get_situation_log",
+      "list_enforcement_recommendations",
+      "city_decision_support",
+      "canvas_fly_to",
+      "canvas_track_entity",
+      "canvas_highlight",
+      "canvas_annotate",
+      "canvas_set_sensor",
+      "canvas_toggle_layer",
+      "final_answer"
+     ]
+    },
+    "decision_confidence": {
+     "type": "score",
+     "instructions": "How confident are you that the choice above is the right next step? 0.0 = guessing, 1.0 = certain.",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {
+    "next_tool": "get_signal_state"
+   }
+  },
+  {
+   "id": "tool-situation-log",
+   "kind": "tool_selection",
+   "label": "SIMULATED",
+   "state": "TRIGGER: operator_chat\nOperator request: Summarise what happened in the last hour from the situation log.\ntools_already_called: []\nvvip_class: none",
+   "questions": {
+    "next_tool": {
+     "type": "choice",
+     "instructions": "You are orchestrating a VVIP convoy command center. Given the state document, choose the single next tool to invoke from the menu, or 'final_answer' when enough data has been gathered to answer the operator without another tool call.",
+     "options": [
+      "predict_traffic_flow",
+      "find_convoy_routes",
+      "plan_diversions",
+      "evaluate_scenarios",
+      "predict_eta",
+      "query_shortest_path",
+      "query_k_shortest_paths",
+      "query_segments_in_bbox",
+      "query_segment_details",
+      "get_live_traffic",
+      "get_historical_pattern",
+      "simulate_twin",
+      "get_active_corridor_events",
+      "city_query_entities",
+      "city_get_dossier",
+      "city_feed",
+      "get_signal_state",
+      "list_units",
+      "list_dispatches",
+      "get_interception_plan",
+      "get_situation_log",
+      "list_enforcement_recommendations",
+      "city_decision_support",
+      "canvas_fly_to",
+      "canvas_track_entity",
+      "canvas_highlight",
+      "canvas_annotate",
+      "canvas_set_sensor",
+      "canvas_toggle_layer",
+      "final_answer"
+     ]
+    },
+    "decision_confidence": {
+     "type": "score",
+     "instructions": "How confident are you that the choice above is the right next step? 0.0 = guessing, 1.0 = certain.",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {
+    "next_tool": "get_situation_log"
+   }
+  },
+  {
+   "id": "tool-highlight-hindmata",
+   "kind": "tool_selection",
+   "label": "SIMULATED",
+   "state": "TRIGGER: operator_chat\nOperator request: Highlight the waterlogged segments near Hindmata on the map.\ntools_already_called: []\nvvip_class: none",
+   "questions": {
+    "next_tool": {
+     "type": "choice",
+     "instructions": "You are orchestrating a VVIP convoy command center. Given the state document, choose the single next tool to invoke from the menu, or 'final_answer' when enough data has been gathered to answer the operator without another tool call.",
+     "options": [
+      "predict_traffic_flow",
+      "find_convoy_routes",
+      "plan_diversions",
+      "evaluate_scenarios",
+      "predict_eta",
+      "query_shortest_path",
+      "query_k_shortest_paths",
+      "query_segments_in_bbox",
+      "query_segment_details",
+      "get_live_traffic",
+      "get_historical_pattern",
+      "simulate_twin",
+      "get_active_corridor_events",
+      "city_query_entities",
+      "city_get_dossier",
+      "city_feed",
+      "get_signal_state",
+      "list_units",
+      "list_dispatches",
+      "get_interception_plan",
+      "get_situation_log",
+      "list_enforcement_recommendations",
+      "city_decision_support",
+      "canvas_fly_to",
+      "canvas_track_entity",
+      "canvas_highlight",
+      "canvas_annotate",
+      "canvas_set_sensor",
+      "canvas_toggle_layer",
+      "final_answer"
+     ]
+    },
+    "decision_confidence": {
+     "type": "score",
+     "instructions": "How confident are you that the choice above is the right next step? 0.0 = guessing, 1.0 = certain.",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {
+    "next_tool": "canvas_highlight"
+   }
+  },
+  {
+   "id": "tool-scenarios-kalanagar",
+   "kind": "tool_selection",
+   "label": "SIMULATED",
+   "state": "TRIGGER: operator_chat\nOperator request: Compare two scenarios for the Z convoy: hold at Kalanagar junction for 10 minutes, or re-route via the BKC connector.\ntools_already_called: []\nvvip_class: Z",
+   "questions": {
+    "next_tool": {
+     "type": "choice",
+     "instructions": "You are orchestrating a VVIP convoy command center. Given the state document, choose the single next tool to invoke from the menu, or 'final_answer' when enough data has been gathered to answer the operator without another tool call.",
+     "options": [
+      "predict_traffic_flow",
+      "find_convoy_routes",
+      "plan_diversions",
+      "evaluate_scenarios",
+      "predict_eta",
+      "query_shortest_path",
+      "query_k_shortest_paths",
+      "query_segments_in_bbox",
+      "query_segment_details",
+      "get_live_traffic",
+      "get_historical_pattern",
+      "simulate_twin",
+      "get_active_corridor_events",
+      "city_query_entities",
+      "city_get_dossier",
+      "city_feed",
+      "get_signal_state",
+      "list_units",
+      "list_dispatches",
+      "get_interception_plan",
+      "get_situation_log",
+      "list_enforcement_recommendations",
+      "city_decision_support",
+      "canvas_fly_to",
+      "canvas_track_entity",
+      "canvas_highlight",
+      "canvas_annotate",
+      "canvas_set_sensor",
+      "canvas_toggle_layer",
+      "final_answer"
+     ]
+    },
+    "decision_confidence": {
+     "type": "score",
+     "instructions": "How confident are you that the choice above is the right next step? 0.0 = guessing, 1.0 = certain.",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {
+    "next_tool": "evaluate_scenarios"
+   }
+  },
+  {
+   "id": "tool-history-worli-naka",
+   "kind": "tool_selection",
+   "label": "SIMULATED",
+   "state": "TRIGGER: operator_chat\nOperator request: How does Worli Naka usually look on a Friday evening?\ntools_already_called: []\nvvip_class: none",
+   "questions": {
+    "next_tool": {
+     "type": "choice",
+     "instructions": "You are orchestrating a VVIP convoy command center. Given the state document, choose the single next tool to invoke from the menu, or 'final_answer' when enough data has been gathered to answer the operator without another tool call.",
+     "options": [
+      "predict_traffic_flow",
+      "find_convoy_routes",
+      "plan_diversions",
+      "evaluate_scenarios",
+      "predict_eta",
+      "query_shortest_path",
+      "query_k_shortest_paths",
+      "query_segments_in_bbox",
+      "query_segment_details",
+      "get_live_traffic",
+      "get_historical_pattern",
+      "simulate_twin",
+      "get_active_corridor_events",
+      "city_query_entities",
+      "city_get_dossier",
+      "city_feed",
+      "get_signal_state",
+      "list_units",
+      "list_dispatches",
+      "get_interception_plan",
+      "get_situation_log",
+      "list_enforcement_recommendations",
+      "city_decision_support",
+      "canvas_fly_to",
+      "canvas_track_entity",
+      "canvas_highlight",
+      "canvas_annotate",
+      "canvas_set_sensor",
+      "canvas_toggle_layer",
+      "final_answer"
+     ]
+    },
+    "decision_confidence": {
+     "type": "score",
+     "instructions": "How confident are you that the choice above is the right next step? 0.0 = guessing, 1.0 = certain.",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {
+    "next_tool": "get_historical_pattern"
+   }
+  },
+  {
+   "id": "tool-final-after-routes",
+   "kind": "tool_selection",
+   "label": "SIMULATED",
+   "state": "TRIGGER: operator_chat\nOperator request: Find routes from Mantralaya to the airport and tell me the ETA of the best one.\ntools_already_called: ['find_convoy_routes', 'predict_eta']\nvvip_class: Z+",
+   "questions": {
+    "next_tool": {
+     "type": "choice",
+     "instructions": "You are orchestrating a VVIP convoy command center. Given the state document, choose the single next tool to invoke from the menu, or 'final_answer' when enough data has been gathered to answer the operator without another tool call.",
+     "options": [
+      "predict_traffic_flow",
+      "find_convoy_routes",
+      "plan_diversions",
+      "evaluate_scenarios",
+      "predict_eta",
+      "query_shortest_path",
+      "query_k_shortest_paths",
+      "query_segments_in_bbox",
+      "query_segment_details",
+      "get_live_traffic",
+      "get_historical_pattern",
+      "simulate_twin",
+      "get_active_corridor_events",
+      "city_query_entities",
+      "city_get_dossier",
+      "city_feed",
+      "get_signal_state",
+      "list_units",
+      "list_dispatches",
+      "get_interception_plan",
+      "get_situation_log",
+      "list_enforcement_recommendations",
+      "city_decision_support",
+      "canvas_fly_to",
+      "canvas_track_entity",
+      "canvas_highlight",
+      "canvas_annotate",
+      "canvas_set_sensor",
+      "canvas_toggle_layer",
+      "final_answer"
+     ]
+    },
+    "decision_confidence": {
+     "type": "score",
+     "instructions": "How confident are you that the choice above is the right next step? 0.0 = guessing, 1.0 = certain.",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {
+    "next_tool": "final_answer"
+   }
+  },
+  {
+   "id": "tool-corridor-events-girgaon",
+   "kind": "tool_selection",
+   "label": "SIMULATED",
+   "state": "TRIGGER: operator_chat\nOperator request: Are there active corridor events near Girgaon Chowpatty for the visarjan processions?\ntools_already_called: []\nvvip_class: none",
+   "questions": {
+    "next_tool": {
+     "type": "choice",
+     "instructions": "You are orchestrating a VVIP convoy command center. Given the state document, choose the single next tool to invoke from the menu, or 'final_answer' when enough data has been gathered to answer the operator without another tool call.",
+     "options": [
+      "predict_traffic_flow",
+      "find_convoy_routes",
+      "plan_diversions",
+      "evaluate_scenarios",
+      "predict_eta",
+      "query_shortest_path",
+      "query_k_shortest_paths",
+      "query_segments_in_bbox",
+      "query_segment_details",
+      "get_live_traffic",
+      "get_historical_pattern",
+      "simulate_twin",
+      "get_active_corridor_events",
+      "city_query_entities",
+      "city_get_dossier",
+      "city_feed",
+      "get_signal_state",
+      "list_units",
+      "list_dispatches",
+      "get_interception_plan",
+      "get_situation_log",
+      "list_enforcement_recommendations",
+      "city_decision_support",
+      "canvas_fly_to",
+      "canvas_track_entity",
+      "canvas_highlight",
+      "canvas_annotate",
+      "canvas_set_sensor",
+      "canvas_toggle_layer",
+      "final_answer"
+     ]
+    },
+    "decision_confidence": {
+     "type": "score",
+     "instructions": "How confident are you that the choice above is the right next step? 0.0 = guessing, 1.0 = certain.",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {
+    "next_tool": "get_active_corridor_events"
+   }
+  },
+  {
+   "id": "dss-waterlogging-hindmata-high-tide",
+   "kind": "dss_coa",
+   "label": "SIMULATED",
+   "state": "TRIGGER: incident_detected\nKnee-deep waterlogging on Dr Ambedkar Road at Hindmata between Parel and Dadar TT at high tide; outfalls closed until the tide turns in about 2 hours; BEST buses crawling, two cars stalled\nevent_class: waterlogging\nsubtype: high_tide\ntoponym: Hindmata\ncredibility: 0.92\nverification_state: OFFICIAL-VERIFIED\nsecond_order: ['KEM Hospital approach slowed']",
+   "questions": {
+    "coa_strategy": {
+     "type": "choice",
+     "instructions": "Decision support for a reported situation on the city's roads. Choose which course-of-action strategy should lead the response: baseline (monitor only, do nothing), minimal, standard, aggressive, or information (gather more before acting). Weigh public safety first, the impact on ambulances and the 108 emergency corridor, the traffic disruption each response causes, and the credibility of the reports. The reports are labelled OFFICIAL-VERIFIED (credibility 0.92) — weigh how far they can be trusted before acting.",
+     "options": [
+      "baseline",
+      "minimal",
+      "standard",
+      "aggressive",
+      "information"
+     ]
+    },
+    "urgency": {
+     "type": "noul",
+     "instructions": "How urgent is it to act on this situation now rather than waiting for better information or conditions? (noul = none-of-the-above likelihood, i.e. probability the situation defies the listed strategy options)"
+    },
+    "disruption_tolerance": {
+     "type": "score",
+     "instructions": "Acceptable level of public-traffic disruption for the response, 0.0 (minimize at all costs) to 1.0 (response speed dominates completely).",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {
+    "coa_strategy": "standard"
+   }
+  },
+  {
+   "id": "dss-sea-link-breakdown",
+   "kind": "dss_coa",
+   "label": "SIMULATED",
+   "state": "TRIGGER: incident_detected\nA minibus broke down on the Bandra–Worli Sea Link in the Worli-bound lanes during the evening peak; one lane open, queue reaching the Bandra end\nevent_class: road_closure\nsubtype: vehicle_breakdown\ntoponym: Bandra–Worli Sea Link\ncredibility: 0.88\nverification_state: OFFICIAL-VERIFIED\nsecond_order: []",
+   "questions": {
+    "coa_strategy": {
+     "type": "choice",
+     "instructions": "Decision support for a reported situation on the city's roads. Choose which course-of-action strategy should lead the response: baseline (monitor only, do nothing), minimal, standard, aggressive, or information (gather more before acting). Weigh public safety first, the impact on ambulances and the 108 emergency corridor, the traffic disruption each response causes, and the credibility of the reports. The reports are labelled OFFICIAL-VERIFIED (credibility 0.88) — weigh how far they can be trusted before acting.",
+     "options": [
+      "baseline",
+      "minimal",
+      "standard",
+      "aggressive",
+      "information"
+     ]
+    },
+    "urgency": {
+     "type": "noul",
+     "instructions": "How urgent is it to act on this situation now rather than waiting for better information or conditions? (noul = none-of-the-above likelihood, i.e. probability the situation defies the listed strategy options)"
+    },
+    "disruption_tolerance": {
+     "type": "score",
+     "instructions": "Acceptable level of public-traffic disruption for the response, 0.0 (minimize at all costs) to 1.0 (response speed dominates completely).",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {
+    "coa_strategy": "standard"
+   }
+  },
+  {
+   "id": "dss-ganeshotsav-crowd-lalbaug",
+   "kind": "dss_coa",
+   "label": "SIMULATED",
+   "state": "TRIGGER: incident_detected\nGaneshotsav crowd for Lalbaugcha Raja spilling onto the carriageway at Lalbaug on visarjan eve; pedestrian density rising, vehicles at walking pace\nevent_class: mass_gathering\nsubtype: festival_crowd\ntoponym: Lalbaug\ncredibility: 0.85\nverification_state: CONFIRMED\nsecond_order: ['ambulance (108) corridor to KEM Hospital slowed']",
+   "questions": {
+    "coa_strategy": {
+     "type": "choice",
+     "instructions": "Decision support for a reported situation on the city's roads. Choose which course-of-action strategy should lead the response: baseline (monitor only, do nothing), minimal, standard, aggressive, or information (gather more before acting). Weigh public safety first, the impact on ambulances and the 108 emergency corridor, the traffic disruption each response causes, and the credibility of the reports. The reports are labelled CONFIRMED (credibility 0.85) — weigh how far they can be trusted before acting.",
+     "options": [
+      "baseline",
+      "minimal",
+      "standard",
+      "aggressive",
+      "information"
+     ]
+    },
+    "urgency": {
+     "type": "noul",
+     "instructions": "How urgent is it to act on this situation now rather than waiting for better information or conditions? (noul = none-of-the-above likelihood, i.e. probability the situation defies the listed strategy options)"
+    },
+    "disruption_tolerance": {
+     "type": "score",
+     "instructions": "Acceptable level of public-traffic disruption for the response, 0.0 (minimize at all costs) to 1.0 (response speed dominates completely).",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {
+    "coa_strategy": "aggressive"
+   }
+  },
+  {
+   "id": "dss-unverified-flooding-chembur",
+   "kind": "dss_coa",
+   "label": "SIMULATED",
+   "state": "TRIGGER: incident_detected\nA single social post claims a road is flooded near Chembur; no photo, no corroborating report, rain gauges in the area show light rain\nevent_class: weather_hazard\nsubtype: flooding_claim\ntoponym: Chembur\ncredibility: 0.18\nverification_state: UNVERIFIED-OSINT\nsecond_order: []",
+   "questions": {
+    "coa_strategy": {
+     "type": "choice",
+     "instructions": "Decision support for a reported situation on the city's roads. Choose which course-of-action strategy should lead the response: baseline (monitor only, do nothing), minimal, standard, aggressive, or information (gather more before acting). Weigh public safety first, the impact on ambulances and the 108 emergency corridor, the traffic disruption each response causes, and the credibility of the reports. The reports are labelled UNVERIFIED-OSINT (credibility 0.18) — weigh how far they can be trusted before acting.",
+     "options": [
+      "baseline",
+      "minimal",
+      "standard",
+      "aggressive",
+      "information"
+     ]
+    },
+    "urgency": {
+     "type": "noul",
+     "instructions": "How urgent is it to act on this situation now rather than waiting for better information or conditions? (noul = none-of-the-above likelihood, i.e. probability the situation defies the listed strategy options)"
+    },
+    "disruption_tolerance": {
+     "type": "score",
+     "instructions": "Acceptable level of public-traffic disruption for the response, 0.0 (minimize at all costs) to 1.0 (response speed dominates completely).",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {
+    "coa_strategy": "information"
+   }
+  },
+  {
+   "id": "dss-collision-bkc",
+   "kind": "dss_coa",
+   "label": "SIMULATED",
+   "state": "TRIGGER: incident_detected\nTwo cars collided near Bandra Kurla Complex; the service lane is blocked, main carriageway moving\nevent_class: road_accident\nsubtype: collision\ntoponym: Bandra Kurla Complex\ncredibility: 0.55\nverification_state: NEWS-REPORTED\nsecond_order: []",
+   "questions": {
+    "coa_strategy": {
+     "type": "choice",
+     "instructions": "Decision support for a reported situation on the city's roads. Choose which course-of-action strategy should lead the response: baseline (monitor only, do nothing), minimal, standard, aggressive, or information (gather more before acting). Weigh public safety first, the impact on ambulances and the 108 emergency corridor, the traffic disruption each response causes, and the credibility of the reports. The reports are labelled NEWS-REPORTED (credibility 0.55) — weigh how far they can be trusted before acting.",
+     "options": [
+      "baseline",
+      "minimal",
+      "standard",
+      "aggressive",
+      "information"
+     ]
+    },
+    "urgency": {
+     "type": "noul",
+     "instructions": "How urgent is it to act on this situation now rather than waiting for better information or conditions? (noul = none-of-the-above likelihood, i.e. probability the situation defies the listed strategy options)"
+    },
+    "disruption_tolerance": {
+     "type": "score",
+     "instructions": "Acceptable level of public-traffic disruption for the response, 0.0 (minimize at all costs) to 1.0 (response speed dominates completely).",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "dss-wankhede-egress",
+   "kind": "dss_coa",
+   "label": "SIMULATED",
+   "state": "TRIGGER: incident_detected\nMatch ended at Wankhede Stadium; about 30,000 spectators leaving towards Churchgate and Marine Lines; Marine Drive northbound saturated\nevent_class: mass_gathering\nsubtype: egress_surge\ntoponym: Wankhede Stadium\ncredibility: 0.95\nverification_state: CONFIRMED\nsecond_order: []",
+   "questions": {
+    "coa_strategy": {
+     "type": "choice",
+     "instructions": "Decision support for a reported situation on the city's roads. Choose which course-of-action strategy should lead the response: baseline (monitor only, do nothing), minimal, standard, aggressive, or information (gather more before acting). Weigh public safety first, the impact on ambulances and the 108 emergency corridor, the traffic disruption each response causes, and the credibility of the reports. The reports are labelled CONFIRMED (credibility 0.95) — weigh how far they can be trusted before acting.",
+     "options": [
+      "baseline",
+      "minimal",
+      "standard",
+      "aggressive",
+      "information"
+     ]
+    },
+    "urgency": {
+     "type": "noul",
+     "instructions": "How urgent is it to act on this situation now rather than waiting for better information or conditions? (noul = none-of-the-above likelihood, i.e. probability the situation defies the listed strategy options)"
+    },
+    "disruption_tolerance": {
+     "type": "score",
+     "instructions": "Acceptable level of public-traffic disruption for the response, 0.0 (minimize at all costs) to 1.0 (response speed dominates completely).",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {
+    "coa_strategy": "aggressive"
+   }
+  },
+  {
+   "id": "dss-tree-fall-weh",
+   "kind": "dss_coa",
+   "label": "SIMULATED",
+   "state": "TRIGGER: incident_detected\nA large tree fell across two lanes of the Western Express Highway near Vile Parle after a squall; one lane passable, BMC crew requested\nevent_class: road_closure\nsubtype: tree_fall\ntoponym: Western Express Highway, Vile Parle\ncredibility: 0.8\nverification_state: OFFICIAL-VERIFIED\nsecond_order: []",
+   "questions": {
+    "coa_strategy": {
+     "type": "choice",
+     "instructions": "Decision support for a reported situation on the city's roads. Choose which course-of-action strategy should lead the response: baseline (monitor only, do nothing), minimal, standard, aggressive, or information (gather more before acting). Weigh public safety first, the impact on ambulances and the 108 emergency corridor, the traffic disruption each response causes, and the credibility of the reports. The reports are labelled OFFICIAL-VERIFIED (credibility 0.80) — weigh how far they can be trusted before acting.",
+     "options": [
+      "baseline",
+      "minimal",
+      "standard",
+      "aggressive",
+      "information"
+     ]
+    },
+    "urgency": {
+     "type": "noul",
+     "instructions": "How urgent is it to act on this situation now rather than waiting for better information or conditions? (noul = none-of-the-above likelihood, i.e. probability the situation defies the listed strategy options)"
+    },
+    "disruption_tolerance": {
+     "type": "score",
+     "instructions": "Acceptable level of public-traffic disruption for the response, 0.0 (minimize at all costs) to 1.0 (response speed dominates completely).",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {
+    "coa_strategy": "standard"
+   }
+  },
+  {
+   "id": "dss-mount-mary-bandra",
+   "kind": "dss_coa",
+   "label": "SIMULATED",
+   "state": "TRIGGER: incident_detected\nPilgrims for the Mount Mary fair at Bandra: BEST buses queueing on Hill Road, footfall steady, no incident reported\nevent_class: mass_gathering\nsubtype: pilgrim_transit\ntoponym: Mount Mary, Bandra\ncredibility: 0.9\nverification_state: OFFICIAL-VERIFIED\nsecond_order: []",
+   "questions": {
+    "coa_strategy": {
+     "type": "choice",
+     "instructions": "Decision support for a reported situation on the city's roads. Choose which course-of-action strategy should lead the response: baseline (monitor only, do nothing), minimal, standard, aggressive, or information (gather more before acting). Weigh public safety first, the impact on ambulances and the 108 emergency corridor, the traffic disruption each response causes, and the credibility of the reports. The reports are labelled OFFICIAL-VERIFIED (credibility 0.90) — weigh how far they can be trusted before acting.",
+     "options": [
+      "baseline",
+      "minimal",
+      "standard",
+      "aggressive",
+      "information"
+     ]
+    },
+    "urgency": {
+     "type": "noul",
+     "instructions": "How urgent is it to act on this situation now rather than waiting for better information or conditions? (noul = none-of-the-above likelihood, i.e. probability the situation defies the listed strategy options)"
+    },
+    "disruption_tolerance": {
+     "type": "score",
+     "instructions": "Acceptable level of public-traffic disruption for the response, 0.0 (minimize at all costs) to 1.0 (response speed dominates completely).",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "dss-fire-kalbadevi",
+   "kind": "dss_coa",
+   "label": "SIMULATED",
+   "state": "TRIGGER: incident_detected\nFire reported in a godown near Kalbadevi; fire tenders on the way; smoke over the adjoining road\nevent_class: fire\nsubtype: structure_fire\ntoponym: Kalbadevi\ncredibility: 0.7\nverification_state: NEWS-REPORTED\nsecond_order: ['fire tender access needed']",
+   "questions": {
+    "coa_strategy": {
+     "type": "choice",
+     "instructions": "Decision support for a reported situation on the city's roads. Choose which course-of-action strategy should lead the response: baseline (monitor only, do nothing), minimal, standard, aggressive, or information (gather more before acting). Weigh public safety first, the impact on ambulances and the 108 emergency corridor, the traffic disruption each response causes, and the credibility of the reports. The reports are labelled NEWS-REPORTED (credibility 0.70) — weigh how far they can be trusted before acting.",
+     "options": [
+      "baseline",
+      "minimal",
+      "standard",
+      "aggressive",
+      "information"
+     ]
+    },
+    "urgency": {
+     "type": "noul",
+     "instructions": "How urgent is it to act on this situation now rather than waiting for better information or conditions? (noul = none-of-the-above likelihood, i.e. probability the situation defies the listed strategy options)"
+    },
+    "disruption_tolerance": {
+     "type": "score",
+     "instructions": "Acceptable level of public-traffic disruption for the response, 0.0 (minimize at all costs) to 1.0 (response speed dominates completely).",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {
+    "coa_strategy": "aggressive"
+   }
+  },
+  {
+   "id": "dss-signal-failure-sion-circle",
+   "kind": "dss_coa",
+   "label": "SIMULATED",
+   "state": "TRIGGER: incident_detected\nSignals dark at Sion Circle after a power cut; traffic police managing manually\nevent_class: road_closure\nsubtype: signal_failure\ntoponym: Sion Circle\ncredibility: 0.75\nverification_state: NEWS-REPORTED\nsecond_order: []",
+   "questions": {
+    "coa_strategy": {
+     "type": "choice",
+     "instructions": "Decision support for a reported situation on the city's roads. Choose which course-of-action strategy should lead the response: baseline (monitor only, do nothing), minimal, standard, aggressive, or information (gather more before acting). Weigh public safety first, the impact on ambulances and the 108 emergency corridor, the traffic disruption each response causes, and the credibility of the reports. The reports are labelled NEWS-REPORTED (credibility 0.75) — weigh how far they can be trusted before acting.",
+     "options": [
+      "baseline",
+      "minimal",
+      "standard",
+      "aggressive",
+      "information"
+     ]
+    },
+    "urgency": {
+     "type": "noul",
+     "instructions": "How urgent is it to act on this situation now rather than waiting for better information or conditions? (noul = none-of-the-above likelihood, i.e. probability the situation defies the listed strategy options)"
+    },
+    "disruption_tolerance": {
+     "type": "score",
+     "instructions": "Acceptable level of public-traffic disruption for the response, 0.0 (minimize at all costs) to 1.0 (response speed dominates completely).",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "dss-general-news-no-traffic",
+   "kind": "dss_coa",
+   "label": "SIMULATED",
+   "state": "TRIGGER: incident_detected\nA news item about a book fair schedule announcement; no road impact mentioned\nevent_class: general_news\nsubtype: announcement\ntoponym: Dadar\ncredibility: 0.6\nverification_state: NEWS-REPORTED\nsecond_order: []",
+   "questions": {
+    "coa_strategy": {
+     "type": "choice",
+     "instructions": "Decision support for a reported situation on the city's roads. Choose which course-of-action strategy should lead the response: baseline (monitor only, do nothing), minimal, standard, aggressive, or information (gather more before acting). Weigh public safety first, the impact on ambulances and the 108 emergency corridor, the traffic disruption each response causes, and the credibility of the reports. The reports are labelled NEWS-REPORTED (credibility 0.60) — weigh how far they can be trusted before acting.",
+     "options": [
+      "baseline",
+      "minimal",
+      "standard",
+      "aggressive",
+      "information"
+     ]
+    },
+    "urgency": {
+     "type": "noul",
+     "instructions": "How urgent is it to act on this situation now rather than waiting for better information or conditions? (noul = none-of-the-above likelihood, i.e. probability the situation defies the listed strategy options)"
+    },
+    "disruption_tolerance": {
+     "type": "score",
+     "instructions": "Acceptable level of public-traffic disruption for the response, 0.0 (minimize at all costs) to 1.0 (response speed dominates completely).",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {
+    "coa_strategy": "baseline"
+   }
+  },
+  {
+   "id": "dss-marathon-marine-drive",
+   "kind": "dss_coa",
+   "label": "SIMULATED",
+   "state": "TRIGGER: incident_detected\nCity marathon on Sunday morning: Marine Drive and the Sea Link closed 05:00-10:00 as notified\nevent_class: road_closure\nsubtype: planned_event\ntoponym: Marine Drive\ncredibility: 0.97\nverification_state: OFFICIAL-VERIFIED\nsecond_order: []",
+   "questions": {
+    "coa_strategy": {
+     "type": "choice",
+     "instructions": "Decision support for a reported situation on the city's roads. Choose which course-of-action strategy should lead the response: baseline (monitor only, do nothing), minimal, standard, aggressive, or information (gather more before acting). Weigh public safety first, the impact on ambulances and the 108 emergency corridor, the traffic disruption each response causes, and the credibility of the reports. The reports are labelled OFFICIAL-VERIFIED (credibility 0.97) — weigh how far they can be trusted before acting.",
+     "options": [
+      "baseline",
+      "minimal",
+      "standard",
+      "aggressive",
+      "information"
+     ]
+    },
+    "urgency": {
+     "type": "noul",
+     "instructions": "How urgent is it to act on this situation now rather than waiting for better information or conditions? (noul = none-of-the-above likelihood, i.e. probability the situation defies the listed strategy options)"
+    },
+    "disruption_tolerance": {
+     "type": "score",
+     "instructions": "Acceptable level of public-traffic disruption for the response, 0.0 (minimize at all costs) to 1.0 (response speed dominates completely).",
+     "scale": [
+      0.0,
+      1.0
+     ]
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "esc-inc-kalanagar-crossing",
+   "kind": "escort_incident",
+   "label": "SIMULATED",
+   "state": "TRIGGER: incident_detected\nCongestion 0.91 crossed the spike threshold 0.75 on segment(s) ahead of the Z+ convoy, at 42% of the route, 9.8 km to go.\nmovement_id: mv-sim-esc-inc-kalanagar-crossing\nvvip_class: Z+\nevent_kind: protected_movement\nincident_origin: crossing\ncurrent_segment: 5116\nsegments_ahead: [5117, 5118, 5119, 5120, 5121, 5122, 5123, 5124]\nhot_segments: 5118=0.91, 5119=0.84\nconvoy_speed_kmh: 38.0\nconvoy_holding: no\nplan_b_spine: available\nclosures_active: 3\nfolded_crossings: 0\ngps: emulated",
+   "questions": {
+    "action": {
+     "type": "choice",
+     "instructions": "Congestion on the convoy's route is above the spike threshold (see the summary). Choose the immediate action: keep monitoring, hold the convoy at its position, activate the pre-sanitised Plan B route, re-route around the congested segments, or escalate to the operator.",
+     "options": [
+      "continue_monitoring",
+      "hold_position",
+      "activate_plan_b",
+      "emergency_reroute",
+      "escalate_operator"
+     ]
+    },
+    "urgency": {
+     "type": "noul",
+     "instructions": "Probability that none of the listed actions fit this incident (escalate to operator)."
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "esc-inc-hold-expired-worli-naka",
+   "kind": "escort_incident",
+   "label": "SIMULATED",
+   "state": "TRIGGER: incident_detected\nA hold ran out (held 120 s at the current segment) with congestion 0.84 still above the spike threshold 0.75 on the held segment(s) of the Z convoy, at 61% of the route, 3.2 km to go.\nmovement_id: mv-sim-esc-inc-hold-expired-worli-naka\nvvip_class: Z\nevent_kind: protected_movement\nincident_origin: hold_expired\ncurrent_segment: 5124\nsegments_ahead: [5125, 5126, 5127, 5128, 5129, 5130, 5131, 5132]\nhot_segments: 5126=0.84, 5127=0.77\nconvoy_speed_kmh: 0.0\nconvoy_holding: yes\nplan_b_spine: available\nclosures_active: 3\nfolded_crossings: 0\ngps: emulated",
+   "questions": {
+    "action": {
+     "type": "choice",
+     "instructions": "Congestion on the convoy's route is above the spike threshold (see the summary). Choose the immediate action: keep monitoring, hold the convoy at its position, activate the pre-sanitised Plan B route, re-route around the congested segments, or escalate to the operator.",
+     "options": [
+      "continue_monitoring",
+      "hold_position",
+      "activate_plan_b",
+      "emergency_reroute",
+      "escalate_operator"
+     ]
+    },
+    "urgency": {
+     "type": "noul",
+     "instructions": "Probability that none of the listed actions fit this incident (escalate to operator)."
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "esc-inc-deferred-sea-link",
+   "kind": "escort_incident",
+   "label": "SIMULATED",
+   "state": "TRIGGER: incident_detected\nCongestion 0.97 crossed the spike threshold 0.70 during the incident cooldown and is still above it on segment(s) ahead of the Z+ convoy, at 18% of the route, 21.5 km to go.\nmovement_id: mv-sim-esc-inc-deferred-sea-link\nvvip_class: Z+\nevent_kind: protected_movement\nincident_origin: deferred_crossing\ncurrent_segment: 5107\nsegments_ahead: [5108, 5109, 5110, 5111, 5112, 5113, 5114, 5115]\nhot_segments: 5109=0.97, 5110=0.90\nconvoy_speed_kmh: 24.0\nconvoy_holding: no\nplan_b_spine: available\nclosures_active: 3\nfolded_crossings: 1\ngps: emulated",
+   "questions": {
+    "action": {
+     "type": "choice",
+     "instructions": "Congestion on the convoy's route is above the spike threshold (see the summary). Choose the immediate action: keep monitoring, hold the convoy at its position, activate the pre-sanitised Plan B route, re-route around the congested segments, or escalate to the operator.",
+     "options": [
+      "continue_monitoring",
+      "hold_position",
+      "activate_plan_b",
+      "emergency_reroute",
+      "escalate_operator"
+     ]
+    },
+    "urgency": {
+     "type": "noul",
+     "instructions": "Probability that none of the listed actions fit this incident (escalate to operator)."
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "esc-inc-mild-vile-parle",
+   "kind": "escort_incident",
+   "label": "SIMULATED",
+   "state": "TRIGGER: incident_detected\nCongestion 0.78 crossed the spike threshold 0.75 on segment(s) ahead of the Y convoy, at 70% of the route, 4.1 km to go.\nmovement_id: mv-sim-esc-inc-mild-vile-parle\nvvip_class: Y\nevent_kind: protected_movement\nincident_origin: crossing\ncurrent_segment: 5128\nsegments_ahead: [5129, 5130, 5131, 5132, 5133, 5134, 5135, 5136]\nhot_segments: 5130=0.78, 5131=0.75\nconvoy_speed_kmh: 41.0\nconvoy_holding: no\nplan_b_spine: none\nclosures_active: 3\nfolded_crossings: 0\ngps: emulated",
+   "questions": {
+    "action": {
+     "type": "choice",
+     "instructions": "Congestion on the convoy's route is above the spike threshold (see the summary). Choose the immediate action: keep monitoring, hold the convoy at its position, activate the pre-sanitised Plan B route, re-route around the congested segments, or escalate to the operator.",
+     "options": [
+      "continue_monitoring",
+      "hold_position",
+      "activate_plan_b",
+      "emergency_reroute",
+      "escalate_operator"
+     ]
+    },
+    "urgency": {
+     "type": "noul",
+     "instructions": "Probability that none of the listed actions fit this incident (escalate to operator)."
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "esc-inc-no-planb-sion",
+   "kind": "escort_incident",
+   "label": "SIMULATED",
+   "state": "TRIGGER: incident_detected\nCongestion 0.95 crossed the spike threshold 0.70 on segment(s) ahead of the Z convoy, at 33% of the route, 8.7 km to go.\nmovement_id: mv-sim-esc-inc-no-planb-sion\nvvip_class: Z\nevent_kind: protected_movement\nincident_origin: crossing\ncurrent_segment: 5113\nsegments_ahead: [5114, 5115, 5116, 5117, 5118, 5119, 5120, 5121]\nhot_segments: 5115=0.95, 5116=0.88\nconvoy_speed_kmh: 12.0\nconvoy_holding: no\nplan_b_spine: none\nclosures_active: 3\nfolded_crossings: 0\ngps: emulated",
+   "questions": {
+    "action": {
+     "type": "choice",
+     "instructions": "Congestion on the convoy's route is above the spike threshold (see the summary). Choose the immediate action: keep monitoring, hold the convoy at its position, activate the pre-sanitised Plan B route, re-route around the congested segments, or escalate to the operator.",
+     "options": [
+      "continue_monitoring",
+      "hold_position",
+      "activate_plan_b",
+      "emergency_reroute",
+      "escalate_operator"
+     ]
+    },
+    "urgency": {
+     "type": "noul",
+     "instructions": "Probability that none of the listed actions fit this incident (escalate to operator)."
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "esc-inc-near-destination-airport",
+   "kind": "escort_incident",
+   "label": "SIMULATED",
+   "state": "TRIGGER: incident_detected\nCongestion 0.80 crossed the spike threshold 0.75 on segment(s) ahead of the Z+ convoy, at 93% of the route, 1.6 km to go.\nmovement_id: mv-sim-esc-inc-near-destination-airport\nvvip_class: Z+\nevent_kind: protected_movement\nincident_origin: crossing\ncurrent_segment: 5137\nsegments_ahead: [5138, 5139, 5140, 5141, 5142, 5143, 5144, 5145]\nhot_segments: 5139=0.80, 5140=0.75\nconvoy_speed_kmh: 45.0\nconvoy_holding: no\nplan_b_spine: available\nclosures_active: 3\nfolded_crossings: 0\ngps: emulated",
+   "questions": {
+    "action": {
+     "type": "choice",
+     "instructions": "Congestion on the convoy's route is above the spike threshold (see the summary). Choose the immediate action: keep monitoring, hold the convoy at its position, activate the pre-sanitised Plan B route, re-route around the congested segments, or escalate to the operator.",
+     "options": [
+      "continue_monitoring",
+      "hold_position",
+      "activate_plan_b",
+      "emergency_reroute",
+      "escalate_operator"
+     ]
+    },
+    "urgency": {
+     "type": "noul",
+     "instructions": "Probability that none of the listed actions fit this incident (escalate to operator)."
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "esc-inc-holding-kings-circle",
+   "kind": "escort_incident",
+   "label": "SIMULATED",
+   "state": "TRIGGER: incident_detected\nA hold ran out (held 120 s at the current segment) with congestion 0.88 still above the spike threshold 0.75 on the held segment(s) of the X convoy, at 48% of the route, 6.0 km to go.\nmovement_id: mv-sim-esc-inc-holding-kings-circle\nvvip_class: X\nevent_kind: protected_movement\nincident_origin: hold_expired\ncurrent_segment: 5119\nsegments_ahead: [5120, 5121, 5122, 5123, 5124, 5125, 5126, 5127]\nhot_segments: 5121=0.88, 5122=0.81\nconvoy_speed_kmh: 0.0\nconvoy_holding: yes\nplan_b_spine: none\nclosures_active: 3\nfolded_crossings: 0\ngps: emulated",
+   "questions": {
+    "action": {
+     "type": "choice",
+     "instructions": "Congestion on the convoy's route is above the spike threshold (see the summary). Choose the immediate action: keep monitoring, hold the convoy at its position, activate the pre-sanitised Plan B route, re-route around the congested segments, or escalate to the operator.",
+     "options": [
+      "continue_monitoring",
+      "hold_position",
+      "activate_plan_b",
+      "emergency_reroute",
+      "escalate_operator"
+     ]
+    },
+    "urgency": {
+     "type": "noul",
+     "instructions": "Probability that none of the listed actions fit this incident (escalate to operator)."
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "esc-inc-severe-csmt",
+   "kind": "escort_incident",
+   "label": "SIMULATED",
+   "state": "TRIGGER: incident_detected\nCongestion 0.99 crossed the spike threshold 0.70 on segment(s) ahead of the Z+ convoy, at 25% of the route, 12.4 km to go.\nmovement_id: mv-sim-esc-inc-severe-csmt\nvvip_class: Z+\nevent_kind: protected_movement\nincident_origin: crossing\ncurrent_segment: 5110\nsegments_ahead: [5111, 5112, 5113, 5114, 5115, 5116, 5117, 5118]\nhot_segments: 5112=0.99, 5113=0.92\nconvoy_speed_kmh: 5.0\nconvoy_holding: no\nplan_b_spine: available\nclosures_active: 3\nfolded_crossings: 0\ngps: emulated",
+   "questions": {
+    "action": {
+     "type": "choice",
+     "instructions": "Congestion on the convoy's route is above the spike threshold (see the summary). Choose the immediate action: keep monitoring, hold the convoy at its position, activate the pre-sanitised Plan B route, re-route around the congested segments, or escalate to the operator.",
+     "options": [
+      "continue_monitoring",
+      "hold_position",
+      "activate_plan_b",
+      "emergency_reroute",
+      "escalate_operator"
+     ]
+    },
+    "urgency": {
+     "type": "noul",
+     "instructions": "Probability that none of the listed actions fit this incident (escalate to operator)."
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "esc-dep-clear",
+   "kind": "escort_departure",
+   "label": "SIMULATED",
+   "state": "TRIGGER: phase_transition\nLive escort start for the Z+ convoy (protected_movement) on its 41-segment primary route, 24.6 km to go, about 37 min at 40 km/h. Live congestion on the route peaks at 0.31 (spike threshold 0.75).\nmovement_id: mv-sim-esc-dep-clear\nvvip_class: Z+\nevent_kind: protected_movement\nplan_status: approved\nroute_segments: [5100, 5101, 5102, 5103, 5104, 5105, 5106, 5107, 5108, 5109, 5110, 5111]\nsegments_reporting: 39/41\nclosures_active: 4\nplan_b_spine: available\ngps: emulated",
+   "questions": {
+    "departure": {
+     "type": "choice",
+     "instructions": "The convoy is rolling onto its planned primary route. Choose the departure posture: proceed now, hold the departure until the corridor ahead clears, or switch to the pre-sanitised Plan B route.",
+     "options": [
+      "proceed",
+      "hold_departure",
+      "activate_plan_b"
+     ]
+    }
+   },
+   "expected": {
+    "departure": "proceed"
+   }
+  },
+  {
+   "id": "esc-dep-hot-ahead",
+   "kind": "escort_departure",
+   "label": "SIMULATED",
+   "state": "TRIGGER: phase_transition\nLive escort start for the Z+ convoy (protected_movement) on its 41-segment primary route, 24.6 km to go, about 37 min at 40 km/h. Live congestion on the route peaks at 0.93 (spike threshold 0.75); above it: [5103, 5104, 5105].\nmovement_id: mv-sim-esc-dep-hot-ahead\nvvip_class: Z+\nevent_kind: protected_movement\nplan_status: approved\nroute_segments: [5100, 5101, 5102, 5103, 5104, 5105, 5106, 5107, 5108, 5109, 5110, 5111]\nsegments_reporting: 39/41\nclosures_active: 4\nplan_b_spine: available\ngps: emulated",
+   "questions": {
+    "departure": {
+     "type": "choice",
+     "instructions": "The convoy is rolling onto its planned primary route. Choose the departure posture: proceed now, hold the departure until the corridor ahead clears, or switch to the pre-sanitised Plan B route.",
+     "options": [
+      "proceed",
+      "hold_departure",
+      "activate_plan_b"
+     ]
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "esc-dep-hot-no-planb",
+   "kind": "escort_departure",
+   "label": "SIMULATED",
+   "state": "TRIGGER: phase_transition\nLive escort start for the Z convoy (protected_movement) on its 22-segment primary route, 13.2 km to go, about 20 min at 40 km/h. Live congestion on the route peaks at 0.88 (spike threshold 0.70); above it: [6802, 6803].\nmovement_id: mv-sim-esc-dep-hot-no-planb\nvvip_class: Z\nevent_kind: protected_movement\nplan_status: approved\nroute_segments: [5100, 5101, 5102, 5103, 5104, 5105, 5106, 5107, 5108, 5109, 5110, 5111]\nsegments_reporting: 20/22\nclosures_active: 4\nplan_b_spine: none\ngps: emulated",
+   "questions": {
+    "departure": {
+     "type": "choice",
+     "instructions": "The convoy is rolling onto its planned primary route. Choose the departure posture: proceed now, hold the departure until the corridor ahead clears, or switch to the pre-sanitised Plan B route.",
+     "options": [
+      "proceed",
+      "hold_departure",
+      "activate_plan_b"
+     ]
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "esc-dep-not-reporting",
+   "kind": "escort_departure",
+   "label": "SIMULATED",
+   "state": "TRIGGER: phase_transition\nLive escort start for the Y convoy (protected_movement) on its 18-segment primary route, 7.2 km to go, about 11 min at 40 km/h. Live congestion on the route is not reporting (spike threshold 0.75).\nmovement_id: mv-sim-esc-dep-not-reporting\nvvip_class: Y\nevent_kind: protected_movement\nplan_status: approved\nroute_segments: [5100, 5101, 5102, 5103, 5104, 5105, 5106, 5107, 5108, 5109, 5110, 5111]\nsegments_reporting: 0/18\nclosures_active: 4\nplan_b_spine: available\ngps: emulated",
+   "questions": {
+    "departure": {
+     "type": "choice",
+     "instructions": "The convoy is rolling onto its planned primary route. Choose the departure posture: proceed now, hold the departure until the corridor ahead clears, or switch to the pre-sanitised Plan B route.",
+     "options": [
+      "proceed",
+      "hold_departure",
+      "activate_plan_b"
+     ]
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "esc-dep-borderline",
+   "kind": "escort_departure",
+   "label": "SIMULATED",
+   "state": "TRIGGER: phase_transition\nLive escort start for the X convoy (protected_movement) on its 12-segment primary route, 5.4 km to go, about 8 min at 40 km/h. Live congestion on the route peaks at 0.74 (spike threshold 0.75).\nmovement_id: mv-sim-esc-dep-borderline\nvvip_class: X\nevent_kind: protected_movement\nplan_status: approved\nroute_segments: [5100, 5101, 5102, 5103, 5104, 5105, 5106, 5107, 5108, 5109, 5110, 5111]\nsegments_reporting: 10/12\nclosures_active: 4\nplan_b_spine: none\ngps: emulated",
+   "questions": {
+    "departure": {
+     "type": "choice",
+     "instructions": "The convoy is rolling onto its planned primary route. Choose the departure posture: proceed now, hold the departure until the corridor ahead clears, or switch to the pre-sanitised Plan B route.",
+     "options": [
+      "proceed",
+      "hold_departure",
+      "activate_plan_b"
+     ]
+    }
+   },
+   "expected": {
+    "departure": "proceed"
+   }
+  },
+  {
+   "id": "esc-dep-resume-midway",
+   "kind": "escort_departure",
+   "label": "SIMULATED",
+   "state": "TRIGGER: phase_transition\nLive escort start for the Z convoy (protected_movement) on its 30-segment primary route, resuming at 45% of the route, 8.5 km to go, about 13 min at 40 km/h. Live congestion on the route peaks at 0.82 (spike threshold 0.75); above it: [7415].\nmovement_id: mv-sim-esc-dep-resume-midway\nvvip_class: Z\nevent_kind: protected_movement\nplan_status: approved\nroute_segments: [5100, 5101, 5102, 5103, 5104, 5105, 5106, 5107, 5108, 5109, 5110, 5111]\nsegments_reporting: 28/30\nclosures_active: 4\nplan_b_spine: available\ngps: emulated",
+   "questions": {
+    "departure": {
+     "type": "choice",
+     "instructions": "The convoy is rolling onto its planned primary route. Choose the departure posture: proceed now, hold the departure until the corridor ahead clears, or switch to the pre-sanitised Plan B route.",
+     "options": [
+      "proceed",
+      "hold_departure",
+      "activate_plan_b"
+     ]
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "pc-mantralaya-airport",
+   "kind": "post_clearance",
+   "label": "SIMULATED",
+   "state": "TRIGGER: phase_transition\nConvoy movement mv-sim-mantralaya-airport entering post-clearance restoration.\nphase: clear",
+   "questions": {
+    "restoration_posture": {
+     "type": "choice",
+     "instructions": "The convoy has passed. Choose the public-traffic restoration posture.",
+     "options": [
+      "immediate_full_restoration",
+      "staged_reverse_order_restoration",
+      "signal_assisted_recovery"
+     ]
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "pc-wankhede-egress",
+   "kind": "post_clearance",
+   "label": "SIMULATED",
+   "state": "TRIGGER: phase_transition\nConvoy movement mv-sim-wankhede-y entering post-clearance restoration.\nphase: clear\nclosures_active: 6\nqueue_on_marine_drive_m: 900",
+   "questions": {
+    "restoration_posture": {
+     "type": "choice",
+     "instructions": "The convoy has passed. Choose the public-traffic restoration posture.",
+     "options": [
+      "immediate_full_restoration",
+      "staged_reverse_order_restoration",
+      "signal_assisted_recovery"
+     ]
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "pc-gateway-short",
+   "kind": "post_clearance",
+   "label": "SIMULATED",
+   "state": "TRIGGER: phase_transition\nConvoy movement mv-sim-gateway-z entering post-clearance restoration.\nphase: clear\nclosures_active: 2\nqueue_m: 120",
+   "questions": {
+    "restoration_posture": {
+     "type": "choice",
+     "instructions": "The convoy has passed. Choose the public-traffic restoration posture.",
+     "options": [
+      "immediate_full_restoration",
+      "staged_reverse_order_restoration",
+      "signal_assisted_recovery"
+     ]
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "pc-visarjan-night",
+   "kind": "post_clearance",
+   "label": "SIMULATED",
+   "state": "TRIGGER: phase_transition\nConvoy movement mv-sim-visarjan-zplus entering post-clearance restoration.\nphase: clear\nclosures_active: 9\npedestrian_density: high (visarjan crowds)",
+   "questions": {
+    "restoration_posture": {
+     "type": "choice",
+     "instructions": "The convoy has passed. Choose the public-traffic restoration posture.",
+     "options": [
+      "immediate_full_restoration",
+      "staged_reverse_order_restoration",
+      "signal_assisted_recovery"
+     ]
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "pc-signals-ready",
+   "kind": "post_clearance",
+   "label": "SIMULATED",
+   "state": "TRIGGER: phase_transition\nConvoy movement mv-sim-bkc entering post-clearance restoration.\nphase: clear\nclosures_active: 5\nadaptive_signals: online on 5 of 5 junctions",
+   "questions": {
+    "restoration_posture": {
+     "type": "choice",
+     "instructions": "The convoy has passed. Choose the public-traffic restoration posture.",
+     "options": [
+      "immediate_full_restoration",
+      "staged_reverse_order_restoration",
+      "signal_assisted_recovery"
+     ]
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "probe-health",
+   "kind": "probe",
+   "label": "SIMULATED",
+   "state": "TRIGGER: health_probe\nstrategic-tier latency probe",
+   "questions": {
+    "probe": {
+     "type": "noul",
+     "instructions": "Health probe (none-of-the-above likelihood): is an unscheduled strategic checkpoint needed now?"
+    }
+   },
+   "expected": {}
+  },
+  {
+   "id": "probe-corridor-checkpoint",
+   "kind": "probe",
+   "label": "SIMULATED",
+   "state": "CORRIDOR CHECKPOINT (SIMULATED): Z+ convoy staged at Mantralaya. Three corridors under watch: Western Express Highway (moderate flow, 42 km/h average), Dr Ambedkar Road (heavy congestion near Dadar TT, 14 km/h), Coastal Road (light flow, 55 km/h). Movement window 19:45-20:30 IST. Two signal failures reported on Dr Ambedkar Road in the last 20 minutes; weather clear; feed EMULATED. Advance closure 150 seconds.",
+   "questions": {
+    "urgency": {
+     "type": "noul",
+     "instructions": "Based on this corridor state, must the departure window be locked now rather than delayed?"
+    },
+    "reroute": {
+     "type": "choice",
+     "instructions": "Which corridor should the route use?",
+     "options": {
+      "weh": "Western Express Highway, moderate flow",
+      "ambedkar_road": "Dr Ambedkar Road, heavy congestion",
+      "coastal_road": "Coastal Road, light flow"
+     }
+    },
+    "readiness": {
+     "type": "score",
+     "instructions": "Rate readiness to lock the departure window",
+     "scale": [
+      "not ready",
+      "barely ready",
+      "partially ready",
+      "mostly ready",
+      "fully ready"
+     ]
+    }
+   },
+   "expected": {
+    "reroute": "coastal_road"
+   }
+  },
+  {
+   "id": "probe-corridor-checkpoint-rain",
+   "kind": "probe",
+   "label": "SIMULATED",
+   "state": "CORRIDOR CHECKPOINT (SIMULATED): Z convoy staged at Mumbai Airport T2 for Mantralaya. High tide at 18:40 IST with heavy rain: waterlogging reported on the Western Express Highway near Andheri Subway (8 km/h), Dr Ambedkar Road moderate (30 km/h), Coastal Road light (48 km/h). Movement window 18:30-19:15 IST. Feed EMULATED.",
+   "questions": {
+    "urgency": {
+     "type": "noul",
+     "instructions": "Based on this corridor state, must the departure window be locked now rather than delayed?"
+    },
+    "reroute": {
+     "type": "choice",
+     "instructions": "Which corridor should the route use?",
+     "options": {
+      "weh": "Western Express Highway, moderate flow",
+      "ambedkar_road": "Dr Ambedkar Road, heavy congestion",
+      "coastal_road": "Coastal Road, light flow"
+     }
+    },
+    "readiness": {
+     "type": "score",
+     "instructions": "Rate readiness to lock the departure window",
+     "scale": [
+      "not ready",
+      "barely ready",
+      "partially ready",
+      "mostly ready",
+      "fully ready"
+     ]
+    }
+   },
+   "expected": {
+    "reroute": "coastal_road"
+   }
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+# Build-context hygiene for infra/docker/Dockerfile.event-emulator (compose:
+# context ../services/event-emulator). The image takes only pyproject.toml and
+# src/; everything else here — tests, local venvs, caches, agent session
+# state — must never reach the layer cache.
+tests
+.venv
+**/.venv
+**/__pycache__
+**/*.pyc
+**/.pytest_cache
+**/.ruff_cache
+**/.mypy_cache
+**/.mimosa
+**/.claude
+**/*.log
+*.egg-info
+**/*.egg-info

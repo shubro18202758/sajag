@@ -1,0 +1,1 @@
+{"route":"public South Asia 24-h files (no key)","window_h":24,"files":{"VIIRS S-NPP":"read","VIIRS NOAA-20":"read","VIIRS NOAA-21":"read","MODIS":"read"},"hotspots":[{"lat":19.14442,"lon":73.03574,"at":"2026-10-29T08:26:00+00:00","instrument":"VIIRS NOAA-20","confidence":"low","frp_mw":2.0,"daynight":"D"}]}

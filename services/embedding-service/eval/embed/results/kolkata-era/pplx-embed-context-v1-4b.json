@@ -1,0 +1,19 @@
+{
+ "candidate": "pplx-embed-context-v1-4b",
+ "repo": "perplexity-ai/pplx-embed-context-v1-4b",
+ "family": "ctx",
+ "dtype": "bf16",
+ "device": "cuda",
+ "load_s": 26.9,
+ "weights_gib": 7.55,
+ "peak_alloc_gib": 8.75,
+ "reserved_gib": 9.77,
+ "dim": 2560,
+ "timing": {
+  "query_ms_p50": 48.5,
+  "query_ms_p95": 58.64,
+  "memory_doc_ms": 20.06,
+  "sop_doc_ms": 55.76
+ },
+ "at": "2026-10-28T20:41:35+0530"
+}

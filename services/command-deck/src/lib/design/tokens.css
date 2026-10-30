@@ -1,0 +1,476 @@
+/*
+ * Sajag design tokens — the one token contract for both themes (SPEC §2).
+ *
+ * `command`  — operator: Blueprint 6 dark. The map is the hero, chrome is
+ *              furniture: opaque docked panes, 1 px dividers, elevation only
+ *              for floating things, no glass, blur, glow or ambient motion.
+ * `daylight` — citizen/driver pages: warm paper. Existing keys keep their
+ *              values (SPEC §2.1); the new keys carry Blueprint light values.
+ *
+ * Colour carries meaning only (SPEC §2.4, frozen):
+ *   blue    --v-primary*, --v-map-select   selection, focus, primary action
+ *   orange  --v-act, --v-warning*, --v-map-decision   a decision waits
+ *   red     --v-danger*, --v-map-alert     watchlisted or stolen (never "destructive")
+ *   green   --v-success*                    approved, healthy
+ *   indigo  --v-ai*                         AI attribution only
+ *   turquoise --v-map-route, violet --v-map-event, the band ladder --v-band-*
+ *   sky     --v-map-water                  waterlogging risk on a road (the hydro nowcast; meaning, not a ramp)
+ *   neutral everything else, including the traffic-flow ramp --v-flow-*
+ * The map has its own keys (--v-map-*, --v-flow-*) so a UI palette change can
+ * never repaint the map by accident.
+ *
+ * The themes are ONE variable list (tests/design-tokens.mjs asserts key
+ * parity and value parity with tokens.ts). Hex values live only in this file
+ * and tokens.ts. Components consume var(--v-*) only; canvas code (Cesium, SVG
+ * attributes, canvas 2D) reads the typed mirror through tokens.ts.
+ *
+ * :root carries the command values so a first paint defaults to the operator
+ * theme; the (public) layouts set data-theme="daylight" on <html>, and any
+ * subtree may set data-theme to preview the other theme (/design does).
+ *
+ * Colour values from Blueprint (@blueprintjs/colors 5.1.16), Copyright
+ * Palantir Technologies, Inc., Apache-2.0 — see LICENSE-blueprint.txt.
+ */
+
+:root,
+[data-theme='command'] {
+	/* surfaces — docked panes are opaque; elevation is for floating things only */
+	--v-canvas: #000000;
+	--v-surface-1: #111111;
+	--v-surface-2: #1a1a1a;
+	--v-surface-3: #242424;
+	--v-surface-sink: #0a0a0a;
+	--v-paper: #242424;
+
+	/* hairlines: row rule / divider / selection outline */
+	--v-line-1: rgba(255, 255, 255, 0.1);
+	--v-line-2: rgba(255, 255, 255, 0.2);
+	--v-line-select: rgba(138, 187, 255, 0.752);
+
+	/* ink — Blueprint has two readable inks (gray3 fails 4.5:1 on surface-2),
+	 * so ink-3 equals ink-2; ink-4 is for rules and non-text marks only */
+	--v-ink-1: #ffffff;
+	--v-ink-2: #cbcbcb;
+	--v-ink-3: #a6a6a6;
+	--v-ink-4: #6b6b6b;
+
+	/* "a human must act" — Blueprint orange 4; decision markers and counts,
+	 * never the primary button (that is --v-primary) and never decoration */
+	--v-act: #ff9f43;
+	--v-act-2: #c87619;
+	--v-act-focus: rgba(138, 187, 255, 0.752);
+	--v-act-veil: rgba(200, 118, 25, 0.2);
+	--v-act-text: #fbb360;
+
+	/* band ladder — situation state only; amber is the console's orange-amber (the V3 meaning palette: Home draws the
+	 * amber band in the decide family), a lighter step than the act orange and never the old brand gold; the word
+	 * "Amber" always rides with it; BLACK is a dark fill AND a 1 px red hairline everywhere */
+	--v-band-green: #32a467;
+	--v-band-amber: #ffb257;
+	--v-band-red: #e76a6e;
+	--v-band-black-fill: rgba(17, 17, 17, 0.85);
+	--v-band-black-hairline: #e76a6e;
+	--v-band-veil: rgba(255, 178, 87, 0.14);
+
+	/* legacy accents: --v-data is the map-select blue, --v-tool the AI indigo */
+	--v-data: #4c90f0;
+	--v-tool: #5b91f5;
+
+	/* retired idioms kept as keys: no glass, no blur, no glow */
+	--v-glass-bg: #242424;
+	--v-glass-border: rgba(255, 255, 255, 0.2);
+	--v-glass-blur: 0px;
+	--v-glow-act: transparent;
+	--v-flow-light: #c5cbd3;
+
+	/* the legacy 8 % veil (shadows, the old modal); dialogs use --v-backdrop */
+	--v-veil: rgba(17, 20, 24, 0.08);
+
+	/* type — Inter for everything, JetBrains Mono for identifiers and
+	 * coordinates only (through src/lib/ui/format); self-hosted (fonts.css) */
+	--v-font-ui: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans',
+		'Noto Sans Devanagari', 'Helvetica Neue', Arial, sans-serif;
+	--v-font-display: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans',
+		'Noto Sans Devanagari', 'Helvetica Neue', Arial, sans-serif;
+	--v-font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono',
+		monospace;
+	/* Blueprint scale; 12 px operator floor (projector wall) */
+	--v-text-2xs: 12px;
+	--v-text-xs: 12px;
+	--v-text-sm: 12px;
+	--v-text-base: 14px; /* OPERATOR base */
+	--v-text-md: 16px;
+	--v-text-lg: 18px;
+	--v-text-xl: 22px;
+	--v-weight-status: 600;
+	--v-tracking-status: 0;
+
+	/* 4 px space grid */
+	--v-space-1: 4px;
+	--v-space-2: 8px;
+	--v-space-3: 12px;
+	--v-space-4: 16px;
+	--v-space-5: 20px;
+	--v-space-6: 24px;
+	--v-space-7: 32px;
+	--v-space-8: 40px;
+
+	/* Blueprint control heights (citizen 44 tap) */
+	--v-ctl-sm: 24px;
+	--v-ctl-md: 30px;
+	--v-ctl-lg: 40px;
+	--v-ctl-touch: 44px;
+
+	/* one radius */
+	--v-radius-chip: 4px;
+	--v-radius-btn: 4px;
+	--v-radius-panel: 4px;
+	--v-radius-modal: 4px;
+	--v-radius-pill: 999px;
+
+	/* panel rhythm */
+	--v-pad-panel: 12px;
+	--v-gap-panel: 8px;
+
+	/* motion — Blueprint's curve; no ambient motion (stagger, pulse, lift,
+	 * breathe and sweep are 0); the wipe, trace and comet are canvas symbology */
+	--v-ease: cubic-bezier(0.4, 1, 0.75, 0.9);
+	--v-dur-out: 100ms;
+	--v-dur-in: 200ms;
+	--v-dur-wipe: 600ms;
+	--v-dur-trace: 1200ms;
+	--v-dur-comet: 300ms;
+	--v-dur-stagger: 0ms;
+	--v-dur-pulse: 0ms;
+	--v-dur-lift: 0ms;
+	--v-dur-breathe: 0ms;
+	--v-dur-sweep: 0ms;
+
+	/* ── new keys (SPEC §2.3) ─────────────────────────────────────────── */
+
+	/* pressed control fill (.is-pressed) and the overlays of hover/press */
+	--v-surface-4: #3d3d3d;
+	--v-hover: rgba(160, 160, 160, 0.15);
+	--v-row-hover: rgba(110, 110, 110, 0.3);
+	--v-minimal-hover: rgba(110, 110, 110, 0.24);
+	--v-minimal-active: rgba(110, 110, 110, 0.49);
+	--v-line-strong: rgba(255, 255, 255, 0.3);
+	--v-popover-line: #5e6064;
+	--v-focus: rgba(138, 187, 255, 0.752);
+	--v-ink-disabled: rgba(175, 175, 175, 0.6);
+
+	/* intents: primary = selection, focus, primary action, links */
+	--v-primary: #276ef1;
+	--v-primary-hover: #1e54b7;
+	--v-primary-active: #174291;
+	--v-primary-text: #7fa8f7;
+	--v-primary-veil: rgba(39, 110, 241, 0.2);
+	--v-success: #238551;
+	--v-success-hover: #1c6e42;
+	--v-success-active: #165a36;
+	--v-success-text: #72ca9b;
+	--v-success-veil: rgba(35, 133, 81, 0.2);
+	--v-warning: #c87619;
+	--v-warning-hover: #935610;
+	--v-warning-active: #77450d;
+	--v-warning-text: #fbb360;
+	--v-warning-veil: rgba(200, 118, 25, 0.2);
+	--v-danger: #cd4246;
+	--v-danger-hover: #ac2f33;
+	--v-danger-active: #8e292c;
+	--v-danger-text: #fa999c;
+	--v-danger-veil: rgba(205, 66, 70, 0.2);
+	--v-neutral-veil: rgba(150, 150, 150, 0.15);
+
+	/* AI attribution only */
+	--v-ai: #5b91f5;
+	--v-ai-text: #8db4f9;
+	--v-ai-veil: rgba(91, 145, 245, 0.2);
+
+	/* elevation — floating things only (popover, dialog, toast, omnibar) */
+	--v-elev-0: inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 0 10px 0 rgba(0, 0, 0, 0.2);
+	--v-elev-1: inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+	--v-elev-2: inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 4px 6px -4px rgba(0, 0, 0, 0.5),
+		0 10px 30px -5px rgba(0, 0, 0, 0.5);
+	--v-elev-3: inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 20px 25px -5px rgba(0, 0, 0, 0.3),
+		0 10px 30px -5px rgba(0, 0, 0, 0.3);
+	--v-elev-4: inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 25px 60px -12px rgba(0, 0, 0, 0.85);
+
+	/* map: hue only for selection, decision, alert, convoy route, events;
+	 * every other object is a neutral ring with a glyph */
+	--v-map-select: #ffffff;
+	--v-map-decision: #ff9f43;
+	--v-map-alert: #ff5c61;
+	--v-map-route: #2dd4bf;
+	--v-map-event: #5b91f5;
+	--v-map-water: #38bdf8;
+	--v-map-marker: #c5cbd3;
+	--v-map-marker-fill: rgba(17, 17, 17, 0.88);
+	--v-map-casing: rgba(17, 17, 17, 0.8);
+	--v-map-label-bg: rgba(17, 17, 17, 0.86);
+	--v-map-label-ink: #f6f7f9;
+
+	/* traffic flow: a neutral luminance and width ramp, free → jammed */
+	--v-flow-1: #c4c4c4;
+	--v-flow-2: #d6d6d6;
+	--v-flow-3: #e6e6e6;
+	--v-flow-4: #f3f3f3;
+	--v-flow-5: #ffffff;
+	--v-flow-width-1: 3px;
+	--v-flow-width-2: 3.5px;
+	--v-flow-width-3: 4px;
+	--v-flow-width-4: 5px;
+	--v-flow-width-5: 6px;
+
+	/* layering */
+	--v-z-content: 10;
+	--v-z-overlay: 20;
+	--v-z-dialog: 30;
+	--v-z-toast: 40;
+	--v-z-tooltip: 50;
+
+	/* workspace geometry (SPEC §3.6, §3.7) */
+	--v-ws-navbar: 50px;
+	--v-ws-strip: 36px;
+	--v-ws-rail: 44px;
+	--v-ws-left: 300px;
+	--v-ws-right: 400px;
+	--v-ws-right-md: 368px;
+	--v-ws-right-sm: 344px;
+	--v-ws-pane-head: 40px;
+	--v-ws-row: 28px;
+	--v-ws-row-2: 44px;
+	--v-ws-row-head: 30px;
+	--v-ws-tag: 20px;
+	--v-ws-icon-col: 32px;
+	--v-ws-timeline: 124px;
+	--v-ws-audit: 220px;
+	--v-ws-audit-compact: 172px;
+
+	/* inks and overlays the primitives need (added by UI-S1A) */
+	--v-on-fill: #ffffff;
+	--v-tooltip-bg: #eeeeee;
+	--v-tooltip-ink: #333333;
+	--v-backdrop: rgba(0, 0, 0, 0.7);
+}
+
+[data-theme='daylight'] {
+	/* warm paper, calm everything — the SAME variable list as command (parity
+	 * is asserted); every value restated so the block stands alone and
+	 * tokens.ts mirrors it one-to-one. Existing keys keep their values. */
+	--v-canvas: #edeae3;
+	--v-surface-1: #ffffff;
+	--v-surface-2: #f6f3ee;
+	--v-surface-3: #fcfbf8;
+	--v-surface-sink: #e5e1d8;
+	--v-paper: #faf9f7;
+
+	--v-line-1: rgba(26, 31, 46, 0.12);
+	--v-line-2: rgba(26, 31, 46, 0.2);
+	--v-line-select: rgba(194, 65, 12, 0.35);
+
+	--v-ink-1: #1a1f2e;
+	--v-ink-2: #4a5468;
+	--v-ink-3: #5b6478; /* ≥ 4.5:1 on paper, canvas and sink (asserted) */
+	--v-ink-4: #98a0b3;
+
+	--v-act: #ea580c;
+	--v-act-2: #c2410c;
+	--v-act-focus: #c2410c;
+	--v-act-veil: rgba(234, 88, 12, 0.1);
+	--v-act-text: #c2410c; /* AA on light */
+
+	/* calm strips — citizens never see a band code; plain-language labels */
+	--v-band-green: #2f9e6f;
+	--v-band-amber: #b27a1e;
+	--v-band-red: #c24444;
+	--v-band-black-fill: rgba(26, 31, 46, 0.4);
+	--v-band-black-hairline: #c24444;
+	--v-band-veil: rgba(178, 122, 30, 0.12);
+
+	--v-data: #2e6fae;
+	--v-tool: #1e54b7;
+
+	--v-glass-bg: rgba(255, 255, 255, 0.92);
+	--v-glass-border: rgba(26, 31, 46, 0.18);
+	--v-glass-blur: 10px;
+	--v-glow-act: rgba(194, 65, 12, 0.16);
+	--v-flow-light: #5f8f2a;
+
+	--v-veil: rgba(26, 31, 46, 0.08);
+
+	/* type — the display key equals the UI stack (one face) */
+	--v-font-ui: Inter, 'Noto Sans', 'Noto Sans Devanagari', system-ui,
+		sans-serif;
+	--v-font-display: Inter, 'Noto Sans', 'Noto Sans Devanagari', system-ui,
+		sans-serif;
+	--v-font-mono: 'JetBrains Mono', 'Noto Sans Mono', ui-monospace, monospace;
+	/* 13 px floor for public meta text (phones in daylight) */
+	--v-text-2xs: 13px;
+	--v-text-xs: 13px;
+	--v-text-sm: 14px;
+	--v-text-base: 16px; /* CITIZEN base */
+	--v-text-md: 16px;
+	--v-text-lg: 20px;
+	--v-text-xl: 28px;
+	--v-weight-status: 600;
+	--v-tracking-status: 0;
+
+	--v-space-1: 4px;
+	--v-space-2: 8px;
+	--v-space-3: 12px;
+	--v-space-4: 16px;
+	--v-space-5: 20px;
+	--v-space-6: 24px;
+	--v-space-7: 32px;
+	--v-space-8: 40px;
+
+	--v-ctl-sm: 24px;
+	--v-ctl-md: 28px;
+	--v-ctl-lg: 32px;
+	--v-ctl-touch: 44px;
+
+	--v-radius-chip: 4px;
+	--v-radius-btn: 6px;
+	--v-radius-panel: 10px;
+	--v-radius-modal: 14px;
+	--v-radius-pill: 999px;
+
+	/* citizen rhythm */
+	--v-pad-panel: 16px;
+	--v-gap-panel: 12px;
+
+	--v-ease: cubic-bezier(0.2, 0, 0, 1);
+	--v-dur-out: 150ms;
+	--v-dur-in: 300ms;
+	--v-dur-wipe: 600ms;
+	--v-dur-trace: 1200ms;
+	--v-dur-comet: 300ms;
+	--v-dur-stagger: 120ms;
+	--v-dur-pulse: 200ms;
+	--v-dur-lift: 2s;
+	--v-dur-breathe: 2s;
+	--v-dur-sweep: 3.5s;
+
+	/* ── new keys (SPEC §2.3, Blueprint light) ────────────────────────── */
+
+	--v-surface-4: #dce0e5;
+	--v-hover: rgba(143, 153, 168, 0.15);
+	--v-row-hover: rgba(143, 153, 168, 0.15);
+	--v-minimal-hover: rgba(143, 153, 168, 0.15);
+	--v-minimal-active: rgba(143, 153, 168, 0.3);
+	--v-line-strong: rgba(17, 20, 24, 0.3);
+	--v-popover-line: rgba(17, 20, 24, 0.1);
+	--v-focus: rgba(33, 93, 176, 0.752);
+	--v-ink-disabled: rgba(95, 107, 124, 0.6);
+
+	--v-primary: #2d72d2;
+	--v-primary-hover: #215db0;
+	--v-primary-active: #184a90;
+	--v-primary-text: #215db0;
+	--v-primary-veil: rgba(45, 114, 210, 0.1);
+	--v-success: #238551;
+	--v-success-hover: #1c6e42;
+	--v-success-active: #165a36;
+	--v-success-text: #1c6e42;
+	--v-success-veil: rgba(35, 133, 81, 0.1);
+	--v-warning: #c87619;
+	--v-warning-hover: #935610;
+	--v-warning-active: #77450d;
+	--v-warning-text: #935610;
+	--v-warning-veil: rgba(200, 118, 25, 0.1);
+	--v-danger: #cd4246;
+	--v-danger-hover: #ac2f33;
+	--v-danger-active: #8e292c;
+	--v-danger-text: #ac2f33;
+	--v-danger-veil: rgba(205, 66, 70, 0.1);
+	--v-neutral-veil: rgba(143, 153, 168, 0.15);
+
+	--v-ai: #1e54b7;
+	--v-ai-text: #1e54b7;
+	--v-ai-veil: rgba(39, 110, 241, 0.1);
+
+	--v-elev-0: 0 0 0 1px rgba(17, 20, 24, 0.15);
+	--v-elev-1: 0 0 0 1px rgba(17, 20, 24, 0.1), 0 1px 1px rgba(17, 20, 24, 0.2);
+	--v-elev-2: 0 0 0 1px rgba(17, 20, 24, 0.1), 0 1px 1px rgba(17, 20, 24, 0.2),
+		0 2px 6px rgba(17, 20, 24, 0.2);
+	--v-elev-3: 0 0 0 1px rgba(17, 20, 24, 0.1), 0 2px 4px rgba(17, 20, 24, 0.2),
+		0 8px 24px rgba(17, 20, 24, 0.2);
+	--v-elev-4: 0 0 0 1px rgba(17, 20, 24, 0.1), 0 4px 8px rgba(17, 20, 24, 0.2),
+		0 18px 46px 6px rgba(17, 20, 24, 0.2);
+
+	--v-map-select: #000000;
+	--v-map-decision: #c87619;
+	--v-map-alert: #cd4246;
+	--v-map-route: #00a396;
+	--v-map-event: #276ef1;
+	--v-map-water: #0369a1;
+	--v-map-marker: #5f6b7c;
+	--v-map-marker-fill: rgba(255, 255, 255, 0.9);
+	--v-map-casing: rgba(255, 255, 255, 0.85);
+	--v-map-label-bg: rgba(255, 255, 255, 0.9);
+	--v-map-label-ink: #1c2127;
+
+	/* public pages keep a conventional green → red ramp (no decision states there) */
+	--v-flow-1: #238551;
+	--v-flow-2: #8eb125;
+	--v-flow-3: #d1980b;
+	--v-flow-4: #c87619;
+	--v-flow-5: #cd4246;
+	--v-flow-width-1: 3px;
+	--v-flow-width-2: 3.5px;
+	--v-flow-width-3: 4px;
+	--v-flow-width-4: 5px;
+	--v-flow-width-5: 6px;
+
+	--v-z-content: 10;
+	--v-z-overlay: 20;
+	--v-z-dialog: 30;
+	--v-z-toast: 40;
+	--v-z-tooltip: 50;
+
+	--v-ws-navbar: 50px;
+	--v-ws-strip: 36px;
+	--v-ws-rail: 44px;
+	--v-ws-left: 300px;
+	--v-ws-right: 400px;
+	--v-ws-right-md: 368px;
+	--v-ws-right-sm: 344px;
+	--v-ws-pane-head: 40px;
+	--v-ws-row: 28px;
+	--v-ws-row-2: 44px;
+	--v-ws-row-head: 30px;
+	--v-ws-tag: 20px;
+	--v-ws-icon-col: 32px;
+	--v-ws-timeline: 124px;
+	--v-ws-audit: 220px;
+	--v-ws-audit-compact: 172px;
+
+	--v-on-fill: #ffffff;
+	--v-tooltip-bg: #404854;
+	--v-tooltip-ink: #f6f7f9;
+	--v-backdrop: rgba(17, 20, 24, 0.5);
+}
+
+/*
+ * Reduced motion (doctrine): wipes become 64ms two-frame crossfades, the
+ * comet becomes a stepped polyline (canvas side), breathing becomes a
+ * static hairline, pulses become static edges. Components read the
+ * duration vars, so this single block calms the whole deck.
+ */
+@media (prefers-reduced-motion: reduce) {
+	:root,
+	[data-theme='command'],
+	[data-theme='daylight'] {
+		--v-dur-out: 64ms;
+		--v-dur-in: 64ms;
+		--v-dur-wipe: 64ms;
+		--v-dur-trace: 64ms;
+		--v-dur-comet: 64ms;
+		--v-dur-stagger: 0ms;
+		--v-dur-pulse: 0ms;
+		--v-dur-lift: 0ms;
+		--v-dur-breathe: 0ms;
+		--v-dur-sweep: 0ms;
+	}
+}

@@ -1,0 +1,70 @@
+# Signal-timing twin compose stanza (a service-owned file, no shared-file
+# edits). Layered over the argus files of project sajag, by hand (from the
+# repo root):
+#   docker compose -p sajag -f infra/compose.yml \
+#     -f infra/compose.gb10-override.yml -f infra/compose.argus-override.yml \
+#     -f infra/compose.twin.yml up -d twin
+#
+# What it runs: services/twin, a macroscopic cell-transmission model of the
+# City Pack's road network (cities/mumbai/network.json, baked into the image).
+# Every AI signal proposal is simulated against "do nothing" here before an
+# officer sees it; the answer is a proposal object (verification_state
+# MODELLED, requires a named officer's approval). The twin NEVER writes a
+# signal: it has no client for the signal writer at all.
+#
+# Topology: host-networked like its argus peers (GB10 drops bridge-to-host-
+# gateway traffic: see compose.argus-override.yml). The service binds
+# 127.0.0.1:8198 ITSELF (SAJAG_TWIN_HOST/PORT): loopback only, no published
+# port. It reads, with GETs only, the live traffic state from the oracle on
+# loopback (:8191; any failure falls back to the SIMULATED profile, labelled)
+# and asks the local tactical LLM (:8084, shared with a live system: one call
+# at a time, 20 s timeout) only to word a rationale; set SAJAG_TWIN_LLM=0
+# to keep it to templates. No secret is read: the service needs none.
+#
+# Hardening: read-only root filesystem (a /tmp tmpfs only), every capability
+# dropped, no-new-privileges, a non-root user (uid 10008, the image), a 768M
+# memory cap and rotated json-file logs (the box's disk is shared).
+
+services:
+  twin:
+    container_name: sajag-twin
+    image: sajag-twin:latest
+    restart: unless-stopped
+    build:
+      context: ..
+      dockerfile: infra/docker/Dockerfile.twin
+    network_mode: host
+    environment:
+      SAJAG_TWIN_HOST: 127.0.0.1
+      SAJAG_TWIN_PORT: "8198"
+      SAJAG_TWIN_NETWORK: /app/cities/mumbai/network.json
+      # read-only GETs of the live state; named explicitly, never left to a default
+      SAJAG_TWIN_ORACLE_URL: http://127.0.0.1:8191
+      SAJAG_TWIN_LLM_URL: http://127.0.0.1:8084
+      SAJAG_TWIN_LLM: ${SAJAG_TWIN_LLM:-1}
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import json,os,sys,urllib.request as u; d=json.load(u.urlopen('http://127.0.0.1:%s/health' % os.environ.get('SAJAG_TWIN_PORT', '8198'), timeout=3)); sys.exit(0 if d.get('status') == 'ok' else 1)"
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+    deploy:
+      resources:
+        limits:
+          memory: 768M

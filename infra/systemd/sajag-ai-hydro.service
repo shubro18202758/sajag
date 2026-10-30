@@ -1,0 +1,19 @@
+# Sajag AI tier — waterlogging nowcast (Open-Meteo rain × Arabian Sea tide × terrain × pumps) on 127.0.0.1:8197.
+# Runs from the checkout's src with a host venv ($SAJAG_AI_VENV_DIR/ai-forecast, default $SAJAG_ROOT/.venvs/ai-forecast;
+# see services/hydro/README.md for how to build it). Loopback only; the deck proxies /api/hydro.
+# Pulled in by sajag-ai.target. Values come from ~/.config/sajag/sajag.env.
+[Unit]
+Description=Sajag AI: waterlogging nowcast (Open-Meteo rain × Arabian Sea tide × terrain × pumps) on 127.0.0.1:8197
+PartOf=sajag-ai.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Environment=PATH=%h/.local/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+EnvironmentFile=%h/.config/sajag/sajag.env
+ExecStart=/bin/bash -c 'cd "$SAJAG_ROOT/services/hydro" && exec env PYTHONPATH=src PORT=8197 HOST=127.0.0.1 "$${SAJAG_AI_VENV_DIR:-$SAJAG_ROOT/.venvs}/ai-forecast/bin/python" -m hydro'
+Restart=always
+RestartSec=5
+TimeoutStopSec=30
+# shared GB10 unified pool: an AI host is the kernel's preferred OOM victim, never the desktop session
+OOMScoreAdjust=500

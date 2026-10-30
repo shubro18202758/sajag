@@ -1,0 +1,36 @@
+# Sajag memory tier — embedding-service on 127.0.0.1:8205 (its own memory corpus in the Sajag store).
+# Models (registry: services/embedding-service/src/embedding_service/config.py; eval: docs/ai/embeddings.md):
+#   late  pplx-embed-v2-late-0.6b (MaxSim rerank; the brain's calibrated novelty scale)
+#   dense pplx-embed-context-v1-4b, Matryoshka-cut to the store's vector(1024) (recall, POST /embed)
+#   pii   PII-Tracer, loaded on the first POST /pii/spans
+# Overrides go in ~/.config/sajag/sajag.env (EnvironmentFile wins over Environment=):
+#   EMBED_DENSE_MODEL=bge-m3 is the fallback dense model; after any dense/late model change run
+#   services/embedding-service/scripts/reembed.py so the stored corpus follows.
+# Waits for the corridor-store port (127.0.0.1:$POSTGIS_HOST_PORT) before starting: user units cannot order
+# After=docker.service. Pulled in by sajag-models.target; installed (linked) by
+# scripts/sajag_up.sh --install-units. Paths come from ~/.config/sajag/sajag.env.
+[Unit]
+Description=Sajag memory tier: embedding-service on 127.0.0.1:8205
+PartOf=sajag-models.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+# a linger boot has no login session: pin the PATH the hand-launched hosts
+# ran with (CUDA tools for torch/llama.cpp; libraries resolve via ld.so.conf)
+Environment=PATH=%h/.local/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+Environment=EMBED_DENSE_MODEL=pplx-embed-context-v1-4b
+Environment=EMBED_LATE_MODEL=pplx-embed-v2-late-0.6b
+Environment=EMBED_RANK_MODE=maxsim
+Environment=EMBED_PII=1
+Environment=EMBED_WARMUP=1
+EnvironmentFile=%h/.config/sajag/sajag.env
+ExecStart=/bin/bash ${SAJAG_ROOT}/infra/scripts/serve_models.sh --foreground embed
+Restart=always
+RestartSec=5
+# 78 = EX_CONFIG: app, venv or launcher missing — report once, don't spin
+RestartPreventExitStatus=78
+TimeoutStopSec=30
+# Shared GB10 unified pool: a model host must be the kernel's preferred OOM
+# victim (host convention, nemotron memguard notes), never the desktop session.
+OOMScoreAdjust=500

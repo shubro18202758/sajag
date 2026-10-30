@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <generator>NFE/5.0</generator>
+    <title>"Mumbai (accident OR crash OR fire OR robbery) when:3d" - SYNTHETIC REPLICA (Sajag test fixture)</title>
+    <link>https://news.google.com/search?q=Mumbai&amp;hl=en-IN&amp;gl=IN&amp;ceid=IN:en</link>
+    <language>en-IN</language>
+    <copyright>SYNTHETIC REPLICA of the Google News RSS search schema for Sajag tests. Every item, headline, publisher and name in it is fictional; it is not Google News content.</copyright>
+    <lastBuildDate>Tue, 20 Oct 2026 15:00:00 GMT</lastBuildDate>
+    <description>Google News</description>
+    <item>
+      <title>Car crashes into three vehicles on Western Express Highway near Andheri; 34-year-old scooter rider among 3 injured - News A</title>
+      <link>https://news.google.com/rss/articles/SYNTHETIC-GNEWS-0001?oc=5</link>
+      <guid isPermaLink="false">SYNTHETIC-GNEWS-0001</guid>
+      <pubDate>Tue, 20 Oct 2026 13:40:00 GMT</pubDate>
+      <description>&lt;a href="https://news.google.com/rss/articles/SYNTHETIC-GNEWS-0001?oc=5" target="_blank"&gt;Car crashes into three vehicles on Western Express Highway near Andheri; 34-year-old scooter rider among 3 injured&lt;/a&gt;&amp;nbsp;&amp;nbsp;&lt;font color="#6f6f6f"&gt;News A&lt;/font&gt;</description>
+      <source url="https://news-a.example">News A</source>
+    </item>
+    <item>
+      <title>Multi-vehicle crash on Western Express Highway near Andheri leaves three injured - News B</title>
+      <link>https://news.google.com/rss/articles/SYNTHETIC-GNEWS-0002?oc=5</link>
+      <guid isPermaLink="false">SYNTHETIC-GNEWS-0002</guid>
+      <pubDate>Tue, 20 Oct 2026 13:55:00 GMT</pubDate>
+      <description>&lt;a href="https://news.google.com/rss/articles/SYNTHETIC-GNEWS-0002?oc=5" target="_blank"&gt;Multi-vehicle crash on Western Express Highway near Andheri leaves three injured&lt;/a&gt;&amp;nbsp;&amp;nbsp;&lt;font color="#6f6f6f"&gt;News B&lt;/font&gt;</description>
+      <source url="https://news-b.example">News B</source>
+    </item>
+    <item>
+      <title>Western Express Highway accident: vehicles collided near Andheri, one lane blocked - News B</title>
+      <link>https://news.google.com/rss/articles/SYNTHETIC-GNEWS-0003?oc=5</link>
+      <guid isPermaLink="false">SYNTHETIC-GNEWS-0003</guid>
+      <pubDate>Tue, 20 Oct 2026 13:58:00 GMT</pubDate>
+      <description>&lt;a href="https://news.google.com/rss/articles/SYNTHETIC-GNEWS-0003?oc=5" target="_blank"&gt;Western Express Highway accident: vehicles collided near Andheri, one lane blocked&lt;/a&gt;&amp;nbsp;&amp;nbsp;&lt;font color="#6f6f6f"&gt;News B&lt;/font&gt;</description>
+      <source url="https://news-b.example">News B</source>
+    </item>
+    <item>
+      <title>Three injured after car rammed vehicles on Western Express Highway near Andheri - News A</title>
+      <link>https://news.google.com/rss/articles/SYNTHETIC-GNEWS-0004?oc=5</link>
+      <guid isPermaLink="false">SYNTHETIC-GNEWS-0004</guid>
+      <pubDate>Tue, 20 Oct 2026 13:59:00 GMT</pubDate>
+      <description>&lt;a href="https://news.google.com/rss/articles/SYNTHETIC-GNEWS-0004?oc=5" target="_blank"&gt;Three injured after car rammed vehicles on Western Express Highway near Andheri&lt;/a&gt;&amp;nbsp;&amp;nbsp;&lt;font color="#6f6f6f"&gt;News A&lt;/font&gt;</description>
+      <source url="https://news-a.example">News A</source>
+    </item>
+    <item>
+      <title>Driver beaten by mob after Western Express Highway crash near Andheri; the driver was identified as Fictus Dummyvala - News B</title>
+      <link>https://news.google.com/rss/articles/SYNTHETIC-GNEWS-0005?oc=5</link>
+      <guid isPermaLink="false">SYNTHETIC-GNEWS-0005</guid>
+      <pubDate>Tue, 20 Oct 2026 13:50:00 GMT</pubDate>
+      <description>&lt;a href="https://news.google.com/rss/articles/SYNTHETIC-GNEWS-0005?oc=5" target="_blank"&gt;Driver beaten by mob after Western Express Highway crash near Andheri; the driver was identified as Fictus Dummyvala&lt;/a&gt;&amp;nbsp;&amp;nbsp;&lt;font color="#6f6f6f"&gt;News B&lt;/font&gt;</description>
+      <source url="https://news-b.example">News B</source>
+    </item>
+    <item>
+      <title>Jeweller Mr Kalpit Exemplar, 52, robbed at gunpoint near Dadar TT circle - News B</title>
+      <link>https://news.google.com/rss/articles/SYNTHETIC-GNEWS-0006?oc=5</link>
+      <guid isPermaLink="false">SYNTHETIC-GNEWS-0006</guid>
+      <pubDate>Tue, 20 Oct 2026 10:15:00 GMT</pubDate>
+      <description>&lt;a href="https://news.google.com/rss/articles/SYNTHETIC-GNEWS-0006?oc=5" target="_blank"&gt;Jeweller Mr Kalpit Exemplar, 52, robbed at gunpoint near Dadar TT circle&lt;/a&gt;&amp;nbsp;&amp;nbsp;&lt;font color="#6f6f6f"&gt;News B&lt;/font&gt;</description>
+      <source url="https://news-b.example">News B</source>
+    </item>
+    <item>
+      <title>BMC opens a new citizen service centre in Matunga - News A</title>
+      <link>https://news.google.com/rss/articles/SYNTHETIC-GNEWS-0007?oc=5</link>
+      <guid isPermaLink="false">SYNTHETIC-GNEWS-0007</guid>
+      <pubDate>Tue, 20 Oct 2026 09:00:00 GMT</pubDate>
+      <description>&lt;a href="https://news.google.com/rss/articles/SYNTHETIC-GNEWS-0007?oc=5" target="_blank"&gt;BMC opens a new citizen service centre in Matunga&lt;/a&gt;&amp;nbsp;&amp;nbsp;&lt;font color="#6f6f6f"&gt;News A&lt;/font&gt;</description>
+      <source url="https://news-a.example">News A</source>
+    </item>
+    <item>
+      <title>Mumbai: content creator Zara Placeholderi starts a weekend book club in Bandra - News B</title>
+      <link>https://news.google.com/rss/articles/SYNTHETIC-GNEWS-0008?oc=5</link>
+      <guid isPermaLink="false">SYNTHETIC-GNEWS-0008</guid>
+      <pubDate>Tue, 20 Oct 2026 11:30:00 GMT</pubDate>
+      <description>&lt;a href="https://news.google.com/rss/articles/SYNTHETIC-GNEWS-0008?oc=5" target="_blank"&gt;Mumbai: content creator Zara Placeholderi starts a weekend book club in Bandra&lt;/a&gt;&amp;nbsp;&amp;nbsp;&lt;font color="#6f6f6f"&gt;News B&lt;/font&gt;</description>
+      <source url="https://news-b.example">News B</source>
+    </item>
+  </channel>
+</rss>

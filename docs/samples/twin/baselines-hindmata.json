@@ -1,0 +1,390 @@
+{
+ "_sample": {
+  "source": "GET /twin/baselines/hindmata on services/twin, run locally on the CPU on 30 Oct 2026 (loopback port 9371, oracle and LLM off) on the Mumbai network v1 (cities/mumbai/network.json as committed on 30 Oct 2026: 72 junctions, 86 segments)",
+  "note": "as captured, the twin's SIMULATED demand was still the weekday profile it was first built with on the Kolkata reference pack (its assumption line says so); the roads, junction and signal program are Mumbai's. A Mumbai demand profile is pending"
+ },
+ "junction": {
+  "junction_id": 19,
+  "key": "hindmata",
+  "name": "Hindmata (Dadar East)",
+  "name_mr": "हिंदमाता (दादर पूर्व)",
+  "lat": 19.0056073,
+  "lon": 72.8397643,
+  "control": "programmed",
+  "legs": 3,
+  "program": {
+   "cycle_sec": 100,
+   "offset_sec": 23,
+   "phases": [
+    {
+     "green_sec": 47,
+     "movements": [
+      "through"
+     ]
+    },
+    {
+     "green_sec": 38,
+     "movements": [
+      "cross"
+     ]
+    }
+   ],
+   "source": "osm_assumed (MODELLED)"
+  },
+  "virtual_cross_street": false,
+  "approaches": [
+   {
+    "link_id": "1065:f",
+    "segment_id": 1065,
+    "road_name": "Dr Ambedkar Road",
+    "from_junction": 17,
+    "movement": "through"
+   },
+   {
+    "link_id": "1066:r",
+    "segment_id": 1066,
+    "road_name": "Dr Ambedkar Road (Hindmata - Dadar TT)",
+    "from_junction": 20,
+    "movement": "through"
+   },
+   {
+    "link_id": "1070:r",
+    "segment_id": 1070,
+    "road_name": "Dr E Borges Road",
+    "from_junction": 18,
+    "movement": "cross"
+   }
+  ]
+ },
+ "demand": {
+  "source": "simulated-profile",
+  "label": "SIMULATED",
+  "start_ist": "2026-10-30T15:09+05:30",
+  "warmup_min": 15.0,
+  "live_coverage": 0.0,
+  "tod_factor_at_start": 0.846,
+  "notes": [
+   "Demand is the assumed Kolkata weekday profile (SIMULATED), not counts.",
+   "12 crossing(s) have a virtual cross street (cross road not in the network)."
+  ]
+ },
+ "horizon_min": 30.0,
+ "current": {
+  "program": {
+   "cycle_sec": 100,
+   "offset_sec": 23,
+   "phases": [
+    {
+     "green_sec": 47,
+     "movements": [
+      "through"
+     ]
+    },
+    {
+     "green_sec": 38,
+     "movements": [
+      "cross"
+     ]
+    }
+   ],
+   "source": "osm_assumed (MODELLED)"
+  },
+  "metrics": {
+   "network_delay_veh_h": 603.9,
+   "focus_delay_veh_h": 10.7,
+   "through_delay_veh_h": 9.3,
+   "cross_street_delay_veh_h": 1.4,
+   "max_queue_m": 52.0,
+   "cross_street_max_queue_m": 52.0,
+   "spillback_min": 0.0,
+   "network_spillback_min": 0.0,
+   "served_pcu": 2144.0,
+   "exited_pcu": 47276.0,
+   "approaches": [
+    {
+     "link_id": "1065:f",
+     "road_name": "Dr Ambedkar Road",
+     "from_junction": 17,
+     "junction_id": 19,
+     "movement": "through",
+     "delay_veh_h": 5.5,
+     "max_queue_m": 52.0,
+     "mean_queue_m": 20.0,
+     "spillback_min": 0.0,
+     "length_m": 1000.0
+    },
+    {
+     "link_id": "1066:r",
+     "road_name": "Dr Ambedkar Road (Hindmata - Dadar TT)",
+     "from_junction": 20,
+     "junction_id": 19,
+     "movement": "through",
+     "delay_veh_h": 3.8,
+     "max_queue_m": 45.0,
+     "mean_queue_m": 18.0,
+     "spillback_min": 0.0,
+     "length_m": 1640.0
+    },
+    {
+     "link_id": "1070:r",
+     "road_name": "Dr E Borges Road",
+     "from_junction": 18,
+     "junction_id": 19,
+     "movement": "cross",
+     "delay_veh_h": 1.4,
+     "max_queue_m": 52.0,
+     "mean_queue_m": 20.0,
+     "spillback_min": 0.0,
+     "length_m": 405.0
+    }
+   ]
+  }
+ },
+ "webster": {
+  "program": {
+   "cycle_sec": 61,
+   "offset_sec": 23,
+   "phases": [
+    {
+     "green_sec": 26,
+     "movements": [
+      "through"
+     ]
+    },
+    {
+     "green_sec": 20,
+     "movements": [
+      "cross"
+     ]
+    }
+   ],
+   "source": "twin Webster baseline (MODELLED)"
+  },
+  "cycle_formula_s": 61.3,
+  "Y": 0.551,
+  "critical_flow_ratio": {
+   "through": 0.31,
+   "cross": 0.241
+  },
+  "lost_time_s": 15,
+  "oversaturated": false,
+  "flows_used": {
+   "through": {
+    "q_pcu_h": 1675.0,
+    "s_pcu_h": 5400.0
+   },
+   "cross": {
+    "q_pcu_h": 386.0,
+    "s_pcu_h": 1600.0
+   }
+  },
+  "metrics": {
+   "network_delay_veh_h": 605.2,
+   "focus_delay_veh_h": 12.4,
+   "through_delay_veh_h": 11.4,
+   "cross_street_delay_veh_h": 1.0,
+   "max_queue_m": 83.0,
+   "cross_street_max_queue_m": 33.0,
+   "spillback_min": 0.0,
+   "network_spillback_min": 0.0,
+   "served_pcu": 2129.0,
+   "exited_pcu": 47267.0,
+   "approaches": [
+    {
+     "link_id": "1065:f",
+     "road_name": "Dr Ambedkar Road",
+     "from_junction": 17,
+     "junction_id": 19,
+     "movement": "through",
+     "delay_veh_h": 7.1,
+     "max_queue_m": 83.0,
+     "mean_queue_m": 25.0,
+     "spillback_min": 0.0,
+     "length_m": 1000.0
+    },
+    {
+     "link_id": "1066:r",
+     "road_name": "Dr Ambedkar Road (Hindmata - Dadar TT)",
+     "from_junction": 20,
+     "junction_id": 19,
+     "movement": "through",
+     "delay_veh_h": 4.3,
+     "max_queue_m": 63.0,
+     "mean_queue_m": 20.0,
+     "spillback_min": 0.0,
+     "length_m": 1640.0
+    },
+    {
+     "link_id": "1070:r",
+     "road_name": "Dr E Borges Road",
+     "from_junction": 18,
+     "junction_id": 19,
+     "movement": "cross",
+     "delay_veh_h": 1.0,
+     "max_queue_m": 33.0,
+     "mean_queue_m": 14.0,
+     "spillback_min": 0.0,
+     "length_m": 405.0
+    }
+   ]
+  },
+  "change_vs_current": {
+   "delay_change_pct": 15.9,
+   "network_delay_change_pct": 0.2,
+   "cross_street_delay_change_pct": -28.6,
+   "max_queue_change_m": 31.0,
+   "max_queue_change_pct": 59.6,
+   "cross_street_max_queue_change_m": -19.0,
+   "spillback_change_min": 0.0,
+   "network_spillback_change_min": 0.0,
+   "served_change_pcu": -15.0
+  }
+ },
+ "max_pressure": {
+  "form": "cyclic max-pressure: cycle, phase order and offset kept; split follows cycle-average pressure, at most 4 s change per phase per cycle, minimum green 15 s",
+  "greens_per_cycle": [
+   [
+    51,
+    34
+   ],
+   [
+    55,
+    30
+   ],
+   [
+    55,
+    30
+   ],
+   [
+    58,
+    27
+   ],
+   [
+    58,
+    27
+   ],
+   [
+    58,
+    27
+   ],
+   [
+    58,
+    27
+   ],
+   [
+    58,
+    27
+   ],
+   [
+    58,
+    27
+   ],
+   [
+    58,
+    27
+   ],
+   [
+    58,
+    27
+   ],
+   [
+    58,
+    27
+   ],
+   [
+    54,
+    31
+   ],
+   [
+    57,
+    28
+   ],
+   [
+    57,
+    28
+   ],
+   [
+    57,
+    28
+   ],
+   [
+    57,
+    28
+   ],
+   [
+    57,
+    28
+   ]
+  ],
+  "metrics": {
+   "network_delay_veh_h": 599.4,
+   "focus_delay_veh_h": 7.4,
+   "through_delay_veh_h": 5.5,
+   "cross_street_delay_veh_h": 1.9,
+   "max_queue_m": 61.0,
+   "cross_street_max_queue_m": 61.0,
+   "spillback_min": 0.0,
+   "network_spillback_min": 0.0,
+   "served_pcu": 2148.0,
+   "exited_pcu": 47287.0,
+   "approaches": [
+    {
+     "link_id": "1065:f",
+     "road_name": "Dr Ambedkar Road",
+     "from_junction": 17,
+     "junction_id": 19,
+     "movement": "through",
+     "delay_veh_h": 3.4,
+     "max_queue_m": 48.0,
+     "mean_queue_m": 12.0,
+     "spillback_min": 0.0,
+     "length_m": 1000.0
+    },
+    {
+     "link_id": "1066:r",
+     "road_name": "Dr Ambedkar Road (Hindmata - Dadar TT)",
+     "from_junction": 20,
+     "junction_id": 19,
+     "movement": "through",
+     "delay_veh_h": 2.1,
+     "max_queue_m": 44.0,
+     "mean_queue_m": 10.0,
+     "spillback_min": 0.0,
+     "length_m": 1640.0
+    },
+    {
+     "link_id": "1070:r",
+     "road_name": "Dr E Borges Road",
+     "from_junction": 18,
+     "junction_id": 19,
+     "movement": "cross",
+     "delay_veh_h": 1.9,
+     "max_queue_m": 61.0,
+     "mean_queue_m": 27.0,
+     "spillback_min": 0.0,
+     "length_m": 405.0
+    }
+   ]
+  },
+  "change_vs_current": {
+   "delay_change_pct": -30.8,
+   "network_delay_change_pct": -0.7,
+   "cross_street_delay_change_pct": 35.7,
+   "max_queue_change_m": 9.0,
+   "max_queue_change_pct": 17.3,
+   "cross_street_max_queue_change_m": 9.0,
+   "spillback_change_min": 0.0,
+   "network_spillback_change_min": 0.0,
+   "served_change_pcu": 4.0
+  }
+ },
+ "labels": {
+  "result": "MODELLED",
+  "demand": "SIMULATED",
+  "note": "A traffic model (cell-transmission twin), not measured traffic."
+ },
+ "timing": {
+  "warmup_s": 0.122,
+  "run_s": 0.49
+ }
+}

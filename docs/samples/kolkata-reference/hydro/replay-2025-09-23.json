@@ -1,0 +1,948 @@
+{
+ "_sample": {
+  "pack": "Kolkata reference pack (cities/kolkata/, the second City Pack kept in the repository). Made on 28 Oct 2026, before the platform moved to Mumbai, as 'source' says; NOT a Mumbai capture. The Mumbai version of this file is pending.",
+  "source": "POST /hydro/replay?event=2025-09-23 on services/hydro, 28 Oct 2026",
+  "trimmed": "each run's segments list trimmed to 3 of 65; reported_check, snapshot and sources as returned",
+  "removed": "fields in the reference pack's earlier second UI language were removed here (Sajag's UI languages are now English, Marathi and Hindi); everything else is as captured: runs.imd_gauge_anchored.snapshot.advisory_draft.mr"
+ },
+ "event": "2025-09-23",
+ "title": "Kolkata deluge, 22–23 September 2025",
+ "window_ist": [
+  "2025-09-22T18:00:00+05:30",
+  "2025-09-23T14:00:00+05:30"
+ ],
+ "official": {
+  "alipore_24h_mm": 251.4,
+  "to": "2025-09-23T08:30+05:30",
+  "peak_hour": "98 mm, 03:00–04:00 IST",
+  "source": {
+   "publisher": "IMD Regional Meteorological Centre, Kolkata — press release",
+   "date": "2025-09-23",
+   "url": "https://internal.imd.gov.in/press_release/20250923_pr_4321.pdf"
+  },
+  "also_reported": {
+   "reuters_mm": 251.6,
+   "source": {
+    "publisher": "Reuters via Dawn",
+    "date": "2025-09-24",
+    "url": "https://www.dawn.com/news/1944310"
+   }
+  }
+ },
+ "tide": {
+  "label": "MODELLED (approximate)",
+  "gate_closed_ist": [
+   [
+    "2025-09-23T00:15:00+05:30",
+    "2025-09-23T04:30:00+05:30"
+   ],
+   [
+    "2025-09-23T12:30:00+05:30",
+    "2025-09-23T14:00:00+05:30"
+   ]
+  ],
+  "reported": "lock gate closed 00:30–04:00 IST; high tide around 13:30 IST (Mayor)",
+  "reported_source": {
+   "publisher": "IANS via The Weekend Leader (Mayor on lock gates)",
+   "date": "2025-09-23",
+   "url": "https://www.theweekendleader.com/Headlines/80522/kolkata-hit-by-cloudburst-7-electrocution-deaths-train-and-metro-services-disrupted.html"
+  }
+ },
+ "pumps": {
+  "assumed_availability": 1.0,
+  "label": "EMULATED adapter not used — all pumps assumed available",
+  "basis": "\"All 82 pumping stations … were operational\" (Millennium Post, 24 Sep 2025)",
+  "source": {
+   "publisher": "Millennium Post",
+   "date": "2025-09-24",
+   "url": "https://www.millenniumpost.in/bengal/kmc-drains-flooded-city-on-war-footing-628674"
+  }
+ },
+ "runs": {
+  "open_meteo_archive": {
+   "label": "ARCHIVE (Open-Meteo historical archive, reanalysis/NWP based)",
+   "source": "https://archive-api.open-meteo.com/v1/archive",
+   "model": "best_match",
+   "grid_cells": [
+    "22.460,88.321",
+    "22.531,88.320",
+    "22.531,88.413",
+    "22.601,88.318",
+    "22.601,88.411",
+    "22.601,88.505",
+    "22.671,88.410"
+   ],
+   "window_total_mm_city_mean": 20.5,
+   "window_total_mm_max_point": 27.9,
+   "finding": "The archive's gridded rain over the window is 21 mm (city mean; 28 mm at its wettest point) against 248.8 mm measured at Alipore by IMD in the same hours: reanalysis/NWP grids do not resolve this storm. The model is driven by its rain, so this run shows what a nowcast fed only by such a product would have missed — the case for wiring KMC's own rain gauges (FFEWS) into the pilot.",
+   "peak_class_counts": {
+    "0": 65,
+    "1": 0,
+    "2": 0,
+    "3": 0
+   },
+   "flagged_segments": 0,
+   "earliest_flag_ist": null,
+   "reported_check": {
+    "on_network": 13,
+    "flagged": 0,
+    "hit_rate": 0.0,
+    "off_network": [
+     "Topsia",
+     "Garia",
+     "Jodhpur Park",
+     "Lake Gardens",
+     "Kankurgachi underpass",
+     "Netaji Nagar",
+     "Palmer Bazar"
+    ],
+    "items": [
+     {
+      "reported": "EM Bypass",
+      "sources": [
+       "PTI via The Tribune, 2025-09-23",
+       "Millennium Post, 2025-09-25"
+      ],
+      "segments": [
+       1035,
+       1036,
+       1037,
+       1038
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "max_class": 0
+     },
+     {
+      "reported": "AJC Bose Road",
+      "sources": [
+       "PTI via The Tribune, 2025-09-23"
+      ],
+      "segments": [
+       1023,
+       1024,
+       1025
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "max_class": 0
+     },
+     {
+      "reported": "Central Avenue",
+      "sources": [
+       "PTI via The Tribune, 2025-09-23"
+      ],
+      "segments": [
+       1051,
+       1052,
+       1053
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "max_class": 0
+     },
+     {
+      "reported": "Rashbehari Avenue",
+      "sources": [
+       "PTI via The Tribune, 2025-09-23",
+       "IANS via Reporter Post, 2025-09-24"
+      ],
+      "segments": [
+       1032,
+       1033
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "max_class": 0
+     },
+     {
+      "reported": "Park Circus",
+      "sources": [
+       "PTI via The Tribune, 2025-09-23",
+       "IANS via Reporter Post, 2025-09-24",
+       "Millennium Post, 2025-09-25"
+      ],
+      "segments": [
+       1027,
+       1030
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "max_class": 0
+     },
+     {
+      "reported": "Gariahat",
+      "sources": [
+       "PTI via The Tribune, 2025-09-23"
+      ],
+      "segments": [
+       1033,
+       1034
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "max_class": 0
+     },
+     {
+      "reported": "Behala",
+      "sources": [
+       "PTI via The Tribune, 2025-09-23"
+      ],
+      "segments": [
+       1050
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "max_class": 0
+     },
+     {
+      "reported": "College Street",
+      "sources": [
+       "PTI via The Tribune, 2025-09-23",
+       "IANS via Reporter Post, 2025-09-24",
+       "Mongabay India, 2025-09-30"
+      ],
+      "segments": [
+       1051,
+       1052,
+       1054,
+       1055,
+       1058
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "max_class": 0
+     },
+     {
+      "reported": "Thanthania",
+      "sources": [
+       "IANS via Reporter Post, 2025-09-24",
+       "Millennium Post, 2025-09-25"
+      ],
+      "segments": [
+       1051,
+       1052,
+       1054,
+       1055,
+       1058
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "max_class": 0
+     },
+     {
+      "reported": "Amherst Street",
+      "sources": [
+       "Millennium Post, 2025-09-25"
+      ],
+      "segments": [
+       1055,
+       1058
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "max_class": 0
+     },
+     {
+      "reported": "Ballygunge Phari",
+      "sources": [
+       "IANS via Reporter Post, 2025-09-24",
+       "Millennium Post, 2025-09-25",
+       "Down To Earth, 2025-09-24"
+      ],
+      "segments": [
+       1030,
+       1031
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "max_class": 0
+     },
+     {
+      "reported": "Shakespeare Sarani",
+      "sources": [
+       "Millennium Post, 2025-09-25"
+      ],
+      "segments": [
+       1018,
+       1023,
+       1026
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "max_class": 0
+     },
+     {
+      "reported": "Topsia",
+      "sources": [
+       "Millennium Post, 2025-09-25"
+      ],
+      "segments": [],
+      "on_network": false,
+      "flagged": null,
+      "first_flag_ist": null,
+      "max_class": null
+     },
+     {
+      "reported": "Garia",
+      "sources": [
+       "PTI via The Tribune, 2025-09-23"
+      ],
+      "segments": [],
+      "on_network": false,
+      "flagged": null,
+      "first_flag_ist": null,
+      "max_class": null
+     },
+     {
+      "reported": "Jodhpur Park",
+      "sources": [
+       "PTI via The Tribune, 2025-09-23",
+       "Millennium Post, 2025-09-24"
+      ],
+      "segments": [],
+      "on_network": false,
+      "flagged": null,
+      "first_flag_ist": null,
+      "max_class": null
+     },
+     {
+      "reported": "Lake Gardens",
+      "sources": [
+       "PTI via The Tribune, 2025-09-23"
+      ],
+      "segments": [],
+      "on_network": false,
+      "flagged": null,
+      "first_flag_ist": null,
+      "max_class": null
+     },
+     {
+      "reported": "Kankurgachi underpass",
+      "sources": [
+       "IANS via Reporter Post, 2025-09-24"
+      ],
+      "segments": [],
+      "on_network": false,
+      "flagged": null,
+      "first_flag_ist": null,
+      "max_class": null
+     },
+     {
+      "reported": "Maddox Square",
+      "sources": [
+       "Down To Earth, 2025-09-24"
+      ],
+      "segments": [
+       1030,
+       1031,
+       1033,
+       1034
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "max_class": 0
+     },
+     {
+      "reported": "Netaji Nagar",
+      "sources": [
+       "Mongabay India, 2025-09-30"
+      ],
+      "segments": [],
+      "on_network": false,
+      "flagged": null,
+      "first_flag_ist": null,
+      "max_class": null
+     },
+     {
+      "reported": "Palmer Bazar",
+      "sources": [
+       "Down To Earth, 2025-09-24"
+      ],
+      "segments": [],
+      "on_network": false,
+      "flagged": null,
+      "first_flag_ist": null,
+      "max_class": null
+     }
+    ]
+   },
+   "segments": [
+    {
+     "segment_id": 1001,
+     "road_name": "Howrah Bridge (Rabindra Setu)",
+     "place": "Howrah Bridge, Kolkata end",
+     "rain_total_mm": 17.7,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-09-22 18:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": true
+    },
+    {
+     "segment_id": 1033,
+     "road_name": "Rash Behari Avenue",
+     "place": "Gariahat crossing",
+     "rain_total_mm": 22.7,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-09-22 18:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1052,
+     "road_name": "Chittaranjan Avenue",
+     "place": "Girish Park crossing",
+     "rain_total_mm": 17.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-09-22 18:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    }
+   ]
+  },
+  "imd_gauge_anchored": {
+   "label": "OBSERVED totals (IMD Alipore 3-hourly; KMC station 24-h as reported) · 15-min shape MODELLED",
+   "sources": [
+    {
+     "publisher": "IMD Regional Meteorological Centre, Kolkata — press release",
+     "date": "2025-09-23",
+     "url": "https://internal.imd.gov.in/press_release/20250923_pr_4321.pdf"
+    },
+    {
+     "publisher": "News Arena India (KMC station-wise figures)",
+     "date": "2025-09-23",
+     "url": "https://newsarenaindia.com/nation/torrential-rain-disrupts-kolkata-ahead-of-durga-puja-5-dead/57263"
+    }
+   ],
+   "alipore_window_total_mm": 248.8,
+   "alipore_peak_mm_h": 98.0,
+   "peak_class_counts": {
+    "0": 5,
+    "1": 0,
+    "2": 43,
+    "3": 17
+   },
+   "flagged_segments": 60,
+   "earliest_flag_ist": "2025-09-23 02:45",
+   "reported_check": {
+    "on_network": 13,
+    "flagged": 13,
+    "hit_rate": 1.0,
+    "off_network": [
+     "Topsia",
+     "Garia",
+     "Jodhpur Park",
+     "Lake Gardens",
+     "Kankurgachi underpass",
+     "Netaji Nagar",
+     "Palmer Bazar"
+    ],
+    "items": [
+     {
+      "reported": "EM Bypass",
+      "sources": [
+       "PTI via The Tribune, 2025-09-23",
+       "Millennium Post, 2025-09-25"
+      ],
+      "segments": [
+       1035,
+       1036,
+       1037,
+       1038
+      ],
+      "on_network": true,
+      "flagged": true,
+      "first_flag_ist": "2025-09-23 03:15",
+      "max_class": 2
+     },
+     {
+      "reported": "AJC Bose Road",
+      "sources": [
+       "PTI via The Tribune, 2025-09-23"
+      ],
+      "segments": [
+       1023,
+       1024,
+       1025
+      ],
+      "on_network": true,
+      "flagged": true,
+      "first_flag_ist": "2025-09-23 03:15",
+      "max_class": 3
+     },
+     {
+      "reported": "Central Avenue",
+      "sources": [
+       "PTI via The Tribune, 2025-09-23"
+      ],
+      "segments": [
+       1051,
+       1052,
+       1053
+      ],
+      "on_network": true,
+      "flagged": true,
+      "first_flag_ist": "2025-09-23 03:15",
+      "max_class": 3
+     },
+     {
+      "reported": "Rashbehari Avenue",
+      "sources": [
+       "PTI via The Tribune, 2025-09-23",
+       "IANS via Reporter Post, 2025-09-24"
+      ],
+      "segments": [
+       1032,
+       1033
+      ],
+      "on_network": true,
+      "flagged": true,
+      "first_flag_ist": "2025-09-23 02:45",
+      "max_class": 3
+     },
+     {
+      "reported": "Park Circus",
+      "sources": [
+       "PTI via The Tribune, 2025-09-23",
+       "IANS via Reporter Post, 2025-09-24",
+       "Millennium Post, 2025-09-25"
+      ],
+      "segments": [
+       1027,
+       1030
+      ],
+      "on_network": true,
+      "flagged": true,
+      "first_flag_ist": "2025-09-23 03:00",
+      "max_class": 3
+     },
+     {
+      "reported": "Gariahat",
+      "sources": [
+       "PTI via The Tribune, 2025-09-23"
+      ],
+      "segments": [
+       1033,
+       1034
+      ],
+      "on_network": true,
+      "flagged": true,
+      "first_flag_ist": "2025-09-23 02:45",
+      "max_class": 3
+     },
+     {
+      "reported": "Behala",
+      "sources": [
+       "PTI via The Tribune, 2025-09-23"
+      ],
+      "segments": [
+       1050
+      ],
+      "on_network": true,
+      "flagged": true,
+      "first_flag_ist": "2025-09-23 03:15",
+      "max_class": 3
+     },
+     {
+      "reported": "College Street",
+      "sources": [
+       "PTI via The Tribune, 2025-09-23",
+       "IANS via Reporter Post, 2025-09-24",
+       "Mongabay India, 2025-09-30"
+      ],
+      "segments": [
+       1051,
+       1052,
+       1054,
+       1055,
+       1058
+      ],
+      "on_network": true,
+      "flagged": true,
+      "first_flag_ist": "2025-09-23 03:15",
+      "max_class": 3
+     },
+     {
+      "reported": "Thanthania",
+      "sources": [
+       "IANS via Reporter Post, 2025-09-24",
+       "Millennium Post, 2025-09-25"
+      ],
+      "segments": [
+       1051,
+       1052,
+       1054,
+       1055,
+       1058
+      ],
+      "on_network": true,
+      "flagged": true,
+      "first_flag_ist": "2025-09-23 03:15",
+      "max_class": 3
+     },
+     {
+      "reported": "Amherst Street",
+      "sources": [
+       "Millennium Post, 2025-09-25"
+      ],
+      "segments": [
+       1055,
+       1058
+      ],
+      "on_network": true,
+      "flagged": true,
+      "first_flag_ist": "2025-09-23 03:15",
+      "max_class": 3
+     },
+     {
+      "reported": "Ballygunge Phari",
+      "sources": [
+       "IANS via Reporter Post, 2025-09-24",
+       "Millennium Post, 2025-09-25",
+       "Down To Earth, 2025-09-24"
+      ],
+      "segments": [
+       1030,
+       1031
+      ],
+      "on_network": true,
+      "flagged": true,
+      "first_flag_ist": "2025-09-23 03:00",
+      "max_class": 3
+     },
+     {
+      "reported": "Shakespeare Sarani",
+      "sources": [
+       "Millennium Post, 2025-09-25"
+      ],
+      "segments": [
+       1018,
+       1023,
+       1026
+      ],
+      "on_network": true,
+      "flagged": true,
+      "first_flag_ist": "2025-09-23 03:15",
+      "max_class": 3
+     },
+     {
+      "reported": "Topsia",
+      "sources": [
+       "Millennium Post, 2025-09-25"
+      ],
+      "segments": [],
+      "on_network": false,
+      "flagged": null,
+      "first_flag_ist": null,
+      "max_class": null
+     },
+     {
+      "reported": "Garia",
+      "sources": [
+       "PTI via The Tribune, 2025-09-23"
+      ],
+      "segments": [],
+      "on_network": false,
+      "flagged": null,
+      "first_flag_ist": null,
+      "max_class": null
+     },
+     {
+      "reported": "Jodhpur Park",
+      "sources": [
+       "PTI via The Tribune, 2025-09-23",
+       "Millennium Post, 2025-09-24"
+      ],
+      "segments": [],
+      "on_network": false,
+      "flagged": null,
+      "first_flag_ist": null,
+      "max_class": null
+     },
+     {
+      "reported": "Lake Gardens",
+      "sources": [
+       "PTI via The Tribune, 2025-09-23"
+      ],
+      "segments": [],
+      "on_network": false,
+      "flagged": null,
+      "first_flag_ist": null,
+      "max_class": null
+     },
+     {
+      "reported": "Kankurgachi underpass",
+      "sources": [
+       "IANS via Reporter Post, 2025-09-24"
+      ],
+      "segments": [],
+      "on_network": false,
+      "flagged": null,
+      "first_flag_ist": null,
+      "max_class": null
+     },
+     {
+      "reported": "Maddox Square",
+      "sources": [
+       "Down To Earth, 2025-09-24"
+      ],
+      "segments": [
+       1030,
+       1031,
+       1033,
+       1034
+      ],
+      "on_network": true,
+      "flagged": true,
+      "first_flag_ist": "2025-09-23 02:45",
+      "max_class": 3
+     },
+     {
+      "reported": "Netaji Nagar",
+      "sources": [
+       "Mongabay India, 2025-09-30"
+      ],
+      "segments": [],
+      "on_network": false,
+      "flagged": null,
+      "first_flag_ist": null,
+      "max_class": null
+     },
+     {
+      "reported": "Palmer Bazar",
+      "sources": [
+       "Down To Earth, 2025-09-24"
+      ],
+      "segments": [],
+      "on_network": false,
+      "flagged": null,
+      "first_flag_ist": null,
+      "max_class": null
+     }
+    ]
+   },
+   "segments": [
+    {
+     "segment_id": 1001,
+     "road_name": "Howrah Bridge (Rabindra Setu)",
+     "place": "Howrah Bridge, Kolkata end",
+     "rain_total_mm": 199.0,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-09-22 18:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": true
+    },
+    {
+     "segment_id": 1033,
+     "road_name": "Rash Behari Avenue",
+     "place": "Gariahat crossing",
+     "rain_total_mm": 282.2,
+     "peak_class": 3,
+     "peak_depth_cm": 49.1,
+     "peak_band": "> 30 cm",
+     "peak_at_ist": "2025-09-23 05:30",
+     "first_class1_ist": "2025-09-23 01:15",
+     "first_class2_ist": "2025-09-23 02:45",
+     "first_class3_ist": "2025-09-23 03:45",
+     "elevated": false
+    },
+    {
+     "segment_id": 1052,
+     "road_name": "Chittaranjan Avenue",
+     "place": "Girish Park crossing",
+     "rain_total_mm": 197.4,
+     "peak_class": 3,
+     "peak_depth_cm": 31.9,
+     "peak_band": "> 30 cm",
+     "peak_at_ist": "2025-09-23 05:30",
+     "first_class1_ist": "2025-09-23 01:45",
+     "first_class2_ist": "2025-09-23 03:15",
+     "first_class3_ist": "2025-09-23 05:00",
+     "elevated": false
+    }
+   ],
+   "snapshot": {
+    "at_ist": "2025-09-23T02:00:00+05:30",
+    "label": "HINDSIGHT — the observed rain used as if it had been a perfect nowcast",
+    "flagged_within_horizon": 60,
+    "flagged_now": 0,
+    "lead_time_to_deep_min": {
+     "min": 45,
+     "median": 90,
+     "max": 120
+    },
+    "top": [
+     {
+      "segment_id": 1033,
+      "road_name": "Rash Behari Avenue",
+      "place": "Gariahat crossing",
+      "risk_class": 3,
+      "expected_depth_band": "> 30 cm",
+      "lead_time_min": 105,
+      "lead_time_deep_min": 45
+     },
+     {
+      "segment_id": 1019,
+      "road_name": "Ashutosh Mukherjee Road",
+      "place": "Hazra crossing",
+      "risk_class": 3,
+      "expected_depth_band": "> 30 cm",
+      "lead_time_min": 120,
+      "lead_time_deep_min": 60
+     },
+     {
+      "segment_id": 1030,
+      "road_name": "Syed Amir Ali Avenue",
+      "place": "Ballygunge Phari",
+      "risk_class": 3,
+      "expected_depth_band": "> 30 cm",
+      "lead_time_min": 120,
+      "lead_time_deep_min": 60
+     },
+     {
+      "segment_id": 1031,
+      "road_name": "Hazra Road",
+      "place": "Ballygunge Phari",
+      "risk_class": 3,
+      "expected_depth_band": "> 30 cm",
+      "lead_time_min": 120,
+      "lead_time_deep_min": 60
+     },
+     {
+      "segment_id": 1032,
+      "road_name": "Rash Behari Avenue",
+      "place": "Deshapriya Park crossing",
+      "risk_class": 2,
+      "expected_depth_band": "10–30 cm",
+      "lead_time_min": 60,
+      "lead_time_deep_min": 60
+     },
+     {
+      "segment_id": 1015,
+      "road_name": "Queensway - Cathedral Road",
+      "place": "Exide crossing",
+      "risk_class": 2,
+      "expected_depth_band": "10–30 cm",
+      "lead_time_min": 75,
+      "lead_time_deep_min": 75
+     },
+     {
+      "segment_id": 1018,
+      "road_name": "Jawaharlal Nehru Road",
+      "place": "Exide crossing",
+      "risk_class": 2,
+      "expected_depth_band": "10–30 cm",
+      "lead_time_min": 75,
+      "lead_time_deep_min": 75
+     },
+     {
+      "segment_id": 1020,
+      "road_name": "Shyama Prasad Mukherjee Road",
+      "place": "Rashbehari crossing",
+      "risk_class": 2,
+      "expected_depth_band": "10–30 cm",
+      "lead_time_min": 75,
+      "lead_time_deep_min": 75
+     }
+    ],
+    "proposal_counts": {
+     "ambulance_window": 60,
+     "live_wire_hazard": 60,
+     "public_advisory_draft": 1,
+     "waterlogging_reroute": 60
+    },
+    "proposal_examples": [
+     "Gariahat crossing (Rash Behari Avenue): waterlogging risk 3 (> 30 cm), deep water in about 45 min; no detour on the city network that avoids flagged roads — propose closing to small vehicles with officer judgement on site.",
+     "Ambulance (108) note — Gariahat crossing (Rash Behari Avenue): passable for about 45 min more; no detour avoiding flagged roads.",
+     "Live-wire hazard — Gariahat crossing (Rash Behari Avenue): waterlogging risk 3 (> 30 cm). Propose asking the power utility (CESC / WBSEDCL) to inspect and, where needed, isolate street-light and overhead supply along this road.",
+     "Hazra crossing (Ashutosh Mukherjee Road): waterlogging risk 3 (> 30 cm), deep water in about 60 min; propose diverting traffic via Acharya Jagadish Chandra Bose Road → Mother Teresa Sarani (Park Street) → Syed Amir Ali Avenue → Hazra Road."
+    ],
+    "advisory_draft": {
+     "en": "Traffic advisory (draft): waterlogging is likely within the next 120 minutes at these places: Gariahat crossing, Hazra crossing, Ballygunge Phari, Deshapriya Park crossing, Exide crossing, Rashbehari crossing. Please avoid these roads if you can. Do not touch electric poles or wires in standing water. Emergency: 112; ambulance (108)."
+    }
+   }
+  }
+ },
+ "sources": {
+  "imd": {
+   "publisher": "IMD Regional Meteorological Centre, Kolkata — press release",
+   "date": "2025-09-23",
+   "url": "https://internal.imd.gov.in/press_release/20250923_pr_4321.pdf"
+  },
+  "reuters": {
+   "publisher": "Reuters via Dawn",
+   "date": "2025-09-24",
+   "url": "https://www.dawn.com/news/1944310"
+  },
+  "pti_tribune": {
+   "publisher": "PTI via The Tribune",
+   "date": "2025-09-23",
+   "url": "https://www.tribuneindia.com/news/india/heavy-rain-paralyses-kolkata-5-dead-in-rain-related-incidents/amp"
+  },
+  "ians": {
+   "publisher": "IANS via Reporter Post",
+   "date": "2025-09-24",
+   "url": "https://reporterpost.in/article/nation/40938/kolkata-battles-waterlogging-as-torrential-rain-claims-10-lives"
+  },
+  "mpost_25": {
+   "publisher": "Millennium Post",
+   "date": "2025-09-25",
+   "url": "https://www.millenniumpost.in/bengal/most-city-streets-cleared-of-water-except-added-areas-kmc-628812"
+  },
+  "mpost_24": {
+   "publisher": "Millennium Post",
+   "date": "2025-09-24",
+   "url": "https://www.millenniumpost.in/bengal/kmc-drains-flooded-city-on-war-footing-628674"
+  },
+  "dte": {
+   "publisher": "Down To Earth",
+   "date": "2025-09-24",
+   "url": "https://www.downtoearth.org.in/climate-change/unexpected-interaction-of-atmospheric-conditions-not-cloudburst-caused-kolkatas-intense-180mm-rainfall-in-3-hours-says-imd"
+  },
+  "newsarena": {
+   "publisher": "News Arena India (KMC station-wise figures)",
+   "date": "2025-09-23",
+   "url": "https://newsarenaindia.com/nation/torrential-rain-disrupts-kolkata-ahead-of-durga-puja-5-dead/57263"
+  },
+  "mongabay": {
+   "publisher": "Mongabay India",
+   "date": "2025-09-30",
+   "url": "http://india.mongabay.com/2025/09/intense-rainfall-spotlights-the-fault-in-kolkatas-aging-clogged-drainage-systems/"
+  },
+  "weekendleader": {
+   "publisher": "IANS via The Weekend Leader (Mayor on lock gates)",
+   "date": "2025-09-23",
+   "url": "https://www.theweekendleader.com/Headlines/80522/kolkata-hit-by-cloudburst-7-electrocution-deaths-train-and-metro-services-disrupted.html"
+  }
+ },
+ "honesty": "News reports name places, not every street, and the network has 65 arterial segments: a flag with no report is not called a false alarm, and an off-network report is listed but not scored. Gauge positions are approximate."
+}

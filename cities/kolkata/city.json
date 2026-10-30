@@ -1,0 +1,45 @@
+{
+  "schema": "sajag.city/1",
+  "id": "kolkata",
+  "name": { "en": "Kolkata", "bn": "কলকাতা", "hi": "कोलकाता" },
+  "region": { "en": "Kolkata Metropolitan Area", "bn": "কলকাতা মহানগর অঞ্চল", "hi": "कोलकाता महानगर क्षेत्र" },
+  "state": { "code": "WB", "en": "West Bengal", "bn": "পশ্চিমবঙ্গ", "hi": "पश्चिम बंगाल" },
+  "timezone": "Asia/Kolkata",
+  "centre": { "lat": 22.5726, "lon": 88.3639, "label": "Esplanade / BBD Bag" },
+  "bbox": { "south": 22.45, "west": 88.2, "north": 22.7, "east": 88.5 },
+  "languages": { "ui": ["bn", "en", "hi"], "default_public": "bn", "default_console": "en" },
+  "plates": {
+    "state_code": "WB",
+    "format": "WB NN X[X] NNNN",
+    "regex": "^WB[ -]?\\d{2}[ -]?[A-Z]{1,3}[ -]?\\d{1,4}$",
+    "note": "WB-01..WB-08 are commonly listed for Kolkata offices and WB-11/12 for Howrah; Sajag never infers an office from a code."
+  },
+  "emergency": { "unified": "112", "police": "100", "ambulance": "108", "fire": "101" },
+  "agencies": [
+    { "id": "kp", "kind": "police", "en": "Kolkata Police", "bn": "কলকাতা পুলিশ", "hi": "कोलकाता पुलिस" },
+    { "id": "kp_traffic", "kind": "traffic", "en": "Kolkata Traffic Police", "bn": "কলকাতা ট্রাফিক পুলিশ", "hi": "कोलकाता ट्रैफ़िक पुलिस" },
+    { "id": "bpc", "kind": "police", "en": "Bidhannagar Police Commissionerate", "bn": "বিধাননগর পুলিশ কমিশনারেট", "hi": "बिधाननगर पुलिस कमिश्नरेट" },
+    { "id": "hcp", "kind": "police", "en": "Howrah City Police", "bn": "হাওড়া সিটি পুলিশ", "hi": "हावड़ा सिटी पुलिस" },
+    { "id": "wbp", "kind": "police", "en": "West Bengal Police", "bn": "পশ্চিমবঙ্গ পুলিশ", "hi": "पश्चिम बंगाल पुलिस" },
+    { "id": "kmc", "kind": "civic", "en": "Kolkata Municipal Corporation", "bn": "কলকাতা পৌরসংস্থা", "hi": "कोलकाता नगर निगम" },
+    { "id": "kmda", "kind": "civic", "en": "Kolkata Metropolitan Development Authority", "bn": "কলকাতা মহানগর উন্নয়ন কর্তৃপক্ষ", "hi": "कोलकाता महानगर विकास प्राधिकरण" },
+    { "id": "nkda", "kind": "civic", "en": "New Town Kolkata Development Authority", "bn": "নিউ টাউন কলকাতা উন্নয়ন কর্তৃপক্ষ", "hi": "न्यू टाउन कोलकाता विकास प्राधिकरण" },
+    { "id": "wbsdma", "kind": "disaster", "en": "West Bengal State Disaster Management Authority", "bn": "পশ্চিমবঙ্গ রাজ্য বিপর্যয় মোকাবিলা কর্তৃপক্ষ", "hi": "पश्चिम बंगाल राज्य आपदा प्रबंधन प्राधिकरण" },
+    { "id": "wbfes", "kind": "fire", "en": "West Bengal Fire & Emergency Services", "bn": "পশ্চিমবঙ্গ অগ্নিনির্বাপণ ও জরুরি পরিষেবা", "hi": "पश्चिम बंगाल अग्निशमन एवं आपातकालीन सेवा" },
+    { "id": "amb108", "kind": "ambulance", "en": "Ambulance (108)", "bn": "অ্যাম্বুলেন্স (১০৮)", "hi": "एम्बुलेंस (108)" },
+    { "id": "erss112", "kind": "emergency", "en": "ERSS 112", "bn": "ইআরএসএস ১১২", "hi": "ईआरएसएस 112" },
+    { "id": "imd", "kind": "weather", "en": "IMD Regional Meteorological Centre, Kolkata (Alipore)", "bn": "ভারতীয় আবহাওয়া দপ্তর, আলিপুর", "hi": "भारत मौसम विज्ञान विभाग, कोलकाता (अलीपुर)" },
+    { "id": "ndma", "kind": "disaster", "en": "National Disaster Management Authority", "bn": "জাতীয় বিপর্যয় মোকাবিলা কর্তৃপক্ষ", "hi": "राष्ट्रीय आपदा प्रबंधन प्राधिकरण" },
+    { "id": "metro", "kind": "transit", "en": "Metro Railway, Kolkata", "bn": "মেট্রো রেল, কলকাতা", "hi": "मेट्रो रेलवे, कोलकाता" },
+    { "id": "wbtc", "kind": "transit", "en": "West Bengal Transport Corporation", "bn": "পশ্চিমবঙ্গ পরিবহণ নিগম", "hi": "पश्चिम बंगाल परिवहन निगम" },
+    { "id": "port", "kind": "port", "en": "Syama Prasad Mookerjee Port, Kolkata", "bn": "শ্যামাপ্রসাদ মুখার্জি বন্দর, কলকাতা", "hi": "श्यामा प्रसाद मुखर्जी बंदरगाह, कोलकाता" },
+    { "id": "power", "kind": "utility", "en": "Power utility (CESC / WBSEDCL)", "bn": "বিদ্যুৎ সংস্থা (সিইএসসি / ডব্লিউবিএসইডিসিএল)", "hi": "बिजली कंपनी (सीईएससी / डब्ल्यूबीएसईडीसीएल)" }
+  ],
+  "hydrology": {
+    "river": { "en": "Hooghly", "bn": "হুগলি", "hi": "हुगली" },
+    "tide_station": "Garden Reach (Hooghly), tide model from harmonic constants - labelled MODELLED",
+    "ffews": "KMC Flood Forecasting & Early Warning System adapter - EMULATED until access is granted"
+  },
+  "population": { "kmc_2011": 4496694, "urban_agglomeration_2011": 14112536, "source": "Census of India 2011" },
+  "attribution": "Road data © OpenStreetMap contributors, ODbL 1.0. Agency names belong to their owners; Sajag is not affiliated with them."
+}

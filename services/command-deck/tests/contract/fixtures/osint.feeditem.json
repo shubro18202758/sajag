@@ -1,0 +1,26 @@
+{
+	"id": "dss_decision_log:1",
+	"t": "2026-10-25T03:07:47.746Z",
+	"kind": "osint",
+	"urns": [
+		"osint_event:8ec6f567-9366-47ae-8fde-38aa421a3219"
+	],
+	"actor": "Sandbox Officer",
+	"actor_kind": "human",
+	"text": "Decision support: rejected by Sandbox Officer — Not corroborated by an official source yet; holding the response until verification improves",
+	"source": "osint",
+	"verification_state": "NEWS-REPORTED",
+	"credibility": 0.65,
+	"severity": "info",
+	"props": {
+		"action": "dss_decision",
+		"dss_id": "65a56e85-31f1-4232-9146-e2b2ad5e3eef",
+		"decision": "reject",
+		"coa_id": null,
+		"coa_label": null,
+		"note": "Not corroborated by an official source yet; holding the response until verification improves",
+		"subject_urn": "osint_event:8ec6f567-9366-47ae-8fde-38aa421a3219",
+		"promoted_event_id": null,
+		"dispatch_ids": []
+	}
+}

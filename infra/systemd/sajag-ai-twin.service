@@ -1,0 +1,19 @@
+# Sajag AI tier — signal-timing twin (cell-transmission model; computes, never writes) on 127.0.0.1:8198.
+# Runs from the checkout's src with a host venv ($SAJAG_AI_VENV_DIR/ai-forecast, default $SAJAG_ROOT/.venvs/ai-forecast;
+# see services/twin/README.md for how to build it). Loopback only; the deck proxies /api/twin.
+# Pulled in by sajag-ai.target. Values come from ~/.config/sajag/sajag.env.
+[Unit]
+Description=Sajag AI: signal-timing twin (cell-transmission model; computes, never writes) on 127.0.0.1:8198
+PartOf=sajag-ai.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Environment=PATH=%h/.local/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+EnvironmentFile=%h/.config/sajag/sajag.env
+ExecStart=/bin/bash -c 'cd "$SAJAG_ROOT/services/twin" && exec env PYTHONPATH=src SAJAG_TWIN_PORT=8198 SAJAG_TWIN_HOST=127.0.0.1 SAJAG_TWIN_ORACLE_URL=http://127.0.0.1:8191 "$${SAJAG_AI_VENV_DIR:-$SAJAG_ROOT/.venvs}/ai-forecast/bin/python" -m sajag_twin'
+Restart=always
+RestartSec=5
+TimeoutStopSec=30
+# shared GB10 unified pool: an AI host is the kernel's preferred OOM victim, never the desktop session
+OOMScoreAdjust=500

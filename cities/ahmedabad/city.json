@@ -1,0 +1,48 @@
+{
+  "schema": "sajag.city/1",
+  "id": "ahmedabad",
+  "name": {
+    "en": "Ahmedabad",
+    "bn": "আহমেদাবাদ",
+    "hi": "अहमदाबाद"
+  },
+  "state": {
+    "code": "GJ",
+    "en": "Gujarat",
+    "bn": "গুজরাত",
+    "hi": "गुजरात"
+  },
+  "timezone": "Asia/Kolkata",
+  "role": "portability pack: the platform's first city, kept so a test can build a second pack from its own folder; not the live city",
+  "centre": {
+    "lat": 23.03,
+    "lon": 72.58,
+    "label": "network centre"
+  },
+  "bbox": {
+    "south": 22.9,
+    "west": 72.45,
+    "north": 23.2,
+    "east": 72.75
+  },
+  "languages": {
+    "ui": [
+      "bn",
+      "en",
+      "hi"
+    ],
+    "local_script_in_name_bn": "Gujarati (the pack keeps its local-language names in the name_bn field)"
+  },
+  "plates": {
+    "state_code": "GJ",
+    "format": "GJ NN X[X] NNNN",
+    "regex": "^GJ[ -]?\\d{2}[ -]?[A-Z]{1,3}[ -]?\\d{1,4}$"
+  },
+  "emergency": {
+    "unified": "112",
+    "police": "100",
+    "ambulance": "108",
+    "fire": "101"
+  },
+  "attribution": "Road data © OpenStreetMap contributors, ODbL 1.0."
+}

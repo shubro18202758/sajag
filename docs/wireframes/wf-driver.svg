@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1150" width="1000" height="1150" font-family="Inter, 'Noto Sans Devanagari', system-ui, sans-serif" role="img" aria-label="Sajag — Driver: ambulance (108) green corridor (/driver, public) — low-fidelity wireframe">
+  <title>Sajag — Driver: ambulance (108) green corridor (/driver, public) — low-fidelity wireframe</title>
+  <defs>
+    <pattern id="hatch" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="14" height="14" fill="#EFEFEF"/>
+      <line x1="0" y1="0" x2="0" y2="14" stroke="#E0E0E0" stroke-width="5"/>
+    </pattern>
+    <pattern id="hatchband" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="8" height="8" fill="#E4E4E4"/>
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#CFCFCF" stroke-width="3"/>
+    </pattern>
+  </defs>
+  <rect width="1000" height="1150" fill="#FFFFFF"/>
+  <text x="20" y="32" font-size="21" font-weight="700" fill="#262626">Sajag — Driver: ambulance (108) green corridor (/driver, public)</text>
+  <text x="20" y="56" font-size="13" font-weight="400" fill="#5E5E5E">Phone width (400 px), no sign-in. One request; a named duty officer decides; the crew follows 108 control.</text>
+  <rect x="30" y="80" width="420" height="1030" rx="34" fill="#EDEDED" stroke="#4A4A4A" stroke-width="1.6"/>
+  <rect x="40" y="90" width="400" height="1010" rx="26" fill="#FFFFFF" stroke="#ABABAB" stroke-width="1.2"/>
+  <text x="62" y="110" font-size="11" font-weight="650" fill="#262626">12:40</text>
+  <rect x="200" y="96" width="80" height="16" rx="8" fill="#4A4A4A"/>
+  <line x1="16" y1="934" x2="464" y2="934" stroke="#C2410C" stroke-width="1" stroke-dasharray="6 4"/>
+  <text x="466" y="938" font-size="10.5" font-weight="600" fill="#C2410C">fold at 844 px</text>
+  <rect x="56" y="124" width="32" height="32" rx="8" fill="#1A1A1A" stroke="#4A4A4A" stroke-width="1.1"/>
+  <text x="72" y="146" font-size="16" font-weight="700" text-anchor="middle" fill="#262626">S</text>
+  <text x="96" y="147" font-size="17" font-weight="700" fill="#262626">Sajag</text>
+  <rect x="292" y="126" width="132" height="30" rx="15" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.2"/>
+  <text x="314" y="146" font-size="11.5" font-weight="500" text-anchor="middle" fill="#5E5E5E">मरा</text>
+  <rect x="338" y="128" width="40" height="26" rx="13" fill="#262626"/>
+  <text x="358" y="146" font-size="11.5" font-weight="700" text-anchor="middle" fill="#FFFFFF">EN</text>
+  <text x="402" y="146" font-size="11.5" font-weight="500" text-anchor="middle" fill="#5E5E5E">हिं</text>
+  <line x1="40" y1="170" x2="440" y2="170" stroke="#DCDCDC" stroke-width="1.2"/>
+  <text x="60" y="198" font-size="12.5" font-weight="600" fill="#5E5E5E">Green corridor</text>
+  <text x="60" y="228" font-size="19" font-weight="700" fill="#262626">Green corridor — ambulance (108)</text>
+  <text x="60" y="252" font-size="12.5" font-weight="400" fill="#5E5E5E">Your request goes to the duty officer's queue. Follow</text>
+  <text x="60" y="270" font-size="12.5" font-weight="400" fill="#5E5E5E">ambulance (108) control until it is approved.</text>
+  <text x="60" y="300" font-size="12" font-weight="650" fill="#262626">Ambulance unit</text>
+  <rect x="60" y="308" width="360" height="44" rx="10" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.3"/>
+  <text x="74" y="336" font-size="15" font-weight="650" fill="#262626">108-14</text>
+  <text x="406" y="336" font-size="11" font-weight="400" text-anchor="end" fill="#8A8A8A">Your 108 unit number</text>
+  <text x="60" y="374" font-size="12" font-weight="650" fill="#262626">You are at</text>
+  <rect x="60" y="384" width="360" height="40" rx="10" fill="#F4F4F4" stroke="#4A4A4A" stroke-width="1.4"/>
+  <circle cx="78" cy="404" r="7" fill="#262626" stroke="#4A4A4A" stroke-width="1"/>
+  <text x="94" y="409" font-size="12.5" font-weight="600" fill="#262626">Dr Ambedkar Road · stretch 2 of the route</text>
+  <rect x="60" y="430" width="360" height="40" rx="10" fill="#FFFFFF" stroke="#A2A2A2" stroke-width="1"/>
+  <circle cx="78" cy="450" r="7" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1"/>
+  <text x="94" y="455" font-size="12.5" font-weight="400" fill="#262626">Acharya Donde Marg · stretch 3 of the route</text>
+  <text x="60" y="486" font-size="11" font-weight="400" fill="#5E5E5E">through: Corridor event · Parel to KEM</text>
+  <text x="60" y="512" font-size="12" font-weight="650" fill="#262626">Patient urgency</text>
+  <rect x="60" y="522" width="69.8" height="32" rx="16" fill="#262626" stroke="#262626" stroke-width="1.1"/>
+  <text x="94.9" y="542.1" font-size="11.5" font-weight="600" text-anchor="middle" fill="#FFFFFF">Cardiac</text>
+  <rect x="135.8" y="522" width="69.5" height="32" rx="16" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1"/>
+  <text x="170.6" y="542.1" font-size="11.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Trauma</text>
+  <rect x="211.3" y="522" width="65.7" height="32" rx="16" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1"/>
+  <text x="244.2" y="542.1" font-size="11.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Stroke</text>
+  <rect x="283" y="522" width="132.3" height="32" rx="16" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1"/>
+  <text x="349.2" y="542.1" font-size="11.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Other emergency</text>
+  <rect x="60" y="574" width="360" height="56" rx="28" fill="#262626" stroke="#262626" stroke-width="1.2"/>
+  <text x="240" y="607.8" font-size="16" font-weight="650" text-anchor="middle" fill="#FFFFFF">Request corridor window</text>
+  <text x="60" y="650" font-size="11.5" font-weight="400" fill="#5E5E5E">Since your request: starts when you send the request</text>
+  <text x="60" y="678" font-size="11" font-weight="600" fill="#5E5E5E">After sending, the request card gives way to its status:</text>
+  <rect x="60" y="688" width="360" height="150" rx="14" fill="#FFF1E6" stroke="#C2410C" stroke-width="1.4"/>
+  <text x="76" y="716" font-size="16" font-weight="700" fill="#C2410C">Awaiting duty officer</text>
+  <text x="404" y="712" font-size="15" font-weight="700" text-anchor="end" fill="#262626">01:12</text>
+  <text x="404" y="728" font-size="10.5" font-weight="400" text-anchor="end" fill="#5E5E5E">request D-2041</text>
+  <text x="76" y="748" font-size="12.5" font-weight="400" fill="#262626">Your request is on the control-room wall. The</text>
+  <text x="76" y="766" font-size="12.5" font-weight="400" fill="#262626">window opens only when a named duty officer</text>
+  <text x="76" y="784" font-size="12.5" font-weight="400" fill="#262626">approves it.</text>
+  <circle cx="90" cy="806" r="7" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+  <line x1="98" y1="806" x2="176" y2="806" stroke="#C2410C" stroke-width="1.5"/>
+  <text x="90" y="828" font-size="9.5" font-weight="400" text-anchor="middle" fill="#262626">requested</text>
+  <circle cx="184" cy="806" r="7" fill="#C2410C" stroke="#C2410C" stroke-width="1"/>
+  <line x1="192" y1="806" x2="270" y2="806" stroke="#989898" stroke-width="1.5"/>
+  <text x="184" y="828" font-size="9.5" font-weight="600" text-anchor="middle" fill="#262626">awaiting duty officer</text>
+  <circle cx="278" cy="806" r="7" fill="#FFFFFF" stroke="#989898" stroke-width="1"/>
+  <line x1="286" y1="806" x2="364" y2="806" stroke="#989898" stroke-width="1.5"/>
+  <text x="278" y="828" font-size="9.5" font-weight="400" text-anchor="middle" fill="#5E5E5E">approved</text>
+  <circle cx="372" cy="806" r="7" fill="#FFFFFF" stroke="#989898" stroke-width="1"/>
+  <text x="372" y="828" font-size="9.5" font-weight="400" text-anchor="middle" fill="#5E5E5E">window open</text>
+  <rect x="60" y="856" width="360" height="150" rx="12" fill="url(#hatch)" stroke="#9A9A9A" stroke-width="1.2"/>
+  <text x="240" y="925" font-size="13" font-weight="600" text-anchor="middle" fill="#8A8A8A">Corridor map</text>
+  <text x="240" y="945" font-size="11" font-weight="400" text-anchor="middle" fill="#8A8A8A">granted stretch drawn solid; others dashed</text>
+  <rect x="70" y="866" width="95.3" height="20" rx="10" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="117.6" y="879.6" font-size="10" font-weight="600" text-anchor="middle" fill="#5E5E5E">Emulated unit</text>
+  <text x="60" y="1024" font-size="12.5" font-weight="650" fill="#262626">Control room</text>
+  <text x="60" y="1044" font-size="12" font-weight="400" fill="#262626">Follow your 108 control on your usual channel</text>
+  <text x="60" y="1070" font-size="11.5" font-weight="400" fill="#5E5E5E">Green corridors open 60–180 seconds before the ambulance</text>
+  <text x="60" y="1086" font-size="11.5" font-weight="400" fill="#5E5E5E">reaches each junction.</text>
+  <text x="500" y="112" font-size="16" font-weight="700" fill="#262626">What to look at</text>
+  <circle cx="510" cy="140" r="10" fill="#4A4A4A"/>
+  <text x="510" y="144" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">1</text>
+  <text x="530" y="144" font-size="12.5" font-weight="400" fill="#262626">Unit and stretch: the crew names its 108 unit and picks where it is</text>
+  <text x="530" y="161.5" font-size="12.5" font-weight="400" fill="#262626">on an active corridor event. Only real corridors are requestable;</text>
+  <text x="530" y="179" font-size="12.5" font-weight="400" fill="#262626">emulated ones are withheld and counted.</text>
+  <circle cx="510" cy="206.5" r="10" fill="#4A4A4A"/>
+  <text x="510" y="210.5" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">2</text>
+  <text x="530" y="210.5" font-size="12.5" font-weight="400" fill="#262626">One request button, large; patient urgency is a tap, never free text.</text>
+  <text x="530" y="228" font-size="12.5" font-weight="400" fill="#262626">No patient data is asked for.</text>
+  <circle cx="510" cy="255.5" r="10" fill="#4A4A4A"/>
+  <text x="510" y="259.5" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">3</text>
+  <text x="530" y="259.5" font-size="12.5" font-weight="400" fill="#262626">The status, in orange while it waits for a named duty officer; the</text>
+  <text x="530" y="277" font-size="12.5" font-weight="400" fill="#262626">phases run requested → awaiting duty officer → approved → window</text>
+  <text x="530" y="294.5" font-size="12.5" font-weight="400" fill="#262626">open.</text>
+  <circle cx="510" cy="322" r="10" fill="#4A4A4A"/>
+  <text x="510" y="326" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">4</text>
+  <text x="530" y="326" font-size="12.5" font-weight="400" fill="#262626">The corridor map with the granted stretch; an emulated unit says</text>
+  <text x="530" y="343.5" font-size="12.5" font-weight="400" fill="#262626">so.</text>
+  <circle cx="510" cy="371" r="10" fill="#4A4A4A"/>
+  <text x="510" y="375" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">5</text>
+  <text x="530" y="375" font-size="12.5" font-weight="400" fill="#262626">The doctrine line: the window opens 60–180 s before the unit</text>
+  <text x="530" y="392.5" font-size="12.5" font-weight="400" fill="#262626">reaches each junction. The crew always follows 108 control; nothing</text>
+  <text x="530" y="410" font-size="12.5" font-weight="400" fill="#262626">here overrides it.</text>
+  <circle cx="38" cy="328" r="10" fill="#4A4A4A"/>
+  <text x="38" y="332" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">1</text>
+  <circle cx="38" cy="600" r="10" fill="#4A4A4A"/>
+  <text x="38" y="604" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">2</text>
+  <circle cx="38" cy="714" r="10" fill="#4A4A4A"/>
+  <text x="38" y="718" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">3</text>
+  <circle cx="38" cy="886" r="10" fill="#4A4A4A"/>
+  <text x="38" y="890" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">4</text>
+  <circle cx="38" cy="1024" r="10" fill="#4A4A4A"/>
+  <text x="38" y="1028" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">5</text>
+  <rect x="500" y="447.5" width="470" height="92" rx="10" fill="#F4F4F4" stroke="#ABABAB" stroke-width="1.2"/>
+  <text x="516" y="471.5" font-size="13" font-weight="650" fill="#262626">Language</text>
+  <text x="516" y="493.5" font-size="12" font-weight="400" fill="#262626">मरा · EN · हिं, as on the citizen page. Shown here in</text>
+  <text x="516" y="513.5" font-size="12" font-weight="400" fill="#262626">English; the Marathi pack covers every line.</text>
+</svg>

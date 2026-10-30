@@ -1,0 +1,35 @@
+{
+	"urn": "place:babughat_strand_road_11",
+	"kind": "place",
+	"id": "babughat_strand_road_11",
+	"label": "Babughat (Strand Road)",
+	"lon": 88.341087,
+	"lat": 22.567343,
+	"state": "junction",
+	"band": null,
+	"source": "osint",
+	"verification_state": null,
+	"credibility": null,
+	"t": "2026-10-20T10:15:00.000Z",
+	"age_sec": 472013.2,
+	"links": [
+		"osint_event:879c34c9-7e40-4e7f-a259-906983944396",
+		"junction:11"
+	],
+	"props": {
+		"feature_type": "junction",
+		"canonical_name": "Babughat (Strand Road)",
+		"surface_forms": [
+			"babughat",
+			"babughat strand road",
+			"babughat ghat strand road",
+			"बाबूघाट",
+			"বাবুঘাট",
+			"বাবুঘাট স্ট্র্যান্ড রোড",
+			"বাবুঘাট ঘাট স্ট্র্যান্ড রোড"
+		],
+		"segment_id": null,
+		"junction_id": 11,
+		"osint_event_count": 1
+	}
+}

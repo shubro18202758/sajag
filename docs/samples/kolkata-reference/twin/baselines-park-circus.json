@@ -1,0 +1,425 @@
+{
+ "_sample": {
+  "pack": "Kolkata reference pack (cities/kolkata/, the second City Pack kept in the repository). Made on 28 Oct 2026, before the platform moved to Mumbai, as 'source' says; NOT a Mumbai capture. The Mumbai capture is docs/samples/twin/baselines-hindmata.json.",
+  "source": "GET /twin/baselines/park_circus on services/twin, run locally on the CPU on 28 Oct 2026",
+  "removed": "fields in the reference pack's earlier second UI language were removed here (Sajag's UI languages are now English, Marathi and Hindi); everything else is as captured: junction.name_mr"
+ },
+ "junction": {
+  "junction_id": 17,
+  "key": "park_circus",
+  "name": "Park Circus seven-point crossing",
+  "lat": 22.5430761,
+  "lon": 88.3658485,
+  "control": "assumed",
+  "legs": 4,
+  "program": {
+   "cycle_sec": 110,
+   "offset_sec": 0,
+   "phases": [
+    {
+     "green_sec": 50,
+     "movements": [
+      "through"
+     ]
+    },
+    {
+     "green_sec": 42,
+     "movements": [
+      "cross"
+     ]
+    }
+   ],
+   "source": "twin-assumed template (MODELLED; no program in the network)"
+  },
+  "virtual_cross_street": false,
+  "approaches": [
+   {
+    "link_id": "1027:f",
+    "segment_id": 1027,
+    "road_name": "Mother Teresa Sarani (Park Street)",
+    "from_junction": 14,
+    "movement": "cross"
+   },
+   {
+    "link_id": "1028:f",
+    "segment_id": 1028,
+    "road_name": "AJC Bose Road Flyover",
+    "from_junction": 4,
+    "movement": "through"
+   },
+   {
+    "link_id": "1029:r",
+    "segment_id": 1029,
+    "road_name": "Maa Flyover",
+    "from_junction": 30,
+    "movement": "through"
+   },
+   {
+    "link_id": "1030:r",
+    "segment_id": 1030,
+    "road_name": "Syed Amir Ali Avenue",
+    "from_junction": 24,
+    "movement": "cross"
+   }
+  ]
+ },
+ "demand": {
+  "source": "simulated-profile",
+  "label": "SIMULATED",
+  "start_ist": "2026-10-28T18:31+05:30",
+  "warmup_min": 15.0,
+  "live_coverage": 0.0,
+  "tod_factor_at_start": 1.0,
+  "notes": [
+   "Demand is the assumed Kolkata weekday profile (SIMULATED), not counts.",
+   "4 crossing(s) have a virtual cross street (cross road not in the network)."
+  ]
+ },
+ "horizon_min": 30.0,
+ "current": {
+  "program": {
+   "cycle_sec": 110,
+   "offset_sec": 0,
+   "phases": [
+    {
+     "green_sec": 50,
+     "movements": [
+      "through"
+     ]
+    },
+    {
+     "green_sec": 42,
+     "movements": [
+      "cross"
+     ]
+    }
+   ],
+   "source": "twin-assumed template (MODELLED; no program in the network)"
+  },
+  "metrics": {
+   "network_delay_veh_h": 456.7,
+   "focus_delay_veh_h": 24.3,
+   "through_delay_veh_h": 10.6,
+   "cross_street_delay_veh_h": 13.7,
+   "max_queue_m": 104.0,
+   "cross_street_max_queue_m": 104.0,
+   "spillback_min": 0.0,
+   "network_spillback_min": 0.0,
+   "served_pcu": 3006.0,
+   "exited_pcu": 35695.0,
+   "approaches": [
+    {
+     "link_id": "1027:f",
+     "road_name": "Mother Teresa Sarani (Park Street)",
+     "from_junction": 14,
+     "junction_id": 17,
+     "movement": "cross",
+     "delay_veh_h": 6.0,
+     "max_queue_m": 104.0,
+     "mean_queue_m": 43.0,
+     "spillback_min": 0.0,
+     "length_m": 650.0
+    },
+    {
+     "link_id": "1028:f",
+     "road_name": "AJC Bose Road Flyover",
+     "from_junction": 4,
+     "junction_id": 17,
+     "movement": "through",
+     "delay_veh_h": 6.8,
+     "max_queue_m": 90.0,
+     "mean_queue_m": 32.0,
+     "spillback_min": 0.0,
+     "length_m": 4457.0
+    },
+    {
+     "link_id": "1029:r",
+     "road_name": "Maa Flyover",
+     "from_junction": 30,
+     "junction_id": 17,
+     "movement": "through",
+     "delay_veh_h": 3.8,
+     "max_queue_m": 75.0,
+     "mean_queue_m": 27.0,
+     "spillback_min": 0.0,
+     "length_m": 3874.0
+    },
+    {
+     "link_id": "1030:r",
+     "road_name": "Syed Amir Ali Avenue",
+     "from_junction": 24,
+     "junction_id": 17,
+     "movement": "cross",
+     "delay_veh_h": 7.7,
+     "max_queue_m": 72.0,
+     "mean_queue_m": 27.0,
+     "spillback_min": 0.0,
+     "length_m": 1729.0
+    }
+   ]
+  }
+ },
+ "webster": {
+  "program": {
+   "cycle_sec": 101,
+   "offset_sec": 0,
+   "phases": [
+    {
+     "green_sec": 41,
+     "movements": [
+      "through"
+     ]
+    },
+    {
+     "green_sec": 42,
+     "movements": [
+      "cross"
+     ]
+    }
+   ],
+   "source": "twin Webster baseline (MODELLED)"
+  },
+  "cycle_formula_s": 100.9,
+  "Y": 0.683,
+  "critical_flow_ratio": {
+   "through": 0.341,
+   "cross": 0.342
+  },
+  "lost_time_s": 18,
+  "oversaturated": false,
+  "flows_used": {
+   "cross": {
+    "q_pcu_h": 1231.0,
+    "s_pcu_h": 3600.0
+   },
+   "through": {
+    "q_pcu_h": 1943.0,
+    "s_pcu_h": 5700.0
+   }
+  },
+  "metrics": {
+   "network_delay_veh_h": 452.7,
+   "focus_delay_veh_h": 20.9,
+   "through_delay_veh_h": 10.6,
+   "cross_street_delay_veh_h": 10.3,
+   "max_queue_m": 122.0,
+   "cross_street_max_queue_m": 122.0,
+   "spillback_min": 0.0,
+   "network_spillback_min": 0.0,
+   "served_pcu": 3050.0,
+   "exited_pcu": 35702.0,
+   "approaches": [
+    {
+     "link_id": "1027:f",
+     "road_name": "Mother Teresa Sarani (Park Street)",
+     "from_junction": 14,
+     "junction_id": 17,
+     "movement": "cross",
+     "delay_veh_h": 4.5,
+     "max_queue_m": 122.0,
+     "mean_queue_m": 32.0,
+     "spillback_min": 0.0,
+     "length_m": 650.0
+    },
+    {
+     "link_id": "1028:f",
+     "road_name": "AJC Bose Road Flyover",
+     "from_junction": 4,
+     "junction_id": 17,
+     "movement": "through",
+     "delay_veh_h": 6.8,
+     "max_queue_m": 89.0,
+     "mean_queue_m": 32.0,
+     "spillback_min": 0.0,
+     "length_m": 4457.0
+    },
+    {
+     "link_id": "1029:r",
+     "road_name": "Maa Flyover",
+     "from_junction": 30,
+     "junction_id": 17,
+     "movement": "through",
+     "delay_veh_h": 3.9,
+     "max_queue_m": 81.0,
+     "mean_queue_m": 28.0,
+     "spillback_min": 0.0,
+     "length_m": 3874.0
+    },
+    {
+     "link_id": "1030:r",
+     "road_name": "Syed Amir Ali Avenue",
+     "from_junction": 24,
+     "junction_id": 17,
+     "movement": "cross",
+     "delay_veh_h": 5.8,
+     "max_queue_m": 63.0,
+     "mean_queue_m": 21.0,
+     "spillback_min": 0.0,
+     "length_m": 1729.0
+    }
+   ]
+  },
+  "change_vs_current": {
+   "delay_change_pct": -14.0,
+   "network_delay_change_pct": -0.9,
+   "cross_street_delay_change_pct": -24.8,
+   "max_queue_change_m": 18.0,
+   "max_queue_change_pct": 17.3,
+   "cross_street_max_queue_change_m": 18.0,
+   "spillback_change_min": 0.0,
+   "network_spillback_change_min": 0.0,
+   "served_change_pcu": 44.0
+  }
+ },
+ "max_pressure": {
+  "form": "cyclic max-pressure: cycle, phase order and offset kept; split follows cycle-average pressure, at most 4 s change per phase per cycle, minimum green 15 s",
+  "greens_per_cycle": [
+   [
+    54,
+    38
+   ],
+   [
+    50,
+    42
+   ],
+   [
+    46,
+    46
+   ],
+   [
+    46,
+    46
+   ],
+   [
+    46,
+    46
+   ],
+   [
+    46,
+    46
+   ],
+   [
+    46,
+    46
+   ],
+   [
+    46,
+    46
+   ],
+   [
+    46,
+    46
+   ],
+   [
+    46,
+    46
+   ],
+   [
+    46,
+    46
+   ],
+   [
+    46,
+    46
+   ],
+   [
+    46,
+    46
+   ],
+   [
+    46,
+    46
+   ],
+   [
+    46,
+    46
+   ],
+   [
+    46,
+    46
+   ]
+  ],
+  "metrics": {
+   "network_delay_veh_h": 456.8,
+   "focus_delay_veh_h": 24.2,
+   "through_delay_veh_h": 11.7,
+   "cross_street_delay_veh_h": 12.5,
+   "max_queue_m": 106.0,
+   "cross_street_max_queue_m": 106.0,
+   "spillback_min": 0.0,
+   "network_spillback_min": 0.0,
+   "served_pcu": 3003.0,
+   "exited_pcu": 35695.0,
+   "approaches": [
+    {
+     "link_id": "1027:f",
+     "road_name": "Mother Teresa Sarani (Park Street)",
+     "from_junction": 14,
+     "junction_id": 17,
+     "movement": "cross",
+     "delay_veh_h": 5.5,
+     "max_queue_m": 106.0,
+     "mean_queue_m": 39.0,
+     "spillback_min": 0.0,
+     "length_m": 650.0
+    },
+    {
+     "link_id": "1028:f",
+     "road_name": "AJC Bose Road Flyover",
+     "from_junction": 4,
+     "junction_id": 17,
+     "movement": "through",
+     "delay_veh_h": 7.4,
+     "max_queue_m": 95.0,
+     "mean_queue_m": 35.0,
+     "spillback_min": 0.0,
+     "length_m": 4457.0
+    },
+    {
+     "link_id": "1029:r",
+     "road_name": "Maa Flyover",
+     "from_junction": 30,
+     "junction_id": 17,
+     "movement": "through",
+     "delay_veh_h": 4.3,
+     "max_queue_m": 82.0,
+     "mean_queue_m": 30.0,
+     "spillback_min": 0.0,
+     "length_m": 3874.0
+    },
+    {
+     "link_id": "1030:r",
+     "road_name": "Syed Amir Ali Avenue",
+     "from_junction": 24,
+     "junction_id": 17,
+     "movement": "cross",
+     "delay_veh_h": 7.0,
+     "max_queue_m": 75.0,
+     "mean_queue_m": 25.0,
+     "spillback_min": 0.0,
+     "length_m": 1729.0
+    }
+   ]
+  },
+  "change_vs_current": {
+   "delay_change_pct": -0.4,
+   "network_delay_change_pct": 0.0,
+   "cross_street_delay_change_pct": -8.8,
+   "max_queue_change_m": 2.0,
+   "max_queue_change_pct": 1.9,
+   "cross_street_max_queue_change_m": 2.0,
+   "spillback_change_min": 0.0,
+   "network_spillback_change_min": 0.0,
+   "served_change_pcu": -3.0
+  }
+ },
+ "labels": {
+  "result": "MODELLED",
+  "demand": "SIMULATED",
+  "note": "A traffic model (cell-transmission twin), not measured traffic."
+ },
+ "timing": {
+  "warmup_s": 0.108,
+  "run_s": 0.348
+ }
+}

@@ -1,0 +1,733 @@
+{
+ "about": "Held-out corpus C, the second blind set (50 cases), for measuring the Sajag person-name and age redactor with a third set of names, places and shapes: 'a man named', 'one X', couples sharing a surname, surname-only references after Mr. and Mrs., joined initials (T.K.), Title Case and ALL-CAPS headlines, names fused with the suffix -babu, Western digits inside Marathi text, Banglish posts with ages written as 'N bochorer', and person-free items around metro stations, roads and pumping stations named after people. It was written blind: the author never opened, read or searched the redaction code or its tests, so the measured recall and damage are honest. Every person in it is invented, built from common Marathi, Hindi/Bihari, Marwari, Muslim, Sikh, Christian and Anglo-Indian Kolkata given names and surnames; none is a public figure and none refers to a real case. Labels: 'names' lists every word of every person name as it appears in the text (Latin words match as whole words; Marathi/Devanagari words are given bare, without case endings such as -er/-ke, and must be substrings; initials are included as written; titles and honorifics such as Mr, Smt, Shri, Dr, SI, Inspector, শ্রী, শ্রীমতী, ডাঃ, ডাক্তার, श्री, डॉ. are not name words). 'ages' lists every age or age/sex marker that must not survive, as the shortest identifying substring (the number, or the shorthand such as 24F, 27/M, F(23), M, 31). 'keep' lists up to three substrings that must survive redaction: Kolkata place names (many of them containing a person's name, such as roads, parks and metro stations) and ordinary content words. Tiers are news_regional, aggregator and social_unverified. The corpus is scored by tests/test_heldout_recall.py.",
+ "cases": [
+  {
+   "id": "c01",
+   "tier": "news_regional",
+   "text": "A man named Pintu Sardar, 34, drowned after slipping into Tolly's Nullah near Chetla during the downpour.",
+   "names": [
+    "Pintu",
+    "Sardar"
+   ],
+   "ages": [
+    "34"
+   ],
+   "keep": [
+    "Tolly's Nullah",
+    "Chetla",
+    "downpour"
+   ]
+  },
+  {
+   "id": "c02",
+   "tier": "aggregator",
+   "text": "Mr. and Mrs. Dutta of Hindustan Park said their basement has been under water since Friday.",
+   "names": [
+    "Dutta"
+   ],
+   "ages": [],
+   "keep": [
+    "Hindustan Park",
+    "basement"
+   ]
+  },
+  {
+   "id": "c03",
+   "tier": "news_regional",
+   "text": "T.K. Lahiri, 66, a retired bank officer, was knocked down by a speeding bike outside Rabindra Sadan metro station.",
+   "names": [
+    "T.K.",
+    "Lahiri"
+   ],
+   "ages": [
+    "66"
+   ],
+   "keep": [
+    "Rabindra Sadan",
+    "speeding bike"
+   ]
+  },
+  {
+   "id": "c04",
+   "tier": "news_regional",
+   "text": "Police are questioning one Bachchu Mondal after a gas cylinder blast in a Beniapukur eatery left two waiters hurt.",
+   "names": [
+    "Bachchu",
+    "Mondal"
+   ],
+   "ages": [],
+   "keep": [
+    "Beniapukur",
+    "gas cylinder"
+   ]
+  },
+  {
+   "id": "c05",
+   "tier": "aggregator",
+   "text": "Kidderpore Dock Worker Farhan Siddiqui, 39, Dies In Crane Accident; Family Seeks Compensation",
+   "names": [
+    "Farhan",
+    "Siddiqui"
+   ],
+   "ages": [
+    "39"
+   ],
+   "keep": [
+    "Kidderpore Dock",
+    "Crane Accident"
+   ]
+  },
+  {
+   "id": "c06",
+   "tier": "news_regional",
+   "text": "The couple, Debasish and Mitali Samanta, were returning from Dakshineswar when their taxi hit a pillar on the Belghoria Expressway.",
+   "names": [
+    "Debasish",
+    "Mitali",
+    "Samanta"
+   ],
+   "ages": [],
+   "keep": [
+    "Dakshineswar",
+    "Belghoria Expressway"
+   ]
+  },
+  {
+   "id": "c07",
+   "tier": "news_regional",
+   "text": "Constable Rabiul Islam Laskar spotted smoke from a coach of the Kavi Nazrul-bound rake at Netaji station and alerted the driver.",
+   "names": [
+    "Rabiul",
+    "Islam",
+    "Laskar"
+   ],
+   "ages": [],
+   "keep": [
+    "Kavi Nazrul",
+    "Netaji station"
+   ]
+  },
+  {
+   "id": "c08",
+   "tier": "aggregator",
+   "text": "Lionel Mathews, 74, and his neighbour Joseph Baroi say the stretch of Marquis Street outside their homes floods after every shower.",
+   "names": [
+    "Lionel",
+    "Mathews",
+    "Joseph",
+    "Baroi"
+   ],
+   "ages": [
+    "74"
+   ],
+   "keep": [
+    "Marquis Street"
+   ]
+  },
+  {
+   "id": "c09",
+   "tier": "news_regional",
+   "text": "Engineer Dr Sayantan Dhar inspected cracks in an old house on Madan Mohan Burman Street after two days of rain.",
+   "names": [
+    "Sayantan",
+    "Dhar"
+   ],
+   "ages": [],
+   "keep": [
+    "Madan Mohan Burman Street",
+    "old house"
+   ]
+  },
+  {
+   "id": "c10",
+   "tier": "news_regional",
+   "text": "TOTO DRIVER SAMIR HALDER, 28, HELD FOR DRUNKEN DRIVING NEAR GARIA BUS STAND",
+   "names": [
+    "SAMIR",
+    "HALDER"
+   ],
+   "ages": [
+    "28"
+   ],
+   "keep": [
+    "GARIA BUS STAND",
+    "DRUNKEN DRIVING"
+   ]
+  },
+  {
+   "id": "c11",
+   "tier": "aggregator",
+   "text": "Pandal visitor Ritika Saraogi's purse was stolen at Suruchi Sangha; New Alipore police recovered it within hours",
+   "names": [
+    "Ritika",
+    "Saraogi"
+   ],
+   "ages": [],
+   "keep": [
+    "Suruchi Sangha",
+    "New Alipore"
+   ]
+  },
+  {
+   "id": "c12",
+   "tier": "news_regional",
+   "text": "Kumartuli artisan Shri Haren Rudrapal, aged 64, said unseasonal rain had damaged a dozen half-finished idols.",
+   "names": [
+    "Haren",
+    "Rudrapal"
+   ],
+   "ages": [
+    "64"
+   ],
+   "keep": [
+    "Kumartuli",
+    "idols"
+   ]
+  },
+  {
+   "id": "c13",
+   "tier": "news_regional",
+   "text": "Taxi driver Tejinder Singh Sethi said he was stuck for two hours on the Maa flyover after a bus broke down near Parama Island.",
+   "names": [
+    "Tejinder",
+    "Singh",
+    "Sethi"
+   ],
+   "ages": [],
+   "keep": [
+    "Maa flyover",
+    "Parama Island"
+   ]
+  },
+  {
+   "id": "c14",
+   "tier": "aggregator",
+   "text": "Arrested: Montu Chaurasia (31), Bittu Mahato (27), for stealing batteries from signal posts at Phoolbagan",
+   "names": [
+    "Montu",
+    "Chaurasia",
+    "Bittu",
+    "Mahato"
+   ],
+   "ages": [
+    "31",
+    "27"
+   ],
+   "keep": [
+    "Phoolbagan",
+    "signal posts"
+   ]
+  },
+  {
+   "id": "c15",
+   "tier": "news_regional",
+   "text": "Peter Chen, who runs a restaurant in Tangra, said the waterlogged stretch of Matheswartala Road is keeping diners away.",
+   "names": [
+    "Peter",
+    "Chen"
+   ],
+   "ages": [],
+   "keep": [
+    "Tangra",
+    "Matheswartala Road"
+   ]
+  },
+  {
+   "id": "c16",
+   "tier": "news_regional",
+   "text": "Inspector Moloy Ghosh Dastidar of Kasba police station said the stolen manhole covers were sold to a scrap dealer in Rajabazar.",
+   "names": [
+    "Moloy",
+    "Ghosh",
+    "Dastidar"
+   ],
+   "ages": [],
+   "keep": [
+    "Kasba",
+    "Rajabazar",
+    "manhole covers"
+   ]
+  },
+  {
+   "id": "c17",
+   "tier": "aggregator",
+   "text": "Woman, 85, rescued from a burning flat in Baranagar by neighbour Asgar Hussain",
+   "names": [
+    "Asgar",
+    "Hussain"
+   ],
+   "ages": [
+    "85"
+   ],
+   "keep": [
+    "Baranagar",
+    "burning flat"
+   ]
+  },
+  {
+   "id": "c18",
+   "tier": "news_regional",
+   "text": "Smt Purnima Jhawar, 57, lost her footing on the escalator at Esplanade metro during the evening rush.",
+   "names": [
+    "Purnima",
+    "Jhawar"
+   ],
+   "ages": [
+    "57"
+   ],
+   "keep": [
+    "Esplanade metro",
+    "escalator"
+   ]
+  },
+  {
+   "id": "c19",
+   "tier": "aggregator",
+   "text": "Late-night brawl outside Park Street pub: bouncer Clive Mendes and guest Sahil Bajaj, 25, detained",
+   "names": [
+    "Clive",
+    "Mendes",
+    "Sahil",
+    "Bajaj"
+   ],
+   "ages": [
+    "25"
+   ],
+   "keep": [
+    "Park Street"
+   ]
+  },
+  {
+   "id": "c20",
+   "tier": "news_regional",
+   "text": "Rickshaw puller Jagannath Behera's family says he has been missing since a boat capsized near Ahiritola ghat.",
+   "names": [
+    "Jagannath",
+    "Behera"
+   ],
+   "ages": [],
+   "keep": [
+    "Ahiritola ghat",
+    "Rickshaw puller"
+   ]
+  },
+  {
+   "id": "c21",
+   "tier": "news_regional",
+   "text": "বিবাদী বাগে ট্রামের ধাক্কায় আহত অফিসযাত্রী দীপঙ্কর চট্টোপাধ্যায় (47)।",
+   "names": [
+    "দীপঙ্কর",
+    "চট্টোপাধ্যায়"
+   ],
+   "ages": [
+    "47"
+   ],
+   "keep": [
+    "বিবাদী বাগ",
+    "ট্রাম"
+   ]
+  },
+  {
+   "id": "c22",
+   "tier": "aggregator",
+   "text": "শ্রী প্রণবেশ কুমার মুখোপাধ্যায়ের বাড়ির সামনে তিন দিন ধরে জল জমে আছে, অভিযোগ যাদবপুরের বাসিন্দাদের।",
+   "names": [
+    "প্রণবেশ",
+    "কুমার",
+    "মুখোপাধ্যায়"
+   ],
+   "ages": [],
+   "keep": [
+    "যাদবপুর",
+    "জল জমে"
+   ]
+  },
+  {
+   "id": "c23",
+   "tier": "news_regional",
+   "text": "হাজরা মোড়ে বাসের ধাক্কায় মৃত্যু হল ৫০ বছর বয়সী রিকশাচালক মদন জানার।",
+   "names": [
+    "মদন",
+    "জানা"
+   ],
+   "ages": [
+    "৫০"
+   ],
+   "keep": [
+    "হাজরা মোড়",
+    "রিকশাচালক"
+   ]
+  },
+  {
+   "id": "c24",
+   "tier": "news_regional",
+   "text": "নিহত যুবক সৌমিক বিশ্বাসের (২২) পরিবার জানিয়েছে, সে বাইকে বেহালা থেকে তারাতলা যাচ্ছিল।",
+   "names": [
+    "সৌমিক",
+    "বিশ্বাস"
+   ],
+   "ages": [
+    "২২"
+   ],
+   "keep": [
+    "বেহালা",
+    "তারাতলা"
+   ]
+  },
+  {
+   "id": "c25",
+   "tier": "aggregator",
+   "text": "ভবানীপুরে গ্যাস সিলিন্ডার ফেটে জখম তিনজনই বিপদমুক্ত, জানালেন শম্ভুনাথ পণ্ডিত হাসপাতালের ডাক্তার রুমানা পারভিন।",
+   "names": [
+    "রুমানা",
+    "পারভিন"
+   ],
+   "ages": [],
+   "keep": [
+    "ভবানীপুর",
+    "শম্ভুনাথ পণ্ডিত হাসপাতাল",
+    "গ্যাস সিলিন্ডার"
+   ]
+  },
+  {
+   "id": "c26",
+   "tier": "news_regional",
+   "text": "চিৎপুরে লরির ধাক্কায় জখম চালক রামবাবু সাউ (৩৬) ও খালাসি গুড্ডু রজক।",
+   "names": [
+    "রামবাবু",
+    "সাউ",
+    "গুড্ডু",
+    "রজক"
+   ],
+   "ages": [
+    "৩৬"
+   ],
+   "keep": [
+    "চিৎপুর"
+   ]
+  },
+  {
+   "id": "c27",
+   "tier": "news_regional",
+   "text": "নিউ টাউনে বাস উল্টে আহত ১২ জন, তাঁদের মধ্যে রয়েছেন ৪২ বছর বয়সী শিক্ষিকা শ্রীমতী অনুরাধা নন্দী।",
+   "names": [
+    "অনুরাধা",
+    "নন্দী"
+   ],
+   "ages": [
+    "৪২"
+   ],
+   "keep": [
+    "নিউ টাউন",
+    "১২ জন"
+   ]
+  },
+  {
+   "id": "c28",
+   "tier": "aggregator",
+   "text": "কলেজ স্ট্রিটে বইয়ের দোকানে আগুন; দোকানমালিক শ্যামল পোদ্দার জানান ক্ষতি কয়েক লক্ষ টাকার, শ্যামলবাবুর দাবি শর্ট সার্কিট থেকেই আগুন।",
+   "names": [
+    "শ্যামল",
+    "পোদ্দার"
+   ],
+   "ages": [],
+   "keep": [
+    "কলেজ স্ট্রিট",
+    "বইয়ের দোকান",
+    "শর্ট সার্কিট"
+   ]
+  },
+  {
+   "id": "c29",
+   "tier": "social_unverified",
+   "text": "আজ মানিকতলায় হাঁটুজল, পাশের ফ্ল্যাটের টুম্পা বউদি (৩৮) বাচ্চা নিয়ে দু'ঘণ্টা আটকে ছিল।",
+   "names": [
+    "টুম্পা"
+   ],
+   "ages": [
+    "৩৮"
+   ],
+   "keep": [
+    "মানিকতলা",
+    "হাঁটুজল"
+   ]
+  },
+  {
+   "id": "c30",
+   "tier": "news_regional",
+   "text": "জোয়ার আর ভারী বৃষ্টি একসঙ্গে, মোমিনপুর ও গার্ডেন রিচে জল জমার আশঙ্কা।",
+   "names": [],
+   "ages": [],
+   "keep": [
+    "গার্ডেন রিচ",
+    "মোমিনপুর",
+    "জল জমা"
+   ]
+  },
+  {
+   "id": "c31",
+   "tier": "aggregator",
+   "text": "ভিক্টোরিয়া মেমোরিয়াল চত্বরে রবিবার বিকেলে উপচে পড়া ভিড়, রেড রোডে যান নিয়ন্ত্রণ।",
+   "names": [],
+   "ages": [],
+   "keep": [
+    "ভিক্টোরিয়া মেমোরিয়াল",
+    "রেড রোড",
+    "ভিড়"
+   ]
+  },
+  {
+   "id": "c32",
+   "tier": "news_regional",
+   "text": "সন্তোষ মিত্র স্কোয়্যারের পুজোয় ভিড় সামলাতে শিয়ালদহ থেকে বিকল্প পথ।",
+   "names": [],
+   "ages": [],
+   "keep": [
+    "সন্তোষ মিত্র স্কোয়্যার",
+    "বিকল্প পথ",
+    "শিয়ালদহ"
+   ]
+  },
+  {
+   "id": "c33",
+   "tier": "news_regional",
+   "text": "लालबाजार के अनुसार बागबाजार घाट पर नाव पलटने के बाद 35 वर्षीय मछुआरा शंकर साहनी लापता है।",
+   "names": [
+    "शंकर",
+    "साहनी"
+   ],
+   "ages": [
+    "35"
+   ],
+   "keep": [
+    "बागबाजार घाट",
+    "लालबाजार"
+   ]
+  },
+  {
+   "id": "c34",
+   "tier": "aggregator",
+   "text": "गिरीश पार्क के पास जलजमाव में फंसी स्कूल बस, ड्राइवर सुरेश महतो ने बच्चों को सुरक्षित निकाला।",
+   "names": [
+    "सुरेश",
+    "महतो"
+   ],
+   "ages": [],
+   "keep": [
+    "गिरीश पार्क",
+    "स्कूल बस"
+   ]
+  },
+  {
+   "id": "c35",
+   "tier": "news_regional",
+   "text": "तिलजला की फैक्ट्री में आग, मालिक श्री अनिल जालान और कर्मचारी नसीम अख्तर (२९) घायल।",
+   "names": [
+    "अनिल",
+    "जालान",
+    "नसीम",
+    "अख्तर"
+   ],
+   "ages": [
+    "२९"
+   ],
+   "keep": [
+    "तिलजला",
+    "फैक्ट्री"
+   ]
+  },
+  {
+   "id": "c36",
+   "tier": "aggregator",
+   "text": "डॉ. प्रिया तिवारी ने बताया कि दक्षिणेश्वर में भीड़ के कारण 7 श्रद्धालु बेहोश हो गए।",
+   "names": [
+    "प्रिया",
+    "तिवारी"
+   ],
+   "ages": [],
+   "keep": [
+    "दक्षिणेश्वर",
+    "श्रद्धालु"
+   ]
+  },
+  {
+   "id": "c37",
+   "tier": "social_unverified",
+   "text": "Female, 26, moving from Siliguri for work, looking for a room near Santoshpur or Jadavpur",
+   "names": [],
+   "ages": [
+    "Female, 26"
+   ],
+   "keep": [
+    "Santoshpur",
+    "Jadavpur"
+   ]
+  },
+  {
+   "id": "c38",
+   "tier": "social_unverified",
+   "text": "(32M) cab driver here, EM Bypass near Ruby is a lake right now, avoid",
+   "names": [],
+   "ages": [
+    "32M"
+   ],
+   "keep": [
+    "EM Bypass",
+    "Ruby"
+   ]
+  },
+  {
+   "id": "c39",
+   "tier": "social_unverified",
+   "text": "Big thanks to Mampi and Rajesh from the Naktala para club who handed out water at the pandal",
+   "names": [
+    "Mampi",
+    "Rajesh"
+   ],
+   "ages": [],
+   "keep": [
+    "Naktala",
+    "para club"
+   ]
+  },
+  {
+   "id": "c40",
+   "tier": "social_unverified",
+   "text": "Ki obostha! Lake Town e 3 ghonta load shedding, amar boudi Sraboni Basu ar tar 19 bochorer chele dujonei gorome osustho",
+   "names": [
+    "Sraboni",
+    "Basu"
+   ],
+   "ages": [
+    "19"
+   ],
+   "keep": [
+    "Lake Town",
+    "load shedding"
+   ]
+  },
+  {
+   "id": "c41",
+   "tier": "social_unverified",
+   "text": "Old man, 70+, sitting confused near Sealdah south section, says his name is Nemai. Anyone know him?",
+   "names": [
+    "Nemai"
+   ],
+   "ages": [
+    "70"
+   ],
+   "keep": [
+    "Sealdah"
+   ]
+  },
+  {
+   "id": "c42",
+   "tier": "social_unverified",
+   "text": "PSA: the guy at Exide crossing selling 'metro passes' is a scam, his name is Bunty Rathi apparently",
+   "names": [
+    "Bunty",
+    "Rathi"
+   ],
+   "ages": [],
+   "keep": [
+    "Exide crossing",
+    "metro passes"
+   ]
+  },
+  {
+   "id": "c43",
+   "tier": "social_unverified",
+   "text": "my dadu (78) and I were stuck at Girish Park metro for 40 mins, no announcement at all",
+   "names": [],
+   "ages": [
+    "78"
+   ],
+   "keep": [
+    "Girish Park",
+    "announcement"
+   ]
+  },
+  {
+   "id": "c44",
+   "tier": "news_regional",
+   "text": "Garden Reach Pumping Station Upgrade Done; Officials Promise Faster Drainage For Behala, Thakurpukur And Joka",
+   "names": [],
+   "ages": [],
+   "keep": [
+    "Garden Reach Pumping Station",
+    "Thakurpukur",
+    "Joka"
+   ]
+  },
+  {
+   "id": "c45",
+   "tier": "aggregator",
+   "text": "HEAVY RAIN WARNING FOR KOLKATA TILL FRIDAY: PARK CIRCUS, BENIAPUKUR AND GOBRA LIKELY TO FLOOD",
+   "names": [],
+   "ages": [],
+   "keep": [
+    "PARK CIRCUS",
+    "BENIAPUKUR",
+    "GOBRA"
+   ]
+  },
+  {
+   "id": "c46",
+   "tier": "news_regional",
+   "text": "Harish Mukherjee Road to be one-way southbound from Monday as part of the Kalighat Skywalk works.",
+   "names": [],
+   "ages": [],
+   "keep": [
+    "Harish Mukherjee Road",
+    "Kalighat Skywalk"
+   ]
+  },
+  {
+   "id": "c47",
+   "tier": "aggregator",
+   "text": "Masterda Surya Sen and Shahid Khudiram metro stations to get new escalators by December.",
+   "names": [],
+   "ages": [],
+   "keep": [
+    "Masterda Surya Sen",
+    "Shahid Khudiram",
+    "escalators"
+   ]
+  },
+  {
+   "id": "c48",
+   "tier": "news_regional",
+   "text": "Rain of 112 mm in three hours floods Bagha Jatin and the Sukanta Setu approach.",
+   "names": [],
+   "ages": [],
+   "keep": [
+    "112 mm",
+    "Bagha Jatin",
+    "Sukanta Setu"
+   ]
+  },
+  {
+   "id": "c49",
+   "tier": "aggregator",
+   "text": "Ferry services from Armenian Ghat resume after the cyclone alert is lifted.",
+   "names": [],
+   "ages": [],
+   "keep": [
+    "Armenian Ghat",
+    "cyclone alert"
+   ]
+  },
+  {
+   "id": "c50",
+   "tier": "news_regional",
+   "text": "Rani Rashmoni Avenue and Mayo Road closed to traffic for the Red Road carnival rehearsal.",
+   "names": [],
+   "ages": [],
+   "keep": [
+    "Rani Rashmoni Avenue",
+    "Mayo Road",
+    "Red Road carnival"
+   ]
+  }
+ ]
+}

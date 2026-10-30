@@ -1,0 +1,18 @@
+{
+ "candidate": "late-9b-docs+0.6b-queries",
+ "repo": "0.6b queries x 9b documents",
+ "family": "late",
+ "dtype": "fp32/bf16",
+ "dim": 128,
+ "load_s": 16.6,
+ "weights_gib": 2.22,
+ "peak_alloc_gib": 3.16,
+ "reserved_gib": 3.34,
+ "timing": {
+  "query_ms_p50": 16.7,
+  "query_ms_p95": 18.63,
+  "memory_doc_ms": 61.43,
+  "sop_doc_ms": 88.03
+ },
+ "note": "query-side cost of the 0.6b, document-side cost of the 9b"
+}

@@ -1,0 +1,35 @@
+{
+ "schema": "sajag.news_rss/1",
+ "about": "SYNTHETIC REPLICA of a news_rss cache bundle for Sajag tests: three fictional outlets (*.example), fictional bylines and names, real Mumbai places. Not any outlet's content.",
+ "feeds": [
+  {
+   "feed": "synthetic_mr_a",
+   "publisher": "news-mr-a.example",
+   "language": "mr",
+   "sections": [
+    "/mumbai/",
+    "/maharashtra/"
+   ],
+   "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><rss version=\"2.0\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:content=\"http://purl.org/rss/1.0/modules/content/\"><channel><title>News MR A (SYNTHETIC REPLICA)</title><link>https://news-mr-a.example/</link><language>en-US</language><description>SYNTHETIC REPLICA of an outlet RSS feed for Sajag tests: every item, byline and name is fictional.</description><item><title>हिंदमाता येथे डॉ. आंबेडकर मार्गावर पाणी साचले, वाहतूक संथ</title><link>https://news-mr-a.example/mumbai/hindmata-waterlogging-ambedkar-road</link><guid isPermaLink=\"false\">https://news-mr-a.example/mumbai/hindmata-waterlogging-ambedkar-road</guid><pubDate>Tue, 20 Oct 2026 12:20:00 GMT</pubDate><dc:creator><![CDATA[Synthetic Byline Reporterwala]]></dc:creator><category><![CDATA[मुंबई]]></category><description><![CDATA[<p>मुसळधार पावसानंतर हिंदमाता परिसरात डॉ. आंबेडकर मार्ग जलमय झाला. स्थानिक रहिवासी काल्पनिक नमुनेकर (६०) यांनी सांगितले, रस्त्यावर गुडघाभर पाणी आहे.</p>]]></description><content:encoded><![CDATA[<p>Full story by Synthetic Byline Reporterwala; never read.</p>]]></content:encoded></item><item><title>मुंबईत गणेशोत्सवाची तयारी सुरू</title><link>https://news-mr-a.example/mumbai/ganeshotsav-preparations-begin</link><guid isPermaLink=\"false\">https://news-mr-a.example/mumbai/ganeshotsav-preparations-begin</guid><pubDate>Tue, 20 Oct 2026 09:10:00 GMT</pubDate><dc:creator><![CDATA[Synthetic Byline Reporterwala]]></dc:creator><category><![CDATA[मुंबई]]></category><description><![CDATA[<p>लालबाग परिसरात मंडपांचे काम सुरू झाले आहे.</p>]]></description><content:encoded><![CDATA[<p>Full story by Synthetic Byline Reporterwala; never read.</p>]]></content:encoded></item><item><title>क्रिकेटमध्ये नवा विक्रम</title><link>https://news-mr-a.example/sports/cricket-new-record</link><guid isPermaLink=\"false\">https://news-mr-a.example/sports/cricket-new-record</guid><pubDate>Tue, 20 Oct 2026 08:00:00 GMT</pubDate><dc:creator><![CDATA[Synthetic Byline Reporterwala]]></dc:creator><category><![CDATA[क्रीडा]]></category><description><![CDATA[<p>खेळाची बातमी.</p>]]></description><content:encoded><![CDATA[<p>Full story by Synthetic Byline Reporterwala; never read.</p>]]></content:encoded></item></channel></rss>"
+  },
+  {
+   "feed": "synthetic_mr_b",
+   "publisher": "news-mr-b.example",
+   "language": "mr",
+   "sections": [
+    "/mumbai/"
+   ],
+   "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><rss version=\"2.0\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:content=\"http://purl.org/rss/1.0/modules/content/\"><channel><title>News MR B (SYNTHETIC REPLICA)</title><link>https://news-mr-b.example/</link><language>en-US</language><description>SYNTHETIC REPLICA of an outlet RSS feed for Sajag tests: every item, byline and name is fictional.</description><item><title>Mumbai Rain: हिंदमाताजवळ डॉ. आंबेडकर मार्ग जलमय, वाहतूक विस्कळीत</title><link>https://news-mr-b.example/mumbai/ambedkar-road-waterlogged-near-hindmata</link><guid isPermaLink=\"false\">https://news-mr-b.example/mumbai/ambedkar-road-waterlogged-near-hindmata</guid><pubDate>Tue, 20 Oct 2026 12:35:00 GMT</pubDate><dc:creator><![CDATA[Synthetic Byline Reporterwala]]></dc:creator><category><![CDATA[मुंबई]]></category><description><![CDATA[<p>सततच्या पावसामुळे हिंदमाता भागात डॉ. आंबेडकर मार्गावर पाणी साचले, वाहने संथ गतीने.</p>]]></description><content:encoded><![CDATA[<p>Full story by Synthetic Byline Reporterwala; never read.</p>]]></content:encoded></item><item><title>वांद्रे येथे नवीन सायकल मार्ग सुरू</title><link>https://news-mr-b.example/mumbai/bandra-cycle-lane</link><guid isPermaLink=\"false\">https://news-mr-b.example/mumbai/bandra-cycle-lane</guid><pubDate>Tue, 20 Oct 2026 10:05:00 GMT</pubDate><dc:creator><![CDATA[Synthetic Byline Reporterwala]]></dc:creator><category><![CDATA[मुंबई]]></category><description><![CDATA[<p>नवीन सायकल मार्ग खुला करण्यात आला.</p>]]></description><content:encoded><![CDATA[<p>Full story by Synthetic Byline Reporterwala; never read.</p>]]></content:encoded></item></channel></rss>"
+  },
+  {
+   "feed": "synthetic_en_c",
+   "publisher": "news-c.example",
+   "language": "en",
+   "sections": [
+    "/mumbai/"
+   ],
+   "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><rss version=\"2.0\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:content=\"http://purl.org/rss/1.0/modules/content/\"><channel><title>News C (SYNTHETIC REPLICA)</title><link>https://news-c.example/</link><language>en-US</language><description>SYNTHETIC REPLICA of an outlet RSS feed for Sajag tests: every item, byline and name is fictional.</description><item><title>BMC to repaint zebra crossings near CSMT before the festive season</title><link>https://news-c.example/mumbai/bmc-zebra-crossings-csmt</link><guid isPermaLink=\"false\">https://news-c.example/mumbai/bmc-zebra-crossings-csmt</guid><pubDate>Tue, 20 Oct 2026 07:30:00 GMT</pubDate><dc:creator><![CDATA[Synthetic Byline Reporterwala]]></dc:creator><category><![CDATA[Mumbai]]></category><description><![CDATA[<p>The civic body said the work will be done at night. The post BMC to repaint zebra crossings appeared first on News C.</p>]]></description><content:encoded><![CDATA[<p>Full story by Synthetic Byline Reporterwala; never read.</p>]]></content:encoded></item><item><title>Retired schoolteacher Testa Exampleson, 71, honoured by the ward committee</title><link>https://news-c.example/mumbai/retired-schoolteacher-honoured</link><guid isPermaLink=\"false\">https://news-c.example/mumbai/retired-schoolteacher-honoured</guid><pubDate>Tue, 20 Oct 2026 07:00:00 GMT</pubDate><dc:creator><![CDATA[Synthetic Byline Reporterwala]]></dc:creator><category><![CDATA[Mumbai]]></category><description><![CDATA[<p>Exampleson taught at a school in Girgaon for three decades.</p>]]></description><content:encoded><![CDATA[<p>Full story by Synthetic Byline Reporterwala; never read.</p>]]></content:encoded></item><item><title>Partner content: a city guide</title><link>https://other-site.example/mumbai/city-guide</link><guid isPermaLink=\"false\">https://other-site.example/mumbai/city-guide</guid><pubDate>Tue, 20 Oct 2026 06:00:00 GMT</pubDate><dc:creator><![CDATA[Synthetic Byline Reporterwala]]></dc:creator><category><![CDATA[Mumbai]]></category><description><![CDATA[<p>Sponsored.</p>]]></description><content:encoded><![CDATA[<p>Full story by Synthetic Byline Reporterwala; never read.</p>]]></content:encoded></item></channel></rss>"
+  }
+ ],
+ "failed": []
+}

@@ -1,0 +1,28 @@
+# Build the vision service (road state from a camera still; ai-media stream).
+# Build context: services/vision (compose: context ../services/vision).
+# Dependencies come entirely from services/vision/pyproject.toml. The image
+# holds only the HTTP service: the Qwen3-VL model runs in the host's
+# llama.cpp llama-server (services/vision/scripts/serve_llm.sh), like the
+# platform's other model servers, and the service reaches it on loopback.
+# Base and tool images are pinned by digest (python 3.12.15-slim, uv 0.13.5).
+FROM python:3.12-slim@sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704 AS base
+
+COPY --from=ghcr.io/astral-sh/uv:0.13.5@sha256:32a7bb39b496babbd997b0a39a4d66c126bdaf5661b302bf6f06abda8deca6ff /uv /usr/local/bin/uv
+
+WORKDIR /app
+COPY pyproject.toml ./
+
+RUN uv pip install --system --no-cache -r pyproject.toml
+
+COPY src/ src/
+
+RUN chmod -R a+rX /app \
+ && useradd --system --uid 10012 --no-create-home vision
+USER vision
+
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONPATH=/app/src \
+    VISION_LLM_MANAGE=0
+# Binds VISION_HOST:VISION_PORT (default 127.0.0.1:8196, loopback only).
+EXPOSE 8196
+CMD ["python", "-m", "vision_service"]

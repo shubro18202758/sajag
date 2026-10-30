@@ -1,0 +1,5 @@
+{"meta": {"found": 3}, "results": [
+ {"id": 5001, "name": "Bandra Kurla Complex, Mumbai - MPCB", "coordinates": {"latitude": 19.0659, "longitude": 72.8621}, "sensors": [{"id": 9001, "name": "pm25 µg/m³", "parameter": {"id": 2, "name": "pm25", "units": "µg/m³"}}, {"id": 9002, "name": "pm10 µg/m³", "parameter": {"id": 1, "name": "pm10", "units": "µg/m³"}}, {"id": 9004, "name": "pm25 µg/m³", "parameter": {"id": 2, "name": "pm25", "units": "µg/m³"}}], "provider": {"id": 168, "name": "CPCB"}, "datetimeLast": {"utc": "2026-10-30T10:00:00Z", "local": "2026-10-30T15:30:00+05:30"}},
+ {"id": 5003, "name": "Bandra Kurla Complex - MPCB (retired)", "coordinates": {"latitude": 19.066, "longitude": 72.862}, "provider": {"id": 168, "name": "CPCB"}, "datetimeLast": {"utc": "2022-11-01T20:45:00Z", "local": "2022-11-02T02:15:00+05:30"}, "sensors": [{"id": 9005, "name": "pm25 µg/m³", "parameter": {"id": 2, "name": "pm25", "units": "µg/m³"}}]},
+ {"id": 5002, "name": "An unrelated site", "coordinates": {"latitude": 19.40, "longitude": 73.10}, "sensors": [{"id": 9003, "name": "pm25 µg/m³", "parameter": {"id": 2, "name": "pm25", "units": "µg/m³"}}]}
+]}

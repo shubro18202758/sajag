@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- HOSTILE TEST FIXTURE (synthetic): an XML external entity (XXE) that would read a local file. -->
+<!DOCTYPE rss [
+  <!ENTITY xxe SYSTEM "file:///etc/passwd">
+]>
+<rss version="2.0">
+  <channel>
+    <title>hostile feed</title>
+    <item>
+      <title>&xxe;</title>
+      <guid isPermaLink="false">HOSTILE-XXE-1</guid>
+      <source url="https://news-a.example">News A</source>
+    </item>
+  </channel>
+</rss>

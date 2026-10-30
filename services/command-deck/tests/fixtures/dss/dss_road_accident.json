@@ -1,0 +1,757 @@
+{
+  "dss_id": "d5a1d555-0000-4000-8000-00000000d001",
+  "event_urn": "osint_event:d5a1e555-0000-4000-8000-00000000e001",
+  "state": "proposed",
+  "generated_at": "2026-10-24T09:15:00Z",
+  "horizon_min": 120,
+  "seed": 20261024,
+  "situation": {
+    "summary": "Car crashes into three vehicles near Sector V; [AGE] scooter rider among 3 injured",
+    "event_class": "road_accident",
+    "correlated_classes": [
+      "road_accident",
+      "public_conflict"
+    ],
+    "subtype": "affray+collision",
+    "sajag_event_kind": "road_accident",
+    "toponym": "Sector V (Salt Lake)",
+    "segment_id": 1045,
+    "junction_id": null,
+    "rep_lonlat": [
+      88.4414,
+      22.5799
+    ],
+    "credibility": 0.65,
+    "independent_publishers": 2,
+    "source_tiers": [
+      "aggregator"
+    ],
+    "cross_type_corroborated": false,
+    "attach": {
+      "novel": true,
+      "corroborates_live_urn": null
+    },
+    "verification_state": "NEWS-REPORTED",
+    "geocode_confidence": 0.72,
+    "composite_confidence": 0.69
+  },
+  "criteria": [
+    {
+      "id": "safety_risk_reduction",
+      "label": "Public-safety risk reduction (fixed prior by COA actions, not simulated)",
+      "direction": "benefit",
+      "weight": 0.3121,
+      "weight_source": "ahp",
+      "role": "discriminating"
+    },
+    {
+      "id": "time_to_effect",
+      "label": "Speed of effect (nominal time by COA kind, not a unit ETA)",
+      "direction": "benefit",
+      "weight": 0.1075,
+      "weight_source": "ahp",
+      "role": "discriminating"
+    },
+    {
+      "id": "resource_cost",
+      "label": "Resource cost",
+      "direction": "cost",
+      "weight": 0.0247,
+      "weight_source": "ahp",
+      "role": "discriminating"
+    },
+    {
+      "id": "public_disruption",
+      "label": "Public traffic disruption",
+      "direction": "cost",
+      "weight": 0.0507,
+      "weight_source": "ahp",
+      "role": "discriminating"
+    },
+    {
+      "id": "cascade_risk",
+      "label": "Cascade / spillover risk",
+      "direction": "cost",
+      "weight": 0.0739,
+      "weight_source": "ahp",
+      "role": "discriminating"
+    },
+    {
+      "id": "reversibility",
+      "label": "Reversibility",
+      "direction": "benefit",
+      "weight": 0.0183,
+      "weight_source": "ahp",
+      "role": "discriminating"
+    },
+    {
+      "id": "affected_population",
+      "label": "Affected population",
+      "direction": "cost",
+      "weight": 0.035,
+      "weight_source": "ahp",
+      "role": "discriminating"
+    },
+    {
+      "id": "protocol_compliance",
+      "label": "Protocol compliance",
+      "direction": "benefit",
+      "weight": 0.2223,
+      "weight_source": "ahp",
+      "role": "gate (non-discriminating)"
+    },
+    {
+      "id": "legality",
+      "label": "Legality",
+      "direction": "benefit",
+      "weight": 0.1555,
+      "weight_source": "ahp",
+      "role": "gate (non-discriminating)"
+    }
+  ],
+  "ahp": {
+    "consistency_ratio": 0.035,
+    "acceptable": true,
+    "rank_order": [
+      "safety_risk_reduction",
+      "protocol_compliance",
+      "legality",
+      "time_to_effect",
+      "cascade_risk",
+      "public_disruption",
+      "affected_population",
+      "resource_cost",
+      "reversibility"
+    ]
+  },
+  "scoring_note": "TOPSIS over the 7 discriminating criteria; the 2 gate criteria are reported as gate-passed. Public-safety floor: people are reported hurt or public safety is at stake, and credibility 0.65 is at or above the 0.50 act-on-it threshold, so the do-nothing baseline is held below every feasible response course of action — a documented, non-compensatory ordering rule; the TOPSIS closeness values are unchanged and still shown.",
+  "coa_set": [
+    {
+      "coa_id": "coa_std",
+      "kind": "standard",
+      "label": "Advisory + 108 ambulance + 1 patrol + signal priority",
+      "actions": [
+        {
+          "verb": "advisory",
+          "target_urn": "place:sector_v_salt_lake_106",
+          "params": {
+            "draft": true,
+            "channel": "vms_and_app"
+          },
+          "requires_officer": false,
+          "reversible": true
+        },
+        {
+          "verb": "dispatch",
+          "target_urn": "segment:1045",
+          "params": {
+            "count": 1,
+            "agency": "ambulance"
+          },
+          "requires_officer": true,
+          "reversible": true
+        },
+        {
+          "verb": "dispatch",
+          "target_urn": "segment:1045",
+          "params": {
+            "count": 1,
+            "agency": "police"
+          },
+          "requires_officer": true,
+          "reversible": true
+        },
+        {
+          "verb": "signal_hold",
+          "target_urn": "junction:9",
+          "params": {
+            "mode": "emergency_priority",
+            "hold_sec": 60
+          },
+          "requires_officer": true,
+          "reversible": true
+        }
+      ],
+      "predicted_outcome": {
+        "response_time_to_scene_sec": 393,
+        "total_disruption_vehicle_hours": {
+          "mean": 867.0,
+          "p90": 1062.0,
+          "p90_mean_ratio": 1.225,
+          "replications": 240
+        },
+        "cascade": {
+          "spillover_vehicle_hours": {
+            "mean": 354.0,
+            "p90": 434.0
+          },
+          "neighbourhoods_touched": [
+            "Salt Lake"
+          ],
+          "parallel_routes_loaded": [
+            "Acharya Jagadish Chandra Bose Road"
+          ],
+          "affected_segment_ids": [
+            1023
+          ]
+        },
+        "emergency_impact": {
+          "ambulance_delay_sec": -60.0,
+          "green_corridor_ok": true
+        },
+        "time_to_effect_sec": 300.0,
+        "event_resolution_prob": 0.88,
+        "method": "surrogate"
+      },
+      "resource_feasibility": {
+        "required_resources": {
+          "ambulance": 1,
+          "police": 1
+        },
+        "availability": {
+          "ambulance": 1,
+          "police": 1
+        },
+        "eta_to_scene_sec": 480,
+        "feasible": true,
+        "shortfalls": []
+      },
+      "attributes": {
+        "safety_risk_reduction": 0.88,
+        "time_to_effect": 0.5,
+        "resource_cost": 0.6,
+        "public_disruption": 0.67,
+        "cascade_risk": 0.76,
+        "reversibility": 0.9,
+        "affected_population": 0.7,
+        "protocol_compliance": 1.0,
+        "legality": 1.0
+      },
+      "score": {
+        "method": "topsis",
+        "closeness": 0.8332,
+        "rank": 1,
+        "feasible": true
+      },
+      "ethics": {
+        "touches_persons": false,
+        "legal": true,
+        "protocol_ok": true,
+        "irreversible_without_officer": false,
+        "vetoed": false,
+        "veto_reason": null
+      }
+    },
+    {
+      "coa_id": "coa_info",
+      "kind": "information",
+      "label": "Verify first: 1 patrol to confirm + ICCC situation check",
+      "actions": [
+        {
+          "verb": "dispatch",
+          "target_urn": "segment:1045",
+          "params": {
+            "role": "verify",
+            "count": 1,
+            "agency": "police"
+          },
+          "requires_officer": true,
+          "reversible": true
+        },
+        {
+          "verb": "request_cctv",
+          "target_urn": "junction:9",
+          "params": {
+            "label": "Situation check at the junction (ICCC) — no identification"
+          },
+          "requires_officer": false,
+          "reversible": true
+        }
+      ],
+      "predicted_outcome": {
+        "response_time_to_scene_sec": 420,
+        "total_disruption_vehicle_hours": {
+          "mean": 22.0,
+          "p90": 26.0,
+          "p90_mean_ratio": 1.18,
+          "replications": 240
+        },
+        "cascade": {
+          "spillover_vehicle_hours": {
+            "mean": 9.0,
+            "p90": 11.0
+          },
+          "neighbourhoods_touched": [],
+          "parallel_routes_loaded": [],
+          "affected_segment_ids": []
+        },
+        "emergency_impact": {
+          "ambulance_delay_sec": 0.0,
+          "green_corridor_ok": true
+        },
+        "time_to_effect_sec": 240.0,
+        "event_resolution_prob": 0.68,
+        "method": "surrogate"
+      },
+      "resource_feasibility": {
+        "required_resources": {
+          "police": 1
+        },
+        "availability": {
+          "police": 1
+        },
+        "eta_to_scene_sec": 420,
+        "feasible": true,
+        "shortfalls": []
+      },
+      "attributes": {
+        "safety_risk_reduction": 0.28,
+        "time_to_effect": 0.6,
+        "resource_cost": 0.9,
+        "public_disruption": 0.99,
+        "cascade_risk": 0.99,
+        "reversibility": 0.95,
+        "affected_population": 0.95,
+        "protocol_compliance": 1.0,
+        "legality": 1.0
+      },
+      "score": {
+        "method": "topsis",
+        "closeness": 0.2975,
+        "rank": 2,
+        "feasible": true
+      },
+      "ethics": {
+        "touches_persons": false,
+        "legal": true,
+        "protocol_ok": true,
+        "irreversible_without_officer": false,
+        "vetoed": false,
+        "veto_reason": null
+      }
+    },
+    {
+      "coa_id": "coa_base",
+      "kind": "baseline",
+      "label": "Monitor only (do nothing)",
+      "actions": [
+        {
+          "verb": "monitor",
+          "target_urn": "place:sector_v_salt_lake_106",
+          "params": {},
+          "requires_officer": false,
+          "reversible": true
+        }
+      ],
+      "predicted_outcome": {
+        "response_time_to_scene_sec": null,
+        "total_disruption_vehicle_hours": {
+          "mean": 0.0,
+          "p90": 0.0,
+          "p90_mean_ratio": null,
+          "replications": 240
+        },
+        "cascade": {
+          "spillover_vehicle_hours": {
+            "mean": 0.0,
+            "p90": 0.0
+          },
+          "neighbourhoods_touched": [],
+          "parallel_routes_loaded": [],
+          "affected_segment_ids": []
+        },
+        "emergency_impact": {
+          "ambulance_delay_sec": 0.0,
+          "green_corridor_ok": true
+        },
+        "time_to_effect_sec": 0.0,
+        "event_resolution_prob": 0.3,
+        "method": "surrogate"
+      },
+      "resource_feasibility": {
+        "required_resources": {},
+        "availability": {},
+        "eta_to_scene_sec": null,
+        "feasible": true,
+        "shortfalls": []
+      },
+      "attributes": {
+        "safety_risk_reduction": 0.0,
+        "time_to_effect": 1.0,
+        "resource_cost": 1.0,
+        "public_disruption": 1.0,
+        "cascade_risk": 1.0,
+        "reversibility": 1.0,
+        "affected_population": 1.0,
+        "protocol_compliance": 1.0,
+        "legality": 1.0
+      },
+      "score": {
+        "method": "topsis",
+        "closeness": 0.148,
+        "rank": 4,
+        "feasible": true
+      },
+      "ethics": {
+        "touches_persons": false,
+        "legal": true,
+        "protocol_ok": true,
+        "irreversible_without_officer": false,
+        "vetoed": false,
+        "veto_reason": null
+      }
+    },
+    {
+      "coa_id": "coa_min",
+      "kind": "minimal",
+      "label": "Driver and citizen advisory only (VMS + app push)",
+      "actions": [
+        {
+          "verb": "advisory",
+          "target_urn": "place:sector_v_salt_lake_106",
+          "params": {
+            "draft": true,
+            "channel": "vms_and_app"
+          },
+          "requires_officer": false,
+          "reversible": true
+        }
+      ],
+      "predicted_outcome": {
+        "response_time_to_scene_sec": null,
+        "total_disruption_vehicle_hours": {
+          "mean": 99.0,
+          "p90": 115.0,
+          "p90_mean_ratio": 1.16,
+          "replications": 240
+        },
+        "cascade": {
+          "spillover_vehicle_hours": {
+            "mean": 40.0,
+            "p90": 47.0
+          },
+          "neighbourhoods_touched": [],
+          "parallel_routes_loaded": [],
+          "affected_segment_ids": []
+        },
+        "emergency_impact": {
+          "ambulance_delay_sec": 0.0,
+          "green_corridor_ok": true
+        },
+        "time_to_effect_sec": 120.0,
+        "event_resolution_prob": 0.38,
+        "method": "surrogate"
+      },
+      "resource_feasibility": {
+        "required_resources": {},
+        "availability": {},
+        "eta_to_scene_sec": null,
+        "feasible": true,
+        "shortfalls": []
+      },
+      "attributes": {
+        "safety_risk_reduction": 0.0,
+        "time_to_effect": 0.8,
+        "resource_cost": 1.0,
+        "public_disruption": 0.96,
+        "cascade_risk": 0.97,
+        "reversibility": 0.95,
+        "affected_population": 0.9,
+        "protocol_compliance": 1.0,
+        "legality": 1.0
+      },
+      "score": {
+        "method": "topsis",
+        "closeness": 0.111,
+        "rank": 3,
+        "feasible": true
+      },
+      "ethics": {
+        "touches_persons": false,
+        "legal": true,
+        "protocol_ok": true,
+        "irreversible_without_officer": false,
+        "vetoed": false,
+        "veto_reason": null
+      }
+    },
+    {
+      "coa_id": "coa_agg",
+      "kind": "aggressive",
+      "label": "Close carriageway + full diversion + 108 + 2 police units",
+      "actions": [
+        {
+          "verb": "closure",
+          "target_urn": "segment:1045",
+          "params": {
+            "scope": "carriageway"
+          },
+          "requires_officer": true,
+          "reversible": true
+        },
+        {
+          "verb": "diversion",
+          "target_urn": "segment:1045",
+          "params": {
+            "via": [
+              "Acharya Jagadish Chandra Bose Road",
+              "Karl Marx Sarani"
+            ]
+          },
+          "requires_officer": true,
+          "reversible": true
+        },
+        {
+          "verb": "dispatch",
+          "target_urn": "segment:1045",
+          "params": {
+            "count": 1,
+            "agency": "ambulance"
+          },
+          "requires_officer": true,
+          "reversible": true
+        },
+        {
+          "verb": "dispatch",
+          "target_urn": "segment:1045",
+          "params": {
+            "count": 2,
+            "agency": "police"
+          },
+          "requires_officer": true,
+          "reversible": true
+        }
+      ],
+      "predicted_outcome": {
+        "response_time_to_scene_sec": 480,
+        "total_disruption_vehicle_hours": {
+          "mean": 2515.0,
+          "p90": 3567.0,
+          "p90_mean_ratio": 1.42,
+          "replications": 240
+        },
+        "cascade": {
+          "spillover_vehicle_hours": {
+            "mean": 1027.0,
+            "p90": 1467.0
+          },
+          "neighbourhoods_touched": [
+            "Rajarhat",
+            "Salt Lake",
+            "New Town"
+          ],
+          "parallel_routes_loaded": [
+            "Acharya Jagadish Chandra Bose Road",
+            "Karl Marx Sarani"
+          ],
+          "affected_segment_ids": [
+            1023,
+            1047
+          ]
+        },
+        "emergency_impact": {
+          "ambulance_delay_sec": 180.0,
+          "green_corridor_ok": false
+        },
+        "time_to_effect_sec": 420.0,
+        "event_resolution_prob": 0.97,
+        "method": "surrogate"
+      },
+      "resource_feasibility": {
+        "required_resources": {
+          "ambulance": 1,
+          "police": 2
+        },
+        "availability": {
+          "ambulance": 1,
+          "police": 1
+        },
+        "eta_to_scene_sec": 480,
+        "feasible": false,
+        "shortfalls": [
+          "police: need 2, 1 free"
+        ]
+      },
+      "attributes": {
+        "safety_risk_reduction": 0.97,
+        "time_to_effect": 0.75,
+        "resource_cost": 0.3,
+        "public_disruption": 0.55,
+        "cascade_risk": 0.62,
+        "reversibility": 0.7,
+        "affected_population": 0.55,
+        "protocol_compliance": 1.0,
+        "legality": 1.0
+      },
+      "score": {
+        "method": "topsis",
+        "closeness": 0.8908,
+        "rank": 5,
+        "feasible": false
+      },
+      "ethics": {
+        "touches_persons": false,
+        "legal": true,
+        "protocol_ok": true,
+        "irreversible_without_officer": false,
+        "vetoed": false,
+        "veto_reason": null
+      }
+    },
+    {
+      "coa_id": "coa_stop_vehicles",
+      "kind": "aggressive",
+      "label": "Stop and check vehicles at the junction",
+      "actions": [
+        {
+          "verb": "closure",
+          "target_urn": "junction:9",
+          "params": {
+            "scope": "checkpoint"
+          },
+          "requires_officer": true,
+          "reversible": false
+        }
+      ],
+      "predicted_outcome": {
+        "response_time_to_scene_sec": null,
+        "total_disruption_vehicle_hours": {
+          "mean": 1800.0,
+          "p90": 2100.0,
+          "p90_mean_ratio": 1.17,
+          "replications": 240
+        },
+        "cascade": {
+          "spillover_vehicle_hours": {
+            "mean": 900.0,
+            "p90": 1100.0
+          },
+          "neighbourhoods_touched": [
+            "Salt Lake"
+          ],
+          "parallel_routes_loaded": [],
+          "affected_segment_ids": [
+            1045
+          ]
+        },
+        "emergency_impact": {
+          "ambulance_delay_sec": 0.0,
+          "green_corridor_ok": true
+        },
+        "time_to_effect_sec": 300.0,
+        "event_resolution_prob": 0.9,
+        "method": "surrogate"
+      },
+      "resource_feasibility": {
+        "required_resources": {
+          "police": 4
+        },
+        "availability": {
+          "police": 1
+        },
+        "eta_to_scene_sec": null,
+        "feasible": false,
+        "shortfalls": [
+          "police: need 4, 1 free"
+        ]
+      },
+      "attributes": {
+        "safety_risk_reduction": 0.6,
+        "time_to_effect": 0.4,
+        "resource_cost": 0.1,
+        "public_disruption": 0.02,
+        "cascade_risk": 0.2,
+        "reversibility": 0.3,
+        "affected_population": 0.05,
+        "protocol_compliance": 0.0,
+        "legality": 0.0
+      },
+      "score": {
+        "method": "topsis",
+        "closeness": null,
+        "rank": 6,
+        "feasible": false
+      },
+      "ethics": {
+        "touches_persons": true,
+        "legal": false,
+        "protocol_ok": false,
+        "irreversible_without_officer": true,
+        "vetoed": true,
+        "veto_reason": "touches_persons"
+      }
+    }
+  ],
+  "recommendation": {
+    "ranked_coa_ids": [
+      "coa_std",
+      "coa_info",
+      "coa_min",
+      "coa_base",
+      "coa_agg",
+      "coa_stop_vehicles"
+    ],
+    "top_coa_id": "coa_std",
+    "margin": 0.5357,
+    "sensitivity": {
+      "rank_stability": 1.0,
+      "flips_to": {}
+    },
+    "strategy_prior": {
+      "kind": "standard",
+      "probability": 0.62,
+      "confidence": 0.71,
+      "tier": "decider_27b"
+    },
+    "best_blocked": {
+      "coa_id": "coa_agg",
+      "label": "Close carriageway + full diversion + 108 + 2 police units",
+      "closeness": 0.8908,
+      "missing": [
+        "police: need 2, 1 free"
+      ],
+      "unblock_action": "request_units"
+    },
+    "public_safety_floor": "hold",
+    "value_of_information": {
+      "evoi": -0.011,
+      "L_act_now": 0.36,
+      "L_gather_then_act": 0.37,
+      "info_cost": 0.2,
+      "advise_gather": false,
+      "info_coa_id": "coa_info",
+      "why": "acting now dominates: EVOI -0.011 <= info cost 0.200 (credibility 0.65 and margin 0.536 already justify committing to the recommended feasible COA)"
+    },
+    "dissent": "Runner-up is coa_info (Verify first: 1 patrol to confirm + ICCC situation check, closeness 0.298 vs 0.833). It is not chosen because it is dominated on the heavily-weighted criteria (safety/cascade); the gap is 0.536 with 100% rank-stability under weight perturbation. It would FLIP if a higher-credibility OFFICIAL source lifted credibility above 0.65. The full-closure COA outscores the pick (0.891 vs 0.833) but is RESOURCE-INFEASIBLE this cycle (police: need 2, 1 free) — it ranks after the resourced responses and is reported as the blocked best, never hidden.",
+    "decision": "await_officer"
+  },
+  "provenance": {
+    "feeds": [
+      "google_news_rss"
+    ],
+    "publishers": [
+      "news-a.example",
+      "news-b.example"
+    ],
+    "sources": [],
+    "sim_run_ids": [
+      "d5a1d555-0000-4000-8000-00000000d001/surrogate/coa_std"
+    ],
+    "model_tiers": [
+      "decider_27b"
+    ],
+    "wargame_method": "twin+cascade",
+    "brain_degraded": false
+  },
+  "human_gate": {
+    "state": "proposed",
+    "required_role": "duty_officer",
+    "officer": null,
+    "decided_at": null,
+    "audit_ref": null
+  },
+  "labels": [
+    "NEWS-REPORTED",
+    "SIMULATED"
+  ]
+}

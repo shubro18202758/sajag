@@ -1,0 +1,145 @@
+{
+  "generated_at_utc": "2026-10-30T10:15:39+00:00",
+  "city": "mumbai",
+  "label": "MODELLED — a deterministic analytical model, not a field measurement",
+  "parameters": {
+    "density_veh_per_km_per_lane": {
+      "value": 30.0,
+      "source": "repo simulator default (scenario_sim.py)"
+    },
+    "approach_speed_kmh": {
+      "value": 17.6,
+      "source": "TomTom Traffic Index 2025, Mumbai rush-hour average 17.6 km/h (17-21 km/h by definition)"
+    },
+    "baseline_hold_min": {
+      "value": 25.0,
+      "range": [
+        15.0,
+        45.0
+      ],
+      "source": "assumption (design range; measure from movement logs)"
+    },
+    "platform_hold_min": {
+      "value": 2.5,
+      "source": "platform design (60-180 s activation)"
+    },
+    "ambulance_trips_crossing_per_movement": {
+      "value": 12.0,
+      "source": "assumption (falsify with ambulance (108) dispatch data)"
+    },
+    "ambulance_baseline_delay_min": {
+      "value": 12.0,
+      "range": [
+        5,
+        20
+      ],
+      "source": "assumption (reported VIP-movement holds)"
+    },
+    "movement_days_per_year": {
+      "value": 250,
+      "source": "assumption (RTI-able)"
+    }
+  },
+  "context": [
+    {
+      "fact": "~126 hours lost to peak-hour traffic per commuter in 2025; Mumbai 18th most congested city globally; worst day 16 Sep 2025 (+129% congestion)",
+      "source": "TomTom Traffic Index 2025"
+    },
+    {
+      "fact": "Ambulance (108): older Mumbai figures ~18.75 min to the patient and ~26.25 min to hospital; peak-hour responses of 20-45 min reported in Andheri, Kurla and South Mumbai",
+      "source": "BW Healthcare World; The Bridge Chronicle; Bloomberg Quint"
+    },
+    {
+      "fact": "Suburban locals carry ~68 lakh riders a day on average in 2025-26 (CR ~38.7 lakh, WR ~29.5 lakh): when tracks flood at Sion / Kurla they spill onto the roads",
+      "source": "Free Press Journal, from railway data"
+    },
+    {
+      "fact": "Atal Setu (Sewri - Nhava Sheva, 22 km): ~22,689 vehicles a day in its first year against a projected 56,000",
+      "source": "MMRDA via PTI / Deccan Herald"
+    }
+  ],
+  "network": {
+    "segments": 86,
+    "junctions": 72,
+    "total_km": 202.4,
+    "mean_lanes": 4.7,
+    "arrival_rate_veh_per_min_per_junction": 41.1,
+    "source": {
+      "mode": "offline",
+      "file": "scripts/data/osm_network.json"
+    },
+    "attribution": "(c) OpenStreetMap contributors, ODbL 1.0 — https://www.openstreetmap.org/copyright"
+  },
+  "scenarios": {
+    "central": {
+      "baseline_hold_min": 25.0,
+      "platform_hold_min": 2.5,
+      "commuter_minutes_baseline": 1388302.3,
+      "commuter_minutes_platform": 13883.0,
+      "reduction_factor": 100.0,
+      "vehicles_delayed_baseline": 74043,
+      "vehicles_delayed_platform": 7404,
+      "idle_liters_baseline": 12494.7,
+      "idle_liters_platform": 124.9,
+      "co2_kg_baseline": 31236.8,
+      "co2_kg_platform": 312.4
+    },
+    "conservative": {
+      "baseline_hold_min": 15.0,
+      "platform_hold_min": 3.0,
+      "commuter_minutes_baseline": 299873.3,
+      "commuter_minutes_platform": 11994.9,
+      "reduction_factor": 25.0,
+      "vehicles_delayed_baseline": 26655,
+      "vehicles_delayed_platform": 5331,
+      "idle_liters_baseline": 2698.9,
+      "idle_liters_platform": 108.0,
+      "co2_kg_baseline": 6747.1,
+      "co2_kg_platform": 269.9
+    },
+    "optimistic": {
+      "baseline_hold_min": 45.0,
+      "platform_hold_min": 2.0,
+      "commuter_minutes_baseline": 4498099.5,
+      "commuter_minutes_platform": 8885.1,
+      "reduction_factor": 506.2,
+      "vehicles_delayed_baseline": 133277,
+      "vehicles_delayed_platform": 5923,
+      "idle_liters_baseline": 40482.9,
+      "idle_liters_platform": 80.0,
+      "co2_kg_baseline": 101207.2,
+      "co2_kg_platform": 199.9
+    }
+  },
+  "per_junction_central": {
+    "commuter_minutes_baseline": 19282.0,
+    "commuter_minutes_platform": 192.8
+  },
+  "vip_corridor_central": {
+    "segment_ids": [
+      1001,
+      1002,
+      1006,
+      1008,
+      1011,
+      1013,
+      1014,
+      1015,
+      1020
+    ],
+    "junctions": 10,
+    "km": 27.6,
+    "commuter_minutes_baseline": 192819.8,
+    "commuter_minutes_platform": 1928.2
+  },
+  "ambulance": {
+    "trips_crossing_per_movement_day": 12.0,
+    "minutes_returned_per_movement_day": 132,
+    "minutes_returned_per_year": 33000
+  },
+  "annualization": {
+    "movement_days_per_year": 250,
+    "commuter_hours_returned_per_year_central": 5726747,
+    "commuter_hours_returned_per_year_vip_corridor": 795382
+  }
+}

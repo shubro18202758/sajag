@@ -1,0 +1,167 @@
+{
+ "origin": "2026-10-28T12:30:00+00:00",
+ "model": "chronos-2",
+ "threshold_vc": 0.8,
+ "horizon_min": 120,
+ "segment": {
+  "segment_id": 1052,
+  "road_name": "Chittaranjan Avenue",
+  "place": "Girish Park crossing",
+  "from_junction": 44,
+  "to_junction": 43,
+  "data_label": "SIMULATED",
+  "history_source": "synthetic Kolkata history (seed 1690)",
+  "history_steps": 1344,
+  "notes": [],
+  "now": {
+   "t": "2026-10-28T12:30:00+00:00",
+   "vc": 0.81,
+   "speed_kmh": 47.5
+  },
+  "steps": [
+   {
+    "t": "2026-10-28T12:45:00+00:00",
+    "lead_min": 15,
+    "vc": {
+     "p10": 0.777,
+     "p50": 0.826,
+     "p90": 0.877
+    },
+    "speed_kmh": {
+     "p10": 44.3,
+     "p50": 46.8,
+     "p90": 49.0
+    },
+    "baseline_vc_p50": 0.943
+   },
+   {
+    "t": "2026-10-28T13:00:00+00:00",
+    "lead_min": 30,
+    "vc": {
+     "p10": 0.762,
+     "p50": 0.825,
+     "p90": 0.892
+    },
+    "speed_kmh": {
+     "p10": 43.5,
+     "p50": 46.8,
+     "p90": 49.6
+    },
+    "baseline_vc_p50": 0.943
+   },
+   {
+    "t": "2026-10-28T13:15:00+00:00",
+    "lead_min": 45,
+    "vc": {
+     "p10": 0.744,
+     "p50": 0.822,
+     "p90": 0.894
+    },
+    "speed_kmh": {
+     "p10": 43.4,
+     "p50": 47.0,
+     "p90": 50.3
+    },
+    "baseline_vc_p50": 0.952
+   },
+   {
+    "t": "2026-10-28T13:30:00+00:00",
+    "lead_min": 60,
+    "vc": {
+     "p10": 0.73,
+     "p50": 0.81,
+     "p90": 0.885
+    },
+    "speed_kmh": {
+     "p10": 43.9,
+     "p50": 47.5,
+     "p90": 50.9
+    },
+    "baseline_vc_p50": 0.965
+   },
+   {
+    "t": "2026-10-28T13:45:00+00:00",
+    "lead_min": 75,
+    "vc": {
+     "p10": 0.709,
+     "p50": 0.79,
+     "p90": 0.869
+    },
+    "speed_kmh": {
+     "p10": 44.7,
+     "p50": 48.4,
+     "p90": 51.6
+    },
+    "baseline_vc_p50": 0.919
+   },
+   {
+    "t": "2026-10-28T14:00:00+00:00",
+    "lead_min": 90,
+    "vc": {
+     "p10": 0.682,
+     "p50": 0.768,
+     "p90": 0.851
+    },
+    "speed_kmh": {
+     "p10": 45.6,
+     "p50": 49.4,
+     "p90": 52.5
+    },
+    "baseline_vc_p50": 0.895
+   },
+   {
+    "t": "2026-10-28T14:15:00+00:00",
+    "lead_min": 105,
+    "vc": {
+     "p10": 0.653,
+     "p50": 0.739,
+     "p90": 0.822
+    },
+    "speed_kmh": {
+     "p10": 47.0,
+     "p50": 50.5,
+     "p90": 53.4
+    },
+    "baseline_vc_p50": 0.872
+   },
+   {
+    "t": "2026-10-28T14:30:00+00:00",
+    "lead_min": 120,
+    "vc": {
+     "p10": 0.621,
+     "p50": 0.708,
+     "p90": 0.795
+    },
+    "speed_kmh": {
+     "p10": 48.2,
+     "p50": 51.7,
+     "p90": 54.3
+    },
+    "baseline_vc_p50": 0.86
+   }
+  ],
+  "crossing": null,
+  "above_threshold_now": true,
+  "covariates": {
+   "rain": {
+    "label": "SIMULATED",
+    "next_2h_mm": 0.0,
+    "source": "simulated world"
+   },
+   "gate_closed": {
+    "label": "SIMULATED",
+    "next_2h_steps_closed": 0,
+    "source": "Garden Reach tide model (approximate)"
+   },
+   "event": {
+    "label": "SIMULATED",
+    "active_next_2h": false,
+    "source": "simulated calendar (Puja nights, match egress)"
+   }
+  },
+  "model": "chronos-2"
+ },
+ "proposal": null,
+ "data_note": "Forecast on simulated traffic: the history is the platform's SIMULATED Kolkata history (or the oracle's simulated feed). Covariates come from the same simulated world.",
+ "_fixture": "GET /forecast/segment/1052?horizon_min=120 (Chronos-2, SIMULATED history), 28 Oct 2026, recorded"
+}

@@ -1,0 +1,222 @@
+{
+  "generated_by": "scripts/poi_route_matrix.py (offline pass: the same POIs and picks; snaps to the nearest polyline, shortest legal drives and the Z+ lane floor over cities/mumbai/network.json — re-run poi_route_matrix.py --oracle against the Mumbai oracle to refresh with the planner's own routes)",
+  "attribution": "routes over Sajag's road network on OpenStreetMap — (c) OpenStreetMap contributors, ODbL 1.0",
+  "vvip_class": "Z+",
+  "max_snap_m": 600.0,
+  "matrix": {
+    "pairs": 182,
+    "ok": 182,
+    "same": 0,
+    "rejected": 0,
+    "empty": 0,
+    "far_snap": 0,
+    "compliant": 20,
+    "conditional": 162
+  },
+  "poi_snaps": [
+    {
+      "name": "CSMT (Chhatrapati Shivaji Maharaj Terminus)",
+      "lon": 72.8355,
+      "lat": 18.9398,
+      "segment_id": 1060,
+      "road_name": "P D Mello Road",
+      "snap_m": 63.7
+    },
+    {
+      "name": "Mantralaya",
+      "lon": 72.8247,
+      "lat": 18.9271,
+      "segment_id": 1001,
+      "road_name": "Marine Drive",
+      "snap_m": 84.5
+    },
+    {
+      "name": "Churchgate",
+      "lon": 72.8274,
+      "lat": 18.9353,
+      "segment_id": 1004,
+      "road_name": "Veer Nariman Road",
+      "snap_m": 254.8
+    },
+    {
+      "name": "Wankhede Stadium",
+      "lon": 72.8258,
+      "lat": 18.9389,
+      "segment_id": 1002,
+      "road_name": "Marine Drive",
+      "snap_m": 174.9
+    },
+    {
+      "name": "Girgaon Chowpatty",
+      "lon": 72.8136,
+      "lat": 18.9548,
+      "segment_id": 1003,
+      "road_name": "Marine Drive",
+      "snap_m": 36.5
+    },
+    {
+      "name": "Raj Bhavan (Malabar Hill)",
+      "lon": 72.79572,
+      "lat": 18.94627,
+      "segment_id": 1086,
+      "road_name": "Walkeshwar Road (Raj Bhavan approach)",
+      "snap_m": 0.2
+    },
+    {
+      "name": "Haji Ali junction",
+      "lon": 72.81137,
+      "lat": 18.97811,
+      "segment_id": 1075,
+      "road_name": "Dr Annie Besant Road",
+      "snap_m": 0.4
+    },
+    {
+      "name": "KEM Hospital",
+      "lon": 72.842,
+      "lat": 19.0026,
+      "segment_id": 1070,
+      "road_name": "Dr E Borges Road",
+      "snap_m": 70.3
+    },
+    {
+      "name": "Dadar TT Circle",
+      "lon": 72.84811,
+      "lat": 19.01753,
+      "segment_id": 1066,
+      "road_name": "Dr Ambedkar Road (Hindmata - Dadar TT)",
+      "snap_m": 0.3
+    },
+    {
+      "name": "Sion Hospital (LTMGH)",
+      "lon": 72.85921,
+      "lat": 19.03636,
+      "segment_id": 1069,
+      "road_name": "Dr Ambedkar Road",
+      "snap_m": 102.4
+    },
+    {
+      "name": "Bandra Kurla Complex (BKC)",
+      "lon": 72.86226,
+      "lat": 19.06521,
+      "segment_id": 1052,
+      "road_name": "Bandra Kurla Complex Road",
+      "snap_m": 0.3
+    },
+    {
+      "name": "Kalanagar (Bandra East)",
+      "lon": 72.84645,
+      "lat": 19.05846,
+      "segment_id": 1014,
+      "road_name": "Western Express Highway",
+      "snap_m": 0.2
+    },
+    {
+      "name": "Mumbai Airport T2",
+      "lon": 72.8746,
+      "lat": 19.0989,
+      "segment_id": 1020,
+      "road_name": "Sahar Elevated Road",
+      "snap_m": 249.5
+    },
+    {
+      "name": "Western Express Highway (Andheri)",
+      "lon": 72.85534,
+      "lat": 19.11658,
+      "segment_id": 1016,
+      "road_name": "Western Express Highway",
+      "snap_m": 0.5
+    }
+  ],
+  "compliant": {
+    "origin": {
+      "name": "Mantralaya",
+      "lon": 72.8247,
+      "lat": 18.9271,
+      "snap_m": 84.5
+    },
+    "destination": {
+      "name": "Churchgate",
+      "lon": 72.8274,
+      "lat": 18.9353,
+      "snap_m": 254.8
+    },
+    "origin_segment": 1001,
+    "destination_segment": 1004,
+    "segment_ids": [
+      1001,
+      1004
+    ],
+    "road_names": [
+      "Marine Drive",
+      "Veer Nariman Road"
+    ],
+    "distance_m": 1394.5,
+    "route_tier": "compliant",
+    "why": "shortest pair whose primary meets the lane floor"
+  },
+  "conditional": {
+    "origin": {
+      "name": "KEM Hospital",
+      "lon": 72.842,
+      "lat": 19.0026,
+      "snap_m": 70.3
+    },
+    "destination": {
+      "name": "Dadar TT Circle",
+      "lon": 72.84811,
+      "lat": 19.01753,
+      "snap_m": 0.3
+    },
+    "origin_segment": 1070,
+    "destination_segment": 1066,
+    "segment_ids": [
+      1070,
+      1066
+    ],
+    "road_names": [
+      "Dr E Borges Road",
+      "Dr Ambedkar Road (Hindmata - Dadar TT)"
+    ],
+    "distance_m": 2045.0,
+    "route_tier": "conditional",
+    "why": "shortest pair whose best Z+ route cannot meet the lane floor — the planner keeps it as conditional and says 'No fully compliant route:'"
+  },
+  "escort_demo": {
+    "origin": {
+      "name": "Mantralaya",
+      "lon": 72.8247,
+      "lat": 18.9271,
+      "snap_m": 84.5
+    },
+    "destination": {
+      "name": "Mumbai Airport T2",
+      "lon": 72.8746,
+      "lat": 19.0989,
+      "snap_m": 249.5
+    },
+    "origin_segment": 1001,
+    "destination_segment": 1020,
+    "segment_ids": [
+      1001,
+      1002,
+      1006,
+      1008,
+      1011,
+      1013,
+      1014,
+      1015,
+      1020
+    ],
+    "road_names": [
+      "Marine Drive",
+      "Mumbai Coastal Road (northbound)",
+      "Bandra-Worli Sea Link (northbound)",
+      "Sea Link approach (northbound, Western Freeway)",
+      "Western Express Highway",
+      "Sahar Elevated Road"
+    ],
+    "distance_m": 27586.4,
+    "route_tier": "conditional",
+    "why": "the VIP movement: Mantralaya by Marine Drive, the Coastal Road, the Sea Link and the Western Express Highway to Airport T2"
+  }
+}

@@ -1,0 +1,344 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1480 1100" width="1480" height="1100" font-family="Inter, 'Noto Sans Devanagari', system-ui, sans-serif" role="img" aria-label="Sajag — Map (/map) — low-fidelity wireframe">
+  <title>Sajag — Map (/map) — low-fidelity wireframe</title>
+  <defs>
+    <pattern id="hatch" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="14" height="14" fill="#EFEFEF"/>
+      <line x1="0" y1="0" x2="0" y2="14" stroke="#E0E0E0" stroke-width="5"/>
+    </pattern>
+    <pattern id="hatchband" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="8" height="8" fill="#E4E4E4"/>
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#CFCFCF" stroke-width="3"/>
+    </pattern>
+  </defs>
+  <rect width="1480" height="1100" fill="#FFFFFF"/>
+  <text x="20" y="32" font-size="21" font-weight="700" fill="#262626">Sajag — Map (/map)</text>
+  <text x="20" y="56" font-size="13" font-weight="400" fill="#5E5E5E">Low-fidelity wireframe at 1440 px wide: rail 76 px, top bar 60 px, gutter 24 px. Greyscale; colour only for meaning.</text>
+  <!-- frame -->
+  <rect x="20" y="78" width="1440" height="900" rx="0" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.5"/>
+  <!-- AppRail: 76 px below 1500 px wide (88 px at &gt;= 1500); icon + label, never icon-only -->
+  <rect x="20" y="78" width="76" height="900" rx="0" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1.2"/>
+  <rect x="36" y="90" width="44" height="44" rx="10" fill="#1A1A1A" stroke="#4A4A4A" stroke-width="1.2"/>
+  <text x="58" y="119" font-size="20" font-weight="700" text-anchor="middle" fill="#262626">S</text>
+  <rect x="28" y="148" width="60" height="56" rx="10" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1"/>
+  <circle cx="58" cy="168" r="8" fill="#DCDCDC" stroke="#989898" stroke-width="1"/>
+  <text x="58" y="194" font-size="10.5" font-weight="500" text-anchor="middle" fill="#262626">Home</text>
+  <rect x="28" y="212" width="60" height="56" rx="10" fill="#DCDCDC" stroke="#989898" stroke-width="1.6"/>
+  <circle cx="58" cy="232" r="8" fill="#CFCFCF" stroke="#8E8E8E" stroke-width="1"/>
+  <text x="58" y="258" font-size="10.5" font-weight="700" text-anchor="middle" fill="#262626">Map</text>
+  <rect x="28" y="276" width="60" height="56" rx="10" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1"/>
+  <circle cx="58" cy="296" r="8" fill="#DCDCDC" stroke="#989898" stroke-width="1"/>
+  <text x="58" y="322" font-size="10.5" font-weight="500" text-anchor="middle" fill="#262626">Decide</text>
+  <circle cx="74" cy="287" r="8" fill="#C2410C"/>
+  <text x="74" y="291" font-size="9.5" font-weight="700" text-anchor="middle" fill="#FFFFFF">3</text>
+  <rect x="28" y="340" width="60" height="56" rx="10" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1"/>
+  <circle cx="58" cy="360" r="8" fill="#DCDCDC" stroke="#989898" stroke-width="1"/>
+  <text x="58" y="386" font-size="10.5" font-weight="500" text-anchor="middle" fill="#262626">Plan</text>
+  <rect x="28" y="404" width="60" height="56" rx="10" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1"/>
+  <circle cx="58" cy="424" r="8" fill="#DCDCDC" stroke="#989898" stroke-width="1"/>
+  <text x="58" y="450" font-size="10.5" font-weight="500" text-anchor="middle" fill="#262626">Assistant</text>
+  <rect x="28" y="468" width="60" height="56" rx="10" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1"/>
+  <circle cx="58" cy="488" r="8" fill="#DCDCDC" stroke="#989898" stroke-width="1"/>
+  <text x="58" y="514" font-size="10.5" font-weight="500" text-anchor="middle" fill="#262626">Advisories</text>
+  <line x1="34" y1="894" x2="82" y2="894" stroke="#B5B5B5" stroke-width="1.2"/>
+  <rect x="28" y="906" width="60" height="56" rx="10" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1.2"/>
+  <circle cx="58" cy="926" r="8" fill="#DCDCDC" stroke="#989898" stroke-width="1"/>
+  <text x="58" y="952" font-size="10.5" font-weight="500" text-anchor="middle" fill="#262626">Analyst</text>
+  <!-- TopBar: 60 px; title | search (the prominent element) | Report, language, alerts, officer -->
+  <rect x="96" y="78" width="1364" height="60" rx="0" fill="#F4F4F4" stroke="#ABABAB" stroke-width="1.2"/>
+  <text x="120" y="115" font-size="16" font-weight="700" fill="#262626">Map</text>
+  <rect x="360" y="88" width="560" height="40" rx="20" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.2"/>
+  <circle cx="382" cy="108" r="7" fill="#DCDCDC" stroke="#989898" stroke-width="1"/>
+  <text x="400" y="113" font-size="12.5" font-weight="400" fill="#5E5E5E">Search a place, road, event or vehicle mark</text>
+  <rect x="860" y="97" width="48" height="22" rx="11" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.2"/>
+  <text x="884" y="112" font-size="10" font-weight="600" text-anchor="middle" fill="#5E5E5E">Ctrl K</text>
+  <rect x="932" y="92" width="90" height="32" rx="16" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.2"/>
+  <rect x="948.8" y="99.8" width="6.4" height="10.4" rx="3.2" fill="#262626"/>
+  <path d="M946.4,107 a5.6,5.6 0 0 0 11.2,0" fill="none" stroke="#262626" stroke-width="1.3"/>
+  <line x1="952" y1="112.6" x2="952" y2="115.8" stroke="#262626" stroke-width="1.3"/>
+  <text x="966" y="113" font-size="11.5" font-weight="600" fill="#262626">Report</text>
+  <rect x="1032" y="92" width="132" height="32" rx="16" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.2"/>
+  <text x="1044" y="113" font-size="11.5" font-weight="400" fill="#5E5E5E">मराठी</text>
+  <text x="1084" y="113" font-size="11.5" font-weight="400" fill="#5E5E5E">·</text>
+  <text x="1093" y="113" font-size="11.5" font-weight="700" fill="#262626">EN</text>
+  <text x="1116" y="113" font-size="11.5" font-weight="400" fill="#5E5E5E">·</text>
+  <text x="1126" y="113" font-size="11.5" font-weight="400" fill="#5E5E5E">हिंदी</text>
+  <circle cx="1188" cy="108" r="13" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1"/>
+  <path d="M1182,112 q0,-11 6,-11 q6,0 6,11 z" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.2"/>
+  <rect x="1212" y="88" width="236" height="40" rx="20" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1.2"/>
+  <circle cx="1232" cy="108" r="11" fill="#DCDCDC" stroke="#989898" stroke-width="1"/>
+  <text x="1250" y="105" font-size="11.5" font-weight="650" fill="#262626">On duty: A. Patil</text>
+  <text x="1250" y="119" font-size="10" font-weight="400" fill="#5E5E5E">plates shown to A. Patil</text>
+  <!-- the map: full bleed under the overlays (OpenStreetMap city map; satellite 3D on demand) -->
+  <rect x="96" y="138" width="1364" height="840" rx="0" fill="#F7F7F7" stroke="#ABABAB" stroke-width="1.2"/>
+  <clipPath id="mapclip"><rect x="96" y="138" width="1364" height="840"/></clipPath>
+  <g clip-path="url(#mapclip)">
+  <polyline points="775.4,147.3 765.1,291.3 698.1,396.4 651.7,490.5 615.6,557 548.6,595.7 481.6,612.3 378.4,595.7" fill="none" stroke="#D3D3D3" stroke-width="26" stroke-linejoin="round" stroke-linecap="round"/>
+  <text x="663.8" y="247" font-size="12" font-weight="600" fill="#8A8A8A">Arabian Sea</text>
+  <polyline points="719.7,509.4 723.8,573.6 718.7,623.4 692.9,717.5 713.5,767.3 692.9,872.5" fill="none" stroke="#B8B8B8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="713.5,767.3 729,783.9 796,761.8 976.4,795" fill="none" stroke="#B8B8B8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="796,761.8 790.9,712 816.6,651.1 790.9,534.8 821.3,491.6" fill="none" stroke="#B8B8B8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="816.6,651.1 723.8,573.6" fill="none" stroke="#B8B8B8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="816.6,651.1 950.7,645.5" fill="none" stroke="#B8B8B8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="919.7,368.8 991.9,518.2 950.7,645.5 976.4,795" fill="none" stroke="#B8B8B8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="719.7,509.4 775.4,440.7 826.9,307.9" fill="none" stroke="#B8B8B8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="674.9,402.5 697,395.9 711.5,465.1 719.7,509.4 821.3,491.6" fill="none" stroke="#B8B8B8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="553.7,507.1 632.6,548.1 672.3,523.7 719.7,509.4" fill="none" stroke="#B8B8B8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="595,651.1 718.7,623.4" fill="none" stroke="#B8B8B8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="595,651.1 579.5,772.9 579.5,844.8 512.5,922.3" fill="none" stroke="#B8B8B8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="692.9,717.5 790.9,712" fill="none" stroke="#B8B8B8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="919.7,368.8 826.9,307.9" fill="none" stroke="#B8B8B8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="919.7,368.8 1125.9,313.4" fill="none" stroke="#B8B8B8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="821.3,491.6 919.7,368.8" fill="none" stroke="#B8B8B8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <text x="1001.9" y="558.2" font-size="11" font-weight="600" fill="#8A8A8A">E. Express Hwy</text>
+  <!-- traffic flow (simulated): heavier dark dashes where roads are slow -->
+  <polyline points="711.5,465.1 719.7,509.4" fill="none" stroke="#6B6B6B" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="8 5"/>
+  <polyline points="821.3,491.6 790.9,534.8" fill="none" stroke="#6B6B6B" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="8 5"/>
+  <polyline points="919.7,368.8 826.9,307.9" fill="none" stroke="#6B6B6B" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="8 5"/>
+  <!-- forecast bands: Dadar TT approach forecast to cross 0.8 V/C -->
+  <polyline points="816.6,651.1 723.8,573.6" fill="none" stroke="#8A8A8A" stroke-width="14" stroke-linejoin="round" stroke-linecap="round" opacity="0.45"/>
+  <line x1="822.6" y1="645.1" x2="868.6" y2="607.1" stroke="#4A4A4A" stroke-width="1"/>
+  <rect x="868.6" y="573.1" width="190" height="40" rx="8" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <text x="878.6" y="589.1" font-size="11.5" font-weight="650" fill="#262626">V/C 0.81 in 45 min</text>
+  <text x="878.6" y="605.1" font-size="10" font-weight="400" fill="#5E5E5E">forecast on simulated traffic</text>
+  <!-- waterlogging risk 0-3 (modelled): weight = class, red = impassable -->
+  <polyline points="692.9,717.5 713.5,767.3" fill="none" stroke="#4A4A4A" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="718.7,623.4 692.9,717.5" fill="none" stroke="#9A9A9A" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="790.9,712 816.6,651.1" fill="none" stroke="#4A4A4A" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="796,761.8 790.9,712" fill="none" stroke="#4A4A4A" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="719.7,509.4 775.4,440.7" fill="none" stroke="#B91C1C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="595,651.1 579.5,772.9" fill="none" stroke="#4A4A4A" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="816.6,651.1 790.9,534.8" fill="none" stroke="#9A9A9A" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="729,783.9 796,761.8" fill="none" stroke="#C2410C" stroke-width="14" stroke-linejoin="round" stroke-linecap="round" opacity="0.35"/>
+  <polyline points="713.5,767.3 729,783.9 796,761.8" fill="none" stroke="#4A4A4A" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="729,783.9 796,761.8" fill="none" stroke="#262626" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="719.7" cy="509.4" r="3.5" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.2"/>
+  <text x="729.7" y="501.4" font-size="11" font-weight="600" fill="#262626">Dadar station</text>
+  <circle cx="711.5" cy="465.1" r="3.5" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.2"/>
+  <text x="703.5" y="459.1" font-size="11" font-weight="600" text-anchor="end" fill="#262626">Mahim Causeway</text>
+  <circle cx="697" cy="395.9" r="3.5" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.2"/>
+  <text x="691" y="383.9" font-size="11" font-weight="600" text-anchor="end" fill="#262626">Sea Link</text>
+  <circle cx="632.6" cy="548.1" r="3.5" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.2"/>
+  <text x="624.6" y="568.1" font-size="11" font-weight="600" text-anchor="end" fill="#262626">Coastal Road</text>
+  <circle cx="816.6" cy="651.1" r="3.5" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.2"/>
+  <text x="826.6" y="673.1" font-size="11" font-weight="600" fill="#262626">Dadar TT</text>
+  <circle cx="796" cy="761.8" r="3.5" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.2"/>
+  <text x="806" y="779.8" font-size="11" font-weight="600" fill="#262626">Hindmata</text>
+  <circle cx="713.5" cy="767.3" r="3.5" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.2"/>
+  <text x="703.5" y="785.3" font-size="11" font-weight="600" text-anchor="end" fill="#262626">Parel</text>
+  <circle cx="919.7" cy="368.8" r="3.5" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.2"/>
+  <text x="929.7" y="360.8" font-size="11" font-weight="600" fill="#262626">Chembur</text>
+  <circle cx="991.9" cy="518.2" r="3.5" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.2"/>
+  <text x="1001.9" y="512.2" font-size="11" font-weight="600" fill="#262626">Sion Circle</text>
+  <circle cx="826.9" cy="307.9" r="3.5" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.2"/>
+  <text x="836.9" y="299.9" font-size="11" font-weight="600" fill="#262626">BKC</text>
+  <circle cx="679" cy="509.4" r="3.5" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.2"/>
+  <text x="671" y="503.4" font-size="11" font-weight="600" text-anchor="end" fill="#262626">Shivaji Park</text>
+  <circle cx="672.3" cy="523.7" r="3.5" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.2"/>
+  <text x="664.3" y="533.7" font-size="11" font-weight="600" text-anchor="end" fill="#262626">Prabhadevi</text>
+  <circle cx="486.7" cy="617.9" r="3.5" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.2"/>
+  <text x="486.7" y="643.9" font-size="11" font-weight="600" text-anchor="middle" fill="#262626">Apollo Bunder (tide)</text>
+  <circle cx="553.7" cy="507.1" r="3.5" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.2"/>
+  <text x="549.7" y="497.1" font-size="11" font-weight="600" text-anchor="end" fill="#262626">Dadar Chowpatty</text>
+  <circle cx="718.7" cy="623.4" r="3.5" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.2"/>
+  <text x="728.7" y="627.4" font-size="11" font-weight="600" fill="#262626">Senapati Bapat Marg</text>
+  <circle cx="692.9" cy="717.5" r="3.5" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.2"/>
+  <text x="682.9" y="721.5" font-size="11" font-weight="600" text-anchor="end" fill="#262626">Lower Parel</text>
+  <circle cx="775.4" cy="440.7" r="3.5" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.2"/>
+  <text x="785.4" y="444.7" font-size="11" font-weight="600" fill="#262626">King's Circle (low-lying)</text>
+  <circle cx="821.3" cy="491.6" r="3.5" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.2"/>
+  <text x="831.3" y="485.6" font-size="11" font-weight="600" fill="#262626">Wadala</text>
+  <circle cx="976.4" cy="795" r="3.5" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.2"/>
+  <text x="986.4" y="799" font-size="11" font-weight="600" fill="#262626">Atal Setu (Sewri)</text>
+  <circle cx="692.9" cy="872.5" r="3.5" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.2"/>
+  <text x="702.9" y="876.5" font-size="11" font-weight="600" fill="#262626">Lalbaug</text>
+  <circle cx="595" cy="651.1" r="3.5" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.2"/>
+  <text x="603" y="643.1" font-size="11" font-weight="600" fill="#262626">Worli Naka</text>
+  <rect x="703.7" y="493.4" width="10" height="10" rx="2" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.1" stroke-dasharray="2 2"/>
+  <rect x="800.6" y="635.1" width="10" height="10" rx="2" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.1" stroke-dasharray="2 2"/>
+  <rect x="780" y="745.8" width="10" height="10" rx="2" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.1" stroke-dasharray="2 2"/>
+  <rect x="903.7" y="352.8" width="10" height="10" rx="2" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.1" stroke-dasharray="2 2"/>
+  <rect x="810.9" y="291.9" width="10" height="10" rx="2" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.1" stroke-dasharray="2 2"/>
+  <rect x="702.7" y="607.4" width="10" height="10" rx="2" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.1" stroke-dasharray="2 2"/>
+  <circle cx="857.9" cy="712" r="7" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.1" stroke-dasharray="2 2"/>
+  <text x="857.9" y="715.5" font-size="9" font-weight="700" text-anchor="middle" fill="#262626">P</text>
+  <circle cx="826.9" cy="468.4" r="7" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.1" stroke-dasharray="2 2"/>
+  <text x="826.9" y="471.9" font-size="9" font-weight="700" text-anchor="middle" fill="#262626">P</text>
+  <circle cx="651.7" cy="800.5" r="7" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.1" stroke-dasharray="2 2"/>
+  <text x="651.7" y="804" font-size="9" font-weight="700" text-anchor="middle" fill="#262626">P</text>
+  <polygon points="479.7,623.9 493.7,623.9 486.7,610.9" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="2 2"/>
+  <circle cx="723" cy="817.9" r="11" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.3" stroke-dasharray="3 2"/>
+  <text x="723" y="821.9" font-size="10" font-weight="700" text-anchor="middle" fill="#262626">C</text>
+  <text x="707" y="845.9" font-size="10.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Ganeshotsav crowd · Simulated</text>
+  <circle cx="804" cy="739.8" r="11" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.3" stroke-dasharray="3 2"/>
+  <rect x="801.8" y="734.8" width="4.4" height="7.2" rx="2.2" fill="#262626"/>
+  <path d="M800.2,739.8 a3.9,3.9 0 0 0 7.7,0" fill="none" stroke="#262626" stroke-width="0.9"/>
+  <line x1="804" y1="743.6" x2="804" y2="745.8" stroke="#262626" stroke-width="0.9"/>
+  <text x="820" y="731.8" font-size="10.5" font-weight="600" fill="#5E5E5E">Field report · unverified</text>
+  </g>
+  <!-- the chips: the groups of the Now list -->
+  <rect x="440" y="154" width="160.6" height="28" rx="14" fill="#FFF1E6" stroke="#C2410C" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="520.3" y="172.1" font-size="11.5" font-weight="600" text-anchor="middle" fill="#C2410C">Needs your decision 3</text>
+  <rect x="608.6" y="154" width="134.5" height="28" rx="14" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="675.9" y="172.1" font-size="11.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Live operations 2</text>
+  <rect x="751.2" y="154" width="164.8" height="28" rx="14" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="833.5" y="172.1" font-size="11.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Reported in the city 2</text>
+  <rect x="923.9" y="154" width="97.4" height="28" rx="14" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="972.6" y="172.1" font-size="11.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Coming up 3</text>
+  <rect x="1029.3" y="154" width="105.1" height="28" rx="14" fill="#262626" stroke="#262626" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="1081.9" y="172.1" font-size="11.5" font-weight="600" text-anchor="middle" fill="#FFFFFF">Layers · 6 on</text>
+  <rect x="440" y="190" width="195.9" height="26" rx="13" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1"/>
+  <text x="538" y="207" font-size="11" font-weight="600" text-anchor="middle" fill="#5E5E5E">Rain 18 mm/h · live nowcast</text>
+  <!-- Layers sheet (left) -->
+  <rect x="116" y="154" width="300" height="784" rx="14" fill="#FFFFFF" stroke="#ABABAB" stroke-width="1.2"/>
+  <text x="134" y="182" font-size="15" font-weight="700" fill="#262626">Layers</text>
+  <text x="398" y="182" font-size="11.5" font-weight="600" text-anchor="end" fill="#1D5FD1">Close</text>
+  <text x="134" y="208" font-size="11" font-weight="600" fill="#5E5E5E">Base map</text>
+  <rect x="134" y="216" width="75.2" height="24" rx="12" fill="#262626" stroke="#262626" stroke-width="1.1"/>
+  <text x="171.6" y="232" font-size="11" font-weight="600" text-anchor="middle" fill="#FFFFFF">City map</text>
+  <rect x="220" y="216" width="96" height="24" rx="12" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1"/>
+  <text x="268" y="232" font-size="11" font-weight="600" text-anchor="middle" fill="#5E5E5E">Satellite 3D</text>
+  <text x="134" y="258" font-size="11" font-weight="600" fill="#5E5E5E">City</text>
+  <text x="134" y="288" font-size="12.5" font-weight="650" fill="#262626">Traffic flow</text>
+  <text x="134" y="305" font-size="10.5" font-weight="400" fill="#5E5E5E">How fast each road is moving</text>
+  <rect x="134" y="312" width="136" height="18" rx="9" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="202" y="324.4" font-size="9.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Simulated on every road</text>
+  <rect x="364" y="278" width="34" height="18" rx="9" fill="#262626" stroke="#262626" stroke-width="1.2"/>
+  <circle cx="389" cy="287" r="6.5" fill="#FFFFFF"/>
+  <text x="134" y="360" font-size="12.5" font-weight="650" fill="#262626">Waterlogging risk 0–3</text>
+  <text x="134" y="377" font-size="10.5" font-weight="400" fill="#5E5E5E">Next 2 hours: rain, tide, ground, pumps</text>
+  <rect x="134" y="384" width="62.3" height="18" rx="9" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="165.1" y="396.4" font-size="9.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Modelled</text>
+  <rect x="364" y="350" width="34" height="18" rx="9" fill="#262626" stroke="#262626" stroke-width="1.2"/>
+  <circle cx="389" cy="359" r="6.5" fill="#FFFFFF"/>
+  <text x="134" y="432" font-size="12.5" font-weight="650" fill="#262626">Forecast bands</text>
+  <text x="134" y="449" font-size="10.5" font-weight="400" fill="#5E5E5E">V/C p10 to p90, 15 to 120 min ahead</text>
+  <rect x="134" y="456" width="180.4" height="18" rx="9" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="224.2" y="468.4" font-size="9.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Forecast on simulated traffic</text>
+  <rect x="364" y="422" width="34" height="18" rx="9" fill="#262626" stroke="#262626" stroke-width="1.2"/>
+  <circle cx="389" cy="431" r="6.5" fill="#FFFFFF"/>
+  <text x="134" y="504" font-size="12.5" font-weight="650" fill="#262626">Cameras</text>
+  <text x="134" y="521" font-size="10.5" font-weight="400" fill="#5E5E5E">Read registration marks only</text>
+  <rect x="134" y="528" width="115" height="18" rx="9" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="191.5" y="540.4" font-size="9.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Modelled positions</text>
+  <rect x="364" y="494" width="34" height="18" rx="9" fill="#262626" stroke="#262626" stroke-width="1.2"/>
+  <circle cx="389" cy="503" r="6.5" fill="#FFFFFF"/>
+  <text x="134" y="576" font-size="12.5" font-weight="650" fill="#262626">Pumps</text>
+  <text x="134" y="593" font-size="10.5" font-weight="400" fill="#5E5E5E">BMC pumping stations</text>
+  <rect x="134" y="600" width="66.3" height="18" rx="9" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="167.2" y="612.4" font-size="9.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Emulated</text>
+  <rect x="364" y="566" width="34" height="18" rx="9" fill="#262626" stroke="#262626" stroke-width="1.2"/>
+  <circle cx="389" cy="575" r="6.5" fill="#FFFFFF"/>
+  <text x="134" y="648" font-size="12.5" font-weight="650" fill="#262626">Events</text>
+  <text x="134" y="665" font-size="10.5" font-weight="400" fill="#5E5E5E">Live operations and reported events</text>
+  <rect x="134" y="672" width="141.8" height="18" rx="9" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1"/>
+  <text x="204.9" y="684.4" font-size="9.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Each with its own label</text>
+  <rect x="364" y="638" width="34" height="18" rx="9" fill="#262626" stroke="#262626" stroke-width="1.2"/>
+  <circle cx="389" cy="647" r="6.5" fill="#FFFFFF"/>
+  <text x="134" y="720" font-size="12.5" font-weight="650" fill="#262626">Junctions and signals</text>
+  <text x="134" y="737" font-size="10.5" font-weight="400" fill="#5E5E5E">Signal state at each junction</text>
+  <rect x="134" y="744" width="112.2" height="18" rx="9" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="190.1" y="756.4" font-size="9.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Emulated adapter</text>
+  <rect x="364" y="710" width="34" height="18" rx="9" fill="#DCDCDC" stroke="#989898" stroke-width="1.2"/>
+  <circle cx="373" cy="719" r="6.5" fill="#FFFFFF"/>
+  <text x="134" y="792" font-size="12.5" font-weight="650" fill="#262626">Units and dispatches</text>
+  <text x="134" y="809" font-size="10.5" font-weight="400" fill="#5E5E5E">Police, traffic and 108 units</text>
+  <rect x="134" y="816" width="92.1" height="18" rx="9" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="180" y="828.4" font-size="9.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Emulated GPS</text>
+  <rect x="364" y="782" width="34" height="18" rx="9" fill="#DCDCDC" stroke="#989898" stroke-width="1.2"/>
+  <circle cx="373" cy="791" r="6.5" fill="#FFFFFF"/>
+  <text x="134" y="850" font-size="11" font-weight="600" fill="#5E5E5E">Waterlogging risk (modelled)</text>
+  <line x1="134" y1="864" x2="156" y2="864" stroke="#B8B8B8" stroke-width="3" stroke-linecap="round"/>
+  <text x="164" y="868" font-size="10.5" font-weight="400" fill="#262626">0 Dry</text>
+  <line x1="274" y1="864" x2="296" y2="864" stroke="#9A9A9A" stroke-width="5" stroke-linecap="round"/>
+  <text x="304" y="868" font-size="10.5" font-weight="400" fill="#262626">1 Shallow 2–10 cm</text>
+  <line x1="134" y1="884" x2="156" y2="884" stroke="#4A4A4A" stroke-width="6" stroke-linecap="round"/>
+  <text x="164" y="888" font-size="10.5" font-weight="400" fill="#262626">2 Deep 10–30 cm</text>
+  <line x1="274" y1="884" x2="296" y2="884" stroke="#B91C1C" stroke-width="7" stroke-linecap="round"/>
+  <text x="304" y="888" font-size="10.5" font-weight="400" fill="#262626">3 Impassable &gt; 30 cm</text>
+  <text x="134" y="924" font-size="10.5" font-weight="400" fill="#5E5E5E">Vehicles only. No images, frames or faces are kept.</text>
+  <!-- Selection card (right): one road segment -->
+  <rect x="1110" y="198" width="330" height="740" rx="14" fill="#FFFFFF" stroke="#ABABAB" stroke-width="1.2"/>
+  <text x="1128" y="224" font-size="11" font-weight="400" fill="#5E5E5E">Road · segment 1033</text>
+  <text x="1422" y="224" font-size="11.5" font-weight="600" text-anchor="end" fill="#1D5FD1">Close</text>
+  <text x="1128" y="250" font-size="17" font-weight="700" fill="#262626">Dr Ambedkar Road →</text>
+  <text x="1128" y="272" font-size="17" font-weight="700" fill="#262626">Hindmata</text>
+  <rect x="1128" y="290" width="120.4" height="22" rx="11" fill="#FFF1E6" stroke="#C2410C" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="1188.2" y="304.8" font-size="10.5" font-weight="600" text-anchor="middle" fill="#C2410C">A proposal waits</text>
+  <rect x="1256.4" y="290" width="71.2" height="22" rx="11" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="1292" y="304.8" font-size="10.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Modelled</text>
+  <text x="1128" y="330" font-size="12.5" font-weight="650" fill="#262626">Waterlogging · next 2 hours</text>
+  <rect x="1128" y="342" width="294" height="92" rx="10" fill="#F4F4F4" stroke="#A2A2A2" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <text x="1142" y="376" font-size="30" font-weight="700" fill="#262626">2</text>
+  <text x="1170" y="366" font-size="15" font-weight="700" fill="#262626">Deep water</text>
+  <text x="1170" y="384" font-size="11" font-weight="400" fill="#5E5E5E">Depth 10 to 30 cm (depth band)</text>
+  <text x="1142" y="412" font-size="12" font-weight="650" fill="#262626">Deep water in 45 min · peaks in 90 min</text>
+  <text x="1128" y="456" font-size="12.5" font-weight="650" fill="#262626">What drives it</text>
+  <text x="1128" y="484" font-size="12" font-weight="650" fill="#262626">Rain</text>
+  <rect x="1383" y="470" width="39" height="18" rx="9" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1"/>
+  <text x="1402.5" y="482.4" font-size="9.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Live</text>
+  <text x="1128" y="502" font-size="11" font-weight="400" fill="#5E5E5E">18 mm in the past hour, 40 mm in the next 2 hours</text>
+  <text x="1128" y="539" font-size="12" font-weight="650" fill="#262626">Tide</text>
+  <rect x="1359.7" y="525" width="62.3" height="18" rx="9" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="1390.9" y="537.4" font-size="9.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Modelled</text>
+  <text x="1128" y="557" font-size="11" font-weight="400" fill="#5E5E5E">4.6 m at Apollo Bunder · outfall gates shut</text>
+  <text x="1128" y="594" font-size="12" font-weight="650" fill="#262626">Pumps</text>
+  <rect x="1355.7" y="580" width="66.3" height="18" rx="9" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="1388.8" y="592.4" font-size="9.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Emulated</text>
+  <text x="1128" y="612" font-size="11" font-weight="400" fill="#5E5E5E">2 of 3 pumps available</text>
+  <text x="1128" y="649" font-size="12" font-weight="650" fill="#262626">Ground and drains</text>
+  <rect x="1359.7" y="635" width="62.3" height="18" rx="9" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="1390.9" y="647.4" font-size="9.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Modelled</text>
+  <text x="1128" y="667" font-size="11" font-weight="400" fill="#5E5E5E">Susceptibility 0.78, 0.4 km to a drain</text>
+  <text x="1128" y="694" font-size="10.5" font-weight="400" fill="#5E5E5E">Rain is a nowcast (a model product, not a gauge).</text>
+  <line x1="1128" y1="716" x2="1422" y2="716" stroke="#D0D0D0" stroke-width="1.2"/>
+  <text x="1128" y="740" font-size="12.5" font-weight="650" fill="#262626">Traffic now</text>
+  <text x="1128" y="760" font-size="12" font-weight="400" fill="#262626">14 km/h · V/C 0.74</text>
+  <rect x="1352.3" y="726" width="69.7" height="18" rx="9" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="1387.1" y="738.4" font-size="9.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Simulated</text>
+  <rect x="1128" y="782" width="180" height="38" rx="19" fill="#FFF1E6" stroke="#C2410C" stroke-width="1.4"/>
+  <text x="1218" y="805.5" font-size="12.5" font-weight="650" text-anchor="middle" fill="#C2410C">Review the proposal</text>
+  <rect x="1316" y="782" width="106" height="38" rx="19" fill="#FFFFFF" stroke="#8E8E8E" stroke-width="1.2"/>
+  <text x="1369" y="805.5" font-size="12.5" font-weight="650" text-anchor="middle" fill="#262626">Details</text>
+  <text x="1128" y="842" font-size="10.5" font-weight="400" fill="#5E5E5E">Details opens the road's page (/o/segment:1033).</text>
+  <text x="1128" y="858" font-size="10.5" font-weight="400" fill="#5E5E5E">Figures here are placeholders.</text>
+  <!-- map tools (right edge, under the card) -->
+  <rect x="1062" y="830" width="36" height="30" rx="8" fill="#FFFFFF" stroke="#ABABAB" stroke-width="1.2"/>
+  <text x="1080" y="850" font-size="12" font-weight="650" text-anchor="middle" fill="#262626">+</text>
+  <rect x="1062" y="864" width="36" height="30" rx="8" fill="#FFFFFF" stroke="#ABABAB" stroke-width="1.2"/>
+  <text x="1080" y="884" font-size="12" font-weight="650" text-anchor="middle" fill="#262626">−</text>
+  <rect x="1062" y="898" width="36" height="30" rx="8" fill="#FFFFFF" stroke="#ABABAB" stroke-width="1.2"/>
+  <text x="1080" y="918" font-size="12" font-weight="650" text-anchor="middle" fill="#262626">N</text>
+  <rect x="1062" y="932" width="36" height="30" rx="8" fill="#FFFFFF" stroke="#ABABAB" stroke-width="1.2"/>
+  <text x="1080" y="952" font-size="12" font-weight="650" text-anchor="middle" fill="#262626">3D</text>
+  <rect x="430" y="940" width="300" height="26" rx="13" fill="#FFFFFF" stroke="#ABABAB" stroke-width="1.2"/>
+  <text x="442" y="957" font-size="10.5" font-weight="400" fill="#5E5E5E">Map data © OpenStreetMap contributors</text>
+  <circle cx="432" cy="144" r="10" fill="#4A4A4A"/>
+  <text x="432" y="148" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">1</text>
+  <circle cx="110" cy="148" r="10" fill="#4A4A4A"/>
+  <text x="110" y="152" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">2</text>
+  <circle cx="1104" cy="192" r="10" fill="#4A4A4A"/>
+  <text x="1104" y="196" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">3</text>
+  <circle cx="868.6" cy="571.1" r="10" fill="#4A4A4A"/>
+  <text x="868.6" y="575.1" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">4</text>
+  <circle cx="826" cy="709.8" r="10" fill="#4A4A4A"/>
+  <text x="826" y="713.8" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">5</text>
+  <rect x="20" y="1000" width="14" height="14" rx="3" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1.2"/>
+  <text x="42" y="1011" font-size="12" font-weight="400" fill="#5E5E5E">layout region</text>
+  <rect x="139.9" y="1000" width="14" height="14" rx="3" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <text x="161.9" y="1011" font-size="12" font-weight="400" fill="#5E5E5E">dashed: modelled, simulated, emulated or unverified (or shown only when needed)</text>
+  <rect x="668.7" y="1000" width="14" height="14" rx="3" fill="url(#hatch)" stroke="#9A9A9A" stroke-width="1.2"/>
+  <text x="690.7" y="1011" font-size="12" font-weight="400" fill="#5E5E5E">map or picture</text>
+  <rect x="798.9" y="1000" width="14" height="14" rx="7" fill="#C2410C"/>
+  <text x="820.9" y="1011" font-size="12" font-weight="400" fill="#5E5E5E">needs an officer</text>
+  <rect x="939.4" y="1000" width="14" height="14" rx="7" fill="#B91C1C"/>
+  <text x="961.4" y="1011" font-size="12" font-weight="400" fill="#5E5E5E">danger</text>
+  <rect x="1020.4" y="1000" width="14" height="14" rx="7" fill="#15803D"/>
+  <text x="1042.4" y="1011" font-size="12" font-weight="400" fill="#5E5E5E">approved</text>
+  <rect x="1115.1" y="1000" width="14" height="14" rx="7" fill="#1D5FD1"/>
+  <text x="1137.1" y="1011" font-size="12" font-weight="400" fill="#5E5E5E">link / AI-written</text>
+  <rect x="1263" y="1000" width="14" height="14" rx="7" fill="#262626"/>
+  <text x="1285" y="1011" font-size="12" font-weight="400" fill="#5E5E5E">the one primary action</text>
+  <text x="20" y="1036" font-size="12" font-weight="400" fill="#5E5E5E">1 Chips: the Now list's groups, one tap hides a group. 2 Layers: each layer carries its honest label; cameras sit at modelled positions, pumps are emulated until BMC grants access. 3 Selection card: risk class, depth band, lead time and</text>
+  <text x="20" y="1053" font-size="12" font-weight="400" fill="#5E5E5E">the four drivers with their labels. 4 A forecast crossing. 5 A voice field report on the map, dashed until an officer confirms it. Marks: small dashed square = camera (modelled position) · P = pump (emulated) · triangle = tide point</text>
+  <text x="20" y="1070" font-size="12" font-weight="400" fill="#5E5E5E">(modelled) · C = crowd event.</text>
+</svg>

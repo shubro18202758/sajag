@@ -1,0 +1,510 @@
+{
+ "schema": "sajag.landmarks/1",
+ "note": "Canonical Mumbai place ids and spellings (en/mr/hi). Coordinates checked against OpenStreetMap by the network stream (30 Oct 2026): a junction, subway or bridge landmark sits on the OSM road node of its junction in cities/mumbai/corridors.json; a hospital at its OSM object; raj_bhavan at its road approach on Walkeshwar Road. OSM does not map the Andheri Subway passage as a through road: andheri_subway is its Andheri East approach on Sahar Road. Road data (c) OpenStreetMap contributors, ODbL 1.0.",
+ "landmarks": [
+  {
+   "id": "csmt",
+   "kind": "terminal",
+   "lat": 18.9398,
+   "lon": 72.8355,
+   "en": "CSMT (Chhatrapati Shivaji Maharaj Terminus)",
+   "mr": "छत्रपती शिवाजी महाराज टर्मिनस",
+   "hi": "छत्रपति शिवाजी महाराज टर्मिनस"
+  },
+  {
+   "id": "churchgate",
+   "kind": "terminal",
+   "lat": 18.9353,
+   "lon": 72.8274,
+   "en": "Churchgate",
+   "mr": "चर्चगेट",
+   "hi": "चर्चगेट"
+  },
+  {
+   "id": "dadar",
+   "kind": "terminal",
+   "lat": 19.0186,
+   "lon": 72.8436,
+   "en": "Dadar station",
+   "mr": "दादर स्थानक",
+   "hi": "दादर स्टेशन"
+  },
+  {
+   "id": "dadar_tt",
+   "kind": "junction",
+   "lat": 19.01753,
+   "lon": 72.84811,
+   "en": "Dadar TT Circle",
+   "mr": "दादर टीटी सर्कल",
+   "hi": "दादर टीटी सर्कल"
+  },
+  {
+   "id": "hindmata",
+   "kind": "junction",
+   "lat": 19.00561,
+   "lon": 72.83976,
+   "en": "Hindmata (Dadar East)",
+   "mr": "हिंदमाता (दादर पूर्व)",
+   "hi": "हिंदमाता (दादर पूर्व)"
+  },
+  {
+   "id": "parel",
+   "kind": "junction",
+   "lat": 18.99789,
+   "lon": 72.83762,
+   "en": "Parel",
+   "mr": "परळ",
+   "hi": "परेल"
+  },
+  {
+   "id": "lalbaug",
+   "kind": "junction",
+   "lat": 18.99082,
+   "lon": 72.83574,
+   "en": "Lalbaug",
+   "mr": "लालबाग",
+   "hi": "लालबाग"
+  },
+  {
+   "id": "kings_circle",
+   "kind": "junction",
+   "lat": 19.0278,
+   "lon": 72.85649,
+   "en": "King's Circle (Matunga)",
+   "mr": "किंग्ज सर्कल (माटुंगा)",
+   "hi": "किंग्स सर्कल (माटुंगा)"
+  },
+  {
+   "id": "sion_circle",
+   "kind": "junction",
+   "lat": 19.04231,
+   "lon": 72.86345,
+   "en": "Sion Circle",
+   "mr": "सायन सर्कल",
+   "hi": "सायन सर्कल"
+  },
+  {
+   "id": "mahim_causeway",
+   "kind": "junction",
+   "lat": 19.04871,
+   "lon": 72.83824,
+   "en": "Mahim Causeway",
+   "mr": "माहीम कॉजवे",
+   "hi": "माहिम कॉजवे"
+  },
+  {
+   "id": "kalanagar",
+   "kind": "junction",
+   "lat": 19.05846,
+   "lon": 72.84645,
+   "en": "Kalanagar (Bandra East)",
+   "mr": "कलानगर (वांद्रे पूर्व)",
+   "hi": "कलानगर (बांद्रा पूर्व)"
+  },
+  {
+   "id": "bkc",
+   "kind": "junction",
+   "lat": 19.06521,
+   "lon": 72.86226,
+   "en": "Bandra Kurla Complex (BKC)",
+   "mr": "वांद्रे कुर्ला संकुल",
+   "hi": "बांद्रा कुर्ला कॉम्प्लेक्स"
+  },
+  {
+   "id": "haji_ali",
+   "kind": "junction",
+   "lat": 18.97811,
+   "lon": 72.81137,
+   "en": "Haji Ali junction",
+   "mr": "हाजी अली जंक्शन",
+   "hi": "हाजी अली जंक्शन"
+  },
+  {
+   "id": "worli_naka",
+   "kind": "junction",
+   "lat": 19.00629,
+   "lon": 72.81826,
+   "en": "Worli Naka",
+   "mr": "वरळी नाका",
+   "hi": "वर्ली नाका"
+  },
+  {
+   "id": "acharya_atre_chowk",
+   "kind": "junction",
+   "lat": 19.0013,
+   "lon": 72.81566,
+   "en": "Acharya Atre Chowk (Worli)",
+   "mr": "आचार्य अत्रे चौक (वरळी)",
+   "hi": "आचार्य अत्रे चौक (वर्ली)"
+  },
+  {
+   "id": "milan_subway",
+   "kind": "hydro",
+   "lat": 19.09048,
+   "lon": 72.84261,
+   "en": "Milan Subway (Santacruz)",
+   "mr": "मिलन सबवे (सांताक्रूझ)",
+   "hi": "मिलन सबवे (सांताक्रूज़)"
+  },
+  {
+   "id": "andheri_subway",
+   "kind": "hydro",
+   "lat": 19.1148,
+   "lon": 72.84742,
+   "en": "Andheri Subway",
+   "mr": "अंधेरी सबवे",
+   "hi": "अंधेरी सबवे"
+  },
+  {
+   "id": "andheri",
+   "kind": "terminal",
+   "lat": 19.1197,
+   "lon": 72.8464,
+   "en": "Andheri station",
+   "mr": "अंधेरी स्थानक",
+   "hi": "अंधेरी स्टेशन"
+  },
+  {
+   "id": "weh_andheri",
+   "kind": "junction",
+   "lat": 19.11658,
+   "lon": 72.85534,
+   "en": "Western Express Highway (Andheri)",
+   "mr": "पश्चिम द्रुतगती महामार्ग (अंधेरी)",
+   "hi": "वेस्टर्न एक्सप्रेस हाईवे (अंधेरी)"
+  },
+  {
+   "id": "bandra",
+   "kind": "terminal",
+   "lat": 19.0544,
+   "lon": 72.8406,
+   "en": "Bandra station",
+   "mr": "वांद्रे स्थानक",
+   "hi": "बांद्रा स्टेशन"
+  },
+  {
+   "id": "kurla",
+   "kind": "terminal",
+   "lat": 19.065,
+   "lon": 72.879,
+   "en": "Kurla station",
+   "mr": "कुर्ला स्थानक",
+   "hi": "कुर्ला स्टेशन"
+  },
+  {
+   "id": "ltt",
+   "kind": "terminal",
+   "lat": 19.069,
+   "lon": 72.891,
+   "en": "Lokmanya Tilak Terminus (LTT)",
+   "mr": "लोकमान्य टिळक टर्मिनस",
+   "hi": "लोकमान्य तिलक टर्मिनस"
+  },
+  {
+   "id": "ghatkopar",
+   "kind": "junction",
+   "lat": 19.086,
+   "lon": 72.9081,
+   "en": "Ghatkopar",
+   "mr": "घाटकोपर",
+   "hi": "घाटकोपर"
+  },
+  {
+   "id": "chembur",
+   "kind": "junction",
+   "lat": 19.062,
+   "lon": 72.9,
+   "en": "Chembur",
+   "mr": "चेंबूर",
+   "hi": "चेंबूर"
+  },
+  {
+   "id": "powai",
+   "kind": "junction",
+   "lat": 19.12624,
+   "lon": 72.89368,
+   "en": "Powai (JVLR)",
+   "mr": "पवई (जेव्हीएलआर)",
+   "hi": "पवई (जेवीएलआर)"
+  },
+  {
+   "id": "borivali",
+   "kind": "terminal",
+   "lat": 19.229,
+   "lon": 72.857,
+   "en": "Borivali station",
+   "mr": "बोरिवली स्थानक",
+   "hi": "बोरीवली स्टेशन"
+  },
+  {
+   "id": "airport_t2",
+   "kind": "terminal",
+   "lat": 19.0989,
+   "lon": 72.8746,
+   "en": "Mumbai Airport T2",
+   "mr": "मुंबई विमानतळ टी२",
+   "hi": "मुंबई हवाई अड्डा टी2"
+  },
+  {
+   "id": "airport_t1",
+   "kind": "terminal",
+   "lat": 19.0896,
+   "lon": 72.8656,
+   "en": "Mumbai Airport T1 (Santacruz)",
+   "mr": "मुंबई विमानतळ टी१ (सांताक्रूझ)",
+   "hi": "मुंबई हवाई अड्डा टी1 (सांताक्रूज़)"
+  },
+  {
+   "id": "sea_link",
+   "kind": "bridge",
+   "lat": 19.038,
+   "lon": 72.817,
+   "en": "Bandra–Worli Sea Link",
+   "mr": "वांद्रे–वरळी सागरी सेतू",
+   "hi": "बांद्रा–वर्ली सी लिंक"
+  },
+  {
+   "id": "atal_setu",
+   "kind": "bridge",
+   "lat": 18.99836,
+   "lon": 72.85481,
+   "en": "Atal Setu (Sewri end)",
+   "mr": "अटल सेतू (शिवडी टोक)",
+   "hi": "अटल सेतु (सेवरी छोर)"
+  },
+  {
+   "id": "mantralaya",
+   "kind": "agency",
+   "lat": 18.9271,
+   "lon": 72.8247,
+   "en": "Mantralaya",
+   "mr": "मंत्रालय",
+   "hi": "मंत्रालय"
+  },
+  {
+   "id": "bmc_hq",
+   "kind": "agency",
+   "lat": 18.94,
+   "lon": 72.835,
+   "en": "BMC headquarters",
+   "mr": "बृहन्मुंबई महानगरपालिका मुख्यालय",
+   "hi": "बीएमसी मुख्यालय"
+  },
+  {
+   "id": "police_hq",
+   "kind": "agency",
+   "lat": 18.947,
+   "lon": 72.834,
+   "en": "Mumbai Police headquarters (Crawford Market)",
+   "mr": "मुंबई पोलीस मुख्यालय (क्रॉफर्ड मार्केट)",
+   "hi": "मुंबई पुलिस मुख्यालय (क्रॉफर्ड मार्केट)"
+  },
+  {
+   "id": "traffic_hq",
+   "kind": "agency",
+   "lat": 19.017,
+   "lon": 72.817,
+   "en": "Mumbai Traffic Police headquarters (Worli)",
+   "mr": "मुंबई वाहतूक पोलीस मुख्यालय (वरळी)",
+   "hi": "मुंबई ट्रैफ़िक पुलिस मुख्यालय (वर्ली)"
+  },
+  {
+   "id": "wankhede",
+   "kind": "venue",
+   "lat": 18.9389,
+   "lon": 72.8258,
+   "en": "Wankhede Stadium",
+   "mr": "वानखेडे स्टेडियम",
+   "hi": "वानखेड़े स्टेडियम"
+  },
+  {
+   "id": "marine_drive",
+   "kind": "venue",
+   "lat": 18.943,
+   "lon": 72.823,
+   "en": "Marine Drive",
+   "mr": "मरीन ड्राइव्ह",
+   "hi": "मरीन ड्राइव"
+  },
+  {
+   "id": "girgaon_chowpatty",
+   "kind": "venue",
+   "lat": 18.9548,
+   "lon": 72.8136,
+   "en": "Girgaon Chowpatty",
+   "mr": "गिरगाव चौपाटी",
+   "hi": "गिरगांव चौपाटी"
+  },
+  {
+   "id": "gateway",
+   "kind": "venue",
+   "lat": 18.922,
+   "lon": 72.8347,
+   "en": "Gateway of India",
+   "mr": "गेटवे ऑफ इंडिया",
+   "hi": "गेटवे ऑफ इंडिया"
+  },
+  {
+   "id": "shivaji_park",
+   "kind": "venue",
+   "lat": 19.027,
+   "lon": 72.838,
+   "en": "Shivaji Park",
+   "mr": "शिवाजी पार्क",
+   "hi": "शिवाजी पार्क"
+  },
+  {
+   "id": "juhu_beach",
+   "kind": "venue",
+   "lat": 19.098,
+   "lon": 72.826,
+   "en": "Juhu Beach",
+   "mr": "जुहू चौपाटी",
+   "hi": "जुहू बीच"
+  },
+  {
+   "id": "lalbaugcha_raja",
+   "kind": "pandal",
+   "lat": 18.9946,
+   "lon": 72.8356,
+   "en": "Lalbaugcha Raja",
+   "mr": "लालबागचा राजा",
+   "hi": "लालबागचा राजा"
+  },
+  {
+   "id": "gsb_kings_circle",
+   "kind": "pandal",
+   "lat": 19.029,
+   "lon": 72.856,
+   "en": "GSB Seva Mandal (King's Circle)",
+   "mr": "जीएसबी सेवा मंडळ (किंग्ज सर्कल)",
+   "hi": "जीएसबी सेवा मंडल (किंग्स सर्कल)"
+  },
+  {
+   "id": "kem",
+   "kind": "hospital",
+   "lat": 19.0026,
+   "lon": 72.842,
+   "en": "KEM Hospital",
+   "mr": "केईएम रुग्णालय",
+   "hi": "केईएम अस्पताल"
+  },
+  {
+   "id": "sion_hospital",
+   "kind": "hospital",
+   "lat": 19.03636,
+   "lon": 72.85921,
+   "en": "Sion Hospital (LTMGH)",
+   "mr": "सायन रुग्णालय",
+   "hi": "सायन अस्पताल"
+  },
+  {
+   "id": "jj_hospital",
+   "kind": "hospital",
+   "lat": 18.96386,
+   "lon": 72.83479,
+   "en": "JJ Hospital",
+   "mr": "जे.जे. रुग्णालय",
+   "hi": "जे.जे. अस्पताल"
+  },
+  {
+   "id": "nair_hospital",
+   "kind": "hospital",
+   "lat": 18.97302,
+   "lon": 72.82191,
+   "en": "Nair Hospital",
+   "mr": "नायर रुग्णालय",
+   "hi": "नायर अस्पताल"
+  },
+  {
+   "id": "cooper_hospital",
+   "kind": "hospital",
+   "lat": 19.10785,
+   "lon": 72.83599,
+   "en": "Cooper Hospital",
+   "mr": "कूपर रुग्णालय",
+   "hi": "कूपर अस्पताल"
+  },
+  {
+   "id": "haji_ali_ps",
+   "kind": "hydro",
+   "lat": 18.981,
+   "lon": 72.813,
+   "en": "Haji Ali pumping station",
+   "mr": "हाजी अली उदंचन केंद्र",
+   "hi": "हाजी अली पंपिंग स्टेशन"
+  },
+  {
+   "id": "irla_ps",
+   "kind": "hydro",
+   "lat": 19.101,
+   "lon": 72.833,
+   "en": "Irla pumping station",
+   "mr": "इर्ला उदंचन केंद्र",
+   "hi": "इर्ला पंपिंग स्टेशन"
+  },
+  {
+   "id": "love_grove_ps",
+   "kind": "hydro",
+   "lat": 19.008,
+   "lon": 72.815,
+   "en": "Love Grove pumping station",
+   "mr": "लव्ह ग्रोव्ह उदंचन केंद्र",
+   "hi": "लव ग्रोव पंपिंग स्टेशन"
+  },
+  {
+   "id": "cleveland_bunder_ps",
+   "kind": "hydro",
+   "lat": 19.015,
+   "lon": 72.815,
+   "en": "Cleveland Bunder pumping station",
+   "mr": "क्लिव्हलँड बंदर उदंचन केंद्र",
+   "hi": "क्लीवलैंड बंदर पंपिंग स्टेशन"
+  },
+  {
+   "id": "britannia_ps",
+   "kind": "hydro",
+   "lat": 18.969,
+   "lon": 72.847,
+   "en": "Britannia pumping station (Reay Road)",
+   "mr": "ब्रिटानिया उदंचन केंद्र (रे रोड)",
+   "hi": "ब्रिटानिया पंपिंग स्टेशन (रे रोड)"
+  },
+  {
+   "id": "gazdarbandh_ps",
+   "kind": "hydro",
+   "lat": 19.076,
+   "lon": 72.829,
+   "en": "Gazdarbandh pumping station (Khar)",
+   "mr": "गझदरबंध उदंचन केंद्र (खार)",
+   "hi": "गज़दरबंध पंपिंग स्टेशन (खार)"
+  },
+  {
+   "id": "mithi_kurla",
+   "kind": "hydro",
+   "lat": 19.073,
+   "lon": 72.878,
+   "en": "Mithi River (Kurla)",
+   "mr": "मिठी नदी (कुर्ला)",
+   "hi": "मीठी नदी (कुर्ला)"
+  },
+  {
+   "id": "apollo_bunder",
+   "kind": "hydro",
+   "lat": 18.922,
+   "lon": 72.834,
+   "en": "Apollo Bunder tide station",
+   "mr": "अपोलो बंदर भरती केंद्र",
+   "hi": "अपोलो बंदर ज्वार स्टेशन"
+  },
+  {
+   "id": "raj_bhavan",
+   "kind": "agency",
+   "lat": 18.94627,
+   "lon": 72.79572,
+   "en": "Raj Bhavan (Malabar Hill)",
+   "mr": "राजभवन (मलबार हिल)",
+   "hi": "राजभवन (मालाबार हिल)"
+  }
+ ]
+}

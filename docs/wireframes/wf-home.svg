@@ -1,0 +1,288 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1480 1640" width="1480" height="1640" font-family="Inter, 'Noto Sans Devanagari', system-ui, sans-serif" role="img" aria-label="Sajag — Home (/) — low-fidelity wireframe">
+  <title>Sajag — Home (/) — low-fidelity wireframe</title>
+  <defs>
+    <pattern id="hatch" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="14" height="14" fill="#EFEFEF"/>
+      <line x1="0" y1="0" x2="0" y2="14" stroke="#E0E0E0" stroke-width="5"/>
+    </pattern>
+    <pattern id="hatchband" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="8" height="8" fill="#E4E4E4"/>
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#CFCFCF" stroke-width="3"/>
+    </pattern>
+  </defs>
+  <rect width="1480" height="1640" fill="#FFFFFF"/>
+  <text x="20" y="32" font-size="21" font-weight="700" fill="#262626">Sajag — Home (/)</text>
+  <text x="20" y="56" font-size="13" font-weight="400" fill="#5E5E5E">Low-fidelity wireframe at 1440 px wide: rail 76 px, top bar 60 px, gutter 24 px. Greyscale; colour only for meaning.</text>
+  <!-- frame -->
+  <rect x="20" y="78" width="1440" height="1330" rx="0" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.5"/>
+  <!-- AppRail: 76 px below 1500 px wide (88 px at &gt;= 1500); icon + label, never icon-only -->
+  <rect x="20" y="78" width="76" height="1330" rx="0" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1.2"/>
+  <rect x="36" y="90" width="44" height="44" rx="10" fill="#1A1A1A" stroke="#4A4A4A" stroke-width="1.2"/>
+  <text x="58" y="119" font-size="20" font-weight="700" text-anchor="middle" fill="#262626">S</text>
+  <rect x="28" y="148" width="60" height="56" rx="10" fill="#DCDCDC" stroke="#989898" stroke-width="1.6"/>
+  <circle cx="58" cy="168" r="8" fill="#CFCFCF" stroke="#8E8E8E" stroke-width="1"/>
+  <text x="58" y="194" font-size="10.5" font-weight="700" text-anchor="middle" fill="#262626">Home</text>
+  <rect x="28" y="212" width="60" height="56" rx="10" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1"/>
+  <circle cx="58" cy="232" r="8" fill="#DCDCDC" stroke="#989898" stroke-width="1"/>
+  <text x="58" y="258" font-size="10.5" font-weight="500" text-anchor="middle" fill="#262626">Map</text>
+  <rect x="28" y="276" width="60" height="56" rx="10" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1"/>
+  <circle cx="58" cy="296" r="8" fill="#DCDCDC" stroke="#989898" stroke-width="1"/>
+  <text x="58" y="322" font-size="10.5" font-weight="500" text-anchor="middle" fill="#262626">Decide</text>
+  <circle cx="74" cy="287" r="8" fill="#C2410C"/>
+  <text x="74" y="291" font-size="9.5" font-weight="700" text-anchor="middle" fill="#FFFFFF">3</text>
+  <rect x="28" y="340" width="60" height="56" rx="10" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1"/>
+  <circle cx="58" cy="360" r="8" fill="#DCDCDC" stroke="#989898" stroke-width="1"/>
+  <text x="58" y="386" font-size="10.5" font-weight="500" text-anchor="middle" fill="#262626">Plan</text>
+  <rect x="28" y="404" width="60" height="56" rx="10" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1"/>
+  <circle cx="58" cy="424" r="8" fill="#DCDCDC" stroke="#989898" stroke-width="1"/>
+  <text x="58" y="450" font-size="10.5" font-weight="500" text-anchor="middle" fill="#262626">Assistant</text>
+  <rect x="28" y="468" width="60" height="56" rx="10" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1"/>
+  <circle cx="58" cy="488" r="8" fill="#DCDCDC" stroke="#989898" stroke-width="1"/>
+  <text x="58" y="514" font-size="10.5" font-weight="500" text-anchor="middle" fill="#262626">Advisories</text>
+  <line x1="34" y1="1324" x2="82" y2="1324" stroke="#B5B5B5" stroke-width="1.2"/>
+  <rect x="28" y="1336" width="60" height="56" rx="10" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1.2"/>
+  <circle cx="58" cy="1356" r="8" fill="#DCDCDC" stroke="#989898" stroke-width="1"/>
+  <text x="58" y="1382" font-size="10.5" font-weight="500" text-anchor="middle" fill="#262626">Analyst</text>
+  <!-- TopBar: 60 px; title | search (the prominent element) | Report, language, alerts, officer -->
+  <rect x="96" y="78" width="1364" height="60" rx="0" fill="#F4F4F4" stroke="#ABABAB" stroke-width="1.2"/>
+  <text x="120" y="115" font-size="16" font-weight="700" fill="#262626">Good afternoon</text>
+  <rect x="360" y="88" width="560" height="40" rx="20" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.2"/>
+  <circle cx="382" cy="108" r="7" fill="#DCDCDC" stroke="#989898" stroke-width="1"/>
+  <text x="400" y="113" font-size="12.5" font-weight="400" fill="#5E5E5E">Search a place, road, event or vehicle mark</text>
+  <rect x="860" y="97" width="48" height="22" rx="11" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.2"/>
+  <text x="884" y="112" font-size="10" font-weight="600" text-anchor="middle" fill="#5E5E5E">Ctrl K</text>
+  <rect x="932" y="92" width="90" height="32" rx="16" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.2"/>
+  <rect x="948.8" y="99.8" width="6.4" height="10.4" rx="3.2" fill="#262626"/>
+  <path d="M946.4,107 a5.6,5.6 0 0 0 11.2,0" fill="none" stroke="#262626" stroke-width="1.3"/>
+  <line x1="952" y1="112.6" x2="952" y2="115.8" stroke="#262626" stroke-width="1.3"/>
+  <text x="966" y="113" font-size="11.5" font-weight="600" fill="#262626">Report</text>
+  <rect x="1032" y="92" width="132" height="32" rx="16" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.2"/>
+  <text x="1044" y="113" font-size="11.5" font-weight="400" fill="#5E5E5E">मराठी</text>
+  <text x="1084" y="113" font-size="11.5" font-weight="400" fill="#5E5E5E">·</text>
+  <text x="1093" y="113" font-size="11.5" font-weight="700" fill="#262626">EN</text>
+  <text x="1116" y="113" font-size="11.5" font-weight="400" fill="#5E5E5E">·</text>
+  <text x="1126" y="113" font-size="11.5" font-weight="400" fill="#5E5E5E">हिंदी</text>
+  <circle cx="1188" cy="108" r="13" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1"/>
+  <path d="M1182,112 q0,-11 6,-11 q6,0 6,11 z" fill="#FFFFFF" stroke="#4A4A4A" stroke-width="1.2"/>
+  <rect x="1212" y="88" width="236" height="40" rx="20" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1.2"/>
+  <circle cx="1232" cy="108" r="11" fill="#DCDCDC" stroke="#989898" stroke-width="1"/>
+  <text x="1250" y="105" font-size="11.5" font-weight="650" fill="#262626">On duty: A. Patil</text>
+  <text x="1250" y="119" font-size="10" font-weight="400" fill="#5E5E5E">plates shown to A. Patil</text>
+  <!-- hero row: the featured decision | the city pulse -->
+  <rect x="120" y="162" width="836" height="320" rx="18" fill="#F4F4F4" stroke="#C2410C" stroke-width="1.6"/>
+  <rect x="656" y="182" width="280" height="280" rx="12" fill="url(#hatch)" stroke="#9A9A9A" stroke-width="1.2"/>
+  <text x="796" y="316" font-size="13" font-weight="600" text-anchor="middle" fill="#8A8A8A">map of the place</text>
+  <text x="796" y="336" font-size="11" font-weight="400" text-anchor="middle" fill="#8A8A8A">Dr Ambedkar Road → Hindmata</text>
+  <rect x="144" y="184" width="110.3" height="24" rx="12" fill="#FFF1E6" stroke="#C2410C" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="199.2" y="200" font-size="11" font-weight="600" text-anchor="middle" fill="#C2410C">Needs you now</text>
+  <rect x="262.3" y="184" width="124.7" height="24" rx="12" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="324.7" y="200" font-size="11" font-weight="600" text-anchor="middle" fill="#5E5E5E">Decision support</text>
+  <rect x="395" y="184" width="73.6" height="24" rx="12" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="431.8" y="200" font-size="11" font-weight="600" text-anchor="middle" fill="#5E5E5E">Modelled</text>
+  <text x="144" y="238" font-size="12" font-weight="400" fill="#5E5E5E">Waterlogging response · Dr Ambedkar Road</text>
+  <text x="144" y="270" font-size="24" font-weight="700" fill="#262626">Divert small vehicles off Dr</text>
+  <text x="144" y="301" font-size="24" font-weight="700" fill="#262626">Ambedkar Road before deep water</text>
+  <text x="144" y="376" font-size="19" font-weight="700" fill="#262626">45 min</text>
+  <text x="144" y="395" font-size="10.5" font-weight="400" fill="#5E5E5E">to deep water (10 to 30 cm)</text>
+  <text x="312" y="376" font-size="19" font-weight="700" fill="#262626">2 → 3</text>
+  <text x="312" y="395" font-size="10.5" font-weight="400" fill="#5E5E5E">risk class now → peak</text>
+  <text x="480" y="376" font-size="19" font-weight="700" fill="#262626">2 of 3</text>
+  <text x="480" y="395" font-size="10.5" font-weight="400" fill="#5E5E5E">pumps available · emulated</text>
+  <rect x="144" y="414" width="176" height="44" rx="22" fill="#262626" stroke="#262626" stroke-width="1.2"/>
+  <text x="232" y="441" font-size="14" font-weight="650" text-anchor="middle" fill="#FFFFFF">Review now →</text>
+  <text x="336" y="441" font-size="11.5" font-weight="400" fill="#5E5E5E">1 of 3 (stack pips)</text>
+  <text x="144" y="474" font-size="11.5" font-weight="400" fill="#5E5E5E">It keeps waiting until an officer decides. Nothing changes without a named officer.</text>
+  <rect x="980" y="162" width="456" height="320" rx="18" fill="#F4F4F4" stroke="#ABABAB" stroke-width="1.2"/>
+  <rect x="980" y="162" width="456" height="84" rx="18" fill="url(#hatch)" stroke="#9A9A9A" stroke-width="1.2"/>
+  <text x="1208" y="198" font-size="13" font-weight="600" text-anchor="middle" fill="#8A8A8A">Marine Drive at this hour</text>
+  <text x="1208" y="218" font-size="11" font-weight="400" text-anchor="middle" fill="#8A8A8A">Reference photo · not live</text>
+  <circle cx="1014" cy="278" r="16" fill="#DCDCDC" stroke="#989898" stroke-width="1"/>
+  <text x="1042" y="274" font-size="17" font-weight="700" fill="#262626">Traffic is building</text>
+  <text x="1042" y="292" font-size="11" font-weight="400" fill="#5E5E5E">Band amber since 12:05 · updated 12:40 IST</text>
+  <text x="1416" y="278" font-size="12" font-weight="650" text-anchor="end" fill="#1D5FD1">Open map ›</text>
+  <rect x="992" y="310" width="210" height="66" rx="10" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1.2"/>
+  <text x="1004" y="338" font-size="22" font-weight="700" fill="#C2410C">3</text>
+  <text x="1032" y="334" font-size="12" font-weight="600" fill="#262626">decisions need you</text>
+  <text x="1032" y="352" font-size="10.5" font-weight="400" fill="#5E5E5E">oldest waiting 6 min</text>
+  <rect x="1214" y="310" width="210" height="66" rx="10" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1.2"/>
+  <text x="1226" y="338" font-size="22" font-weight="700" fill="#262626">2</text>
+  <text x="1254" y="334" font-size="12" font-weight="600" fill="#262626">live operations</text>
+  <text x="1254" y="352" font-size="10.5" font-weight="400" fill="#5E5E5E">1 crowd event · 1 nowcast</text>
+  <rect x="992" y="384" width="210" height="66" rx="10" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1.2"/>
+  <text x="1004" y="412" font-size="22" font-weight="700" fill="#262626">2</text>
+  <text x="1032" y="408" font-size="12" font-weight="600" fill="#262626">reported events</text>
+  <text x="1032" y="426" font-size="10.5" font-weight="400" fill="#5E5E5E">1 news · 1 unverified</text>
+  <rect x="1214" y="384" width="210" height="66" rx="10" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <text x="1226" y="412" font-size="22" font-weight="700" fill="#262626">6</text>
+  <text x="1254" y="408" font-size="12" font-weight="600" fill="#262626">roads may waterlog</text>
+  <text x="1254" y="426" font-size="10.5" font-weight="400" fill="#5E5E5E">next 2 hours · modelled</text>
+  <line x1="992" y1="460" x2="1424" y2="460" stroke="#C8C8C8" stroke-width="1.2"/>
+  <text x="994" y="476" font-size="10.5" font-weight="400" fill="#5E5E5E">Rain live · tide modelled · pumps emulated · traffic simulated on every road</text>
+  <!-- what needs you -->
+  <text x="120" y="534" font-size="11.5" font-weight="600" fill="#8A8A8A">What needs you</text>
+  <text x="120" y="560" font-size="18" font-weight="700" fill="#262626">Needs your decision</text>
+  <text x="336.8" y="560" font-size="12" font-weight="400" fill="#5E5E5E">3 · soonest deadline first</text>
+  <text x="1436" y="560" font-size="12.5" font-weight="650" text-anchor="end" fill="#262626">Review all in order ›</text>
+  <rect x="120" y="580" width="424" height="250" rx="14" fill="#F4F4F4" stroke="#C2410C" stroke-width="1.5"/>
+  <rect x="120" y="580" width="424" height="96" rx="14" fill="url(#hatch)" stroke="#9A9A9A" stroke-width="1.2"/>
+  <text x="332" y="636" font-size="11.5" font-weight="600" text-anchor="middle" fill="#8A8A8A">map thumbnail of the place</text>
+  <rect x="132" y="590" width="100.1" height="22" rx="11" fill="#FFF1E6" stroke="#C2410C" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="182" y="604.8" font-size="10.5" font-weight="600" text-anchor="middle" fill="#C2410C">Waiting 6 min</text>
+  <rect x="238.1" y="590" width="71.2" height="22" rx="11" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="273.7" y="604.8" font-size="10.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Modelled</text>
+  <text x="136" y="702" font-size="11" font-weight="400" fill="#5E5E5E">Waterlogging response · Dr Ambedkar Road</text>
+  <text x="136" y="724" font-size="14" font-weight="650" fill="#262626">Divert small vehicles off Dr Ambedkar Road</text>
+  <text x="136" y="745" font-size="11.5" font-weight="400" fill="#5E5E5E">Deep water in about 45 min; the nowcast flags the next 2 hours.</text>
+  <text x="136" y="816" font-size="11" font-weight="400" fill="#5E5E5E">Decision support · waterlogging nowcast</text>
+  <text x="530" y="816" font-size="11.5" font-weight="650" text-anchor="end" fill="#C2410C">Review ›</text>
+  <rect x="566" y="580" width="424" height="250" rx="14" fill="#F4F4F4" stroke="#C2410C" stroke-width="1.5"/>
+  <rect x="566" y="580" width="424" height="96" rx="14" fill="url(#hatch)" stroke="#9A9A9A" stroke-width="1.2"/>
+  <text x="778" y="636" font-size="11.5" font-weight="600" text-anchor="middle" fill="#8A8A8A">map thumbnail of the place</text>
+  <rect x="578" y="590" width="100.1" height="22" rx="11" fill="#FFF1E6" stroke="#C2410C" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="628" y="604.8" font-size="10.5" font-weight="600" text-anchor="middle" fill="#C2410C">Waiting 4 min</text>
+  <rect x="684.1" y="590" width="71.2" height="22" rx="11" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="719.7" y="604.8" font-size="10.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Modelled</text>
+  <text x="582" y="702" font-size="11" font-weight="400" fill="#5E5E5E">Signal timing · Sion Circle</text>
+  <text x="582" y="724" font-size="14" font-weight="650" fill="#262626">+6 s green on the main road, for 30 min</text>
+  <text x="582" y="745" font-size="11.5" font-weight="400" fill="#5E5E5E">Delay −7.0% · cross street +18.5% · network −0.2% (twin,</text>
+  <text x="582" y="761" font-size="11.5" font-weight="400" fill="#5E5E5E">medium confidence)</text>
+  <text x="582" y="816" font-size="11" font-weight="400" fill="#5E5E5E">Decision support · traffic twin</text>
+  <text x="976" y="816" font-size="11.5" font-weight="650" text-anchor="end" fill="#C2410C">Review ›</text>
+  <rect x="1012" y="580" width="424" height="250" rx="14" fill="#F4F4F4" stroke="#C2410C" stroke-width="1.5"/>
+  <rect x="1012" y="580" width="424" height="96" rx="14" fill="url(#hatch)" stroke="#9A9A9A" stroke-width="1.2"/>
+  <text x="1224" y="636" font-size="11.5" font-weight="600" text-anchor="middle" fill="#8A8A8A">map thumbnail of the place</text>
+  <rect x="1024" y="590" width="100.1" height="22" rx="11" fill="#FFF1E6" stroke="#C2410C" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="1074" y="604.8" font-size="10.5" font-weight="600" text-anchor="middle" fill="#C2410C">Waiting 2 min</text>
+  <rect x="1130.1" y="590" width="201.7" height="22" rx="11" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="1230.9" y="604.8" font-size="10.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Forecast on simulated traffic</text>
+  <text x="1028" y="702" font-size="11" font-weight="400" fill="#5E5E5E">Forecast diversion · Kalanagar (Bandra East)</text>
+  <text x="1028" y="724" font-size="14" font-weight="650" fill="#262626">Divert via the Bandra–Worli Sea Link</text>
+  <text x="1028" y="745" font-size="11.5" font-weight="400" fill="#5E5E5E">V/C forecast 0.81 in 45 min (likely 0.72 to 0.89).</text>
+  <text x="1028" y="816" font-size="11" font-weight="400" fill="#5E5E5E">Decision support · corridor forecast</text>
+  <text x="1422" y="816" font-size="11.5" font-weight="650" text-anchor="end" fill="#C2410C">Review ›</text>
+  <!-- what is happening -->
+  <text x="120" y="874" font-size="11.5" font-weight="600" fill="#8A8A8A">What is happening</text>
+  <text x="120" y="900" font-size="18" font-weight="700" fill="#262626">Live operations</text>
+  <text x="790" y="900" font-size="18" font-weight="700" fill="#262626">Reported in the city</text>
+  <text x="1436" y="900" font-size="12.5" font-weight="650" text-anchor="end" fill="#1D5FD1">All reports ›</text>
+  <text x="790" y="918" font-size="11.5" font-weight="400" fill="#5E5E5E">about places, never people</text>
+  <rect x="120" y="930" width="317" height="190" rx="14" fill="#F4F4F4" stroke="#ABABAB" stroke-width="1.2" stroke-dasharray="6 4"/>
+  <rect x="134" y="942" width="45.4" height="22" rx="11" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="156.7" y="956.8" font-size="10.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Live</text>
+  <rect x="185.4" y="942" width="79.4" height="22" rx="11" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="225.1" y="956.8" font-size="10.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Simulated</text>
+  <text x="136" y="990" font-size="11" font-weight="400" fill="#5E5E5E">Crowd event · Lalbaugcha Raja</text>
+  <text x="136" y="1012" font-size="14" font-weight="650" fill="#262626">Ganeshotsav crowd: rolling holds on</text>
+  <text x="136" y="1031" font-size="14" font-weight="650" fill="#262626">Dr Ambedkar Road</text>
+  <text x="136" y="1052" font-size="11.5" font-weight="400" fill="#5E5E5E">Since 11:30 IST · 2 junctions on hold</text>
+  <text x="136" y="1106" font-size="11" font-weight="400" fill="#5E5E5E"></text>
+  <text x="423" y="1106" font-size="11.5" font-weight="650" text-anchor="end" fill="#262626">Open ›</text>
+  <rect x="449" y="930" width="317" height="190" rx="14" fill="#F4F4F4" stroke="#ABABAB" stroke-width="1.2" stroke-dasharray="6 4"/>
+  <rect x="463" y="942" width="71.2" height="22" rx="11" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="498.6" y="956.8" font-size="10.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Modelled</text>
+  <text x="465" y="990" font-size="11" font-weight="400" fill="#5E5E5E">Waterlogging nowcast · next 2 hours</text>
+  <text x="465" y="1012" font-size="14" font-weight="650" fill="#262626">6 roads flagged; Hindmata</text>
+  <text x="465" y="1031" font-size="14" font-weight="650" fill="#262626">deep water in 45 min</text>
+  <text x="465" y="1052" font-size="11.5" font-weight="400" fill="#5E5E5E">Rain live · tide modelled · pumps emulated</text>
+  <text x="465" y="1106" font-size="11" font-weight="400" fill="#5E5E5E"></text>
+  <text x="752" y="1106" font-size="11.5" font-weight="650" text-anchor="end" fill="#262626">Open ›</text>
+  <rect x="790" y="930" width="317" height="190" rx="14" fill="#F4F4F4" stroke="#ABABAB" stroke-width="1.2" stroke-dasharray="6 4"/>
+  <rect x="804" y="942" width="165.6" height="22" rx="11" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="886.8" y="956.8" font-size="10.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Field report · unverified</text>
+  <text x="806" y="990" font-size="11" font-weight="400" fill="#5E5E5E">Field report by voice · Hindmata</text>
+  <text x="806" y="1012" font-size="14" font-weight="650" fill="#262626">Waterlogging, high: "vehicles are</text>
+  <text x="806" y="1031" font-size="14" font-weight="650" fill="#262626">getting stuck"</text>
+  <text x="806" y="1052" font-size="11.5" font-weight="400" fill="#5E5E5E">Sent by A. Patil 12:31 IST · awaiting</text>
+  <text x="806" y="1068" font-size="11.5" font-weight="400" fill="#5E5E5E">confirmation</text>
+  <text x="806" y="1106" font-size="11" font-weight="400" fill="#5E5E5E"></text>
+  <text x="1093" y="1106" font-size="11.5" font-weight="650" text-anchor="end" fill="#262626">Open ›</text>
+  <rect x="1119" y="930" width="317" height="190" rx="14" fill="#F4F4F4" stroke="#ABABAB" stroke-width="1.2"/>
+  <rect x="1133" y="942" width="112.1" height="22" rx="11" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="1189" y="956.8" font-size="10.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">News-reported</text>
+  <text x="1135" y="990" font-size="11" font-weight="400" fill="#5E5E5E">Tree fall · Chembur</text>
+  <text x="1135" y="1012" font-size="14" font-weight="650" fill="#262626">Branches across one lane</text>
+  <text x="1135" y="1033" font-size="11.5" font-weight="400" fill="#5E5E5E">Credibility 0.62 · 2 publishers</text>
+  <text x="1135" y="1106" font-size="11" font-weight="400" fill="#5E5E5E"></text>
+  <text x="1422" y="1106" font-size="11.5" font-weight="650" text-anchor="end" fill="#262626">Open ›</text>
+  <!-- what is coming -->
+  <text x="120" y="1154" font-size="11.5" font-weight="600" fill="#8A8A8A">What is coming</text>
+  <text x="120" y="1180" font-size="18" font-weight="700" fill="#262626">Coming up</text>
+  <text x="237.8" y="1180" font-size="12" font-weight="400" fill="#5E5E5E">next 72 hours</text>
+  <text x="1436" y="1180" font-size="12.5" font-weight="650" text-anchor="end" fill="#262626">Plan a movement ›</text>
+  <rect x="120" y="1200" width="424" height="170" rx="14" fill="#F4F4F4" stroke="#ABABAB" stroke-width="1.2" stroke-dasharray="6 4"/>
+  <rect x="134" y="1212" width="201.7" height="22" rx="11" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="234.8" y="1226.8" font-size="10.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Forecast on simulated traffic</text>
+  <text x="136" y="1260" font-size="11" font-weight="400" fill="#5E5E5E">Forecast crossing · Kalanagar (Bandra East)</text>
+  <text x="136" y="1282" font-size="14" font-weight="650" fill="#262626">Crosses 0.8 V/C in 45 min</text>
+  <text x="136" y="1303" font-size="11.5" font-weight="400" fill="#5E5E5E">Likely 0.72 to 0.89 (p10 to p90). A diversion proposal waits for an</text>
+  <text x="136" y="1319" font-size="11.5" font-weight="400" fill="#5E5E5E">officer.</text>
+  <text x="136" y="1356" font-size="11" font-weight="400" fill="#5E5E5E">Forecast on simulated traffic</text>
+  <text x="530" y="1356" font-size="11.5" font-weight="650" text-anchor="end" fill="#262626">Open ›</text>
+  <rect x="566" y="1200" width="424" height="170" rx="14" fill="#F4F4F4" stroke="#ABABAB" stroke-width="1.2" stroke-dasharray="6 4"/>
+  <rect x="580" y="1212" width="71.2" height="22" rx="11" fill="#FFFFFF" stroke="#9A9A9A" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="615.6" y="1226.8" font-size="10.5" font-weight="600" text-anchor="middle" fill="#5E5E5E">Modelled</text>
+  <text x="582" y="1260" font-size="11" font-weight="400" fill="#5E5E5E">Tide · Apollo Bunder</text>
+  <text x="582" y="1282" font-size="14" font-weight="650" fill="#262626">Next high water around 14:00 IST</text>
+  <text x="582" y="1303" font-size="11.5" font-weight="400" fill="#5E5E5E">Outfall gates shut near high water, so rain drains slowly; the</text>
+  <text x="582" y="1319" font-size="11.5" font-weight="400" fill="#5E5E5E">nowcast already counts it.</text>
+  <text x="582" y="1356" font-size="11" font-weight="400" fill="#5E5E5E">Harmonic tide model, approximate</text>
+  <text x="976" y="1356" font-size="11.5" font-weight="650" text-anchor="end" fill="#262626">Open ›</text>
+  <rect x="1012" y="1200" width="424" height="170" rx="14" fill="#F4F4F4" stroke="#ABABAB" stroke-width="1.2"/>
+  <rect x="1026" y="1212" width="102.8" height="22" rx="11" fill="#EAF6EE" stroke="#15803D" stroke-width="1.1" stroke-dasharray="4 3"/>
+  <text x="1077.4" y="1226.8" font-size="10.5" font-weight="600" text-anchor="middle" fill="#15803D">Plan approved</text>
+  <text x="1028" y="1260" font-size="11" font-weight="400" fill="#5E5E5E">Protected movement · class Z</text>
+  <text x="1028" y="1282" font-size="14" font-weight="650" fill="#262626">Mantralaya → Mumbai Airport T2, tomorrow 10:30</text>
+  <text x="1028" y="1303" font-size="11.5" font-weight="400" fill="#5E5E5E">Route via the Coastal Road, Sea Link and WEH; holds published 2 hours</text>
+  <text x="1028" y="1319" font-size="11.5" font-weight="400" fill="#5E5E5E">ahead.</text>
+  <text x="1028" y="1356" font-size="11" font-weight="400" fill="#5E5E5E">Plan approved by A. Patil</text>
+  <text x="1422" y="1356" font-size="11.5" font-weight="650" text-anchor="end" fill="#262626">Open ›</text>
+  <!-- footer -->
+  <line x1="120" y1="1384" x2="1436" y2="1384" stroke="#C8C8C8" stroke-width="1.2"/>
+  <text x="120" y="1398" font-size="11.5" font-weight="400" fill="#5E5E5E">Vehicles only. Plates stay masked until a duty officer is named. · The assistant proposes. A named officer decides every action.</text>
+  <text x="1436" y="1398" font-size="11.5" font-weight="650" text-anchor="end" fill="#1D5FD1">Policies · Maps</text>
+  <circle cx="112" cy="158" r="10" fill="#4A4A4A"/>
+  <text x="112" y="162" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">1</text>
+  <circle cx="972" cy="158" r="10" fill="#4A4A4A"/>
+  <text x="972" y="162" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">2</text>
+  <circle cx="106" cy="530" r="10" fill="#4A4A4A"/>
+  <text x="106" y="534" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">3</text>
+  <circle cx="106" cy="870" r="10" fill="#4A4A4A"/>
+  <text x="106" y="874" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">4</text>
+  <circle cx="106" cy="1150" r="10" fill="#4A4A4A"/>
+  <text x="106" y="1154" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">5</text>
+  <rect x="20" y="1424" width="14" height="14" rx="3" fill="#E8E8E8" stroke="#A2A2A2" stroke-width="1.2"/>
+  <text x="42" y="1435" font-size="12" font-weight="400" fill="#5E5E5E">layout region</text>
+  <rect x="139.9" y="1424" width="14" height="14" rx="3" fill="#FFFFFF" stroke="#8A8A8A" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <text x="161.9" y="1435" font-size="12" font-weight="400" fill="#5E5E5E">dashed: modelled, simulated, emulated or unverified (or shown only when needed)</text>
+  <rect x="668.7" y="1424" width="14" height="14" rx="3" fill="url(#hatch)" stroke="#9A9A9A" stroke-width="1.2"/>
+  <text x="690.7" y="1435" font-size="12" font-weight="400" fill="#5E5E5E">map or picture</text>
+  <rect x="798.9" y="1424" width="14" height="14" rx="7" fill="#C2410C"/>
+  <text x="820.9" y="1435" font-size="12" font-weight="400" fill="#5E5E5E">needs an officer</text>
+  <rect x="939.4" y="1424" width="14" height="14" rx="7" fill="#B91C1C"/>
+  <text x="961.4" y="1435" font-size="12" font-weight="400" fill="#5E5E5E">danger</text>
+  <rect x="1020.4" y="1424" width="14" height="14" rx="7" fill="#15803D"/>
+  <text x="1042.4" y="1435" font-size="12" font-weight="400" fill="#5E5E5E">approved</text>
+  <rect x="1115.1" y="1424" width="14" height="14" rx="7" fill="#1D5FD1"/>
+  <text x="1137.1" y="1435" font-size="12" font-weight="400" fill="#5E5E5E">link / AI-written</text>
+  <rect x="1263" y="1424" width="14" height="14" rx="7" fill="#262626"/>
+  <text x="1285" y="1435" font-size="12" font-weight="400" fill="#5E5E5E">the one primary action</text>
+  <circle cx="30" cy="1474" r="10" fill="#4A4A4A"/>
+  <text x="30" y="1478" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">1</text>
+  <text x="50" y="1478" font-size="12" font-weight="400" fill="#262626">Featured decision: the soonest of the decisions waiting, with its place on a map, two or three figures and</text>
+  <text x="50" y="1494.8" font-size="12" font-weight="400" fill="#262626">one primary button. Orange marks what waits for a named officer.</text>
+  <circle cx="760" cy="1474" r="10" fill="#4A4A4A"/>
+  <text x="760" y="1478" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">2</text>
+  <text x="780" y="1478" font-size="12" font-weight="400" fill="#262626">City pulse: the band, four counts and the data line that says what is live, modelled, emulated or simulated.</text>
+  <circle cx="30" cy="1526" r="10" fill="#4A4A4A"/>
+  <text x="30" y="1530" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">3</text>
+  <text x="50" y="1530" font-size="12" font-weight="400" fill="#262626">What needs you: proposals from decision support (waterlogging nowcast, signal-timing twin, corridor</text>
+  <text x="50" y="1546.8" font-size="12" font-weight="400" fill="#262626">forecast). None acts on its own; if no one decides, the current plan holds.</text>
+  <circle cx="760" cy="1526" r="10" fill="#4A4A4A"/>
+  <text x="760" y="1530" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">4</text>
+  <text x="780" y="1530" font-size="12" font-weight="400" fill="#262626">What is happening: live operations (here a simulated Ganeshotsav crowd event and the modelled nowcast) and</text>
+  <text x="780" y="1546.8" font-size="12" font-weight="400" fill="#262626">reports about places from the city, each with its label.</text>
+  <circle cx="30" cy="1578" r="10" fill="#4A4A4A"/>
+  <text x="30" y="1582" font-size="11" font-weight="700" text-anchor="middle" fill="#FFFFFF">5</text>
+  <text x="50" y="1582" font-size="12" font-weight="400" fill="#262626">What is coming: forecast crossings (on simulated traffic until Mumbai traffic is recorded), the modelled</text>
+  <text x="50" y="1598.8" font-size="12" font-weight="400" fill="#262626">Arabian Sea tide and planned movements.</text>
+</svg>

@@ -1,0 +1,1640 @@
+{
+ "schema": "sajag.corridors/1",
+ "about": "Kolkata's curated corridor network (City Pack cities/kolkata/): the junctions (landmarks.json ids and spellings where the junction is a landmark; EN + Bengali names), the segments along the real OpenStreetMap roads between them, the station selection and the camera rules. scripts/gen_osm_network.py --city kolkata resolves every junction to the OSM node where its roads meet (nearest its anchor), traces every segment along its roads (one-ways honoured), and writes the seed SQL, scripts/data/osm_network.json (evidence), scripts/data/osm_network_map.json (the resolved table) and cities/kolkata/network.json. Road data (c) OpenStreetMap contributors, ODbL 1.0.",
+ "event_profiles": true,
+ "seed_junctions": "all",
+ "name_aliases": {
+  "ajc": [
+   "acharya",
+   "jagadish",
+   "chandra"
+  ],
+  "apc": [
+   "acharya",
+   "prafulla",
+   "chandra"
+  ],
+  "sp": [
+   "shyama",
+   "prasad"
+  ],
+  "em": [
+   "eastern",
+   "metropolitan"
+  ],
+  "vip": [
+   "kazi",
+   "nazrul",
+   "islam"
+  ],
+  "cr": [
+   "chittaranjan"
+  ],
+  "mg": [
+   "mahatma",
+   "gandhi"
+  ],
+  "dh": [
+   "diamond",
+   "harbour"
+  ],
+  "gt": [
+   "grand",
+   "trunk"
+  ]
+ },
+ "name_abbrev": {
+  "a.j.c.": "ajc",
+  "a.p.c.": "apc",
+  "s.p.": "sp",
+  "e.m.": "em",
+  "c.r.": "cr",
+  "m.g.": "mg",
+  "d.h.": "dh",
+  "g.t.": "gt",
+  "j.l.": "jl"
+ },
+ "connector_segment_ids": [
+  1010,
+  1011,
+  1015,
+  1022,
+  1045,
+  1061,
+  1062
+ ],
+ "peak_segment_ids": [
+  1001,
+  1003,
+  1004,
+  1008,
+  1016,
+  1017,
+  1022,
+  1027,
+  1035,
+  1036,
+  1039,
+  1051
+ ],
+ "junctions": [
+  {
+   "key": "nabanna",
+   "landmark": "nabanna",
+   "at": [
+    22.564,
+    88.3209
+   ],
+   "roads": [
+    "Grand Trunk Road"
+   ],
+   "junction_id": 1
+  },
+  {
+   "key": "howrah_station",
+   "landmark": "howrah_station",
+   "at": [
+    22.5858,
+    88.3442
+   ],
+   "roads": [
+    "Howrah Bridge|Rabindra Setu"
+   ],
+   "name": "Howrah Station (Howrah Bridge, Howrah end)",
+   "name_bn": "হাওড়া স্টেশন (হাওড়া ব্রিজ, হাওড়া প্রান্ত)",
+   "junction_id": 2
+  },
+  {
+   "key": "howrah_bridge",
+   "landmark": "howrah_bridge",
+   "at": [
+    22.5823,
+    88.3498
+   ],
+   "roads": [
+    "Mahatma Gandhi Road",
+    "Strand Road"
+   ],
+   "max_m": 120,
+   "name": "Howrah Bridge, Kolkata end",
+   "name_bn": "হাওড়া ব্রিজ, কলকাতা প্রান্ত",
+   "junction_id": 3
+  },
+  {
+   "key": "vidyasagar_setu",
+   "landmark": "vidyasagar_setu",
+   "at": [
+    22.5488,
+    88.331
+   ],
+   "roads": [
+    "Vidyasagar Flyover$|Vidyasagar Flyover ",
+    "Vidyasagar Flyover Ramp"
+   ],
+   "max_m": 40,
+   "name": "Vidyasagar Setu, Kolkata end",
+   "name_bn": "বিদ্যাসাগর সেতু, কলকাতা প্রান্ত",
+   "junction_id": 4
+  },
+  {
+   "key": "hastings",
+   "at": [
+    22.54361,
+    88.32963
+   ],
+   "roads": [
+    "Kidderpore Road",
+    "Strand Road",
+    "Vidyasagar Flyover Ramp"
+   ],
+   "max_m": 40,
+   "name": "Hastings crossing",
+   "name_bn": "হেস্টিংস মোড়",
+   "junction_id": 5
+  },
+  {
+   "key": "bbd_bag",
+   "landmark": "bbd_bag",
+   "at": [
+    22.574,
+    88.3515
+   ],
+   "roads": [
+    "Brabourne Road",
+    "BBD Bag|Lalbazar|Old Court House|Netaji Subhash|Dalhousie"
+   ],
+   "junction_id": 6
+  },
+  {
+   "key": "esplanade",
+   "landmark": "esplanade",
+   "at": [
+    22.56529,
+    88.35167
+   ],
+   "roads": [
+    "Chowringhee|Jawaharlal Nehru",
+    "Lenin Sarani"
+   ],
+   "max_m": 40,
+   "junction_id": 7
+  },
+  {
+   "key": "esplanade_sn_banerjee",
+   "at": [
+    22.5636,
+    88.3513
+   ],
+   "roads": [
+    "Chowringhee|Jawaharlal Nehru",
+    "Surendra Nath Ban"
+   ],
+   "max_m": 120,
+   "name": "Esplanade, SN Banerjee Road crossing",
+   "name_bn": "এসপ্ল্যানেড, এস এন ব্যানার্জি রোড মোড়",
+   "junction_id": 8
+  },
+  {
+   "key": "red_road",
+   "landmark": "red_road",
+   "at": [
+    22.5636,
+    88.3475
+   ],
+   "roads": [
+    "Indira Gandhi Sarani",
+    "Mayo Road|Old Court House"
+   ],
+   "max_m": 150,
+   "name": "Red Road, north end (Mayo Road)",
+   "name_bn": "রেড রোড, উত্তর প্রান্ত (মেয়ো রোড)",
+   "junction_id": 9
+  },
+  {
+   "key": "red_road_south",
+   "at": [
+    22.5555,
+    88.3445
+   ],
+   "roads": [
+    "Indira Gandhi Sarani",
+    "Kh?idd?err?[aeiou]*r[aeiou]*r?e? Road|Kidderpore|Dufferin"
+   ],
+   "max_m": 150,
+   "name": "Red Road, south end (Kidderpore Road)",
+   "name_bn": "রেড রোড, দক্ষিণ প্রান্ত (খিদিরপুর রোড)",
+   "junction_id": 10
+  },
+  {
+   "key": "babughat",
+   "landmark": "babughat",
+   "at": [
+    22.5672,
+    88.3412
+   ],
+   "roads": [
+    "Strand Road"
+   ],
+   "max_m": 250,
+   "name": "Babughat (Strand Road)",
+   "name_bn": "বাবুঘাট (স্ট্র্যান্ড রোড)",
+   "junction_id": 11
+  },
+  {
+   "key": "park_street",
+   "landmark": "park_street",
+   "at": [
+    22.5552,
+    88.3502
+   ],
+   "roads": [
+    "Chowringhee|Jawaharlal Nehru",
+    "Park Street(?! Flyover)"
+   ],
+   "max_m": 200,
+   "junction_id": 12
+  },
+  {
+   "key": "exide",
+   "landmark": "exide",
+   "at": [
+    22.5417,
+    88.3472
+   ],
+   "roads": [
+    "Jawaharlal Nehru",
+    "Ashutosh|Mukhejee",
+    "Acharya Jagadish|AJC Bose"
+   ],
+   "max_m": 120,
+   "junction_id": 13
+  },
+  {
+   "key": "mullickbazar",
+   "at": [
+    22.5467,
+    88.3615
+   ],
+   "roads": [
+    "Acharya Jagadish|AJC Bose",
+    "Park Street|Mother Teresa"
+   ],
+   "name": "Mullickbazar crossing",
+   "name_bn": "মল্লিকবাজার মোড়",
+   "junction_id": 14
+  },
+  {
+   "key": "moulali",
+   "landmark": "moulali",
+   "roads": [
+    "Acharya Jagadish|AJC Bose",
+    "Lenin Sarani|Surendra Nath Ban"
+   ],
+   "junction_id": 15
+  },
+  {
+   "key": "sealdah",
+   "landmark": "sealdah",
+   "at": [
+    22.5701,
+    88.3709
+   ],
+   "roads": [
+    "Acharya Prafulla",
+    "Vidyapati"
+   ],
+   "max_m": 120,
+   "junction_id": 16
+  },
+  {
+   "key": "park_circus",
+   "landmark": "park_circus",
+   "at": [
+    22.54308,
+    88.36585
+   ],
+   "roads": [
+    "Park Circus",
+    "Circus Avenue"
+   ],
+   "max_m": 30,
+   "junction_id": 17
+  },
+  {
+   "key": "hazra",
+   "landmark": "hazra",
+   "at": [
+    22.5238,
+    88.3464
+   ],
+   "roads": [
+    "Hazra Road",
+    "Shyama Prasad"
+   ],
+   "max_m": 120,
+   "junction_id": 18
+  },
+  {
+   "key": "kalighat",
+   "landmark": "kalighat",
+   "at": [
+    22.5149,
+    88.3461
+   ],
+   "roads": [
+    "Shyama Prasad",
+    "Meghnad Saha"
+   ],
+   "max_m": 120,
+   "name": "Kalighat (SP Mukherjee Road)",
+   "name_bn": "কালীঘাট (শ্যামাপ্রসাদ মুখার্জি রোড)",
+   "junction_id": 19
+  },
+  {
+   "key": "rashbehari",
+   "landmark": "rashbehari",
+   "at": [
+    22.517,
+    88.3457
+   ],
+   "roads": [
+    "Shyama Prasad",
+    "Rash Behari Avenue"
+   ],
+   "max_m": 120,
+   "junction_id": 20
+  },
+  {
+   "key": "tollygunge",
+   "landmark": "tollygunge",
+   "roads": [
+    "Deshapran",
+    "Prince Anwar Shah"
+   ],
+   "junction_id": 21
+  },
+  {
+   "key": "deshapriya_park",
+   "landmark": "deshapriya_park",
+   "roads": [
+    "Rash Behari Avenue",
+    "Sarat Bose|Lansdowne"
+   ],
+   "max_m": 350,
+   "name": "Deshapriya Park crossing",
+   "name_bn": "দেশপ্রিয় পার্ক মোড়",
+   "junction_id": 22
+  },
+  {
+   "key": "gariahat",
+   "landmark": "gariahat",
+   "at": [
+    22.51975,
+    88.36534
+   ],
+   "roads": [
+    "Rash Behari Avenue"
+   ],
+   "max_m": 30,
+   "junction_id": 23
+  },
+  {
+   "key": "ballygunge",
+   "landmark": "ballygunge",
+   "roads": [
+    "Gariahat Road",
+    "Hazra Road|Ballygunge Circular"
+   ],
+   "junction_id": 24
+  },
+  {
+   "key": "kidderpore",
+   "landmark": "kidderpore",
+   "at": [
+    22.5408,
+    88.3274
+   ],
+   "roads": [
+    "Diamond Harbour",
+    "Karl Marx|Garden Reach|Kh?idd?err?[aeiou]*r[aeiou]*r?e? Road|Kidderpore"
+   ],
+   "max_m": 300,
+   "junction_id": 25
+  },
+  {
+   "key": "majerhat",
+   "landmark": "majerhat",
+   "at": [
+    22.52,
+    88.324
+   ],
+   "roads": [
+    "Diamond Harbour|Majherhat|NH12",
+    "Burdwan Road"
+   ],
+   "max_m": 350,
+   "junction_id": 26
+  },
+  {
+   "key": "taratala",
+   "landmark": "taratala",
+   "at": [
+    22.5101,
+    88.3212
+   ],
+   "roads": [
+    "Diamond Harbour Road",
+    "Diamond harbour road|Taratala Flyover"
+   ],
+   "max_m": 80,
+   "name": "Taratala (Diamond Harbour Road)",
+   "name_bn": "তারাতলা (ডায়মন্ড হারবার রোড)",
+   "junction_id": 27
+  },
+  {
+   "key": "behala_chowrasta",
+   "landmark": "behala_chowrasta",
+   "at": [
+    22.487,
+    88.3131
+   ],
+   "roads": [
+    "Diamond Harbour",
+    "Biren Roy|Raja Rammohan"
+   ],
+   "max_m": 150,
+   "junction_id": 28
+  },
+  {
+   "key": "ruby",
+   "landmark": "ruby",
+   "roads": [
+    "Eastern Metropolitan Bypass|Ruby",
+    "Rash Behari Avenue Connector|Ruby Crossing"
+   ],
+   "junction_id": 29
+  },
+  {
+   "key": "science_city",
+   "landmark": "science_city",
+   "roads": [
+    "Eastern Metropolitan Bypass",
+    "Maa Flyover|SH3|Park Circus"
+   ],
+   "max_m": 400,
+   "junction_id": 30
+  },
+  {
+   "key": "chingrighata",
+   "landmark": "chingrighata",
+   "at": [
+    22.558,
+    88.4116
+   ],
+   "roads": [
+    "Eastern Metropolitan Bypass",
+    "Salt Lake Bypass",
+    "Canal South"
+   ],
+   "max_m": 100,
+   "junction_id": 31
+  },
+  {
+   "key": "salt_lake_stadium",
+   "landmark": "salt_lake_stadium",
+   "at": [
+    22.569,
+    88.404
+   ],
+   "roads": [
+    "Eastern Metropolitan Bypass"
+   ],
+   "max_m": 500,
+   "name": "Salt Lake Stadium (EM Bypass)",
+   "name_bn": "যুবভারতী ক্রীড়াঙ্গন (ইএম বাইপাস)",
+   "junction_id": 32
+  },
+  {
+   "key": "ultadanga",
+   "landmark": "ultadanga",
+   "at": [
+    22.59159,
+    88.39372
+   ],
+   "roads": [
+    "Kazi Nazrul Islam Avenue"
+   ],
+   "max_m": 30,
+   "junction_id": 33
+  },
+  {
+   "key": "lake_town",
+   "at": [
+    22.5985,
+    88.405
+   ],
+   "roads": [
+    "Kazi Nazrul Islam Avenue",
+    "Lake Town|Golaghata|Patipukur|Bangur"
+   ],
+   "max_m": 500,
+   "name": "Lake Town (VIP Road)",
+   "name_bn": "লেক টাউন (ভিআইপি রোড)",
+   "junction_id": 34
+  },
+  {
+   "key": "kestopur",
+   "landmark": "kestopur",
+   "at": [
+    22.6028,
+    88.4204
+   ],
+   "roads": [
+    "Kazi Nazrul Islam Avenue",
+    "Kestopur|Rabindra Pally"
+   ],
+   "max_m": 300,
+   "junction_id": 35
+  },
+  {
+   "key": "baguiati",
+   "at": [
+    22.615,
+    88.43
+   ],
+   "roads": [
+    "Kazi Nazrul Islam Avenue",
+    "Baguiati|Jyangra|Jessore|Arjunpur|Deshbandhu"
+   ],
+   "max_m": 400,
+   "name": "Baguiati (VIP Road)",
+   "name_bn": "বাগুইআটি (ভিআইপি রোড)",
+   "junction_id": 36
+  },
+  {
+   "key": "chinar_park",
+   "at": [
+    22.6268,
+    88.434
+   ],
+   "roads": [
+    "Kazi Nazrul Islam Avenue",
+    "Biswa Bangla"
+   ],
+   "max_m": 500,
+   "name": "Chinar Park (VIP Road)",
+   "name_bn": "চিনার পার্ক (ভিআইপি রোড)",
+   "junction_id": 37
+  },
+  {
+   "key": "airport",
+   "landmark": "airport",
+   "at": [
+    22.6399,
+    88.4332
+   ],
+   "roads": [
+    "Kazi Nazrul Islam Avenue"
+   ],
+   "max_m": 200,
+   "name": "Kolkata Airport (VIP Road gate)",
+   "name_bn": "কলকাতা বিমানবন্দর (ভিআইপি রোড গেট)",
+   "junction_id": 38
+  },
+  {
+   "key": "sector_v",
+   "landmark": "sector_v",
+   "roads": [
+    "Salt Lake Bypass|Street Number|Sector"
+   ],
+   "max_m": 600,
+   "junction_id": 39
+  },
+  {
+   "key": "biswa_bangla_sarani",
+   "landmark": "biswa_bangla_sarani",
+   "roads": [
+    "Biswa Bangla Sarani"
+   ],
+   "max_m": 500,
+   "junction_id": 40
+  },
+  {
+   "key": "shyambazar",
+   "landmark": "shyambazar",
+   "roads": [
+    "State Highway 1|Acharya Prafulla",
+    "Bidhan Sarani|Bupendra|Radha Gobinda|State Highway 1"
+   ],
+   "max_m": 250,
+   "junction_id": 41
+  },
+  {
+   "key": "maniktala",
+   "at": [
+    22.586,
+    88.3746
+   ],
+   "roads": [
+    "Acharya Prafulla",
+    "Maniktala|Vivekananda|Manicktala"
+   ],
+   "max_m": 400,
+   "name": "Maniktala crossing",
+   "name_bn": "মানিকতলা মোড়",
+   "junction_id": 42
+  },
+  {
+   "key": "girish_park",
+   "at": [
+    22.5862,
+    88.3622
+   ],
+   "roads": [
+    "Chittaranjan Avenue",
+    "Vivekananda|Beadon"
+   ],
+   "max_m": 400,
+   "name": "Girish Park crossing",
+   "name_bn": "গিরিশ পার্ক মোড়",
+   "junction_id": 43
+  },
+  {
+   "key": "central_avenue_mg_road",
+   "at": [
+    22.57863,
+    88.36075
+   ],
+   "roads": [
+    "Chittaranjan Avenue",
+    "Mahatma Gandhi"
+   ],
+   "max_m": 100,
+   "name": "Central Avenue - MG Road crossing",
+   "name_bn": "সেন্ট্রাল অ্যাভিনিউ - এমজি রোড মোড়",
+   "junction_id": 44
+  },
+  {
+   "key": "college_street",
+   "at": [
+    22.5762,
+    88.364
+   ],
+   "roads": [
+    "College Street|Bidhan Sarani|Bankim Chatterjee",
+    "Mahatma Gandhi"
+   ],
+   "max_m": 300,
+   "name": "College Street - MG Road crossing",
+   "name_bn": "কলেজ স্ট্রিট - এমজি রোড মোড়",
+   "junction_id": 45
+  },
+  {
+   "key": "prinsep_ghat",
+   "landmark": "prinsep_ghat",
+   "at": [
+    22.55257,
+    88.33147
+   ],
+   "roads": [
+    "Strand Road"
+   ],
+   "max_m": 100,
+   "name": "Prinsep Ghat (Strand Road)",
+   "name_bn": "প্রিন্সেপ ঘাট (স্ট্র্যান্ড রোড)",
+   "junction_id": 46
+  },
+  {
+   "key": "bagbazar",
+   "landmark": "bagbazar",
+   "at": [
+    22.60454,
+    88.36517
+   ],
+   "roads": [
+    "Bagbazar Street",
+    "Rabindra Sarani"
+   ],
+   "max_m": 100,
+   "name": "Bagbazar (Rabindra Sarani crossing)",
+   "name_bn": "বাগবাজার (রবীন্দ্র সরণি মোড়)",
+   "junction_id": 47
+  },
+  {
+   "key": "victoria_memorial",
+   "landmark": "victoria_memorial",
+   "at": [
+    22.5476,
+    88.34287
+   ],
+   "roads": [
+    "Queensway",
+    "Victoria Circus|Cathedral"
+   ],
+   "max_m": 100,
+   "name": "Victoria Memorial (Queensway)",
+   "name_bn": "ভিক্টোরিয়া মেমোরিয়াল (কুইন্স ওয়ে)",
+   "junction_id": 48
+  },
+  {
+   "key": "airport_terminal",
+   "landmark": "airport",
+   "at": [
+    22.6515,
+    88.4417
+   ],
+   "roads": [],
+   "max_m": 150,
+   "name": "Kolkata Airport, terminal forecourt",
+   "name_bn": "কলকাতা বিমানবন্দর, টার্মিনাল চত্বর",
+   "junction_id": 49
+  }
+ ],
+ "segments": [
+  {
+   "segment_id": 1001,
+   "road_name": "Howrah Bridge (Rabindra Setu)",
+   "from": "howrah_station",
+   "to": "howrah_bridge",
+   "follow": "Howrah Bridge|Rabindra Setu",
+   "oneway": false
+  },
+  {
+   "segment_id": 1002,
+   "road_name": "Grand Trunk Road",
+   "from": "nabanna",
+   "to": "howrah_station",
+   "follow": "Grand Trunk",
+   "oneway": false
+  },
+  {
+   "segment_id": 1003,
+   "road_name": "Vidyasagar Setu (NH12, Vidyasagar Flyover)",
+   "from": "nabanna",
+   "to": "vidyasagar_setu",
+   "follow": "Vidyasagar|NH12",
+   "oneway": false,
+   "min_class": "trunk"
+  },
+  {
+   "segment_id": 1004,
+   "road_name": "Strand Road",
+   "from": "howrah_bridge",
+   "to": "babughat",
+   "follow": "Strand Road",
+   "oneway": false
+  },
+  {
+   "segment_id": 1005,
+   "road_name": "Strand Road",
+   "from": "babughat",
+   "to": "prinsep_ghat",
+   "follow": "Strand Road",
+   "oneway": false
+  },
+  {
+   "segment_id": 1006,
+   "road_name": "Strand Road",
+   "from": "prinsep_ghat",
+   "to": "hastings",
+   "follow": "Strand Road",
+   "oneway": false
+  },
+  {
+   "segment_id": 1007,
+   "road_name": "Vidyasagar Flyover Ramp",
+   "from": "vidyasagar_setu",
+   "to": "hastings",
+   "follow": "Vidyasagar Flyover Ramp",
+   "oneway": false
+  },
+  {
+   "segment_id": 1008,
+   "road_name": "Brabourne Road",
+   "from": "howrah_bridge",
+   "to": "bbd_bag",
+   "follow": "Brabourne",
+   "oneway": true
+  },
+  {
+   "segment_id": 1009,
+   "road_name": "Old Court House Street",
+   "from": "bbd_bag",
+   "to": "red_road",
+   "follow": "Old Court House|Council House|BBD Bag|Hare",
+   "oneway": true
+  },
+  {
+   "segment_id": 1010,
+   "road_name": "Rani Rashmoni Avenue",
+   "from": "red_road",
+   "to": "esplanade_sn_banerjee",
+   "follow": "Rani Rashmoni|Mayo|Indira|Chowringhee",
+   "oneway": true
+  },
+  {
+   "segment_id": 1011,
+   "road_name": "Esplanade - Old Court House Street link",
+   "from": "esplanade_sn_banerjee",
+   "to": "red_road",
+   "follow": "Esplanade Row|Old Court House|Surendra|Chowringhee",
+   "oneway": true
+  },
+  {
+   "segment_id": 1012,
+   "road_name": "Sahid Khudiram Bose Road",
+   "from": "red_road",
+   "to": "babughat",
+   "follow": "Khudiram|Eden|Strand",
+   "oneway": false
+  },
+  {
+   "segment_id": 1013,
+   "road_name": "Indira Gandhi Sarani (Red Road)",
+   "from": "red_road",
+   "to": "red_road_south",
+   "follow": "Indira Gandhi Sarani|Red Road",
+   "oneway": false
+  },
+  {
+   "segment_id": 1014,
+   "road_name": "Kidderpore Road",
+   "from": "red_road_south",
+   "to": "hastings",
+   "follow": "Kh?idd?err?[aeiou]*r[aeiou]*r?e? Road|Kidderpore",
+   "oneway": false
+  },
+  {
+   "segment_id": 1015,
+   "road_name": "Queensway - Cathedral Road",
+   "from": "victoria_memorial",
+   "to": "exide",
+   "follow": "Cathedral|Queensway|Acharya Jagadish|Victoria",
+   "oneway": false
+  },
+  {
+   "segment_id": 1016,
+   "road_name": "Jawaharlal Nehru Road",
+   "from": "esplanade",
+   "to": "esplanade_sn_banerjee",
+   "follow": "Jawaharlal Nehru|Chowringhee",
+   "oneway": false
+  },
+  {
+   "segment_id": 1017,
+   "road_name": "Jawaharlal Nehru Road",
+   "from": "esplanade_sn_banerjee",
+   "to": "park_street",
+   "follow": "Jawaharlal Nehru|Chowringhee",
+   "oneway": false
+  },
+  {
+   "segment_id": 1018,
+   "road_name": "Jawaharlal Nehru Road",
+   "from": "park_street",
+   "to": "exide",
+   "follow": "Jawaharlal Nehru|Chowringhee",
+   "oneway": false
+  },
+  {
+   "segment_id": 1019,
+   "road_name": "Ashutosh Mukherjee Road",
+   "from": "exide",
+   "to": "hazra",
+   "follow": "Ashutosh|Mukhejee|Shyama Prasad",
+   "oneway": false
+  },
+  {
+   "segment_id": 1020,
+   "road_name": "Shyama Prasad Mukherjee Road",
+   "from": "hazra",
+   "to": "rashbehari",
+   "follow": "Shyama Prasad",
+   "oneway": false
+  },
+  {
+   "segment_id": 1021,
+   "road_name": "Shyama Prasad Mukherjee Road",
+   "from": "rashbehari",
+   "to": "kalighat",
+   "follow": "Shyama Prasad",
+   "oneway": false
+  },
+  {
+   "segment_id": 1022,
+   "road_name": "SP Mukherjee Road - Deshapran Sashmal Road",
+   "from": "kalighat",
+   "to": "tollygunge",
+   "follow": "Shyama Prasad|Deshapran",
+   "oneway": false
+  },
+  {
+   "segment_id": 1023,
+   "road_name": "Acharya Jagadish Chandra Bose Road",
+   "from": "exide",
+   "to": "mullickbazar",
+   "follow": "Acharya Jagadish|AJC Bose",
+   "oneway": false,
+   "min_class": "primary"
+  },
+  {
+   "segment_id": 1024,
+   "road_name": "Acharya Jagadish Chandra Bose Road",
+   "from": "mullickbazar",
+   "to": "moulali",
+   "follow": "Acharya Jagadish|AJC Bose",
+   "oneway": false,
+   "min_class": "primary"
+  },
+  {
+   "segment_id": 1025,
+   "road_name": "Acharya Jagadish Chandra Bose Road",
+   "from": "moulali",
+   "to": "sealdah",
+   "follow": "Acharya Jagadish|AJC Bose|Vidyapati",
+   "oneway": false
+  },
+  {
+   "segment_id": 1026,
+   "road_name": "Park Street",
+   "from": "park_street",
+   "to": "mullickbazar",
+   "follow": "Park Street(?! Flyover)",
+   "oneway": false
+  },
+  {
+   "segment_id": 1027,
+   "road_name": "Mother Teresa Sarani (Park Street)",
+   "from": "mullickbazar",
+   "to": "park_circus",
+   "follow": "Park Street|Mother Teresa",
+   "oneway": false
+  },
+  {
+   "segment_id": 1028,
+   "road_name": "AJC Bose Road Flyover",
+   "from": "vidyasagar_setu",
+   "to": "park_circus",
+   "follow": "Acharya Jagadish|AJC Bose|Vidyasagar Flyover|Maa Flyover",
+   "oneway": false,
+   "min_class": "trunk"
+  },
+  {
+   "segment_id": 1029,
+   "road_name": "Maa Flyover",
+   "from": "park_circus",
+   "to": "science_city",
+   "follow": "Maa Flyover|Parama",
+   "oneway": false,
+   "min_class": "primary"
+  },
+  {
+   "segment_id": 1030,
+   "road_name": "Syed Amir Ali Avenue",
+   "from": "park_circus",
+   "to": "ballygunge",
+   "follow": "Gariahat|Syed Amir Ali",
+   "oneway": false
+  },
+  {
+   "segment_id": 1031,
+   "road_name": "Hazra Road",
+   "from": "hazra",
+   "to": "ballygunge",
+   "follow": "Hazra Road",
+   "oneway": false
+  },
+  {
+   "segment_id": 1032,
+   "road_name": "Rash Behari Avenue",
+   "from": "rashbehari",
+   "to": "deshapriya_park",
+   "follow": "Rash Behari Avenue",
+   "oneway": false
+  },
+  {
+   "segment_id": 1033,
+   "road_name": "Rash Behari Avenue",
+   "from": "deshapriya_park",
+   "to": "gariahat",
+   "follow": "Rash Behari Avenue",
+   "oneway": false
+  },
+  {
+   "segment_id": 1034,
+   "road_name": "Rash Behari Avenue Connector (Bijon Setu)",
+   "from": "gariahat",
+   "to": "ruby",
+   "follow": "Rash Behari Avenue Connector|Bijon",
+   "oneway": false
+  },
+  {
+   "segment_id": 1035,
+   "road_name": "Eastern Metropolitan Bypass",
+   "from": "ruby",
+   "to": "science_city",
+   "follow": "Eastern Metropolitan Bypass|EM Bypass",
+   "oneway": false
+  },
+  {
+   "segment_id": 1036,
+   "road_name": "Eastern Metropolitan Bypass",
+   "from": "science_city",
+   "to": "chingrighata",
+   "follow": "Eastern Metropolitan Bypass|EM Bypass",
+   "oneway": false
+  },
+  {
+   "segment_id": 1037,
+   "road_name": "Eastern Metropolitan Bypass",
+   "from": "chingrighata",
+   "to": "salt_lake_stadium",
+   "follow": "Eastern Metropolitan Bypass|EM Bypass",
+   "oneway": false
+  },
+  {
+   "segment_id": 1038,
+   "road_name": "Eastern Metropolitan Bypass",
+   "from": "salt_lake_stadium",
+   "to": "ultadanga",
+   "follow": "Eastern Metropolitan Bypass|EM Bypass",
+   "oneway": false
+  },
+  {
+   "segment_id": 1039,
+   "road_name": "VIP Road (Kazi Nazrul Islam Avenue)",
+   "from": "ultadanga",
+   "to": "lake_town",
+   "follow": "Kazi Nazrul Islam Avenue|VIP Road",
+   "oneway": false
+  },
+  {
+   "segment_id": 1040,
+   "road_name": "VIP Road (Kazi Nazrul Islam Avenue)",
+   "from": "lake_town",
+   "to": "kestopur",
+   "follow": "Kazi Nazrul Islam Avenue|VIP Road",
+   "oneway": false
+  },
+  {
+   "segment_id": 1041,
+   "road_name": "VIP Road (Kazi Nazrul Islam Avenue)",
+   "from": "kestopur",
+   "to": "baguiati",
+   "follow": "Kazi Nazrul Islam Avenue|VIP Road",
+   "oneway": false
+  },
+  {
+   "segment_id": 1042,
+   "road_name": "VIP Road (Kazi Nazrul Islam Avenue)",
+   "from": "baguiati",
+   "to": "chinar_park",
+   "follow": "Kazi Nazrul Islam Avenue|VIP Road",
+   "oneway": false
+  },
+  {
+   "segment_id": 1043,
+   "road_name": "VIP Road (Kazi Nazrul Islam Avenue)",
+   "from": "chinar_park",
+   "to": "airport",
+   "follow": "Kazi Nazrul Islam Avenue|VIP Road",
+   "oneway": false
+  },
+  {
+   "segment_id": 1044,
+   "road_name": "Salt Lake Bypass",
+   "from": "chingrighata",
+   "to": "sector_v",
+   "follow": "Salt Lake Bypass|Street Number",
+   "oneway": false
+  },
+  {
+   "segment_id": 1045,
+   "road_name": "Sector V - New Town link",
+   "from": "sector_v",
+   "to": "biswa_bangla_sarani",
+   "follow": "Biswa Bangla|Major Arterial|Street Number|Nabadiganta",
+   "oneway": false
+  },
+  {
+   "segment_id": 1046,
+   "road_name": "Biswa Bangla Sarani",
+   "from": "biswa_bangla_sarani",
+   "to": "chinar_park",
+   "follow": "Biswa Bangla",
+   "oneway": false
+  },
+  {
+   "segment_id": 1047,
+   "road_name": "Karl Marx Sarani",
+   "from": "hastings",
+   "to": "kidderpore",
+   "follow": "Kh?idd?err?[aeiou]*r[aeiou]*r?e? Road|Kidderpore|Garden Reach|Diamond|Karl Marx|Hastings|Strand",
+   "oneway": false
+  },
+  {
+   "segment_id": 1048,
+   "road_name": "Diamond Harbour Road",
+   "from": "kidderpore",
+   "to": "majerhat",
+   "follow": "Diamond Harbour|Majherhat",
+   "oneway": false
+  },
+  {
+   "segment_id": 1049,
+   "road_name": "Diamond Harbour Road (Majerhat bridge, Taratala flyover)",
+   "from": "majerhat",
+   "to": "taratala",
+   "follow": "Diamond [Hh]arbour|Taratala Flyover|Majherhat|NH12",
+   "oneway": false,
+   "name_note": "OSM names this carriageway Majherhat Flyover (the Majerhat bridge, NH12) and Taratala Flyover: it is Diamond Harbour Road over the railway at Majerhat and the elevated road at Taratala"
+  },
+  {
+   "segment_id": 1050,
+   "road_name": "Diamond Harbour Road",
+   "from": "taratala",
+   "to": "behala_chowrasta",
+   "follow": "Diamond [Hh]arbour",
+   "oneway": false
+  },
+  {
+   "segment_id": 1051,
+   "road_name": "Chittaranjan Avenue",
+   "from": "esplanade",
+   "to": "central_avenue_mg_road",
+   "follow": "Chittaranjan",
+   "oneway": false
+  },
+  {
+   "segment_id": 1052,
+   "road_name": "Chittaranjan Avenue",
+   "from": "central_avenue_mg_road",
+   "to": "girish_park",
+   "follow": "Chittaranjan",
+   "oneway": false
+  },
+  {
+   "segment_id": 1053,
+   "road_name": "Chittaranjan Avenue",
+   "from": "girish_park",
+   "to": "shyambazar",
+   "follow": "Chittaranjan|Bupendra|Bhupen|Jatindra",
+   "oneway": false
+  },
+  {
+   "segment_id": 1054,
+   "road_name": "Mahatma Gandhi Road",
+   "from": "central_avenue_mg_road",
+   "to": "howrah_bridge",
+   "follow": "Mahatma Gandhi",
+   "oneway": true
+  },
+  {
+   "segment_id": 1055,
+   "road_name": "Mahatma Gandhi Road",
+   "from": "central_avenue_mg_road",
+   "to": "college_street",
+   "follow": "Mahatma Gandhi",
+   "oneway": false
+  },
+  {
+   "segment_id": 1056,
+   "road_name": "Acharya Prafulla Chandra Road",
+   "from": "sealdah",
+   "to": "maniktala",
+   "follow": "Acharya Prafulla",
+   "oneway": false
+  },
+  {
+   "segment_id": 1057,
+   "road_name": "Acharya Prafulla Chandra Road",
+   "from": "maniktala",
+   "to": "shyambazar",
+   "follow": "Acharya Prafulla|State Highway 1",
+   "oneway": false
+  },
+  {
+   "segment_id": 1058,
+   "road_name": "Bidhan Sarani",
+   "from": "college_street",
+   "to": "shyambazar",
+   "follow": "College Street|Bidhan Sarani|Hedua",
+   "oneway": false
+  },
+  {
+   "segment_id": 1059,
+   "road_name": "Vivekananda Road",
+   "from": "girish_park",
+   "to": "maniktala",
+   "follow": "Vivekananda",
+   "oneway": false
+  },
+  {
+   "segment_id": 1060,
+   "road_name": "Bagbazar Street",
+   "from": "bagbazar",
+   "to": "shyambazar",
+   "follow": "Bagbazar|Girish Avenue|Shyam Bazar|State Highway 1",
+   "oneway": false
+  },
+  {
+   "segment_id": 1061,
+   "road_name": "Strand Road - Strand Bank Road",
+   "from": "howrah_bridge",
+   "to": "bagbazar",
+   "follow": "Strand|Bagbazar|Kashi Mitra|Ahiritola|Kumartuli|Rabindra Sarani",
+   "oneway": false
+  },
+  {
+   "segment_id": 1062,
+   "road_name": "Radha Gobinda Kar Road - Bidhannagar Road",
+   "from": "shyambazar",
+   "to": "ultadanga",
+   "follow": "Radha Gobinda|R\\.? ?G\\.? Kar|Raja Dinendra|Ultadanga|Bidhannagar|Khanna|Canal",
+   "oneway": false
+  },
+  {
+   "segment_id": 1063,
+   "road_name": "Lenin Sarani",
+   "from": "esplanade",
+   "to": "moulali",
+   "follow": "Lenin Sarani",
+   "oneway": true
+  },
+  {
+   "segment_id": 1064,
+   "road_name": "Surendra Nath Banerjee Road",
+   "from": "moulali",
+   "to": "esplanade_sn_banerjee",
+   "follow": "Surendra Nath Ban",
+   "oneway": true
+  },
+  {
+   "segment_id": 1065,
+   "road_name": "Airport approach road",
+   "from": "airport",
+   "to": "airport_terminal",
+   "follow": null,
+   "oneway": false,
+   "name_note": "OSM leaves the airport's internal approach roads unnamed (highway=service): this is the road from the VIP Road gate to the terminal forecourt"
+  }
+ ],
+ "cameras": {
+  "auto": true,
+  "note": "Every camera site is MODELLED (real CCTV / ANPR positions are not public): stop-line sites on the two main approaches of each junction OpenStreetMap marks as signalised (EM-Jnn, EM-JnnB), bridge-head sites and watchlist sweep sites. Source 'emulated' in the store.",
+  "overrides": {
+   "ultadanga": {
+    "prefer_road": "VIP Road",
+    "approaches": 1
+   }
+  },
+  "extra": [
+   {
+    "camera_id": "EM-BR-HOWRAH-W",
+    "kind": "anpr",
+    "mode": "bridge",
+    "segment_id": 1001,
+    "head": "start",
+    "label": "Modelled site Howrah Bridge: Howrah head, eastbound"
+   },
+   {
+    "camera_id": "EM-BR-HOWRAH-E",
+    "kind": "anpr",
+    "mode": "bridge",
+    "segment_id": 1001,
+    "head": "end",
+    "label": "Modelled site Howrah Bridge: Kolkata head, westbound"
+   },
+   {
+    "camera_id": "EM-BR-SETU-W",
+    "kind": "anpr",
+    "mode": "bridge",
+    "segment_id": 1003,
+    "head": "start",
+    "label": "Modelled site Vidyasagar Setu: Howrah head, eastbound"
+   },
+   {
+    "camera_id": "EM-BR-SETU-E",
+    "kind": "anpr",
+    "mode": "bridge",
+    "segment_id": 1003,
+    "head": "end",
+    "label": "Modelled site Vidyasagar Setu: Kolkata head, westbound"
+   },
+   {
+    "camera_id": "EM-BR-MAJERHAT-N",
+    "kind": "anpr",
+    "mode": "bridge",
+    "segment_id": 1049,
+    "head": "start",
+    "label": "Modelled site Majerhat bridge: north head, southbound"
+   },
+   {
+    "camera_id": "EM-BR-MAJERHAT-S",
+    "kind": "anpr",
+    "mode": "bridge",
+    "segment_id": 1049,
+    "head": "end",
+    "label": "Modelled site Majerhat bridge: south head, northbound"
+   },
+   {
+    "camera_id": "EM-CAM-01",
+    "kind": "anpr",
+    "mode": "sweep",
+    "segment_id": 1008,
+    "label": "Modelled ANPR sweep site 1: Brabourne Road"
+   },
+   {
+    "camera_id": "EM-CAM-02",
+    "kind": "anpr",
+    "mode": "sweep",
+    "segment_id": 1001,
+    "label": "Modelled ANPR sweep site 2: Howrah Bridge"
+   },
+   {
+    "camera_id": "EM-CAM-03",
+    "kind": "anpr",
+    "mode": "sweep",
+    "segment_id": 1004,
+    "label": "Modelled ANPR sweep site 3: Strand Road"
+   },
+   {
+    "camera_id": "EM-CAM-04",
+    "kind": "anpr",
+    "mode": "sweep",
+    "segment_id": 1051,
+    "label": "Modelled ANPR sweep site 4: Chittaranjan Avenue"
+   }
+  ],
+  "approaches": 2
+ },
+ "stations": {
+  "source": "osm",
+  "note": "OpenStreetMap objects (police stations, traffic guards, fire stations, hospitals tagged emergency=yes) at their OSM position; name_bn is OSM name:bn where OSM carries one, else this pack's Bengali name. The emulated posts are placed by this demo beside the junction they serve and say so in both languages.",
+  "osm": [
+   {
+    "osm_ref": "node/1186025286",
+    "name_bn": "লালবাজার (কলকাতা পুলিশ সদর)",
+    "name": "Kolkata Police Headquarters (Lalbazar)"
+   },
+   {
+    "osm_ref": "node/9609217417",
+    "name_bn": "হেয়ার স্ট্রিট থানা"
+   },
+   {
+    "osm_ref": "node/9609217317",
+    "name_bn": "বউবাজার থানা",
+    "name": "Bowbazar Police Station"
+   },
+   {
+    "osm_ref": "node/2813667209",
+    "name_bn": "নিউ মার্কেট থানা"
+   },
+   {
+    "osm_ref": "node/6147021003",
+    "name_bn": "পার্ক স্ট্রিট থানা"
+   },
+   {
+    "osm_ref": "node/9911020617",
+    "name_bn": "ময়দান থানা",
+    "name": "Maidan Police Station"
+   },
+   {
+    "osm_ref": "way/469676580",
+    "name_bn": "হেস্টিংস থানা"
+   },
+   {
+    "osm_ref": "node/2471894120",
+    "name_bn": "ভবানীপুর থানা"
+   },
+   {
+    "osm_ref": "way/190923516",
+    "name_bn": "কালীঘাট থানা"
+   },
+   {
+    "osm_ref": "node/11867113269",
+    "name_bn": "গড়িয়াহাট থানা",
+    "name": "Gariahat Police Station"
+   },
+   {
+    "osm_ref": "node/4356781089",
+    "name_bn": "বেনিয়াপুকুর থানা",
+    "name": "Beniapukur Police Station"
+   },
+   {
+    "osm_ref": "node/2266850257",
+    "name_bn": "মুচিপাড়া থানা"
+   },
+   {
+    "osm_ref": "node/2168547540",
+    "name_bn": "মানিকতলা থানা",
+    "name": "Manicktala Police Station"
+   },
+   {
+    "osm_ref": "node/8185335386",
+    "name_bn": "বড়তলা থানা"
+   },
+   {
+    "osm_ref": "node/11436646870",
+    "name_bn": "টালা থানা"
+   },
+   {
+    "osm_ref": "node/3324142934",
+    "name_bn": "জোড়াবাগান থানা"
+   },
+   {
+    "osm_ref": "node/5253366364",
+    "name_bn": "ফুলবাগান থানা",
+    "name": "Phoolbagan Police Station"
+   },
+   {
+    "osm_ref": "way/1378250710",
+    "name_bn": "বেলেঘাটা থানা"
+   },
+   {
+    "osm_ref": "node/14315746925",
+    "name_bn": "তারাতলা থানা",
+    "name": "Taratala Police Station"
+   },
+   {
+    "osm_ref": "node/3363195847",
+    "name_bn": "বেহালা থানা",
+    "name": "Behala Police Station"
+   },
+   {
+    "osm_ref": "way/359314010",
+    "name_bn": "বিধাননগর দক্ষিণ থানা"
+   },
+   {
+    "osm_ref": "way/357517702",
+    "name_bn": "বিধাননগর উত্তর থানা",
+    "name": "Bidhannagar North Police Station"
+   },
+   {
+    "osm_ref": "node/2461308616",
+    "name_bn": "সেক্টর ফাইভ থানা",
+    "name": "Sector V Police Station"
+   },
+   {
+    "osm_ref": "node/2454270956",
+    "name_bn": "বাগুইআটি থানা"
+   },
+   {
+    "osm_ref": "way/348966850",
+    "name_bn": "নিউ টাউন থানা"
+   },
+   {
+    "osm_ref": "way/384710781",
+    "name_bn": "শিবপুর থানা"
+   },
+   {
+    "osm_ref": "node/9911020517",
+    "name_bn": "সাউথ ট্রাফিক গার্ড (এক্সাইড)",
+    "agency": "traffic",
+    "name": "Exide South Traffic Guard"
+   },
+   {
+    "osm_ref": "node/2461251766",
+    "name_bn": "তিলজলা ট্রাফিক গার্ড",
+    "agency": "traffic"
+   },
+   {
+    "osm_ref": "node/9641103817",
+    "name_bn": "উল্টোডাঙা ট্রাফিক গার্ড",
+    "agency": "traffic",
+    "name": "Ultadanga Traffic Guard"
+   },
+   {
+    "osm_ref": "node/2813628983",
+    "name_bn": "পশ্চিমবঙ্গ অগ্নিনির্বাপণ পরিষেবা সদর দপ্তর",
+    "name": "West Bengal Fire Service HQ"
+   },
+   {
+    "osm_ref": "node/9567719217",
+    "name_bn": "সি আর অ্যাভিনিউ দমকল কেন্দ্র",
+    "name": "C R Avenue Fire Station"
+   },
+   {
+    "osm_ref": "way/172425257",
+    "name_bn": "কালীঘাট দমকল কেন্দ্র",
+    "name": "Kalighat Fire Station"
+   },
+   {
+    "osm_ref": "relation/14226213",
+    "name_bn": "মানিকতলা দমকল কেন্দ্র"
+   },
+   {
+    "osm_ref": "way/359129222",
+    "name_bn": "শিবপুর দমকল কেন্দ্র",
+    "name": "Shibpur Fire Station"
+   },
+   {
+    "osm_ref": "way/1234548390",
+    "name_bn": "নীলরতন সরকার মেডিকেল কলেজ ও হাসপাতাল"
+   },
+   {
+    "osm_ref": "way/116334765",
+    "name_bn": "আর জি কর মেডিকেল কলেজ ও হাসপাতাল",
+    "name": "R. G. Kar Medical College and Hospital"
+   },
+   {
+    "osm_ref": "way/122192000",
+    "name_bn": "শম্ভুনাথ পণ্ডিত হাসপাতাল"
+   },
+   {
+    "osm_ref": "node/7199853340",
+    "name_bn": "লেডি ডাফরিন ভিক্টোরিয়া হাসপাতাল",
+    "name": "Lady Dufferin Victoria Hospital"
+   },
+   {
+    "osm_ref": "way/191033307",
+    "name_bn": "ইএসআই হাসপাতাল, মানিকতলা"
+   },
+   {
+    "osm_ref": "way/404712375",
+    "name_bn": "বি পি পোদ্দার হাসপাতাল",
+    "name": "B. P. Poddar Hospital"
+   },
+   {
+    "osm_ref": "way/224922460",
+    "name_bn": "রুবি জেনারেল হাসপাতাল"
+   },
+   {
+    "osm_ref": "way/150612581",
+    "name_bn": "অ্যাপোলো গ্লেনিগলস হাসপাতাল"
+   },
+   {
+    "osm_ref": "way/173731205",
+    "name_bn": "কলম্বিয়া এশিয়া হাসপাতাল"
+   },
+   {
+    "osm_ref": "node/7074329148",
+    "name_bn": "চার্নক হাসপাতাল",
+    "name": "Charnock Hospital"
+   }
+  ],
+  "emulated": [
+   {
+    "station_id": "CV-ESPLANADE",
+    "agency": "jan_rakshak",
+    "kind": "jr_post",
+    "name": "Civic Volunteer Post - Esplanade (emulated)",
+    "name_bn": "সিভিক ভলান্টিয়ার পোস্ট - এসপ্ল্যানেড (এমুলেটেড)",
+    "lon": 88.35195,
+    "lat": 22.5649
+   },
+   {
+    "station_id": "CV-SHYAMBAZAR",
+    "agency": "jan_rakshak",
+    "kind": "jr_post",
+    "name": "Civic Volunteer Post - Shyambazar (emulated)",
+    "name_bn": "সিভিক ভলান্টিয়ার পোস্ট - শ্যামবাজার (এমুলেটেড)",
+    "lon": 88.3732,
+    "lat": 22.6015
+   },
+   {
+    "station_id": "CV-GARIAHAT",
+    "agency": "jan_rakshak",
+    "kind": "jr_post",
+    "name": "Civic Volunteer Post - Gariahat (emulated)",
+    "name_bn": "সিভিক ভলান্টিয়ার পোস্ট - গড়িয়াহাট (এমুলেটেড)",
+    "lon": 88.365,
+    "lat": 22.5194
+   },
+   {
+    "station_id": "EMS-108-SSKM",
+    "agency": "ambulance",
+    "kind": "ems_base",
+    "name": "Ambulance (108) Base - SSKM (emulated)",
+    "name_bn": "অ্যাম্বুলেন্স (১০৮) বেস - এসএসকেএম (এমুলেটেড)",
+    "lon": 88.344,
+    "lat": 22.539
+   },
+   {
+    "station_id": "EMS-108-SALT-LAKE",
+    "agency": "ambulance",
+    "kind": "ems_base",
+    "name": "Ambulance (108) Base - Salt Lake (emulated)",
+    "name_bn": "অ্যাম্বুলেন্স (১০৮) বেস - সল্টলেক (এমুলেটেড)",
+    "lon": 88.4095,
+    "lat": 22.57
+   },
+   {
+    "station_id": "TP-PARK-CIRCUS",
+    "agency": "traffic",
+    "kind": "police_station",
+    "name": "Traffic Police Kiosk - Park Circus (emulated)",
+    "name_bn": "ট্রাফিক পুলিশ কিয়স্ক - পার্ক সার্কাস (এমুলেটেড)",
+    "lon": 88.3656,
+    "lat": 22.5427
+   }
+  ]
+ },
+ "osm_extracts": [
+  {
+   "label": "airport",
+   "note": "the airport's internal approach roads (highway=service, unnamed in OSM) between the VIP Road gate and the terminal forecourt",
+   "query": "[out:json][timeout:120][bbox:22.630,88.425,22.665,88.460];\nway[\"highway\"~\"^(primary|secondary|tertiary|unclassified|residential|service|road)(_link)?$\"];\nout body geom;\n"
+  }
+ ]
+}

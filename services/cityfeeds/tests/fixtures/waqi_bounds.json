@@ -1,0 +1,6 @@
+{"status": "ok", "data": [
+ {"lat": 18.9936, "lon": 72.8128, "uid": 10001, "aqi": "152", "station": {"name": "Worli, Mumbai, India", "time": "2026-10-29T01:00:00+05:30"}},
+ {"lat": 19.1375, "lon": 72.9151, "uid": 10002, "aqi": "-", "station": {"name": "Powai, Mumbai, India", "time": "2026-10-28T09:00:00+05:30"}},
+ {"lat": 18.91, "lon": 72.82, "uid": 10003, "aqi": "88", "station": {"name": "Colaba, Mumbai, India", "time": "2026-10-29T01:00:00+05:30"}},
+ {"lat": 19.6, "lon": 73.5, "uid": 10004, "aqi": "60", "station": {"name": "Somewhere far, India", "time": "2026-10-29T01:00:00+05:30"}}
+]}

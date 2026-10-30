@@ -1,0 +1,107 @@
+[KOLKATA-ERA: measured on the earlier Kolkata request set; not re-run on the Mumbai set. See KOLKATA_ERA.md.]
+reference v1-27b-live:served (pplx-decider-v1-27b): wall p50/p95 1292.4/2097.9 ms, labelled 23/26, gated 0.6
+
+flash-v1.2:per_question: wall p50/p95 257.2/402.8 ms, labelled 22/26, gated 0.783, peak alloc 8.915 GiB, load 46.4 s
+  choice   n=59  agree=0.7627 mean|dp|=0.1414
+  noul     n=35  agree=0.6571 mean|dp|=0.1903
+  score    n=40  agree=0.675 mean|dp|=0.1592 mean|dvalue|=0.1605
+    dss_coa/coa_strategy                       n=12  agree=0.75 |dp|=0.1339
+    dss_coa/disruption_tolerance               n=12  agree=0.6667 |dv|=0.1407 ref_v=0.4574 cand_v=0.332
+    dss_coa/urgency                            n=12  agree=1.0 |dp|=0.1709 ref_P(true)=0.6473 cand_P(true)=0.4797
+    escort_departure/departure                 n=6   agree=0.3333 |dp|=0.2971
+    escort_incident/action                     n=8   agree=0.625 |dp|=0.1066
+    escort_incident/urgency                    n=8   agree=0.75 |dp|=0.2464 ref_P(true)=0.4786 cand_P(true)=0.2322
+    post_clearance/restoration_posture         n=5   agree=0.6 |dp|=0.3359
+    pre_movement/disruption_tolerance          n=12  agree=0.5833 |dv|=0.2428 ref_v=0.7728 cand_v=0.53
+    pre_movement/route_strategy                n=12  agree=0.8333 |dp|=0.1331
+    pre_movement/urgency                       n=12  agree=0.1667 |dp|=0.1837 ref_P(true)=0.5374 cand_P(true)=0.3537
+    probe/probe                                n=1   agree=1.0 |dp|=0.1008 ref_P(true)=0.3491 cand_P(true)=0.4499
+    probe/readiness                            n=2   agree=0.5 |dv|=0.0551 ref_v=0.3812 cand_v=0.4364
+    probe/reroute                              n=2   agree=1.0 |dp|=0.0921
+    probe/urgency                              n=2   agree=1.0 |dp|=0.167 ref_P(true)=0.5422 cand_P(true)=0.7093
+    tool_selection/decision_confidence         n=14  agree=0.7857 |dv|=0.1221 ref_v=0.4406 cand_v=0.4579
+    tool_selection/next_tool                   n=14  agree=1.0 |dp|=0.0455
+
+flash-v1.2:joint: wall p50/p95 149.6/171.1 ms, labelled 23/26, gated 0.55, peak alloc 8.915 GiB, load 46.4 s
+  choice   n=59  agree=0.7627 mean|dp|=0.1505
+  noul     n=35  agree=0.5714 mean|dp|=0.1887
+  score    n=40  agree=0.3 mean|dp|=0.3094 mean|dvalue|=0.3165
+    dss_coa/coa_strategy                       n=12  agree=0.6667 |dp|=0.1408
+    dss_coa/disruption_tolerance               n=12  agree=0.8333 |dv|=0.1355 ref_v=0.4574 cand_v=0.3219
+    dss_coa/urgency                            n=12  agree=0.8333 |dp|=0.1787 ref_P(true)=0.6473 cand_P(true)=0.4835
+    escort_departure/departure                 n=6   agree=0.3333 |dp|=0.2971
+    escort_incident/action                     n=8   agree=0.75 |dp|=0.0998
+    escort_incident/urgency                    n=8   agree=0.75 |dp|=0.172 ref_P(true)=0.4786 cand_P(true)=0.3066
+    post_clearance/restoration_posture         n=5   agree=0.6 |dp|=0.3359
+    pre_movement/disruption_tolerance          n=12  agree=0.0 |dv|=0.4179 ref_v=0.7728 cand_v=0.3549
+    pre_movement/route_strategy                n=12  agree=0.8333 |dp|=0.1389
+    pre_movement/urgency                       n=12  agree=0.1667 |dp|=0.2259 ref_P(true)=0.5374 cand_P(true)=0.3116
+    probe/probe                                n=1   agree=1.0 |dp|=0.1008 ref_P(true)=0.3491 cand_P(true)=0.4499
+    probe/readiness                            n=2   agree=0.0 |dv|=0.2502 ref_v=0.3812 cand_v=0.6314
+    probe/reroute                              n=2   agree=1.0 |dp|=0.0137
+    probe/urgency                              n=2   agree=0.5 |dp|=0.1365 ref_P(true)=0.5422 cand_P(true)=0.5
+    tool_selection/decision_confidence         n=14  agree=0.1429 |dv|=0.3942 ref_v=0.4406 cand_v=0.8152
+    tool_selection/next_tool                   n=14  agree=1.0 |dp|=0.0882
+
+flash-v1.2-fla:per_question: wall p50/p95 152.2/243.8 ms, labelled 22/26, gated 0.783, peak alloc 8.919 GiB, load 45.5 s
+  choice   n=59  agree=0.7627 mean|dp|=0.1426
+  noul     n=35  agree=0.6571 mean|dp|=0.1906
+  score    n=40  agree=0.675 mean|dp|=0.1585 mean|dvalue|=0.1599
+    dss_coa/coa_strategy                       n=12  agree=0.75 |dp|=0.1351
+    dss_coa/disruption_tolerance               n=12  agree=0.6667 |dv|=0.1398 ref_v=0.4574 cand_v=0.3346
+    dss_coa/urgency                            n=12  agree=1.0 |dp|=0.17 ref_P(true)=0.6473 cand_P(true)=0.4796
+    escort_departure/departure                 n=6   agree=0.3333 |dp|=0.2955
+    escort_incident/action                     n=8   agree=0.625 |dp|=0.1097
+    escort_incident/urgency                    n=8   agree=0.75 |dp|=0.2484 ref_P(true)=0.4786 cand_P(true)=0.2302
+    post_clearance/restoration_posture         n=5   agree=0.6 |dp|=0.3387
+    pre_movement/disruption_tolerance          n=12  agree=0.5833 |dv|=0.2389 ref_v=0.7728 cand_v=0.5339
+    pre_movement/route_strategy                n=12  agree=0.8333 |dp|=0.1324
+    pre_movement/urgency                       n=12  agree=0.1667 |dp|=0.1853 ref_P(true)=0.5374 cand_P(true)=0.3522
+    probe/probe                                n=1   agree=1.0 |dp|=0.1008 ref_P(true)=0.3491 cand_P(true)=0.4499
+    probe/readiness                            n=2   agree=0.5 |dv|=0.0566 ref_v=0.3812 cand_v=0.4378
+    probe/reroute                              n=2   agree=1.0 |dp|=0.0986
+    probe/urgency                              n=2   agree=1.0 |dp|=0.1591 ref_P(true)=0.5422 cand_P(true)=0.7013
+    tool_selection/decision_confidence         n=14  agree=0.7857 |dv|=0.1242 ref_v=0.4406 cand_v=0.4574
+    tool_selection/next_tool                   n=14  agree=1.0 |dp|=0.0472
+
+flash-v1.2-fla:joint: wall p50/p95 91.1/101.9 ms, labelled 23/26, gated 0.55, peak alloc 8.919 GiB, load 45.5 s
+  choice   n=59  agree=0.7458 mean|dp|=0.1508
+  noul     n=35  agree=0.6 mean|dp|=0.1872
+  score    n=40  agree=0.3 mean|dp|=0.31 mean|dvalue|=0.3171
+    dss_coa/coa_strategy                       n=12  agree=0.6667 |dp|=0.1429
+    dss_coa/disruption_tolerance               n=12  agree=0.8333 |dv|=0.1374 ref_v=0.4574 cand_v=0.3206
+    dss_coa/urgency                            n=12  agree=0.9167 |dp|=0.179 ref_P(true)=0.6473 cand_P(true)=0.482
+    escort_departure/departure                 n=6   agree=0.3333 |dp|=0.2955
+    escort_incident/action                     n=8   agree=0.75 |dp|=0.0981
+    escort_incident/urgency                    n=8   agree=0.75 |dp|=0.1699 ref_P(true)=0.4786 cand_P(true)=0.3087
+    post_clearance/restoration_posture         n=5   agree=0.6 |dp|=0.3387
+    pre_movement/disruption_tolerance          n=12  agree=0.0 |dv|=0.4193 ref_v=0.7728 cand_v=0.3535
+    pre_movement/route_strategy                n=12  agree=0.75 |dp|=0.1399
+    pre_movement/urgency                       n=12  agree=0.1667 |dp|=0.2233 ref_P(true)=0.5374 cand_P(true)=0.3142
+    probe/probe                                n=1   agree=1.0 |dp|=0.1008 ref_P(true)=0.3491 cand_P(true)=0.4499
+    probe/readiness                            n=2   agree=0.0 |dv|=0.2438 ref_v=0.3812 cand_v=0.625
+    probe/reroute                              n=2   agree=1.0 |dp|=0.0133
+    probe/urgency                              n=2   agree=0.5 |dp|=0.132 ref_P(true)=0.5422 cand_P(true)=0.5045
+    tool_selection/decision_confidence         n=14  agree=0.1429 |dv|=0.394 ref_v=0.4406 cand_v=0.815
+    tool_selection/next_tool                   n=14  agree=1.0 |dp|=0.0877
+
+flash-v1.2-extras:per_question_named_options: wall p50/p95 None/None ms, labelled 22/26, gated 0.8, peak alloc 8.915 GiB, load 45.8 s
+  choice   n=59  agree=0.7627 mean|dp|=0.1452
+  noul     n=35  agree=0.6571 mean|dp|=0.1908
+  score    n=40  agree=0.7 mean|dp|=0.1588 mean|dvalue|=0.1601
+    dss_coa/coa_strategy                       n=12  agree=0.75 |dp|=0.1367
+    dss_coa/disruption_tolerance               n=12  agree=0.75 |dv|=0.1383 ref_v=0.4574 cand_v=0.3328
+    dss_coa/urgency                            n=12  agree=1.0 |dp|=0.1695 ref_P(true)=0.6473 cand_P(true)=0.4791
+    escort_departure/departure                 n=6   agree=0.3333 |dp|=0.2914
+    escort_incident/action                     n=8   agree=0.625 |dp|=0.1103
+    escort_incident/urgency                    n=8   agree=0.75 |dp|=0.2453 ref_P(true)=0.4786 cand_P(true)=0.2333
+    post_clearance/restoration_posture         n=5   agree=0.6 |dp|=0.3475
+    pre_movement/disruption_tolerance          n=12  agree=0.5833 |dv|=0.2388 ref_v=0.7728 cand_v=0.534
+    pre_movement/route_strategy                n=12  agree=0.8333 |dp|=0.134
+    pre_movement/urgency                       n=12  agree=0.1667 |dp|=0.1872 ref_P(true)=0.5374 cand_P(true)=0.3502
+    probe/probe                                n=1   agree=1.0 |dp|=0.1008 ref_P(true)=0.3491 cand_P(true)=0.4499
+    probe/readiness                            n=2   agree=0.5 |dv|=0.0551 ref_v=0.3812 cand_v=0.4364
+    probe/reroute                              n=2   agree=1.0 |dp|=0.0921
+    probe/urgency                              n=2   agree=1.0 |dp|=0.167 ref_P(true)=0.5422 cand_P(true)=0.7093
+    tool_selection/decision_confidence         n=14  agree=0.7857 |dv|=0.1263 ref_v=0.4406 cand_v=0.4583
+    tool_selection/next_tool                   n=14  agree=1.0 |dp|=0.0547

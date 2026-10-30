@@ -1,0 +1,2299 @@
+{
+ "label": "SIMULATED",
+ "reference": {
+  "name": "v1-27b-live:served",
+  "model": "pplx-decider-v1-27b",
+  "requests": 60,
+  "errors": 0,
+  "accuracy_on_labelled": "23/26",
+  "wrong_on_labelled": [
+   {
+    "id": "dss-puja-crowd-park-circus",
+    "question": "coa_strategy",
+    "expected": "aggressive",
+    "got": "standard"
+   },
+   {
+    "id": "dss-eden-gardens-egress",
+    "question": "coa_strategy",
+    "expected": "aggressive",
+    "got": "standard"
+   },
+   {
+    "id": "dss-fire-bagbazar",
+    "question": "coa_strategy",
+    "expected": "aggressive",
+    "got": "standard"
+   }
+  ],
+  "low_confidence_gated_share": 0.6,
+  "mean_confidence": {
+   "dss_coa/coa_strategy": 0.513,
+   "dss_coa/disruption_tolerance": 0.3177,
+   "escort_departure/departure": 0.5019,
+   "escort_incident/action": 0.4305,
+   "post_clearance/restoration_posture": 0.4349,
+   "pre_movement/disruption_tolerance": 0.5457,
+   "pre_movement/route_strategy": 0.7703,
+   "probe/readiness": 0.2462,
+   "probe/reroute": 0.9685,
+   "tool_selection/decision_confidence": 0.286,
+   "tool_selection/next_tool": 0.914
+  },
+  "wall_ms_p50": 1292.4,
+  "wall_ms_p95": 2097.9,
+  "server_ms_p50": 1290.9,
+  "server_ms_p95": 2093.5,
+  "state_tokens_mean": 648.2
+ },
+ "candidates": {
+  "flash-v1.2:per_question": {
+   "model": "pplx-decider-flash-v1.2",
+   "runtime": "pplx_decider",
+   "temperature": 1.5539092221462472,
+   "cold_load_s": 46.4,
+   "first_call_ms": 1690.4,
+   "peak_allocated_gib": 8.915,
+   "peak_reserved_gib": 9.256,
+   "rss_gib": 1.876,
+   "rss_peak_gib": 6.285,
+   "after_load": {
+    "allocated_gib": 8.551,
+    "reserved_gib": 8.586,
+    "rss_gib": 0.925,
+    "mem_available_gib": 36.5
+   },
+   "fast_path": false,
+   "requests": 60,
+   "errors": 0,
+   "accuracy_on_labelled": "22/26",
+   "wrong_on_labelled": [
+    {
+     "id": "dss-puja-crowd-park-circus",
+     "question": "coa_strategy",
+     "expected": "aggressive",
+     "got": "standard"
+    },
+    {
+     "id": "dss-unverified-flooding-moulali",
+     "question": "coa_strategy",
+     "expected": "information",
+     "got": "minimal"
+    },
+    {
+     "id": "dss-eden-gardens-egress",
+     "question": "coa_strategy",
+     "expected": "aggressive",
+     "got": "standard"
+    },
+    {
+     "id": "dss-fire-bagbazar",
+     "question": "coa_strategy",
+     "expected": "aggressive",
+     "got": "standard"
+    }
+   ],
+   "low_confidence_gated_share": 0.783,
+   "mean_confidence": {
+    "dss_coa/coa_strategy": 0.4619,
+    "dss_coa/disruption_tolerance": 0.3755,
+    "escort_departure/departure": 0.5259,
+    "escort_incident/action": 0.4529,
+    "post_clearance/restoration_posture": 0.4614,
+    "pre_movement/disruption_tolerance": 0.1918,
+    "pre_movement/route_strategy": 0.6382,
+    "probe/readiness": 0.1511,
+    "probe/reroute": 0.8304,
+    "tool_selection/decision_confidence": 0.1436,
+    "tool_selection/next_tool": 0.93
+   },
+   "wall_ms_p50": 257.2,
+   "wall_ms_p95": 402.8,
+   "server_ms_p50": null,
+   "server_ms_p95": null,
+   "state_tokens_mean": 597.4,
+   "vs_reference": {
+    "by_type": {
+     "choice": {
+      "agree": 0.7627,
+      "dp": 0.1414,
+      "n": 59
+     },
+     "noul": {
+      "agree": 0.6571,
+      "dp": 0.1903,
+      "n": 35
+     },
+     "score": {
+      "agree": 0.675,
+      "dp": 0.1592,
+      "dvalue": 0.1605,
+      "n": 40
+     }
+    },
+    "by_question_set": {
+     "dss_coa/coa_strategy": {
+      "agree": 0.75,
+      "dp": 0.1339,
+      "n": 12
+     },
+     "dss_coa/disruption_tolerance": {
+      "agree": 0.6667,
+      "dvalue": 0.1407,
+      "ref_v": 0.4574,
+      "cand_v": 0.332,
+      "n": 12
+     },
+     "dss_coa/urgency": {
+      "agree": 1.0,
+      "dp": 0.1709,
+      "ref_p": 0.6473,
+      "cand_p": 0.4797,
+      "n": 12
+     },
+     "escort_departure/departure": {
+      "agree": 0.3333,
+      "dp": 0.2971,
+      "n": 6
+     },
+     "escort_incident/action": {
+      "agree": 0.625,
+      "dp": 0.1066,
+      "n": 8
+     },
+     "escort_incident/urgency": {
+      "agree": 0.75,
+      "dp": 0.2464,
+      "ref_p": 0.4786,
+      "cand_p": 0.2322,
+      "n": 8
+     },
+     "post_clearance/restoration_posture": {
+      "agree": 0.6,
+      "dp": 0.3359,
+      "n": 5
+     },
+     "pre_movement/disruption_tolerance": {
+      "agree": 0.5833,
+      "dvalue": 0.2428,
+      "ref_v": 0.7728,
+      "cand_v": 0.53,
+      "n": 12
+     },
+     "pre_movement/route_strategy": {
+      "agree": 0.8333,
+      "dp": 0.1331,
+      "n": 12
+     },
+     "pre_movement/urgency": {
+      "agree": 0.1667,
+      "dp": 0.1837,
+      "ref_p": 0.5374,
+      "cand_p": 0.3537,
+      "n": 12
+     },
+     "probe/probe": {
+      "agree": 1.0,
+      "dp": 0.1008,
+      "ref_p": 0.3491,
+      "cand_p": 0.4499,
+      "n": 1
+     },
+     "probe/readiness": {
+      "agree": 0.5,
+      "dvalue": 0.0551,
+      "ref_v": 0.3812,
+      "cand_v": 0.4364,
+      "n": 2
+     },
+     "probe/reroute": {
+      "agree": 1.0,
+      "dp": 0.0921,
+      "n": 2
+     },
+     "probe/urgency": {
+      "agree": 1.0,
+      "dp": 0.167,
+      "ref_p": 0.5422,
+      "cand_p": 0.7093,
+      "n": 2
+     },
+     "tool_selection/decision_confidence": {
+      "agree": 0.7857,
+      "dvalue": 0.1221,
+      "ref_v": 0.4406,
+      "cand_v": 0.4579,
+      "n": 14
+     },
+     "tool_selection/next_tool": {
+      "agree": 1.0,
+      "dp": 0.0455,
+      "n": 14
+     }
+    },
+    "disagreements": [
+     {
+      "id": "pm-redroad-parade-z",
+      "question": "disruption_tolerance",
+      "ref": 0.8218352794647217,
+      "ref_p": 0.822,
+      "cand": 0.4498924881155782,
+      "cand_p": 0.55
+     },
+     {
+      "id": "pm-eden-gardens-match-y",
+      "question": "route_strategy",
+      "ref": "route_29ed25456c4d",
+      "ref_p": 0.818,
+      "cand": "route_6a8ca8bc78a6",
+      "cand_p": 0.369
+     },
+     {
+      "id": "pm-howrah-station-transfer-y",
+      "question": "disruption_tolerance",
+      "ref": 0.786228133068792,
+      "ref_p": 0.786,
+      "cand": 0.3535851240158081,
+      "cand_p": 0.646
+     },
+     {
+      "id": "pm-victoria-memorial-ceremony-z",
+      "question": "disruption_tolerance",
+      "ref": 0.8046452879213499,
+      "ref_p": 0.805,
+      "cand": 0.39116154286746807,
+      "cand_p": 0.609
+     },
+     {
+      "id": "pm-salt-lake-stadium-x-unknown",
+      "question": "disruption_tolerance",
+      "ref": 0.8046452879213499,
+      "ref_p": 0.805,
+      "cand": 0.48994603693163613,
+      "cand_p": 0.51
+     },
+     {
+      "id": "pm-airport-nabanna-night-zplus",
+      "question": "disruption_tolerance",
+      "ref": 0.8299756769832325,
+      "ref_p": 0.83,
+      "cand": 0.4202447533607483,
+      "cand_p": 0.58
+     },
+     {
+      "id": "pm-high-tide-waterlogging-z",
+      "question": "route_strategy",
+      "ref": "route_8c7c68cff497",
+      "ref_p": 0.585,
+      "cand": "delay_departure",
+      "cand_p": 0.471
+     },
+     {
+      "id": "tool-fly-howrah-bridge",
+      "question": "decision_confidence",
+      "ref": 0.7004309683909724,
+      "ref_p": 0.7,
+      "cand": 0.4799004793167114,
+      "cand_p": 0.52
+     },
+     {
+      "id": "tool-routes-nabanna-airport",
+      "question": "decision_confidence",
+      "ref": 0.5,
+      "ref_p": 0.5,
+      "cand": 0.6278197578245474,
+      "cand_p": 0.628
+     },
+     {
+      "id": "tool-situation-log",
+      "question": "decision_confidence",
+      "ref": 0.4436175989026547,
+      "ref_p": 0.556,
+      "cand": 0.5401346683502197,
+      "cand_p": 0.54
+     },
+     {
+      "id": "dss-howrah-bridge-breakdown",
+      "question": "disruption_tolerance",
+      "ref": 0.4717187442863362,
+      "ref_p": 0.528,
+      "cand": 0.5100537094489845,
+      "cand_p": 0.51
+     },
+     {
+      "id": "dss-puja-crowd-park-circus",
+      "question": "disruption_tolerance",
+      "ref": 0.650868079014535,
+      "ref_p": 0.651,
+      "cand": 0.4300744193836701,
+      "cand_p": 0.57
+     },
+     {
+      "id": "dss-unverified-flooding-moulali",
+      "question": "coa_strategy",
+      "ref": "information",
+      "ref_p": 0.702,
+      "cand": "minimal",
+      "cand_p": 0.387
+     },
+     {
+      "id": "dss-eden-gardens-egress",
+      "question": "disruption_tolerance",
+      "ref": 0.6378936577471,
+      "ref_p": 0.638,
+      "cand": 0.39116154286746807,
+      "cand_p": 0.609
+     },
+     {
+      "id": "dss-tree-fall-em-bypass",
+      "question": "disruption_tolerance",
+      "ref": 0.5423655075539799,
+      "ref_p": 0.542,
+      "cand": 0.4300744193836701,
+      "cand_p": 0.57
+     },
+     {
+      "id": "dss-gangasagar-babughat",
+      "question": "coa_strategy",
+      "ref": "baseline",
+      "ref_p": 0.486,
+      "cand": "minimal",
+      "cand_p": 0.374
+     },
+     {
+      "id": "dss-marathon-red-road",
+      "question": "coa_strategy",
+      "ref": "baseline",
+      "ref_p": 0.39,
+      "cand": "minimal",
+      "cand_p": 0.668
+     },
+     {
+      "id": "esc-inc-mild-ruby",
+      "question": "action",
+      "ref": "continue_monitoring",
+      "ref_p": 0.364,
+      "cand": "emergency_reroute",
+      "cand_p": 0.483
+     },
+     {
+      "id": "esc-inc-no-planb-majerhat",
+      "question": "action",
+      "ref": "escalate_operator",
+      "ref_p": 0.52,
+      "cand": "emergency_reroute",
+      "cand_p": 0.441
+     },
+     {
+      "id": "esc-inc-holding-gariahat",
+      "question": "action",
+      "ref": "hold_position",
+      "ref_p": 0.406,
+      "cand": "escalate_operator",
+      "cand_p": 0.503
+     },
+     {
+      "id": "esc-dep-hot-ahead",
+      "question": "departure",
+      "ref": "hold_departure",
+      "ref_p": 0.558,
+      "cand": "activate_plan_b",
+      "cand_p": 0.44
+     },
+     {
+      "id": "esc-dep-hot-no-planb",
+      "question": "departure",
+      "ref": "hold_departure",
+      "ref_p": 0.766,
+      "cand": "proceed",
+      "cand_p": 0.654
+     },
+     {
+      "id": "esc-dep-not-reporting",
+      "question": "departure",
+      "ref": "hold_departure",
+      "ref_p": 0.525,
+      "cand": "proceed",
+      "cand_p": 0.831
+     },
+     {
+      "id": "esc-dep-resume-midway",
+      "question": "departure",
+      "ref": "hold_departure",
+      "ref_p": 0.482,
+      "cand": "proceed",
+      "cand_p": 0.443
+     },
+     {
+      "id": "pc-victoria-short",
+      "question": "restoration_posture",
+      "ref": "staged_reverse_order_restoration",
+      "ref_p": 0.647,
+      "cand": "immediate_full_restoration",
+      "cand_p": 0.417
+     },
+     {
+      "id": "pc-signals-ready",
+      "question": "restoration_posture",
+      "ref": "signal_assisted_recovery",
+      "ref_p": 0.639,
+      "cand": "immediate_full_restoration",
+      "cand_p": 0.917
+     },
+     {
+      "id": "probe-corridor-checkpoint-rain",
+      "question": "readiness",
+      "ref": 1.3672514029783955,
+      "ref_p": 0.324,
+      "cand": 1.4335725987915309,
+      "cand_p": 0.304
+     }
+    ]
+   }
+  },
+  "flash-v1.2:joint": {
+   "model": "pplx-decider-flash-v1.2",
+   "runtime": "pplx_decider",
+   "temperature": 1.5539092221462472,
+   "cold_load_s": 46.4,
+   "first_call_ms": 1690.4,
+   "peak_allocated_gib": 8.915,
+   "peak_reserved_gib": 9.256,
+   "rss_gib": 1.876,
+   "rss_peak_gib": 6.285,
+   "after_load": {
+    "allocated_gib": 8.551,
+    "reserved_gib": 8.586,
+    "rss_gib": 0.925,
+    "mem_available_gib": 36.5
+   },
+   "fast_path": false,
+   "requests": 60,
+   "errors": 0,
+   "accuracy_on_labelled": "23/26",
+   "wrong_on_labelled": [
+    {
+     "id": "dss-unverified-flooding-moulali",
+     "question": "coa_strategy",
+     "expected": "information",
+     "got": "baseline"
+    },
+    {
+     "id": "dss-eden-gardens-egress",
+     "question": "coa_strategy",
+     "expected": "aggressive",
+     "got": "standard"
+    },
+    {
+     "id": "dss-fire-bagbazar",
+     "question": "coa_strategy",
+     "expected": "aggressive",
+     "got": "standard"
+    }
+   ],
+   "low_confidence_gated_share": 0.55,
+   "mean_confidence": {
+    "dss_coa/coa_strategy": 0.4448,
+    "dss_coa/disruption_tolerance": 0.4395,
+    "escort_departure/departure": 0.5259,
+    "escort_incident/action": 0.4345,
+    "post_clearance/restoration_posture": 0.4614,
+    "pre_movement/disruption_tolerance": 0.2901,
+    "pre_movement/route_strategy": 0.6281,
+    "probe/readiness": 0.2374,
+    "probe/reroute": 0.948,
+    "tool_selection/decision_confidence": 0.6303,
+    "tool_selection/next_tool": 0.8452
+   },
+   "wall_ms_p50": 149.6,
+   "wall_ms_p95": 171.1,
+   "server_ms_p50": null,
+   "server_ms_p95": null,
+   "state_tokens_mean": 373.9,
+   "vs_reference": {
+    "by_type": {
+     "choice": {
+      "agree": 0.7627,
+      "dp": 0.1505,
+      "n": 59
+     },
+     "noul": {
+      "agree": 0.5714,
+      "dp": 0.1887,
+      "n": 35
+     },
+     "score": {
+      "agree": 0.3,
+      "dp": 0.3094,
+      "dvalue": 0.3165,
+      "n": 40
+     }
+    },
+    "by_question_set": {
+     "dss_coa/coa_strategy": {
+      "agree": 0.6667,
+      "dp": 0.1408,
+      "n": 12
+     },
+     "dss_coa/disruption_tolerance": {
+      "agree": 0.8333,
+      "dvalue": 0.1355,
+      "ref_v": 0.4574,
+      "cand_v": 0.3219,
+      "n": 12
+     },
+     "dss_coa/urgency": {
+      "agree": 0.8333,
+      "dp": 0.1787,
+      "ref_p": 0.6473,
+      "cand_p": 0.4835,
+      "n": 12
+     },
+     "escort_departure/departure": {
+      "agree": 0.3333,
+      "dp": 0.2971,
+      "n": 6
+     },
+     "escort_incident/action": {
+      "agree": 0.75,
+      "dp": 0.0998,
+      "n": 8
+     },
+     "escort_incident/urgency": {
+      "agree": 0.75,
+      "dp": 0.172,
+      "ref_p": 0.4786,
+      "cand_p": 0.3066,
+      "n": 8
+     },
+     "post_clearance/restoration_posture": {
+      "agree": 0.6,
+      "dp": 0.3359,
+      "n": 5
+     },
+     "pre_movement/disruption_tolerance": {
+      "agree": 0.0,
+      "dvalue": 0.4179,
+      "ref_v": 0.7728,
+      "cand_v": 0.3549,
+      "n": 12
+     },
+     "pre_movement/route_strategy": {
+      "agree": 0.8333,
+      "dp": 0.1389,
+      "n": 12
+     },
+     "pre_movement/urgency": {
+      "agree": 0.1667,
+      "dp": 0.2259,
+      "ref_p": 0.5374,
+      "cand_p": 0.3116,
+      "n": 12
+     },
+     "probe/probe": {
+      "agree": 1.0,
+      "dp": 0.1008,
+      "ref_p": 0.3491,
+      "cand_p": 0.4499,
+      "n": 1
+     },
+     "probe/readiness": {
+      "agree": 0.0,
+      "dvalue": 0.2502,
+      "ref_v": 0.3812,
+      "cand_v": 0.6314,
+      "n": 2
+     },
+     "probe/reroute": {
+      "agree": 1.0,
+      "dp": 0.0137,
+      "n": 2
+     },
+     "probe/urgency": {
+      "agree": 0.5,
+      "dp": 0.1365,
+      "ref_p": 0.5422,
+      "cand_p": 0.5,
+      "n": 2
+     },
+     "tool_selection/decision_confidence": {
+      "agree": 0.1429,
+      "dvalue": 0.3942,
+      "ref_v": 0.4406,
+      "cand_v": 0.8152,
+      "n": 14
+     },
+     "tool_selection/next_tool": {
+      "agree": 1.0,
+      "dp": 0.0882,
+      "n": 14
+     }
+    },
+    "disagreements": [
+     {
+      "id": "pm-nabanna-airport-zplus",
+      "question": "disruption_tolerance",
+      "ref": 0.786228133068792,
+      "ref_p": 0.786,
+      "cand": 0.3535851240158081,
+      "cand_p": 0.646
+     },
+     {
+      "id": "pm-nabanna-airport-peak-red",
+      "question": "route_strategy",
+      "ref": "delay_departure",
+      "ref_p": 0.605,
+      "cand": "route_3f2df115dff1",
+      "cand_p": 0.351
+     },
+     {
+      "id": "pm-nabanna-airport-peak-red",
+      "question": "disruption_tolerance",
+      "ref": 0.7457066552130385,
+      "ref_p": 0.746,
+      "cand": 0.4202445149421692,
+      "cand_p": 0.58
+     },
+     {
+      "id": "pm-redroad-parade-z",
+      "question": "disruption_tolerance",
+      "ref": 0.8218352794647217,
+      "ref_p": 0.822,
+      "cand": 0.30055749123312453,
+      "cand_p": 0.699
+     },
+     {
+      "id": "pm-eden-gardens-match-y",
+      "question": "route_strategy",
+      "ref": "route_29ed25456c4d",
+      "ref_p": 0.818,
+      "cand": "route_6a8ca8bc78a6",
+      "cand_p": 0.491
+     },
+     {
+      "id": "pm-eden-gardens-match-y",
+      "question": "disruption_tolerance",
+      "ref": 0.7562939299257418,
+      "ref_p": 0.756,
+      "cand": 0.40078117852098816,
+      "cand_p": 0.599
+     },
+     {
+      "id": "pm-sskm-hospital-x",
+      "question": "disruption_tolerance",
+      "ref": 0.7348208804481959,
+      "ref_p": 0.735,
+      "cand": 0.3535851240158081,
+      "cand_p": 0.646
+     },
+     {
+      "id": "pm-sector-v-summit-z",
+      "question": "disruption_tolerance",
+      "ref": 0.7562939299257418,
+      "ref_p": 0.756,
+      "cand": 0.3535851240158081,
+      "cand_p": 0.646
+     },
+     {
+      "id": "pm-howrah-station-transfer-y",
+      "question": "disruption_tolerance",
+      "ref": 0.786228133068792,
+      "ref_p": 0.786,
+      "cand": 0.2839227149532607,
+      "cand_p": 0.716
+     },
+     {
+      "id": "pm-puja-saptami-zplus",
+      "question": "disruption_tolerance",
+      "ref": 0.7236416339874268,
+      "ref_p": 0.724,
+      "cand": 0.4104777154184069,
+      "cand_p": 0.59
+     },
+     {
+      "id": "pm-victoria-memorial-ceremony-z",
+      "question": "disruption_tolerance",
+      "ref": 0.8046452879213499,
+      "ref_p": 0.805,
+      "cand": 0.3090801239013672,
+      "cand_p": 0.691
+     },
+     {
+      "id": "pm-salt-lake-stadium-x-unknown",
+      "question": "disruption_tolerance",
+      "ref": 0.8046452879213499,
+      "ref_p": 0.805,
+      "cand": 0.3005576908920819,
+      "cand_p": 0.699
+     },
+     {
+      "id": "pm-airport-nabanna-night-zplus",
+      "question": "disruption_tolerance",
+      "ref": 0.8299756769832325,
+      "ref_p": 0.83,
+      "cand": 0.37218024217545265,
+      "cand_p": 0.628
+     },
+     {
+      "id": "pm-high-tide-waterlogging-z",
+      "question": "disruption_tolerance",
+      "ref": 0.7236416339874268,
+      "ref_p": 0.724,
+      "cand": 0.40078097581863403,
+      "cand_p": 0.599
+     },
+     {
+      "id": "tool-live-chowringhee",
+      "question": "decision_confidence",
+      "ref": 0.29956903160902765,
+      "ref_p": 0.7,
+      "cand": 0.8860767021586231,
+      "cand_p": 0.886
+     },
+     {
+      "id": "tool-routes-nabanna-airport",
+      "question": "decision_confidence",
+      "ref": 0.5,
+      "ref_p": 0.5,
+      "cand": 0.881953107089503,
+      "cand_p": 0.882
+     },
+     {
+      "id": "tool-forecast-em-bypass",
+      "question": "decision_confidence",
+      "ref": 0.34913192098546497,
+      "ref_p": 0.651,
+      "cand": 0.8158052563667297,
+      "cand_p": 0.816
+     },
+     {
+      "id": "tool-eta-redroad-eden",
+      "question": "decision_confidence",
+      "ref": 0.2878243155584147,
+      "ref_p": 0.712,
+      "cand": 0.8217725770006014,
+      "cand_p": 0.822
+     },
+     {
+      "id": "tool-diversions-park-circus",
+      "question": "decision_confidence",
+      "ref": 0.41587271047017843,
+      "ref_p": 0.584,
+      "cand": 0.8493495240613677,
+      "cand_p": 0.849
+     },
+     {
+      "id": "tool-units-esplanade",
+      "question": "decision_confidence",
+      "ref": 0.41587271047017843,
+      "ref_p": 0.584,
+      "cand": 0.7399578911053506,
+      "cand_p": 0.74
+     },
+     {
+      "id": "tool-signal-shyambazar",
+      "question": "decision_confidence",
+      "ref": 0.41587271047017843,
+      "ref_p": 0.584,
+      "cand": 0.9236997297130545,
+      "cand_p": 0.924
+     },
+     {
+      "id": "tool-situation-log",
+      "question": "decision_confidence",
+      "ref": 0.4436175989026547,
+      "ref_p": 0.556,
+      "cand": 0.881953107089503,
+      "cand_p": 0.882
+     },
+     {
+      "id": "tool-highlight-thanthania",
+      "question": "decision_confidence",
+      "ref": 0.5,
+      "ref_p": 0.5,
+      "cand": 0.7624960882587473,
+      "cand_p": 0.762
+     },
+     {
+      "id": "tool-scenarios-exide",
+      "question": "decision_confidence",
+      "ref": 0.2878243155584147,
+      "ref_p": 0.712,
+      "cand": 0.7969790697097778,
+      "cand_p": 0.797
+     },
+     {
+      "id": "tool-history-park-street",
+      "question": "decision_confidence",
+      "ref": 0.26517911955180407,
+      "ref_p": 0.735,
+      "cand": 0.5699258190349232,
+      "cand_p": 0.57
+     },
+     {
+      "id": "tool-corridor-events-babughat",
+      "question": "decision_confidence",
+      "ref": 0.40218641155402624,
+      "ref_p": 0.598,
+      "cand": 0.9013364440995819,
+      "cand_p": 0.901
+     },
+     {
+      "id": "dss-puja-crowd-park-circus",
+      "question": "coa_strategy",
+      "ref": "standard",
+      "ref_p": 0.603,
+      "cand": "aggressive",
+      "cand_p": 0.568
+     },
+     {
+      "id": "dss-unverified-flooding-moulali",
+      "question": "coa_strategy",
+      "ref": "information",
+      "ref_p": 0.702,
+      "cand": "baseline",
+      "cand_p": 0.406
+     },
+     {
+      "id": "dss-eden-gardens-egress",
+      "question": "disruption_tolerance",
+      "ref": 0.6378936577471,
+      "ref_p": 0.638,
+      "cand": 0.4399592876434326,
+      "cand_p": 0.56
+     },
+     {
+      "id": "dss-tree-fall-em-bypass",
+      "question": "disruption_tolerance",
+      "ref": 0.5423655075539799,
+      "ref_p": 0.542,
+      "cand": 0.34444709685129504,
+      "cand_p": 0.656
+     },
+     {
+      "id": "dss-gangasagar-babughat",
+      "question": "coa_strategy",
+      "ref": "baseline",
+      "ref_p": 0.486,
+      "cand": "standard",
+      "cand_p": 0.353
+     },
+     {
+      "id": "dss-marathon-red-road",
+      "question": "coa_strategy",
+      "ref": "baseline",
+      "ref_p": 0.39,
+      "cand": "minimal",
+      "cand_p": 0.592
+     },
+     {
+      "id": "esc-inc-mild-ruby",
+      "question": "action",
+      "ref": "continue_monitoring",
+      "ref_p": 0.364,
+      "cand": "emergency_reroute",
+      "cand_p": 0.442
+     },
+     {
+      "id": "esc-inc-holding-gariahat",
+      "question": "action",
+      "ref": "hold_position",
+      "ref_p": 0.406,
+      "cand": "escalate_operator",
+      "cand_p": 0.477
+     },
+     {
+      "id": "esc-dep-hot-ahead",
+      "question": "departure",
+      "ref": "hold_departure",
+      "ref_p": 0.558,
+      "cand": "activate_plan_b",
+      "cand_p": 0.44
+     },
+     {
+      "id": "esc-dep-hot-no-planb",
+      "question": "departure",
+      "ref": "hold_departure",
+      "ref_p": 0.766,
+      "cand": "proceed",
+      "cand_p": 0.654
+     },
+     {
+      "id": "esc-dep-not-reporting",
+      "question": "departure",
+      "ref": "hold_departure",
+      "ref_p": 0.525,
+      "cand": "proceed",
+      "cand_p": 0.831
+     },
+     {
+      "id": "esc-dep-resume-midway",
+      "question": "departure",
+      "ref": "hold_departure",
+      "ref_p": 0.482,
+      "cand": "proceed",
+      "cand_p": 0.443
+     },
+     {
+      "id": "pc-victoria-short",
+      "question": "restoration_posture",
+      "ref": "staged_reverse_order_restoration",
+      "ref_p": 0.647,
+      "cand": "immediate_full_restoration",
+      "cand_p": 0.417
+     },
+     {
+      "id": "pc-signals-ready",
+      "question": "restoration_posture",
+      "ref": "signal_assisted_recovery",
+      "ref_p": 0.639,
+      "cand": "immediate_full_restoration",
+      "cand_p": 0.917
+     },
+     {
+      "id": "probe-corridor-checkpoint",
+      "question": "readiness",
+      "ref": 1.6826191160180386,
+      "ref_p": 0.359,
+      "cand": 2.6451417101961883,
+      "cand_p": 0.382
+     },
+     {
+      "id": "probe-corridor-checkpoint-rain",
+      "question": "readiness",
+      "ref": 1.3672514029783955,
+      "ref_p": 0.324,
+      "cand": 2.406372971149836,
+      "cand_p": 0.33
+     }
+    ]
+   }
+  },
+  "flash-v1.2-fla:per_question": {
+   "model": "pplx-decider-flash-v1.2",
+   "runtime": "pplx_decider",
+   "temperature": 1.5539092221462472,
+   "cold_load_s": 45.5,
+   "first_call_ms": 20178.2,
+   "peak_allocated_gib": 8.919,
+   "peak_reserved_gib": 9.131,
+   "rss_gib": 1.768,
+   "rss_peak_gib": 6.351,
+   "after_load": {
+    "allocated_gib": 8.551,
+    "reserved_gib": 8.586,
+    "rss_gib": 0.995,
+    "mem_available_gib": 36.0
+   },
+   "fast_path": false,
+   "requests": 60,
+   "errors": 0,
+   "accuracy_on_labelled": "22/26",
+   "wrong_on_labelled": [
+    {
+     "id": "dss-puja-crowd-park-circus",
+     "question": "coa_strategy",
+     "expected": "aggressive",
+     "got": "standard"
+    },
+    {
+     "id": "dss-unverified-flooding-moulali",
+     "question": "coa_strategy",
+     "expected": "information",
+     "got": "minimal"
+    },
+    {
+     "id": "dss-eden-gardens-egress",
+     "question": "coa_strategy",
+     "expected": "aggressive",
+     "got": "standard"
+    },
+    {
+     "id": "dss-fire-bagbazar",
+     "question": "coa_strategy",
+     "expected": "aggressive",
+     "got": "standard"
+    }
+   ],
+   "low_confidence_gated_share": 0.783,
+   "mean_confidence": {
+    "dss_coa/coa_strategy": 0.4604,
+    "dss_coa/disruption_tolerance": 0.3769,
+    "escort_departure/departure": 0.5227,
+    "escort_incident/action": 0.4563,
+    "post_clearance/restoration_posture": 0.4554,
+    "pre_movement/disruption_tolerance": 0.1932,
+    "pre_movement/route_strategy": 0.6371,
+    "probe/readiness": 0.151,
+    "probe/reroute": 0.8206,
+    "tool_selection/decision_confidence": 0.1445,
+    "tool_selection/next_tool": 0.9301
+   },
+   "wall_ms_p50": 152.2,
+   "wall_ms_p95": 243.8,
+   "server_ms_p50": null,
+   "server_ms_p95": null,
+   "state_tokens_mean": 597.4,
+   "vs_reference": {
+    "by_type": {
+     "choice": {
+      "agree": 0.7627,
+      "dp": 0.1426,
+      "n": 59
+     },
+     "noul": {
+      "agree": 0.6571,
+      "dp": 0.1906,
+      "n": 35
+     },
+     "score": {
+      "agree": 0.675,
+      "dp": 0.1585,
+      "dvalue": 0.1599,
+      "n": 40
+     }
+    },
+    "by_question_set": {
+     "dss_coa/coa_strategy": {
+      "agree": 0.75,
+      "dp": 0.1351,
+      "n": 12
+     },
+     "dss_coa/disruption_tolerance": {
+      "agree": 0.6667,
+      "dvalue": 0.1398,
+      "ref_v": 0.4574,
+      "cand_v": 0.3346,
+      "n": 12
+     },
+     "dss_coa/urgency": {
+      "agree": 1.0,
+      "dp": 0.17,
+      "ref_p": 0.6473,
+      "cand_p": 0.4796,
+      "n": 12
+     },
+     "escort_departure/departure": {
+      "agree": 0.3333,
+      "dp": 0.2955,
+      "n": 6
+     },
+     "escort_incident/action": {
+      "agree": 0.625,
+      "dp": 0.1097,
+      "n": 8
+     },
+     "escort_incident/urgency": {
+      "agree": 0.75,
+      "dp": 0.2484,
+      "ref_p": 0.4786,
+      "cand_p": 0.2302,
+      "n": 8
+     },
+     "post_clearance/restoration_posture": {
+      "agree": 0.6,
+      "dp": 0.3387,
+      "n": 5
+     },
+     "pre_movement/disruption_tolerance": {
+      "agree": 0.5833,
+      "dvalue": 0.2389,
+      "ref_v": 0.7728,
+      "cand_v": 0.5339,
+      "n": 12
+     },
+     "pre_movement/route_strategy": {
+      "agree": 0.8333,
+      "dp": 0.1324,
+      "n": 12
+     },
+     "pre_movement/urgency": {
+      "agree": 0.1667,
+      "dp": 0.1853,
+      "ref_p": 0.5374,
+      "cand_p": 0.3522,
+      "n": 12
+     },
+     "probe/probe": {
+      "agree": 1.0,
+      "dp": 0.1008,
+      "ref_p": 0.3491,
+      "cand_p": 0.4499,
+      "n": 1
+     },
+     "probe/readiness": {
+      "agree": 0.5,
+      "dvalue": 0.0566,
+      "ref_v": 0.3812,
+      "cand_v": 0.4378,
+      "n": 2
+     },
+     "probe/reroute": {
+      "agree": 1.0,
+      "dp": 0.0986,
+      "n": 2
+     },
+     "probe/urgency": {
+      "agree": 1.0,
+      "dp": 0.1591,
+      "ref_p": 0.5422,
+      "cand_p": 0.7013,
+      "n": 2
+     },
+     "tool_selection/decision_confidence": {
+      "agree": 0.7857,
+      "dvalue": 0.1242,
+      "ref_v": 0.4406,
+      "cand_v": 0.4574,
+      "n": 14
+     },
+     "tool_selection/next_tool": {
+      "agree": 1.0,
+      "dp": 0.0472,
+      "n": 14
+     }
+    },
+    "disagreements": [
+     {
+      "id": "pm-redroad-parade-z",
+      "question": "disruption_tolerance",
+      "ref": 0.8218352794647217,
+      "ref_p": 0.822,
+      "cand": 0.4498924881155782,
+      "cand_p": 0.55
+     },
+     {
+      "id": "pm-eden-gardens-match-y",
+      "question": "route_strategy",
+      "ref": "route_29ed25456c4d",
+      "ref_p": 0.818,
+      "cand": "route_6a8ca8bc78a6",
+      "cand_p": 0.369
+     },
+     {
+      "id": "pm-howrah-station-transfer-y",
+      "question": "disruption_tolerance",
+      "ref": 0.786228133068792,
+      "ref_p": 0.786,
+      "cand": 0.3535851240158081,
+      "cand_p": 0.646
+     },
+     {
+      "id": "pm-victoria-memorial-ceremony-z",
+      "question": "disruption_tolerance",
+      "ref": 0.8046452879213499,
+      "ref_p": 0.805,
+      "cand": 0.4104779362678528,
+      "cand_p": 0.59
+     },
+     {
+      "id": "pm-salt-lake-stadium-x-unknown",
+      "question": "disruption_tolerance",
+      "ref": 0.8046452879213499,
+      "ref_p": 0.805,
+      "cand": 0.48994603693163613,
+      "cand_p": 0.51
+     },
+     {
+      "id": "pm-airport-nabanna-night-zplus",
+      "question": "disruption_tolerance",
+      "ref": 0.8299756769832325,
+      "ref_p": 0.83,
+      "cand": 0.4202447533607483,
+      "cand_p": 0.58
+     },
+     {
+      "id": "pm-high-tide-waterlogging-z",
+      "question": "route_strategy",
+      "ref": "route_8c7c68cff497",
+      "ref_p": 0.585,
+      "cand": "delay_departure",
+      "cand_p": 0.461
+     },
+     {
+      "id": "tool-fly-howrah-bridge",
+      "question": "decision_confidence",
+      "ref": 0.7004309683909724,
+      "ref_p": 0.7,
+      "cand": 0.45986555875549684,
+      "cand_p": 0.54
+     },
+     {
+      "id": "tool-routes-nabanna-airport",
+      "question": "decision_confidence",
+      "ref": 0.5,
+      "ref_p": 0.5,
+      "cand": 0.6371686078805561,
+      "cand_p": 0.637
+     },
+     {
+      "id": "tool-situation-log",
+      "question": "decision_confidence",
+      "ref": 0.4436175989026547,
+      "ref_p": 0.556,
+      "cand": 0.5301293572744918,
+      "cand_p": 0.53
+     },
+     {
+      "id": "dss-howrah-bridge-breakdown",
+      "question": "disruption_tolerance",
+      "ref": 0.4717187442863362,
+      "ref_p": 0.528,
+      "cand": 0.5200995206832886,
+      "cand_p": 0.52
+     },
+     {
+      "id": "dss-puja-crowd-park-circus",
+      "question": "disruption_tolerance",
+      "ref": 0.650868079014535,
+      "ref_p": 0.651,
+      "cand": 0.43007418096507677,
+      "cand_p": 0.57
+     },
+     {
+      "id": "dss-unverified-flooding-moulali",
+      "question": "coa_strategy",
+      "ref": "information",
+      "ref_p": 0.702,
+      "cand": "minimal",
+      "cand_p": 0.387
+     },
+     {
+      "id": "dss-eden-gardens-egress",
+      "question": "disruption_tolerance",
+      "ref": 0.6378936577471,
+      "ref_p": 0.638,
+      "cand": 0.39116154286746807,
+      "cand_p": 0.609
+     },
+     {
+      "id": "dss-tree-fall-em-bypass",
+      "question": "disruption_tolerance",
+      "ref": 0.5423655075539799,
+      "ref_p": 0.542,
+      "cand": 0.4300744193836701,
+      "cand_p": 0.57
+     },
+     {
+      "id": "dss-gangasagar-babughat",
+      "question": "coa_strategy",
+      "ref": "baseline",
+      "ref_p": 0.486,
+      "cand": "minimal",
+      "cand_p": 0.383
+     },
+     {
+      "id": "dss-marathon-red-road",
+      "question": "coa_strategy",
+      "ref": "baseline",
+      "ref_p": 0.39,
+      "cand": "minimal",
+      "cand_p": 0.676
+     },
+     {
+      "id": "esc-inc-mild-ruby",
+      "question": "action",
+      "ref": "continue_monitoring",
+      "ref_p": 0.364,
+      "cand": "emergency_reroute",
+      "cand_p": 0.487
+     },
+     {
+      "id": "esc-inc-no-planb-majerhat",
+      "question": "action",
+      "ref": "escalate_operator",
+      "ref_p": 0.52,
+      "cand": "emergency_reroute",
+      "cand_p": 0.44
+     },
+     {
+      "id": "esc-inc-holding-gariahat",
+      "question": "action",
+      "ref": "hold_position",
+      "ref_p": 0.406,
+      "cand": "escalate_operator",
+      "cand_p": 0.506
+     },
+     {
+      "id": "esc-dep-hot-ahead",
+      "question": "departure",
+      "ref": "hold_departure",
+      "ref_p": 0.558,
+      "cand": "activate_plan_b",
+      "cand_p": 0.442
+     },
+     {
+      "id": "esc-dep-hot-no-planb",
+      "question": "departure",
+      "ref": "hold_departure",
+      "ref_p": 0.766,
+      "cand": "proceed",
+      "cand_p": 0.638
+     },
+     {
+      "id": "esc-dep-not-reporting",
+      "question": "departure",
+      "ref": "hold_departure",
+      "ref_p": 0.525,
+      "cand": "proceed",
+      "cand_p": 0.831
+     },
+     {
+      "id": "esc-dep-resume-midway",
+      "question": "departure",
+      "ref": "hold_departure",
+      "ref_p": 0.482,
+      "cand": "proceed",
+      "cand_p": 0.433
+     },
+     {
+      "id": "pc-victoria-short",
+      "question": "restoration_posture",
+      "ref": "staged_reverse_order_restoration",
+      "ref_p": 0.647,
+      "cand": "immediate_full_restoration",
+      "cand_p": 0.411
+     },
+     {
+      "id": "pc-signals-ready",
+      "question": "restoration_posture",
+      "ref": "signal_assisted_recovery",
+      "ref_p": 0.639,
+      "cand": "immediate_full_restoration",
+      "cand_p": 0.923
+     },
+     {
+      "id": "probe-corridor-checkpoint-rain",
+      "question": "readiness",
+      "ref": 1.3672514029783955,
+      "ref_p": 0.324,
+      "cand": 1.4185365270405295,
+      "cand_p": 0.306
+     }
+    ]
+   }
+  },
+  "flash-v1.2-fla:joint": {
+   "model": "pplx-decider-flash-v1.2",
+   "runtime": "pplx_decider",
+   "temperature": 1.5539092221462472,
+   "cold_load_s": 45.5,
+   "first_call_ms": 20178.2,
+   "peak_allocated_gib": 8.919,
+   "peak_reserved_gib": 9.131,
+   "rss_gib": 1.768,
+   "rss_peak_gib": 6.351,
+   "after_load": {
+    "allocated_gib": 8.551,
+    "reserved_gib": 8.586,
+    "rss_gib": 0.995,
+    "mem_available_gib": 36.0
+   },
+   "fast_path": false,
+   "requests": 60,
+   "errors": 0,
+   "accuracy_on_labelled": "23/26",
+   "wrong_on_labelled": [
+    {
+     "id": "dss-unverified-flooding-moulali",
+     "question": "coa_strategy",
+     "expected": "information",
+     "got": "baseline"
+    },
+    {
+     "id": "dss-eden-gardens-egress",
+     "question": "coa_strategy",
+     "expected": "aggressive",
+     "got": "standard"
+    },
+    {
+     "id": "dss-fire-bagbazar",
+     "question": "coa_strategy",
+     "expected": "aggressive",
+     "got": "standard"
+    }
+   ],
+   "low_confidence_gated_share": 0.55,
+   "mean_confidence": {
+    "dss_coa/coa_strategy": 0.4462,
+    "dss_coa/disruption_tolerance": 0.4422,
+    "escort_departure/departure": 0.5227,
+    "escort_incident/action": 0.4369,
+    "post_clearance/restoration_posture": 0.4554,
+    "pre_movement/disruption_tolerance": 0.2929,
+    "pre_movement/route_strategy": 0.6295,
+    "probe/readiness": 0.2291,
+    "probe/reroute": 0.9485,
+    "tool_selection/decision_confidence": 0.63,
+    "tool_selection/next_tool": 0.8435
+   },
+   "wall_ms_p50": 91.1,
+   "wall_ms_p95": 101.9,
+   "server_ms_p50": null,
+   "server_ms_p95": null,
+   "state_tokens_mean": 373.9,
+   "vs_reference": {
+    "by_type": {
+     "choice": {
+      "agree": 0.7458,
+      "dp": 0.1508,
+      "n": 59
+     },
+     "noul": {
+      "agree": 0.6,
+      "dp": 0.1872,
+      "n": 35
+     },
+     "score": {
+      "agree": 0.3,
+      "dp": 0.31,
+      "dvalue": 0.3171,
+      "n": 40
+     }
+    },
+    "by_question_set": {
+     "dss_coa/coa_strategy": {
+      "agree": 0.6667,
+      "dp": 0.1429,
+      "n": 12
+     },
+     "dss_coa/disruption_tolerance": {
+      "agree": 0.8333,
+      "dvalue": 0.1374,
+      "ref_v": 0.4574,
+      "cand_v": 0.3206,
+      "n": 12
+     },
+     "dss_coa/urgency": {
+      "agree": 0.9167,
+      "dp": 0.179,
+      "ref_p": 0.6473,
+      "cand_p": 0.482,
+      "n": 12
+     },
+     "escort_departure/departure": {
+      "agree": 0.3333,
+      "dp": 0.2955,
+      "n": 6
+     },
+     "escort_incident/action": {
+      "agree": 0.75,
+      "dp": 0.0981,
+      "n": 8
+     },
+     "escort_incident/urgency": {
+      "agree": 0.75,
+      "dp": 0.1699,
+      "ref_p": 0.4786,
+      "cand_p": 0.3087,
+      "n": 8
+     },
+     "post_clearance/restoration_posture": {
+      "agree": 0.6,
+      "dp": 0.3387,
+      "n": 5
+     },
+     "pre_movement/disruption_tolerance": {
+      "agree": 0.0,
+      "dvalue": 0.4193,
+      "ref_v": 0.7728,
+      "cand_v": 0.3535,
+      "n": 12
+     },
+     "pre_movement/route_strategy": {
+      "agree": 0.75,
+      "dp": 0.1399,
+      "n": 12
+     },
+     "pre_movement/urgency": {
+      "agree": 0.1667,
+      "dp": 0.2233,
+      "ref_p": 0.5374,
+      "cand_p": 0.3142,
+      "n": 12
+     },
+     "probe/probe": {
+      "agree": 1.0,
+      "dp": 0.1008,
+      "ref_p": 0.3491,
+      "cand_p": 0.4499,
+      "n": 1
+     },
+     "probe/readiness": {
+      "agree": 0.0,
+      "dvalue": 0.2438,
+      "ref_v": 0.3812,
+      "cand_v": 0.625,
+      "n": 2
+     },
+     "probe/reroute": {
+      "agree": 1.0,
+      "dp": 0.0133,
+      "n": 2
+     },
+     "probe/urgency": {
+      "agree": 0.5,
+      "dp": 0.132,
+      "ref_p": 0.5422,
+      "cand_p": 0.5045,
+      "n": 2
+     },
+     "tool_selection/decision_confidence": {
+      "agree": 0.1429,
+      "dvalue": 0.394,
+      "ref_v": 0.4406,
+      "cand_v": 0.815,
+      "n": 14
+     },
+     "tool_selection/next_tool": {
+      "agree": 1.0,
+      "dp": 0.0877,
+      "n": 14
+     }
+    },
+    "disagreements": [
+     {
+      "id": "pm-nabanna-airport-zplus",
+      "question": "disruption_tolerance",
+      "ref": 0.786228133068792,
+      "ref_p": 0.786,
+      "cand": 0.37218024217545265,
+      "cand_p": 0.628
+     },
+     {
+      "id": "pm-nabanna-airport-peak-red",
+      "question": "route_strategy",
+      "ref": "delay_departure",
+      "ref_p": 0.605,
+      "cand": "route_3f2df115dff1",
+      "cand_p": 0.361
+     },
+     {
+      "id": "pm-nabanna-airport-peak-red",
+      "question": "disruption_tolerance",
+      "ref": 0.7457066552130385,
+      "ref_p": 0.746,
+      "cand": 0.43007418096507677,
+      "cand_p": 0.57
+     },
+     {
+      "id": "pm-redroad-parade-z",
+      "question": "disruption_tolerance",
+      "ref": 0.8218352794647217,
+      "ref_p": 0.822,
+      "cand": 0.2921704860874866,
+      "cand_p": 0.708
+     },
+     {
+      "id": "pm-eden-gardens-match-y",
+      "question": "route_strategy",
+      "ref": "route_29ed25456c4d",
+      "ref_p": 0.818,
+      "cand": "route_6a8ca8bc78a6",
+      "cand_p": 0.491
+     },
+     {
+      "id": "pm-eden-gardens-match-y",
+      "question": "disruption_tolerance",
+      "ref": 0.7562939299257418,
+      "ref_p": 0.756,
+      "cand": 0.40078117852098816,
+      "cand_p": 0.599
+     },
+     {
+      "id": "pm-sskm-hospital-x",
+      "question": "disruption_tolerance",
+      "ref": 0.7348208804481959,
+      "ref_p": 0.735,
+      "cand": 0.3535851240158081,
+      "cand_p": 0.646
+     },
+     {
+      "id": "pm-sector-v-summit-z",
+      "question": "disruption_tolerance",
+      "ref": 0.7562939299257418,
+      "ref_p": 0.756,
+      "cand": 0.3535851240158081,
+      "cand_p": 0.646
+     },
+     {
+      "id": "pm-howrah-station-transfer-y",
+      "question": "disruption_tolerance",
+      "ref": 0.786228133068792,
+      "ref_p": 0.786,
+      "cand": 0.2758168578147888,
+      "cand_p": 0.724
+     },
+     {
+      "id": "pm-puja-saptami-zplus",
+      "question": "disruption_tolerance",
+      "ref": 0.7236416339874268,
+      "ref_p": 0.724,
+      "cand": 0.39116129927865867,
+      "cand_p": 0.609
+     },
+     {
+      "id": "pm-victoria-memorial-ceremony-z",
+      "question": "disruption_tolerance",
+      "ref": 0.8046452879213499,
+      "ref_p": 0.805,
+      "cand": 0.3090801239013672,
+      "cand_p": 0.691
+     },
+     {
+      "id": "pm-salt-lake-stadium-x-unknown",
+      "question": "disruption_tolerance",
+      "ref": 0.8046452879213499,
+      "ref_p": 0.805,
+      "cand": 0.3005576908920819,
+      "cand_p": 0.699
+     },
+     {
+      "id": "pm-airport-nabanna-night-zplus",
+      "question": "disruption_tolerance",
+      "ref": 0.8299756769832325,
+      "ref_p": 0.83,
+      "cand": 0.37218024217545265,
+      "cand_p": 0.628
+     },
+     {
+      "id": "pm-high-tide-waterlogging-z",
+      "question": "route_strategy",
+      "ref": "route_8c7c68cff497",
+      "ref_p": 0.585,
+      "cand": "route_3cc63f44c2f9",
+      "cand_p": 0.338
+     },
+     {
+      "id": "pm-high-tide-waterlogging-z",
+      "question": "disruption_tolerance",
+      "ref": 0.7236416339874268,
+      "ref_p": 0.724,
+      "cand": 0.39116154286746807,
+      "cand_p": 0.609
+     },
+     {
+      "id": "tool-live-chowringhee",
+      "question": "decision_confidence",
+      "ref": 0.29956903160902765,
+      "ref_p": 0.7,
+      "cand": 0.881953107089503,
+      "cand_p": 0.882
+     },
+     {
+      "id": "tool-routes-nabanna-airport",
+      "question": "decision_confidence",
+      "ref": 0.5,
+      "ref_p": 0.5,
+      "cand": 0.8777008514397291,
+      "cand_p": 0.878
+     },
+     {
+      "id": "tool-forecast-em-bypass",
+      "question": "decision_confidence",
+      "ref": 0.34913192098546497,
+      "ref_p": 0.651,
+      "cand": 0.8158052563667297,
+      "cand_p": 0.816
+     },
+     {
+      "id": "tool-eta-redroad-eden",
+      "question": "decision_confidence",
+      "ref": 0.2878243155584147,
+      "ref_p": 0.712,
+      "cand": 0.8096845504735544,
+      "cand_p": 0.81
+     },
+     {
+      "id": "tool-diversions-park-circus",
+      "question": "decision_confidence",
+      "ref": 0.41587271047017843,
+      "ref_p": 0.584,
+      "cand": 0.8493495240613677,
+      "cand_p": 0.849
+     },
+     {
+      "id": "tool-units-esplanade",
+      "question": "decision_confidence",
+      "ref": 0.41587271047017843,
+      "ref_p": 0.584,
+      "cand": 0.7551354765892029,
+      "cand_p": 0.755
+     },
+     {
+      "id": "tool-signal-shyambazar",
+      "question": "decision_confidence",
+      "ref": 0.41587271047017843,
+      "ref_p": 0.584,
+      "cand": 0.9236997297130545,
+      "cand_p": 0.924
+     },
+     {
+      "id": "tool-situation-log",
+      "question": "decision_confidence",
+      "ref": 0.4436175989026547,
+      "ref_p": 0.556,
+      "cand": 0.8860767021586231,
+      "cand_p": 0.886
+     },
+     {
+      "id": "tool-highlight-thanthania",
+      "question": "decision_confidence",
+      "ref": 0.5,
+      "ref_p": 0.5,
+      "cand": 0.7551354765892029,
+      "cand_p": 0.755
+     },
+     {
+      "id": "tool-scenarios-exide",
+      "question": "decision_confidence",
+      "ref": 0.2878243155584147,
+      "ref_p": 0.712,
+      "cand": 0.7969790697097778,
+      "cand_p": 0.797
+     },
+     {
+      "id": "tool-history-park-street",
+      "question": "decision_confidence",
+      "ref": 0.26517911955180407,
+      "ref_p": 0.735,
+      "cand": 0.5797554850578308,
+      "cand_p": 0.58
+     },
+     {
+      "id": "tool-corridor-events-babughat",
+      "question": "decision_confidence",
+      "ref": 0.40218641155402624,
+      "ref_p": 0.598,
+      "cand": 0.8977014221764783,
+      "cand_p": 0.898
+     },
+     {
+      "id": "dss-puja-crowd-park-circus",
+      "question": "coa_strategy",
+      "ref": "standard",
+      "ref_p": 0.603,
+      "cand": "aggressive",
+      "cand_p": 0.568
+     },
+     {
+      "id": "dss-unverified-flooding-moulali",
+      "question": "coa_strategy",
+      "ref": "information",
+      "ref_p": 0.702,
+      "cand": "baseline",
+      "cand_p": 0.41
+     },
+     {
+      "id": "dss-eden-gardens-egress",
+      "question": "disruption_tolerance",
+      "ref": 0.6378936577471,
+      "ref_p": 0.638,
+      "cand": 0.43007418096507677,
+      "cand_p": 0.57
+     },
+     {
+      "id": "dss-tree-fall-em-bypass",
+      "question": "disruption_tolerance",
+      "ref": 0.5423655075539799,
+      "ref_p": 0.542,
+      "cand": 0.34444709685129504,
+      "cand_p": 0.656
+     },
+     {
+      "id": "dss-gangasagar-babughat",
+      "question": "coa_strategy",
+      "ref": "baseline",
+      "ref_p": 0.486,
+      "cand": "standard",
+      "cand_p": 0.354
+     },
+     {
+      "id": "dss-marathon-red-road",
+      "question": "coa_strategy",
+      "ref": "baseline",
+      "ref_p": 0.39,
+      "cand": "minimal",
+      "cand_p": 0.597
+     },
+     {
+      "id": "esc-inc-mild-ruby",
+      "question": "action",
+      "ref": "continue_monitoring",
+      "ref_p": 0.364,
+      "cand": "emergency_reroute",
+      "cand_p": 0.445
+     },
+     {
+      "id": "esc-inc-holding-gariahat",
+      "question": "action",
+      "ref": "hold_position",
+      "ref_p": 0.406,
+      "cand": "escalate_operator",
+      "cand_p": 0.497
+     },
+     {
+      "id": "esc-dep-hot-ahead",
+      "question": "departure",
+      "ref": "hold_departure",
+      "ref_p": 0.558,
+      "cand": "activate_plan_b",
+      "cand_p": 0.442
+     },
+     {
+      "id": "esc-dep-hot-no-planb",
+      "question": "departure",
+      "ref": "hold_departure",
+      "ref_p": 0.766,
+      "cand": "proceed",
+      "cand_p": 0.638
+     },
+     {
+      "id": "esc-dep-not-reporting",
+      "question": "departure",
+      "ref": "hold_departure",
+      "ref_p": 0.525,
+      "cand": "proceed",
+      "cand_p": 0.831
+     },
+     {
+      "id": "esc-dep-resume-midway",
+      "question": "departure",
+      "ref": "hold_departure",
+      "ref_p": 0.482,
+      "cand": "proceed",
+      "cand_p": 0.433
+     },
+     {
+      "id": "pc-victoria-short",
+      "question": "restoration_posture",
+      "ref": "staged_reverse_order_restoration",
+      "ref_p": 0.647,
+      "cand": "immediate_full_restoration",
+      "cand_p": 0.411
+     },
+     {
+      "id": "pc-signals-ready",
+      "question": "restoration_posture",
+      "ref": "signal_assisted_recovery",
+      "ref_p": 0.639,
+      "cand": "immediate_full_restoration",
+      "cand_p": 0.923
+     },
+     {
+      "id": "probe-corridor-checkpoint",
+      "question": "readiness",
+      "ref": 1.6826191160180386,
+      "ref_p": 0.359,
+      "cand": 2.5897886777873875,
+      "cand_p": 0.378
+     },
+     {
+      "id": "probe-corridor-checkpoint-rain",
+      "question": "readiness",
+      "ref": 1.3672514029783955,
+      "ref_p": 0.324,
+      "cand": 2.4102448190639247,
+      "cand_p": 0.326
+     }
+    ]
+   }
+  },
+  "flash-v1.2-extras:per_question_named_options": {
+   "model": "pplx-decider-flash-v1.2",
+   "runtime": "pplx_decider",
+   "temperature": 1.5539092221462472,
+   "cold_load_s": 45.8,
+   "first_call_ms": 1031.9,
+   "peak_allocated_gib": 8.915,
+   "peak_reserved_gib": 9.256,
+   "rss_gib": 1.889,
+   "rss_peak_gib": 6.286,
+   "after_load": {
+    "allocated_gib": 8.551,
+    "reserved_gib": 8.586,
+    "rss_gib": 0.938,
+    "mem_available_gib": 35.2
+   },
+   "fast_path": false,
+   "requests": 60,
+   "errors": 0,
+   "accuracy_on_labelled": "22/26",
+   "wrong_on_labelled": [
+    {
+     "id": "dss-puja-crowd-park-circus",
+     "question": "coa_strategy",
+     "expected": "aggressive",
+     "got": "standard"
+    },
+    {
+     "id": "dss-unverified-flooding-moulali",
+     "question": "coa_strategy",
+     "expected": "information",
+     "got": "minimal"
+    },
+    {
+     "id": "dss-eden-gardens-egress",
+     "question": "coa_strategy",
+     "expected": "aggressive",
+     "got": "standard"
+    },
+    {
+     "id": "dss-fire-bagbazar",
+     "question": "coa_strategy",
+     "expected": "aggressive",
+     "got": "standard"
+    }
+   ],
+   "low_confidence_gated_share": 0.8,
+   "mean_confidence": {
+    "dss_coa/coa_strategy": 0.4918,
+    "dss_coa/disruption_tolerance": 0.3739,
+    "escort_departure/departure": 0.5268,
+    "escort_incident/action": 0.4742,
+    "post_clearance/restoration_posture": 0.4358,
+    "pre_movement/disruption_tolerance": 0.1933,
+    "pre_movement/route_strategy": 0.6315,
+    "probe/readiness": 0.1511,
+    "probe/reroute": 0.8304,
+    "tool_selection/decision_confidence": 0.1429,
+    "tool_selection/next_tool": 0.9143
+   },
+   "wall_ms_p50": null,
+   "wall_ms_p95": null,
+   "server_ms_p50": null,
+   "server_ms_p95": null,
+   "state_tokens_mean": 641.5,
+   "vs_reference": {
+    "by_type": {
+     "choice": {
+      "agree": 0.7627,
+      "dp": 0.1452,
+      "n": 59
+     },
+     "noul": {
+      "agree": 0.6571,
+      "dp": 0.1908,
+      "n": 35
+     },
+     "score": {
+      "agree": 0.7,
+      "dp": 0.1588,
+      "dvalue": 0.1601,
+      "n": 40
+     }
+    },
+    "by_question_set": {
+     "dss_coa/coa_strategy": {
+      "agree": 0.75,
+      "dp": 0.1367,
+      "n": 12
+     },
+     "dss_coa/disruption_tolerance": {
+      "agree": 0.75,
+      "dvalue": 0.1383,
+      "ref_v": 0.4574,
+      "cand_v": 0.3328,
+      "n": 12
+     },
+     "dss_coa/urgency": {
+      "agree": 1.0,
+      "dp": 0.1695,
+      "ref_p": 0.6473,
+      "cand_p": 0.4791,
+      "n": 12
+     },
+     "escort_departure/departure": {
+      "agree": 0.3333,
+      "dp": 0.2914,
+      "n": 6
+     },
+     "escort_incident/action": {
+      "agree": 0.625,
+      "dp": 0.1103,
+      "n": 8
+     },
+     "escort_incident/urgency": {
+      "agree": 0.75,
+      "dp": 0.2453,
+      "ref_p": 0.4786,
+      "cand_p": 0.2333,
+      "n": 8
+     },
+     "post_clearance/restoration_posture": {
+      "agree": 0.6,
+      "dp": 0.3475,
+      "n": 5
+     },
+     "pre_movement/disruption_tolerance": {
+      "agree": 0.5833,
+      "dvalue": 0.2388,
+      "ref_v": 0.7728,
+      "cand_v": 0.534,
+      "n": 12
+     },
+     "pre_movement/route_strategy": {
+      "agree": 0.8333,
+      "dp": 0.134,
+      "n": 12
+     },
+     "pre_movement/urgency": {
+      "agree": 0.1667,
+      "dp": 0.1872,
+      "ref_p": 0.5374,
+      "cand_p": 0.3502,
+      "n": 12
+     },
+     "probe/probe": {
+      "agree": 1.0,
+      "dp": 0.1008,
+      "ref_p": 0.3491,
+      "cand_p": 0.4499,
+      "n": 1
+     },
+     "probe/readiness": {
+      "agree": 0.5,
+      "dvalue": 0.0551,
+      "ref_v": 0.3812,
+      "cand_v": 0.4364,
+      "n": 2
+     },
+     "probe/reroute": {
+      "agree": 1.0,
+      "dp": 0.0921,
+      "n": 2
+     },
+     "probe/urgency": {
+      "agree": 1.0,
+      "dp": 0.167,
+      "ref_p": 0.5422,
+      "cand_p": 0.7093,
+      "n": 2
+     },
+     "tool_selection/decision_confidence": {
+      "agree": 0.7857,
+      "dvalue": 0.1263,
+      "ref_v": 0.4406,
+      "cand_v": 0.4583,
+      "n": 14
+     },
+     "tool_selection/next_tool": {
+      "agree": 1.0,
+      "dp": 0.0547,
+      "n": 14
+     }
+    },
+    "disagreements": [
+     {
+      "id": "pm-redroad-parade-z",
+      "question": "disruption_tolerance",
+      "ref": 0.8218352794647217,
+      "ref_p": 0.822,
+      "cand": 0.4399595260620117,
+      "cand_p": 0.56
+     },
+     {
+      "id": "pm-eden-gardens-match-y",
+      "question": "route_strategy",
+      "ref": "route_29ed25456c4d",
+      "ref_p": 0.818,
+      "cand": "route_6a8ca8bc78a6",
+      "cand_p": 0.367
+     },
+     {
+      "id": "pm-howrah-station-transfer-y",
+      "question": "disruption_tolerance",
+      "ref": 0.786228133068792,
+      "ref_p": 0.786,
+      "cand": 0.3535851240158081,
+      "cand_p": 0.646
+     },
+     {
+      "id": "pm-victoria-memorial-ceremony-z",
+      "question": "disruption_tolerance",
+      "ref": 0.8046452879213499,
+      "ref_p": 0.805,
+      "cand": 0.4104779362678528,
+      "cand_p": 0.59
+     },
+     {
+      "id": "pm-salt-lake-stadium-x-unknown",
+      "question": "disruption_tolerance",
+      "ref": 0.8046452879213499,
+      "ref_p": 0.805,
+      "cand": 0.48994603693163613,
+      "cand_p": 0.51
+     },
+     {
+      "id": "pm-airport-nabanna-night-zplus",
+      "question": "disruption_tolerance",
+      "ref": 0.8299756769832325,
+      "ref_p": 0.83,
+      "cand": 0.4300744193836701,
+      "cand_p": 0.57
+     },
+     {
+      "id": "pm-high-tide-waterlogging-z",
+      "question": "route_strategy",
+      "ref": "route_8c7c68cff497",
+      "ref_p": 0.585,
+      "cand": "delay_departure",
+      "cand_p": 0.45
+     },
+     {
+      "id": "tool-fly-howrah-bridge",
+      "question": "decision_confidence",
+      "ref": 0.7004309683909724,
+      "ref_p": 0.7,
+      "cand": 0.4698708653450012,
+      "cand_p": 0.53
+     },
+     {
+      "id": "tool-routes-nabanna-airport",
+      "question": "decision_confidence",
+      "ref": 0.5,
+      "ref_p": 0.5,
+      "cand": 0.6278197578245474,
+      "cand_p": 0.628
+     },
+     {
+      "id": "tool-situation-log",
+      "question": "decision_confidence",
+      "ref": 0.4436175989026547,
+      "ref_p": 0.556,
+      "cand": 0.5401346683502197,
+      "cand_p": 0.54
+     },
+     {
+      "id": "dss-puja-crowd-park-circus",
+      "question": "disruption_tolerance",
+      "ref": 0.650868079014535,
+      "ref_p": 0.651,
+      "cand": 0.4300744193836701,
+      "cand_p": 0.57
+     },
+     {
+      "id": "dss-unverified-flooding-moulali",
+      "question": "coa_strategy",
+      "ref": "information",
+      "ref_p": 0.702,
+      "cand": "minimal",
+      "cand_p": 0.399
+     },
+     {
+      "id": "dss-eden-gardens-egress",
+      "question": "disruption_tolerance",
+      "ref": 0.6378936577471,
+      "ref_p": 0.638,
+      "cand": 0.3816257119178772,
+      "cand_p": 0.618
+     },
+     {
+      "id": "dss-tree-fall-em-bypass",
+      "question": "disruption_tolerance",
+      "ref": 0.5423655075539799,
+      "ref_p": 0.542,
+      "cand": 0.4399595260620117,
+      "cand_p": 0.56
+     },
+     {
+      "id": "dss-gangasagar-babughat",
+      "question": "coa_strategy",
+      "ref": "baseline",
+      "ref_p": 0.486,
+      "cand": "standard",
+      "cand_p": 0.388
+     },
+     {
+      "id": "dss-marathon-red-road",
+      "question": "coa_strategy",
+      "ref": "baseline",
+      "ref_p": 0.39,
+      "cand": "minimal",
+      "cand_p": 0.714
+     },
+     {
+      "id": "esc-inc-mild-ruby",
+      "question": "action",
+      "ref": "continue_monitoring",
+      "ref_p": 0.364,
+      "cand": "emergency_reroute",
+      "cand_p": 0.532
+     },
+     {
+      "id": "esc-inc-no-planb-majerhat",
+      "question": "action",
+      "ref": "escalate_operator",
+      "ref_p": 0.52,
+      "cand": "emergency_reroute",
+      "cand_p": 0.464
+     },
+     {
+      "id": "esc-inc-holding-gariahat",
+      "question": "action",
+      "ref": "hold_position",
+      "ref_p": 0.406,
+      "cand": "escalate_operator",
+      "cand_p": 0.513
+     },
+     {
+      "id": "esc-dep-hot-ahead",
+      "question": "departure",
+      "ref": "hold_departure",
+      "ref_p": 0.558,
+      "cand": "activate_plan_b",
+      "cand_p": 0.44
+     },
+     {
+      "id": "esc-dep-hot-no-planb",
+      "question": "departure",
+      "ref": "hold_departure",
+      "ref_p": 0.766,
+      "cand": "proceed",
+      "cand_p": 0.616
+     },
+     {
+      "id": "esc-dep-not-reporting",
+      "question": "departure",
+      "ref": "hold_departure",
+      "ref_p": 0.525,
+      "cand": "proceed",
+      "cand_p": 0.856
+     },
+     {
+      "id": "esc-dep-resume-midway",
+      "question": "departure",
+      "ref": "hold_departure",
+      "ref_p": 0.482,
+      "cand": "proceed",
+      "cand_p": 0.458
+     },
+     {
+      "id": "pc-victoria-short",
+      "question": "restoration_posture",
+      "ref": "staged_reverse_order_restoration",
+      "ref_p": 0.647,
+      "cand": "immediate_full_restoration",
+      "cand_p": 0.37
+     },
+     {
+      "id": "pc-signals-ready",
+      "question": "restoration_posture",
+      "ref": "signal_assisted_recovery",
+      "ref_p": 0.639,
+      "cand": "immediate_full_restoration",
+      "cand_p": 0.923
+     },
+     {
+      "id": "probe-corridor-checkpoint-rain",
+      "question": "readiness",
+      "ref": 1.3672514029783955,
+      "ref_p": 0.324,
+      "cand": 1.4335725987915309,
+      "cand_p": 0.304
+     }
+    ]
+   }
+  }
+ }
+}

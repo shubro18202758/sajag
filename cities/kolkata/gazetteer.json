@@ -1,0 +1,4205 @@
+{
+ "schema": "sajag.gazetteer/1",
+ "city": "kolkata",
+ "note": "The Kolkata place gazetteer: the City Pack's source of truth for scripts/gen_osint_gazetteer.py, which adds the network's junctions and road segments (scripts/data/osm_network.json) and writes the X19 file scripts/data/osint_gazetteer.json. Places only (never a person). Ids and spellings of landmarks.json are used where a place is there. 'anchor' is how a place meets the road network: 'area' (an area or an off-network street, never pinned to another road), 'snap' (the nearest segment within 900 m), 'J<id>' or 'S<id>' (pre-linked). Hand rows ('source': 'hand') carry approximate points (+-300 m; pandals +-200 m) for review; 'low_lying' marks the waterlogging-prone spots widely reported in the news (a seed list, not a survey). KMC wards and boroughs are left out: no reliable open geometry was available offline.",
+ "attribution": "Road and police-station data © OpenStreetMap contributors, ODbL 1.0 (cities/kolkata/osm).",
+ "places": [
+  {
+   "id": "behala",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Behala",
+   "bn": "বেহালা",
+   "hi": "बेहाला",
+   "aka": [
+    "behalaa",
+    "behela"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.4987,
+   "lon": 88.3109,
+   "importance": 0.66,
+   "low_lying": true,
+   "source": "hand"
+  },
+  {
+   "id": "tollygunge_area",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Tollygunge",
+   "bn": "টালিগঞ্জ",
+   "hi": "टॉलीगंज",
+   "aka": [
+    "tollyganj",
+    "tollygunj",
+    "tallygunge"
+   ],
+   "aka_bn": [
+    "টলিগঞ্জ"
+   ],
+   "aka_hi": [
+    "टालीगंज"
+   ],
+   "lat": 22.499,
+   "lon": 88.346,
+   "importance": 0.64,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "kalighat_area",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Kalighat",
+   "bn": "কালীঘাট",
+   "hi": "कालीघाट",
+   "aka": [
+    "kalighaat"
+   ],
+   "aka_bn": [
+    "কালিঘাট"
+   ],
+   "aka_hi": [],
+   "lat": 22.5203,
+   "lon": 88.3423,
+   "importance": 0.66,
+   "low_lying": true,
+   "source": "hand"
+  },
+  {
+   "id": "kasba",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Kasba",
+   "bn": "কসবা",
+   "hi": "कसबा",
+   "aka": [
+    "kasbah"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.516,
+   "lon": 88.387,
+   "importance": 0.6,
+   "low_lying": true,
+   "source": "hand"
+  },
+  {
+   "id": "garia",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Garia",
+   "bn": "গড়িয়া",
+   "hi": "गड़िया",
+   "aka": [
+    "gariya"
+   ],
+   "aka_bn": [
+    "গরিয়া"
+   ],
+   "aka_hi": [
+    "गरिया"
+   ],
+   "lat": 22.463,
+   "lon": 88.39,
+   "importance": 0.6,
+   "low_lying": true,
+   "source": "hand"
+  },
+  {
+   "id": "ultadanga_area",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Ultadanga",
+   "bn": "উল্টোডাঙা",
+   "hi": "उल्टाडांगा",
+   "aka": [
+    "ultodanga",
+    "ultadanga area"
+   ],
+   "aka_bn": [
+    "উল্টোডাঙ্গা",
+    "উলটোডাঙা"
+   ],
+   "aka_hi": [],
+   "lat": 22.592,
+   "lon": 88.388,
+   "importance": 0.62,
+   "low_lying": true,
+   "source": "hand"
+  },
+  {
+   "id": "mukundapur",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Mukundapur",
+   "bn": "মুকুন্দপুর",
+   "hi": "मुकुंदपुर",
+   "aka": [
+    "mukundpur"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.496,
+   "lon": 88.4,
+   "importance": 0.56,
+   "low_lying": true,
+   "source": "hand"
+  },
+  {
+   "id": "park_circus_area",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Park Circus",
+   "bn": "পার্ক সার্কাস",
+   "hi": "पार्क सर्कस",
+   "aka": [
+    "parkcircus"
+   ],
+   "aka_bn": [
+    "পার্কসার্কাস"
+   ],
+   "aka_hi": [],
+   "lat": 22.541,
+   "lon": 88.368,
+   "importance": 0.64,
+   "low_lying": true,
+   "source": "hand"
+  },
+  {
+   "id": "topsia",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Topsia",
+   "bn": "তপসিয়া",
+   "hi": "तपसिया",
+   "aka": [
+    "tapsia",
+    "tapsiya"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.542,
+   "lon": 88.388,
+   "importance": 0.54,
+   "low_lying": true,
+   "source": "hand"
+  },
+  {
+   "id": "tiljala",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Tiljala",
+   "bn": "তিলজলা",
+   "hi": "तिलजला",
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.53,
+   "lon": 88.39,
+   "importance": 0.54,
+   "low_lying": true,
+   "source": "hand"
+  },
+  {
+   "id": "chetla",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Chetla",
+   "bn": "চেতলা",
+   "hi": "चेतला",
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.516,
+   "lon": 88.335,
+   "importance": 0.54,
+   "low_lying": true,
+   "source": "hand"
+  },
+  {
+   "id": "jodhpur_park",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Jodhpur Park",
+   "bn": "যোধপুর পার্ক",
+   "hi": "जोधपुर पार्क",
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.506,
+   "lon": 88.365,
+   "importance": 0.52,
+   "low_lying": true,
+   "source": "hand"
+  },
+  {
+   "id": "amherst_street",
+   "kind": "low_lying_street",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Amherst Street",
+   "bn": "আমহার্স্ট স্ট্রিট",
+   "hi": "एमहर्स्ट स्ट्रीट",
+   "aka": [
+    "amherst st",
+    "raja rammohan sarani"
+   ],
+   "aka_bn": [
+    "আমহার্স্ট স্ট্রীট",
+    "রাজা রামমোহন সরণি"
+   ],
+   "aka_hi": [],
+   "lat": 22.576,
+   "lon": 88.368,
+   "importance": 0.6,
+   "low_lying": true,
+   "source": "hand"
+  },
+  {
+   "id": "gariahat_area",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Gariahat",
+   "bn": "গড়িয়াহাট",
+   "hi": "गड़ियाहाट",
+   "aka": [
+    "gariahaat",
+    "goriahat",
+    "gariahat market"
+   ],
+   "aka_bn": [
+    "গড়িয়াহাট বাজার"
+   ],
+   "aka_hi": [
+    "गरियाहाट"
+   ],
+   "lat": 22.517,
+   "lon": 88.366,
+   "importance": 0.64,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "bhowanipore",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Bhowanipore",
+   "bn": "ভবানীপুর",
+   "hi": "भवानीपुर",
+   "aka": [
+    "bhowanipur",
+    "bhawanipur",
+    "bhawanipore"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.533,
+   "lon": 88.346,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "ballygunge_area",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Ballygunge",
+   "bn": "বালিগঞ্জ",
+   "hi": "बालीगंज",
+   "aka": [
+    "ballygunj",
+    "baliganj"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.527,
+   "lon": 88.365,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "jadavpur",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Jadavpur",
+   "bn": "যাদবপুর",
+   "hi": "जादवपुर",
+   "aka": [
+    "jadabpur"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.498,
+   "lon": 88.371,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "dhakuria",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Dhakuria",
+   "bn": "ঢাকুরিয়া",
+   "hi": "ढाकुरिया",
+   "aka": [
+    "dhakuriya"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.509,
+   "lon": 88.37,
+   "importance": 0.54,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "kidderpore_area",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Kidderpore",
+   "bn": "খিদিরপুর",
+   "hi": "खिदिरपुर",
+   "aka": [
+    "khidirpur",
+    "khiddirpur"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.537,
+   "lon": 88.324,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "shyambazar_area",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Shyambazar",
+   "bn": "শ্যামবাজার",
+   "hi": "श्यामबाजार",
+   "aka": [
+    "shyam bazar",
+    "shambazar"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.6,
+   "lon": 88.372,
+   "importance": 0.62,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "bagbazar_area",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Bagbazar",
+   "bn": "বাগবাজার",
+   "hi": "बागबाजार",
+   "aka": [
+    "baghbazar"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.603,
+   "lon": 88.365,
+   "importance": 0.56,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "sovabazar",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Sovabazar",
+   "bn": "শোভাবাজার",
+   "hi": "शोभाबाजार",
+   "aka": [
+    "shobhabazar",
+    "shovabazar"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.596,
+   "lon": 88.364,
+   "importance": 0.54,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "hatibagan",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Hatibagan",
+   "bn": "হাতিবাগান",
+   "hi": "हातीबागान",
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.594,
+   "lon": 88.373,
+   "importance": 0.54,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "maniktala_area",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Maniktala",
+   "bn": "মানিকতলা",
+   "hi": "मानिकतला",
+   "aka": [
+    "manicktala",
+    "maniktola"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.585,
+   "lon": 88.378,
+   "importance": 0.56,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "beleghata",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Beleghata",
+   "bn": "বেলেঘাটা",
+   "hi": "बेलेघाटा",
+   "aka": [
+    "beliaghata",
+    "beleghatta"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.565,
+   "lon": 88.393,
+   "importance": 0.56,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "phoolbagan",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Phoolbagan",
+   "bn": "ফুলবাগান",
+   "hi": "फूलबागान",
+   "aka": [
+    "phulbagan"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.574,
+   "lon": 88.392,
+   "importance": 0.52,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "entally",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Entally",
+   "bn": "এন্টালি",
+   "hi": "एंटाली",
+   "aka": [
+    "entali"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.556,
+   "lon": 88.376,
+   "importance": 0.52,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "alipore",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Alipore",
+   "bn": "আলিপুর",
+   "hi": "अलीपुर",
+   "aka": [
+    "alipur"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.53,
+   "lon": 88.332,
+   "importance": 0.56,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "new_alipore",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "New Alipore",
+   "bn": "নিউ আলিপুর",
+   "hi": "न्यू अलीपुर",
+   "aka": [
+    "new alipur"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.51,
+   "lon": 88.327,
+   "importance": 0.52,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "taratala_area",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Taratala",
+   "bn": "তারাতলা",
+   "hi": "तारातला",
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.505,
+   "lon": 88.32,
+   "importance": 0.54,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "thakurpukur",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Thakurpukur",
+   "bn": "ঠাকুরপুকুর",
+   "hi": "ठाकुरपुकुर",
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.472,
+   "lon": 88.308,
+   "importance": 0.52,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "burrabazar",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Burrabazar",
+   "bn": "বড়বাজার",
+   "hi": "बड़ाबाजार",
+   "aka": [
+    "barabazar",
+    "bara bazar",
+    "burra bazar"
+   ],
+   "aka_bn": [],
+   "aka_hi": [
+    "बड़ा बाजार"
+   ],
+   "lat": 22.581,
+   "lon": 88.353,
+   "importance": 0.62,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "bowbazar",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Bowbazar",
+   "bn": "বউবাজার",
+   "hi": "बहूबाजार",
+   "aka": [
+    "boubazar",
+    "bow bazar",
+    "bowbazaar"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.568,
+   "lon": 88.36,
+   "importance": 0.56,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "college_street_area",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "College Street",
+   "bn": "কলেজ স্ট্রিট",
+   "hi": "कॉलेज स्ट्रीट",
+   "aka": [
+    "college st",
+    "boipara"
+   ],
+   "aka_bn": [
+    "বইপাড়া",
+    "কলেজ স্ট্রীট"
+   ],
+   "aka_hi": [],
+   "lat": 22.576,
+   "lon": 88.364,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "dharmatala",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Dharmatala",
+   "bn": "ধর্মতলা",
+   "hi": "धर्मतला",
+   "aka": [
+    "dharmatolla",
+    "dharamtala"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.563,
+   "lon": 88.353,
+   "importance": 0.62,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "salt_lake",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Salt Lake (Bidhannagar)",
+   "bn": "সল্টলেক",
+   "hi": "साल्ट लेक",
+   "aka": [
+    "salt lake",
+    "saltlake",
+    "salt lake city",
+    "bidhannagar",
+    "bidhan nagar"
+   ],
+   "aka_bn": [
+    "সল্ট লেক",
+    "বিধাননগর"
+   ],
+   "aka_hi": [
+    "साल्टलेक",
+    "बिधाननगर",
+    "विधाननगर"
+   ],
+   "lat": 22.58,
+   "lon": 88.415,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "new_town",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "New Town",
+   "bn": "নিউ টাউন",
+   "hi": "न्यू टाउन",
+   "aka": [
+    "newtown",
+    "new town rajarhat"
+   ],
+   "aka_bn": [
+    "নিউটাউন"
+   ],
+   "aka_hi": [
+    "न्यूटाउन"
+   ],
+   "lat": 22.58,
+   "lon": 88.47,
+   "importance": 0.64,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "rajarhat",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Rajarhat",
+   "bn": "রাজারহাট",
+   "hi": "राजारहाट",
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.62,
+   "lon": 88.47,
+   "importance": 0.52,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "sector_v_area",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Sector V",
+   "bn": "সেক্টর ফাইভ",
+   "hi": "सेक्टर फाइव",
+   "aka": [
+    "sector 5",
+    "sector five",
+    "salt lake sector v",
+    "salt lake sector 5"
+   ],
+   "aka_bn": [
+    "সেক্টর ৫",
+    "সেক্টর পাঁচ"
+   ],
+   "aka_hi": [
+    "सेक्टर 5"
+   ],
+   "lat": 22.574,
+   "lon": 88.433,
+   "importance": 0.62,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "lake_town_area",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Lake Town",
+   "bn": "লেক টাউন",
+   "hi": "लेक टाउन",
+   "aka": [
+    "laketown"
+   ],
+   "aka_bn": [
+    "লেকটাউন"
+   ],
+   "aka_hi": [],
+   "lat": 22.602,
+   "lon": 88.404,
+   "importance": 0.56,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "baguiati_area",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Baguiati",
+   "bn": "বাগুইআটি",
+   "hi": "बागुईआटी",
+   "aka": [
+    "baguihati"
+   ],
+   "aka_bn": [
+    "বাগুইহাটি"
+   ],
+   "aka_hi": [],
+   "lat": 22.615,
+   "lon": 88.428,
+   "importance": 0.56,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "kestopur_area",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Kestopur",
+   "bn": "কেষ্টপুর",
+   "hi": "केष्टोपुर",
+   "aka": [
+    "keshtopur",
+    "kestopur"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.6,
+   "lon": 88.43,
+   "importance": 0.54,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "dum_dum",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Dum Dum",
+   "bn": "দমদম",
+   "hi": "दमदम",
+   "aka": [
+    "dumdum"
+   ],
+   "aka_bn": [
+    "দম দম"
+   ],
+   "aka_hi": [
+    "दम दम"
+   ],
+   "lat": 22.626,
+   "lon": 88.42,
+   "importance": 0.56,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "howrah_city",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Howrah (city)",
+   "bn": "হাওড়া",
+   "hi": "हावड़ा",
+   "aka": [
+    "howrah city"
+   ],
+   "aka_bn": [
+    "হাওড়া শহর"
+   ],
+   "aka_hi": [],
+   "lat": 22.5958,
+   "lon": 88.2636,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "shibpur",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Shibpur",
+   "bn": "শিবপুর",
+   "hi": "शिबपुर",
+   "aka": [
+    "sibpur"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.57,
+   "lon": 88.32,
+   "importance": 0.52,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "santragachi",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Santragachi",
+   "bn": "সাঁতরাগাছি",
+   "hi": "संतरागाछी",
+   "aka": [
+    "santragachhi"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.581,
+   "lon": 88.281,
+   "importance": 0.52,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "maidan",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Maidan",
+   "bn": "ময়দান",
+   "hi": "मैदान",
+   "aka": [
+    "the maidan",
+    "kolkata maidan"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.556,
+   "lon": 88.342,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "chorbagan",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Chorbagan",
+   "bn": "চোরবাগান",
+   "hi": "चोरबागान",
+   "aka": [
+    "chorbagan sarbojanin"
+   ],
+   "aka_bn": [
+    "চোরবাগান সর্বজনীন"
+   ],
+   "aka_hi": [],
+   "lat": 22.583,
+   "lon": 88.359,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "jorasanko",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Jorasanko",
+   "bn": "জোড়াসাঁকো",
+   "hi": "जोड़ासांको",
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.585,
+   "lon": 88.359,
+   "importance": 0.52,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "kumartuli_area",
+   "kind": "neighbourhood",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Kumartuli",
+   "bn": "কুমোরটুলি",
+   "hi": "कुमारटुली",
+   "aka": [
+    "kumortuli",
+    "kumartuli"
+   ],
+   "aka_bn": [
+    "কুমারটুলি"
+   ],
+   "aka_hi": [],
+   "lat": 22.599,
+   "lon": 88.361,
+   "importance": 0.58,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "sarat_bose_road",
+   "kind": "street",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Sarat Bose Road",
+   "bn": "শরৎ বসু রোড",
+   "hi": "शरत बोस रोड",
+   "aka": [
+    "lansdowne road",
+    "sarat bose rd"
+   ],
+   "aka_bn": [
+    "শরৎ বোস রোড"
+   ],
+   "aka_hi": [],
+   "lat": 22.526,
+   "lon": 88.354,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "harish_mukherjee_road",
+   "kind": "street",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Harish Mukherjee Road",
+   "bn": "হরিশ মুখার্জি রোড",
+   "hi": "हरीश मुखर्जी रोड",
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.53,
+   "lon": 88.348,
+   "importance": 0.48,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "prince_anwar_shah_road",
+   "kind": "street",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Prince Anwar Shah Road",
+   "bn": "প্রিন্স আনোয়ার শাহ রোড",
+   "hi": "प्रिंस अनवर शाह रोड",
+   "aka": [
+    "anwar shah road"
+   ],
+   "aka_bn": [
+    "আনোয়ার শাহ রোড"
+   ],
+   "aka_hi": [],
+   "lat": 22.499,
+   "lon": 88.356,
+   "importance": 0.52,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "netaji_subhas_road",
+   "kind": "street",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Netaji Subhas Road",
+   "bn": "নেতাজি সুভাষ রোড",
+   "hi": "नेताजी सुभाष रोड",
+   "aka": [
+    "ns road",
+    "n s road"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.574,
+   "lon": 88.348,
+   "importance": 0.48,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "surya_sen_street",
+   "kind": "street",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Surya Sen Street",
+   "bn": "সূর্য সেন স্ট্রিট",
+   "hi": "सूर्य सेन स्ट्रीट",
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.575,
+   "lon": 88.366,
+   "importance": 0.46,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "dr_suresh_sarkar_road",
+   "kind": "street",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Dr Suresh Sarkar Road",
+   "bn": "ডাঃ সুরেশ সরকার রোড",
+   "hi": "डॉ सुरेश सरकार रोड",
+   "aka": [
+    "dr suresh chandra sarkar road"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.556,
+   "lon": 88.377,
+   "importance": 0.44,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "nsc_bose_road",
+   "kind": "street",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Netaji Subhash Chandra Bose Road",
+   "bn": "নেতাজি সুভাষচন্দ্র বসু রোড",
+   "hi": "नेताजी सुभाष चंद्र बोस रोड",
+   "aka": [
+    "nsc bose road",
+    "n s c bose road"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.48,
+   "lon": 88.365,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "raja_sc_mullick_road",
+   "kind": "street",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Raja SC Mullick Road",
+   "bn": "রাজা এসসি মল্লিক রোড",
+   "hi": "राजा एससी मल्लिक रोड",
+   "aka": [
+    "raja s c mullick road",
+    "raja subodh chandra mullick road"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.49,
+   "lon": 88.37,
+   "importance": 0.46,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "gariahat_road",
+   "kind": "street",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Gariahat Road",
+   "bn": "গড়িয়াহাট রোড",
+   "hi": "गड़ियाहाट रोड",
+   "aka": [
+    "gariahat road south"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.512,
+   "lon": 88.366,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "southern_avenue",
+   "kind": "street",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Southern Avenue",
+   "bn": "সাদার্ন অ্যাভিনিউ",
+   "hi": "सदर्न एवेन्यू",
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.512,
+   "lon": 88.354,
+   "importance": 0.48,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "ballygunge_circular_road",
+   "kind": "street",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Ballygunge Circular Road",
+   "bn": "বালিগঞ্জ সার্কুলার রোড",
+   "hi": "बालीगंज सर्कुलर रोड",
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.533,
+   "lon": 88.36,
+   "importance": 0.46,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "camac_street",
+   "kind": "street",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Camac Street",
+   "bn": "ক্যামাক স্ট্রিট",
+   "hi": "कैमक स्ट्रीट",
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.545,
+   "lon": 88.353,
+   "importance": 0.46,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "shakespeare_sarani",
+   "kind": "street",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Shakespeare Sarani",
+   "bn": "শেক্সপিয়র সরণি",
+   "hi": "शेक्सपियर सरणी",
+   "aka": [
+    "theatre road"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.546,
+   "lon": 88.354,
+   "importance": 0.46,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "elgin_road",
+   "kind": "street",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Elgin Road",
+   "bn": "এলগিন রোড",
+   "hi": "एल्गिन रोड",
+   "aka": [
+    "lala lajpat rai sarani"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.538,
+   "lon": 88.352,
+   "importance": 0.46,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "beleghata_main_road",
+   "kind": "street",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Beleghata Main Road",
+   "bn": "বেলেঘাটা মেন রোড",
+   "hi": "बेलेघाटा मेन रोड",
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.565,
+   "lon": 88.39,
+   "importance": 0.46,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "rabindra_sarani_south",
+   "kind": "street",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Chitpur Road",
+   "bn": "চিৎপুর রোড",
+   "hi": "चितपुर रोड",
+   "aka": [
+    "chitpur"
+   ],
+   "aka_bn": [
+    "চিৎপুর"
+   ],
+   "aka_hi": [],
+   "lat": 22.585,
+   "lon": 88.357,
+   "importance": 0.44,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "jatin_das_park",
+   "kind": "street",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Jatin Das Park",
+   "bn": "যতীন দাস পার্ক",
+   "hi": "जतीन दास पार्क",
+   "aka": [
+    "jatindas park"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.5225,
+   "lon": 88.347,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "lake_market",
+   "kind": "street",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Lake Market",
+   "bn": "লেক মার্কেট",
+   "hi": "लेक मार्केट",
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.516,
+   "lon": 88.353,
+   "importance": 0.48,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "new_market",
+   "kind": "market",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "New Market",
+   "bn": "নিউ মার্কেট",
+   "hi": "न्यू मार्केट",
+   "aka": [
+    "hogg market",
+    "sir stuart hogg market"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.56,
+   "lon": 88.351,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "thanthania",
+   "kind": "low_lying_spot",
+   "feature_type": "landmark",
+   "anchor": "S1058",
+   "en": "Thanthania",
+   "bn": "ঠনঠনিয়া",
+   "hi": "ठनठनिया",
+   "aka": [
+    "thanthaniya",
+    "thanthania kalibari",
+    "thanthania kali bari"
+   ],
+   "aka_bn": [
+    "ঠনঠনে",
+    "ঠনঠনিয়া কালীবাড়ি",
+    "ঠনঠনে কালীবাড়ি"
+   ],
+   "aka_hi": [],
+   "lat": 22.577,
+   "lon": 88.362,
+   "importance": 0.62,
+   "low_lying": true,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "sealdah",
+   "kind": "terminal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Sealdah Station",
+   "bn": "শিয়ালদহ স্টেশন",
+   "hi": "सियालदह स्टेशन",
+   "aka": [
+    "sealdah",
+    "shealdah",
+    "sealdaha",
+    "sealdah railway station",
+    "sealdah stn"
+   ],
+   "aka_bn": [
+    "শিয়ালদহ",
+    "শিয়ালদা",
+    "শিয়ালদা স্টেশন"
+   ],
+   "aka_hi": [
+    "सियालदह"
+   ],
+   "lat": 22.5678,
+   "lon": 88.3709,
+   "importance": 0.8,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "airport",
+   "kind": "terminal",
+   "feature_type": "landmark",
+   "anchor": "J49",
+   "en": "Kolkata Airport",
+   "bn": "কলকাতা বিমানবন্দর",
+   "hi": "कोलकाता हवाई अड्डा",
+   "aka": [
+    "netaji subhas chandra bose international airport",
+    "nscbi airport",
+    "dum dum airport",
+    "calcutta airport",
+    "kolkata international airport"
+   ],
+   "aka_bn": [
+    "দমদম বিমানবন্দর",
+    "নেতাজি সুভাষচন্দ্র বসু আন্তর্জাতিক বিমানবন্দর"
+   ],
+   "aka_hi": [
+    "कोलकाता एयरपोर्ट",
+    "दमदम हवाई अड्डा"
+   ],
+   "lat": 22.652,
+   "lon": 88.446,
+   "importance": 0.82,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "kolkata_station",
+   "kind": "terminal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Kolkata Station (Chitpur)",
+   "bn": "কলকাতা স্টেশন",
+   "hi": "कोलकाता स्टेशन",
+   "aka": [
+    "kolkata railway station",
+    "chitpur station"
+   ],
+   "aka_bn": [
+    "চিৎপুর স্টেশন"
+   ],
+   "aka_hi": [],
+   "lat": 22.604,
+   "lon": 88.384,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "esplanade_bus_terminus",
+   "kind": "terminal",
+   "feature_type": "landmark",
+   "anchor": "J7",
+   "en": "Esplanade bus terminus",
+   "bn": "ধর্মতলা বাস টার্মিনাস",
+   "hi": "एस्प्लेनेड बस टर्मिनस",
+   "aka": [
+    "esplanade bus stand",
+    "dharmatala bus stand"
+   ],
+   "aka_bn": [
+    "ধর্মতলা বাসস্ট্যান্ড"
+   ],
+   "aka_hi": [],
+   "lat": 22.564,
+   "lon": 88.351,
+   "importance": 0.56,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "babughat_bus_stand",
+   "kind": "terminal",
+   "feature_type": "landmark",
+   "anchor": "J11",
+   "en": "Babughat bus stand",
+   "bn": "বাবুঘাট বাসস্ট্যান্ড",
+   "hi": "बाबूघाट बस स्टैंड",
+   "aka": [
+    "babughat bus terminus"
+   ],
+   "aka_bn": [
+    "বাবুঘাট বাস স্ট্যান্ড"
+   ],
+   "aka_hi": [],
+   "lat": 22.568,
+   "lon": 88.341,
+   "importance": 0.52,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "karunamoyee",
+   "kind": "terminal",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Karunamoyee bus terminus",
+   "bn": "করুণাময়ী বাস টার্মিনাস",
+   "hi": "करुणामयी बस टर्मिनस",
+   "aka": [
+    "karunamoyee",
+    "karunamayee"
+   ],
+   "aka_bn": [
+    "করুণাময়ী"
+   ],
+   "aka_hi": [],
+   "lat": 22.588,
+   "lon": 88.421,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "dhakuria_bridge",
+   "kind": "bridge",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Dhakuria bridge",
+   "bn": "ঢাকুরিয়া ব্রিজ",
+   "hi": "ढाकुरिया ब्रिज",
+   "aka": [
+    "dhakuria flyover"
+   ],
+   "aka_bn": [
+    "ঢাকুরিয়া সেতু"
+   ],
+   "aka_hi": [],
+   "lat": 22.511,
+   "lon": 88.368,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "tallah_bridge",
+   "kind": "bridge",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Tallah bridge",
+   "bn": "টালা ব্রিজ",
+   "hi": "टाला ब्रिज",
+   "aka": [
+    "tala bridge"
+   ],
+   "aka_bn": [
+    "টালা সেতু"
+   ],
+   "aka_hi": [],
+   "lat": 22.611,
+   "lon": 88.377,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "ultadanga_flyover",
+   "kind": "bridge",
+   "feature_type": "neighbourhood",
+   "anchor": "area",
+   "en": "Ultadanga flyover",
+   "bn": "উল্টোডাঙা উড়ালপুল",
+   "hi": "उल्टाडांगा फ्लाईओवर",
+   "aka": [],
+   "aka_bn": [
+    "উল্টোডাঙা ফ্লাইওভার"
+   ],
+   "aka_hi": [],
+   "lat": 22.59,
+   "lon": 88.392,
+   "importance": 0.48,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "outram_ghat",
+   "kind": "ghat",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Outram Ghat",
+   "bn": "আউট্রাম ঘাট",
+   "hi": "आउट्रम घाट",
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.56,
+   "lon": 88.337,
+   "importance": 0.52,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "ahiritola_ghat",
+   "kind": "ghat",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Ahiritola Ghat",
+   "bn": "আহিরীটোলা ঘাট",
+   "hi": "अहिरीटोला घाट",
+   "aka": [
+    "ahiritola"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.594,
+   "lon": 88.357,
+   "importance": 0.52,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "bagbazar_ghat",
+   "kind": "ghat",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Bagbazar Ghat",
+   "bn": "বাগবাজার ঘাট",
+   "hi": "बागबाजार घाट",
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.605,
+   "lon": 88.362,
+   "importance": 0.52,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "nimtala_ghat",
+   "kind": "ghat",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Nimtala Ghat",
+   "bn": "নিমতলা ঘাট",
+   "hi": "निमतला घाट",
+   "aka": [
+    "nimtala"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.586,
+   "lon": 88.354,
+   "importance": 0.52,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "armenian_ghat",
+   "kind": "ghat",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Armenian Ghat",
+   "bn": "আর্মেনিয়ান ঘাট",
+   "hi": "आर्मेनियन घाट",
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.584,
+   "lon": 88.348,
+   "importance": 0.52,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "howrah_ferry_ghat",
+   "kind": "ghat",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Howrah Ferry Ghat",
+   "bn": "হাওড়া ফেরিঘাট",
+   "hi": "हावड़ा फेरी घाट",
+   "aka": [
+    "howrah launch ghat",
+    "howrah station ghat"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.585,
+   "lon": 88.343,
+   "importance": 0.52,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "fairlie_ghat",
+   "kind": "ghat",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Fairlie Ghat",
+   "bn": "ফেয়ারলি ঘাট",
+   "hi": "फेयरली घाट",
+   "aka": [
+    "fairlie place ghat"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.573,
+   "lon": 88.344,
+   "importance": 0.52,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "sskm",
+   "kind": "hospital",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "SSKM Hospital",
+   "bn": "এসএসকেএম হাসপাতাল",
+   "hi": "एसएसकेएम अस्पताल",
+   "aka": [
+    "sskm",
+    "pg hospital",
+    "ipgmer",
+    "ipgmer sskm"
+   ],
+   "aka_bn": [
+    "এসএসকেএম",
+    "পিজি হাসপাতাল"
+   ],
+   "aka_hi": [],
+   "lat": 22.539,
+   "lon": 88.344,
+   "importance": 0.8,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "medical_college",
+   "kind": "hospital",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Kolkata Medical College",
+   "bn": "কলকাতা মেডিক্যাল কলেজ",
+   "hi": "कोलकाता मेडिकल कॉलेज",
+   "aka": [
+    "calcutta medical college",
+    "medical college",
+    "medical college hospital",
+    "kolkata medical college hospital",
+    "kolkata medical"
+   ],
+   "aka_bn": [
+    "কলকাতা মেডিকেল কলেজ",
+    "মেডিক্যাল কলেজ হাসপাতাল",
+    "কলকাতা মেডিক্যাল",
+    "কলকাতা মেডিকেল"
+   ],
+   "aka_hi": [],
+   "lat": 22.574,
+   "lon": 88.362,
+   "importance": 0.78,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "nrs",
+   "kind": "hospital",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "NRS Medical College",
+   "bn": "এনআরএস মেডিক্যাল কলেজ",
+   "hi": "एनआरएस मेडिकल कॉलेज",
+   "aka": [
+    "nrs hospital",
+    "nil ratan sircar medical college",
+    "nrs medical college hospital"
+   ],
+   "aka_bn": [
+    "এনআরএস হাসপাতাল",
+    "নীলরতন সরকার মেডিক্যাল কলেজ"
+   ],
+   "aka_hi": [],
+   "lat": 22.564,
+   "lon": 88.369,
+   "importance": 0.74,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "rg_kar",
+   "kind": "hospital",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "RG Kar Medical College",
+   "bn": "আরজি কর মেডিক্যাল কলেজ",
+   "hi": "आरजी कर मेडिकल कॉलेज",
+   "aka": [
+    "r g kar medical college",
+    "rg kar hospital"
+   ],
+   "aka_bn": [
+    "আরজি কর হাসপাতাল"
+   ],
+   "aka_hi": [],
+   "lat": 22.604,
+   "lon": 88.379,
+   "importance": 0.72,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "shambhunath_pandit",
+   "kind": "hospital",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Shambhunath Pandit Hospital",
+   "bn": "শম্ভুনাথ পণ্ডিত হাসপাতাল",
+   "hi": "शंभुनाथ पंडित अस्पताल",
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.536,
+   "lon": 88.348,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "mr_bangur",
+   "kind": "hospital",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "MR Bangur Hospital",
+   "bn": "এমআর বাঙুর হাসপাতাল",
+   "hi": "एमआर बांगुर अस्पताल",
+   "aka": [
+    "m r bangur hospital",
+    "bangur hospital"
+   ],
+   "aka_bn": [
+    "বাঙুর হাসপাতাল"
+   ],
+   "aka_hi": [],
+   "lat": 22.493,
+   "lon": 88.345,
+   "importance": 0.62,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "cnmc",
+   "kind": "hospital",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Calcutta National Medical College",
+   "bn": "ন্যাশনাল মেডিক্যাল কলেজ",
+   "hi": "कलकत्ता नेशनल मेडिकल कॉलेज",
+   "aka": [
+    "national medical college",
+    "cnmc hospital"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.544,
+   "lon": 88.373,
+   "importance": 0.62,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "ruby_hospital",
+   "kind": "hospital",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Ruby General Hospital",
+   "bn": "রুবি জেনারেল হাসপাতাল",
+   "hi": "रूबी जनरल अस्पताल",
+   "aka": [
+    "ruby hospital"
+   ],
+   "aka_bn": [
+    "রুবি হাসপাতাল"
+   ],
+   "aka_hi": [],
+   "lat": 22.513,
+   "lon": 88.403,
+   "importance": 0.62,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "amri_dhakuria",
+   "kind": "hospital",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "AMRI Hospital Dhakuria",
+   "bn": "আমরি হাসপাতাল",
+   "hi": "एएमआरआई अस्पताल",
+   "aka": [
+    "amri hospital",
+    "amri dhakuria"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.513,
+   "lon": 88.37,
+   "importance": 0.56,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "howrah_district_hospital",
+   "kind": "hospital",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Howrah District Hospital",
+   "bn": "হাওড়া জেলা হাসপাতাল",
+   "hi": "हावड़ा जिला अस्पताल",
+   "aka": [
+    "howrah general hospital"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.586,
+   "lon": 88.321,
+   "importance": 0.56,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "eden_gardens",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Eden Gardens",
+   "bn": "ইডেন গার্ডেন্স",
+   "hi": "ईडन गार्डन्स",
+   "aka": [
+    "eden garden",
+    "eden gardens stadium"
+   ],
+   "aka_bn": [
+    "ইডেন"
+   ],
+   "aka_hi": [
+    "ईडन गार्डन"
+   ],
+   "lat": 22.5646,
+   "lon": 88.3433,
+   "importance": 0.82,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "netaji_indoor",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Netaji Indoor Stadium",
+   "bn": "নেতাজি ইন্ডোর স্টেডিয়াম",
+   "hi": "नेताजी इंडोर स्टेडियम",
+   "aka": [
+    "netaji indoor"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.566,
+   "lon": 88.342,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "brigade_parade_ground",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Brigade Parade Ground",
+   "bn": "ব্রিগেড প্যারেড গ্রাউন্ড",
+   "hi": "ब्रिगेड परेड ग्राउंड",
+   "aka": [
+    "brigade ground",
+    "brigade parade grounds"
+   ],
+   "aka_bn": [
+    "ব্রিগেড ময়দান"
+   ],
+   "aka_hi": [],
+   "lat": 22.556,
+   "lon": 88.346,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "rabindra_sadan",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Rabindra Sadan",
+   "bn": "রবীন্দ্র সদন",
+   "hi": "रवींद्र सदन",
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.542,
+   "lon": 88.347,
+   "importance": 0.56,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "kalighat_temple",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Kalighat Temple",
+   "bn": "কালীঘাট মন্দির",
+   "hi": "कालीघाट मंदिर",
+   "aka": [
+    "kalighat kali temple",
+    "kalighat mandir"
+   ],
+   "aka_bn": [
+    "কালীঘাটের মন্দির"
+   ],
+   "aka_hi": [],
+   "lat": 22.5203,
+   "lon": 88.3426,
+   "importance": 0.7,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "dakshineswar",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Dakshineswar Kali Temple",
+   "bn": "দক্ষিণেশ্বর মন্দির",
+   "hi": "दक्षिणेश्वर काली मंदिर",
+   "aka": [
+    "dakshineswar temple",
+    "dakshineswar"
+   ],
+   "aka_bn": [
+    "দক্ষিণেশ্বর"
+   ],
+   "aka_hi": [
+    "दक्षिणेश्वर"
+   ],
+   "lat": 22.655,
+   "lon": 88.3576,
+   "importance": 0.7,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "belur_math",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Belur Math",
+   "bn": "বেলুড় মঠ",
+   "hi": "बेलूर मठ",
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.632,
+   "lon": 88.356,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "nakhoda_masjid",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Nakhoda Masjid",
+   "bn": "নাখোদা মসজিদ",
+   "hi": "नाखुदा मस्जिद",
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.58,
+   "lon": 88.357,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "st_pauls_cathedral",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "St Paul's Cathedral",
+   "bn": "সেন্ট পলস ক্যাথিড্রাল",
+   "hi": "सेंट पॉल्स कैथेड्रल",
+   "aka": [
+    "st pauls cathedral",
+    "saint pauls cathedral"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.544,
+   "lon": 88.347,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "writers_building",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Writers' Building",
+   "bn": "মহাকরণ",
+   "hi": "राइटर्स बिल्डिंग",
+   "aka": [
+    "writers building",
+    "writers buildings"
+   ],
+   "aka_bn": [
+    "রাইটার্স বিল্ডিং"
+   ],
+   "aka_hi": [],
+   "lat": 22.573,
+   "lon": 88.349,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "raj_bhavan",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Raj Bhavan",
+   "bn": "রাজভবন",
+   "hi": "राजभवन",
+   "aka": [
+    "raj bhawan"
+   ],
+   "aka_bn": [
+    "রাজ ভবন"
+   ],
+   "aka_hi": [],
+   "lat": 22.569,
+   "lon": 88.35,
+   "importance": 0.62,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "high_court",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Calcutta High Court",
+   "bn": "কলকাতা হাইকোর্ট",
+   "hi": "कलकत्ता हाईकोर्ट",
+   "aka": [
+    "kolkata high court"
+   ],
+   "aka_bn": [
+    "কলকাতা হাই কোর্ট"
+   ],
+   "aka_hi": [],
+   "lat": 22.571,
+   "lon": 88.346,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "lalbazar",
+   "kind": "agency",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Lalbazar (Kolkata Police HQ)",
+   "bn": "লালবাজার",
+   "hi": "लालबाज़ार",
+   "aka": [
+    "lalbazar",
+    "lalbazar police headquarters",
+    "kolkata police headquarters"
+   ],
+   "aka_bn": [
+    "লালবাজার পুলিশ সদর"
+   ],
+   "aka_hi": [
+    "लालबाजार"
+   ],
+   "lat": 22.5717,
+   "lon": 88.3526,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "millennium_park",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Millennium Park",
+   "bn": "মিলেনিয়াম পার্ক",
+   "hi": "मिलेनियम पार्क",
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.569,
+   "lon": 88.342,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "eco_park",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Eco Park",
+   "bn": "ইকো পার্ক",
+   "hi": "इको पार्क",
+   "aka": [
+    "prakriti tirtha"
+   ],
+   "aka_bn": [
+    "প্রকৃতি তীর্থ"
+   ],
+   "aka_hi": [],
+   "lat": 22.601,
+   "lon": 88.468,
+   "importance": 0.56,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "nicco_park",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Nicco Park",
+   "bn": "নিক্কো পার্ক",
+   "hi": "निक्को पार्क",
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.571,
+   "lon": 88.421,
+   "importance": 0.52,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "rabindra_sarobar",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Rabindra Sarobar",
+   "bn": "রবীন্দ্র সরোবর",
+   "hi": "रवींद्र सरोवर",
+   "aka": [
+    "dhakuria lake",
+    "dhakuria lakes"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.512,
+   "lon": 88.359,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "subhash_sarobar",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Subhash Sarobar",
+   "bn": "সুভাষ সরোবর",
+   "hi": "सुभाष सरोवर",
+   "aka": [
+    "beleghata lake"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.571,
+   "lon": 88.399,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "central_park_salt_lake",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Central Park Mela Ground (Salt Lake)",
+   "bn": "সেন্ট্রাল পার্ক মেলা প্রাঙ্গণ",
+   "hi": "सेंट्रल पार्क मेला ग्राउंड",
+   "aka": [
+    "central park mela ground",
+    "boimela prangan",
+    "book fair ground"
+   ],
+   "aka_bn": [
+    "বইমেলা প্রাঙ্গণ"
+   ],
+   "aka_hi": [],
+   "lat": 22.588,
+   "lon": 88.41,
+   "importance": 0.52,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "biswa_bangla_convention_centre",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Biswa Bangla Convention Centre",
+   "bn": "বিশ্ব বাংলা কনভেনশন সেন্টার",
+   "hi": "बिस्वा बांग्ला कन्वेंशन सेंटर",
+   "aka": [
+    "bbcc"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.582,
+   "lon": 88.464,
+   "importance": 0.5,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "milan_mela",
+   "kind": "venue",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Milan Mela Ground",
+   "bn": "মিলন মেলা প্রাঙ্গণ",
+   "hi": "मिलन मेला ग्राउंड",
+   "aka": [
+    "milan mela"
+   ],
+   "aka_bn": [
+    "মিলন মেলা"
+   ],
+   "aka_hi": [],
+   "lat": 22.54,
+   "lon": 88.402,
+   "importance": 0.48,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "bagbazar_pandal",
+   "kind": "pandal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Bagbazar Sarbojanin",
+   "bn": "বাগবাজার সর্বজনীন",
+   "hi": "बागबाज़ार सर्वजनीन",
+   "aka": [
+    "bagbazar sarbojanin durgotsav",
+    "bagbazar puja"
+   ],
+   "aka_bn": [
+    "বাগবাজার সর্বজনীন দুর্গোৎসব"
+   ],
+   "aka_hi": [],
+   "lat": 22.604,
+   "lon": 88.366,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "kumartuli_pandal",
+   "kind": "pandal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Kumartuli Park",
+   "bn": "কুমোরটুলি পার্ক",
+   "hi": "कुमारटुली पार्क",
+   "aka": [
+    "kumartuli park puja",
+    "kumortuli park"
+   ],
+   "aka_bn": [
+    "কুমারটুলি পার্ক"
+   ],
+   "aka_hi": [],
+   "lat": 22.599,
+   "lon": 88.361,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "santosh_mitra_square_pandal",
+   "kind": "pandal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Santosh Mitra Square",
+   "bn": "সন্তোষ মিত্র স্কোয়্যার",
+   "hi": "संतोष मित्र स्क्वायर",
+   "aka": [
+    "santosh mitra square puja",
+    "lebutala park"
+   ],
+   "aka_bn": [
+    "সন্তোষ মিত্র স্কোয়ার",
+    "লেবুতলা পার্ক"
+   ],
+   "aka_hi": [],
+   "lat": 22.562,
+   "lon": 88.364,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "college_square_pandal",
+   "kind": "pandal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "College Square",
+   "bn": "কলেজ স্কোয়্যার",
+   "hi": "कॉलेज स्क्वायर",
+   "aka": [
+    "college square puja"
+   ],
+   "aka_bn": [
+    "কলেজ স্কোয়ার"
+   ],
+   "aka_hi": [],
+   "lat": 22.575,
+   "lon": 88.364,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "ekdalia_pandal",
+   "kind": "pandal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Ekdalia Evergreen",
+   "bn": "একডালিয়া এভারগ্রিন",
+   "hi": "एकडालिया एवरग्रीन",
+   "aka": [
+    "ekdalia evergreen club",
+    "ekdalia puja"
+   ],
+   "aka_bn": [
+    "একডালিয়া"
+   ],
+   "aka_hi": [],
+   "lat": 22.516,
+   "lon": 88.37,
+   "importance": 0.66,
+   "low_lying": false,
+   "source": "landmarks.json"
+  },
+  {
+   "id": "deshapriya_park_pandal",
+   "kind": "pandal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Deshapriya Park Durga Puja",
+   "bn": "দেশপ্রিয় পার্কের পুজো",
+   "hi": "देशप्रिय पार्क दुर्गा पूजा",
+   "aka": [
+    "deshapriya park puja"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.515,
+   "lon": 88.353,
+   "importance": 0.58,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "md_ali_park",
+   "kind": "pandal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Mohammad Ali Park",
+   "bn": "মহম্মদ আলি পার্ক",
+   "hi": "मोहम्मद अली पार्क",
+   "aka": [
+    "md ali park",
+    "mohammed ali park"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.577,
+   "lon": 88.357,
+   "importance": 0.58,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "suruchi_sangha",
+   "kind": "pandal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Suruchi Sangha",
+   "bn": "সুরুচি সংঘ",
+   "hi": "सुरुचि संघ",
+   "aka": [
+    "suruchi sangha new alipore"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.509,
+   "lon": 88.329,
+   "importance": 0.58,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "tridhara_sammilani",
+   "kind": "pandal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Tridhara Sammilani",
+   "bn": "ত্রিধারা সম্মিলনী",
+   "hi": "त्रिधारा सम्मिलनी",
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.518,
+   "lon": 88.354,
+   "importance": 0.58,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "sreebhumi_sporting",
+   "kind": "pandal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Sreebhumi Sporting Club",
+   "bn": "শ্রীভূমি স্পোর্টিং ক্লাব",
+   "hi": "श्रीभूमि स्पोर्टिंग क्लब",
+   "aka": [
+    "sreebhumi club",
+    "sreebhumi puja"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.605,
+   "lon": 88.404,
+   "importance": 0.58,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "chetla_agrani",
+   "kind": "pandal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Chetla Agrani Club",
+   "bn": "চেতলা অগ্রণী ক্লাব",
+   "hi": "चेतला अग्रणी क्लब",
+   "aka": [
+    "chetla agrani"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.516,
+   "lon": 88.336,
+   "importance": 0.58,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "hatibagan_sarbojanin",
+   "kind": "pandal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Hatibagan Sarbojanin",
+   "bn": "হাতিবাগান সর্বজনীন",
+   "hi": "हातीबागान सर्वजनीन",
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.594,
+   "lon": 88.372,
+   "importance": 0.58,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "ahiritola_sarbojanin",
+   "kind": "pandal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Ahiritola Sarbojanin",
+   "bn": "আহিরীটোলা সর্বজনীন",
+   "hi": "अहिरीटोला सर्वजनीन",
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.595,
+   "lon": 88.358,
+   "importance": 0.58,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "singhi_park",
+   "kind": "pandal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Singhi Park Durga Puja",
+   "bn": "সিংহী পার্ক",
+   "hi": "सिंघी पार्क",
+   "aka": [
+    "singhi park"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.518,
+   "lon": 88.369,
+   "importance": 0.58,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "behala_notun_dal",
+   "kind": "pandal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Behala Notun Dal",
+   "bn": "বেহালা নতুন দল",
+   "hi": "बेहाला नूतन दल",
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.497,
+   "lon": 88.311,
+   "importance": 0.58,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "barisha_club",
+   "kind": "pandal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Barisha Club",
+   "bn": "বড়িশা ক্লাব",
+   "hi": "बड़िशा क्लब",
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.472,
+   "lon": 88.311,
+   "importance": 0.58,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "badamtala_ashar_sangha",
+   "kind": "pandal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Badamtala Ashar Sangha",
+   "bn": "বাদামতলা আষাঢ় সংঘ",
+   "hi": "बादामतला आषाढ़ संघ",
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.514,
+   "lon": 88.336,
+   "importance": 0.58,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "sixty_six_pally",
+   "kind": "pandal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "66 Pally",
+   "bn": "৬৬ পল্লী",
+   "hi": "66 पल्ली",
+   "aka": [
+    "66 pally puja",
+    "sixty six pally"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.516,
+   "lon": 88.351,
+   "importance": 0.58,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "jodhpur_park_puja",
+   "kind": "pandal",
+   "feature_type": "landmark",
+   "anchor": "snap",
+   "en": "Jodhpur Park Durga Puja",
+   "bn": "যোধপুর পার্কের পুজো",
+   "hi": "जोधपुर पार्क दुर्गा पूजा",
+   "aka": [
+    "jodhpur park puja"
+   ],
+   "aka_bn": [],
+   "aka_hi": [],
+   "lat": 22.506,
+   "lon": 88.366,
+   "importance": 0.58,
+   "low_lying": false,
+   "source": "hand"
+  },
+  {
+   "id": "ps_jadavpur",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Jadavpur Police Station",
+   "bn": "যাদবপুর থানা",
+   "hi": "जादवपुर थाना",
+   "aka": [
+    "Jadavpur thana",
+    "Jadavpur ps",
+    "Jadavpur police"
+   ],
+   "aka_bn": [
+    "যাদবপুর পুলিশ স্টেশন"
+   ],
+   "aka_hi": [
+    "जादवपुर पुलिस स्टेशन"
+   ],
+   "lat": 22.50277,
+   "lon": 88.36773,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/651795823"
+  },
+  {
+   "id": "ps_manicktala",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Manicktala Police Station",
+   "bn": "মানিকতলা থানা",
+   "hi": "मानिकतला थाना",
+   "aka": [
+    "Manicktala thana",
+    "Manicktala ps",
+    "Manicktala police"
+   ],
+   "aka_bn": [
+    "মানিকতলা পুলিশ স্টেশন"
+   ],
+   "aka_hi": [
+    "मानिकतला पुलिस स्टेशन"
+   ],
+   "lat": 22.58415,
+   "lon": 88.3789,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/2168547540"
+  },
+  {
+   "id": "ps_muchipara",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Muchipara Police Station",
+   "bn": "মুচিপাড়া থানা",
+   "hi": "मुचीपाड़ा थाना",
+   "aka": [
+    "Muchipara thana",
+    "Muchipara ps",
+    "Muchipara police"
+   ],
+   "aka_bn": [
+    "মুচিপাড়া পুলিশ স্টেশন"
+   ],
+   "aka_hi": [
+    "मुचीपाड़ा पुलिस स्टेशन"
+   ],
+   "lat": 22.56666,
+   "lon": 88.36534,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/2266850257"
+  },
+  {
+   "id": "ps_baguiati",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Baguiati Police Station",
+   "bn": "বাগুইআটি থানা",
+   "hi": "बागुईआटी थाना",
+   "aka": [
+    "Baguiati thana",
+    "Baguiati ps",
+    "Baguiati police"
+   ],
+   "aka_bn": [
+    "বাগুইআটি পুলিশ স্টেশন"
+   ],
+   "aka_hi": [
+    "बागुईआटी पुलिस स्टेशन"
+   ],
+   "lat": 22.62037,
+   "lon": 88.42542,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/2454270956"
+  },
+  {
+   "id": "ps_sector_v",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Sector V Police Station",
+   "bn": "সেক্টর ফাইভ থানা",
+   "hi": "सेक्टर फाइव थाना",
+   "aka": [
+    "Sector V thana",
+    "Sector V ps",
+    "Sector V police"
+   ],
+   "aka_bn": [
+    "সেক্টর ফাইভ পুলিশ স্টেশন"
+   ],
+   "aka_hi": [
+    "सेक्टर फाइव पुलिस स्टेशन"
+   ],
+   "lat": 22.57678,
+   "lon": 88.42987,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/2461308616"
+  },
+  {
+   "id": "ps_bhowanipore",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Bhowanipore Police Station",
+   "bn": "ভবানীপুর থানা",
+   "hi": "भवानीपुर थाना",
+   "aka": [
+    "Bhowanipore thana",
+    "Bhowanipore ps",
+    "Bhowanipore police"
+   ],
+   "aka_bn": [
+    "ভবানীপুর পুলিশ স্টেশন"
+   ],
+   "aka_hi": [
+    "भवानीपुर पुलिस स्टेशन"
+   ],
+   "lat": 22.52665,
+   "lon": 88.34599,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/2471894120"
+  },
+  {
+   "id": "ps_new_market",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "New Market Police Station",
+   "bn": "নিউ মার্কেট থানা",
+   "hi": "न्यू मार्केट थाना",
+   "aka": [
+    "New Market thana",
+    "New Market ps",
+    "New Market police"
+   ],
+   "aka_bn": [
+    "নিউ মার্কেট পুলিশ স্টেশন"
+   ],
+   "aka_hi": [
+    "न्यू मार्केट पुलिस स्टेशन"
+   ],
+   "lat": 22.56272,
+   "lon": 88.35411,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/2813667209"
+  },
+  {
+   "id": "ps_jorabagan",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Jorabagan Police Station",
+   "bn": "জোড়াবাগান থানা",
+   "hi": "जोड़ाबागान थाना",
+   "aka": [
+    "Jorabagan thana",
+    "Jorabagan ps",
+    "Jorabagan police"
+   ],
+   "aka_bn": [
+    "জোড়াবাগান পুলিশ স্টেশন"
+   ],
+   "aka_hi": [
+    "जोड़ाबागान पुलिस स्टेशन"
+   ],
+   "lat": 22.59312,
+   "lon": 88.35604,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/3324142934"
+  },
+  {
+   "id": "ps_behala",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Behala Police Station",
+   "bn": "বেহালা থানা",
+   "hi": "बेहाला थाना",
+   "aka": [
+    "Behala thana",
+    "Behala ps",
+    "Behala police"
+   ],
+   "aka_bn": [
+    "বেহালা পুলিশ স্টেশন"
+   ],
+   "aka_hi": [
+    "बेहाला पुलिस स्टेशन"
+   ],
+   "lat": 22.50353,
+   "lon": 88.319,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/3363195847"
+  },
+  {
+   "id": "ps_parnasree",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Parnasree Police Station",
+   "bn": "পর্ণশ্রী থানা",
+   "hi": "पर्णश्री थाना",
+   "aka": [
+    "Parnasree thana",
+    "Parnasree ps",
+    "Parnasree police"
+   ],
+   "aka_bn": [
+    "পর্ণশ্রী পুলিশ স্টেশন"
+   ],
+   "aka_hi": [
+    "पर्णश्री पुलिस स्टेशन"
+   ],
+   "lat": 22.50888,
+   "lon": 88.30682,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/3961003585"
+  },
+  {
+   "id": "ps_beniapukur",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Beniapukur Police Station",
+   "bn": "বেনিয়াপুকুর থানা",
+   "hi": "बेनियापुकुर थाना",
+   "aka": [
+    "Beniapukur thana",
+    "Beniapukur ps",
+    "Beniapukur police"
+   ],
+   "aka_bn": [
+    "বেনিয়াপুকুর পুলিশ স্টেশন"
+   ],
+   "aka_hi": [
+    "बेनियापुकुर पुलिस स्टेशन"
+   ],
+   "lat": 22.54702,
+   "lon": 88.36805,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/4356781089"
+  },
+  {
+   "id": "ps_phoolbagan",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Phoolbagan Police Station",
+   "bn": "ফুলবাগান থানা",
+   "hi": "फूलबागान थाना",
+   "aka": [
+    "Phoolbagan thana",
+    "Phoolbagan ps",
+    "Phoolbagan police"
+   ],
+   "aka_bn": [
+    "ফুলবাগান পুলিশ স্টেশন"
+   ],
+   "aka_hi": [
+    "फूलबागान पुलिस स्टेशन"
+   ],
+   "lat": 22.57539,
+   "lon": 88.39207,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/5253366364"
+  },
+  {
+   "id": "ps_park_street",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Park Street Police Station",
+   "bn": "পার্ক স্ট্রিট থানা",
+   "hi": "पार्क स्ट्रीट थाना",
+   "aka": [
+    "Park Street thana",
+    "Park Street ps",
+    "Park Street police"
+   ],
+   "aka_bn": [
+    "পার্ক স্ট্রিট পুলিশ স্টেশন"
+   ],
+   "aka_hi": [
+    "पार्क स्ट्रीट पुलिस स्टेशन"
+   ],
+   "lat": 22.55163,
+   "lon": 88.35641,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/6147021003"
+  },
+  {
+   "id": "ps_burtolla",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Burtolla Police Station",
+   "bn": "বড়তলা থানা",
+   "hi": "बड़तला थाना",
+   "aka": [
+    "Burtolla thana",
+    "Burtolla ps",
+    "Burtolla police"
+   ],
+   "aka_bn": [
+    "বড়তলা পুলিশ স্টেশন"
+   ],
+   "aka_hi": [
+    "बड़तला पुलिस स्टेशन"
+   ],
+   "lat": 22.59251,
+   "lon": 88.37114,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/8185335386"
+  },
+  {
+   "id": "ps_bowbazar",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Bowbazar Police Station",
+   "bn": "বউবাজার থানা",
+   "hi": "बहूबाजार थाना",
+   "aka": [
+    "Bowbazar thana",
+    "Bowbazar ps",
+    "Bowbazar police"
+   ],
+   "aka_bn": [
+    "বউবাজার পুলিশ স্টেশন"
+   ],
+   "aka_hi": [
+    "बहूबाजार पुलिस स्टेशन"
+   ],
+   "lat": 22.56914,
+   "lon": 88.35661,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/9609217317"
+  },
+  {
+   "id": "ps_hare_street",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Hare Street Police Station",
+   "bn": "হেয়ার স্ট্রিট থানা",
+   "hi": "हेयर स्ट्रीट थाना",
+   "aka": [
+    "Hare Street thana",
+    "Hare Street ps",
+    "Hare Street police",
+    "hare street police station"
+   ],
+   "aka_bn": [
+    "হেয়ার স্ট্রিট পুলিশ স্টেশন"
+   ],
+   "aka_hi": [
+    "हेयर स्ट्रीट पुलिस स्टेशन"
+   ],
+   "lat": 22.56883,
+   "lon": 88.35696,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/9609217417"
+  },
+  {
+   "id": "ps_maidan",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Maidan Police Station",
+   "bn": "ময়দান থানা",
+   "hi": "मैदान थाना",
+   "aka": [
+    "Maidan thana",
+    "Maidan ps",
+    "Maidan police"
+   ],
+   "aka_bn": [
+    "ময়দান পুলিশ স্টেশন"
+   ],
+   "aka_hi": [
+    "मैदान पुलिस स्टेशन"
+   ],
+   "lat": 22.54203,
+   "lon": 88.34711,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/9911020617"
+  },
+  {
+   "id": "ps_tala",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Tala Police Station",
+   "bn": "টালা থানা",
+   "hi": "टाला थाना",
+   "aka": [
+    "Tala thana",
+    "Tala ps",
+    "Tala police"
+   ],
+   "aka_bn": [
+    "টালা পুলিশ স্টেশন"
+   ],
+   "aka_hi": [
+    "टाला पुलिस स्टेशन"
+   ],
+   "lat": 22.60741,
+   "lon": 88.3818,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/11436646870"
+  },
+  {
+   "id": "ps_gariahat",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Gariahat Police Station",
+   "bn": "গড়িয়াহাট থানা",
+   "hi": "गड़ियाहाट थाना",
+   "aka": [
+    "Gariahat thana",
+    "Gariahat ps",
+    "Gariahat police"
+   ],
+   "aka_bn": [
+    "গড়িয়াহাট পুলিশ স্টেশন"
+   ],
+   "aka_hi": [
+    "गड़ियाहाट पुलिस स्टेशन"
+   ],
+   "lat": 22.52105,
+   "lon": 88.36469,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/11867113269"
+  },
+  {
+   "id": "ps_taratala",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Taratala Police Station",
+   "bn": "তারাতলা থানা",
+   "hi": "तारातला थाना",
+   "aka": [
+    "Taratala thana",
+    "Taratala ps",
+    "Taratala police"
+   ],
+   "aka_bn": [
+    "তারাতলা পুলিশ স্টেশন"
+   ],
+   "aka_hi": [
+    "तारातला पुलिस स्टेशन"
+   ],
+   "lat": 22.51487,
+   "lon": 88.30833,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:node/14315746925"
+  },
+  {
+   "id": "ps_kalighat",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Kalighat Police Station",
+   "bn": "কালীঘাট থানা",
+   "hi": "कालीघाट थाना",
+   "aka": [
+    "Kalighat thana",
+    "Kalighat ps",
+    "Kalighat police"
+   ],
+   "aka_bn": [
+    "কালীঘাট পুলিশ স্টেশন"
+   ],
+   "aka_hi": [
+    "कालीघाट पुलिस स्टेशन"
+   ],
+   "lat": 22.52139,
+   "lon": 88.34378,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:way/190923516"
+  },
+  {
+   "id": "ps_new_town",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "New Town Police Station",
+   "bn": "নিউ টাউন থানা",
+   "hi": "न्यू टाउन थाना",
+   "aka": [
+    "New Town thana",
+    "New Town ps",
+    "New Town police"
+   ],
+   "aka_bn": [
+    "নিউ টাউন পুলিশ স্টেশন"
+   ],
+   "aka_hi": [
+    "न्यू टाउन पुलिस स्टेशन"
+   ],
+   "lat": 22.57609,
+   "lon": 88.47862,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:way/348966850"
+  },
+  {
+   "id": "ps_bidhannagar_north",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Bidhannagar North Police Station",
+   "bn": "বিধাননগর উত্তর থানা",
+   "hi": "बिधाननगर उत्तर थाना",
+   "aka": [
+    "Bidhannagar North thana",
+    "Bidhannagar North ps",
+    "Bidhannagar North police"
+   ],
+   "aka_bn": [
+    "বিধাননগর উত্তর পুলিশ স্টেশন"
+   ],
+   "aka_hi": [
+    "बिधाननगर उत्तर पुलिस स्टेशन"
+   ],
+   "lat": 22.59175,
+   "lon": 88.41793,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:way/357517702"
+  },
+  {
+   "id": "ps_bidhannagar_south",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Bidhannagar South Police Station",
+   "bn": "বিধাননগর দক্ষিণ থানা",
+   "hi": "बिधाननगर दक्षिण थाना",
+   "aka": [
+    "Bidhannagar South thana",
+    "Bidhannagar South ps",
+    "Bidhannagar South police"
+   ],
+   "aka_bn": [
+    "বিধাননগর দক্ষিণ পুলিশ স্টেশন"
+   ],
+   "aka_hi": [
+    "बिधाननगर दक्षिण पुलिस स्टेशन"
+   ],
+   "lat": 22.57016,
+   "lon": 88.41367,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:way/359314010"
+  },
+  {
+   "id": "ps_shibpur",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Shibpur Police Station",
+   "bn": "শিবপুর থানা",
+   "hi": "शिबपुर थाना",
+   "aka": [
+    "Shibpur thana",
+    "Shibpur ps",
+    "Shibpur police"
+   ],
+   "aka_bn": [
+    "শিবপুর পুলিশ স্টেশন"
+   ],
+   "aka_hi": [
+    "शिबपुर पुलिस स्टेशन"
+   ],
+   "lat": 22.57079,
+   "lon": 88.32631,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:way/384710781"
+  },
+  {
+   "id": "ps_hastings",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Hastings Police Station",
+   "bn": "হেস্টিংস থানা",
+   "hi": "हेस्टिंग्स थाना",
+   "aka": [
+    "Hastings thana",
+    "Hastings ps",
+    "Hastings police"
+   ],
+   "aka_bn": [
+    "হেস্টিংস পুলিশ স্টেশন"
+   ],
+   "aka_hi": [
+    "हेस्टिंग्स पुलिस स्टेशन"
+   ],
+   "lat": 22.54848,
+   "lon": 88.32855,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:way/469676580"
+  },
+  {
+   "id": "ps_beleghata",
+   "kind": "police_station",
+   "feature_type": "poi",
+   "anchor": "snap",
+   "en": "Beleghata Police Station",
+   "bn": "বেলেঘাটা থানা",
+   "hi": "बेलेघाटा थाना",
+   "aka": [
+    "Beleghata thana",
+    "Beleghata ps",
+    "Beleghata police"
+   ],
+   "aka_bn": [
+    "বেলেঘাটা পুলিশ স্টেশন"
+   ],
+   "aka_hi": [
+    "बेलेघाटा पुलिस स्टेशन"
+   ],
+   "lat": 22.5646,
+   "lon": 88.39614,
+   "importance": 0.6,
+   "low_lying": false,
+   "source": "osm:way/1378250710"
+  }
+ ],
+ "junction_aliases": {
+  "bbd_bag": {
+   "aka": [
+    "dalhousie square",
+    "binoy badal dinesh bag",
+    "b b d bag"
+   ],
+   "aka_bn": [
+    "ডালহৌসি স্কোয়ার",
+    "বিবাদীবাগ"
+   ],
+   "aka_hi": [
+    "बीबीडी बाग",
+    "डलहौजी स्क्वायर"
+   ]
+  },
+  "esplanade": {
+   "aka": [
+    "esplanade crossing",
+    "dharmatala crossing"
+   ],
+   "aka_bn": [
+    "ধর্মতলা মোড়",
+    "এসপ্ল্যানেড মোড়"
+   ],
+   "aka_hi": [
+    "एस्प्लेनेड",
+    "धर्मतला चौराहा"
+   ]
+  },
+  "howrah_station": {
+   "aka": [
+    "howrah station",
+    "howrah railway station",
+    "howrah junction",
+    "howrah stn"
+   ],
+   "aka_bn": [
+    "হাওড়া স্টেশন"
+   ],
+   "aka_hi": [
+    "हावड़ा स्टेशन",
+    "हावड़ा जंक्शन"
+   ]
+  },
+  "howrah_bridge": {
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": []
+  },
+  "park_street": {
+   "aka": [
+    "park street more",
+    "park street crossing"
+   ],
+   "aka_bn": [
+    "পার্ক স্ট্রিটের মোড়"
+   ],
+   "aka_hi": [
+    "पार्क स्ट्रीट क्रॉसिंग"
+   ]
+  },
+  "exide": {
+   "aka": [
+    "exide more"
+   ],
+   "aka_bn": [
+    "এক্সাইডের মোড়"
+   ],
+   "aka_hi": [
+    "एक्साइड क्रॉसिंग"
+   ]
+  },
+  "hazra": {
+   "aka": [
+    "hazra more"
+   ],
+   "aka_bn": [
+    "হাজরার মোড়"
+   ],
+   "aka_hi": [
+    "हाज़रा क्रॉसिंग",
+    "हाजरा मोड़"
+   ]
+  },
+  "rashbehari": {
+   "aka": [
+    "rashbehari more",
+    "rash behari crossing",
+    "rashbehari avenue crossing"
+   ],
+   "aka_bn": [
+    "রাসবিহারীর মোড়"
+   ],
+   "aka_hi": [
+    "रासबिहारी क्रॉसिंग"
+   ]
+  },
+  "gariahat": {
+   "aka": [
+    "gariahat more",
+    "gariahaat crossing",
+    "gariahat crossing"
+   ],
+   "aka_bn": [
+    "গড়িয়াহাটের মোড়"
+   ],
+   "aka_hi": [
+    "गड़ियाहाट क्रॉसिंग"
+   ]
+  },
+  "ruby": {
+   "aka": [
+    "ruby more",
+    "ruby crossing"
+   ],
+   "aka_bn": [
+    "রুবির মোড়"
+   ],
+   "aka_hi": [
+    "रूबी क्रॉसिंग",
+    "रूबी मोड़"
+   ]
+  },
+  "park_circus": {
+   "aka": [
+    "park circus crossing",
+    "park circus seven point crossing",
+    "park circus 7 point crossing"
+   ],
+   "aka_bn": [
+    "পার্ক সার্কাস সাত মাথার মোড়",
+    "পার্ক সার্কাসের মোড়"
+   ],
+   "aka_hi": [
+    "पार्क सर्कस सात-माथा मोड़"
+   ]
+  },
+  "shyambazar": {
+   "aka": [
+    "shyambazar five point crossing",
+    "shyambazar 5 point crossing",
+    "shyambazar pnach mathar more"
+   ],
+   "aka_bn": [
+    "শ্যামবাজার পাঁচ মাথার মোড়",
+    "শ্যামবাজারের পাঁচ মাথার মোড়"
+   ],
+   "aka_hi": [
+    "श्यामबाज़ार पाँच-माथा मोड़"
+   ]
+  },
+  "ballygunge": {
+   "aka": [
+    "ballygunge phari",
+    "ballygunge phanri"
+   ],
+   "aka_bn": [
+    "বালিগঞ্জ ফাঁড়ি"
+   ],
+   "aka_hi": [
+    "बालीगंज फाड़ी"
+   ]
+  },
+  "behala_chowrasta": {
+   "aka": [
+    "behala chowrasta",
+    "behala chourasta"
+   ],
+   "aka_bn": [
+    "বেহালা চৌরাস্তা"
+   ],
+   "aka_hi": [
+    "बेहाला चौरास्ता"
+   ]
+  },
+  "salt_lake_stadium": {
+   "aka": [
+    "yuva bharati krirangan",
+    "yubabharati krirangan",
+    "vivekananda yuba bharati krirangan",
+    "yuba bharati stadium"
+   ],
+   "aka_bn": [
+    "যুবভারতী",
+    "বিবেকানন্দ যুবভারতী ক্রীড়াঙ্গন"
+   ],
+   "aka_hi": [
+    "साल्ट लेक स्टेडियम"
+   ]
+  },
+  "science_city": {
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [
+    "साइंस सिटी"
+   ]
+  },
+  "victoria_memorial": {
+   "aka": [
+    "victoria memorial hall"
+   ],
+   "aka_bn": [],
+   "aka_hi": [
+    "विक्टोरिया मेमोरियल"
+   ]
+  },
+  "prinsep_ghat": {
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [
+    "प्रिंसेप घाट"
+   ]
+  },
+  "babughat": {
+   "aka": [],
+   "aka_bn": [],
+   "aka_hi": [
+    "बाबूघाट"
+   ]
+  },
+  "nabanna": {
+   "aka": [
+    "nabanna bhawan"
+   ],
+   "aka_bn": [
+    "নবান্ন ভবন"
+   ],
+   "aka_hi": [
+    "नबान्न"
+   ]
+  },
+  "majerhat": {
+   "aka": [
+    "majerhat bridge",
+    "majherhat bridge"
+   ],
+   "aka_bn": [
+    "মাঝেরহাট ব্রিজ"
+   ],
+   "aka_hi": [
+    "माझेरहाट पुल"
+   ]
+  },
+  "moulali": {
+   "aka": [
+    "moulali crossing",
+    "moulali more"
+   ],
+   "aka_bn": [
+    "মৌলালির মোড়"
+   ],
+   "aka_hi": [
+    "मौलाली"
+   ]
+  },
+  "chingrighata": {
+   "aka": [
+    "chingrighata crossing",
+    "chingrighata more"
+   ],
+   "aka_bn": [
+    "চিংড়িঘাটার মোড়"
+   ],
+   "aka_hi": [
+    "चिंगड़ीघाटा"
+   ]
+  },
+  "deshapriya_park": {
+   "aka": [
+    "deshapriya park more"
+   ],
+   "aka_bn": [],
+   "aka_hi": []
+  },
+  "kidderpore": {
+   "aka": [
+    "kidderpore crossing",
+    "khidirpur more"
+   ],
+   "aka_bn": [
+    "খিদিরপুরের মোড়"
+   ],
+   "aka_hi": []
+  },
+  "tollygunge": {
+   "aka": [
+    "tollygunge crossing",
+    "tollygunge phari"
+   ],
+   "aka_bn": [
+    "টালিগঞ্জ ফাঁড়ি"
+   ],
+   "aka_hi": []
+  },
+  "ultadanga": {
+   "aka": [
+    "ultadanga crossing",
+    "ultadanga more"
+   ],
+   "aka_bn": [
+    "উল্টোডাঙার মোড়"
+   ],
+   "aka_hi": []
+  },
+  "kalighat": {
+   "aka": [
+    "kalighat crossing",
+    "kalighat more"
+   ],
+   "aka_bn": [
+    "কালীঘাটের মোড়"
+   ],
+   "aka_hi": []
+  },
+  "sealdah": {
+   "aka": [
+    "sealdah crossing"
+   ],
+   "aka_bn": [],
+   "aka_hi": []
+  }
+ },
+ "road_aliases": {
+  "eastern metropolitan bypass": {
+   "aka": [
+    "em bypass",
+    "e m bypass",
+    "e m by pass",
+    "em by pass",
+    "eastern metropolitan by pass",
+    "eastern bypass"
+   ],
+   "aka_bn": [
+    "ইএম বাইপাস",
+    "ই এম বাইপাস",
+    "বাইপাস"
+   ],
+   "aka_hi": [
+    "ईएम बाईपास"
+   ]
+  },
+  "jawaharlal nehru road": {
+   "aka": [
+    "jl nehru road",
+    "j l nehru road",
+    "chowringhee",
+    "chowringhee road"
+   ],
+   "aka_bn": [
+    "চৌরঙ্গি",
+    "জওহরলাল নেহরু রোড",
+    "চৌরঙ্গী রোড"
+   ],
+   "aka_hi": [
+    "चौरंगी",
+    "जवाहरलाल नेहरू रोड"
+   ]
+  },
+  "acharya jagadish chandra bose road": {
+   "aka": [
+    "ajc bose road",
+    "a j c bose road",
+    "ajc bose rd"
+   ],
+   "aka_bn": [
+    "এজেসি বোস রোড",
+    "আচার্য জগদীশচন্দ্র বসু রোড"
+   ],
+   "aka_hi": [
+    "एजेसी बोस रोड"
+   ]
+  },
+  "ajc bose road flyover": {
+   "aka": [
+    "ajc bose road flyover",
+    "ajc bose flyover"
+   ],
+   "aka_bn": [
+    "এজেসি বোস রোড উড়ালপুল"
+   ],
+   "aka_hi": []
+  },
+  "shyama prasad mukherjee road": {
+   "aka": [
+    "sp mukherjee road",
+    "s p mukherjee road",
+    "shyamaprasad mukherjee road"
+   ],
+   "aka_bn": [
+    "শ্যামাপ্রসাদ মুখার্জি রোড",
+    "এসপি মুখার্জি রোড"
+   ],
+   "aka_hi": [
+    "श्यामा प्रसाद मुखर्जी रोड"
+   ]
+  },
+  "chittaranjan avenue": {
+   "aka": [
+    "cr avenue",
+    "c r avenue",
+    "central avenue",
+    "chittaranjan ave"
+   ],
+   "aka_bn": [
+    "সেন্ট্রাল অ্যাভিনিউ",
+    "চিত্তরঞ্জন অ্যাভিনিউ",
+    "সিআর অ্যাভিনিউ"
+   ],
+   "aka_hi": [
+    "चित्तरंजन एवेन्यू",
+    "सेंट्रल एवेन्यू"
+   ]
+  },
+  "acharya prafulla chandra road": {
+   "aka": [
+    "apc road",
+    "a p c road",
+    "apc rd",
+    "upper circular road"
+   ],
+   "aka_bn": [
+    "এপিসি রোড",
+    "আচার্য প্রফুল্লচন্দ্র রোড"
+   ],
+   "aka_hi": [
+    "एपीसी रोड"
+   ]
+  },
+  "mahatma gandhi road": {
+   "aka": [
+    "mg road",
+    "m g road",
+    "harrison road"
+   ],
+   "aka_bn": [
+    "এমজি রোড",
+    "মহাত্মা গান্ধী রোড"
+   ],
+   "aka_hi": [
+    "एमजी रोड",
+    "महात्मा गांधी रोड"
+   ]
+  },
+  "surendra nath banerjee road": {
+   "aka": [
+    "sn banerjee road",
+    "s n banerjee road",
+    "surendranath banerjee road"
+   ],
+   "aka_bn": [
+    "এসএন ব্যানার্জি রোড",
+    "সুরেন্দ্রনাথ ব্যানার্জি রোড"
+   ],
+   "aka_hi": [
+    "एसएन बनर्जी रोड"
+   ]
+  },
+  "diamond harbour road": {
+   "aka": [
+    "dh road",
+    "d h road",
+    "diamond harbor road"
+   ],
+   "aka_bn": [
+    "ডায়মন্ড হারবার রোড",
+    "ডিএইচ রোড"
+   ],
+   "aka_hi": [
+    "डायमंड हार्बर रोड"
+   ]
+  },
+  "indira gandhi sarani": {
+   "aka": [
+    "red road"
+   ],
+   "aka_bn": [
+    "রেড রোড"
+   ],
+   "aka_hi": [
+    "रेड रोड"
+   ]
+  },
+  "vip road": {
+   "aka": [
+    "kazi nazrul islam avenue",
+    "v i p road",
+    "vip rd"
+   ],
+   "aka_bn": [
+    "ভিআইপি রোড",
+    "কাজী নজরুল ইসলাম অ্যাভিনিউ"
+   ],
+   "aka_hi": [
+    "वीआईपी रोड",
+    "काजी नजरुल इस्लाम एवेन्यू"
+   ]
+  },
+  "rash behari avenue": {
+   "aka": [
+    "rashbehari avenue",
+    "rash behari ave"
+   ],
+   "aka_bn": [
+    "রাসবিহারী অ্যাভিনিউ"
+   ],
+   "aka_hi": [
+    "रासबिहारी एवेन्यू"
+   ]
+  },
+  "rash behari avenue connector": {
+   "aka": [
+    "bijon setu",
+    "bijan setu",
+    "bijon flyover"
+   ],
+   "aka_bn": [
+    "বিজন সেতু"
+   ],
+   "aka_hi": [
+    "बिजन सेतु"
+   ]
+  },
+  "lenin sarani": {
+   "aka": [
+    "dharmatala street",
+    "dharmatolla street"
+   ],
+   "aka_bn": [
+    "লেনিন সরণি"
+   ],
+   "aka_hi": [
+    "लेनिन सरणी"
+   ]
+  },
+  "bidhan sarani": {
+   "aka": [
+    "cornwallis street"
+   ],
+   "aka_bn": [
+    "বিধান সরণি"
+   ],
+   "aka_hi": [
+    "बिधान सरणी"
+   ]
+  },
+  "biswa bangla sarani": {
+   "aka": [
+    "biswa bangla sarani"
+   ],
+   "aka_bn": [
+    "বিশ্ব বাংলা সরণি"
+   ],
+   "aka_hi": [
+    "बिस्वा बांग्ला सरणी"
+   ]
+  },
+  "park street": {
+   "aka": [
+    "park st"
+   ],
+   "aka_bn": [
+    "পার্ক স্ট্রিট",
+    "পার্ক স্ট্রীট"
+   ],
+   "aka_hi": [
+    "पार्क स्ट्रीट"
+   ]
+  },
+  "mother teresa sarani": {
+   "aka": [
+    "mother teresa sarani"
+   ],
+   "aka_bn": [
+    "মাদার টেরিজা সরণি"
+   ],
+   "aka_hi": []
+  },
+  "strand road": {
+   "aka": [
+    "strand rd"
+   ],
+   "aka_bn": [
+    "স্ট্র্যান্ড রোড"
+   ],
+   "aka_hi": [
+    "स्ट्रैंड रोड"
+   ]
+  },
+  "brabourne road": {
+   "aka": [
+    "brabourne rd"
+   ],
+   "aka_bn": [
+    "ব্র্যাবোর্ন রোড"
+   ],
+   "aka_hi": [
+    "ब्रेबोर्न रोड"
+   ]
+  },
+  "old court house street": {
+   "aka": [],
+   "aka_bn": [
+    "ওল্ড কোর্ট হাউস স্ট্রিট"
+   ],
+   "aka_hi": []
+  },
+  "rani rashmoni avenue": {
+   "aka": [
+    "rani rashmoni road"
+   ],
+   "aka_bn": [
+    "রানি রাসমণি অ্যাভিনিউ",
+    "রানি রাসমণি রোড"
+   ],
+   "aka_hi": []
+  },
+  "sahid khudiram bose road": {
+   "aka": [
+    "khudiram bose road"
+   ],
+   "aka_bn": [
+    "শহিদ ক্ষুদিরাম বসু রোড"
+   ],
+   "aka_hi": []
+  },
+  "kidderpore road": {
+   "aka": [
+    "khidirpur road"
+   ],
+   "aka_bn": [
+    "খিদিরপুর রোড"
+   ],
+   "aka_hi": []
+  },
+  "karl marx sarani": {
+   "aka": [],
+   "aka_bn": [
+    "কার্ল মার্ক্স সরণি"
+   ],
+   "aka_hi": []
+  },
+  "hazra road": {
+   "aka": [],
+   "aka_bn": [
+    "হাজরা রোড"
+   ],
+   "aka_hi": [
+    "हाजरा रोड"
+   ]
+  },
+  "syed amir ali avenue": {
+   "aka": [],
+   "aka_bn": [
+    "সৈয়দ আমির আলি অ্যাভিনিউ"
+   ],
+   "aka_hi": []
+  },
+  "queensway cathedral road": {
+   "aka": [],
+   "aka_bn": [
+    "কুইন্স ওয়ে",
+    "ক্যাথিড্রাল রোড"
+   ],
+   "aka_hi": []
+  },
+  "ashutosh mukherjee road": {
+   "aka": [
+    "asutosh mukherjee road"
+   ],
+   "aka_bn": [
+    "আশুতোষ মুখার্জি রোড"
+   ],
+   "aka_hi": []
+  },
+  "grand trunk road": {
+   "aka": [
+    "gt road",
+    "g t road"
+   ],
+   "aka_bn": [
+    "জিটি রোড",
+    "গ্র্যান্ড ট্রাঙ্ক রোড"
+   ],
+   "aka_hi": [
+    "जीटी रोड"
+   ]
+  },
+  "howrah bridge": {
+   "aka": [
+    "rabindra setu"
+   ],
+   "aka_bn": [
+    "হাওড়া ব্রিজ",
+    "রবীন্দ্র সেতু"
+   ],
+   "aka_hi": [
+    "हावड़ा ब्रिज",
+    "हावड़ा पुल",
+    "रवींद्र सेतु"
+   ]
+  },
+  "vidyasagar setu": {
+   "aka": [
+    "second hooghly bridge",
+    "2nd hooghly bridge",
+    "vidyasagar bridge"
+   ],
+   "aka_bn": [
+    "বিদ্যাসাগর সেতু",
+    "দ্বিতীয় হুগলি সেতু"
+   ],
+   "aka_hi": [
+    "विद्यासागर सेतु"
+   ]
+  },
+  "maa flyover": {
+   "aka": [
+    "parama flyover",
+    "parama island flyover"
+   ],
+   "aka_bn": [
+    "মা উড়ালপুল",
+    "মা ফ্লাইওভার"
+   ],
+   "aka_hi": [
+    "मां फ्लाईओवर"
+   ]
+  },
+  "salt lake bypass": {
+   "aka": [],
+   "aka_bn": [
+    "সল্টলেক বাইপাস"
+   ],
+   "aka_hi": []
+  },
+  "vivekananda road": {
+   "aka": [],
+   "aka_bn": [
+    "বিবেকানন্দ রোড"
+   ],
+   "aka_hi": []
+  },
+  "bagbazar street": {
+   "aka": [],
+   "aka_bn": [
+    "বাগবাজার স্ট্রিট"
+   ],
+   "aka_hi": []
+  },
+  "deshapran sashmal road": {
+   "aka": [
+    "deshapran sasmal road"
+   ],
+   "aka_bn": [
+    "দেশপ্রাণ শাসমল রোড"
+   ],
+   "aka_hi": []
+  },
+  "rabindra sarani": {
+   "aka": [],
+   "aka_bn": [
+    "রবীন্দ্র সরণি"
+   ],
+   "aka_hi": []
+  }
+ }
+}

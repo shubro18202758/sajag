@@ -1,0 +1,9 @@
+# Build-context hygiene for infra/docker/Dockerfile.signal-ingress (compose:
+# context ../services/signal-ingress). The image takes Cargo.toml, Cargo.lock,
+# src/ and config/; the host's cargo target dir (gigabytes), tests and agent
+# session state must never reach the layer cache.
+target
+tests
+**/.mimosa
+**/.claude
+**/*.log

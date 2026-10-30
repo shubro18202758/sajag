@@ -1,0 +1,2 @@
+# raw token vectors (regenerate with eval_embed.py); score matrices + summaries are kept
+*.vectors.pkl

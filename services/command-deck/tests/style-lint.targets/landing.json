@@ -1,0 +1,5 @@
+{
+	"style": ["src/lib/v3/landing/**", "src/routes/?landing?/**"],
+	"glyph": ["src/lib/v3/landing/**", "src/routes/?landing?/**"],
+	"copy": ["src/lib/v3/landing/packs.landing.ts"]
+}

@@ -1,0 +1,5 @@
+{
+	"style": ["src/lib/cityfeeds/**", "src/lib/v3/public/AirToday.svelte", "src/lib/v3/public/LazyAir.svelte"],
+	"glyph": ["src/lib/cityfeeds/**"],
+	"copy": ["src/lib/cityfeeds/packs.feeds.ts"]
+}

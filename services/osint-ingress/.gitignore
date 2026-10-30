@@ -1,0 +1,6 @@
+# The fetch cache holds raw, untrusted source data (and the outbox holds signal batches): never commit either.
+/cache/
+/.cache/
+**/_outbox/
+**/latest.json
+**/*.meta.json

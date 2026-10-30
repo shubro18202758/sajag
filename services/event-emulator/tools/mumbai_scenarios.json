@@ -1,0 +1,2311 @@
+[
+ {
+  "scenario_id": "vvip_convoy_base",
+  "name": "VIP Movement — Base Case (Mantralaya to Mumbai Airport T2)",
+  "description": "SIMULATED BASE CASE. A Z+ protected movement from Mantralaya to Mumbai Airport Terminal 2 on a Monday afternoon: along Marine Drive from Churchgate to Marine Lines, north on the Coastal Road under Malabar Hill and past Haji Ali to the Worli end, over the Bandra-Worli Sea Link, up the Western Express Highway past Kalanagar, Vakola and Vile Parle and along the Sahar Elevated Road to the T2 forecourt. Maximum-protocol closure (180 s advance, full closure), default event rates, no weather — the reference movement every other scenario generalises. Rolling holds, never a blanket freeze. Public-safety logistics only: no person is named or tracked. The convoy speed (60 km/h) and the timings are modelled assumptions; the AI proposes the plan and a named officer decides.",
+  "category": "baseline",
+  "departure_time": "2026-11-02T15:00:00+05:30",
+  "vvip_class": "Z+",
+  "closure_policy": {
+   "advance_closure_sec": 180,
+   "closure_type": "full_closure"
+  },
+  "horizon_min": 45,
+  "n_replications": 10,
+  "seed": 20261102,
+  "convoy_speed_kmh": 60,
+  "weather": {},
+  "event_overrides": {},
+  "expected_features": [
+   "zplus_protocol",
+   "secretariat_to_airport",
+   "reference_case"
+  ],
+  "event_kind": "protected_movement",
+  "crowd_class": "LOW",
+  "duration_class": "minutes",
+  "route": [
+   "mantralaya",
+   "churchgate_md",
+   "marine_lines",
+   "sealink_worli_n",
+   "sealink_bandra_n",
+   "bwsl_merge",
+   "kalanagar",
+   "vakola",
+   "airport_weh",
+   "airport_t2"
+  ],
+  "forced_events": [],
+  "name_mr": "व्हीआयपी ताफा — मूळ स्थिती (मंत्रालय ते मुंबई विमानतळ टी२)",
+  "name_hi": "वीआईपी काफ़िला — मूल स्थिति (मंत्रालय से मुंबई हवाई अड्डा टी2)",
+  "places": [
+   "mantralaya",
+   "marine_drive",
+   "haji_ali",
+   "sea_link",
+   "kalanagar",
+   "weh_andheri",
+   "airport_t2"
+  ],
+  "label": "SIMULATED"
+ },
+ {
+  "scenario_id": "ganesh_visarjan_girgaon",
+  "name": "Anant Chaturdashi Visarjan — Lalbaug to Girgaon Chowpatty, Closures and Ambulance Access",
+  "description": "FLAGSHIP. 21:30 on Anant Chaturdashi (6 Sep 2025), the last day of Ganeshotsav. Immersion processions leave Lalbaug and move at walking pace by Byculla, JJ, Nagpada and Opera House to Girgaon Chowpatty, while the Lalbaugcha Raja and Parel crowds fill Dr Ambedkar Road. The carriageway is closed in stages along the procession route (modelled as forced closures), heavy vehicles are kept off the city's roads for the day (modelled as fewer heavy-vehicle breakdowns, breakdown x0.6) and festival stalls load the kerbs (market x2.0). Ten minutes in, an ambulance (108) on an emergency call asks for a green corridor from Girgaon Chowpatty by Opera House and Nagpada to JJ Hospital, against the flow of the processions. Closure policy signal_hold at 45 s: the crowd is regulated, not stopped. Two Mumbai Traffic Police beats and the ambulance are animated (EMULATED units). Crowd loads, closure timings and speeds are modelled assumptions; the AI proposes each hold and a named officer decides.",
+  "category": "multi_event",
+  "departure_time": "2025-09-06T21:30:00+05:30",
+  "vvip_class": "X",
+  "closure_policy": {
+   "advance_closure_sec": 45,
+   "closure_type": "signal_hold"
+  },
+  "horizon_min": 60,
+  "n_replications": 12,
+  "seed": 202509061,
+  "convoy_speed_kmh": 40.0,
+  "weather": {},
+  "event_overrides": {
+   "market": 2.0,
+   "breakdown": 0.6,
+   "ambulance": 1.0
+  },
+  "expected_features": [
+   "multi_event_composition",
+   "festival_crowd",
+   "visarjan_procession",
+   "staged_road_closures",
+   "goods_vehicle_restriction",
+   "green_corridor_request",
+   "signal_hold_regulated_passage"
+  ],
+  "event_kind": "mass_gathering",
+  "crowd_class": "EXTREME",
+  "duration_class": "hours",
+  "route": [
+   "lalbaug",
+   "byculla",
+   "jj",
+   "nagpada",
+   "opera_house",
+   "girgaon_chowpatty"
+  ],
+  "forced_events": [
+   {
+    "type": "rally_spillover",
+    "start_sec": 0.0,
+    "duration_sec": 3600.0,
+    "severity": 0.95,
+    "label": "visarjan procession closure — Dr Ambedkar Road, Lalbaug to Byculla",
+    "extra_demand_veh_h": 950.0,
+    "on": [
+     "byculla",
+     "lalbaug"
+    ]
+   },
+   {
+    "type": "rally_spillover",
+    "start_sec": 300.0,
+    "duration_sec": 3300.0,
+    "severity": 0.9,
+    "label": "visarjan procession closure — Sir JJ Road, Byculla to JJ",
+    "extra_demand_veh_h": 850.0,
+    "on": [
+     "jj",
+     "byculla"
+    ]
+   },
+   {
+    "type": "rally_spillover",
+    "start_sec": 600.0,
+    "duration_sec": 3000.0,
+    "severity": 0.9,
+    "label": "visarjan procession closure — JJ to Nagpada",
+    "extra_demand_veh_h": 850.0,
+    "on": [
+     "jj",
+     "nagpada"
+    ]
+   },
+   {
+    "type": "market_spillover",
+    "start_sec": 0.0,
+    "duration_sec": 3600.0,
+    "severity": 0.7,
+    "label": "stalls and queues along Mohammed Ali Road by the procession",
+    "on": [
+     "csmt",
+     "jj"
+    ]
+   },
+   {
+    "type": "rally_spillover",
+    "start_sec": 900.0,
+    "duration_sec": 2700.0,
+    "severity": 0.9,
+    "label": "visarjan procession closure — Maulana Azad Road and V P Road to Opera House",
+    "extra_demand_veh_h": 900.0,
+    "on": [
+     "nagpada",
+     "opera_house"
+    ]
+   },
+   {
+    "type": "rally_spillover",
+    "start_sec": 0.0,
+    "duration_sec": 3600.0,
+    "severity": 0.95,
+    "label": "Lalbaugcha Raja crowd fills Dr Ambedkar Road, Lalbaug to Parel",
+    "extra_demand_veh_h": 950.0,
+    "on": [
+     "lalbaug",
+     "parel"
+    ]
+   },
+   {
+    "type": "rally_spillover",
+    "start_sec": 1500.0,
+    "duration_sec": 2100.0,
+    "severity": 0.95,
+    "label": "processions queue for Girgaon Chowpatty on Jagannath Shankarsheth Marg",
+    "extra_demand_veh_h": 950.0,
+    "on": [
+     "opera_house",
+     "girgaon_chowpatty"
+    ]
+   },
+   {
+    "type": "market_spillover",
+    "start_sec": 0.0,
+    "duration_sec": 3600.0,
+    "severity": 0.7,
+    "label": "Parel — late-night festival stalls and parked vehicles",
+    "on": [
+     "parel",
+     "hindmata"
+    ]
+   },
+   {
+    "type": "emergency_vehicle",
+    "start_sec": 600.0,
+    "duration_sec": 300.0,
+    "severity": 0.9,
+    "label": "ambulance (108) green-corridor window — Girgaon Chowpatty to Opera House",
+    "on": [
+     "opera_house",
+     "girgaon_chowpatty"
+    ]
+   },
+   {
+    "type": "emergency_vehicle",
+    "start_sec": 662.1,
+    "duration_sec": 300.0,
+    "severity": 0.9,
+    "label": "ambulance (108) green-corridor window — Opera House to Nagpada",
+    "on": [
+     "nagpada",
+     "opera_house"
+    ]
+   },
+   {
+    "type": "emergency_vehicle",
+    "start_sec": 872.9,
+    "duration_sec": 300.0,
+    "severity": 0.9,
+    "label": "ambulance (108) green-corridor window — Nagpada to JJ Hospital",
+    "on": [
+     "jj",
+     "nagpada"
+    ]
+   }
+  ],
+  "name_mr": "अनंत चतुर्दशी विसर्जन — लालबाग ते गिरगाव चौपाटी, रस्ते बंद आणि रुग्णवाहिकेचा मार्ग",
+  "name_hi": "अनंत चतुर्दशी विसर्जन — लालबाग से गिरगाँव चौपाटी, सड़कें बंद और एम्बुलेंस का रास्ता",
+  "places": [
+   "lalbaug",
+   "lalbaugcha_raja",
+   "parel",
+   "jj_hospital",
+   "girgaon_chowpatty"
+  ],
+  "unit_tracks": {
+   "note": "Recorded agency-unit positions the City Command REPLAY animates (agency_unit frames, one every 20 s of tape time). EMULATED units only (EM ids): two Mumbai Traffic Police beats, one at the head of the procession route (Dr Ambedkar Road at Lalbaug - Sir JJ Road at Byculla) and one at the Girgaon Chowpatty end (Jagannath Shankarsheth Marg - Marine Drive), and the ambulance (108) run from Girgaon Chowpatty by Opera House and Nagpada to JJ Hospital, timed to the emergency_vehicle windows. Its last frame, at JJ junction, is stationary and reports 'arrived' (the C-A spelling of on_scene). Geometry: the run's drawn segment paths from the store when it has them, else route_geometry below (the same segments, from the city network).",
+   "units": [
+    {
+     "unit_id": "MTP-EM-21",
+     "agency": "traffic",
+     "label": "Mumbai Traffic Police MTP-EM-21 · Lalbaug end (EMULATED)",
+     "status": "patrol",
+     "mode": "patrol",
+     "walk": [
+      "lalbaug",
+      "byculla",
+      "jj"
+     ],
+     "speed_kmh": 12.0,
+     "offset": 0.0
+    },
+    {
+     "unit_id": "MTP-EM-22",
+     "agency": "traffic",
+     "label": "Mumbai Traffic Police MTP-EM-22 · Girgaon Chowpatty end (EMULATED)",
+     "status": "patrol",
+     "mode": "patrol",
+     "walk": [
+      "opera_house",
+      "girgaon_chowpatty",
+      "marine_lines"
+     ],
+     "speed_kmh": 12.0,
+     "offset": 0.5
+    },
+    {
+     "unit_id": "AMB-EM-108",
+     "agency": "ambulance",
+     "label": "Ambulance (108) AMB-EM-108 · green-corridor run (EMULATED)",
+     "status": "en_route",
+     "arrival_status": "arrived",
+     "mode": "run",
+     "walk": [
+      "girgaon_chowpatty",
+      "opera_house",
+      "nagpada",
+      "jj"
+     ],
+     "speed_kmh": 40.0,
+     "start_sec": 600.0
+    }
+   ]
+  },
+  "label": "SIMULATED"
+ },
+ {
+  "scenario_id": "cloudburst_high_tide",
+  "name": "Heavy Burst at High Tide — Hindmata, King's Circle, Sion and the Subways",
+  "description": "SIMULATED monsoon emergency. A heavy burst coincides with a high tide on the Arabian Sea: the sea outfalls close and the city's known low spots flood — Hindmata, Dadar TT, Kings Circle (Gandhi Market) and Sion on Dr Ambedkar Road, with the Milan and Andheri subways shut in the western suburbs. A relief column runs Dr Ambedkar Road from Parel to Sion. Storm-water pump status is EMULATED and the tide is MODELLED; rain intensity and water depths are assumptions, not a live feed. The AI can only PROPOSE: extra dewatering pumps from BMC (1916) at King's Circle, diversions, BEST holds and an isolation request to the power utility for a live-wire hazard at Hindmata; a named officer approves or rejects each.",
+  "category": "weather",
+  "departure_time": "2026-08-18T17:30:00+05:30",
+  "vvip_class": "X",
+  "closure_policy": {
+   "advance_closure_sec": 60,
+   "closure_type": "signal_hold"
+  },
+  "horizon_min": 60,
+  "n_replications": 10,
+  "seed": 20260818,
+  "convoy_speed_kmh": 30,
+  "weather": {
+   "monsoon": true,
+   "rain_intensity_mm_h": 100.0
+  },
+  "event_overrides": {
+   "breakdown": 1.8,
+   "waterlogging": 3.0,
+   "signal_fault": 1.5
+  },
+  "expected_features": [
+   "cloudburst",
+   "high_tide_outfall_closed",
+   "pump_constraint",
+   "waterlogging_spread",
+   "live_wire_hazard_proposal",
+   "relief_corridor"
+  ],
+  "event_kind": "emergency_evacuation",
+  "crowd_class": "MEDIUM",
+  "duration_class": "hours",
+  "route": [
+   "parel",
+   "hindmata",
+   "dadar_tt",
+   "kings_circle",
+   "sion_hospital",
+   "sion_circle"
+  ],
+  "forced_events": [
+   {
+    "type": "waterlogging",
+    "start_sec": 300.0,
+    "duration_sec": 3300.0,
+    "severity": 0.85,
+    "label": "Hindmata — low-lying stretch of Dr Ambedkar Road waterlogged; water around lamp posts (live-wire risk)",
+    "on": [
+     "hindmata",
+     "dadar_tt"
+    ]
+   },
+   {
+    "type": "waterlogging",
+    "start_sec": 600.0,
+    "duration_sec": 3000.0,
+    "severity": 0.8,
+    "label": "Kings Circle (Gandhi Market) — water collects under the flyover",
+    "on": [
+     "dadar_tt",
+     "kings_circle"
+    ]
+   },
+   {
+    "type": "waterlogging",
+    "start_sec": 900.0,
+    "duration_sec": 2700.0,
+    "severity": 0.75,
+    "label": "Dr Ambedkar Road by Sion Hospital — water on the approach",
+    "on": [
+     "kings_circle",
+     "sion_hospital"
+    ]
+   },
+   {
+    "type": "waterlogging",
+    "start_sec": 900.0,
+    "duration_sec": 2700.0,
+    "severity": 0.75,
+    "label": "Sion Circle — outfall shut at high tide, pumps lag (EMULATED pump status)",
+    "on": [
+     "sion_hospital",
+     "sion_circle"
+    ]
+   },
+   {
+    "type": "waterlogging",
+    "start_sec": 1200.0,
+    "duration_sec": 2400.0,
+    "severity": 0.7,
+    "label": "Parel — water spreading towards KEM Hospital",
+    "on": [
+     "parel",
+     "hindmata"
+    ]
+   },
+   {
+    "type": "waterlogging",
+    "start_sec": 1200.0,
+    "duration_sec": 2400.0,
+    "severity": 0.8,
+    "label": "Andheri Subway — flooded and closed",
+    "on": [
+     "gokhale_east",
+     "andheri_subway"
+    ]
+   },
+   {
+    "type": "waterlogging",
+    "start_sec": 1500.0,
+    "duration_sec": 2100.0,
+    "severity": 0.8,
+    "label": "Milan Subway — flooded and closed",
+    "on": [
+     "santacruz_milan",
+     "milan_subway"
+    ]
+   },
+   {
+    "type": "signal_fault",
+    "start_sec": 1200.0,
+    "duration_sec": 2400.0,
+    "severity": 0.6,
+    "label": "Hindmata signals dark — precautionary power cut in standing water",
+    "on": [
+     "hindmata",
+     "dadar_tt"
+    ]
+   },
+   {
+    "type": "vehicle_breakdown",
+    "start_sec": 1500.0,
+    "duration_sec": 1800.0,
+    "severity": 0.7,
+    "label": "car stalled in standing water at Kings Circle",
+    "on": [
+     "dadar_tt",
+     "kings_circle"
+    ]
+   }
+  ],
+  "name_mr": "भरतीच्या वेळी मुसळधार पाऊस — हिंदमाता, किंग्ज सर्कल, सायन आणि सबवे",
+  "name_hi": "ज्वार के समय भारी बारिश — हिंदमाता, किंग्ज़ सर्कल, सायन और सबवे",
+  "places": [
+   "parel",
+   "hindmata",
+   "dadar_tt",
+   "kings_circle",
+   "sion_hospital",
+   "sion_circle",
+   "milan_subway",
+   "andheri_subway",
+   "kem",
+   "apollo_bunder"
+  ],
+  "label": "SIMULATED"
+ },
+ {
+  "scenario_id": "cyclone_landfall_recovery",
+  "name": "West-Coast Cyclone Recovery — Tree-Falls on Marine Drive and Peddar Road, Staged Reopening",
+  "description": "SIMULATED recovery morning after a west-coast cyclone passes offshore (the Tauktae class of May 2021): high winds overnight, trees down and signals dark along Marine Drive, Peddar Road and Annie Besant Road, sea spray on the Worli seafront. Crews clear the arterials in stages while an ambulance (108) window runs to Nair Hospital. Wind, tree-fall locations and clearance times are modelled assumptions; the AI proposes the reopening order and a named officer decides.",
+  "category": "weather",
+  "departure_time": "2026-05-27T06:30:00+05:30",
+  "vvip_class": "X",
+  "closure_policy": {
+   "advance_closure_sec": 60,
+   "closure_type": "partial_closure"
+  },
+  "horizon_min": 60,
+  "n_replications": 8,
+  "seed": 20260527,
+  "convoy_speed_kmh": 30,
+  "weather": {
+   "monsoon": false,
+   "rain_intensity_mm_h": 12.0
+  },
+  "event_overrides": {
+   "breakdown": 1.5,
+   "signal_fault": 2.5
+  },
+  "expected_features": [
+   "cyclone_recovery",
+   "tree_fall_lane_loss",
+   "staged_reopening",
+   "signals_dark",
+   "green_corridor_request"
+  ],
+  "event_kind": "work_zone",
+  "crowd_class": "LOW",
+  "duration_class": "hours",
+  "route": [
+   "marine_lines",
+   "girgaon_chowpatty",
+   "kemps_corner",
+   "haji_ali",
+   "atre_chowk",
+   "worli_naka"
+  ],
+  "forced_events": [
+   {
+    "type": "vehicle_breakdown",
+    "start_sec": 0.0,
+    "duration_sec": 1200.0,
+    "severity": 0.9,
+    "label": "uprooted tree across N S Patkar Marg (lane-loss; cleared first)",
+    "on": [
+     "girgaon_chowpatty",
+     "kemps_corner"
+    ]
+   },
+   {
+    "type": "vehicle_breakdown",
+    "start_sec": 0.0,
+    "duration_sec": 2100.0,
+    "severity": 0.85,
+    "label": "uprooted tree on Peddar Road (cleared second)",
+    "on": [
+     "kemps_corner",
+     "haji_ali"
+    ]
+   },
+   {
+    "type": "vehicle_breakdown",
+    "start_sec": 0.0,
+    "duration_sec": 3000.0,
+    "severity": 0.8,
+    "label": "uprooted tree on Annie Besant Road by Haji Ali (cleared last)",
+    "on": [
+     "haji_ali",
+     "atre_chowk"
+    ]
+   },
+   {
+    "type": "vehicle_breakdown",
+    "start_sec": 0.0,
+    "duration_sec": 3600.0,
+    "severity": 0.9,
+    "label": "Marine Drive promenade side closed — trees and debris",
+    "on": [
+     "marine_lines",
+     "girgaon_chowpatty"
+    ]
+   },
+   {
+    "type": "vehicle_breakdown",
+    "start_sec": 0.0,
+    "duration_sec": 3600.0,
+    "severity": 0.85,
+    "label": "Walkeshwar Road closed — trees down on Malabar Hill",
+    "on": [
+     "girgaon_chowpatty",
+     "raj_bhavan"
+    ]
+   },
+   {
+    "type": "signal_fault",
+    "start_sec": 0.0,
+    "duration_sec": 2400.0,
+    "severity": 0.7,
+    "label": "signals dark at Worli Naka after the overnight power cut",
+    "on": [
+     "atre_chowk",
+     "worli_naka"
+    ]
+   },
+   {
+    "type": "emergency_vehicle",
+    "start_sec": 1500.0,
+    "duration_sec": 303.0,
+    "severity": 0.85,
+    "label": "ambulance (108) window to Nair Hospital — Annie Besant Road to Haji Ali",
+    "on": [
+     "haji_ali",
+     "atre_chowk"
+    ]
+   },
+   {
+    "type": "emergency_vehicle",
+    "start_sec": 1683.4,
+    "duration_sec": 365.0,
+    "severity": 0.85,
+    "label": "ambulance (108) window to Nair Hospital — Peddar Road",
+    "on": [
+     "kemps_corner",
+     "haji_ali"
+    ]
+   }
+  ],
+  "name_mr": "पश्चिम किनाऱ्यावरील चक्रीवादळानंतर — मरीन ड्राइव्ह, पेडर रोडवर झाडे पडली, टप्प्याटप्प्याने रस्ते खुले",
+  "name_hi": "पश्चिमी तट के चक्रवात के बाद — मरीन ड्राइव, पेडर रोड पर पेड़ गिरे, चरणबद्ध तरीके से सड़कें खुलीं",
+  "places": [
+   "marine_drive",
+   "girgaon_chowpatty",
+   "haji_ali",
+   "acharya_atre_chowk",
+   "worli_naka",
+   "nair_hospital"
+  ],
+  "label": "SIMULATED"
+ },
+ {
+  "scenario_id": "wankhede_egress",
+  "name": "Wankhede Stadium — Match-Night Egress",
+  "description": "SIMULATED stadium egress. The 90-120 min surge after the last ball at Wankhede Stadium: spectators pour onto Marine Drive and Veer Nariman Road towards Churchgate and Marine Lines stations and on to CSMT, while an ambulance (108) with a green-corridor request moves against the dispersal wave under signal_hold. Crowd sizes and walking speeds are modelled assumptions; the AI proposes holds and a named officer decides.",
+  "category": "event",
+  "departure_time": "2026-04-18T22:50:00+05:30",
+  "vvip_class": "X",
+  "closure_policy": {
+   "advance_closure_sec": 60,
+   "closure_type": "signal_hold"
+  },
+  "horizon_min": 60,
+  "n_replications": 12,
+  "seed": 20260418,
+  "convoy_speed_kmh": 40,
+  "weather": {},
+  "event_overrides": {},
+  "expected_features": [
+   "stadium_egress",
+   "extreme_crowd",
+   "green_corridor_request",
+   "signal_hold_policy"
+  ],
+  "event_kind": "egress_surge",
+  "crowd_class": "EXTREME",
+  "duration_class": "hours",
+  "route": [
+   "csmt",
+   "churchgate",
+   "churchgate_md",
+   "marine_lines"
+  ],
+  "forced_events": [
+   {
+    "type": "rally_spillover",
+    "start_sec": 0.0,
+    "duration_sec": 5400.0,
+    "severity": 0.95,
+    "label": "Wankhede gates — spectators pour onto Marine Drive",
+    "extra_demand_veh_h": 1500.0,
+    "on": [
+     "churchgate_md",
+     "marine_lines"
+    ]
+   },
+   {
+    "type": "rally_spillover",
+    "start_sec": 600.0,
+    "duration_sec": 4800.0,
+    "severity": 0.8,
+    "label": "spectators walking up Veer Nariman Road towards Churchgate station",
+    "extra_demand_veh_h": 1000.0,
+    "on": [
+     "churchgate_md",
+     "churchgate"
+    ]
+   },
+   {
+    "type": "rally_spillover",
+    "start_sec": 900.0,
+    "duration_sec": 4200.0,
+    "severity": 0.75,
+    "label": "the wave moves along D N Road to CSMT",
+    "extra_demand_veh_h": 900.0,
+    "on": [
+     "churchgate",
+     "csmt"
+    ]
+   },
+   {
+    "type": "rally_spillover",
+    "start_sec": 600.0,
+    "duration_sec": 4200.0,
+    "severity": 0.7,
+    "label": "egress towards Nariman Point on Marine Drive south",
+    "extra_demand_veh_h": 800.0,
+    "on": [
+     "mantralaya",
+     "churchgate_md"
+    ]
+   },
+   {
+    "type": "vehicle_breakdown",
+    "start_sec": 1200.0,
+    "duration_sec": 1500.0,
+    "severity": 0.7,
+    "label": "stalled taxi blocking one dispersal lane on Veer Nariman Road",
+    "on": [
+     "churchgate_md",
+     "churchgate"
+    ]
+   }
+  ],
+  "name_mr": "वानखेडे स्टेडियम — सामन्याच्या रात्री प्रेक्षकांची परतीची गर्दी",
+  "name_hi": "वानखेड़े स्टेडियम — मैच की रात दर्शकों की वापसी",
+  "places": [
+   "wankhede",
+   "marine_drive",
+   "churchgate",
+   "csmt"
+  ],
+  "label": "SIMULATED"
+ },
+ {
+  "scenario_id": "sea_link_breakdown_surge",
+  "name": "Bandra Station Evening Surge + Sea Link Breakdown",
+  "description": "SIMULATED evening peak. Locals are delayed and the Bandra station forecourt spills commuters onto SV Road while a bus breaks down on the southbound Bandra-Worli Sea Link: the Sea Link queue backs up the SV Road ramp and the Mahim Causeway. Commuter loads, the breakdown position and the tow time are modelled assumptions; the AI proposes holds and a diversion by Mahim and Worli, and a named officer decides.",
+  "category": "multi_event",
+  "departure_time": "2026-11-04T18:15:00+05:30",
+  "vvip_class": "X",
+  "closure_policy": {
+   "advance_closure_sec": 60,
+   "closure_type": "signal_hold"
+  },
+  "horizon_min": 60,
+  "n_replications": 10,
+  "seed": 20261104,
+  "convoy_speed_kmh": 30,
+  "weather": {},
+  "event_overrides": {
+   "market": 1.5
+  },
+  "expected_features": [
+   "station_surge",
+   "bridge_choke_point",
+   "breakdown_cascade",
+   "sea_link_queue"
+  ],
+  "event_kind": "egress_surge",
+  "crowd_class": "HIGH",
+  "duration_class": "hours",
+  "route": [
+   "santacruz_sv",
+   "bandra_sv",
+   "mahim_causeway",
+   "sealink_bandra_s",
+   "sealink_worli_s"
+  ],
+  "forced_events": [
+   {
+    "type": "rally_spillover",
+    "start_sec": 0.0,
+    "duration_sec": 4500.0,
+    "severity": 0.85,
+    "label": "evening commuter surge from Bandra station onto SV Road",
+    "extra_demand_veh_h": 950.0,
+    "on": [
+     "mahim_causeway",
+     "bandra_sv"
+    ]
+   },
+   {
+    "type": "vehicle_breakdown",
+    "start_sec": 600.0,
+    "duration_sec": 1500.0,
+    "severity": 0.85,
+    "label": "bus broken down mid-span on the southbound Sea Link — one lane lost until the tow",
+    "on": [
+     "sealink_bandra_s",
+     "sealink_worli_s"
+    ]
+   },
+   {
+    "type": "market_spillover",
+    "start_sec": 0.0,
+    "duration_sec": 3600.0,
+    "severity": 0.7,
+    "label": "Hill Road and Linking Road shoppers and hawkers on SV Road",
+    "on": [
+     "bandra_sv",
+     "santacruz_sv"
+    ]
+   },
+   {
+    "type": "rally_spillover",
+    "start_sec": 900.0,
+    "duration_sec": 2700.0,
+    "severity": 0.6,
+    "label": "queue backing up the SV Road ramp from the Sea Link",
+    "extra_demand_veh_h": 500.0,
+    "on": [
+     "mahim_causeway",
+     "sealink_bandra_s"
+    ]
+   },
+   {
+    "type": "market_spillover",
+    "start_sec": 0.0,
+    "duration_sec": 3600.0,
+    "severity": 0.6,
+    "label": "Mahim market traffic on the causeway",
+    "on": [
+     "mahim",
+     "mahim_causeway"
+    ]
+   }
+  ],
+  "name_mr": "वांद्रे स्थानकावर सायंकाळची गर्दी आणि सागरी सेतूवर बस बंद",
+  "name_hi": "बांद्रा स्टेशन पर शाम की भीड़ और सी लिंक पर बस ख़राब",
+  "places": [
+   "bandra",
+   "mahim_causeway",
+   "sea_link"
+  ],
+  "label": "SIMULATED"
+ },
+ {
+  "scenario_id": "shivaji_park_parade",
+  "name": "Shivaji Park Parade — Republic Day / Maharashtra Day",
+  "description": "SIMULATED ceremonial morning. The state parade at Shivaji Park, Dadar: contingents form up on the ground while spectators park along Senapati Bapat Marg, Ranade Road and Lady Jamshetji Road; a Z-class movement reaches the ground from Worli by Lower Parel and Dadar West. Crowd sizes are modelled assumptions; the AI proposes closures and a named officer decides.",
+  "category": "event",
+  "departure_time": "2027-01-26T08:30:00+05:30",
+  "vvip_class": "Z",
+  "closure_policy": {
+   "advance_closure_sec": 150,
+   "closure_type": "full_closure"
+  },
+  "horizon_min": 60,
+  "n_replications": 10,
+  "seed": 20270126,
+  "convoy_speed_kmh": 30,
+  "weather": {},
+  "event_overrides": {},
+  "expected_features": [
+   "ceremonial",
+   "z_protocol",
+   "recurring_civic_event"
+  ],
+  "event_kind": "ceremonial",
+  "crowd_class": "HIGH",
+  "duration_class": "hours",
+  "route": [
+   "worli_naka",
+   "lower_parel",
+   "dadar_west",
+   "mahim"
+  ],
+  "forced_events": [
+   {
+    "type": "rally_spillover",
+    "start_sec": 0.0,
+    "duration_sec": 5400.0,
+    "severity": 0.75,
+    "label": "Shivaji Park — parade contingents and the stands by Ranade Road",
+    "extra_demand_veh_h": 700.0,
+    "on": [
+     "dadar_west",
+     "mahim"
+    ]
+   },
+   {
+    "type": "rally_spillover",
+    "start_sec": 0.0,
+    "duration_sec": 5400.0,
+    "severity": 0.6,
+    "label": "spectator parking and approach on Senapati Bapat Marg",
+    "extra_demand_veh_h": 500.0,
+    "on": [
+     "lower_parel",
+     "dadar_west"
+    ]
+   },
+   {
+    "type": "rally_spillover",
+    "start_sec": 600.0,
+    "duration_sec": 4800.0,
+    "severity": 0.5,
+    "label": "spectator approach from the north over the Mahim Causeway",
+    "extra_demand_veh_h": 400.0,
+    "on": [
+     "mahim",
+     "mahim_causeway"
+    ]
+   }
+  ],
+  "name_mr": "शिवाजी पार्क संचलन — प्रजासत्ताक दिन / महाराष्ट्र दिन",
+  "name_hi": "शिवाजी पार्क परेड — गणतंत्र दिवस / महाराष्ट्र दिवस",
+  "places": [
+   "shivaji_park",
+   "dadar",
+   "worli_naka",
+   "mahim_causeway"
+  ],
+  "label": "SIMULATED"
+ },
+ {
+  "scenario_id": "gateway_ferry_transit",
+  "name": "Gateway and Ferry Wharf Transit — Holiday Crowds and Ferry Departures",
+  "name_mr": "गेटवे आणि भाऊचा धक्का — सुट्टीतील गर्दी आणि फेरी बोटी",
+  "name_hi": "गेटवे और फ़ेरी घाट — छुट्टियों की भीड़ और फ़ेरी रवानगी",
+  "label": "SIMULATED",
+  "category": "event",
+  "description": "SIMULATED holiday morning in the year-end season. Visitors walk from Churchgate and CSMT towards the Gateway of India and the ferry wharf on P D Mello Road for the Elephanta and Mandwa boats; BEST buses and taxis queue at the drop-off points, the ferry queue spills onto P D Mello Road and traffic leaving the Eastern Freeway at Orange Gate meets it. A bus stalls on the Eastern Freeway towards the Atal Setu interchange. Crowd sizes, ferry departures and timings are modelled assumptions; the AI proposes queue holds and diversions, a named officer decides.",
+  "route": [
+   "churchgate",
+   "csmt",
+   "orange_gate",
+   "atal_setu"
+  ],
+  "departure_time": "2026-12-26T09:00:00+05:30",
+  "vvip_class": "X",
+  "closure_policy": {
+   "advance_closure_sec": 90,
+   "closure_type": "signal_hold"
+  },
+  "horizon_min": 60,
+  "n_replications": 10,
+  "seed": 20261226,
+  "convoy_speed_kmh": 30,
+  "weather": {},
+  "event_overrides": {
+   "market": 1.3
+  },
+  "forced_events": [
+   {
+    "type": "rally_spillover",
+    "start_sec": 0.0,
+    "duration_sec": 3600.0,
+    "severity": 0.75,
+    "label": "visitors walking from Churchgate and CSMT towards the Gateway on Veer Nariman Road",
+    "extra_demand_veh_h": 650.0,
+    "on": [
+     "churchgate",
+     "csmt"
+    ]
+   },
+   {
+    "type": "rally_spillover",
+    "start_sec": 600.0,
+    "duration_sec": 3000.0,
+    "severity": 0.8,
+    "label": "ferry queue for Elephanta and Mandwa spills onto P D Mello Road",
+    "extra_demand_veh_h": 700.0,
+    "on": [
+     "csmt",
+     "orange_gate"
+    ]
+   },
+   {
+    "type": "market_spillover",
+    "start_sec": 0.0,
+    "duration_sec": 3600.0,
+    "severity": 0.6,
+    "label": "taxis and BEST buses at the ferry drop-off on P D Mello Road",
+    "on": [
+     "csmt",
+     "orange_gate"
+    ]
+   },
+   {
+    "type": "vehicle_breakdown",
+    "start_sec": 1200.0,
+    "duration_sec": 1500.0,
+    "severity": 0.6,
+    "label": "bus stalled on the Eastern Freeway towards the Atal Setu interchange",
+    "on": [
+     "orange_gate",
+     "atal_setu"
+    ]
+   }
+  ],
+  "expected_features": [
+   "holiday_crowd",
+   "ferry_queue",
+   "bus_waves",
+   "staged_departures"
+  ],
+  "event_kind": "mass_gathering",
+  "crowd_class": "HIGH",
+  "duration_class": "hours",
+  "places": [
+   "churchgate",
+   "csmt",
+   "gateway",
+   "atal_setu"
+  ]
+ },
+ {
+  "scenario_id": "mumbai_marathon",
+  "name": "Mumbai Marathon — CSMT, Marine Drive, Peddar Road and Worli",
+  "description": "SIMULATED race morning (January). Early-morning gun start at CSMT: the course along Veer Nariman Road, Marine Drive, Peddar Road, Haji Ali and Annie Besant Road to Worli is closed in the dark and reopens in stages behind the sweep (pace/sweep convoy at 12 km/h). Runner densities and reopening times are modelled assumptions; the AI proposes the staged reopening and a named officer decides.",
+  "category": "event",
+  "departure_time": "2027-01-17T05:30:00+05:30",
+  "vvip_class": "X",
+  "closure_policy": {
+   "advance_closure_sec": 60,
+   "closure_type": "full_closure"
+  },
+  "horizon_min": 60,
+  "n_replications": 10,
+  "seed": 20270117,
+  "convoy_speed_kmh": 12,
+  "weather": {},
+  "event_overrides": {},
+  "expected_features": [
+   "race",
+   "rolling_closure",
+   "staged_reopening"
+  ],
+  "event_kind": "race",
+  "crowd_class": "HIGH",
+  "duration_class": "hours",
+  "route": [
+   "csmt",
+   "churchgate",
+   "churchgate_md",
+   "marine_lines",
+   "girgaon_chowpatty",
+   "kemps_corner",
+   "haji_ali",
+   "atre_chowk",
+   "worli_naka"
+  ],
+  "forced_events": [
+   {
+    "type": "rally_spillover",
+    "start_sec": 0.0,
+    "duration_sec": 2400.0,
+    "severity": 0.85,
+    "label": "the start at CSMT — runners and spectators on D N Road (reopens after the sweep)",
+    "extra_demand_veh_h": 800.0,
+    "on": [
+     "churchgate",
+     "csmt"
+    ]
+   },
+   {
+    "type": "rally_spillover",
+    "start_sec": 300.0,
+    "duration_sec": 2700.0,
+    "severity": 0.8,
+    "label": "runners along Marine Drive",
+    "extra_demand_veh_h": 700.0,
+    "on": [
+     "churchgate_md",
+     "marine_lines"
+    ]
+   },
+   {
+    "type": "rally_spillover",
+    "start_sec": 900.0,
+    "duration_sec": 3000.0,
+    "severity": 0.7,
+    "label": "runners climbing N S Patkar Marg to Kemps Corner",
+    "extra_demand_veh_h": 600.0,
+    "on": [
+     "girgaon_chowpatty",
+     "kemps_corner"
+    ]
+   },
+   {
+    "type": "rally_spillover",
+    "start_sec": 1800.0,
+    "duration_sec": 3600.0,
+    "severity": 0.7,
+    "label": "runners down Peddar Road to Haji Ali",
+    "extra_demand_veh_h": 600.0,
+    "on": [
+     "kemps_corner",
+     "haji_ali"
+    ]
+   },
+   {
+    "type": "rally_spillover",
+    "start_sec": 2400.0,
+    "duration_sec": 3600.0,
+    "severity": 0.75,
+    "label": "the run past Haji Ali on Annie Besant Road",
+    "extra_demand_veh_h": 650.0,
+    "on": [
+     "haji_ali",
+     "atre_chowk"
+    ]
+   }
+  ],
+  "name_mr": "मुंबई मॅरेथॉन — सीएसएमटी, मरीन ड्राइव्ह, पेडर रोड आणि वरळी",
+  "name_hi": "मुंबई मैराथन — सीएसएमटी, मरीन ड्राइव, पेडर रोड और वरली",
+  "places": [
+   "csmt",
+   "churchgate",
+   "marine_drive",
+   "girgaon_chowpatty",
+   "haji_ali",
+   "worli_naka"
+  ],
+  "label": "SIMULATED"
+ },
+ {
+  "scenario_id": "marine_drive_new_year",
+  "name": "New Year's Eve on Marine Drive",
+  "description": "SIMULATED festival night. The New Year's Eve crowd fills the Marine Drive promenade from Churchgate to Girgaon Chowpatty; restaurant queues on Veer Nariman Road and a post-midnight wave towards Churchgate and Marine Lines stations, with an ambulance (108) window through the dispersal. Crowd sizes are modelled assumptions; the AI proposes and a named officer decides.",
+  "category": "event",
+  "departure_time": "2026-12-31T23:15:00+05:30",
+  "vvip_class": "X",
+  "closure_policy": {
+   "advance_closure_sec": 120,
+   "closure_type": "full_closure"
+  },
+  "horizon_min": 60,
+  "n_replications": 10,
+  "seed": 20261231,
+  "convoy_speed_kmh": 20,
+  "weather": {},
+  "event_overrides": {
+   "market": 1.8
+  },
+  "expected_features": [
+   "festival_crowd",
+   "pedestrianised_street",
+   "midnight_egress",
+   "green_corridor_request"
+  ],
+  "event_kind": "mass_gathering",
+  "crowd_class": "EXTREME",
+  "duration_class": "hours",
+  "route": [
+   "churchgate",
+   "churchgate_md",
+   "marine_lines",
+   "girgaon_chowpatty"
+  ],
+  "forced_events": [
+   {
+    "type": "rally_spillover",
+    "start_sec": 0.0,
+    "duration_sec": 7200.0,
+    "severity": 0.95,
+    "label": "Marine Drive — New Year's Eve crowd on the promenade",
+    "extra_demand_veh_h": 1300.0,
+    "on": [
+     "churchgate_md",
+     "marine_lines"
+    ]
+   },
+   {
+    "type": "market_spillover",
+    "start_sec": 0.0,
+    "duration_sec": 7200.0,
+    "severity": 0.75,
+    "label": "restaurant queues and food stalls on Veer Nariman Road",
+    "on": [
+     "churchgate_md",
+     "churchgate"
+    ]
+   },
+   {
+    "type": "rally_spillover",
+    "start_sec": 900.0,
+    "duration_sec": 5400.0,
+    "severity": 0.7,
+    "label": "crowd overflow towards Girgaon Chowpatty",
+    "extra_demand_veh_h": 700.0,
+    "on": [
+     "marine_lines",
+     "girgaon_chowpatty"
+    ]
+   },
+   {
+    "type": "rally_spillover",
+    "start_sec": 2700.0,
+    "duration_sec": 3600.0,
+    "severity": 0.8,
+    "label": "post-midnight wave towards Churchgate station",
+    "extra_demand_veh_h": 900.0,
+    "on": [
+     "churchgate_md",
+     "churchgate"
+    ]
+   },
+   {
+    "type": "emergency_vehicle",
+    "start_sec": 2700.0,
+    "duration_sec": 300.0,
+    "severity": 0.9,
+    "label": "ambulance (108) window through the post-midnight dispersal",
+    "on": [
+     "churchgate_md",
+     "churchgate"
+    ]
+   }
+  ],
+  "name_mr": "मरीन ड्राइव्हवर नववर्षाच्या स्वागताची रात्र",
+  "name_hi": "मरीन ड्राइव पर नए साल की पूर्वसंध्या",
+  "places": [
+   "marine_drive",
+   "churchgate",
+   "girgaon_chowpatty"
+  ],
+  "label": "SIMULATED"
+ },
+ {
+  "scenario_id": "weh_crash_ambulance",
+  "name": "WEH Crash — Ambulance Window to Cooper Hospital and WEH Diversion",
+  "description": "SIMULATED morning-peak incident. A two-vehicle crash blocks two lanes of the Western Express Highway between the Sahar Elevated Road and Andheri; northbound traffic is diverted at Vakola onto the SCLR and LBS Marg, and an ambulance (108) runs from the crash by the Andheri-Kurla Road and the Gokhale Bridge to SV Road at Irla for Cooper Hospital. Speeds and timings are modelled assumptions; the AI proposes the green corridor and the diversion, and a named officer decides.",
+  "category": "incident",
+  "departure_time": "2026-11-06T08:40:00+05:30",
+  "vvip_class": "X",
+  "closure_policy": {
+   "advance_closure_sec": 45,
+   "closure_type": "signal_hold"
+  },
+  "horizon_min": 45,
+  "n_replications": 10,
+  "seed": 20261106,
+  "convoy_speed_kmh": 40,
+  "weather": {},
+  "event_overrides": {
+   "ambulance": 1.0
+  },
+  "expected_features": [
+   "road_crash",
+   "green_corridor_request",
+   "ambulance_window",
+   "peak_hour",
+   "weh_diversion"
+  ],
+  "event_kind": "emergency_evacuation",
+  "crowd_class": "LOW",
+  "duration_class": "minutes",
+  "route": [
+   "airport_weh",
+   "weh_andheri",
+   "andheri_east",
+   "gokhale_east",
+   "andheri_sv",
+   "vileparle_sv"
+  ],
+  "forced_events": [
+   {
+    "type": "vehicle_breakdown",
+    "start_sec": 0.0,
+    "duration_sec": 2700.0,
+    "severity": 0.85,
+    "label": "two-vehicle crash blocks two lanes of the Western Express Highway (debris)",
+    "on": [
+     "airport_weh",
+     "weh_andheri"
+    ]
+   },
+   {
+    "type": "emergency_vehicle",
+    "start_sec": 240.0,
+    "duration_sec": 300.0,
+    "severity": 0.9,
+    "label": "ambulance (108) green-corridor window — Western Express Highway to Andheri",
+    "on": [
+     "airport_weh",
+     "weh_andheri"
+    ]
+   },
+   {
+    "type": "emergency_vehicle",
+    "start_sec": 476.7,
+    "duration_sec": 300.0,
+    "severity": 0.9,
+    "label": "ambulance (108) green-corridor window — Andheri-Kurla Road to Andheri East",
+    "on": [
+     "andheri_east",
+     "weh_andheri"
+    ]
+   },
+   {
+    "type": "emergency_vehicle",
+    "start_sec": 526.5,
+    "duration_sec": 300.0,
+    "severity": 0.9,
+    "label": "ambulance (108) green-corridor window — Teli Galli and N S Phadke Marg",
+    "on": [
+     "gokhale_east",
+     "andheri_east"
+    ]
+   },
+   {
+    "type": "emergency_vehicle",
+    "start_sec": 578.3,
+    "duration_sec": 300.0,
+    "severity": 0.9,
+    "label": "ambulance (108) green-corridor window — the Gokhale Bridge",
+    "on": [
+     "andheri_sv",
+     "gokhale_east"
+    ]
+   },
+   {
+    "type": "emergency_vehicle",
+    "start_sec": 626.4,
+    "duration_sec": 300.0,
+    "severity": 0.9,
+    "label": "ambulance (108) green-corridor window — SV Road to Irla (Cooper Hospital)",
+    "on": [
+     "vileparle_sv",
+     "andheri_sv"
+    ]
+   }
+  ],
+  "name_mr": "पश्चिम द्रुतगती महामार्गावर अपघात — कूपर रुग्णालयापर्यंत रुग्णवाहिकेचा मार्ग",
+  "name_hi": "पश्चिमी एक्सप्रेस हाईवे पर दुर्घटना — कूपर अस्पताल तक एम्बुलेंस का रास्ता",
+  "places": [
+   "weh_andheri",
+   "andheri",
+   "cooper_hospital",
+   "airport_t2"
+  ],
+  "label": "SIMULATED"
+ },
+ {
+  "scenario_id": "metro_work_zone",
+  "name": "Metro Work Zone — LBS Marg, Kurla to Gandhinagar",
+  "description": "SIMULATED planned work zone. Months-long published lane loss for metro construction on LBS Marg: barricaded lanes from Kurla by Kamani and Ghatkopar West to Gandhinagar while an inspection convoy runs the corridor. Barricade extents are modelled assumptions; the AI proposes the published diversion and a named officer decides.",
+  "category": "ops",
+  "departure_time": "2026-11-10T09:15:00+05:30",
+  "vvip_class": "X",
+  "closure_policy": {
+   "advance_closure_sec": 60,
+   "closure_type": "partial_closure"
+  },
+  "horizon_min": 60,
+  "n_replications": 8,
+  "seed": 20250814,
+  "convoy_speed_kmh": 40,
+  "weather": {},
+  "event_overrides": {
+   "market": 1.5
+  },
+  "expected_features": [
+   "planned_work_zone",
+   "standing_lane_loss",
+   "published_diversion"
+  ],
+  "event_kind": "work_zone",
+  "crowd_class": "LOW",
+  "duration_class": "multi_week",
+  "route": [
+   "kurla_sclr",
+   "kamani",
+   "ghatkopar_lbs",
+   "gandhinagar"
+  ],
+  "forced_events": [
+   {
+    "type": "vehicle_breakdown",
+    "start_sec": 0.0,
+    "duration_sec": 39600.0,
+    "severity": 0.9,
+    "label": "metro works — two lanes barricaded on LBS Marg between Kamani and Ghatkopar",
+    "on": [
+     "kamani",
+     "ghatkopar_lbs"
+    ]
+   },
+   {
+    "type": "vehicle_breakdown",
+    "start_sec": 0.0,
+    "duration_sec": 39600.0,
+    "severity": 0.85,
+    "label": "metro works — a lane barricaded towards Gandhinagar",
+    "on": [
+     "ghatkopar_lbs",
+     "gandhinagar"
+    ]
+   },
+   {
+    "type": "market_spillover",
+    "start_sec": 0.0,
+    "duration_sec": 10800.0,
+    "severity": 0.7,
+    "label": "Kurla market traffic squeezed by the barricades",
+    "on": [
+     "kurla_sclr",
+     "kamani"
+    ]
+   }
+  ],
+  "name_mr": "मेट्रोचे काम — एलबीएस मार्ग, कुर्ला ते गांधीनगर",
+  "name_hi": "मेट्रो निर्माण क्षेत्र — एलबीएस मार्ग, कुर्ला से गांधीनगर",
+  "places": [
+   "kurla",
+   "ghatkopar",
+   "powai"
+  ],
+  "label": "SIMULATED"
+ },
+ {
+  "scenario_id": "watchlist_anpr_sweep",
+  "name": "Stolen-Vehicle ANPR Sweep — Western Suburbs (Emulated)",
+  "name_mr": "चोरीच्या वाहनासाठी एएनपीआर तपासणी — पश्चिम उपनगरे (अनुकरित)",
+  "name_hi": "चोरी के वाहन के लिए एएनपीआर स्वीप — पश्चिमी उपनगर (इम्यूलेटेड)",
+  "label": "SIMULATED",
+  "category": "enforcement",
+  "route": "SWEEP",
+  "departure_time": "2026-11-05T10:30:00+05:30",
+  "vvip_class": "X",
+  "closure_policy": {
+   "advance_closure_sec": 0,
+   "closure_type": "signal_hold"
+  },
+  "horizon_min": 60,
+  "n_replications": 8,
+  "seed": 20261105,
+  "convoy_speed_kmh": 40,
+  "weather": {},
+  "event_overrides": {},
+  "forced_events": [],
+  "expected_features": [
+   "emulated_anpr",
+   "stolen_plate_hit",
+   "operator_earmark_exercise",
+   "human_approval_flow"
+  ],
+  "event_kind": "crime_incident",
+  "crowd_class": "LOW",
+  "duration_class": "minutes",
+  "stolen_fir_ref": "FIR 4401/2026, Azad Maidan PS"
+ },
+ {
+  "scenario_id": "crawford_market_fire",
+  "name": "Crawford Market Fire — Fire-Tender Access and Ambulance Window",
+  "description": "SIMULATED fire response. A fire in the wholesale lanes behind Crawford Market: Mumbai Fire Brigade tenders run from Byculla by Sir JJ Road and the JJ Flyover and from Fort along D N Road; hose lines and the police cordon take lanes on Mohammed Ali Road and P D Mello Road; goods traffic queues; an ambulance (108) window runs to JJ Hospital. Tender routes, lane losses and timings are modelled assumptions; the AI proposes the green corridors, a goods-vehicle hold and a power-isolation request, and a named officer approves or rejects each.",
+  "category": "incident",
+  "departure_time": "2026-11-18T14:40:00+05:30",
+  "vvip_class": "X",
+  "closure_policy": {
+   "advance_closure_sec": 45,
+   "closure_type": "signal_hold"
+  },
+  "horizon_min": 60,
+  "n_replications": 10,
+  "seed": 20261118,
+  "convoy_speed_kmh": 25.0,
+  "weather": {},
+  "event_overrides": {
+   "market": 1.5
+  },
+  "expected_features": [
+   "fire_response",
+   "fire_tender_green_corridor",
+   "narrow_lane_access",
+   "cordon_lane_loss",
+   "goods_vehicle_hold_proposal",
+   "power_isolation_request_proposal",
+   "ambulance_window",
+   "staged_reopening"
+  ],
+  "event_kind": "emergency_evacuation",
+  "crowd_class": "HIGH",
+  "duration_class": "hours",
+  "route": [
+   "byculla",
+   "jj",
+   "csmt",
+   "orange_gate"
+  ],
+  "forced_events": [
+   {
+    "type": "emergency_vehicle",
+    "start_sec": 60.0,
+    "duration_sec": 300.0,
+    "severity": 0.9,
+    "label": "fire tender (Mumbai Fire Brigade, Byculla) green-corridor window — Sir JJ Road, Byculla to JJ",
+    "on": [
+     "jj",
+     "byculla"
+    ]
+   },
+   {
+    "type": "emergency_vehicle",
+    "start_sec": 220.5,
+    "duration_sec": 300.0,
+    "severity": 0.9,
+    "label": "fire tender (Mumbai Fire Brigade, Byculla) green-corridor window — the JJ Flyover to Crawford Market",
+    "on": [
+     "csmt",
+     "jj"
+    ]
+   },
+   {
+    "type": "emergency_vehicle",
+    "start_sec": 120.0,
+    "duration_sec": 300.0,
+    "severity": 0.9,
+    "label": "fire tender (Fort Fire Station) green-corridor window — D N Road from Fort to CSMT",
+    "on": [
+     "churchgate",
+     "csmt"
+    ]
+   },
+   {
+    "type": "vehicle_breakdown",
+    "start_sec": 300.0,
+    "duration_sec": 3300.0,
+    "severity": 0.9,
+    "label": "parked fire tenders and hose lines on Mohammed Ali Road at the fire ground (lanes lost)",
+    "on": [
+     "csmt",
+     "jj"
+    ]
+   },
+   {
+    "type": "vehicle_breakdown",
+    "start_sec": 750.0,
+    "duration_sec": 2850.0,
+    "severity": 0.85,
+    "label": "second tender line and hose lines on P D Mello Road (lanes lost)",
+    "on": [
+     "csmt",
+     "orange_gate"
+    ]
+   },
+   {
+    "type": "market_spillover",
+    "start_sec": 600.0,
+    "duration_sec": 3000.0,
+    "severity": 0.6,
+    "label": "handcarts and porters pushed out of the cordoned lanes onto P D Mello Road",
+    "on": [
+     "csmt",
+     "orange_gate"
+    ]
+   },
+   {
+    "type": "rally_spillover",
+    "start_sec": 600.0,
+    "duration_sec": 3000.0,
+    "severity": 0.6,
+    "label": "afternoon goods traffic for the wholesale market queued on the Eastern Freeway ramp (the load the proposed goods-vehicle hold would take off)",
+    "extra_demand_veh_h": 500.0,
+    "on": [
+     "orange_gate",
+     "atal_setu"
+    ]
+   },
+   {
+    "type": "emergency_vehicle",
+    "start_sec": 1500.0,
+    "duration_sec": 300.0,
+    "severity": 0.9,
+    "label": "ambulance (108) green-corridor window — JJ Flyover back to JJ Hospital",
+    "on": [
+     "csmt",
+     "jj"
+    ]
+   },
+   {
+    "type": "emergency_vehicle",
+    "start_sec": 1764.9,
+    "duration_sec": 300.0,
+    "severity": 0.9,
+    "label": "ambulance (108) green-corridor window — Sir JJ Road by JJ Hospital",
+    "on": [
+     "jj",
+     "byculla"
+    ]
+   }
+  ],
+  "name_mr": "क्रॉफर्ड मार्केट आग — अग्निशमन बंबांचा मार्ग आणि रुग्णवाहिकेचा मार्ग",
+  "name_hi": "क्रॉफ़र्ड मार्केट में आग — दमकल और एम्बुलेंस के लिए रास्ता",
+  "places": [
+   "police_hq",
+   "csmt",
+   "jj_hospital",
+   "bmc_hq"
+  ],
+  "label": "SIMULATED"
+ },
+ {
+  "scenario_id": "mithi_overflow_kurla",
+  "name": "Mithi at the Danger Mark — Kurla Evacuations, Subways Shut, SV Road Diversion",
+  "description": "SIMULATED monsoon morning on the pattern of 18-19 Aug 2025, when the Mithi river ran at about 3.9 m against its 4 m danger mark (some reports say it crossed it) and 350-500 people were moved from Kranti Nagar by the river in Kurla (as reported). A heavy burst at high tide holds the river high: LBS Marg by the Mithi and the Bandra Kurla Complex Road at the Kurla end take water, local trains stop at Kurla and Sion, and the Andheri and Milan subways close in the western suburbs. A BEST relief column moves from BKC to Kurla and onto the SCLR while BMC (1916) and the police move families to shelter. River level, rain and water depths here are SIMULATED; pump status is EMULATED; the AI proposes diversions and relief priority, a named officer decides.",
+  "category": "weather",
+  "departure_time": "2026-08-19T09:30:00+05:30",
+  "vvip_class": "X",
+  "closure_policy": {
+   "advance_closure_sec": 60,
+   "closure_type": "signal_hold"
+  },
+  "horizon_min": 60,
+  "n_replications": 10,
+  "seed": 20260819,
+  "convoy_speed_kmh": 25,
+  "weather": {
+   "monsoon": true,
+   "rain_intensity_mm_h": 60.0
+  },
+  "event_overrides": {
+   "waterlogging": 2.5,
+   "breakdown": 1.4
+  },
+  "expected_features": [
+   "river_danger_mark",
+   "high_tide_drainage",
+   "waterlogging",
+   "evacuation_relief",
+   "locals_suspended",
+   "relief_priority",
+   "trilingual_advisory"
+  ],
+  "event_kind": "emergency_evacuation",
+  "crowd_class": "MEDIUM",
+  "duration_class": "hours",
+  "route": [
+   "kalanagar",
+   "bkc",
+   "kurla",
+   "kurla_sclr",
+   "sclr_ramp"
+  ],
+  "forced_events": [
+   {
+    "type": "waterlogging",
+    "start_sec": 0.0,
+    "duration_sec": 3600.0,
+    "severity": 0.9,
+    "label": "LBS Marg by the Mithi (Kurla) — water over the carriageway near Kranti Nagar",
+    "on": [
+     "lbs_fork",
+     "kurla"
+    ]
+   },
+   {
+    "type": "waterlogging",
+    "start_sec": 300.0,
+    "duration_sec": 3300.0,
+    "severity": 0.8,
+    "label": "Bandra Kurla Complex Road at the Kurla end — standing water by the Mithi",
+    "on": [
+     "bkc",
+     "kurla"
+    ]
+   },
+   {
+    "type": "rally_spillover",
+    "start_sec": 600.0,
+    "duration_sec": 3000.0,
+    "severity": 0.75,
+    "label": "Kurla — commuters off the stopped locals and families moving to shelter",
+    "extra_demand_veh_h": 700.0,
+    "on": [
+     "kurla",
+     "kurla_sclr"
+    ]
+   },
+   {
+    "type": "vehicle_breakdown",
+    "start_sec": 900.0,
+    "duration_sec": 1800.0,
+    "severity": 0.7,
+    "label": "BEST bus stalled in the water on LBS Marg",
+    "on": [
+     "lbs_fork",
+     "kurla"
+    ]
+   },
+   {
+    "type": "waterlogging",
+    "start_sec": 0.0,
+    "duration_sec": 3600.0,
+    "severity": 0.9,
+    "label": "Andheri Subway — flooded and closed",
+    "on": [
+     "gokhale_east",
+     "andheri_subway"
+    ]
+   },
+   {
+    "type": "waterlogging",
+    "start_sec": 0.0,
+    "duration_sec": 3600.0,
+    "severity": 0.9,
+    "label": "Milan Subway — flooded and closed",
+    "on": [
+     "santacruz_milan",
+     "milan_subway"
+    ]
+   }
+  ],
+  "name_mr": "मिठी नदी धोक्याच्या पातळीवर — कुर्ल्यात स्थलांतर, सबवे बंद, एस. व्ही. रोडवर वळण",
+  "name_hi": "मीठी नदी ख़तरे के निशान पर — कुर्ला में निकासी, सबवे बंद, एस.वी. रोड पर डायवर्ज़न",
+  "places": [
+   "mithi_kurla",
+   "kurla",
+   "andheri_subway",
+   "milan_subway",
+   "andheri",
+   "apollo_bunder"
+  ],
+  "label": "SIMULATED"
+ },
+ {
+  "scenario_id": "diwali_air_quality",
+  "name": "Diwali Night — Air-Quality Advisory, Dadar Market Crowds and Ambulance Priority",
+  "description": "SIMULATED festival night in the winter air-quality season. Diwali shoppers crowd the Dadar markets around Ranade Road and Dadar TT while firecracker smoke and calm winds degrade air quality; breathing-difficulty calls rise and ambulance (108) windows run to Sion Hospital. The air-quality readings in this scenario are SIMULATED, not measurements, and are shown only as indicative bands (the live layer reads the public CPCB/MPCB stations through WAQI and OpenAQ); crowd loads and call rates are modelled assumptions. The AI proposes a trilingual advisory and the green corridor; a named officer decides.",
+  "category": "multi_event",
+  "departure_time": "2026-11-08T21:30:00+05:30",
+  "vvip_class": "X",
+  "closure_policy": {
+   "advance_closure_sec": 45,
+   "closure_type": "signal_hold"
+  },
+  "horizon_min": 60,
+  "n_replications": 10,
+  "seed": 20261108,
+  "convoy_speed_kmh": 20,
+  "weather": {},
+  "event_overrides": {
+   "market": 1.8,
+   "ambulance": 1.5
+  },
+  "expected_features": [
+   "festival_night",
+   "air_quality_advisory_proposal",
+   "trilingual_advisory",
+   "market_crowd",
+   "respiratory_call_priority",
+   "ambulance_window"
+  ],
+  "event_kind": "mass_gathering",
+  "crowd_class": "HIGH",
+  "duration_class": "hours",
+  "route": [
+   "dadar_west",
+   "dadar_tt",
+   "kings_circle",
+   "sion_hospital"
+  ],
+  "forced_events": [
+   {
+    "type": "rally_spillover",
+    "start_sec": 0.0,
+    "duration_sec": 3600.0,
+    "severity": 0.85,
+    "label": "Diwali shoppers crowd the Dadar West market approach to Tilak Bridge",
+    "extra_demand_veh_h": 850.0,
+    "on": [
+     "dadar_west",
+     "dadar_tt"
+    ]
+   },
+   {
+    "type": "rally_spillover",
+    "start_sec": 0.0,
+    "duration_sec": 3600.0,
+    "severity": 0.7,
+    "label": "shoppers and parked vehicles on Ranade Road",
+    "extra_demand_veh_h": 600.0,
+    "on": [
+     "dadar_west",
+     "mahim"
+    ]
+   },
+   {
+    "type": "market_spillover",
+    "start_sec": 0.0,
+    "duration_sec": 3600.0,
+    "severity": 0.65,
+    "label": "lamp and sweet stalls on Dr Ambedkar Road by Dadar TT",
+    "on": [
+     "hindmata",
+     "dadar_tt"
+    ]
+   },
+   {
+    "type": "market_spillover",
+    "start_sec": 0.0,
+    "duration_sec": 3600.0,
+    "severity": 0.5,
+    "label": "festival stalls on Senapati Bapat Marg",
+    "on": [
+     "lower_parel",
+     "dadar_west"
+    ]
+   },
+   {
+    "type": "emergency_vehicle",
+    "start_sec": 900.0,
+    "duration_sec": 300.0,
+    "severity": 0.9,
+    "label": "ambulance (108) on a breathing-difficulty call green-corridor window — Tilak Bridge, Dadar West to Dadar TT",
+    "on": [
+     "dadar_west",
+     "dadar_tt"
+    ]
+   },
+   {
+    "type": "emergency_vehicle",
+    "start_sec": 990.1,
+    "duration_sec": 300.0,
+    "severity": 0.9,
+    "label": "ambulance (108) on a breathing-difficulty call green-corridor window — Dr Ambedkar Road, Dadar TT to Kings Circle",
+    "on": [
+     "dadar_tt",
+     "kings_circle"
+    ]
+   },
+   {
+    "type": "emergency_vehicle",
+    "start_sec": 1135.8,
+    "duration_sec": 300.0,
+    "severity": 0.9,
+    "label": "ambulance (108) on a breathing-difficulty call green-corridor window — Dr Ambedkar Road to Sion Hospital",
+    "on": [
+     "kings_circle",
+     "sion_hospital"
+    ]
+   }
+  ],
+  "name_mr": "दिवाळीची रात्र — हवेच्या गुणवत्तेचा इशारा, दादर बाजारातील गर्दी आणि रुग्णवाहिकेला प्राधान्य",
+  "name_hi": "दिवाली की रात — वायु गुणवत्ता परामर्श, दादर बाज़ार की भीड़ और एम्बुलेंस को प्राथमिकता",
+  "places": [
+   "dadar",
+   "dadar_tt",
+   "kings_circle",
+   "sion_hospital",
+   "shivaji_park"
+  ],
+  "label": "SIMULATED"
+ },
+ {
+  "scenario_id": "october_heat_breakdowns",
+  "name": "Hot Afternoon — Overheated Vehicles on the Eastern Freeway",
+  "description": "SIMULATED hot, humid afternoon in the October heat after the monsoon withdraws. Overheated buses and cars stall on the Eastern Freeway from P D Mello Road past the Atal Setu interchange to Chembur and on the link to the EEH; recovery vans are pre-positioned and shorter field duty rotations are proposed. Temperatures and breakdown rates are modelled assumptions; the AI proposes and a named officer decides.",
+  "category": "weather",
+  "departure_time": "2026-10-14T14:00:00+05:30",
+  "vvip_class": "X",
+  "closure_policy": {
+   "advance_closure_sec": 30,
+   "closure_type": "signal_hold"
+  },
+  "horizon_min": 60,
+  "n_replications": 10,
+  "seed": 20261014,
+  "convoy_speed_kmh": 35,
+  "weather": {},
+  "event_overrides": {
+   "breakdown": 1.6,
+   "market": 0.7,
+   "ambulance": 1.3
+  },
+  "expected_features": [
+   "october_heat",
+   "vehicle_overheating_breakdowns",
+   "recovery_van_prepositioning",
+   "duty_rotation_proposal",
+   "reduced_pedestrian_load"
+  ],
+  "event_kind": "work_zone",
+  "crowd_class": "LOW",
+  "duration_class": "hours",
+  "route": [
+   "orange_gate",
+   "atal_setu",
+   "chembur_ef",
+   "chheda_nagar"
+  ],
+  "forced_events": [
+   {
+    "type": "vehicle_breakdown",
+    "start_sec": 300.0,
+    "duration_sec": 1800.0,
+    "severity": 0.75,
+    "label": "bus overheated and stalled on the Eastern Freeway (one lane lost until the recovery van clears it)",
+    "on": [
+     "orange_gate",
+     "atal_setu"
+    ]
+   },
+   {
+    "type": "vehicle_breakdown",
+    "start_sec": 900.0,
+    "duration_sec": 900.0,
+    "severity": 0.55,
+    "label": "car with a burst tyre stopped on the Eastern Freeway past the Atal Setu interchange",
+    "on": [
+     "atal_setu",
+     "chembur_ef"
+    ]
+   },
+   {
+    "type": "vehicle_breakdown",
+    "start_sec": 1200.0,
+    "duration_sec": 1500.0,
+    "severity": 0.7,
+    "label": "goods vehicle overheated on the link to the EEH at Chheda Nagar",
+    "on": [
+     "chembur_ef",
+     "chheda_nagar"
+    ]
+   },
+   {
+    "type": "vehicle_breakdown",
+    "start_sec": 2100.0,
+    "duration_sec": 1200.0,
+    "severity": 0.6,
+    "label": "car stalled with an overheated engine on the Eastern Freeway near Chembur",
+    "on": [
+     "atal_setu",
+     "chembur_ef"
+    ]
+   }
+  ],
+  "name_mr": "उष्ण दुपार — पूर्व मुक्त मार्गावर तापलेली वाहने बंद",
+  "name_hi": "गर्म दोपहर — ईस्टर्न फ़्रीवे पर गर्म होकर रुकी गाड़ियाँ",
+  "places": [
+   "atal_setu",
+   "chembur"
+  ],
+  "label": "SIMULATED"
+ },
+ {
+  "scenario_id": "weh_treefall_squall",
+  "name": "Monsoon Squall — Tree-Falls on SV Road, Live-Wire Hazard and Staged Reopening",
+  "description": "SIMULATED early-monsoon squall. Gusts and a heavy shower bring trees and a hoarding down along SV Road from Andheri to Bandra; an overhead wire falls at Santacruz (live-wire hazard), signals go dark at Vile Parle and an ambulance (108) window runs to Cooper Hospital. Tree-fall locations and clearance times are modelled assumptions; the AI can only PROPOSE the reopening order and a power-isolation request; a named officer approves or rejects each.",
+  "category": "weather",
+  "departure_time": "2027-05-06T17:40:00+05:30",
+  "vvip_class": "X",
+  "closure_policy": {
+   "advance_closure_sec": 60,
+   "closure_type": "partial_closure"
+  },
+  "horizon_min": 60,
+  "n_replications": 8,
+  "seed": 20270506,
+  "convoy_speed_kmh": 20,
+  "weather": {
+   "monsoon": false,
+   "rain_intensity_mm_h": 25.0
+  },
+  "event_overrides": {
+   "breakdown": 1.5,
+   "signal_fault": 2.0
+  },
+  "expected_features": [
+   "monsoon_squall",
+   "tree_fall_lane_loss",
+   "live_wire_hazard_proposal",
+   "staged_reopening",
+   "signals_dark",
+   "green_corridor_request"
+  ],
+  "event_kind": "work_zone",
+  "crowd_class": "LOW",
+  "duration_class": "hours",
+  "route": [
+   "andheri_sv",
+   "vileparle_sv",
+   "santacruz_milan",
+   "santacruz_sv",
+   "bandra_sv"
+  ],
+  "forced_events": [
+   {
+    "type": "vehicle_breakdown",
+    "start_sec": 0.0,
+    "duration_sec": 1500.0,
+    "severity": 0.9,
+    "label": "tree down across SV Road between Santacruz and Vile Parle (cleared first)",
+    "on": [
+     "santacruz_milan",
+     "vileparle_sv"
+    ]
+   },
+   {
+    "type": "vehicle_breakdown",
+    "start_sec": 0.0,
+    "duration_sec": 2400.0,
+    "severity": 0.85,
+    "label": "tree down on SV Road between Irla and Andheri (cleared second)",
+    "on": [
+     "vileparle_sv",
+     "andheri_sv"
+    ]
+   },
+   {
+    "type": "vehicle_breakdown",
+    "start_sec": 0.0,
+    "duration_sec": 3600.0,
+    "severity": 0.9,
+    "label": "SV Road at Khar closed — trees down",
+    "on": [
+     "bandra_sv",
+     "santacruz_sv"
+    ]
+   },
+   {
+    "type": "vehicle_breakdown",
+    "start_sec": 0.0,
+    "duration_sec": 1800.0,
+    "severity": 0.6,
+    "label": "branches down on P V Avsare Marg by the Milan Subway (one lane)",
+    "on": [
+     "santacruz_milan",
+     "milan_subway"
+    ]
+   },
+   {
+    "type": "vehicle_breakdown",
+    "start_sec": 0.0,
+    "duration_sec": 1800.0,
+    "severity": 0.75,
+    "label": "tree down on SV Road between the Mahim Causeway and Bandra",
+    "on": [
+     "mahim_causeway",
+     "bandra_sv"
+    ]
+   },
+   {
+    "type": "vehicle_breakdown",
+    "start_sec": 0.0,
+    "duration_sec": 3000.0,
+    "severity": 0.9,
+    "label": "overhead wire down across SV Road at Santacruz — closed until the line is isolated (live-wire hazard)",
+    "on": [
+     "santacruz_sv",
+     "santacruz_milan"
+    ]
+   },
+   {
+    "type": "signal_fault",
+    "start_sec": 0.0,
+    "duration_sec": 2400.0,
+    "severity": 0.7,
+    "label": "signals dark at the Linking Road crossing after a feeder trips in the squall",
+    "on": [
+     "santacruz_milan",
+     "vileparle_sv"
+    ]
+   },
+   {
+    "type": "vehicle_breakdown",
+    "start_sec": 300.0,
+    "duration_sec": 2400.0,
+    "severity": 0.8,
+    "label": "hoarding frame and branches down on the Gokhale Bridge approach",
+    "on": [
+     "andheri_sv",
+     "gokhale_east"
+    ]
+   },
+   {
+    "type": "vehicle_breakdown",
+    "start_sec": 600.0,
+    "duration_sec": 2700.0,
+    "severity": 0.8,
+    "label": "tree down in a later gust on the Mahim Causeway (cleared last)",
+    "on": [
+     "mahim",
+     "mahim_causeway"
+    ]
+   },
+   {
+    "type": "emergency_vehicle",
+    "start_sec": 1200.0,
+    "duration_sec": 710.0,
+    "severity": 0.9,
+    "label": "ambulance (108) window to Cooper Hospital — SV Road, Andheri to Irla",
+    "on": [
+     "vileparle_sv",
+     "andheri_sv"
+    ]
+   }
+  ],
+  "name_mr": "पावसाळी वादळ — एस. व्ही. रोडवर झाडे पडली, विजेच्या तारेचा धोका, टप्प्याटप्प्याने रस्ते खुले",
+  "name_hi": "मानसूनी तूफ़ान — एस.वी. रोड पर पेड़ गिरे, बिजली के तार का ख़तरा, चरणबद्ध तरीके से सड़कें खुलीं",
+  "places": [
+   "andheri",
+   "milan_subway",
+   "mahim_causeway",
+   "bandra",
+   "cooper_hospital"
+  ],
+  "label": "SIMULATED"
+ },
+ {
+  "scenario_id": "ganeshotsav_night",
+  "name": "Ganeshotsav Night — Visarjan Processions, King's Circle to Dadar Chowpatty",
+  "description": "SIMULATED procession evening. Immersion processions from the Kings Circle and Matunga mandals move by Dadar TT and Tilak Bridge to Dadar West and the Dadar Chowpatty shore by Shivaji Park, with rolling closures behind them and ambulance (108) green-corridor windows across the route. Procession sizes and speeds are modelled assumptions; the AI proposes and a named officer decides.",
+  "category": "event",
+  "departure_time": "2026-09-18T18:00:00+05:30",
+  "vvip_class": "X",
+  "closure_policy": {
+   "advance_closure_sec": 120,
+   "closure_type": "full_closure"
+  },
+  "horizon_min": 60,
+  "n_replications": 10,
+  "seed": 202610021,
+  "convoy_speed_kmh": 4,
+  "weather": {},
+  "event_overrides": {
+   "market": 1.4,
+   "ambulance": 1.0
+  },
+  "expected_features": [
+   "procession",
+   "rolling_closure",
+   "shore_queue",
+   "green_corridor_request"
+  ],
+  "event_kind": "procession",
+  "crowd_class": "EXTREME",
+  "duration_class": "hours",
+  "route": [
+   "kings_circle",
+   "dadar_tt",
+   "dadar_west",
+   "mahim"
+  ],
+  "forced_events": [
+   {
+    "type": "rally_spillover",
+    "start_sec": 0.0,
+    "duration_sec": 2400.0,
+    "severity": 0.9,
+    "label": "immersion procession leaving Kings Circle along Dr Ambedkar Road",
+    "extra_demand_veh_h": 850.0,
+    "on": [
+     "dadar_tt",
+     "kings_circle"
+    ]
+   },
+   {
+    "type": "rally_spillover",
+    "start_sec": 900.0,
+    "duration_sec": 2700.0,
+    "severity": 0.85,
+    "label": "procession over Tilak Bridge to Dadar West",
+    "extra_demand_veh_h": 800.0,
+    "on": [
+     "dadar_west",
+     "dadar_tt"
+    ]
+   },
+   {
+    "type": "rally_spillover",
+    "start_sec": 1800.0,
+    "duration_sec": 3600.0,
+    "severity": 0.9,
+    "label": "processions queueing for Dadar Chowpatty by Shivaji Park",
+    "extra_demand_veh_h": 900.0,
+    "on": [
+     "dadar_west",
+     "mahim"
+    ]
+   },
+   {
+    "type": "emergency_vehicle",
+    "start_sec": 1500.0,
+    "duration_sec": 300.0,
+    "severity": 0.9,
+    "label": "ambulance (108) green-corridor window — Dr Ambedkar Road at Kings Circle",
+    "on": [
+     "dadar_tt",
+     "kings_circle"
+    ]
+   },
+   {
+    "type": "emergency_vehicle",
+    "start_sec": 1645.7,
+    "duration_sec": 300.0,
+    "severity": 0.9,
+    "label": "ambulance (108) green-corridor window — Tilak Bridge",
+    "on": [
+     "dadar_west",
+     "dadar_tt"
+    ]
+   },
+   {
+    "type": "emergency_vehicle",
+    "start_sec": 1735.8,
+    "duration_sec": 300.0,
+    "severity": 0.9,
+    "label": "ambulance (108) green-corridor window — Ranade Road to Dadar Chowpatty",
+    "on": [
+     "dadar_west",
+     "mahim"
+    ]
+   }
+  ],
+  "name_mr": "गणेशोत्सवाची रात्र — किंग्ज सर्कल ते दादर चौपाटी विसर्जन मिरवणुका",
+  "name_hi": "गणेशोत्सव की रात — किंग्ज़ सर्कल से दादर चौपाटी तक विसर्जन जुलूस",
+  "places": [
+   "kings_circle",
+   "gsb_kings_circle",
+   "dadar_tt",
+   "dadar",
+   "shivaji_park"
+  ],
+  "label": "SIMULATED"
+ },
+ {
+  "scenario_id": "dadar_surge",
+  "name": "Locals Stop — Station Surge at Dadar, CSMT, Kurla and Andheri",
+  "name_mr": "लोकल थांबल्या — दादर, सीएसएमटी, कुर्ला आणि अंधेरी स्थानकांवर गर्दी",
+  "name_hi": "लोकल रुकीं — दादर, सीएसएमटी, कुर्ला और अंधेरी स्टेशनों पर भीड़",
+  "label": "SIMULATED",
+  "category": "multi_event",
+  "description": "SIMULATED weekday morning on the pattern of 19 Aug 2025, when tracks went under water at Sion and Kurla (as reported). Central Railway locals stop between Dadar and Kurla and stranded commuters pour out of the stations onto the roads: the Dadar forecourts fill Tilak Bridge and Dr Ambedkar Road at Dadar TT, CSMT spills onto D N Road, Kurla onto LBS Marg and Andheri East onto the Andheri-Kurla Road. Share taxis and autos crowd the kerbs at Dadar TT and a BEST bus breaks down at King's Circle while extra BEST buses run a shuttle column from Dadar West to Sion. Commuter loads and timings are modelled assumptions; the AI proposes holds, BEST diversions and advisories, a named officer decides.",
+  "route": [
+   "dadar_west",
+   "dadar_tt",
+   "kings_circle",
+   "sion_hospital",
+   "sion_circle"
+  ],
+  "departure_time": "2026-08-19T10:30:00+05:30",
+  "vvip_class": "X",
+  "closure_policy": {
+   "advance_closure_sec": 60,
+   "closure_type": "signal_hold"
+  },
+  "horizon_min": 60,
+  "n_replications": 10,
+  "seed": 202608191,
+  "convoy_speed_kmh": 20,
+  "weather": {
+   "monsoon": true,
+   "rain_intensity_mm_h": 30.0
+  },
+  "event_overrides": {
+   "market": 1.5,
+   "breakdown": 1.3
+  },
+  "forced_events": [
+   {
+    "type": "rally_spillover",
+    "start_sec": 0.0,
+    "duration_sec": 3600.0,
+    "severity": 0.9,
+    "label": "Dadar station — stranded commuters fill Tilak Bridge",
+    "extra_demand_veh_h": 900.0,
+    "on": [
+     "dadar_west",
+     "dadar_tt"
+    ]
+   },
+   {
+    "type": "rally_spillover",
+    "start_sec": 300.0,
+    "duration_sec": 3300.0,
+    "severity": 0.85,
+    "label": "Dadar East forecourt — commuters walking along Dr Ambedkar Road by Dadar TT",
+    "extra_demand_veh_h": 850.0,
+    "on": [
+     "hindmata",
+     "dadar_tt"
+    ]
+   },
+   {
+    "type": "rally_spillover",
+    "start_sec": 600.0,
+    "duration_sec": 3000.0,
+    "severity": 0.8,
+    "label": "CSMT — the station forecourt spills onto D N Road",
+    "extra_demand_veh_h": 800.0,
+    "on": [
+     "churchgate",
+     "csmt"
+    ]
+   },
+   {
+    "type": "rally_spillover",
+    "start_sec": 600.0,
+    "duration_sec": 3000.0,
+    "severity": 0.8,
+    "label": "Kurla station — commuters on LBS Marg",
+    "extra_demand_veh_h": 800.0,
+    "on": [
+     "kurla",
+     "kurla_sclr"
+    ]
+   },
+   {
+    "type": "rally_spillover",
+    "start_sec": 900.0,
+    "duration_sec": 2700.0,
+    "severity": 0.7,
+    "label": "Andheri East — commuters on the Andheri-Kurla Road",
+    "extra_demand_veh_h": 700.0,
+    "on": [
+     "andheri_east",
+     "weh_andheri"
+    ]
+   },
+   {
+    "type": "market_spillover",
+    "start_sec": 0.0,
+    "duration_sec": 3600.0,
+    "severity": 0.7,
+    "label": "share taxis and autos crowd the kerbs at Dadar TT",
+    "on": [
+     "dadar_tt",
+     "kings_circle"
+    ]
+   },
+   {
+    "type": "vehicle_breakdown",
+    "start_sec": 1200.0,
+    "duration_sec": 1500.0,
+    "severity": 0.6,
+    "label": "BEST bus broken down at King's Circle",
+    "on": [
+     "kings_circle",
+     "sion_hospital"
+    ]
+   }
+  ],
+  "expected_features": [
+   "station_surge",
+   "locals_suspended",
+   "multi_station",
+   "bus_shuttle",
+   "trilingual_advisory"
+  ],
+  "event_kind": "egress_surge",
+  "crowd_class": "EXTREME",
+  "duration_class": "hours",
+  "places": [
+   "dadar",
+   "dadar_tt",
+   "csmt",
+   "kurla",
+   "andheri",
+   "kings_circle",
+   "sion_circle"
+  ]
+ }
+]

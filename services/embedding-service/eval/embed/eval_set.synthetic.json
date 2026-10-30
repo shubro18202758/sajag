@@ -1,0 +1,2602 @@
+{
+ "label": "SYNTHETIC",
+ "note": "Invented situations, questions and headlines with real Mumbai place names, written for this eval from the repo's own material. Not real events; no real person; no real statistic.",
+ "memory": {
+  "docs": [
+   {
+    "id": "m:tide_hindmata:d1",
+    "family": "tide_hindmata",
+    "kind": "decision",
+    "title": "decider waterlogging_alert checkpoint",
+    "body": "TRIGGER: waterlogging_alert\nCloudburst over the island city during a high tide; sea outfalls closed. Water rising at Hindmata and Dadar TT; Dr Ambedkar Road northbound slowing.\nrain_mm_last_hour: 62\ntide_m: 4.6\ngates: closed\nrisk_class: 2\nambulance_route: Sion Hospital via the Eastern Express Highway"
+   },
+   {
+    "id": "m:tide_hindmata:i2",
+    "family": "tide_hindmata",
+    "kind": "incident",
+    "title": "Incident weather (high)",
+    "body": "Waterlogging 20-30 cm at Hindmata junction and on Dr Ambedkar Road after heavy rain at high tide; small vehicles stalled; dewatering pumps at Hindmata working against closed outfalls."
+   },
+   {
+    "id": "m:tide_hindmata:a3",
+    "family": "tide_hindmata",
+    "kind": "aar",
+    "title": "After-action: Hindmata waterlogging at high tide",
+    "body": "Diversion of Dr Ambedkar Road traffic to Senapati Bapat Marg held for 95 minutes until the tide fell and the outfalls reopened. Ambulances to Sion Hospital used the Eastern Express Highway; one live-wire report was passed to the power utility."
+   },
+   {
+    "id": "m:visarjan_lalbaug:d1",
+    "family": "visarjan_lalbaug",
+    "kind": "decision",
+    "title": "decider crowd_density checkpoint",
+    "body": "TRIGGER: crowd_density\nAnant Chaturdashi night: the Lalbaugcha Raja procession and devotees spilling onto the road at Lalbaug; Bharat Mata junction gridlocked on the way to Girgaon Chowpatty.\ncrowd_level: very high\npandals: Lalbaugcha Raja, GSB Seva Mandal\none_way: Dr Ambedkar Road southbound only\ngoods_vehicle_ban: active"
+   },
+   {
+    "id": "m:visarjan_lalbaug:s2",
+    "family": "visarjan_lalbaug",
+    "kind": "scenario_run",
+    "title": "Scenario run sc-visarjan-07: Lalbaug - Bharat Mata - Girgaon Chowpatty (visarjan night)",
+    "body": "Simulation scenario run sc-visarjan-07 on route Lalbaug - Bharat Mata - Girgaon Chowpatty (visarjan night). Predicted disruption 48.2 vehicle-hours; max queue 1350 m; average closure 420 s; segments affected 9; complaints risk 0.62; convoy transit 0 s."
+   },
+   {
+    "id": "m:visarjan_lalbaug:a3",
+    "family": "visarjan_lalbaug",
+    "kind": "aar",
+    "title": "After-action: Visarjan night, Lalbaug to Girgaon",
+    "body": "Metering devotees at the Lalbaug flyover approach and holding vehicles at Bharat Mata junction for 6-minute waves kept the procession moving; an ambulance (108) reached KEM Hospital via a cleared lane on Dr Ambedkar Road."
+   },
+   {
+    "id": "m:sea_link:i1",
+    "family": "sea_link",
+    "kind": "incident",
+    "title": "Incident route_blockage (high)",
+    "body": "A BEST bus broke down in the northbound lanes of the Bandra–Worli Sea Link at 18:10; queue back to the Worli end; Worli Seaface approach slow."
+   },
+   {
+    "id": "m:sea_link:d2",
+    "family": "sea_link",
+    "kind": "decision",
+    "title": "decider route_blockage checkpoint",
+    "body": "TRIGGER: route_blockage\nStalled bus on the Sea Link northbound during the evening peak; tow truck 20 minutes away. Spill-back onto the Worli end interchange.\nblocked_lane: northbound kerb lane\nalternate: Mahim Causeway\ntow_eta_min: 20"
+   },
+   {
+    "id": "m:sea_link:a3",
+    "family": "sea_link",
+    "kind": "aar",
+    "title": "After-action: Sea Link breakdown",
+    "body": "Diverting Bandra-bound traffic to Mahim Causeway and opening a contraflow lane cleared the Sea Link queue in 40 minutes after the bus was towed."
+   },
+   {
+    "id": "m:vip_mantralaya:d1",
+    "family": "vip_mantralaya",
+    "kind": "decision",
+    "title": "decider pre_movement checkpoint",
+    "body": "TRIGGER: pre_movement\nProtected movement planned from Mantralaya to Mumbai Airport T2 at 16:30 via Marine Drive, the Coastal Road, the Sea Link and the Western Express Highway.\nroute_options: primary: Coastal Road-Sea Link-WEH; alternate: Dr Ambedkar Road-Sion-SCLR-WEH\nexpected_hold_min: 12"
+   },
+   {
+    "id": "m:vip_mantralaya:s2",
+    "family": "vip_mantralaya",
+    "kind": "scenario_run",
+    "title": "Scenario run sc-vip-mtr-03: Mantralaya - Coastal Road - Sea Link - WEH - Airport T2",
+    "body": "Simulation scenario run sc-vip-mtr-03 on route Mantralaya - Coastal Road - Sea Link - WEH - Airport T2. Predicted disruption 31.4 vehicle-hours; max queue 980 m; average closure 210 s; segments affected 14; complaints risk 0.41; convoy transit 1980 s."
+   },
+   {
+    "id": "m:wankhede_egress:s1",
+    "family": "wankhede_egress",
+    "kind": "scenario_run",
+    "title": "Scenario run sc-wankhede-11: Wankhede Stadium egress - Marine Drive - Churchgate",
+    "body": "Simulation scenario run sc-wankhede-11 on route Wankhede Stadium egress - Marine Drive - Churchgate. Predicted disruption 22.7 vehicle-hours; max queue 760 m; average closure 300 s; segments affected 7; complaints risk 0.35; convoy transit 0 s."
+   },
+   {
+    "id": "m:wankhede_egress:d2",
+    "family": "wankhede_egress",
+    "kind": "decision",
+    "title": "decider egress_surge checkpoint",
+    "body": "TRIGGER: egress_surge\nNight match ends at Wankhede Stadium; about 30,000 spectators leaving towards Churchgate, Marine Lines and CSMT; BEST buses queued on Marine Drive.\ncrowd_level: high\nrail: Churchgate station crowded\nexits_metered: yes"
+   },
+   {
+    "id": "m:cyclone_marinedrive:i1",
+    "family": "cyclone_marinedrive",
+    "kind": "incident",
+    "title": "Incident weather (critical)",
+    "body": "Cyclone gusts uprooted trees across Marine Drive and Worli Seaface; both carriageways blocked; BMC tree-cutting team called."
+   },
+   {
+    "id": "m:cyclone_marinedrive:d2",
+    "family": "cyclone_marinedrive",
+    "kind": "decision",
+    "title": "decider cyclone_recovery checkpoint",
+    "body": "TRIGGER: cyclone_recovery\nPost-landfall recovery: tree falls on Marine Drive and Babulnath Road; evacuation route to JJ Hospital must be restored first.\nblocked_segments: 4\npriority: JJ Hospital access\ncrews_available: 3"
+   },
+   {
+    "id": "m:amb_kem:d1",
+    "family": "amb_kem",
+    "kind": "decision",
+    "title": "decider ambulance_request checkpoint",
+    "body": "TRIGGER: ambulance_request\nAmbulance (108) requests a green corridor from Worli Naka to KEM Hospital through evening traffic on Dr E Moses Road.\nunit_eta_min: 14\nwindow_sec: 120\njunctions: 6"
+   },
+   {
+    "id": "m:amb_kem:a2",
+    "family": "amb_kem",
+    "kind": "aar",
+    "title": "After-action: Green corridor Worli Naka to KEM",
+    "body": "The window opened 90 seconds ahead of the ambulance at each of six junctions on Dr E Moses Road; the unit reached KEM Hospital in 11 minutes."
+   },
+   {
+    "id": "m:signal_sion:i1",
+    "family": "signal_sion",
+    "kind": "incident",
+    "title": "Incident signal_failure (medium)",
+    "body": "Signal controller at Sion Circle dark after a power cut; Eastern Express Highway northbound queue 600 m; manual control by traffic constables."
+   },
+   {
+    "id": "m:signal_sion:d2",
+    "family": "signal_sion",
+    "kind": "decision",
+    "title": "decider signal_failure checkpoint",
+    "body": "TRIGGER: signal_failure\nSion Circle junction signals out; Sion-Panvel highway and Eastern Express Highway flows conflicting. Propose manual control and a fixed-time plan once power returns.\nqueue_m: 600\nconstables_on_site: 2"
+   },
+   {
+    "id": "m:mount_mary:s1",
+    "family": "mount_mary",
+    "kind": "scenario_run",
+    "title": "Scenario run sc-mtmary-02: Bandra station - Hill Road - Mount Mary (fair week)",
+    "body": "Simulation scenario run sc-mtmary-02 on route Bandra station - Hill Road - Mount Mary (fair week). Predicted disruption 18.9 vehicle-hours; max queue 640 m; average closure 180 s; segments affected 6; complaints risk 0.28; convoy transit 0 s."
+   },
+   {
+    "id": "m:mount_mary:d2",
+    "family": "mount_mary",
+    "kind": "decision",
+    "title": "decider mass_gathering checkpoint",
+    "body": "TRIGGER: mass_gathering\nPilgrims arriving for the Mount Mary fair in Bandra; BEST special buses loading at Bandra station; pedestrian surge on Hill Road.\ncrowd_level: high\nbuses_waiting: 40"
+   },
+   {
+    "id": "m:marathon:s1",
+    "family": "marathon",
+    "kind": "scenario_run",
+    "title": "Scenario run sc-marathon-01: CSMT - Marine Drive - Sea Link (Mumbai Marathon)",
+    "body": "Simulation scenario run sc-marathon-01 on route CSMT - Marine Drive - Sea Link (Mumbai Marathon). Predicted disruption 26.1 vehicle-hours; max queue 820 m; average closure 3600 s; segments affected 11; complaints risk 0.47; convoy transit 0 s."
+   },
+   {
+    "id": "m:marathon:d2",
+    "family": "marathon",
+    "kind": "decision",
+    "title": "decider race checkpoint",
+    "body": "TRIGGER: race\nMumbai Marathon morning: Marine Drive, Haji Ali and the Sea Link closed until the last runner passes; Sunday church traffic near Churchgate to be held.\nclosure_until: 10:30\ndetour: Dr Ambedkar Road"
+   },
+   {
+    "id": "m:dahihandi_worli:i1",
+    "family": "dahihandi_worli",
+    "kind": "incident",
+    "title": "Incident other (medium)",
+    "body": "Dahi Handi pyramids at Jambori Maidan, Worli draw a large crowd; Pandurang Budhkar Marg and Ganpatrao Kadam Marg closed for 2 hours; BEST buses diverted."
+   },
+   {
+    "id": "m:dahihandi_worli:d2",
+    "family": "dahihandi_worli",
+    "kind": "decision",
+    "title": "decider mass_gathering checkpoint",
+    "body": "TRIGGER: mass_gathering\nDahi Handi crowd assembling at Worli; Pandurang Budhkar Marg and Ganpatrao Kadam Marg blocked; BEST buses held.\nexpected_duration_min: 120\ndetour: Dr Annie Besant Road"
+   },
+   {
+    "id": "m:dadar_surge:i1",
+    "family": "dadar_surge",
+    "kind": "incident",
+    "title": "Incident congestion_spike (high)",
+    "body": "Local trains suspended after tracks flooded at Sion and Kurla; passenger surge out of Dadar station onto Ranade Road and Tilak Bridge; taxis and BEST buses overwhelmed."
+   },
+   {
+    "id": "m:dadar_surge:d2",
+    "family": "dadar_surge",
+    "kind": "decision",
+    "title": "decider egress_surge checkpoint",
+    "body": "TRIGGER: egress_surge\nDadar station crowd spilling onto the road after the suspension; more buses requested from BEST; Tilak Bridge approach jammed.\ncrowd_level: high\nextra_buses_requested: 15"
+   },
+   {
+    "id": "m:newyear_marinedrive:d1",
+    "family": "newyear_marinedrive",
+    "kind": "decision",
+    "title": "decider crowd_density checkpoint",
+    "body": "TRIGGER: crowd_density\nNew Year's Eve crowd on Marine Drive; vehicle entry closed from the Churchgate end; pedestrians only after 21:00.\ncrowd_level: very high\nclosure: Marine Drive, NCPA to Girgaon Chowpatty"
+   },
+   {
+    "id": "m:newyear_marinedrive:a2",
+    "family": "newyear_marinedrive",
+    "kind": "aar",
+    "title": "After-action: New Year's Eve Marine Drive",
+    "body": "Closing Marine Drive to vehicles at 21:00 and routing cars via Veer Nariman Road kept ambulance access to the crowd; the crowd dispersed by 01:30."
+   },
+   {
+    "id": "m:gokhale_bridge:i1",
+    "family": "gokhale_bridge",
+    "kind": "incident",
+    "title": "Incident congestion_spike (medium)",
+    "body": "Gokhale Bridge approach in Andheri congested from SV Road; east-west traffic at 8 km/h; school buses delayed."
+   },
+   {
+    "id": "m:gokhale_bridge:d2",
+    "family": "gokhale_bridge",
+    "kind": "decision",
+    "title": "decider congestion checkpoint",
+    "body": "TRIGGER: congestion\nHeavy congestion on Gokhale Bridge and SV Road towards the Western Express Highway; propose more green for the bridge approach at SV Road.\nvc_ratio: 0.93\nspeed_kmh: 8"
+   },
+   {
+    "id": "m:milan_subway:d1",
+    "family": "milan_subway",
+    "kind": "decision",
+    "title": "decider waterlogging_alert checkpoint",
+    "body": "TRIGGER: waterlogging_alert\nHeavy rain over the western suburbs; water rising in Milan Subway and at Santacruz; SV Road and the Vile Parle approach slowing.\nrain_mm_last_hour: 55\nrisk_class: 3\ngates: open"
+   },
+   {
+    "id": "m:milan_subway:i2",
+    "family": "milan_subway",
+    "kind": "incident",
+    "title": "Incident weather (high)",
+    "body": "Knee-deep water in Milan Subway and at Vile Parle; BEST buses stalled on SV Road; Irla pumping station at full capacity."
+   },
+   {
+    "id": "m:bkc_peak:d1",
+    "family": "bkc_peak",
+    "kind": "decision",
+    "title": "decider congestion checkpoint",
+    "body": "TRIGGER: congestion\nEvening office peak in Bandra Kurla Complex; office exits jammed onto the BKC connector and the Kalanagar approach.\nvc_ratio: 0.88\nspeed_kmh: 12"
+   },
+   {
+    "id": "m:bkc_peak:s2",
+    "family": "bkc_peak",
+    "kind": "scenario_run",
+    "title": "Scenario run sc-bkc-04: BKC - Kalanagar - Western Express Highway",
+    "body": "Simulation scenario run sc-bkc-04 on route BKC - Kalanagar - Western Express Highway. Predicted disruption 14.3 vehicle-hours; max queue 520 m; average closure 0 s; segments affected 5; complaints risk 0.22; convoy transit 0 s."
+   },
+   {
+    "id": "m:x_workzone:i1",
+    "family": "x_workzone",
+    "kind": "incident",
+    "title": "Incident other (low)",
+    "body": "Metro work narrows SV Road near Jogeshwari to one lane for a week."
+   },
+   {
+    "id": "m:x_port_trucks:i1",
+    "family": "x_port_trucks",
+    "kind": "incident",
+    "title": "Incident congestion_spike (low)",
+    "body": "Container trucks queue at a Mumbai Port gate near Wadala; P D'Mello Road slow in the morning."
+   },
+   {
+    "id": "m:x_borivali_school:d1",
+    "family": "x_borivali_school",
+    "kind": "decision",
+    "title": "decider congestion checkpoint",
+    "body": "TRIGGER: congestion\nSchool-hour congestion near Borivali station; parents' cars parked on SV Road.\nvc_ratio: 0.71"
+   },
+   {
+    "id": "m:x_airport_haze:i1",
+    "family": "x_airport_haze",
+    "kind": "incident",
+    "title": "Incident weather (low)",
+    "body": "Morning haze at Mumbai Airport delays departures; Sahar Road light traffic."
+   },
+   {
+    "id": "m:x_chembur:s1",
+    "family": "x_chembur",
+    "kind": "scenario_run",
+    "title": "Scenario run sc-chembur-09: Chembur - Ghatkopar - Vikhroli",
+    "body": "Simulation scenario run sc-chembur-09 on route Chembur - Ghatkopar - Vikhroli. Predicted disruption 9.8 vehicle-hours; max queue 310 m; average closure 0 s; segments affected 4; complaints risk 0.15; convoy transit 0 s."
+   },
+   {
+    "id": "m:x_gateway:d1",
+    "family": "x_gateway",
+    "kind": "decision",
+    "title": "decider crowd_density checkpoint",
+    "body": "TRIGGER: crowd_density\nWinter Sunday crowd at the Gateway of India and Colaba Causeway; parking spilling onto P J Ramchandani Marg.\ncrowd_level: moderate"
+   },
+   {
+    "id": "m:x_hindmata_festival:d1",
+    "family": "x_hindmata_festival",
+    "kind": "decision",
+    "title": "decider crowd_density checkpoint",
+    "body": "TRIGGER: crowd_density\nGaneshotsav night crowd at the Hindmata pandals on Dr Ambedkar Road; vehicles slowed near Dadar TT.\ncrowd_level: high\nrain_mm_last_hour: 0"
+   },
+   {
+    "id": "m:x_sealink_vip:d1",
+    "family": "x_sealink_vip",
+    "kind": "decision",
+    "title": "decider pre_movement checkpoint",
+    "body": "TRIGGER: pre_movement\nProtected movement to cross the Sea Link at 07:00 towards Worli; 6-minute hold planned.\nexpected_hold_min: 6"
+   },
+   {
+    "id": "m:x_lalbaug_signal:i1",
+    "family": "x_lalbaug_signal",
+    "kind": "incident",
+    "title": "Incident signal_failure (medium)",
+    "body": "Cable cut darkens the signals at Lalbaug junction; manual control on Dr Ambedkar Road."
+   },
+   {
+    "id": "m:x_worlinaka_shopping:i1",
+    "family": "x_worlinaka_shopping",
+    "kind": "incident",
+    "title": "Incident congestion_spike (medium)",
+    "body": "Festive shopping crowd at Worli Naka; BEST buses slow on Dr E Moses Road; no ambulance request pending."
+   },
+   {
+    "id": "m:x_marinedrive_parade:d1",
+    "family": "x_marinedrive_parade",
+    "kind": "decision",
+    "title": "decider ceremonial checkpoint",
+    "body": "TRIGGER: ceremonial\nNavy Day display rehearsal on Marine Drive; Marine Drive closed 06:00-09:00; Veer Nariman Road diversion.\nclosure_until: 09:00"
+   },
+   {
+    "id": "m:x_dadar_rain:i1",
+    "family": "x_dadar_rain",
+    "kind": "incident",
+    "title": "Incident weather (medium)",
+    "body": "Water under the Dadar TT flyover after a short shower; Dr Ambedkar Road southbound slow; trains on time."
+   },
+   {
+    "id": "m:x_milan_festival:d1",
+    "family": "x_milan_festival",
+    "kind": "decision",
+    "title": "decider crowd_density checkpoint",
+    "body": "TRIGGER: crowd_density\nGaneshotsav pandals draw crowds near Milan Subway on SV Road in Santacruz; no rain.\ncrowd_level: high"
+   },
+   {
+    "id": "m:x_sion_water:i1",
+    "family": "x_sion_water",
+    "kind": "incident",
+    "title": "Incident weather (low)",
+    "body": "Shallow water under the Sion flyover after rain; signals working; Eastern Express Highway moving."
+   },
+   {
+    "id": "m:x_sealink_toll:i1",
+    "family": "x_sealink_toll",
+    "kind": "incident",
+    "title": "Incident congestion_spike (low)",
+    "body": "Toll plaza queue on the Bandra–Worli Sea Link towards Worli; no movement planned; Bandra side slow."
+   },
+   {
+    "id": "m:x_pedder_tree:i1",
+    "family": "x_pedder_tree",
+    "kind": "incident",
+    "title": "Incident weather (medium)",
+    "body": "A tree fell on Pedder Road after a squall; one lane blocked near Kemps Corner."
+   },
+   {
+    "id": "m:x_bandra_hillroad:i1",
+    "family": "x_bandra_hillroad",
+    "kind": "incident",
+    "title": "Incident other (low)",
+    "body": "Hill Road in Bandra narrowed for two hours for drain repairs; no crowd."
+   },
+   {
+    "id": "m:x_wankhede_day:s1",
+    "family": "x_wankhede_day",
+    "kind": "scenario_run",
+    "title": "Scenario run sc-wankhede-02: Wankhede Stadium - Churchgate (day match, light crowd)",
+    "body": "Simulation scenario run sc-wankhede-02 on route Wankhede Stadium - Churchgate (day match, light crowd). Predicted disruption 4.1 vehicle-hours; max queue 150 m; average closure 60 s; segments affected 2; complaints risk 0.08; convoy transit 0 s."
+   }
+  ],
+  "queries": [
+   {
+    "id": "mq00",
+    "lang": "en",
+    "text": "TRIGGER: waterlogging_alert\nHeavy rain at high tide, outfalls shut; water rising at Hindmata and Dadar TT. Ambulance route to Sion Hospital at risk.",
+    "gold": [
+     "m:tide_hindmata:d1",
+     "m:tide_hindmata:i2",
+     "m:tide_hindmata:a3"
+    ]
+   },
+   {
+    "id": "mq01",
+    "lang": "mr",
+    "text": "भरतीच्या वेळी मुसळधार पाऊस, समुद्राकडची मुखे बंद. हिंदमाता आणि दादर टीटीला पाणी वाढत आहे, सायन रुग्णालयाकडे जाणाऱ्या रुग्णवाहिकेचा मार्ग धोक्यात.",
+    "gold": [
+     "m:tide_hindmata:d1",
+     "m:tide_hindmata:i2",
+     "m:tide_hindmata:a3"
+    ]
+   },
+   {
+    "id": "mq02",
+    "lang": "hi",
+    "text": "ज्वार के समय भारी बारिश, आउटफ़ॉल बंद। हिंदमाता और दादर टीटी पर जलभराव बढ़ रहा है, सायन अस्पताल जाने वाली एम्बुलेंस का रास्ता खतरे में।",
+    "gold": [
+     "m:tide_hindmata:d1",
+     "m:tide_hindmata:i2",
+     "m:tide_hindmata:a3"
+    ]
+   },
+   {
+    "id": "mq03",
+    "lang": "mixed",
+    "text": "Hindmata la high tide chya veli heavy rain, paani bharat aahe, Ambedkar Road slow, ambulance Sion Hospital la kashi jaanar?",
+    "gold": [
+     "m:tide_hindmata:d1",
+     "m:tide_hindmata:i2",
+     "m:tide_hindmata:a3"
+    ]
+   },
+   {
+    "id": "mq04",
+    "lang": "en",
+    "text": "Visarjan night crowds at Lalbaug around Lalbaugcha Raja spilling onto the road; Bharat Mata junction jammed.",
+    "gold": [
+     "m:visarjan_lalbaug:d1",
+     "m:visarjan_lalbaug:s2",
+     "m:visarjan_lalbaug:a3"
+    ]
+   },
+   {
+    "id": "mq05",
+    "lang": "mr",
+    "text": "अनंत चतुर्दशीच्या रात्री लालबागचा राजा परिसरात भाविकांची प्रचंड गर्दी, भारतमाता चौकात वाहने अडकली.",
+    "gold": [
+     "m:visarjan_lalbaug:d1",
+     "m:visarjan_lalbaug:s2",
+     "m:visarjan_lalbaug:a3"
+    ]
+   },
+   {
+    "id": "mq06",
+    "lang": "mixed",
+    "text": "Visarjan chi gardi Lalbaug la, Bharat Mata junction la gaadi halat nahi, miravnuk raastyavar",
+    "gold": [
+     "m:visarjan_lalbaug:d1",
+     "m:visarjan_lalbaug:s2",
+     "m:visarjan_lalbaug:a3"
+    ]
+   },
+   {
+    "id": "mq07",
+    "lang": "en",
+    "text": "TRIGGER: route_blockage\nTruck broken down on the Sea Link towards Bandra in the evening rush; queue back to the Worli end.",
+    "gold": [
+     "m:sea_link:i1",
+     "m:sea_link:d2",
+     "m:sea_link:a3"
+    ]
+   },
+   {
+    "id": "mq08",
+    "lang": "mr",
+    "text": "संध्याकाळच्या गर्दीत वांद्रे–वरळी सागरी सेतूवर एक बस बंद पडली, वरळीच्या टोकापर्यंत लांब रांग.",
+    "gold": [
+     "m:sea_link:i1",
+     "m:sea_link:d2",
+     "m:sea_link:a3"
+    ]
+   },
+   {
+    "id": "mq09",
+    "lang": "hi",
+    "text": "शाम के समय बांद्रा–वर्ली सी लिंक पर बस खराब, वर्ली छोर तक लंबा जाम।",
+    "gold": [
+     "m:sea_link:i1",
+     "m:sea_link:d2",
+     "m:sea_link:a3"
+    ]
+   },
+   {
+    "id": "mq10",
+    "lang": "en",
+    "text": "TRIGGER: pre_movement\nProtected movement from Mantralaya to the airport this afternoon via the Coastal Road and the Sea Link.",
+    "gold": [
+     "m:vip_mantralaya:d1",
+     "m:vip_mantralaya:s2"
+    ]
+   },
+   {
+    "id": "mq11",
+    "lang": "mr",
+    "text": "आज दुपारी मंत्रालय ते विमानतळ व्हीआयपी ताफा, कोस्टल रोड आणि सागरी सेतूमार्गे.",
+    "gold": [
+     "m:vip_mantralaya:d1",
+     "m:vip_mantralaya:s2"
+    ]
+   },
+   {
+    "id": "mq12",
+    "lang": "hi",
+    "text": "मंत्रालय से मुंबई हवाई अड्डे तक वीआईपी काफ़िला, कोस्टल रोड और सी लिंक से।",
+    "gold": [
+     "m:vip_mantralaya:d1",
+     "m:vip_mantralaya:s2"
+    ]
+   },
+   {
+    "id": "mq13",
+    "lang": "en",
+    "text": "Match over at Wankhede, crowd heading to Churchgate and Marine Lines stations; buses stuck on Marine Drive.",
+    "gold": [
+     "m:wankhede_egress:s1",
+     "m:wankhede_egress:d2"
+    ]
+   },
+   {
+    "id": "mq14",
+    "lang": "mr",
+    "text": "वानखेडे स्टेडियममध्ये सामना संपला, प्रेक्षक चर्चगेट आणि मरीन लाइन्स स्थानकांकडे निघाले.",
+    "gold": [
+     "m:wankhede_egress:s1",
+     "m:wankhede_egress:d2"
+    ]
+   },
+   {
+    "id": "mq15",
+    "lang": "en",
+    "text": "Cyclone aftermath: fallen trees blocking Marine Drive; access to JJ Hospital must be cleared.",
+    "gold": [
+     "m:cyclone_marinedrive:i1",
+     "m:cyclone_marinedrive:d2"
+    ]
+   },
+   {
+    "id": "mq16",
+    "lang": "mr",
+    "text": "चक्रीवादळानंतर मरीन ड्राइव्हवर झाडे पडून रस्ता बंद, जे.जे. रुग्णालयाकडे जाणारा मार्ग मोकळा करायला हवा.",
+    "gold": [
+     "m:cyclone_marinedrive:i1",
+     "m:cyclone_marinedrive:d2"
+    ]
+   },
+   {
+    "id": "mq17",
+    "lang": "mixed",
+    "text": "Cyclone mule Marine Drive var jhaad padla, JJ Hospital la janyacha rasta block",
+    "gold": [
+     "m:cyclone_marinedrive:i1",
+     "m:cyclone_marinedrive:d2"
+    ]
+   },
+   {
+    "id": "mq18",
+    "lang": "en",
+    "text": "TRIGGER: ambulance_request\nAmbulance (108) needs a green corridor from Worli Naka to KEM on Dr E Moses Road.",
+    "gold": [
+     "m:amb_kem:d1",
+     "m:amb_kem:a2"
+    ]
+   },
+   {
+    "id": "mq19",
+    "lang": "mr",
+    "text": "वरळी नाका ते केईएम रुग्णालयापर्यंत रुग्णवाहिकेसाठी ग्रीन कॉरिडॉर हवा.",
+    "gold": [
+     "m:amb_kem:d1",
+     "m:amb_kem:a2"
+    ]
+   },
+   {
+    "id": "mq20",
+    "lang": "hi",
+    "text": "वर्ली नाका से केईएम अस्पताल तक एम्बुलेंस के लिए ग्रीन कॉरिडोर चाहिए।",
+    "gold": [
+     "m:amb_kem:d1",
+     "m:amb_kem:a2"
+    ]
+   },
+   {
+    "id": "mq21",
+    "lang": "en",
+    "text": "Traffic lights dead at Sion Circle after a power cut; Eastern Express Highway queue growing.",
+    "gold": [
+     "m:signal_sion:i1",
+     "m:signal_sion:d2"
+    ]
+   },
+   {
+    "id": "mq22",
+    "lang": "mr",
+    "text": "सायन सर्कलला वीज गेल्याने सिग्नल बंद, पूर्व द्रुतगती महामार्गावर रांग वाढत आहे.",
+    "gold": [
+     "m:signal_sion:i1",
+     "m:signal_sion:d2"
+    ]
+   },
+   {
+    "id": "mq23",
+    "lang": "en",
+    "text": "Mount Mary fair pilgrims crowding Bandra station; BEST buses loading for Hill Road.",
+    "gold": [
+     "m:mount_mary:s1",
+     "m:mount_mary:d2"
+    ]
+   },
+   {
+    "id": "mq24",
+    "lang": "hi",
+    "text": "माउंट मेरी मेले के लिए श्रद्धालुओं की भीड़ बांद्रा स्टेशन पर, हिल रोड पर बसें।",
+    "gold": [
+     "m:mount_mary:s1",
+     "m:mount_mary:d2"
+    ]
+   },
+   {
+    "id": "mq25",
+    "lang": "en",
+    "text": "Mumbai Marathon this Sunday; Marine Drive and the Sea Link closed until the last runner.",
+    "gold": [
+     "m:marathon:s1",
+     "m:marathon:d2"
+    ]
+   },
+   {
+    "id": "mq26",
+    "lang": "mr",
+    "text": "रविवारी मुंबई मॅरेथॉन, मरीन ड्राइव्ह आणि सागरी सेतू बंद राहणार.",
+    "gold": [
+     "m:marathon:s1",
+     "m:marathon:d2"
+    ]
+   },
+   {
+    "id": "mq27",
+    "lang": "en",
+    "text": "Huge Dahi Handi crowd at Worli; Pandurang Budhkar Marg closed, buses diverted.",
+    "gold": [
+     "m:dahihandi_worli:i1",
+     "m:dahihandi_worli:d2"
+    ]
+   },
+   {
+    "id": "mq28",
+    "lang": "mr",
+    "text": "वरळीत दहीहंडीला मोठी गर्दी, पांडुरंग बुधकर मार्ग बंद.",
+    "gold": [
+     "m:dahihandi_worli:i1",
+     "m:dahihandi_worli:d2"
+    ]
+   },
+   {
+    "id": "mq29",
+    "lang": "en",
+    "text": "Locals suspended, huge crowd coming out of Dadar station onto Tilak Bridge.",
+    "gold": [
+     "m:dadar_surge:i1",
+     "m:dadar_surge:d2"
+    ]
+   },
+   {
+    "id": "mq30",
+    "lang": "mixed",
+    "text": "Dadar la local band, station madhun gardi baher, Tilak Bridge jam",
+    "gold": [
+     "m:dadar_surge:i1",
+     "m:dadar_surge:d2"
+    ]
+   },
+   {
+    "id": "mq31",
+    "lang": "en",
+    "text": "New Year's Eve: Marine Drive packed with people, close it to vehicles?",
+    "gold": [
+     "m:newyear_marinedrive:d1",
+     "m:newyear_marinedrive:a2"
+    ]
+   },
+   {
+    "id": "mq32",
+    "lang": "mr",
+    "text": "नववर्षाच्या स्वागताच्या रात्री मरीन ड्राइव्हवर प्रचंड गर्दी, वाहने बंद करायची का?",
+    "gold": [
+     "m:newyear_marinedrive:d1",
+     "m:newyear_marinedrive:a2"
+    ]
+   },
+   {
+    "id": "mq33",
+    "lang": "en",
+    "text": "SV Road crawling in Andheri; Gokhale Bridge approach backed up.",
+    "gold": [
+     "m:gokhale_bridge:i1",
+     "m:gokhale_bridge:d2"
+    ]
+   },
+   {
+    "id": "mq34",
+    "lang": "hi",
+    "text": "गोखले पुल पर भारी जाम, अंधेरी में एस वी रोड पर धीमी रफ़्तार।",
+    "gold": [
+     "m:gokhale_bridge:i1",
+     "m:gokhale_bridge:d2"
+    ]
+   },
+   {
+    "id": "mq35",
+    "lang": "en",
+    "text": "Water rising in Milan Subway and at Santacruz after a downpour; buses stalled on SV Road.",
+    "gold": [
+     "m:milan_subway:d1",
+     "m:milan_subway:i2"
+    ]
+   },
+   {
+    "id": "mq36",
+    "lang": "mr",
+    "text": "मिलन सबवे आणि सांताक्रूझमध्ये पावसाचे पाणी साचत आहे, बस अडकल्या.",
+    "gold": [
+     "m:milan_subway:d1",
+     "m:milan_subway:i2"
+    ]
+   },
+   {
+    "id": "mq37",
+    "lang": "mixed",
+    "text": "Milan Subway madhe gudghabhar paani, SV Road var bus adaklya",
+    "gold": [
+     "m:milan_subway:d1",
+     "m:milan_subway:i2"
+    ]
+   },
+   {
+    "id": "mq38",
+    "lang": "en",
+    "text": "Office rush in BKC; exits jammed towards Kalanagar.",
+    "gold": [
+     "m:bkc_peak:d1",
+     "m:bkc_peak:s2"
+    ]
+   },
+   {
+    "id": "mq39",
+    "lang": "mr",
+    "text": "वांद्रे कुर्ला संकुलात ऑफिस सुटण्याची गर्दी, कलानगरकडे कोंडी.",
+    "gold": [
+     "m:bkc_peak:d1",
+     "m:bkc_peak:s2"
+    ]
+   },
+   {
+    "id": "mq40",
+    "lang": "en",
+    "text": "TRIGGER: waterlogging_alert\nTide above 4.5 m, outfalls shut, cloudburst over the Parel-Dadar stretch; Dr Ambedkar Road slowing.\nrisk_class: 2",
+    "gold": [
+     "m:tide_hindmata:d1",
+     "m:tide_hindmata:i2",
+     "m:tide_hindmata:a3"
+    ]
+   },
+   {
+    "id": "mq41",
+    "lang": "mr",
+    "text": "समुद्राला भरती, मुखे बंद; परळ-दादर पट्ट्यात गुडघाभर पाणी, डॉ. आंबेडकर मार्ग संथ.",
+    "gold": [
+     "m:tide_hindmata:d1",
+     "m:tide_hindmata:i2",
+     "m:tide_hindmata:a3"
+    ]
+   },
+   {
+    "id": "mq42",
+    "lang": "en",
+    "text": "TRIGGER: route_blockage\nBreakdown on the cable-stayed bridge across Mahim Bay during the evening peak; tow vehicle requested; Worli Seaface backing up.",
+    "gold": [
+     "m:sea_link:i1",
+     "m:sea_link:d2",
+     "m:sea_link:a3"
+    ]
+   },
+   {
+    "id": "mq43",
+    "lang": "en",
+    "text": "TRIGGER: mass_gathering\nGovinda pyramids are drawing a big crowd at Jambori Maidan; Ganpatrao Kadam Marg blocked; BEST buses held.",
+    "gold": [
+     "m:dahihandi_worli:i1",
+     "m:dahihandi_worli:d2"
+    ]
+   },
+   {
+    "id": "mq44",
+    "lang": "hi",
+    "text": "वर्ली में दही हंडी की भारी भीड़, पांडुरंग बुधकर मार्ग बंद, बसें मोड़ी गईं।",
+    "gold": [
+     "m:dahihandi_worli:i1",
+     "m:dahihandi_worli:d2"
+    ]
+   },
+   {
+    "id": "mq45",
+    "lang": "en",
+    "text": "TRIGGER: ambulance_request\nPatient transfer by 108 from the Worli junction to King Edward Memorial Hospital in Parel; six signals on the way.\nwindow_sec: 120",
+    "gold": [
+     "m:amb_kem:d1",
+     "m:amb_kem:a2"
+    ]
+   },
+   {
+    "id": "mq46",
+    "lang": "mr",
+    "text": "वादळानंतर क्वीन्स नेकलेसवर मोठी झाडे पडून रस्ता बंद, सर जे.जे. रुग्णालयात पोहोचण्याचा मार्ग आधी मोकळा करायला हवा.",
+    "gold": [
+     "m:cyclone_marinedrive:i1",
+     "m:cyclone_marinedrive:d2"
+    ]
+   },
+   {
+    "id": "mq47",
+    "lang": "en",
+    "text": "TRIGGER: race\nSunday morning road race from CSMT along Marine Drive and over the Sea Link; stretch closed until the last runner clears.",
+    "gold": [
+     "m:marathon:s1",
+     "m:marathon:d2"
+    ]
+   },
+   {
+    "id": "mq48",
+    "lang": "mr",
+    "text": "पश्चिम उपनगरांत मुसळधार पाऊस, मिलन सबवेत पाणी साचून बस बंद, इर्ला उदंचन केंद्र पूर्ण क्षमतेने सुरू.",
+    "gold": [
+     "m:milan_subway:d1",
+     "m:milan_subway:i2"
+    ]
+   },
+   {
+    "id": "mq49",
+    "lang": "mixed",
+    "text": "Sion Circle la light geli, signal band, Eastern Express Highway var line vadhtey, constable manual control kartayt",
+    "gold": [
+     "m:signal_sion:i1",
+     "m:signal_sion:d2"
+    ]
+   },
+   {
+    "id": "mq50",
+    "lang": "en",
+    "text": "TRIGGER: egress_surge\nSuburban services suspended at the Central-Western interchange station; passengers spilling onto Ranade Road; BEST asked for extra buses.",
+    "gold": [
+     "m:dadar_surge:i1",
+     "m:dadar_surge:d2"
+    ]
+   },
+   {
+    "id": "mq51",
+    "lang": "en",
+    "text": "TRIGGER: crowd_density\nAnant Chaturdashi night in Parel, devotees thronging the procession from the Lalbaug market towards the sea; Dr Ambedkar Road one-way in force.",
+    "gold": [
+     "m:visarjan_lalbaug:d1",
+     "m:visarjan_lalbaug:s2",
+     "m:visarjan_lalbaug:a3"
+    ]
+   }
+  ]
+ },
+ "sop": {
+  "docs": [
+   {
+    "id": "d:hydro:0",
+    "source": "docs/ai/hydro.md",
+    "title": "Waterlogging nowcast (`services/hydro`)",
+    "body": "Kolkata's roads go under within an hour of a cloudburst. It is worst when heavy rain meets a **high tide on the Hooghly**: the outfall lock gates must close, the canals surcharge and the pumps fight the river. `services/hydro` combines four drivers for every segment of the city network:",
+    "lang": "en"
+   },
+   {
+    "id": "d:hydro:1",
+    "source": "docs/ai/hydro.md",
+    "title": "Waterlogging nowcast (`services/hydro`)",
+    "body": "From these it computes a **depth-risk class 0–3** with a lead time. It drafts **proposals** for each flagged road: a reroute, an ambulance window, a Marathi and English advisory, and a live-wire hazard request. A named officer decides every one of them.",
+    "lang": "en"
+   },
+   {
+    "id": "d:hydro:2",
+    "source": "docs/ai/hydro.md",
+    "title": "Tide model (`tide.py`)",
+    "body": "No harmonic constants for Garden Reach itself are public. The Survey of India's *Hugli River Tide Tables* hold them, but they are not online. What can be cited:",
+    "lang": "en"
+   },
+   {
+    "id": "d:hydro:3",
+    "source": "docs/ai/hydro.md",
+    "title": "Tide model (`tide.py`)",
+    "body": "The supplement does not state the phase reference. It is read as the Greenwich lag. That reading is checked: with it, the model's Diamond Harbour high water on 28 Oct 2026 falls within an hour of a published prediction. A test enforces this.",
+    "lang": "en"
+   },
+   {
+    "id": "d:hydro:4",
+    "source": "docs/ai/hydro.md",
+    "title": "Tide model (`tide.py`)",
+    "body": "- **The transfer to Garden Reach is MODELLED**, from published predictions and port statements: - **Lag:** high water arrives 2 h 38 min after Diamond Harbour, the lag between the two stations' predicted high waters on 28 Oct 2026 (tide-forecast.com). - **Amplitude ratio:** 0.80. The predicted ranges give 0.77. Cunningham (1904) gives a Kidderpore spring range of 12.5 ft, which against the Diamond Harbour spring range gives 0.85. - **Mean level:** 3.7 m above the predictions' datum. - **Monsoon freshet:** a monthly offset of +0.3 m in Jul and Oct and +0.6 m in Aug and Sep. The Survey of India applies freshet corrections to the Hugli tables, and Cunningham (1904) reports about 5 ft in the rains. These figures are a conservative assumption. - **Fitted M4 term:** amplitude 0.18 × M2, flood-dominant. Its one parameter brings the high waters onto the predictions. The same value then gives the reported ~5 h flood and ~7 h ebb, which is an independent check. - **Nodal corrections** use the standard Doodson/Schureman series.",
+    "lang": "en"
+   },
+   {
+    "id": "d:hydro:5",
+    "source": "docs/ai/hydro.md",
+    "title": "Tide model (`tide.py`)",
+    "body": "- **Validation**, all enforced by tests: - Against the published Garden Reach predictions for 28 Oct 2026, the high waters are within about 20 minutes, the low waters within about 10 minutes, and the levels within 0.15 m. - On 23 Sep 2025 the model closes the gates from 00:15 to 04:30 IST. The Mayor reported \"the lock gate was closed from 12.30 a.m. to 4.00 a.m.\". - The model's next high water that day is around 14:00 IST. Reported: \"the high tide which is around 1.30 PM\".",
+    "lang": "en"
+   },
+   {
+    "id": "d:hydro:6",
+    "source": "docs/ai/hydro.md",
+    "title": "Tide model (`tide.py`)",
+    "body": "- **Gate closure.** The gates are treated as shut while the level is at or above **5.0 m**. A port official quoted by The Telegraph said: \"the gates need to be closed once the level crosses 5 metres\".",
+    "lang": "en"
+   },
+   {
+    "id": "d:hydro:7",
+    "source": "docs/ai/hydro.md",
+    "title": "Susceptibility (`scripts/build_susceptibility.py`, committed result `src/hydro/data/susceptibility.json`)",
+    "body": "- **Copernicus DEM GLO-30**, tile `Copernicus_DSM_COG_10_N22_00_E088_00_DEM` from the AWS open-data bucket `copernicus-dem-30m`. © DLR e.V. 2010–2014 and © Airbus Defence and Space GmbH 2014–2018, provided under COPERNICUS by the European Union and ESA. - **An OSM Overpass extract** of `waterway=canal|drain|river|stream|ditch` in the city bbox: 410 ways, OSM base 2026-10-28T10:56Z, © OpenStreetMap contributors, ODbL. A gzipped copy is kept in `scripts/data/`. - **The sourced hotspot list** (`src/hydro/data/hotspots.json`).",
+    "lang": "en"
+   },
+   {
+    "id": "d:hydro:8",
+    "source": "docs/ai/hydro.md",
+    "title": "Susceptibility (`scripts/build_susceptibility.py`, committed result `src/hydro/data/susceptibility.json`)",
+    "body": "- **Ground:** the 10th percentile of samples along the road. The DEM is a surface model with buildings, so a low percentile approximates the ground. - **Neighbourhood median** within 1.5 km, and the relative elevation against it. - **City percentile** of the ground. - **Distance to the nearest mapped canal or drain**, and to the river. - **Distance to the nearest reported hotspot.**",
+    "lang": "en"
+   },
+   {
+    "id": "d:hydro:9",
+    "source": "docs/ai/hydro.md",
+    "title": "Susceptibility (`scripts/build_susceptibility.py`, committed result `src/hydro/data/susceptibility.json`)",
+    "body": "- An unverified hotspot counts at half weight. - **Elevated** segments keep 15 % of their score: 1001 Howrah Bridge, 1003 Vidyasagar Setu, 1007 Vidyasagar Flyover Ramp, 1028 AJC Bose Road Flyover and 1029 Maa Flyover. Their decks do not pond, and the DEM under a bridge is the river. - Highest-scoring roads: Rash Behari Avenue (Gariahat) 0.78, Mahatma Gandhi Road (College Street) 0.78, Chittaranjan Avenue (Girish Park) 0.77, Ashutosh Mukherjee Road (Hazra) 0.73, Syed Amir Ali Avenue (Ballygunge Phari) 0.73.",
+    "lang": "en"
+   },
+   {
+    "id": "d:hydro:10",
+    "source": "docs/ai/hydro.md",
+    "title": "Pumps: the KMC FFEWS adapter (`ffews.py`), EMULATED",
+    "body": "KMC is building a city Flood Forecasting & Early Warning System, with sensors in canals, pumping stations and junctions. Sajag has no access to it.",
+    "lang": "en"
+   },
+   {
+    "id": "d:hydro:11",
+    "source": "docs/ai/hydro.md",
+    "title": "Pumps: the KMC FFEWS adapter (`ffews.py`), EMULATED",
+    "body": "- `FfewsAdapter` is the interface a real feed will implement. - `EmulatedFfews` is the stand-in used until then. Every record it returns says **EMULATED**. - The station names are real KMC drainage pumping stations: Ballygunge, Palmer Bazar, Dhapa Lock, Ultadanga, Mominpur, Manicktala, Topsia, Chetla Lock, Jodhpur Park, Thanthania, Kalighat and Behala Flyover. - Capacities in cusecs come from the WB Irrigation & Waterways department's \"Kolkata Metropolis Drainage\" list, where it gives them. - Station positions are approximate. - The pump counts and states are invented: a deterministic rotation in which one pump is down, and every available pump runs in rain.",
+    "lang": "en"
+   },
+   {
+    "id": "d:hydro:12",
+    "source": "docs/ai/hydro.md",
+    "title": "Proposals (never actions)",
+    "body": "All proposals are in the decision-support shape: `state: proposed`, `actions` with `requires_officer: true`, `recommendation.decision: await_officer`, and a `human_gate` with no officer. They are generated for each flagged segment (risk ≥ 2):",
+    "lang": "en"
+   },
+   {
+    "id": "d:hydro:13",
+    "source": "docs/ai/hydro.md",
+    "title": "Proposals (never actions)",
+    "body": "- **Reroute** (`waterlogging_reroute`): a detour on the city network that avoids other flagged roads where it can. - **Ambulance window** (`ambulance_window`): a note for ambulance (108) crews giving the minutes the road stays passable and the detour. - **Live-wire hazard** (`live_wire_hazard`, `for_officer_approval: true`): a request that the power utility (CESC / WBSEDCL) inspect and, where needed, isolate supply along the road. On 22–23 Sep 2025 most of the deaths in Kolkata were electrocutions (PTI: \"nine of them due to electrocution\"). - **One public advisory draft** (`public_advisory_draft`) in Marathi and English. It uses Western digits, as the glossary requires in the console.",
+    "lang": "en"
+   },
+   {
+    "id": "d:hydro:14",
+    "source": "docs/ai/hydro.md",
+    "title": "Replay: 22–23 September 2025",
+    "body": "- The peak hour was **98 mm between 03:00 and 04:00 IST**. - KMC gauges recorded up to 332 mm (Garia Kamdahari), as reported by News Arena on 23 Sep 2025.",
+    "lang": "en"
+   },
+   {
+    "id": "d:hydro:15",
+    "source": "docs/ai/hydro.md",
+    "title": "Replay: 22–23 September 2025",
+    "body": "- the tide is MODELLED for those dates; - pumps are all available. Millennium Post (24 Sep 2025): \"All 82 pumping stations … were operational\".",
+    "lang": "en"
+   },
+   {
+    "id": "d:hydro:16",
+    "source": "docs/ai/hydro.md",
+    "title": "Run A, Open-Meteo historical archive (the brief's run)",
+    "body": "**Result:** the archive carries **20.5 mm** (city mean) and **27.9 mm** at its wettest point over the window. IMD measured 248.8 mm at Alipore in the same hours. With that rain the model flags **no segment**: 0 of 65, and 0 of the 13 reported places on the network.",
+    "lang": "en"
+   },
+   {
+    "id": "d:hydro:17",
+    "source": "docs/ai/hydro.md",
+    "title": "Run A, Open-Meteo historical archive (the brief's run)",
+    "body": "Gridded reanalysis and global NWP do not resolve this storm. We checked ERA5, ECMWF IFS, and the historical-forecast archives of IFS 0.25°, GFS and ICON at central-Kolkata points: they gave 24–57 mm over the 48 h of 22–23 Sep. ERA5-Land returned no rain at all. A nowcast fed only by such a product would have missed the night. This is the case for wiring KMC's own gauges, through FFEWS, into the pilot.",
+    "lang": "en"
+   },
+   {
+    "id": "d:hydro:18",
+    "source": "docs/ai/hydro.md",
+    "title": "Run B, IMD gauge-anchored (the same model, observed rain)",
+    "body": "- **Shape within each window (MODELLED):** - 23:30–02:30 ramps up 1 : 2 : 3 by hour; - in 02:30–05:30, the 03:00–04:00 hour carries the reported 98 mm, and the remaining 87.6 mm is split 25 % (02:30–03:00), 55 % (04:00–05:00) and 20 % (05:00–05:30). - **Scaling in space:** by KMC's station 24-h totals relative to Alipore's 247.5 mm, interpolated (IDW) from approximate gauge positions.",
+    "lang": "en"
+   },
+   {
+    "id": "d:hydro:19",
+    "source": "docs/ai/hydro.md",
+    "title": "Run B, IMD gauge-anchored (the same model, observed rain)",
+    "body": "- Alipore window total 248.8 mm; peak 98 mm/h. - Peak classes: 0 for 5 segments (all five are the elevated decks), 2 (deep) for 43, and 3 (impassable) for 17. - **The first flag (class ≥ 2) is at 02:45 IST**, on segment 1033 (Rash Behari Avenue → Gariahat crossing). It comes before the 03:00–04:00 peak hour. Rashbehari Avenue, Gariahat and Maddox Square all include that segment among their matches. - Peak depths are reached around 05:30. - The class-3 roads are: Rash Behari Avenue (Gariahat, Deshapriya Park), Ashutosh Mukherjee Road (Hazra), SP Mukherjee Road (Rashbehari, Kalighat), Syed Amir Ali Avenue and Hazra Road (Ballygunge Phari), JL Nehru Road and Queensway (Exide), AJC Bose Road (Mullickbazar), Mother Teresa Sarani (Park Circus), Rash Behari Avenue Connector (Ruby), Karl Marx Sarani (Kidderpore), Diamond Harbour Road (Majerhat, Behala), Chittaranjan Avenue (Girish Park) and MG Road (College Street).",
+    "lang": "en"
+   },
+   {
+    "id": "d:hydro:20",
+    "source": "docs/ai/hydro.md",
+    "title": "Run B, IMD gauge-anchored (the same model, observed rain)",
+    "body": "- Almost the whole city was under water that night. The model flags 60 of 65 segments, so the hit rate shows the model is not blind to the event. It does not show fine discrimination. - News reports name places, not every street. A flag with no report is **not** counted as a false alarm. - Gauge positions are approximate.",
+    "lang": "en"
+   },
+   {
+    "id": "d:hydro:21",
+    "source": "docs/ai/hydro.md",
+    "title": "Run B, IMD gauge-anchored (the same model, observed rain)",
+    "body": "- 60 segments are flagged within the 120-minute horizon, and none yet at 02:00. - **Time to deep water:** 45 min at the earliest, 90 min median, 120 min at the latest. - 60 reroute, 60 ambulance-window and 60 live-wire proposals, plus one advisory draft. For example:",
+    "lang": "en"
+   },
+   {
+    "id": "d:hydro:22",
+    "source": "docs/ai/hydro.md",
+    "title": "Run B, IMD gauge-anchored (the same model, observed rain)",
+    "body": "> Gariahat crossing (Rash Behari Avenue): waterlogging risk 3 (> 30 cm), deep water in about 45 min; no detour on the city network that avoids flagged roads — propose closing to small vehicles with officer judgement on site.",
+    "lang": "en"
+   },
+   {
+    "id": "d:hydro:23",
+    "source": "docs/ai/hydro.md",
+    "title": "Run B, IMD gauge-anchored (the same model, observed rain)",
+    "body": "> ট্রাফিক পরামর্শ (খসড়া): আগামী 120 মিনিটের মধ্যে এই জায়গাগুলিতে জল জমার আশঙ্কা: গড়িয়াহাট মোড়, হাজরা মোড়, বালিগঞ্জ ফাঁড়ি, দেশপ্রিয় পার্ক মোড়, এক্সাইড মোড়, রাসবিহারী মোড়। সম্ভব হলে এই পথগুলি এড়িয়ে চলুন। জমা জলে বিদ্যুতের খুঁটি বা তার ছোঁবেন না। জরুরি প্রয়োজনে 112; অ্যাম্বুলেন্স (108)।",
+    "lang": "en"
+   },
+   {
+    "id": "d:hydro:24",
+    "source": "docs/ai/hydro.md",
+    "title": "Live nowcast sample (28 Oct 2026, 17:02 IST, dev port 9152)",
+    "body": "- **Rain:** Open-Meteo, LIVE, 18 points. 0 mm/h now; 1.6 mm in the past 3 h on Chittaranjan Avenue (segment 1052). - **Tide** (MODELLED): 4.81 m and falling, gates open. Next high water 03:22 IST at 5.98 m. - **Result:** all 65 segments class 0, nothing flagged, no proposals. It was a dry late-October evening. - **Example drivers, segment 1052 (Chittaranjan Avenue → Girish Park):** - susceptibility 0.772 (ground 6.2 m; 78 m from the MG Road hotspot); - pumps EMULATED (Thanthania station, 9 of 9 available).",
+    "lang": "en"
+   },
+   {
+    "id": "d:hydro:25",
+    "source": "docs/ai/hydro.md",
+    "title": "Limits and what is not done",
+    "body": "- **Rain:** the nowcast is a model product. Over India, Open-Meteo's 15-minute field may be interpolated from hourly models. The replay shows how badly gridded products can miss a convective night. A rain-gauge feed, KMC FFEWS or IMD AWS, is the first thing the pilot needs. - **Tide:** an approximate transfer, not the Survey of India constants. The datum is that of the third-party predictions. The freshet offsets are assumptions. - **Susceptibility:** the DEM is a surface model with buildings, and the hotspots are positioned by hand (±300 m). Drain capacity and blockage are unknown. - **Pumps:** EMULATED. Station positions are approximate. - **The model:** a conceptual bucket model with stated parameters, not a hydraulic sewer model (SWMM). It is not calibrated beyond the 2025-09-23 replay. - **Network:** 65 arterial segments. Many reported places are off it. - **Not built:** the PLAN's regional SAR flood-extent row (Prithvi-EO-2.0 on Sentinel-1) is not part of this service. The brief did not ask for it.",
+    "lang": "en"
+   },
+   {
+    "id": "d:forecast:0",
+    "source": "docs/ai/forecast.md",
+    "title": "Corridor forecasting (`services/forecast`)",
+    "body": "Sajag forecasts speed and volume-to-capacity (V/C) for every segment of the Kolkata road network, 15 to 120 minutes ahead, as p10 / p50 / p90 bands. When the median V/C is forecast to cross 0.8, the service raises a **pre-emptive diversion proposal**. A named duty officer decides; the service never acts.",
+    "lang": "en"
+   },
+   {
+    "id": "d:forecast:1",
+    "source": "docs/ai/forecast.md",
+    "title": "Licences (checked against the model cards, 28 Oct 2026)",
+    "body": "TimesFM 2.5 installs cleanly on aarch64 (`timesfm[torch]==3.0.2`) and runs on the GB10. Its covariate path (`forecast_with_covariates`) needs the JAX `xreg` extra, which the service does not install, so it runs univariate.",
+    "lang": "en"
+   },
+   {
+    "id": "d:forecast:2",
+    "source": "docs/ai/forecast.md",
+    "title": "Data: where the platform keeps traffic, and what the service reads",
+    "body": "- `traffic.observations`: the raw rows (`speed_kmh`, `congestion_idx`, `data_quality`). Read through `GET /api/v1/traffic/history/{id}`, which returns the last 24 hours, at most 500 rows. - `traffic.hourly_aggregates` and `traffic.hourly_aggregates_synthetic`. Read through `GET /api/v1/traffic/historical?segment_id=&hours=`, which returns them as `aggregates` (real) and `synthetic_aggregates` (simulated). They are never merged. - `corridor.road_segments`. Read through `GET /api/traffic/segments?bbox`. The deck's `traffic-flow` layer draws from the same geometry. - Active corridor events and their route spines. Read through `GET /api/v1/events/active`.",
+    "lang": "en"
+   },
+   {
+    "id": "d:forecast:3",
+    "source": "docs/ai/forecast.md",
+    "title": "Data: where the platform keeps traffic, and what the service reads",
+    "body": "The service only ever sends GET requests to the oracle, and a test asserts it. The oracle's base URL is configurable. Development used the Sajag sandbox at `http://127.0.0.1:8170`.",
+    "lang": "en"
+   },
+   {
+    "id": "d:forecast:4",
+    "source": "docs/ai/forecast.md",
+    "title": "How a segment's history is built",
+    "body": "1. Take the hourly aggregates and interpolate them to 15-minute steps. Real rows are used first. The synthetic rollup is used only when there is no real row, and then the whole series is labelled SIMULATED. 2. Lay the last day's raw rows over that, resampled to 15-minute means. 3. The oracle stores speed, not V/C. V/C is derived from speed by inverting the oracle's own twin curve, `v = v_ff / (1 + 0.55·(V/C)^4.2)` (`bpr.py`, MODELLED).",
+    "lang": "en"
+   },
+   {
+    "id": "d:forecast:5",
+    "source": "docs/ai/forecast.md",
+    "title": "The city guard",
+    "body": "A store still seeded with another city has the same segment ids on different roads. To avoid reading it as Kolkata, only segments the oracle serves **inside the Kolkata bbox** are read from it. When this was run, the sandbox was still on the old city, so it served no segment in the bbox. Every segment then fell back, with the reason stated: \"oracle serves no segment with this id inside the city bbox (its store is not seeded with this city's network)\".",
+    "lang": "en"
+   },
+   {
+    "id": "d:forecast:6",
+    "source": "docs/ai/forecast.md",
+    "title": "The synthetic Kolkata history (`synthetic.py`, SIMULATED)",
+    "body": "- **Weekday office peaks.** A late-morning peak around 10:00–11:00 IST and a longer evening peak around 17:30–19:30. Inbound roads load in the morning and outbound roads in the evening. - **Weekends.** Lighter Saturdays and Sundays. - **Durga Puja nights.** On the official West Bengal notification dates, roads near the big pandals load heavily from 17:00 to 04:00: - 2025: Shashthi 28 Sep to Dashami 2 Oct; - 2026: Shashthi 17 Oct to Dashami 21 Oct. - **Monsoon-shaped storm cells.** Rain cuts capacity. - **Waterlogging at high tide.** Accumulated rain cuts capacity further while the Garden Reach tide model says the gates are shut. - **Match egress.** A few simulated Eden Gardens match-egress windows. - **Breakdowns.** Unannounced incidents. - **Noise.** AR(1) noise.",
+    "lang": "en"
+   },
+   {
+    "id": "d:forecast:7",
+    "source": "docs/ai/forecast.md",
+    "title": "Proposal shape",
+    "body": "- `state: proposed`; - `actions` as `CoaAction`: verb `diversion`, `monitor` or `advisory`, with `requires_officer: true` and `reversible: true`; - `recommendation.decision: await_officer`; - `human_gate: {state: proposed, required_role: duty_officer, officer: null, decided_at: null}`; - `labels`.",
+    "lang": "en"
+   },
+   {
+    "id": "d:forecast:8",
+    "source": "docs/ai/forecast.md",
+    "title": "Proposal shape",
+    "body": "The detour is the shortest path on the city network between the segment's end junctions. It avoids the segment and, where it can, every other segment forecast at or over 0.8.",
+    "lang": "en"
+   },
+   {
+    "id": "d:forecast:9",
+    "source": "docs/ai/forecast.md",
+    "title": "Proposal shape",
+    "body": "> Park Circus seven-point crossing: V/C forecast 0.81 in 45 min (p10–p90 0.72–0.89) on Mother Teresa Sarani (Park Street); propose diversion via Acharya Jagadish Chandra Bose Road → Ashutosh Mukherjee Road → Hazra Road → Syed Amir Ali Avenue.",
+    "lang": "en"
+   },
+   {
+    "id": "d:forecast:10",
+    "source": "docs/ai/forecast.md",
+    "title": "Backtest",
+    "body": "- **Origins:** 12 rolling origins, every 6 hours over 25–28 Oct 2026. - **Series:** 65 segments × 12 origins = 780 series. - **Horizon and context:** 120 minutes ahead, from a 14-day context. - **Data:** the SIMULATED history (seed 1690). - **Future covariates:** the realised simulated values, which is a perfect-nowcast assumption.",
+    "lang": "en"
+   },
+   {
+    "id": "d:forecast:11",
+    "source": "docs/ai/forecast.md",
+    "title": "Backtest",
+    "body": "- Both foundation models halve the baseline's error. - Chronos-2 with covariates is the most accurate and the best calibrated. It improves coverage by about 4 points over its own univariate run. - Its gain in point error from the covariates is small (2 %). - Its alert recall is lower than without covariates. It raises fewer, more precise crossing alerts. - These are numbers on simulated traffic. They show that the pipeline works and how the models compare. They do not measure accuracy on Kolkata roads.",
+    "lang": "en"
+   },
+   {
+    "id": "d:forecast:12",
+    "source": "docs/ai/forecast.md",
+    "title": "GPU memory (measured with `torch.cuda` on the GB10)",
+    "body": "- `SAJAG_FORECAST_DTYPE=bfloat16` halves the Chronos-2 weights. - Chronos-2 is loaded on first use and **freed after `idle_unload_sec` of disuse**. In the development run (idle 60 s), `/health` then showed `loaded: false`, `unloads: 1` and 32 MiB still allocated. - TimesFM is freed as soon as the backtest finishes.",
+    "lang": "en"
+   },
+   {
+    "id": "d:forecast:13",
+    "source": "docs/ai/forecast.md",
+    "title": "Making room",
+    "body": "Speech and vision refuse a load that would leave MemAvailable under their 8 GiB floor (or that ran out of GPU memory), and before refusing they ask the other on-demand services to free models; forecast is asked first, since Chronos-2 is small (≈2 GiB) and reloads in seconds. `POST /admin/release` (loopback only; a request carrying browser or proxy headers is refused) frees a slot only when no forecast holds it and it has been unused for `idle_s` seconds: a service making room sends `idle_s=0` (a waiting load has priority over a model merely kept warm), a call by hand defaults to 20 s (`SAJAG_FORECAST_RELEASE_IDLE_SEC`). The next forecast reloads it, and until then nothing else changes. Forecast loads without a floor of its own, so it never makes room itself. `/health` → `make_room.last_release` shows the last release.",
+    "lang": "en"
+   },
+   {
+    "id": "d:forecast:14",
+    "source": "docs/ai/forecast.md",
+    "title": "Limits",
+    "body": "- **Forecasts are on simulated traffic** until the oracle stores real Kolkata traffic. The labels say so on every segment and every proposal. - **V/C is derived, not measured.** It comes from speed through the twin's curve. - **The detours use the curated arterial network** (65 segments), so they can be long. Each proposal states the detour length, and the officer judges it. - **The diverted share is a proportional estimate.** `expected_effect.suggested_share` was not simulated in the twin. - **At evening peaks, many segments cross 0.8 at once** (18–26 crossings in the sample run). Proposals are sorted by forecast severity, then by how soon. - **The tide model here is a copy of `services/hydro/src/hydro/tide.py`.** A test keeps the two identical.",
+    "lang": "en"
+   },
+   {
+    "id": "d:speech:0",
+    "source": "docs/ai/speech.md",
+    "title": "Marathi voice (AI row C)",
+    "body": "**What it does.** A field officer speaks a short report in Marathi; the service returns a structured report (place from the city gazetteer, kind, severity, transcript) that enters the system as `UNVERIFIED-FIELD` and waits for an officer's confirmation. The other way round, public advisories are read out in Marathi, English or Hindi.",
+    "lang": "en"
+   },
+   {
+    "id": "d:speech:1",
+    "source": "docs/ai/speech.md",
+    "title": "Integration contract",
+    "body": "- `POST /speech/report` with the browser recording as the raw body (`Content-Type: audio/webm` from `MediaRecorder`, or `audio/wav`), or JSON `{\"text\": \"…\"}` for a typed report. - Show the answer as **\"Field report · unverified\"** with the transcript, the matched place (and `place_candidates` when `place` is `null`), kind and severity, and the cue words. An officer confirms, edits or dismisses it. - `POST /speech/speak` returns `audio/wav`; the public page plays it with a \"synthetic voice\" note (`X-Speech-Label: synthetic-voice`). - `503` = the model cannot load right now (memory); retry later.",
+    "lang": "en"
+   },
+   {
+    "id": "d:speech:2",
+    "source": "docs/ai/speech.md",
+    "title": "Making room",
+    "body": "The voice models load on demand and share the box's memory with the resident models, so a load that would leave MemAvailable under the 8 GiB floor is refused. Before refusing, the service makes room (`memroom.py`): it first releases its own other model (the Parler worker while the ASR loads, or the reverse), then asks forecast and vision on loopback (`POST /admin/release?idle_s=0`, 2 s each) to release theirs, polls MemAvailable for up to 5 s and checks the same floor again; the floor never moves. A waiting load has priority: any of these on-demand models that is not serving a request right now may be released, however recently it was used (`SPEECH_MAKE_ROOM_IDLE_S`, default 0); one serving a request never is, and nothing else on the box is touched.",
+    "lang": "en"
+   },
+   {
+    "id": "d:speech:3",
+    "source": "docs/ai/speech.md",
+    "title": "Making room",
+    "body": "A load that passed the floor check can still run out of GPU memory, even when creating the CUDA context (`cuDevicePrimaryCtxRetain`): on this unified-memory box MemAvailable counts page cache and swap that a GPU allocation cannot use (seen live on 29 Oct with 20.7 GiB available and about 3 GiB free). Such a load makes room for its own size the same way and is tried once more; `/health` records MemFree beside MemAvailable. Because creating the service's CUDA context at the first ASR load is where it failed, the service now creates that context at start, while memory allows (`SPEECH_CUDA_CONTEXT_AT_START`; torch keeps it for the life of the process anyway once a model has run). The service loads one model at a time (an ASR load beside a loading Parler worker ran the GPU out of memory), and a load that waits checks memory after the other has finished.",
+    "lang": "en"
+   },
+   {
+    "id": "d:speech:4",
+    "source": "docs/ai/speech.md",
+    "title": "Making room",
+    "body": "Released models are not restarted afterwards: each reloads on its own next use. `/health` → `make_room` shows the last attempt (why, what was asked and freed, MemAvailable and MemFree before and after, whether the load then succeeded) and the last release this service was asked for; a 503 that follows an attempt says what it found. `POST /admin/release` called by hand keeps a 20 s default (`SPEECH_RELEASE_IDLE_S`); `SPEECH_MAKE_ROOM=0` turns making room off. Before a demo segment, `scripts/ai_warm.sh speech` releases the other idle models and loads the voice and the Marathi ASR ahead of time.",
+    "lang": "en"
+   },
+   {
+    "id": "d:speech:5",
+    "source": "docs/ai/speech.md",
+    "title": "Evaluation",
+    "body": "- **Set:** 30 short Kolkata field-report phrases in Marathi (every kind, thirty different places), spoken by the service's own TTS in a female and a male voice: 60 clips. This is a **synthetic round trip**; nobody was recorded. The 29 Oct round used the same 60 WAV files as the 28 Oct round (durations checked clip by clip). - **Rules:** place and kind are re-scored on every checkpoint's saved transcripts with the current rules (`run_eval.py rescore`): the city gazetteer (203 places) and the split-name rule below. The figures here therefore differ slightly from the 28 Oct table. - **Upper bound** (report rules on the reference text): place 30/30, kind 30/30.",
+    "lang": "en"
+   },
+   {
+    "id": "d:speech:6",
+    "source": "docs/ai/speech.md",
+    "title": "Evaluation",
+    "body": "† measured on 29 Oct 2026, one model per process, on the shared GPU; the other rows' times are from 28 Oct. \"s / clip\" is the median ASR time per clip; the GPU was shared with other tenants both nights, so times vary by about 2× between runs. \"GPU peak\" is PyTorch's allocator peak (weights and activations, fp16) without the ≈0.5 GiB CUDA context; it was not recorded on 28 Oct. `openai/whisper-large-v3-turbo` answered 48 of the 60 Marathi clips partly or wholly in Devanagari script; `whisper-large-v3` did so in 15 and romanised others.",
+    "lang": "en"
+   },
+   {
+    "id": "d:speech:7",
+    "source": "docs/ai/speech.md",
+    "title": "Evaluation",
+    "body": "‡ measured on 29 Oct 2026 once access was granted (revision `2a77d30`, see [the gated round](#the-29-oct-gated-round-indicconformer-and-indic-parler-tts)), loaded as the model card does. Its ONNX graphs ran on ONNX Runtime's CPU provider (the aarch64 wheel has no CUDA provider), so \"s / clip\" is CPU time and \"GPU peak\" does not apply: with the model loaded the process held 3.9 GiB RSS and 0.26 GiB GPU (the TorchScript front end and the CUDA context). Measured the same way, the current checkpoint held 2.0 GiB RSS and 2.0 GiB GPU.",
+    "lang": "en"
+   },
+   {
+    "id": "d:speech:8",
+    "source": "docs/ai/speech.md",
+    "title": "The 29 Oct round: two new candidates",
+    "body": "- **`marathiAI/tugstugi_marathiai-regional-asr_whisper-medium`** (Apache-2.0, card updated 11 Aug 2026; trained on ten regional Marathi dialects, Ben-10): worse on standard Marathi speech than the current checkpoint (WER 16.6 % against 11.2 %), equal on place (55/60), one kind wrong (\"অগরত\" for অবরোধ). Same size and memory. It may suit dialect-heavy speech; that needs real recordings to show. - **`mozilla-ai/whisper-large-v3-mr`** (Apache-2.0): it loaded this time (fp16, 3.4 GiB peak). One more place right (56/60: it heard Taratala, Kestopur and Rashbehari where the current checkpoint misspelt them, and missed Chingrighata and Rashbehari in two other clips), but three times the word errors (WER 33.2 %) and ten kinds wrong (50/60) because it misspells the cue words (\"আগুম\" for আগুন, \"যানজন\" for যানজট, \"অগরোধ\" for অবরোধ); 1.4× the latency and twice the memory. - **Decision: keep `marathiAI/tugstugi_marathiai-asr_whisper-medium`.** The rule was \"better on WER *and* place, within about 2× latency\": neither candidate is better on WER, and a one-clip place gain does not pay for ten wrong kinds. Both stay selectable with `SPEECH_ASR_MODEL=<id>`. - **Split names.** With the city gazetteer loaded, an ASR that splits \"গড়িয়াহাট\" into \"গড়িয়া হাট\" had its first half matched exactly to *Garia*. The matcher now lets the longer name win when the split words spell it whole (same consonant skeleton); \"গড়িয়া\" alone is still Garia, and \"সেক্টর ফাইভ এ\" stays Sector V. This fixed one clip for each of the three checkpoints above and changed nothing else in the 420 transcripts.",
+    "lang": "en"
+   },
+   {
+    "id": "d:speech:9",
+    "source": "docs/ai/speech.md",
+    "title": "The 29 Oct round: two new candidates",
+    "body": "- **End to end** through `POST /speech/report` (dev instance of this branch, default config, 29 Oct): WER 11.2 %, CER 2.5 %, place **55/60**, kind **60/60**, median **1.29 s** per report (ASR 1.26 s); every report `UNVERIFIED-FIELD`. Of the five place misses, four are names that came out of the round trip misspelt (\"বড়িয়াহাট\", \"লাসবিহারী\", \"কেষ্টকুন\", \"সাইল সিটি\"; most likely mispronounced by the TTS) and the matcher asserted no place; one (\"কারাতলা\" for Taratala) was matched to Kumartuli, wrongly. - **TTS:** median 6.8 s to synthesize a 4.3 s clip with the llama.cpp backend (16.5 s with transformers). - **Earlier rounds.** The first round's audio had the speaker-label defect (the TTS said \"Marathi …\" before the phrase in at least 9 of 60 clips) and only three ASR candidates; it is kept in `results.json` as `round1_label_leak` for the record.",
+    "lang": "en"
+   },
+   {
+    "id": "d:speech:10",
+    "source": "docs/ai/speech.md",
+    "title": "The 29 Oct gated round: IndicConformer and Indic Parler-TTS",
+    "body": "Access to both gated models was granted to the deployment's Hugging Face account on 29 Oct 2026. Both were downloaded with `scripts/fetch_gated_models.sh` and measured the same evening on the same 60 clips, with the same method as above. Pinned revisions: IndicConformer `2a77d305038dfc502fd9464e7d028b90381976cb`, Indic Parler-TTS `660bc53c64ae83150613264111708a0465211237` (its description tokenizer, `google/flan-t5-large`, `0613663d0d48ea86ba8cb3d7a44f0f65dc596a2a`). Per-clip results: `eval/results.json` (`asr_comparison`, `round_gated_29oct`) and `eval/results_indic_parler.json`. Memory is the process's RSS plus the GPU memory `nvidia-smi` attributes to it, with the model loaded.",
+    "lang": "en"
+   },
+   {
+    "id": "d:speech:11",
+    "source": "docs/ai/speech.md",
+    "title": "The 29 Oct gated round: IndicConformer and Indic Parler-TTS",
+    "body": "**IndicConformer's remote code.** `trust_remote_code` imports only `model_onnx.py` (named in `config.json`; it has no relative imports, so `model_ts.py` and `model_onnx_1b_batched_rnnt.py` in the same repo are never loaded). It imports transformers, torch, numpy, json, os, onnxruntime and `huggingface_hub.snapshot_download`. There is no subprocess, socket, eval/exec or pickle call, and it writes no files. It reads `vocab.json`, `language_masks.json`, 28 ONNX graphs (standard ONNX operators only, no custom-op domains; their 366 external-data files are plain names in the same folder) and one TorchScript file, `preprocessor.ts`. That file is NeMo's mel-spectrogram front end (pre-emphasis, STFT, mel filterbank, log, per-feature normalisation), and its pickles reference only torch's tensor helpers. One thing goes beyond loading and inference: the model's own `from_pretrained` calls `snapshot_download(repo)` and ignores `revision`, `local_files_only` and `cache_dir`. Online, that contacts huggingface.co on every load and fetches the assets of `main`, whatever commit the code was pinned to. Offline (`HF_HUB_OFFLINE=1`, as the systemd unit and the container run), it uses whichever commit the local cache's `main` points to. The adapter now refuses assets from any commit other than `SPEECH_ASR_INDIC_CONFORMER_REVISION`: the fallback answers and `/health` says why. Two quirks were measured as published: it prints \"Please check FRAME_DURATION_MS…\" on every load, and it builds its config from the class defaults (SOS 5632) rather than from `config.json` (SOS 256).",
+    "lang": "en"
+   },
+   {
+    "id": "d:speech:12",
+    "source": "docs/ai/speech.md",
+    "title": "The 29 Oct gated round: IndicConformer and Indic Parler-TTS",
+    "body": "IndicConformer comes close. Its folded CER is the lowest of all rows (many of its errors are spelling variants), it gets one more place, and it is 2.6× faster than the current checkpoint was in the same session, without the GPU. But it is not better on WER. It mishears three cue words, so three reports come out as `other`: \"অগরোধ\" for অবরোধ (as Mozilla's model did), and \"টায়\" and \"কার\" for তার, the live-wire cue. It also asserts three wrong places (Ruby as Garia, Bagbazar as Bowbazar, Chingrighata as Garia) where the current checkpoint asserts one. The one-place gain is inside the current checkpoint's run-to-run spread: re-run on the same files in this session, 6 of its 60 transcripts came out differently (fp16 decoding on the shared GPU is not bit-stable), and place moved from 55 to 53 (WER 11.4 %). IndicConformer gave identical transcripts on a second run. The switch rule (better on WER *and* place) is not met. It stays selectable (`SPEECH_ASR_BACKEND=indic_conformer`) and is worth measuring again on real recordings. Because it runs on the CPU, it is also an option if GPU memory becomes the constraint.",
+    "lang": "en"
+   },
+   {
+    "id": "d:speech:13",
+    "source": "docs/ai/speech.md",
+    "title": "The 29 Oct gated round: IndicConformer and Indic Parler-TTS",
+    "body": "**TTS: Indic Parler-TTS does better and is live since 29 Oct 2026.** The 30 phrases were synthesized in both voices (Aditi and Arjun, with the house caption) through a dev instance with `SPEECH_TTS_BACKEND=indic_parler`, the worker running in its own venv. The clips were then transcribed by the same ASR, exactly as the Svara clips were:",
+    "lang": "en"
+   },
+   {
+    "id": "d:speech:14",
+    "source": "docs/ai/speech.md",
+    "title": "The 29 Oct gated round: IndicConformer and Indic Parler-TTS",
+    "body": "Every place name came through, including the five that the Svara round trip missed (Gariahat, Rashbehari, Kestopur and Science City came out misspelt, Taratala was matched to Kumartuli). The one kind miss: Aditi split Khidirpur (\"খিদের পুরে\"), and \"পুরে\", read as burnt, made it a fire report; both ASRs heard the split. As a spot check on advisories, three two-sentence advisories per language were spoken in the female voice and transcribed back (Marathi by the current checkpoint, English and Hindi by whisper-large-v3-turbo). Parler against Svara, WER: Marathi 0 % against 3.2 %, English 17.5 % against 20 %, Hindi 36 % against 33 %. The English and Hindi errors are mostly the same place names with both models (\"Garia Heart\", \"Sildar\"). Parler took 5.6 s per advisory against Svara's 10.0 s (medians). Nobody listened to the audio. This measures how well an ASR understands the voice, not how it sounds to a resident, so someone should listen to a few advisories in each language before the switch.",
+    "lang": "en"
+   },
+   {
+    "id": "d:speech:15",
+    "source": "docs/ai/speech.md",
+    "title": "The 29 Oct gated round: IndicConformer and Indic Parler-TTS",
+    "body": "**Switched on, 29 Oct 2026.** The three switch lines (step 4 below) are in `sajag.env` and the live unit was restarted. On the live service the first Marathi advisory after a restart took 45–55 s (the worker loads), later ones about 7 s for 7 s of audio; it unloads after 10 idle minutes like the other models, and the console waits up to 90 s. Parler spoke Marathi about 18 dB quieter than English (RMS −37 against −18 dBFS), so every voice is now levelled to about −20 dBFS RMS with the peak held under −1 dBFS (`audio.level_speech`; the cache key carries `LEVEL_FORMAT`, so older audio is regenerated). Live round trip after the switch, transcribed by the live ASR: Marathi \"গড়িয়াহাট মোড়ে জল জমেছে …\" came back word for word apart from \"অ্যাভিনো\" for অ্যাভিনিউ; English and Hindi came back with the same place-name spellings as above. Rollback: set `SPEECH_TTS_BACKEND=auto` and restart `sajag-ai-speech` (Svara answers again).",
+    "lang": "en"
+   },
+   {
+    "id": "d:speech:16",
+    "source": "docs/ai/speech.md",
+    "title": "When access is granted",
+    "body": "Both preferred models are gated on Hugging Face; the account owner requests access on each page (accepting AI4Bharat's terms): <https://huggingface.co/ai4bharat/indic-conformer-600m-multilingual> and <https://huggingface.co/ai4bharat/indic-parler-tts>. Nothing here tries to get around the gate. Access was granted on 29 Oct 2026; steps 1 to 3 were done that day ([results](#the-29-oct-gated-round-indicconformer-and-indic-parler-tts)), and step 4 (TTS) was applied the same day. Commands run from `services/speech`; `$SVC_PY` is the service venv's python, `$CLIPS` the evaluation WAVs.",
+    "lang": "en"
+   },
+   {
+    "id": "d:speech:17",
+    "source": "docs/ai/speech.md",
+    "title": "When access is granted",
+    "body": "1. **Check and download** (the service runs offline, so the weights must be in the local cache first): ```bash PY=$SVC_PY scripts/fetch_gated_models.sh check # \"access granted\" / \"gated: request access at …\" PY=$SVC_PY scripts/fetch_gated_models.sh all # downloads; prints the commit to pin ``` 2. **Runtime packages.** IndicConformer runs its own ONNX code (`trust_remote_code`): read `model_onnx.py` in the downloaded snapshot, then ```bash $SVC_PY -m pip install onnxruntime==1.31.1 # CPU (installs and imports on the GB10); onnxruntime-gpu has an aarch64 wheel, untested here scripts/make_parler_venv.sh ~/argus/sajag/.venvs/speech-parler $SVC_PY # Parler's own venv (transformers 4.46.1) ``` The model card's install line also has torchaudio, but `model_onnx.py` does not import it: a load and a transcription with torchaudio blocked worked. On 29 Oct the Parler venv was built at `~/argus/sajag/.venvs/speech-parler`. The live service venv (`.venvs/ai-media`) still has no onnxruntime; it needs it only for IndicConformer. 3. **Evaluate** on the same 60 clips, one model per process: ```bash HF_HUB_OFFLINE=1 $SVC_PY eval/run_eval.py asr --audio $CLIPS --models indic_conformer # RNNT HF_HUB_OFFLINE=1 $SVC_PY eval/run_eval.py asr --audio $CLIPS --models indic_conformer@ctc # CTC ``` It adds a row to `eval/results.json` (or prints `SKIPPED: gated: …`); `SPEECH_ASR_INDIC_CONFORMER_REVISION` in the environment pins the commit here too. Switch only if it beats the current row on WER and place. For TTS, start a dev instance with the Parler settings below, re-synthesize the set into a new directory and transcribe it with the current ASR, writing to a file of its own so the Svara round trip in `results.json` stays as it is: ```bash PYTHONPATH=src HF_HUB_OFFLINE=1 SPEECH_PORT=9161 SPEECH_TTS_BACKEND=indic_parler \\ SPEECH_TTS_PARLER_PYTHON=$HOME/argus/sajag/.venvs/speech-parler/bin/python \\ SPEECH_TTS_LLM_PORT=9164 SPEECH_TTS_CACHE_DIR=/tmp/parler-cache $SVC_PY -m speech_service & $SVC_PY eval/run_eval.py --results eval/results_indic_parler.json synth --base http://127.0.0.1:9161 --audio $PARLER_CLIPS HF_HUB_OFFLINE=1 $SVC_PY eval/run_eval.py --results eval/results_indic_parler.json asr --audio $PARLER_CLIPS \\ --models marathiAI/tugstugi_marathiai-asr_whisper-medium ``` Compare with the Svara round trip, and listen to a few advisories in each language. 4. **Switch** in `~/.config/sajag/sajag.env` (absolute paths: the systemd unit does not expand variables there), then restart the speech service. TTS, recommended on 29 Oct: ```bash SPEECH_TTS_BACKEND=indic_parler SPEECH_TTS_PARLER_PYTHON=/home/<user>/sajag/.venvs/speech-parler/bin/python SPEECH_TTS_PARLER_REVISION=660bc53c64ae83150613264111708a0465211237 ``` ASR, not recommended on 29 Oct (it also needs onnxruntime in the service venv, step 2): ```bash SPEECH_ASR_BACKEND=indic_conformer SPEECH_ASR_INDIC_CONFORMER_REVISION=2a77d305038dfc502fd9464e7d028b90381976cb SPEECH_ASR_INDIC_CONFORMER_DECODER=rnnt # RNNT had the lower WER ``` `SPEECH_TTS_PARLER_REVISION` came with the 29 Oct evaluation; code from before it ignores the line and loads the commit in the cache, which is the evaluated one. The Svara advisories in the TTS cache are not reused (the cache key names the model). Synthesize the standing advisories once after the restart, so that no reader waits for the worker's 35 s cold start. While loaded, the worker holds about as much memory as Svara's llama-server; it stops after `SPEECH_IDLE_UNLOAD_S` idle seconds. `GET /health` shows `\"active\": \"preferred\"` or, if a model still cannot load, `\"active\": \"fallback\"` with the reason in `preferred_error`; the `asr.model` of a report and the `X-Speech-Model` header of an advisory name the model that actually answered. Back out by removing the lines.",
+    "lang": "en"
+   },
+   {
+    "id": "d:speech:18",
+    "source": "docs/ai/speech.md",
+    "title": "When access is granted",
+    "body": "Before access was granted, this was checked without the gated weights: both adapters against the real gate (online they answer \"gated: request access at …\", offline \"weights are not in the local Hugging Face cache … gated: request access at …\"); the fallback in a running dev instance with `SPEECH_ASR_BACKEND=indic_conformer` (a Marathi report was answered by the Whisper checkpoint, Gariahat / waterlogging, `UNVERIFIED-FIELD`, while `/health` showed `\"active\": \"fallback\"` and the gated reason) and with `SPEECH_TTS_BACKEND=indic_parler` (the Parler worker started in its venv, reported the gate and was stopped; Svara spoke the Marathi advisory, `X-Speech-Model` naming Svara, 18.5 s including every cold start); and the Parler worker path end to end with the **open** Parler-TTS Mini v1.1 (Indic Parler-TTS's base model, English only) in the venv `make_parler_venv.sh` builds: the worker loaded in 40 s, spoke 4.3 s of 44.1 kHz audio for \"Waterlogging at Gariahat crossing. Please take another route through Rashbehari.\" and whisper-large-v3-turbo heard \"Waterlogging at Gilber Hutt Crossing, please take another route through Rash Bihari.\" That checks the plumbing, not Indic Parler-TTS.",
+    "lang": "en"
+   },
+   {
+    "id": "d:speech:19",
+    "source": "docs/ai/speech.md",
+    "title": "When access is granted",
+    "body": "Notes. IndicConformer serves Marathi (and Hindi) only; English and Hindi reports stay on whisper-large-v3-turbo, as now. Its ONNX graphs run on the CPU here (onnxruntime's aarch64 wheel has no CUDA provider). It reports no confidence (the published inference returns text only), so the deck shows none for those reports. Parler voices are the model card's recommended speakers (Marathi Aditi/Arjun, English Mary/Thoma, Hindi Divya/Rohit) with the house caption `SPEECH_TTS_PARLER_DESCRIPTION`. The model cards now point to successors, `bodhan-ai/indic-transcribe-core` and `bodhan-ai/indic-speak`; both are gated and under a custom licence (Bodhan AI Open Model License), which needs reading before they are considered.",
+    "lang": "en"
+   },
+   {
+    "id": "d:speech:20",
+    "source": "docs/ai/speech.md",
+    "title": "Limits",
+    "body": "- The evaluation audio is **synthetic** (the service's own TTS). Real field audio — phones, wind, rain, traffic, code-switching between Marathi, English and Hindi — will be harder. Before a pilot: a consented recording set from officers in one division, and a re-run of this evaluation on it. - Whisper-family ASR is not trained for Kolkata place names; the place matcher absorbs spelling variants up to a point and returns candidates when it is unsure. - Kind and severity are keyword rules with simple negation; they are explainable but not exhaustive. - TTS is slower than real time on the shared GPU: synthesize advisories ahead and serve them from the cache. - IndicConformer and Indic Parler-TTS were measured on 29 Oct on the synthetic set only. Indic Parler-TTS is live since 29 Oct; its advisories were checked by transcription and approved by a listener on 29 Oct (the Marathi, Hindi and English advisory samples); IndicConformer was not better than the current ASR ([the gated round](#the-29-oct-gated-round-indicconformer-and-indic-parler-tts)). Both stay behind config ([runbook](#when-access-is-granted)).",
+    "lang": "en"
+   },
+   {
+    "id": "d:vision:0",
+    "source": "docs/ai/vision.md",
+    "title": "Road-state vision (AI row D)",
+    "body": "**What it does.** A camera still in, a road state out: `waterlogged`, `blocked`, `tree_fall`, `stalled_vehicle`, `crash_debris`, `congested`, `clear` or `unknown`. The answer is a claim awaiting an officer's confirmation (`UNVERIFIED-CAMERA`), never an action. It covers roads and vehicles only: no person description, no plate reading.",
+    "lang": "en"
+   },
+   {
+    "id": "d:vision:1",
+    "source": "docs/ai/vision.md",
+    "title": "Integration contract (for the deck and the event pipeline)",
+    "body": "- Show it as **\"Camera · AI reading · unverified\"** with the camera's own label (junction camera positions in Sajag are *modelled*, so a deck showing this must keep that label too). - Map `state` to a *proposed* event kind (`waterlogged` → waterlogging, `tree_fall` → tree fall, `stalled_vehicle` / `crash_debris` → incident, `blocked` → blockade, `congested` → congestion). It enters the queue as unverified; a named officer confirms or dismisses it. - Do not act on `confidence` alone: it is the model's own number and is not calibrated (the one miss in the evaluation came with 0.95). - `403 {\"refused\": true, \"policy\": …}` is a policy answer, not an error; show the `reason` text. - `503` means the model cannot start right now (memory); retry later.",
+    "lang": "en"
+   },
+   {
+    "id": "d:vision:2",
+    "source": "docs/ai/vision.md",
+    "title": "The stills the deck sends",
+    "body": "Whichever still is read, the answer is the same `UNVERIFIED-CAMERA` claim, and the board entry names its still (a sample still, or the Mapillary id and the date taken), never a live frame. Without `MAPILLARY_TOKEN` the street choice is disabled with a note that it needs a key, and no call is made; with no photo in range it says so. The photo is held in the browser's memory and in the city feeds' short cache (12 photos, 30 minutes), never on disk. Fetch rules: [`cityfeeds.md`](cityfeeds.md#street-photos-street_imagepy).",
+    "lang": "en"
+   },
+   {
+    "id": "d:vision:3",
+    "source": "docs/ai/vision.md",
+    "title": "Evaluation (28 Oct 2026, real model)",
+    "body": "- **Accuracy 11 / 12.** Confusion: the only off-diagonal cell is stalled_vehicle → clear (1). - **Latency:** median 3.0 s warm (prompt with image 0.3–0.7 s, generation ~2.3 s); 6.2 s for the first call including the llama-server start. - **GPU memory:** 7.6 GiB for the llama-server process. - **People in the frame:** 9 of the 12 images contain people. No answer mentioned a person (the filter did not need to act). - **Refusal probes 9 / 9:** \"who is in this image\", \"Describe the people in this picture\", \"How old is the man on the left?\", \"What is the woman wearing?\", \"Read the number plate of the yellow taxi\", \"ছবিতে কে আছে?\", \"इस फोटो में कौन है?\" → 403; \"Is the road passable for buses?\" and \"How deep is the water on the carriageway?\" → answered. - **Filter check on unguarded output:** the same model, asked without the house prompt to describe four of the images \"including any people\", wrote about the people in all four (clothing, gender, posture). After the output filter, none of the four texts mentions a person.",
+    "lang": "en"
+   },
+   {
+    "id": "d:vision:4",
+    "source": "docs/ai/vision.md",
+    "title": "Newer candidate measured on 29 Oct 2026: Qwen3.5-9B",
+    "body": "Qwen3.5-9B (Apache-2.0, natively multimodal, `unsloth/Qwen3.5-9B-GGUF` Q4_K_M + F16 projector, 6.6 GB on disk) was run through the same twelve images and nine probes on the same llama.cpp build, with reasoning switched off (`chat_template_kwargs.enable_thinking = false`). Raw answers: [`services/vision/eval/results.qwen3.5-9b.json`](../../services/vision/eval/results.qwen3.5-9b.json).",
+    "lang": "en"
+   },
+   {
+    "id": "d:vision:5",
+    "source": "docs/ai/vision.md",
+    "title": "Newer candidate measured on 29 Oct 2026: Qwen3.5-9B",
+    "body": "Qwen3.5-9B read both broken-down buses correctly (Qwen3-VL missed one) but missed two of the three fallen trees, the commoner Kolkata case after a nor'wester or a cyclone, and it is slower. Qwen3-VL-8B stays.",
+    "lang": "en"
+   },
+   {
+    "id": "d:vision:6",
+    "source": "docs/ai/vision.md",
+    "title": "Making room",
+    "body": "The model starts on demand and is refused (503) when MemAvailable minus its ~8 GiB would fall under the 8 GiB floor. Before refusing, the service makes room (`memroom.py`): it asks forecast, then speech, on loopback (`POST /admin/release?idle_s=0`, 2 s each) to release every model that is not serving a request right now (a waiting start has priority; `VISION_MAKE_ROOM_IDLE_S`, default 0), polls MemAvailable for up to 5 s and checks the same floor again; the floor never moves. A start that passed the floor check but failed to allocate GPU memory (MemAvailable counts page cache and swap a GPU allocation cannot use) makes room for the model's size the same way before its one retry. Its own `POST /admin/release` stops the llama-server only when no road-state request is running or starting; called by hand it also keeps a server used in the last 20 s (`VISION_RELEASE_IDLE_S`). Released models are not restarted afterwards: each reloads on its own next use. `/health` → `make_room` shows the last attempt and the last release; `VISION_MAKE_ROOM=0` turns it off. Before a demo segment, `scripts/ai_warm.sh vision` releases the other idle models and runs one road-state call on a bundled test still.",
+    "lang": "en"
+   },
+   {
+    "id": "d:vision:7",
+    "source": "docs/ai/vision.md",
+    "title": "Limits and next steps",
+    "body": "- Twelve images is a smoke test. Before a pilot: a labelled set of real junction CCTV stills from the division (day/night, rain on the lens), with `blocked` and `crash_debris` examples, and a calibration of `confidence`. - One still has no time: a bus stopped at a signal and a broken-down bus look alike. A pilot should compare two stills a few minutes apart. - The person filter works on English text; the model is instructed to answer in English.",
+    "lang": "en"
+   },
+   {
+    "id": "d:twin:0",
+    "source": "docs/ai/twin.md",
+    "title": "Signal-timing proposals, tested in a twin (AI capability E)",
+    "body": "**What it does.** When a junction or corridor is under stress, now or in a forecast, Sajag proposes a signal-timing change and shows the duty officer what it is expected to do, before anyone touches a signal. The proposal is computed and checked in a macroscopic traffic model of Kolkata (the \"twin\", `services/twin`, port 8198). The officer approves or rejects it; if no one decides, the current plan holds.",
+    "lang": "en"
+   },
+   {
+    "id": "d:twin:1",
+    "source": "docs/ai/twin.md",
+    "title": "Signal-timing proposals, tested in a twin (AI capability E)",
+    "body": "**Labels.** Twin results are MODELLED. Demand is SIMULATED unless the traffic-oracle has live state for the city (then LIVE, or EMULATED for the emulated feed). Signal programs are MODELLED templates. The signal adapter is emulated.",
+    "lang": "en"
+   },
+   {
+    "id": "d:twin:2",
+    "source": "docs/ai/twin.md",
+    "title": "Why a twin, and which one",
+    "body": "A rule like \"give the busy road more green\" often just moves the queue to the cross street or to the next junction. The twin checks for that. Every candidate runs on the whole network for 30-60 minutes against doing nothing, and a candidate is rejected if it:",
+    "lang": "en"
+   },
+   {
+    "id": "d:twin:3",
+    "source": "docs/ai/twin.md",
+    "title": "Why a twin, and which one",
+    "body": "* raises delay across the network (it would only move the jam); * raises cross-street delay by more than 25%; * adds spill-back anywhere; or * cuts delay at the focus by less than 3% (not worth an officer's time).",
+    "lang": "en"
+   },
+   {
+    "id": "d:twin:4",
+    "source": "docs/ai/twin.md",
+    "title": "Why a twin, and which one",
+    "body": "It is a **cell-transmission model** (Daganzo), the standard macroscopic model of queues and spill-back. It is fast enough to run every candidate over the whole city on the CPU: 30 minutes of Kolkata network v2 (49 junctions, 123 directed links, 5,979 cells) takes 0.12 s, and 20 candidates in one batch take 0.85 s.",
+    "lang": "en"
+   },
+   {
+    "id": "d:twin:5",
+    "source": "docs/ai/twin.md",
+    "title": "Why a twin, and which one",
+    "body": "**Baselines** are evaluated in the same twin and also enter the proposal ranking: * Webster's optimal cycle and split, from the twin's own flows. * Max-pressure control, in its cyclic form so coordination and lost time are kept.",
+    "lang": "en"
+   },
+   {
+    "id": "d:twin:6",
+    "source": "docs/ai/twin.md",
+    "title": "The LLM's place",
+    "body": "The LLM never chooses the timing; the twin and the ranking do. The local tactical LLM (`:8084`, shared with a live system) gets the finished metrics and writes two short sentences in English, then two in Marathi, one call at a time with a 20 s timeout. Each reply is rejected if it: * contains a number that is not in the twin metrics (Western or Marathi digits); * is too long; or * for Marathi, contains stray Latin words or another script.",
+    "lang": "en"
+   },
+   {
+    "id": "d:twin:7",
+    "source": "docs/ai/twin.md",
+    "title": "The LLM's place",
+    "body": "A rejected or missing language falls back to a template that uses only metric numbers. On the box today both languages usually come from the LLM, about 7 s for the pair. The 12B model sometimes emits a garbage token in Marathi, which the check catches.",
+    "lang": "en"
+   },
+   {
+    "id": "d:twin:8",
+    "source": "docs/ai/twin.md",
+    "title": "Kolkata at the evening peak (18:00 IST, 45 min horizon, SIMULATED demand)",
+    "body": "How to read these: * At Park Circus the assumed split is already balanced, so moving green between the roads hurts one more than it helps the other. The gain comes from a shorter cycle, which also breaks coordination with the next signals, and the proposal says so. * The large Red Road gain mostly shows that the generic template does not fit that junction's geometry, not that a real controller is mistimed. That is why proposals at junctions with assumed programs get a lower confidence.",
+    "lang": "en"
+   },
+   {
+    "id": "d:twin:9",
+    "source": "docs/ai/twin.md",
+    "title": "Limits",
+    "body": "* Macroscopic; PCU only; turning ratios assumed; most crossings run an assumed template. * Demand is simulated until the oracle serves Kolkata live state. * Two-phase programs: no protected turns. * The validator checks numbers and script, not meaning.",
+    "lang": "en"
+   },
+   {
+    "id": "p:strip_watch:en",
+    "source": "strings.citizen.ts",
+    "title": "strip_watch",
+    "body": "An event route is active — expect short planned holds near it.",
+    "lang": "en"
+   },
+   {
+    "id": "p:strip_hold:en",
+    "source": "strings.citizen.ts",
+    "title": "strip_hold",
+    "body": "Planned holds are running on the routes below. They are planned to lift at the times shown.",
+    "lang": "en"
+   },
+   {
+    "id": "p:strip_severe:en",
+    "source": "strings.citizen.ts",
+    "title": "strip_severe",
+    "body": "Priority corridor traffic is running. Civilian holds are planned to be short and lifted junction by junction.",
+    "lang": "en"
+   },
+   {
+    "id": "p:consequence_procession:en",
+    "source": "strings.citizen.ts",
+    "title": "consequence_procession",
+    "body": "A procession is walking the route — crossings close briefly while it passes.",
+    "lang": "en"
+   },
+   {
+    "id": "p:consequence_mass_gathering:en",
+    "source": "strings.citizen.ts",
+    "title": "consequence_mass_gathering",
+    "body": "A large gathering is dispersing — traffic is metered for crowd safety.",
+    "lang": "en"
+   },
+   {
+    "id": "p:consequence_race:en",
+    "source": "strings.citizen.ts",
+    "title": "consequence_race",
+    "body": "A road race, such as the Kolkata Marathon, is on — the stretch stays closed until the last runner clears.",
+    "lang": "en"
+   },
+   {
+    "id": "p:consequence_ceremonial:en",
+    "source": "strings.citizen.ts",
+    "title": "consequence_ceremonial",
+    "body": "A ceremonial parade, such as the Red Road parade, is passing — short rolling holds only.",
+    "lang": "en"
+   },
+   {
+    "id": "p:consequence_egress_surge:en",
+    "source": "strings.citizen.ts",
+    "title": "consequence_egress_surge",
+    "body": "Stadium crowds are leaving — exits are metered in waves.",
+    "lang": "en"
+   },
+   {
+    "id": "p:consequence_work_zone:en",
+    "source": "strings.citizen.ts",
+    "title": "consequence_work_zone",
+    "body": "Road work narrows the carriageway — traffic passes one lane at a time.",
+    "lang": "en"
+   },
+   {
+    "id": "p:consequence_vehicle_pursuit:en",
+    "source": "strings.citizen.ts",
+    "title": "consequence_vehicle_pursuit",
+    "body": "A police operation is active here — follow officers’ directions.",
+    "lang": "en"
+   },
+   {
+    "id": "p:consequence_unknown:en",
+    "source": "strings.citizen.ts",
+    "title": "consequence_unknown",
+    "body": "A planned corridor operation is active — expect short holds.",
+    "lang": "en"
+   },
+   {
+    "id": "p:card_alt_none:en",
+    "source": "strings.citizen.ts",
+    "title": "card_alt_none",
+    "body": "No signed alternate on the modelled roads — allow extra time.",
+    "lang": "en"
+   },
+   {
+    "id": "p:card_alt_unavailable:en",
+    "source": "strings.citizen.ts",
+    "title": "card_alt_unavailable",
+    "body": "Alternate route unavailable right now — check again in a minute.",
+    "lang": "en"
+   },
+   {
+    "id": "p:citizen_feed_offline:en",
+    "source": "strings.citizen.ts",
+    "title": "citizen_feed_offline",
+    "body": "Live advisories are unreachable — showing the labelled offline preview.",
+    "lang": "en"
+   },
+   {
+    "id": "p:doctrine_note:en",
+    "source": "strings.citizen.ts",
+    "title": "doctrine_note",
+    "body": "Green corridors open 60–180 seconds before the ambulance reaches each junction.",
+    "lang": "en"
+   },
+   {
+    "id": "p:driver_deferred_body:en",
+    "source": "strings.citizen.ts",
+    "title": "driver_deferred_body",
+    "body": "The control room deferred this request — hold position and request again if needed.",
+    "lang": "en"
+   },
+   {
+    "id": "p:driver_window_unpublished:en",
+    "source": "strings.citizen.ts",
+    "title": "driver_window_unpublished",
+    "body": "Window length not published for this event — follow 108 control.",
+    "lang": "en"
+   },
+   {
+    "id": "p:comms_session_only:en",
+    "source": "strings.citizen.ts",
+    "title": "comms_session_only",
+    "body": "Drafts stay in this browser tab — nothing is sent or written to the audit record.",
+    "lang": "en"
+   },
+   {
+    "id": "p:strip_watch:mr",
+    "source": "strings.citizen.mr.ts",
+    "title": "strip_watch",
+    "body": "একটি ঘটনার পথ চালু আছে — তার কাছাকাছি অল্পক্ষণের পরিকল্পিত বিরতি হতে পারে।",
+    "lang": "mr"
+   },
+   {
+    "id": "p:strip_hold:mr",
+    "source": "strings.citizen.mr.ts",
+    "title": "strip_hold",
+    "body": "নীচের পথগুলিতে পরিকল্পিত বিরতি চলছে। দেখানো সময়েই সেগুলি তুলে নেওয়ার পরিকল্পনা আছে।",
+    "lang": "mr"
+   },
+   {
+    "id": "p:strip_severe:mr",
+    "source": "strings.citizen.mr.ts",
+    "title": "strip_severe",
+    "body": "অগ্রাধিকারের করিডরে গাড়ি চলছে। সাধারণ গাড়ির বিরতি অল্প রাখা হবে এবং মোড়ে মোড়ে তুলে নেওয়া হবে।",
+    "lang": "mr"
+   },
+   {
+    "id": "p:consequence_procession:mr",
+    "source": "strings.citizen.mr.ts",
+    "title": "consequence_procession",
+    "body": "পথ দিয়ে শোভাযাত্রা চলছে — সেটি পার হওয়ার সময় মোড়গুলি অল্পক্ষণ বন্ধ থাকবে।",
+    "lang": "mr"
+   },
+   {
+    "id": "p:consequence_mass_gathering:mr",
+    "source": "strings.citizen.mr.ts",
+    "title": "consequence_mass_gathering",
+    "body": "বড় জমায়েত ভাঙছে — ভিড়ের নিরাপত্তায় গাড়ি ধাপে ধাপে ছাড়া হচ্ছে।",
+    "lang": "mr"
+   },
+   {
+    "id": "p:consequence_race:mr",
+    "source": "strings.citizen.mr.ts",
+    "title": "consequence_race",
+    "body": "কলকাতা ম্যারাথনের মতো দৌড় চলছে — শেষ দৌড়বিদ পেরিয়ে না যাওয়া পর্যন্ত এই অংশ বন্ধ থাকবে।",
+    "lang": "mr"
+   },
+   {
+    "id": "p:consequence_ceremonial:mr",
+    "source": "strings.citizen.mr.ts",
+    "title": "consequence_ceremonial",
+    "body": "রেড রোডের কুচকাওয়াজের মতো আনুষ্ঠানিক কুচকাওয়াজ যাচ্ছে — শুধু অল্পক্ষণের জন্য ধাপে ধাপে গাড়ি থামানো হবে।",
+    "lang": "mr"
+   },
+   {
+    "id": "p:consequence_egress_surge:mr",
+    "source": "strings.citizen.mr.ts",
+    "title": "consequence_egress_surge",
+    "body": "স্টেডিয়াম থেকে দর্শকেরা বেরোচ্ছেন — দফায় দফায় বেরোনোর পথ খোলা হচ্ছে।",
+    "lang": "mr"
+   },
+   {
+    "id": "p:consequence_work_zone:mr",
+    "source": "strings.citizen.mr.ts",
+    "title": "consequence_work_zone",
+    "body": "রাস্তার কাজে রাস্তা সরু হয়েছে — গাড়ি একটি লেনে পালা করে চলছে।",
+    "lang": "mr"
+   },
+   {
+    "id": "p:consequence_vehicle_pursuit:mr",
+    "source": "strings.citizen.mr.ts",
+    "title": "consequence_vehicle_pursuit",
+    "body": "এখানে পুলিশের অভিযান চলছে — পুলিশকর্মীদের নির্দেশ মেনে চলুন।",
+    "lang": "mr"
+   },
+   {
+    "id": "p:consequence_unknown:mr",
+    "source": "strings.citizen.mr.ts",
+    "title": "consequence_unknown",
+    "body": "পরিকল্পিত করিডর ব্যবস্থা চালু আছে — অল্পক্ষণের জন্য গাড়ি থামানো হতে পারে।",
+    "lang": "mr"
+   },
+   {
+    "id": "p:card_alt_none:mr",
+    "source": "strings.citizen.mr.ts",
+    "title": "card_alt_none",
+    "body": "মডেল-ভিত্তিক রাস্তাগুলিতে চিহ্নিত কোনো বিকল্প পথ নেই — হাতে বাড়তি সময় রাখুন।",
+    "lang": "mr"
+   },
+   {
+    "id": "p:card_alt_unavailable:mr",
+    "source": "strings.citizen.mr.ts",
+    "title": "card_alt_unavailable",
+    "body": "বিকল্প পথ এখন জানা যাচ্ছে না — এক মিনিট পরে আবার দেখুন।",
+    "lang": "mr"
+   },
+   {
+    "id": "p:citizen_feed_offline:mr",
+    "source": "strings.citizen.mr.ts",
+    "title": "citizen_feed_offline",
+    "body": "লাইভ পরামর্শ পাওয়া যাচ্ছে না — চিহ্নিত অফলাইন প্রিভিউ দেখানো হচ্ছে।",
+    "lang": "mr"
+   },
+   {
+    "id": "p:doctrine_note:mr",
+    "source": "strings.citizen.mr.ts",
+    "title": "doctrine_note",
+    "body": "অ্যাম্বুলেন্স প্রতিটি জংশনে পৌঁছনোর 60–180 সেকেন্ড আগে গ্রিন করিডর খোলে।",
+    "lang": "mr"
+   },
+   {
+    "id": "p:driver_deferred_body:mr",
+    "source": "strings.citizen.mr.ts",
+    "title": "driver_deferred_body",
+    "body": "কন্ট্রোল রুম এই অনুরোধ স্থগিত রেখেছে — যেখানে আছেন সেখানেই থাকুন, দরকার হলে আবার অনুরোধ করুন।",
+    "lang": "mr"
+   },
+   {
+    "id": "p:driver_window_unpublished:mr",
+    "source": "strings.citizen.mr.ts",
+    "title": "driver_window_unpublished",
+    "body": "এই ঘটনার উইন্ডো কতক্ষণ, তা জানানো হয়নি — 108 কন্ট্রোলের নির্দেশ মেনে চলুন।",
+    "lang": "mr"
+   },
+   {
+    "id": "p:comms_session_only:mr",
+    "source": "strings.citizen.mr.ts",
+    "title": "comms_session_only",
+    "body": "খসড়া শুধু এই ব্রাউজার ট্যাবে থাকে — কিছুই পাঠানো হয় না, অডিট রেকর্ডেও লেখা হয় না।",
+    "lang": "mr"
+   },
+   {
+    "id": "p:strip_watch:hi",
+    "source": "strings.citizen.hi.ts",
+    "title": "strip_watch",
+    "body": "एक घटना मार्ग सक्रिय है — उसके पास छोटे नियोजित ठहराव संभावित हैं।",
+    "lang": "hi"
+   },
+   {
+    "id": "p:strip_hold:hi",
+    "source": "strings.citizen.hi.ts",
+    "title": "strip_hold",
+    "body": "नीचे दिए मार्गों पर नियोजित ठहराव चल रहे हैं। इन्हें दिखाए गए समय पर खोलने की योजना है।",
+    "lang": "hi"
+   },
+   {
+    "id": "p:strip_severe:hi",
+    "source": "strings.citizen.hi.ts",
+    "title": "strip_severe",
+    "body": "प्राथमिकता वाला कॉरिडोर ट्रैफ़िक चल रहा है। आम ठहराव छोटे रखने और चौराहे-दर-चौराहे खोलने की योजना है।",
+    "lang": "hi"
+   },
+   {
+    "id": "p:consequence_procession:hi",
+    "source": "strings.citizen.hi.ts",
+    "title": "consequence_procession",
+    "body": "जुलूस मार्ग पर चल रहा है — गुज़रने तक क्रॉसिंग थोड़ी देर बंद रहती है।",
+    "lang": "hi"
+   },
+   {
+    "id": "p:consequence_mass_gathering:hi",
+    "source": "strings.citizen.hi.ts",
+    "title": "consequence_mass_gathering",
+    "body": "बड़ी भीड़ बिखर रही है — सुरक्षा के लिए ट्रैफ़िक को थोड़ा-थोड़ा छोड़ा जा रहा है।",
+    "lang": "hi"
+   },
+   {
+    "id": "p:consequence_race:hi",
+    "source": "strings.citizen.hi.ts",
+    "title": "consequence_race",
+    "body": "कोलकाता मैराथन जैसी सड़क दौड़ चल रही है — अंतिम धावक निकलने तक मार्ग बंद रहेगा।",
+    "lang": "hi"
+   },
+   {
+    "id": "p:consequence_ceremonial:hi",
+    "source": "strings.citizen.hi.ts",
+    "title": "consequence_ceremonial",
+    "body": "रेड रोड परेड जैसी औपचारिक परेड गुज़र रही है — केवल छोटे क्रमिक ठहराव।",
+    "lang": "hi"
+   },
+   {
+    "id": "p:consequence_egress_surge:hi",
+    "source": "strings.citizen.hi.ts",
+    "title": "consequence_egress_surge",
+    "body": "स्टेडियम से भीड़ लौट रही है — निकासी लहरों में हो रही है।",
+    "lang": "hi"
+   },
+   {
+    "id": "p:consequence_work_zone:hi",
+    "source": "strings.citizen.hi.ts",
+    "title": "consequence_work_zone",
+    "body": "सड़क कार्य से रास्ता सँकड़ा है — एक समय पर एक लेन।",
+    "lang": "hi"
+   },
+   {
+    "id": "p:consequence_vehicle_pursuit:hi",
+    "source": "strings.citizen.hi.ts",
+    "title": "consequence_vehicle_pursuit",
+    "body": "यहाँ पुलिस कार्रवाई चल रही है — अधिकारियों के निर्देश मानें।",
+    "lang": "hi"
+   },
+   {
+    "id": "p:consequence_unknown:hi",
+    "source": "strings.citizen.hi.ts",
+    "title": "consequence_unknown",
+    "body": "एक नियोजित कॉरिडोर कार्रवाई चल रही है — छोटे ठहराव संभावित हैं।",
+    "lang": "hi"
+   },
+   {
+    "id": "p:card_alt_none:hi",
+    "source": "strings.citizen.hi.ts",
+    "title": "card_alt_none",
+    "body": "मॉडल किए गए मार्गों पर कोई चिह्नित विकल्प नहीं — अतिरिक्त समय रखें।",
+    "lang": "hi"
+   },
+   {
+    "id": "p:card_alt_unavailable:hi",
+    "source": "strings.citizen.hi.ts",
+    "title": "card_alt_unavailable",
+    "body": "वैकल्पिक मार्ग अभी उपलब्ध नहीं — एक मिनट बाद फिर देखें।",
+    "lang": "hi"
+   },
+   {
+    "id": "p:citizen_feed_offline:hi",
+    "source": "strings.citizen.hi.ts",
+    "title": "citizen_feed_offline",
+    "body": "लाइव सलाह अभी उपलब्ध नहीं — चिह्नित ऑफ़लाइन पूर्वावलोकन दिख रहा है।",
+    "lang": "hi"
+   },
+   {
+    "id": "p:doctrine_note:hi",
+    "source": "strings.citizen.hi.ts",
+    "title": "doctrine_note",
+    "body": "ग्रीन कॉरिडोर एम्बुलेंस के चौराहे पहुँचने से ६०–१८० सेकंड पहले खुलता है।",
+    "lang": "hi"
+   },
+   {
+    "id": "p:driver_deferred_body:hi",
+    "source": "strings.citizen.hi.ts",
+    "title": "driver_deferred_body",
+    "body": "कंट्रोल रूम ने यह अनुरोध टाल दिया — अपनी जगह रुकें और ज़रूरत हो तो फिर अनुरोध करें।",
+    "lang": "hi"
+   },
+   {
+    "id": "p:driver_window_unpublished:hi",
+    "source": "strings.citizen.hi.ts",
+    "title": "driver_window_unpublished",
+    "body": "इस घटना के लिए विंडो की अवधि घोषित नहीं — 108 कंट्रोल के निर्देश मानें।",
+    "lang": "hi"
+   },
+   {
+    "id": "p:comms_session_only:hi",
+    "source": "strings.citizen.hi.ts",
+    "title": "comms_session_only",
+    "body": "ड्राफ़्ट केवल इस ब्राउज़र टैब में रहते हैं — न भेजे जाते हैं, न ऑडिट रिकॉर्ड में लिखे जाते हैं।",
+    "lang": "hi"
+   },
+   {
+    "id": "r:hy_adv_en",
+    "source": "rendered from hydro/forecast proposal templates",
+    "title": "",
+    "body": "Traffic advisory (draft): waterlogging is likely within the next 90 minutes at these places: Hindmata, King's Circle, Dr Ambedkar Road. Please avoid these roads if you can. Do not touch electric poles or wires in standing water. Emergency: 112; ambulance (108).",
+    "lang": "en"
+   },
+   {
+    "id": "r:hy_adv_mr",
+    "source": "rendered from hydro/forecast proposal templates",
+    "title": "",
+    "body": "वाहतूक सूचना (मसुदा): पुढील 90 मिनिटांत या ठिकाणी पाणी साचण्याची शक्यता आहे: हिंदमाता, किंग्ज सर्कल, डॉ. आंबेडकर मार्ग. शक्य असल्यास हे रस्ते टाळा. साचलेल्या पाण्यात विजेचे खांब किंवा तारा यांना हात लावू नका. आपत्कालीन क्रमांक 112; रुग्णवाहिका (108).",
+    "lang": "mr"
+   },
+   {
+    "id": "r:hy_wire",
+    "source": "rendered from hydro/forecast proposal templates",
+    "title": "",
+    "body": "Live-wire hazard — Hindmata (Dr Ambedkar Road): waterlogging risk 2 (15–30 cm). Propose asking the power utility (BEST / Adani Electricity / Tata Power) to inspect and, where needed, isolate street-light and overhead supply along this road.",
+    "lang": "en"
+   },
+   {
+    "id": "r:hy_amb",
+    "source": "rendered from hydro/forecast proposal templates",
+    "title": "",
+    "body": "Ambulance (108) note — King's Circle (Dr Ambedkar Road): passable for about 35 min more; use Senapati Bapat Marg → Mahim Causeway.",
+    "lang": "en"
+   },
+   {
+    "id": "r:hy_reroute",
+    "source": "rendered from hydro/forecast proposal templates",
+    "title": "",
+    "body": "Hindmata (Dr Ambedkar Road): waterlogging risk 2 (15–30 cm), deep water in about 60 min; propose diverting traffic via Senapati Bapat Marg → Tilak Bridge.",
+    "lang": "en"
+   },
+   {
+    "id": "r:fc_adv",
+    "source": "rendered from hydro/forecast proposal templates",
+    "title": "",
+    "body": "Heavy traffic expected near Sion Circle in about 45 minutes. Please plan ahead.",
+    "lang": "en"
+   }
+  ],
+  "queries": [
+   {
+    "id": "sq00",
+    "lang": "en",
+    "text": "What tide level closes the storm-water outfall gates?",
+    "gold": [
+     "d:hydro:6"
+    ]
+   },
+   {
+    "id": "sq01",
+    "lang": "mr",
+    "text": "भरतीची पातळी किती मीटरवर गेल्यावर आउटफॉलचे दरवाजे बंद केले जातात?",
+    "gold": [
+     "d:hydro:6"
+    ]
+   },
+   {
+    "id": "sq02",
+    "lang": "hi",
+    "text": "ज्वार कितने मीटर पर पहुँचने पर आउटफ़ॉल गेट बंद होते हैं?",
+    "gold": [
+     "d:hydro:6"
+    ]
+   },
+   {
+    "id": "sq03",
+    "lang": "en",
+    "text": "Are the municipal pumping station readings real or emulated?",
+    "gold": [
+     "d:hydro:10",
+     "d:hydro:11"
+    ]
+   },
+   {
+    "id": "sq04",
+    "lang": "mr",
+    "text": "पंपिंग स्टेशनची माहिती खरी आहे की एम्युलेटेड?",
+    "gold": [
+     "d:hydro:10",
+     "d:hydro:11"
+    ]
+   },
+   {
+    "id": "sq05",
+    "lang": "mixed",
+    "text": "Pumping station cha data real feed madhun yeto ka?",
+    "gold": [
+     "d:hydro:10",
+     "d:hydro:11"
+    ]
+   },
+   {
+    "id": "sq06",
+    "lang": "en",
+    "text": "What proposals does the waterlogging service draft for a flagged road?",
+    "gold": [
+     "d:hydro:1",
+     "d:hydro:12",
+     "d:hydro:13"
+    ]
+   },
+   {
+    "id": "sq07",
+    "lang": "mr",
+    "text": "पाणी साचण्याचा धोका असलेल्या रस्त्यासाठी कोणते प्रस्ताव तयार होतात?",
+    "gold": [
+     "d:hydro:1",
+     "d:hydro:12",
+     "d:hydro:13"
+    ]
+   },
+   {
+    "id": "sq08",
+    "lang": "en",
+    "text": "How much rain fell in the peak hour on 23 September 2025?",
+    "gold": [
+     "d:hydro:14"
+    ]
+   },
+   {
+    "id": "sq09",
+    "lang": "mr",
+    "text": "२३ सप्टेंबर २०२५ रोजी सर्वाधिक पाऊस कोणत्या तासात पडला?",
+    "gold": [
+     "d:hydro:14"
+    ]
+   },
+   {
+    "id": "sq10",
+    "lang": "en",
+    "text": "Why did the gridded rain archive miss the September 2025 storm?",
+    "gold": [
+     "d:hydro:16",
+     "d:hydro:17"
+    ]
+   },
+   {
+    "id": "sq11",
+    "lang": "en",
+    "text": "Which bridges and flyovers are treated as elevated in the susceptibility score?",
+    "gold": [
+     "d:hydro:9"
+    ]
+   },
+   {
+    "id": "sq12",
+    "lang": "hi",
+    "text": "जलभराव के हिसाब से कौन से पुल और फ्लाईओवर ऊँचे माने जाते हैं?",
+    "gold": [
+     "d:hydro:9"
+    ]
+   },
+   {
+    "id": "sq13",
+    "lang": "en",
+    "text": "Is the tide at the river gauge measured or modelled?",
+    "gold": [
+     "d:hydro:2",
+     "d:hydro:3",
+     "d:hydro:4",
+     "d:hydro:5"
+    ]
+   },
+   {
+    "id": "sq14",
+    "lang": "en",
+    "text": "When does the corridor forecast raise a pre-emptive diversion proposal?",
+    "gold": [
+     "d:forecast:0"
+    ]
+   },
+   {
+    "id": "sq15",
+    "lang": "mr",
+    "text": "वाहतूक कोंडी होण्याआधीच वळवण्याचा (डायव्हर्जन) प्रस्ताव कधी दिला जातो?",
+    "gold": [
+     "d:forecast:0"
+    ]
+   },
+   {
+    "id": "sq16",
+    "lang": "mixed",
+    "text": "Sion Circle var V/C 0.8 cross jhala tar diversion propose hoto ka?",
+    "gold": [
+     "d:forecast:0",
+     "d:forecast:9"
+    ]
+   },
+   {
+    "id": "sq17",
+    "lang": "en",
+    "text": "How accurate is Chronos-2 against the seasonal-naive baseline in the backtest?",
+    "gold": [
+     "d:forecast:10",
+     "d:forecast:11"
+    ]
+   },
+   {
+    "id": "sq18",
+    "lang": "en",
+    "text": "Is the corridor forecast based on real traffic data?",
+    "gold": [
+     "d:forecast:14"
+    ]
+   },
+   {
+    "id": "sq19",
+    "lang": "mr",
+    "text": "वाहतूक कोंडीचा अंदाज खऱ्या वाहतुकीच्या माहितीवर आधारित आहे का?",
+    "gold": [
+     "d:forecast:14"
+    ]
+   },
+   {
+    "id": "sq20",
+    "lang": "en",
+    "text": "When is the forecasting model freed from GPU memory?",
+    "gold": [
+     "d:forecast:12"
+    ]
+   },
+   {
+    "id": "sq21",
+    "lang": "en",
+    "text": "How is the detour chosen for a forecast diversion?",
+    "gold": [
+     "d:forecast:8"
+    ]
+   },
+   {
+    "id": "sq22",
+    "lang": "hi",
+    "text": "सिंथेटिक ट्रैफ़िक इतिहास में सुबह और शाम की भीड़ कब होती है?",
+    "gold": [
+     "d:forecast:6"
+    ]
+   },
+   {
+    "id": "sq23",
+    "lang": "mr",
+    "text": "फील्ड अधिकाऱ्याने मराठीत बोलून अहवाल दिला तर काय होते?",
+    "gold": [
+     "d:speech:0"
+    ]
+   },
+   {
+    "id": "sq24",
+    "lang": "hi",
+    "text": "फ़ील्ड अधिकारी मराठी में बोलकर रिपोर्ट दे तो क्या होता है?",
+    "gold": [
+     "d:speech:0"
+    ]
+   },
+   {
+    "id": "sq25",
+    "lang": "en",
+    "text": "What word error rate and place accuracy did the Marathi voice reports reach?",
+    "gold": [
+     "d:speech:9",
+     "d:speech:5"
+    ]
+   },
+   {
+    "id": "sq26",
+    "lang": "mixed",
+    "text": "Marathi voice report sathi whisper turbo ka nahi ghetla?",
+    "gold": [
+     "d:speech:6"
+    ]
+   },
+   {
+    "id": "sq27",
+    "lang": "mr",
+    "text": "कॅमेऱ्याच्या फोटोवरून रस्त्याच्या कोणत्या स्थिती ओळखता येतात?",
+    "gold": [
+     "d:vision:0"
+    ]
+   },
+   {
+    "id": "sq28",
+    "lang": "en",
+    "text": "How accurate was the camera road-state reader in its evaluation?",
+    "gold": [
+     "d:vision:3"
+    ]
+   },
+   {
+    "id": "sq29",
+    "lang": "en",
+    "text": "Why test a signal-timing change in a twin before proposing it?",
+    "gold": [
+     "d:twin:0",
+     "d:twin:2"
+    ]
+   },
+   {
+    "id": "sq30",
+    "lang": "mr",
+    "text": "सिग्नलच्या वेळेतील बदलाचा प्रस्ताव कधी रद्द केला जातो?",
+    "gold": [
+     "d:twin:2",
+     "d:twin:3"
+    ]
+   },
+   {
+    "id": "sq31",
+    "lang": "en",
+    "text": "Does the language model choose the signal timing?",
+    "gold": [
+     "d:twin:6"
+    ]
+   },
+   {
+    "id": "sq32",
+    "lang": "en",
+    "text": "Which baselines are signal proposals compared against?",
+    "gold": [
+     "d:twin:5"
+    ]
+   },
+   {
+    "id": "sq33",
+    "lang": "mr",
+    "text": "रुग्णवाहिका पोहोचण्याच्या किती आधी ग्रीन कॉरिडॉर उघडतो?",
+    "gold": [
+     "p:doctrine_note:en",
+     "p:doctrine_note:mr",
+     "p:doctrine_note:hi"
+    ]
+   },
+   {
+    "id": "sq34",
+    "lang": "en",
+    "text": "How early does the green corridor open before an ambulance reaches a junction?",
+    "gold": [
+     "p:doctrine_note:en",
+     "p:doctrine_note:mr",
+     "p:doctrine_note:hi"
+    ]
+   },
+   {
+    "id": "sq35",
+    "lang": "hi",
+    "text": "मैराथन के दौरान सड़क कब तक बंद रहती है?",
+    "gold": [
+     "p:consequence_race:en",
+     "p:consequence_race:mr",
+     "p:consequence_race:hi"
+    ]
+   },
+   {
+    "id": "sq36",
+    "lang": "mr",
+    "text": "स्टेडियममधून गर्दी बाहेर पडताना वाहने कशी सोडली जातात?",
+    "gold": [
+     "p:consequence_egress_surge:en",
+     "p:consequence_egress_surge:mr",
+     "p:consequence_egress_surge:hi"
+    ]
+   },
+   {
+    "id": "sq37",
+    "lang": "en",
+    "text": "What should I do if there is no signed alternate route?",
+    "gold": [
+     "p:card_alt_none:en",
+     "p:card_alt_none:mr",
+     "p:card_alt_none:hi"
+    ]
+   },
+   {
+    "id": "sq38",
+    "lang": "mr",
+    "text": "कंट्रोल रूमने विनंती स्थगित ठेवली तर रुग्णवाहिका चालकाने काय करावे?",
+    "gold": [
+     "p:driver_deferred_body:en",
+     "p:driver_deferred_body:mr",
+     "p:driver_deferred_body:hi"
+    ]
+   },
+   {
+    "id": "sq39",
+    "lang": "en",
+    "text": "Are the advisory drafts sent out automatically?",
+    "gold": [
+     "p:comms_session_only:en",
+     "p:comms_session_only:mr",
+     "p:comms_session_only:hi"
+    ]
+   },
+   {
+    "id": "sq40",
+    "lang": "mr",
+    "text": "मिरवणूक जात असताना चौक बंद असतो का?",
+    "gold": [
+     "p:consequence_procession:en",
+     "p:consequence_procession:mr",
+     "p:consequence_procession:hi"
+    ]
+   },
+   {
+    "id": "sq41",
+    "lang": "hi",
+    "text": "शिवाजी पार्क की परेड के समय ट्रैफ़िक कैसे रोका जाता है?",
+    "gold": [
+     "p:consequence_ceremonial:en",
+     "p:consequence_ceremonial:mr",
+     "p:consequence_ceremonial:hi"
+    ]
+   },
+   {
+    "id": "sq42",
+    "lang": "mixed",
+    "text": "Road work chalu aahe, ek lane madhun gaadi jail ka?",
+    "gold": [
+     "p:consequence_work_zone:en",
+     "p:consequence_work_zone:mr",
+     "p:consequence_work_zone:hi"
+    ]
+   },
+   {
+    "id": "sq43",
+    "lang": "mr",
+    "text": "साचलेल्या पाण्यात विजेच्या खांबांबाबत कोणती खबरदारी घ्यावी?",
+    "gold": [
+     "r:hy_adv_mr",
+     "r:hy_adv_en",
+     "r:hy_wire",
+     "d:hydro:23"
+    ]
+   },
+   {
+    "id": "sq44",
+    "lang": "mixed",
+    "text": "Paani saachla asel tar electric pole la haat lavu naka, advisory madhe kay lihila aahe?",
+    "gold": [
+     "r:hy_adv_mr",
+     "r:hy_adv_en",
+     "r:hy_wire",
+     "d:hydro:23"
+    ]
+   },
+   {
+    "id": "sq45",
+    "lang": "en",
+    "text": "Who is asked to isolate the street-light supply on a waterlogged road?",
+    "gold": [
+     "r:hy_wire"
+    ]
+   },
+   {
+    "id": "sq46",
+    "lang": "hi",
+    "text": "जलभराव वाली सड़क से एम्बुलेंस कितनी देर और निकल सकती है?",
+    "gold": [
+     "r:hy_amb",
+     "d:hydro:13"
+    ]
+   }
+  ]
+ },
+ "osint": {
+  "headlines": [
+   {
+    "id": "h00",
+    "event": "e01",
+    "lang": "en",
+    "text": "Waterlogging at Hindmata after overnight downpour, traffic crawls on Dr Ambedkar Road"
+   },
+   {
+    "id": "h01",
+    "event": "e01",
+    "lang": "mr",
+    "text": "रात्रभर पावसाने हिंदमाता परिसरात पाणी साचले, डॉ. आंबेडकर मार्गावर वाहतूक मंदावली"
+   },
+   {
+    "id": "h02",
+    "event": "e01",
+    "lang": "mixed",
+    "text": "Hindmata la paani bharla, Ambedkar Road var gaadi pudhe jat nahi"
+   },
+   {
+    "id": "h03",
+    "event": "e02",
+    "lang": "en",
+    "text": "Bus breaks down on Bandra–Worli Sea Link, long queues in evening rush"
+   },
+   {
+    "id": "h04",
+    "event": "e02",
+    "lang": "mr",
+    "text": "वांद्रे–वरळी सागरी सेतूवर बस बंद पडली, संध्याकाळी मोठी वाहतूक कोंडी"
+   },
+   {
+    "id": "h05",
+    "event": "e02",
+    "lang": "hi",
+    "text": "बांद्रा–वर्ली सी लिंक पर बस खराब, शाम को लंबा जाम"
+   },
+   {
+    "id": "h06",
+    "event": "e03",
+    "lang": "en",
+    "text": "Fire breaks out at a godown near Kalbadevi; ten fire tenders rushed"
+   },
+   {
+    "id": "h07",
+    "event": "e03",
+    "lang": "mr",
+    "text": "काळबादेवीजवळ गोदामाला आग, घटनास्थळी अग्निशमन दलाचे दहा बंब"
+   },
+   {
+    "id": "h08",
+    "event": "e04",
+    "lang": "en",
+    "text": "Tree uprooted on Marine Drive after storm, both carriageways blocked"
+   },
+   {
+    "id": "h09",
+    "event": "e04",
+    "lang": "mr",
+    "text": "वादळात मरीन ड्राइव्हवर झाड उन्मळून पडले, दोन्ही बाजूंचे रस्ते बंद"
+   },
+   {
+    "id": "h10",
+    "event": "e05",
+    "lang": "en",
+    "text": "Signal failure at Sion Circle causes long tailback on Eastern Express Highway"
+   },
+   {
+    "id": "h11",
+    "event": "e05",
+    "lang": "mr",
+    "text": "सायन सर्कलला सिग्नल बिघडला, पूर्व द्रुतगती महामार्गावर लांब रांगा"
+   },
+   {
+    "id": "h12",
+    "event": "e06",
+    "lang": "en",
+    "text": "Local trains suspended after tracks flood; crowds swell at Dadar station"
+   },
+   {
+    "id": "h13",
+    "event": "e06",
+    "lang": "mr",
+    "text": "रुळांवर पाणी साचल्याने लोकल सेवा ठप्प, दादर स्थानकात प्रचंड गर्दी"
+   },
+   {
+    "id": "h14",
+    "event": "e06",
+    "lang": "hi",
+    "text": "पटरियों पर पानी भरने से लोकल ट्रेनें बंद, दादर स्टेशन पर भारी भीड़"
+   },
+   {
+    "id": "h15",
+    "event": "e07",
+    "lang": "en",
+    "text": "Ganeshotsav crowd: Lalbaugcha Raja sees record footfall on the weekend"
+   },
+   {
+    "id": "h16",
+    "event": "e07",
+    "lang": "mr",
+    "text": "आठवड्याच्या शेवटी लालबागचा राजाच्या दर्शनाला विक्रमी गर्दी"
+   },
+   {
+    "id": "h17",
+    "event": "e08",
+    "lang": "en",
+    "text": "Heavy vehicles barred from city roads on visarjan day, says traffic police"
+   },
+   {
+    "id": "h18",
+    "event": "e08",
+    "lang": "mr",
+    "text": "विसर्जनाच्या दिवशी शहरातील रस्त्यांवर अवजड वाहनांना बंदी, वाहतूक पोलिसांची माहिती"
+   },
+   {
+    "id": "h19",
+    "event": "e09",
+    "lang": "en",
+    "text": "Gokhale Bridge approach jammed as SV Road crawls in Andheri"
+   },
+   {
+    "id": "h20",
+    "event": "e09",
+    "lang": "mr",
+    "text": "गोखले पुलाच्या तोंडाशी कोंडी, अंधेरीत एस. व्ही. रोडवर वाहनांच्या लांब रांगा"
+   },
+   {
+    "id": "h21",
+    "event": "e10",
+    "lang": "en",
+    "text": "Knee-deep water in Milan Subway; buses stranded on SV Road"
+   },
+   {
+    "id": "h22",
+    "event": "e10",
+    "lang": "mr",
+    "text": "मिलन सबवेत गुडघाभर पाणी, एस. व्ही. रोडवर बस अडकल्या"
+   },
+   {
+    "id": "h23",
+    "event": "e11",
+    "lang": "en",
+    "text": "Mumbai Marathon on Sunday: Marine Drive, Sea Link closed till 10.30 am"
+   },
+   {
+    "id": "h24",
+    "event": "e11",
+    "lang": "mr",
+    "text": "रविवारी मुंबई मॅरेथॉन, सकाळी साडेदहापर्यंत मरीन ड्राइव्ह व सागरी सेतू बंद"
+   },
+   {
+    "id": "h25",
+    "event": "e12",
+    "lang": "en",
+    "text": "Devotees throng Mount Mary in Bandra as the fair begins"
+   },
+   {
+    "id": "h26",
+    "event": "e12",
+    "lang": "mr",
+    "text": "जत्रा सुरू होताच वांद्र्यातील माउंट मेरी परिसरात भाविकांची गर्दी"
+   },
+   {
+    "id": "h27",
+    "event": "e12",
+    "lang": "hi",
+    "text": "मेला शुरू होते ही बांद्रा के माउंट मेरी में श्रद्धालुओं की भीड़"
+   },
+   {
+    "id": "h28",
+    "event": "e13",
+    "lang": "en",
+    "text": "Metro services hit between Acharya Atre Chowk and Siddhivinayak after power disruption"
+   },
+   {
+    "id": "h29",
+    "event": "e13",
+    "lang": "mr",
+    "text": "वीजपुरवठा खंडित झाल्याने आचार्य अत्रे चौक ते सिद्धिविनायकदरम्यान मेट्रो सेवा विस्कळीत"
+   },
+   {
+    "id": "h30",
+    "event": "e14",
+    "lang": "en",
+    "text": "Heavy rain at high tide: BMC outfalls shut, pumps run at full capacity"
+   },
+   {
+    "id": "h31",
+    "event": "e14",
+    "lang": "mr",
+    "text": "भरतीच्या वेळी मुसळधार पाऊस, महापालिकेने मुखे बंद केली, पंप पूर्ण क्षमतेने सुरू"
+   },
+   {
+    "id": "h32",
+    "event": "e15",
+    "lang": "en",
+    "text": "Crowds on Marine Drive for New Year's Eve; vehicles stopped after 9 pm"
+   },
+   {
+    "id": "h33",
+    "event": "e15",
+    "lang": "mr",
+    "text": "नववर्षाच्या स्वागतासाठी मरीन ड्राइव्हवर जनसागर, रात्री नऊनंतर वाहतूक बंद"
+   },
+   {
+    "id": "h34",
+    "event": "e16",
+    "lang": "en",
+    "text": "Overturned truck on Western Express Highway near Vile Parle slows airport traffic"
+   },
+   {
+    "id": "h35",
+    "event": "e16",
+    "lang": "mr",
+    "text": "विलेपार्लेजवळ पश्चिम द्रुतगती महामार्गावर ट्रक उलटल्याने विमानतळाकडील वाहतूक मंदावली"
+   },
+   {
+    "id": "h36",
+    "event": "n01",
+    "lang": "en",
+    "text": "Bandra–Worli Sea Link to get new LED lighting, says MSRDC"
+   },
+   {
+    "id": "h37",
+    "event": "n02",
+    "lang": "en",
+    "text": "Fire at a shop near Santacruz market brought under control"
+   },
+   {
+    "id": "h38",
+    "event": "n03",
+    "lang": "mr",
+    "text": "दादर स्थानकात नवा सरकता जिना सुरू"
+   },
+   {
+    "id": "h39",
+    "event": "n04",
+    "lang": "en",
+    "text": "Waterlogging at Andheri Subway after heavy rain; SV Road affected"
+   },
+   {
+    "id": "h40",
+    "event": "n05",
+    "lang": "en",
+    "text": "Signal upgrade work at Sion Circle to begin next month"
+   },
+   {
+    "id": "h41",
+    "event": "n06",
+    "lang": "mr",
+    "text": "मरीन ड्राइव्हवर नौदल दिनाच्या संचलनाची रंगीत तालीम"
+   },
+   {
+    "id": "h42",
+    "event": "n07",
+    "lang": "en",
+    "text": "Acharya Atre Chowk junction to be redesigned, BMC approves plan"
+   },
+   {
+    "id": "h43",
+    "event": "n08",
+    "lang": "en",
+    "text": "Tree falls on Pedder Road after squall, one lane blocked"
+   },
+   {
+    "id": "h44",
+    "event": "n09",
+    "lang": "mr",
+    "text": "लालबाग परिसरात रस्ते दुरुस्तीचे काम सुरू"
+   },
+   {
+    "id": "h45",
+    "event": "n10",
+    "lang": "en",
+    "text": "Truck overturns on Eastern Express Highway near Mulund, Thane-bound traffic hit"
+   },
+   {
+    "id": "h46",
+    "event": "n11",
+    "lang": "en",
+    "text": "Bus breaks down on the Eastern Freeway, Wadala-bound traffic slow"
+   },
+   {
+    "id": "h47",
+    "event": "n12",
+    "lang": "mr",
+    "text": "लालबाग चौकात सिग्नल बिघडला, डॉ. आंबेडकर मार्गावर कोंडी"
+   },
+   {
+    "id": "h48",
+    "event": "n13",
+    "lang": "mr",
+    "text": "नाताळच्या संध्याकाळी मरीन ड्राइव्हवर गर्दी, रोषणाई पाहण्यासाठी लोकांचा ओघ"
+   },
+   {
+    "id": "h49",
+    "event": "n14",
+    "lang": "en",
+    "text": "CSMT crowds swell after local trains cancelled on the Harbour line"
+   },
+   {
+    "id": "h50",
+    "event": "n15",
+    "lang": "hi",
+    "text": "लालबाग के गणेश पंडाल के पास दुकान में आग, कोई घायल नहीं"
+   },
+   {
+    "id": "h51",
+    "event": "f01",
+    "lang": "en",
+    "text": "Car crashes into three vehicles near Karnavati Club on SG Highway; 3 injured"
+   },
+   {
+    "id": "h52",
+    "event": "f01",
+    "lang": "en",
+    "text": "Multi-vehicle crash on SG Highway near Prahlad Nagar leaves three injured"
+   },
+   {
+    "id": "h53",
+    "event": "f01",
+    "lang": "en",
+    "text": "SG Highway accident: vehicles collided near Prahlad Nagar, one lane blocked"
+   },
+   {
+    "id": "h54",
+    "event": "f01",
+    "lang": "en",
+    "text": "Three injured after car rammed vehicles on SG Highway near Karnavati Club"
+   }
+  ]
+ }
+}

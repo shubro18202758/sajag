@@ -1,0 +1,54 @@
+{
+ "articles": [
+  {
+   "url": "https://news-a.example/city/mumbai/library-wing-opens-at-dadar",
+   "url_mobile": "",
+   "title": "Shri Vimal Fixturebhai inaugurates a public library wing at Dadar",
+   "seendate": "20261020T110000Z",
+   "socialimage": "",
+   "domain": "news-a.example",
+   "language": "English",
+   "sourcecountry": "India"
+  },
+  {
+   "url": "https://news-b.example/maharashtra/mumbai/library-plan-gets-ward-nod",
+   "url_mobile": "",
+   "title": "Vimal Fixturebhai's library plan gets a nod from the ward committee",
+   "seendate": "20261020T111500Z",
+   "socialimage": "",
+   "domain": "news-b.example",
+   "language": "English",
+   "sourcecountry": "India"
+  },
+  {
+   "url": "https://news-a.example/city/mumbai/retired-teacher-donates-books-matunga",
+   "url_mobile": "",
+   "title": "80-year-old retired teacher donates 500 books to a Matunga school",
+   "seendate": "20261020T093000Z",
+   "socialimage": "",
+   "domain": "news-a.example",
+   "language": "English",
+   "sourcecountry": "India"
+  },
+  {
+   "url": "https://news-b.example/marathi/mumbai/new-best-bus-route",
+   "url_mobile": "",
+   "title": "मुंबईत नवीन बेस्ट बस मार्ग सुरू",
+   "seendate": "20261020T081500Z",
+   "socialimage": "",
+   "domain": "news-b.example",
+   "language": "Marathi",
+   "sourcecountry": "India"
+  },
+  {
+   "url": "https://news-b.example/hindi/mumbai/new-best-bus-service",
+   "url_mobile": "",
+   "title": "मुंबई में नई बेस्ट बस सेवा शुरू",
+   "seendate": "20261020T080000Z",
+   "socialimage": "",
+   "domain": "news-b.example",
+   "language": "Hindi",
+   "sourcecountry": "India"
+  }
+ ]
+}

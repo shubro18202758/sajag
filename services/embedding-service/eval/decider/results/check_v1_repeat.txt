@@ -1,0 +1,13 @@
+[KOLKATA-ERA: measured on the earlier Kolkata request set; not re-run on the Mumbai set. See KOLKATA_ERA.md.]
+reference v1-27b-live:served (pplx-decider-v1-27b): wall p50/p95 1292.4/2097.9 ms, labelled 23/26, gated 0.6
+
+v1-27b-live-repeat:served: wall p50/p95 580.8/1042.9 ms, labelled 3/3, gated 0.6, peak alloc None GiB, load None s
+  choice   n=4   agree=1.0 mean|dp|=0.0
+  noul     n=3   agree=1.0 mean|dp|=0.0
+  score    n=2   agree=1.0 mean|dp|=0.0 mean|dvalue|=0.0
+    escort_departure/departure                 n=1   agree=1.0 |dp|=0.0
+    post_clearance/restoration_posture         n=1   agree=1.0 |dp|=0.0
+    probe/probe                                n=1   agree=1.0 |dp|=0.0 ref_P(true)=0.3491 cand_P(true)=0.3491
+    probe/readiness                            n=2   agree=1.0 |dv|=0.0 ref_v=0.3812 cand_v=0.3812
+    probe/reroute                              n=2   agree=1.0 |dp|=0.0
+    probe/urgency                              n=2   agree=1.0 |dp|=0.0 ref_P(true)=0.5422 cand_P(true)=0.5422

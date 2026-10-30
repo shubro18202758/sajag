@@ -1,0 +1,5 @@
+{
+	"style": ["src/lib/v3/field/**", "src/lib/v3/object/**", "src/lib/v3/public/**"],
+	"glyph": ["src/lib/v3/field/**", "src/lib/v3/object/**", "src/lib/v3/public/**"],
+	"copy": ["src/lib/v3/field/packs.field.ts", "src/lib/v3/field/packs.field.core.ts"]
+}

@@ -1,0 +1,139 @@
+{
+ "_sample": {
+  "pack": "Kolkata reference pack (cities/kolkata/, the second City Pack kept in the repository). Made on 28 Oct 2026, before the platform moved to Mumbai, as 'source' says; NOT a Mumbai capture. The Mumbai version of this file is pending.",
+  "source": "scripts/scenario_library.json (format sajag/scenario-library/1), generated from the City Pack by scripts/city_build.py; one scenario as committed",
+  "label": "SIMULATED: a scenario the event emulator and the twin replay, not a recorded event"
+ },
+ "scenario_id": "durga_puja_north",
+ "name": "Durga Puja Night — Pandal Crowds and Ambulance Access",
+ "description": "FLAGSHIP. 21:30 on Maha Ashtami (30 Sep 2025, between Saptami and Navami), the busiest stretch of a Puja night. In the North Kolkata belt pandal-hoppers spill off the footpaths around Kumartuli Park and Bagbazar Sarbojanin, along Bidhan Sarani (Hatibagan), around College Square and Santosh Mitra Square; in the South belt the crowd around Deshapriya Park and Ekdalia Evergreen fills Rash Behari Avenue towards Gariahat. Goods vehicles are kept off the pandal belts for the night (the restriction is modelled as fewer heavy-vehicle breakdowns, breakdown x0.6) and food stalls load the kerbs (market x2.0). Ten minutes in, an ambulance (108) on an emergency call asks for a green corridor from the riverside north of Howrah Bridge up Strand Bank Road past Kumartuli, along Bagbazar Street to Shyambazar and down Bidhan Sarani to Kolkata Medical College. Closure policy signal_hold at 45 s: the crowd is regulated, not stopped. Two Kolkata Traffic Police beats and the ambulance are animated (EMULATED units). Crowd loads and speeds are modelled assumptions; the AI proposes each hold and a named officer decides.",
+ "category": "multi_event",
+ "route_segment_ids": [
+  1061,
+  1060,
+  1058
+ ],
+ "departure_time": "2025-09-30T21:30:00+05:30",
+ "vvip_class": "X",
+ "closure_policy": {
+  "advance_closure_sec": 45,
+  "closure_type": "signal_hold"
+ },
+ "horizon_min": 60,
+ "n_replications": 12,
+ "seed": 202509301,
+ "convoy_speed_kmh": 20.0,
+ "weather": {},
+ "event_overrides": {
+  "market": 2.0,
+  "breakdown": 0.6,
+  "ambulance": 1.0
+ },
+ "forced_events": [
+  {
+   "type": "rally_spillover",
+   "segment_id": 1060,
+   "start_sec": 0.0,
+   "duration_sec": 3600.0,
+   "severity": 0.95,
+   "label": "Bagbazar Sarbojanin — pandal crowd spills onto Bagbazar Street",
+   "extra_demand_veh_h": 950.0
+  },
+  {
+   "type": "rally_spillover",
+   "segment_id": 1061,
+   "start_sec": 300.0,
+   "duration_sec": 3300.0,
+   "severity": 0.85,
+   "label": "Kumartuli Park — queues along Strand Bank Road",
+   "extra_demand_veh_h": 800.0
+  },
+  {
+   "type": "rally_spillover",
+   "segment_id": 1058,
+   "start_sec": 0.0,
+   "duration_sec": 3600.0,
+   "severity": 0.85,
+   "label": "Bidhan Sarani (Hatibagan) — pandal-hoppers between the North Kolkata pandals",
+   "extra_demand_veh_h": 850.0
+  },
+  {
+   "type": "market_spillover",
+   "segment_id": 1055,
+   "start_sec": 0.0,
+   "duration_sec": 3600.0,
+   "severity": 0.7,
+   "label": "College Square — food stalls and queues by the pandal"
+  },
+  {
+   "type": "rally_spillover",
+   "segment_id": 1063,
+   "start_sec": 600.0,
+   "duration_sec": 3000.0,
+   "severity": 0.8,
+   "label": "Santosh Mitra Square — crowd overflow towards Sealdah",
+   "extra_demand_veh_h": 800.0
+  },
+  {
+   "type": "rally_spillover",
+   "segment_id": 1032,
+   "start_sec": 0.0,
+   "duration_sec": 3600.0,
+   "severity": 0.95,
+   "label": "Deshapriya Park — crowd fills Rash Behari Avenue (South belt)",
+   "extra_demand_veh_h": 950.0
+  },
+  {
+   "type": "rally_spillover",
+   "segment_id": 1033,
+   "start_sec": 900.0,
+   "duration_sec": 2700.0,
+   "severity": 0.85,
+   "label": "Ekdalia Evergreen — queues towards Gariahat (South belt)",
+   "extra_demand_veh_h": 850.0
+  },
+  {
+   "type": "market_spillover",
+   "segment_id": 1033,
+   "start_sec": 0.0,
+   "duration_sec": 3600.0,
+   "severity": 0.7,
+   "label": "Gariahat — late-night Puja shoppers and stalls"
+  },
+  {
+   "type": "emergency_vehicle",
+   "segment_id": 1061,
+   "start_sec": 600.0,
+   "duration_sec": 732.0,
+   "severity": 0.9,
+   "label": "ambulance (108) green-corridor window — Strand Bank Road past Kumartuli"
+  },
+  {
+   "type": "emergency_vehicle",
+   "segment_id": 1060,
+   "start_sec": 1211.7,
+   "duration_sec": 301.0,
+   "severity": 0.9,
+   "label": "ambulance (108) green-corridor window — Bagbazar Street"
+  },
+  {
+   "type": "emergency_vehicle",
+   "segment_id": 1058,
+   "start_sec": 1392.8,
+   "duration_sec": 647.0,
+   "severity": 0.9,
+   "label": "ambulance (108) green-corridor window — Bidhan Sarani to Kolkata Medical College"
+  }
+ ],
+ "expected_features": [
+  "multi_event_composition",
+  "festival_crowd",
+  "pandal_crowd_spill",
+  "goods_vehicle_restriction",
+  "green_corridor_request",
+  "signal_hold_regulated_passage"
+ ],
+ "event_kind": "mass_gathering",
+ "crowd_class": "EXTREME",
+ "duration_class": "hours"
+}

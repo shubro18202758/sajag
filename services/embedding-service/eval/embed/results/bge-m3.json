@@ -1,0 +1,19 @@
+{
+ "candidate": "bge-m3",
+ "repo": "/home/sandy050405/models/bge-m3",
+ "family": "dense",
+ "dtype": "fp32",
+ "device": "cpu",
+ "load_s": 35.0,
+ "weights_gib": 0.0,
+ "peak_alloc_gib": null,
+ "reserved_gib": null,
+ "dim": 1024,
+ "timing": {
+  "query_ms_p50": 925.06,
+  "query_ms_p95": 2175.18,
+  "memory_doc_ms": 217.92,
+  "sop_doc_ms": 764.64
+ },
+ "at": "2026-10-30T15:51:50+0530"
+}

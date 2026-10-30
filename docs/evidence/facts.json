@@ -1,0 +1,109 @@
+{
+ "_how": "One place for every number that exists only after the merge. Fill the \"values\" map (replace each \"{{KEY}}\" with the real value, e.g. \"TESTS_PY\": \"6,512\"); docs/evidence/make_evidence.py and docs/deck/make_deck.py both read it. A value left as its own {{KEY}} is printed as-is (highlighted) and listed on stderr when you build. make_evidence.py --fill-impact scripts/impact_results.json fills the IMPACT_* values from a Mumbai impact run.",
+ "values": {
+  "TESTS_PY": "6,443",
+  "TESTS_RUST": "121",
+  "GATES": "69",
+  "SUITES": "46",
+  "STRINGS_EN": "4,939",
+  "SVELTE_FILES": "1,040",
+  "READY": "12/12",
+  "REPLAY_DATE": "18–19 August 2025",
+  "REPLAY_RESULT": "with the rain gauges' observed totals, the model flagged 9 of the 12 places reported flooded on its network (King's Circle, Andheri Subway, Gandhi Market, Byculla, Dadar TT, Vile Parle, Hindmata, Chembur, Kurla by the Mithi) and missed Sion, Khar and Goregaon. Its own flag came after the first news report at most places (median 51 minutes late: the bucket model fills slowly); with the observed rain as a perfect 2-hour nowcast (hindsight) it would have led the first report at 8 of the 9 (median 69 minutes). The Open-Meteo archive carried a third of the gauges' rain and flagged nothing, which is the case for a live rain-gauge feed. A second replay, 26 May 2025, flagged 5 of 15 reported places.",
+  "REPLAY_LEAD": "median 69 minutes ahead of the first report with a perfect 2-hour nowcast (hindsight); median 51 minutes late on the bucket model alone",
+  "NET_JUNCTIONS": "72",
+  "NET_SEGMENTS": "86",
+  "NET_KM": "202",
+  "GAZETTEER_PLACES": "234",
+  "SPEECH_RESULT": "Marathi WER 7.1 %, place right in 56 of 56; Hindi WER 14.0 %, 50 of 52 (IndicConformer, synthetic voices); English WER 10.2 % (Whisper turbo)",
+  "VISION_RESULT": "11 of 12 stills right (10 taken in Mumbai); 11 of 11 person, plate and road probes passed",
+  "IMPACT_FACTOR_CENTRAL": "100",
+  "IMPACT_FACTOR_LOW": "25",
+  "IMPACT_FACTOR_HIGH": "506",
+  "IMPACT_VIP_BASELINE": "192,820",
+  "IMPACT_VIP_PLATFORM": "1,928",
+  "IMPACT_VIP_JUNCTIONS": "10",
+  "IMPACT_VIP_KM": "27.6",
+  "IMPACT_AMB_MINUTES_YEAR": "33,000",
+  "IMPACT_AMB_TRIPS": "12"
+ },
+ "as_of": "30 October 2026",
+ "repo": "github.com/shubro18202758/sajag",
+ "readiness": "the live stack reports READY 12/12",
+ "network": "72 junctions and 86 road segments (202 km) of Mumbai's arterials, subways and sea links from OpenStreetMap; Mantralaya → Mumbai Airport T2 is 27.6 km on it",
+ "gazetteer": "a 234-place gazetteer in English, Marathi and Hindi (BMC wards, police stations, hospitals, stations, subways and low spots, pumping stations, pandals and visarjan points)",
+ "feeds": "Open-Meteo rainfall and air (LIVE), WAQI and OpenAQ air stations (LIVE), NASA FIRMS fire hotspots (LIVE), NDMA Sachet alerts for Maharashtra (LIVE), IMD where reachable, Mumbai news in English, Marathi and Hindi (aggregate only), the Apollo Bunder tide (MODELLED), Copernicus 30 m terrain, BMC storm-water pumps and MTP signal controllers (EMULATED)",
+ "ai_rows": [
+  [
+   "Corridor forecasting",
+   "Chronos-2 (Apache-2.0)",
+   "MAE 0.043 V/C vs 0.095 for the seasonal baseline (−55%); p10–p90 coverage 0.80",
+   "SIMULATED history (Kolkata reference pack) until MTP detector data is connected"
+  ],
+  [
+   "Waterlogging nowcast",
+   "rain × Apollo Bunder tide × DEM × BMC pumps",
+   "Replay of 18–19 August 2025: with the rain gauges' observed totals, the model flagged 9 of the 12 places reported flooded on its network (King's Circle, Andheri Subway, Gandhi Market, Byculla, Dadar TT, Vile Parle, Hindmata, Chembur, Kurla by the Mithi) and missed Sion, Khar and Goregaon. Its own flag came after the first news report at most places (median 51 minutes late: the bucket model fills slowly); with the observed rain as a perfect 2-hour nowcast (hindsight) it would have led the first report at 8 of the 9 (median 69 minutes). The Open-Meteo archive carried a third of the gauges' rain and flagged nothing, which is the case for a live rain-gauge feed. A second replay, 26 May 2025, flagged 5 of 15 reported places.",
+   "observed rain, MODELLED ponding and tide, EMULATED pumps"
+  ],
+  [
+   "Signal-timing twin",
+   "cell-transmission model + Webster / max-pressure",
+   "Bottleneck discharge exact; shockwave speed within 0.2% of theory; every proposal tested against doing nothing",
+   "MODELLED"
+  ],
+  [
+   "Voice (Marathi, Hindi, English)",
+   "AI4Bharat IndicConformer 600M multilingual (Marathi, Hindi), Whisper large-v3-turbo (English), AI4Bharat Indic Parler-TTS",
+   "Marathi WER 7.1 %, place right in 56 of 56; Hindi WER 14.0 %, 50 of 52 (IndicConformer, synthetic voices); English WER 10.2 % (Whisper turbo)",
+   "synthetic and recorded test phrases"
+  ],
+  [
+   "Road state from a still",
+   "Qwen3-VL-8B (Apache-2.0)",
+   "11 of 12 stills right (10 taken in Mumbai); 11 of 11 person, plate and road probes passed",
+   "Commons photos, credited; roads and vehicles only"
+  ],
+  [
+   "Decision support",
+   "pplx-decider-v1.2 (Perplexity, Apache-2.0, 27B)",
+   "Answers in 1.0 s at p95; 22 of 26 labelled decisions on the Kolkata reference pack",
+   "proposals only; an officer decides"
+  ],
+  [
+   "Memory and retrieval",
+   "pplx-embed-context-v1-4b + pplx-embed-v2-late-0.6b (MIT)",
+   "SOP recall@1 0.93 vs 0.71 for bge-m3; cross-script news dedup AUC 0.997 vs 0.56 (word overlap)",
+   "synthetic eval set on the Kolkata reference pack"
+  ],
+  [
+   "Privacy (OSINT)",
+   "PII-Tracer (MIT) + rules",
+   "person recall 0.84 → 0.94; 0 of 122 place names redacted",
+   "synthetic eval set (Kolkata reference pack)"
+  ]
+ ],
+ "ai_note": "Every model runs on the one on-premises computer; numbers come from the services' own evaluation files in the repository (docs/ai/*.md). Rows marked \"Kolkata reference pack\" were measured on the engine's first city and are engine facts, not Mumbai measurements.",
+ "test_rows": [
+  [
+   "Python services (all suites)",
+   "6,443 passed"
+  ],
+  [
+   "signal-ingress (Rust)",
+   "121 passed"
+  ],
+  [
+   "command-deck",
+   "46 unit suites, contract replays, svelte-check 0 errors over 1,040 files, design-token and copy lints (4,939 English strings)"
+  ],
+  [
+   "Total",
+   "69 gates green"
+  ]
+ ],
+ "screens": {
+  "replay": "replay-2025-08-19.jpg",
+  "console_marathi": "home-mr.jpg"
+ }
+}

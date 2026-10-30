@@ -1,0 +1,260 @@
+{
+ "meta": {
+  "note": "SYNTHETIC test gazetteer for osint-common: a small Mumbai place list in the schema of scripts/data/osint_gazetteer.json (canonical_name, surface_forms in English, Marathi and Hindi), so the ethics tests read the same places whatever the repo gazetteer holds. Spellings follow cities/mumbai/landmarks.json; no coordinates (the detector reads names only).",
+  "licence": "test"
+ },
+ "entries": [
+  {
+   "gaz_id": 1,
+   "canonical_name": "Western Express Highway",
+   "feature_type": "road",
+   "surface_forms": [
+    "western express highway",
+    "weh",
+    "पश्चिम द्रुतगती महामार्ग",
+    "वेस्टर्न एक्सप्रेस हाईवे"
+   ]
+  },
+  {
+   "gaz_id": 2,
+   "canonical_name": "Andheri",
+   "feature_type": "neighbourhood",
+   "surface_forms": [
+    "andheri",
+    "अंधेरी"
+   ]
+  },
+  {
+   "gaz_id": 3,
+   "canonical_name": "Andheri Subway",
+   "feature_type": "subway",
+   "surface_forms": [
+    "andheri subway",
+    "अंधेरी सबवे"
+   ]
+  },
+  {
+   "gaz_id": 4,
+   "canonical_name": "Dadar",
+   "feature_type": "neighbourhood",
+   "surface_forms": [
+    "dadar",
+    "दादर"
+   ]
+  },
+  {
+   "gaz_id": 5,
+   "canonical_name": "Dadar TT Circle",
+   "feature_type": "junction",
+   "surface_forms": [
+    "dadar tt circle",
+    "दादर टीटी सर्कल"
+   ]
+  },
+  {
+   "gaz_id": 6,
+   "canonical_name": "Hindmata (Dadar East)",
+   "feature_type": "low_lying_spot",
+   "surface_forms": [
+    "hindmata",
+    "हिंदमाता"
+   ]
+  },
+  {
+   "gaz_id": 7,
+   "canonical_name": "King's Circle (Matunga)",
+   "feature_type": "junction",
+   "surface_forms": [
+    "kings circle",
+    "king's circle",
+    "किंग्ज सर्कल",
+    "किंग्स सर्कल"
+   ]
+  },
+  {
+   "gaz_id": 8,
+   "canonical_name": "Marine Drive",
+   "feature_type": "road",
+   "surface_forms": [
+    "marine drive",
+    "मरीन ड्राइव्ह",
+    "मरीन ड्राइव"
+   ]
+  },
+  {
+   "gaz_id": 9,
+   "canonical_name": "Netaji Subhash Chandra Bose Road",
+   "feature_type": "road",
+   "surface_forms": [
+    "netaji subhash chandra bose road",
+    "ns road"
+   ]
+  },
+  {
+   "gaz_id": 10,
+   "canonical_name": "Dr Babasaheb Ambedkar Road",
+   "feature_type": "road",
+   "surface_forms": [
+    "dr ambedkar road",
+    "dr. ambedkar road",
+    "dr babasaheb ambedkar road"
+   ]
+  },
+  {
+   "gaz_id": 11,
+   "canonical_name": "Senapati Bapat Marg",
+   "feature_type": "road",
+   "surface_forms": [
+    "senapati bapat marg"
+   ]
+  },
+  {
+   "gaz_id": 12,
+   "canonical_name": "Annie Besant Road",
+   "feature_type": "road",
+   "surface_forms": [
+    "annie besant road"
+   ]
+  },
+  {
+   "gaz_id": 13,
+   "canonical_name": "LBS Marg",
+   "feature_type": "road",
+   "surface_forms": [
+    "lbs marg",
+    "l.b.s. marg"
+   ]
+  },
+  {
+   "gaz_id": 14,
+   "canonical_name": "SV Road",
+   "feature_type": "road",
+   "surface_forms": [
+    "sv road",
+    "s.v. road"
+   ]
+  },
+  {
+   "gaz_id": 15,
+   "canonical_name": "Powai",
+   "feature_type": "neighbourhood",
+   "surface_forms": [
+    "powai",
+    "पवई"
+   ]
+  },
+  {
+   "gaz_id": 16,
+   "canonical_name": "Kurla",
+   "feature_type": "neighbourhood",
+   "surface_forms": [
+    "kurla",
+    "कुर्ला"
+   ]
+  },
+  {
+   "gaz_id": 17,
+   "canonical_name": "Ghatkopar",
+   "feature_type": "neighbourhood",
+   "surface_forms": [
+    "ghatkopar",
+    "घाटकोपर"
+   ]
+  },
+  {
+   "gaz_id": 18,
+   "canonical_name": "Khar",
+   "feature_type": "neighbourhood",
+   "surface_forms": [
+    "khar",
+    "खार"
+   ]
+  },
+  {
+   "gaz_id": 19,
+   "canonical_name": "Sion Koliwada",
+   "feature_type": "neighbourhood",
+   "surface_forms": [
+    "sion koliwada",
+    "sion-koliwada"
+   ]
+  },
+  {
+   "gaz_id": 20,
+   "canonical_name": "Bandra Kurla Complex",
+   "feature_type": "neighbourhood",
+   "surface_forms": [
+    "bandra kurla complex",
+    "bkc",
+    "वांद्रे कुर्ला संकुल"
+   ]
+  },
+  {
+   "gaz_id": 21,
+   "canonical_name": "Kalanagar junction",
+   "feature_type": "junction",
+   "surface_forms": [
+    "kalanagar junction",
+    "kalanagar",
+    "कलानगर"
+   ]
+  },
+  {
+   "gaz_id": 22,
+   "canonical_name": "Girgaon Chowpatty",
+   "feature_type": "visarjan_point",
+   "surface_forms": [
+    "girgaon chowpatty",
+    "गिरगाव चौपाटी",
+    "गिरगांव चौपाटी"
+   ]
+  },
+  {
+   "gaz_id": 23,
+   "canonical_name": "Lalbaug",
+   "feature_type": "neighbourhood",
+   "surface_forms": [
+    "lalbaug",
+    "लालबाग"
+   ]
+  },
+  {
+   "gaz_id": 24,
+   "canonical_name": "Mumbai Airport Terminal 2",
+   "feature_type": "terminal",
+   "surface_forms": [
+    "mumbai airport terminal 2",
+    "mumbai airport t2"
+   ]
+  },
+  {
+   "gaz_id": 25,
+   "canonical_name": "Mithi River (Kurla)",
+   "feature_type": "hydro",
+   "surface_forms": [
+    "mithi river",
+    "मिठी नदी"
+   ]
+  },
+  {
+   "gaz_id": 26,
+   "canonical_name": "Bandra-Worli Sea Link",
+   "feature_type": "bridge",
+   "surface_forms": [
+    "bandra worli sea link",
+    "sea link",
+    "वांद्रे वरळी सागरी सेतू"
+   ]
+  },
+  {
+   "gaz_id": 27,
+   "canonical_name": "P D'Mello Road",
+   "feature_type": "road",
+   "surface_forms": [
+    "p d'mello road",
+    "p. d'mello road",
+    "pd mello road"
+   ]
+  }
+ ]
+}

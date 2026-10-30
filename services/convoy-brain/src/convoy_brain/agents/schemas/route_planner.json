@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RoutePlannerRecommendation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "primary_route",
+    "alternate_routes",
+    "rejected_routes",
+    "overall_reasoning",
+    "confidence"
+  ],
+  "properties": {
+    "primary_route": {
+      "anyOf": [
+        { "type": "null" },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["route_id", "reason"],
+          "properties": {
+            "route_id": { "type": ["string", "integer"], "maxLength": 32 },
+            "reason": { "type": "string", "maxLength": 160 }
+          }
+        }
+      ]
+    },
+    "alternate_routes": {
+      "type": "array",
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["route_id", "reason"],
+        "properties": {
+          "route_id": { "type": ["string", "integer"], "maxLength": 32 },
+          "reason": { "type": "string", "maxLength": 160 }
+        }
+      }
+    },
+    "rejected_routes": {
+      "type": "array",
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["route_id", "reason"],
+        "properties": {
+          "route_id": { "type": ["string", "integer"], "maxLength": 32 },
+          "reason": { "type": "string", "maxLength": 160 }
+        }
+      }
+    },
+    "overall_reasoning": { "type": "string", "maxLength": 600 },
+    "confidence": { "type": "string", "enum": ["high", "medium", "low"] }
+  }
+}

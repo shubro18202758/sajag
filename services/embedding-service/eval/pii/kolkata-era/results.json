@@ -1,0 +1,2425 @@
+{
+ "set": "pii_eval_set.synthetic.json",
+ "synthetic": true,
+ "n_items": 120,
+ "langs": {
+  "en": 40,
+  "mr": 38,
+  "hi": 16,
+  "mr-Latn": 26
+ },
+ "gold": {
+  "place": 122,
+  "office": 13,
+  "person": 51,
+  "age": 7,
+  "phone": 5,
+  "email": 2,
+  "plate": 3,
+  "public_number": 6
+ },
+ "model_stats": {
+  "model": "perplexity-ai/PII-Tracer@d25c16f",
+  "device": "cuda",
+  "torch": "2.14.0+cu130",
+  "load_seconds": 11.59,
+  "gpu_mem_after_load_gib": 1.11,
+  "gpu_mem_peak_gib": 1.182,
+  "latency_ms_bs1": {
+   "mean": 49.1,
+   "p50": 44.6,
+   "p95": 69.7,
+   "max": 178.1
+  },
+  "batched": {
+   "batch_size": 16,
+   "seconds": 3.244,
+   "ms_per_sentence": 27.0
+  },
+  "batched_equals_single": "114/120"
+ },
+ "rules_seconds": 0.036,
+ "configs": {
+  "rules_shared": {
+   "en": {
+    "person_overlap": {
+     "p": 1.0,
+     "r": 0.267,
+     "f1": 0.421,
+     "pred": 4,
+     "gold": 15
+    },
+    "person_exact": {
+     "p": 0.75,
+     "r": 0.2,
+     "f1": 0.316,
+     "pred": 4,
+     "gold": 15
+    },
+    "person_char_recall": 0.269,
+    "pii_overlap": {
+     "p": 1.0,
+     "r": 0.222,
+     "f1": 0.364,
+     "pred": 4,
+     "gold": 18
+    },
+    "fp_place": "0/44",
+    "fp_office": "0/6",
+    "fp_public_number": "1/2"
+   },
+   "mr": {
+    "person_overlap": {
+     "p": null,
+     "r": 0.0,
+     "f1": null,
+     "pred": 0,
+     "gold": 16
+    },
+    "person_exact": {
+     "p": null,
+     "r": 0.0,
+     "f1": null,
+     "pred": 0,
+     "gold": 16
+    },
+    "person_char_recall": 0.0,
+    "pii_overlap": {
+     "p": null,
+     "r": 0.0,
+     "f1": null,
+     "pred": 0,
+     "gold": 17
+    },
+    "fp_place": "0/35",
+    "fp_office": "0/4",
+    "fp_public_number": "0/2"
+   },
+   "hi": {
+    "person_overlap": {
+     "p": null,
+     "r": 0.0,
+     "f1": null,
+     "pred": 0,
+     "gold": 8
+    },
+    "person_exact": {
+     "p": null,
+     "r": 0.0,
+     "f1": null,
+     "pred": 0,
+     "gold": 8
+    },
+    "person_char_recall": 0.0,
+    "pii_overlap": {
+     "p": null,
+     "r": 0.0,
+     "f1": null,
+     "pred": 0,
+     "gold": 9
+    },
+    "fp_place": "0/14",
+    "fp_office": "0/2",
+    "fp_public_number": "0/2"
+   },
+   "mr-Latn": {
+    "person_overlap": {
+     "p": null,
+     "r": 0.0,
+     "f1": null,
+     "pred": 0,
+     "gold": 12
+    },
+    "person_exact": {
+     "p": null,
+     "r": 0.0,
+     "f1": null,
+     "pred": 0,
+     "gold": 12
+    },
+    "person_char_recall": 0.0,
+    "pii_overlap": {
+     "p": null,
+     "r": 0.0,
+     "f1": null,
+     "pred": 0,
+     "gold": 14
+    },
+    "fp_place": "0/29",
+    "fp_office": "0/1",
+    "fp_public_number": "0/0"
+   },
+   "all": {
+    "person_overlap": {
+     "p": 1.0,
+     "r": 0.078,
+     "f1": 0.145,
+     "pred": 4,
+     "gold": 51
+    },
+    "person_exact": {
+     "p": 0.75,
+     "r": 0.059,
+     "f1": 0.109,
+     "pred": 4,
+     "gold": 51
+    },
+    "person_char_recall": 0.089,
+    "pii_overlap": {
+     "p": 1.0,
+     "r": 0.069,
+     "f1": 0.129,
+     "pred": 4,
+     "gold": 58
+    },
+    "fp_place": "0/122",
+    "fp_office": "0/13",
+    "fp_public_number": "1/6"
+   }
+  },
+  "rules_news": {
+   "en": {
+    "person_overlap": {
+     "p": 0.542,
+     "r": 0.867,
+     "f1": 0.667,
+     "pred": 24,
+     "gold": 15
+    },
+    "person_exact": {
+     "p": 0.5,
+     "r": 0.8,
+     "f1": 0.615,
+     "pred": 24,
+     "gold": 15
+    },
+    "person_char_recall": 0.813,
+    "pii_overlap": {
+     "p": 0.542,
+     "r": 0.722,
+     "f1": 0.619,
+     "pred": 24,
+     "gold": 18
+    },
+    "fp_place": "10/44",
+    "fp_office": "0/6",
+    "fp_public_number": "1/2"
+   },
+   "mr": {
+    "person_overlap": {
+     "p": 0.25,
+     "r": 1.0,
+     "f1": 0.4,
+     "pred": 60,
+     "gold": 16
+    },
+    "person_exact": {
+     "p": 0.0,
+     "r": 0.0,
+     "f1": 0.0,
+     "pred": 60,
+     "gold": 16
+    },
+    "person_char_recall": 1.0,
+    "pii_overlap": {
+     "p": 0.25,
+     "r": 0.941,
+     "f1": 0.395,
+     "pred": 60,
+     "gold": 17
+    },
+    "fp_place": "35/35",
+    "fp_office": "4/4",
+    "fp_public_number": "0/2"
+   },
+   "hi": {
+    "person_overlap": {
+     "p": 0.148,
+     "r": 1.0,
+     "f1": 0.258,
+     "pred": 54,
+     "gold": 8
+    },
+    "person_exact": {
+     "p": 0.056,
+     "r": 0.375,
+     "f1": 0.097,
+     "pred": 54,
+     "gold": 8
+    },
+    "person_char_recall": 1.0,
+    "pii_overlap": {
+     "p": 0.148,
+     "r": 0.889,
+     "f1": 0.254,
+     "pred": 54,
+     "gold": 9
+    },
+    "fp_place": "9/14",
+    "fp_office": "2/2",
+    "fp_public_number": "0/2"
+   },
+   "mr-Latn": {
+    "person_overlap": {
+     "p": 0.6,
+     "r": 0.5,
+     "f1": 0.545,
+     "pred": 10,
+     "gold": 12
+    },
+    "person_exact": {
+     "p": 0.5,
+     "r": 0.417,
+     "f1": 0.455,
+     "pred": 10,
+     "gold": 12
+    },
+    "person_char_recall": 0.527,
+    "pii_overlap": {
+     "p": 0.6,
+     "r": 0.429,
+     "f1": 0.5,
+     "pred": 10,
+     "gold": 14
+    },
+    "fp_place": "5/29",
+    "fp_office": "0/1",
+    "fp_public_number": "0/0"
+   },
+   "all": {
+    "person_overlap": {
+     "p": 0.284,
+     "r": 0.843,
+     "f1": 0.425,
+     "pred": 148,
+     "gold": 51
+    },
+    "person_exact": {
+     "p": 0.135,
+     "r": 0.392,
+     "f1": 0.201,
+     "pred": 148,
+     "gold": 51
+    },
+    "person_char_recall": 0.844,
+    "pii_overlap": {
+     "p": 0.284,
+     "r": 0.741,
+     "f1": 0.41,
+     "pred": 148,
+     "gold": 58
+    },
+    "fp_place": "59/122",
+    "fp_office": "6/13",
+    "fp_public_number": "1/6"
+   }
+  },
+  "rules_social": {
+   "en": {
+    "person_overlap": {
+     "p": 0.288,
+     "r": 1.0,
+     "f1": 0.448,
+     "pred": 52,
+     "gold": 15
+    },
+    "person_exact": {
+     "p": 0.212,
+     "r": 0.733,
+     "f1": 0.328,
+     "pred": 52,
+     "gold": 15
+    },
+    "person_char_recall": 1.0,
+    "pii_overlap": {
+     "p": 0.327,
+     "r": 1.0,
+     "f1": 0.493,
+     "pred": 55,
+     "gold": 18
+    },
+    "fp_place": "33/44",
+    "fp_office": "3/6",
+    "fp_public_number": "1/2"
+   },
+   "mr": {
+    "person_overlap": {
+     "p": 0.25,
+     "r": 1.0,
+     "f1": 0.4,
+     "pred": 60,
+     "gold": 16
+    },
+    "person_exact": {
+     "p": 0.0,
+     "r": 0.0,
+     "f1": 0.0,
+     "pred": 60,
+     "gold": 16
+    },
+    "person_char_recall": 1.0,
+    "pii_overlap": {
+     "p": 0.25,
+     "r": 0.941,
+     "f1": 0.395,
+     "pred": 60,
+     "gold": 17
+    },
+    "fp_place": "35/35",
+    "fp_office": "4/4",
+    "fp_public_number": "0/2"
+   },
+   "hi": {
+    "person_overlap": {
+     "p": 0.148,
+     "r": 1.0,
+     "f1": 0.258,
+     "pred": 54,
+     "gold": 8
+    },
+    "person_exact": {
+     "p": 0.056,
+     "r": 0.375,
+     "f1": 0.097,
+     "pred": 54,
+     "gold": 8
+    },
+    "person_char_recall": 1.0,
+    "pii_overlap": {
+     "p": 0.164,
+     "r": 1.0,
+     "f1": 0.281,
+     "pred": 55,
+     "gold": 9
+    },
+    "fp_place": "9/14",
+    "fp_office": "2/2",
+    "fp_public_number": "0/2"
+   },
+   "mr-Latn": {
+    "person_overlap": {
+     "p": 0.379,
+     "r": 0.917,
+     "f1": 0.537,
+     "pred": 29,
+     "gold": 12
+    },
+    "person_exact": {
+     "p": 0.276,
+     "r": 0.667,
+     "f1": 0.39,
+     "pred": 29,
+     "gold": 12
+    },
+    "person_char_recall": 0.936,
+    "pii_overlap": {
+     "p": 0.419,
+     "r": 0.929,
+     "f1": 0.578,
+     "pred": 31,
+     "gold": 14
+    },
+    "fp_place": "20/29",
+    "fp_office": "0/1",
+    "fp_public_number": "0/0"
+   },
+   "all": {
+    "person_overlap": {
+     "p": 0.251,
+     "r": 0.98,
+     "f1": 0.4,
+     "pred": 195,
+     "gold": 51
+    },
+    "person_exact": {
+     "p": 0.113,
+     "r": 0.431,
+     "f1": 0.179,
+     "pred": 195,
+     "gold": 51
+    },
+    "person_char_recall": 0.987,
+    "pii_overlap": {
+     "p": 0.274,
+     "r": 0.966,
+     "f1": 0.426,
+     "pred": 201,
+     "gold": 58
+    },
+    "fp_place": "97/122",
+    "fp_office": "9/13",
+    "fp_public_number": "1/6"
+   }
+  },
+  "model_raw": {
+   "en": {
+    "person_overlap": {
+     "p": 0.538,
+     "r": 0.867,
+     "f1": 0.664,
+     "pred": 26,
+     "gold": 15
+    },
+    "person_exact": {
+     "p": 0.192,
+     "r": 0.333,
+     "f1": 0.244,
+     "pred": 26,
+     "gold": 15
+    },
+    "person_char_recall": 0.846,
+    "pii_overlap": {
+     "p": 0.562,
+     "r": 0.944,
+     "f1": 0.705,
+     "pred": 32,
+     "gold": 18
+    },
+    "fp_place": "25/44",
+    "fp_office": "0/6",
+    "fp_public_number": "0/2"
+   },
+   "mr": {
+    "person_overlap": {
+     "p": 0.406,
+     "r": 0.75,
+     "f1": 0.527,
+     "pred": 32,
+     "gold": 16
+    },
+    "person_exact": {
+     "p": 0.031,
+     "r": 0.062,
+     "f1": 0.042,
+     "pred": 32,
+     "gold": 16
+    },
+    "person_char_recall": 0.623,
+    "pii_overlap": {
+     "p": 0.359,
+     "r": 0.765,
+     "f1": 0.489,
+     "pred": 39,
+     "gold": 17
+    },
+    "fp_place": "17/35",
+    "fp_office": "0/4",
+    "fp_public_number": "0/2"
+   },
+   "hi": {
+    "person_overlap": {
+     "p": 0.643,
+     "r": 1.0,
+     "f1": 0.783,
+     "pred": 14,
+     "gold": 8
+    },
+    "person_exact": {
+     "p": 0.214,
+     "r": 0.375,
+     "f1": 0.273,
+     "pred": 14,
+     "gold": 8
+    },
+    "person_char_recall": 0.859,
+    "pii_overlap": {
+     "p": 0.625,
+     "r": 1.0,
+     "f1": 0.769,
+     "pred": 16,
+     "gold": 9
+    },
+    "fp_place": "6/14",
+    "fp_office": "0/2",
+    "fp_public_number": "0/2"
+   },
+   "mr-Latn": {
+    "person_overlap": {
+     "p": 0.5,
+     "r": 0.75,
+     "f1": 0.6,
+     "pred": 20,
+     "gold": 12
+    },
+    "person_exact": {
+     "p": 0.15,
+     "r": 0.25,
+     "f1": 0.187,
+     "pred": 20,
+     "gold": 12
+    },
+    "person_char_recall": 0.764,
+    "pii_overlap": {
+     "p": 0.524,
+     "r": 0.714,
+     "f1": 0.604,
+     "pred": 21,
+     "gold": 14
+    },
+    "fp_place": "13/29",
+    "fp_office": "0/1",
+    "fp_public_number": "0/0"
+   },
+   "all": {
+    "person_overlap": {
+     "p": 0.5,
+     "r": 0.824,
+     "f1": 0.622,
+     "pred": 92,
+     "gold": 51
+    },
+    "person_exact": {
+     "p": 0.13,
+     "r": 0.235,
+     "f1": 0.168,
+     "pred": 92,
+     "gold": 51
+    },
+    "person_char_recall": 0.758,
+    "pii_overlap": {
+     "p": 0.491,
+     "r": 0.845,
+     "f1": 0.621,
+     "pred": 108,
+     "gold": 58
+    },
+    "fp_place": "61/122",
+    "fp_office": "0/13",
+    "fp_public_number": "0/6"
+   }
+  },
+  "model_snap": {
+   "en": {
+    "person_overlap": {
+     "p": 0.56,
+     "r": 0.867,
+     "f1": 0.68,
+     "pred": 25,
+     "gold": 15
+    },
+    "person_exact": {
+     "p": 0.28,
+     "r": 0.467,
+     "f1": 0.35,
+     "pred": 25,
+     "gold": 15
+    },
+    "person_char_recall": 0.896,
+    "pii_overlap": {
+     "p": 0.581,
+     "r": 0.944,
+     "f1": 0.719,
+     "pred": 31,
+     "gold": 18
+    },
+    "fp_place": "13/44",
+    "fp_office": "0/6",
+    "fp_public_number": "0/2"
+   },
+   "mr": {
+    "person_overlap": {
+     "p": 0.414,
+     "r": 0.75,
+     "f1": 0.533,
+     "pred": 29,
+     "gold": 16
+    },
+    "person_exact": {
+     "p": 0.103,
+     "r": 0.188,
+     "f1": 0.133,
+     "pred": 29,
+     "gold": 16
+    },
+    "person_char_recall": 0.65,
+    "pii_overlap": {
+     "p": 0.394,
+     "r": 0.765,
+     "f1": 0.52,
+     "pred": 33,
+     "gold": 17
+    },
+    "fp_place": "15/35",
+    "fp_office": "0/4",
+    "fp_public_number": "0/2"
+   },
+   "hi": {
+    "person_overlap": {
+     "p": 0.615,
+     "r": 1.0,
+     "f1": 0.762,
+     "pred": 13,
+     "gold": 8
+    },
+    "person_exact": {
+     "p": 0.462,
+     "r": 0.75,
+     "f1": 0.571,
+     "pred": 13,
+     "gold": 8
+    },
+    "person_char_recall": 0.936,
+    "pii_overlap": {
+     "p": 0.6,
+     "r": 1.0,
+     "f1": 0.75,
+     "pred": 15,
+     "gold": 9
+    },
+    "fp_place": "6/14",
+    "fp_office": "0/2",
+    "fp_public_number": "0/2"
+   },
+   "mr-Latn": {
+    "person_overlap": {
+     "p": 0.5,
+     "r": 0.75,
+     "f1": 0.6,
+     "pred": 20,
+     "gold": 12
+    },
+    "person_exact": {
+     "p": 0.15,
+     "r": 0.25,
+     "f1": 0.187,
+     "pred": 20,
+     "gold": 12
+    },
+    "person_char_recall": 0.764,
+    "pii_overlap": {
+     "p": 0.545,
+     "r": 0.786,
+     "f1": 0.644,
+     "pred": 22,
+     "gold": 14
+    },
+    "fp_place": "9/29",
+    "fp_office": "0/1",
+    "fp_public_number": "0/0"
+   },
+   "all": {
+    "person_overlap": {
+     "p": 0.506,
+     "r": 0.824,
+     "f1": 0.627,
+     "pred": 87,
+     "gold": 51
+    },
+    "person_exact": {
+     "p": 0.218,
+     "r": 0.373,
+     "f1": 0.275,
+     "pred": 87,
+     "gold": 51
+    },
+    "person_char_recall": 0.794,
+    "pii_overlap": {
+     "p": 0.515,
+     "r": 0.862,
+     "f1": 0.645,
+     "pred": 101,
+     "gold": 58
+    },
+    "fp_place": "43/122",
+    "fp_office": "0/13",
+    "fp_public_number": "0/6"
+   }
+  },
+  "model_g1": {
+   "en": {
+    "person_overlap": {
+     "p": 0.933,
+     "r": 0.867,
+     "f1": 0.899,
+     "pred": 15,
+     "gold": 15
+    },
+    "person_exact": {
+     "p": 0.467,
+     "r": 0.467,
+     "f1": 0.467,
+     "pred": 15,
+     "gold": 15
+    },
+    "person_char_recall": 0.896,
+    "pii_overlap": {
+     "p": 0.947,
+     "r": 0.944,
+     "f1": 0.946,
+     "pred": 19,
+     "gold": 18
+    },
+    "fp_place": "1/44",
+    "fp_office": "0/6",
+    "fp_public_number": "0/2"
+   },
+   "mr": {
+    "person_overlap": {
+     "p": 0.667,
+     "r": 0.75,
+     "f1": 0.706,
+     "pred": 18,
+     "gold": 16
+    },
+    "person_exact": {
+     "p": 0.167,
+     "r": 0.188,
+     "f1": 0.176,
+     "pred": 18,
+     "gold": 16
+    },
+    "person_char_recall": 0.65,
+    "pii_overlap": {
+     "p": 0.591,
+     "r": 0.765,
+     "f1": 0.667,
+     "pred": 22,
+     "gold": 17
+    },
+    "fp_place": "1/35",
+    "fp_office": "0/4",
+    "fp_public_number": "0/2"
+   },
+   "hi": {
+    "person_overlap": {
+     "p": 0.889,
+     "r": 1.0,
+     "f1": 0.941,
+     "pred": 9,
+     "gold": 8
+    },
+    "person_exact": {
+     "p": 0.667,
+     "r": 0.75,
+     "f1": 0.706,
+     "pred": 9,
+     "gold": 8
+    },
+    "person_char_recall": 0.872,
+    "pii_overlap": {
+     "p": 0.818,
+     "r": 1.0,
+     "f1": 0.9,
+     "pred": 11,
+     "gold": 9
+    },
+    "fp_place": "1/14",
+    "fp_office": "0/2",
+    "fp_public_number": "0/2"
+   },
+   "mr-Latn": {
+    "person_overlap": {
+     "p": 0.75,
+     "r": 0.667,
+     "f1": 0.706,
+     "pred": 12,
+     "gold": 12
+    },
+    "person_exact": {
+     "p": 0.25,
+     "r": 0.25,
+     "f1": 0.25,
+     "pred": 12,
+     "gold": 12
+    },
+    "person_char_recall": 0.664,
+    "pii_overlap": {
+     "p": 0.786,
+     "r": 0.714,
+     "f1": 0.748,
+     "pred": 14,
+     "gold": 14
+    },
+    "fp_place": "1/29",
+    "fp_office": "0/1",
+    "fp_public_number": "0/0"
+   },
+   "all": {
+    "person_overlap": {
+     "p": 0.796,
+     "r": 0.804,
+     "f1": 0.8,
+     "pred": 54,
+     "gold": 51
+    },
+    "person_exact": {
+     "p": 0.352,
+     "r": 0.373,
+     "f1": 0.362,
+     "pred": 54,
+     "gold": 51
+    },
+    "person_char_recall": 0.765,
+    "pii_overlap": {
+     "p": 0.773,
+     "r": 0.845,
+     "f1": 0.807,
+     "pred": 66,
+     "gold": 58
+    },
+    "fp_place": "4/122",
+    "fp_office": "0/13",
+    "fp_public_number": "0/6"
+   }
+  },
+  "model_g2": {
+   "en": {
+    "person_overlap": {
+     "p": 1.0,
+     "r": 0.867,
+     "f1": 0.929,
+     "pred": 14,
+     "gold": 15
+    },
+    "person_exact": {
+     "p": 0.5,
+     "r": 0.467,
+     "f1": 0.483,
+     "pred": 14,
+     "gold": 15
+    },
+    "person_char_recall": 0.896,
+    "pii_overlap": {
+     "p": 1.0,
+     "r": 0.944,
+     "f1": 0.971,
+     "pred": 18,
+     "gold": 18
+    },
+    "fp_place": "0/44",
+    "fp_office": "0/6",
+    "fp_public_number": "0/2"
+   },
+   "mr": {
+    "person_overlap": {
+     "p": 0.706,
+     "r": 0.75,
+     "f1": 0.727,
+     "pred": 17,
+     "gold": 16
+    },
+    "person_exact": {
+     "p": 0.176,
+     "r": 0.188,
+     "f1": 0.182,
+     "pred": 17,
+     "gold": 16
+    },
+    "person_char_recall": 0.65,
+    "pii_overlap": {
+     "p": 0.619,
+     "r": 0.765,
+     "f1": 0.684,
+     "pred": 21,
+     "gold": 17
+    },
+    "fp_place": "0/35",
+    "fp_office": "0/4",
+    "fp_public_number": "0/2"
+   },
+   "hi": {
+    "person_overlap": {
+     "p": 1.0,
+     "r": 1.0,
+     "f1": 1.0,
+     "pred": 8,
+     "gold": 8
+    },
+    "person_exact": {
+     "p": 0.875,
+     "r": 0.875,
+     "f1": 0.875,
+     "pred": 8,
+     "gold": 8
+    },
+    "person_char_recall": 0.936,
+    "pii_overlap": {
+     "p": 0.9,
+     "r": 1.0,
+     "f1": 0.947,
+     "pred": 10,
+     "gold": 9
+    },
+    "fp_place": "0/14",
+    "fp_office": "0/2",
+    "fp_public_number": "0/2"
+   },
+   "mr-Latn": {
+    "person_overlap": {
+     "p": 0.769,
+     "r": 0.75,
+     "f1": 0.759,
+     "pred": 13,
+     "gold": 12
+    },
+    "person_exact": {
+     "p": 0.308,
+     "r": 0.333,
+     "f1": 0.32,
+     "pred": 13,
+     "gold": 12
+    },
+    "person_char_recall": 0.764,
+    "pii_overlap": {
+     "p": 0.8,
+     "r": 0.786,
+     "f1": 0.793,
+     "pred": 15,
+     "gold": 14
+    },
+    "fp_place": "0/29",
+    "fp_office": "0/1",
+    "fp_public_number": "0/0"
+   },
+   "all": {
+    "person_overlap": {
+     "p": 0.846,
+     "r": 0.824,
+     "f1": 0.835,
+     "pred": 52,
+     "gold": 51
+    },
+    "person_exact": {
+     "p": 0.404,
+     "r": 0.412,
+     "f1": 0.408,
+     "pred": 52,
+     "gold": 51
+    },
+    "person_char_recall": 0.794,
+    "pii_overlap": {
+     "p": 0.812,
+     "r": 0.862,
+     "f1": 0.837,
+     "pred": 64,
+     "gold": 58
+    },
+    "fp_place": "0/122",
+    "fp_office": "0/13",
+    "fp_public_number": "0/6"
+   }
+  },
+  "model_g2_batched": {
+   "en": {
+    "person_overlap": {
+     "p": 1.0,
+     "r": 0.867,
+     "f1": 0.929,
+     "pred": 14,
+     "gold": 15
+    },
+    "person_exact": {
+     "p": 0.5,
+     "r": 0.467,
+     "f1": 0.483,
+     "pred": 14,
+     "gold": 15
+    },
+    "person_char_recall": 0.896,
+    "pii_overlap": {
+     "p": 1.0,
+     "r": 0.944,
+     "f1": 0.971,
+     "pred": 18,
+     "gold": 18
+    },
+    "fp_place": "0/44",
+    "fp_office": "0/6",
+    "fp_public_number": "0/2"
+   },
+   "mr": {
+    "person_overlap": {
+     "p": 0.706,
+     "r": 0.75,
+     "f1": 0.727,
+     "pred": 17,
+     "gold": 16
+    },
+    "person_exact": {
+     "p": 0.176,
+     "r": 0.188,
+     "f1": 0.182,
+     "pred": 17,
+     "gold": 16
+    },
+    "person_char_recall": 0.65,
+    "pii_overlap": {
+     "p": 0.619,
+     "r": 0.765,
+     "f1": 0.684,
+     "pred": 21,
+     "gold": 17
+    },
+    "fp_place": "0/35",
+    "fp_office": "0/4",
+    "fp_public_number": "0/2"
+   },
+   "hi": {
+    "person_overlap": {
+     "p": 1.0,
+     "r": 1.0,
+     "f1": 1.0,
+     "pred": 8,
+     "gold": 8
+    },
+    "person_exact": {
+     "p": 0.875,
+     "r": 0.875,
+     "f1": 0.875,
+     "pred": 8,
+     "gold": 8
+    },
+    "person_char_recall": 0.936,
+    "pii_overlap": {
+     "p": 0.9,
+     "r": 1.0,
+     "f1": 0.947,
+     "pred": 10,
+     "gold": 9
+    },
+    "fp_place": "0/14",
+    "fp_office": "0/2",
+    "fp_public_number": "0/2"
+   },
+   "mr-Latn": {
+    "person_overlap": {
+     "p": 0.769,
+     "r": 0.75,
+     "f1": 0.759,
+     "pred": 13,
+     "gold": 12
+    },
+    "person_exact": {
+     "p": 0.308,
+     "r": 0.333,
+     "f1": 0.32,
+     "pred": 13,
+     "gold": 12
+    },
+    "person_char_recall": 0.764,
+    "pii_overlap": {
+     "p": 0.8,
+     "r": 0.786,
+     "f1": 0.793,
+     "pred": 15,
+     "gold": 14
+    },
+    "fp_place": "0/29",
+    "fp_office": "0/1",
+    "fp_public_number": "0/0"
+   },
+   "all": {
+    "person_overlap": {
+     "p": 0.846,
+     "r": 0.824,
+     "f1": 0.835,
+     "pred": 52,
+     "gold": 51
+    },
+    "person_exact": {
+     "p": 0.404,
+     "r": 0.412,
+     "f1": 0.408,
+     "pred": 52,
+     "gold": 51
+    },
+    "person_char_recall": 0.794,
+    "pii_overlap": {
+     "p": 0.812,
+     "r": 0.862,
+     "f1": 0.837,
+     "pred": 64,
+     "gold": 58
+    },
+    "fp_place": "0/122",
+    "fp_office": "0/13",
+    "fp_public_number": "0/6"
+   }
+  },
+  "combo_news_g1": {
+   "en": {
+    "person_overlap": {
+     "p": 0.692,
+     "r": 1.0,
+     "f1": 0.818,
+     "pred": 39,
+     "gold": 15
+    },
+    "person_exact": {
+     "p": 0.424,
+     "r": 0.933,
+     "f1": 0.583,
+     "pred": 33,
+     "gold": 15
+    },
+    "person_char_recall": 1.0,
+    "pii_overlap": {
+     "p": 0.721,
+     "r": 1.0,
+     "f1": 0.838,
+     "pred": 43,
+     "gold": 18
+    },
+    "fp_place": "11/44",
+    "fp_office": "0/6",
+    "fp_public_number": "1/2"
+   },
+   "mr": {
+    "person_overlap": {
+     "p": 0.346,
+     "r": 1.0,
+     "f1": 0.514,
+     "pred": 78,
+     "gold": 16
+    },
+    "person_exact": {
+     "p": 0.038,
+     "r": 0.188,
+     "f1": 0.064,
+     "pred": 78,
+     "gold": 16
+    },
+    "person_char_recall": 1.0,
+    "pii_overlap": {
+     "p": 0.341,
+     "r": 1.0,
+     "f1": 0.509,
+     "pred": 82,
+     "gold": 17
+    },
+    "fp_place": "35/35",
+    "fp_office": "4/4",
+    "fp_public_number": "0/2"
+   },
+   "hi": {
+    "person_overlap": {
+     "p": 0.254,
+     "r": 1.0,
+     "f1": 0.405,
+     "pred": 63,
+     "gold": 8
+    },
+    "person_exact": {
+     "p": 0.129,
+     "r": 1.0,
+     "f1": 0.229,
+     "pred": 62,
+     "gold": 8
+    },
+    "person_char_recall": 1.0,
+    "pii_overlap": {
+     "p": 0.262,
+     "r": 1.0,
+     "f1": 0.415,
+     "pred": 65,
+     "gold": 9
+    },
+    "fp_place": "9/14",
+    "fp_office": "2/2",
+    "fp_public_number": "0/2"
+   },
+   "mr-Latn": {
+    "person_overlap": {
+     "p": 0.682,
+     "r": 0.75,
+     "f1": 0.714,
+     "pred": 22,
+     "gold": 12
+    },
+    "person_exact": {
+     "p": 0.3,
+     "r": 0.5,
+     "f1": 0.375,
+     "pred": 20,
+     "gold": 12
+    },
+    "person_char_recall": 0.764,
+    "pii_overlap": {
+     "p": 0.708,
+     "r": 0.786,
+     "f1": 0.745,
+     "pred": 24,
+     "gold": 14
+    },
+    "fp_place": "6/29",
+    "fp_office": "0/1",
+    "fp_public_number": "0/0"
+   },
+   "all": {
+    "person_overlap": {
+     "p": 0.421,
+     "r": 0.941,
+     "f1": 0.582,
+     "pred": 202,
+     "gold": 51
+    },
+    "person_exact": {
+     "p": 0.161,
+     "r": 0.608,
+     "f1": 0.254,
+     "pred": 193,
+     "gold": 51
+    },
+    "person_char_recall": 0.953,
+    "pii_overlap": {
+     "p": 0.435,
+     "r": 0.948,
+     "f1": 0.596,
+     "pred": 214,
+     "gold": 58
+    },
+    "fp_place": "61/122",
+    "fp_office": "6/13",
+    "fp_public_number": "1/6"
+   }
+  },
+  "combo_news_g2": {
+   "en": {
+    "person_overlap": {
+     "p": 0.711,
+     "r": 1.0,
+     "f1": 0.831,
+     "pred": 38,
+     "gold": 15
+    },
+    "person_exact": {
+     "p": 0.438,
+     "r": 0.933,
+     "f1": 0.596,
+     "pred": 32,
+     "gold": 15
+    },
+    "person_char_recall": 1.0,
+    "pii_overlap": {
+     "p": 0.738,
+     "r": 1.0,
+     "f1": 0.849,
+     "pred": 42,
+     "gold": 18
+    },
+    "fp_place": "10/44",
+    "fp_office": "0/6",
+    "fp_public_number": "1/2"
+   },
+   "mr": {
+    "person_overlap": {
+     "p": 0.351,
+     "r": 1.0,
+     "f1": 0.519,
+     "pred": 77,
+     "gold": 16
+    },
+    "person_exact": {
+     "p": 0.039,
+     "r": 0.188,
+     "f1": 0.065,
+     "pred": 77,
+     "gold": 16
+    },
+    "person_char_recall": 1.0,
+    "pii_overlap": {
+     "p": 0.346,
+     "r": 1.0,
+     "f1": 0.514,
+     "pred": 81,
+     "gold": 17
+    },
+    "fp_place": "35/35",
+    "fp_office": "4/4",
+    "fp_public_number": "0/2"
+   },
+   "hi": {
+    "person_overlap": {
+     "p": 0.258,
+     "r": 1.0,
+     "f1": 0.41,
+     "pred": 62,
+     "gold": 8
+    },
+    "person_exact": {
+     "p": 0.133,
+     "r": 1.0,
+     "f1": 0.235,
+     "pred": 60,
+     "gold": 8
+    },
+    "person_char_recall": 1.0,
+    "pii_overlap": {
+     "p": 0.266,
+     "r": 1.0,
+     "f1": 0.42,
+     "pred": 64,
+     "gold": 9
+    },
+    "fp_place": "9/14",
+    "fp_office": "2/2",
+    "fp_public_number": "0/2"
+   },
+   "mr-Latn": {
+    "person_overlap": {
+     "p": 0.696,
+     "r": 0.75,
+     "f1": 0.722,
+     "pred": 23,
+     "gold": 12
+    },
+    "person_exact": {
+     "p": 0.333,
+     "r": 0.583,
+     "f1": 0.424,
+     "pred": 21,
+     "gold": 12
+    },
+    "person_char_recall": 0.764,
+    "pii_overlap": {
+     "p": 0.72,
+     "r": 0.786,
+     "f1": 0.751,
+     "pred": 25,
+     "gold": 14
+    },
+    "fp_place": "5/29",
+    "fp_office": "0/1",
+    "fp_public_number": "0/0"
+   },
+   "all": {
+    "person_overlap": {
+     "p": 0.43,
+     "r": 0.941,
+     "f1": 0.59,
+     "pred": 200,
+     "gold": 51
+    },
+    "person_exact": {
+     "p": 0.168,
+     "r": 0.627,
+     "f1": 0.266,
+     "pred": 190,
+     "gold": 51
+    },
+    "person_char_recall": 0.953,
+    "pii_overlap": {
+     "p": 0.443,
+     "r": 0.948,
+     "f1": 0.604,
+     "pred": 212,
+     "gold": 58
+    },
+    "fp_place": "59/122",
+    "fp_office": "6/13",
+    "fp_public_number": "1/6"
+   }
+  },
+  "combo_social_g1": {
+   "en": {
+    "person_overlap": {
+     "p": 0.433,
+     "r": 1.0,
+     "f1": 0.604,
+     "pred": 67,
+     "gold": 15
+    },
+    "person_exact": {
+     "p": 0.203,
+     "r": 0.8,
+     "f1": 0.324,
+     "pred": 59,
+     "gold": 15
+    },
+    "person_char_recall": 1.0,
+    "pii_overlap": {
+     "p": 0.486,
+     "r": 1.0,
+     "f1": 0.655,
+     "pred": 74,
+     "gold": 18
+    },
+    "fp_place": "33/44",
+    "fp_office": "3/6",
+    "fp_public_number": "1/2"
+   },
+   "mr": {
+    "person_overlap": {
+     "p": 0.346,
+     "r": 1.0,
+     "f1": 0.514,
+     "pred": 78,
+     "gold": 16
+    },
+    "person_exact": {
+     "p": 0.038,
+     "r": 0.188,
+     "f1": 0.064,
+     "pred": 78,
+     "gold": 16
+    },
+    "person_char_recall": 1.0,
+    "pii_overlap": {
+     "p": 0.341,
+     "r": 1.0,
+     "f1": 0.509,
+     "pred": 82,
+     "gold": 17
+    },
+    "fp_place": "35/35",
+    "fp_office": "4/4",
+    "fp_public_number": "0/2"
+   },
+   "hi": {
+    "person_overlap": {
+     "p": 0.254,
+     "r": 1.0,
+     "f1": 0.405,
+     "pred": 63,
+     "gold": 8
+    },
+    "person_exact": {
+     "p": 0.129,
+     "r": 1.0,
+     "f1": 0.229,
+     "pred": 62,
+     "gold": 8
+    },
+    "person_char_recall": 1.0,
+    "pii_overlap": {
+     "p": 0.273,
+     "r": 1.0,
+     "f1": 0.429,
+     "pred": 66,
+     "gold": 9
+    },
+    "fp_place": "9/14",
+    "fp_office": "2/2",
+    "fp_public_number": "0/2"
+   },
+   "mr-Latn": {
+    "person_overlap": {
+     "p": 0.488,
+     "r": 1.0,
+     "f1": 0.656,
+     "pred": 41,
+     "gold": 12
+    },
+    "person_exact": {
+     "p": 0.211,
+     "r": 0.667,
+     "f1": 0.32,
+     "pred": 38,
+     "gold": 12
+    },
+    "person_char_recall": 1.0,
+    "pii_overlap": {
+     "p": 0.533,
+     "r": 1.0,
+     "f1": 0.696,
+     "pred": 45,
+     "gold": 14
+    },
+    "fp_place": "20/29",
+    "fp_office": "0/1",
+    "fp_public_number": "0/0"
+   },
+   "all": {
+    "person_overlap": {
+     "p": 0.369,
+     "r": 1.0,
+     "f1": 0.54,
+     "pred": 249,
+     "gold": 51
+    },
+    "person_exact": {
+     "p": 0.131,
+     "r": 0.608,
+     "f1": 0.215,
+     "pred": 237,
+     "gold": 51
+    },
+    "person_char_recall": 1.0,
+    "pii_overlap": {
+     "p": 0.397,
+     "r": 1.0,
+     "f1": 0.568,
+     "pred": 267,
+     "gold": 58
+    },
+    "fp_place": "97/122",
+    "fp_office": "9/13",
+    "fp_public_number": "1/6"
+   }
+  },
+  "combo_social_g2": {
+   "en": {
+    "person_overlap": {
+     "p": 0.439,
+     "r": 1.0,
+     "f1": 0.611,
+     "pred": 66,
+     "gold": 15
+    },
+    "person_exact": {
+     "p": 0.207,
+     "r": 0.8,
+     "f1": 0.329,
+     "pred": 58,
+     "gold": 15
+    },
+    "person_char_recall": 1.0,
+    "pii_overlap": {
+     "p": 0.493,
+     "r": 1.0,
+     "f1": 0.661,
+     "pred": 73,
+     "gold": 18
+    },
+    "fp_place": "33/44",
+    "fp_office": "3/6",
+    "fp_public_number": "1/2"
+   },
+   "mr": {
+    "person_overlap": {
+     "p": 0.351,
+     "r": 1.0,
+     "f1": 0.519,
+     "pred": 77,
+     "gold": 16
+    },
+    "person_exact": {
+     "p": 0.039,
+     "r": 0.188,
+     "f1": 0.065,
+     "pred": 77,
+     "gold": 16
+    },
+    "person_char_recall": 1.0,
+    "pii_overlap": {
+     "p": 0.346,
+     "r": 1.0,
+     "f1": 0.514,
+     "pred": 81,
+     "gold": 17
+    },
+    "fp_place": "35/35",
+    "fp_office": "4/4",
+    "fp_public_number": "0/2"
+   },
+   "hi": {
+    "person_overlap": {
+     "p": 0.258,
+     "r": 1.0,
+     "f1": 0.41,
+     "pred": 62,
+     "gold": 8
+    },
+    "person_exact": {
+     "p": 0.133,
+     "r": 1.0,
+     "f1": 0.235,
+     "pred": 60,
+     "gold": 8
+    },
+    "person_char_recall": 1.0,
+    "pii_overlap": {
+     "p": 0.277,
+     "r": 1.0,
+     "f1": 0.434,
+     "pred": 65,
+     "gold": 9
+    },
+    "fp_place": "9/14",
+    "fp_office": "2/2",
+    "fp_public_number": "0/2"
+   },
+   "mr-Latn": {
+    "person_overlap": {
+     "p": 0.5,
+     "r": 1.0,
+     "f1": 0.667,
+     "pred": 42,
+     "gold": 12
+    },
+    "person_exact": {
+     "p": 0.231,
+     "r": 0.75,
+     "f1": 0.353,
+     "pred": 39,
+     "gold": 12
+    },
+    "person_char_recall": 1.0,
+    "pii_overlap": {
+     "p": 0.543,
+     "r": 1.0,
+     "f1": 0.704,
+     "pred": 46,
+     "gold": 14
+    },
+    "fp_place": "20/29",
+    "fp_office": "0/1",
+    "fp_public_number": "0/0"
+   },
+   "all": {
+    "person_overlap": {
+     "p": 0.377,
+     "r": 1.0,
+     "f1": 0.547,
+     "pred": 247,
+     "gold": 51
+    },
+    "person_exact": {
+     "p": 0.137,
+     "r": 0.627,
+     "f1": 0.225,
+     "pred": 234,
+     "gold": 51
+    },
+    "person_char_recall": 1.0,
+    "pii_overlap": {
+     "p": 0.404,
+     "r": 1.0,
+     "f1": 0.575,
+     "pred": 265,
+     "gold": 58
+    },
+    "fp_place": "97/122",
+    "fp_office": "9/13",
+    "fp_public_number": "1/6"
+   }
+  }
+ },
+ "model_additions_vs_rules": {
+  "combo_news_g1": {
+   "place": 2,
+   "office": 0,
+   "person_only_model": 5,
+   "person_only_rules": 7,
+   "person_missed_both": 3,
+   "public_number": 0
+  },
+  "combo_news_g2": {
+   "place": 0,
+   "office": 0,
+   "person_only_model": 5,
+   "person_only_rules": 6,
+   "person_missed_both": 3,
+   "public_number": 0
+  }
+ },
+ "threshold_sweep": {
+  "g1@0.3": {
+   "person_overlap": {
+    "p": 0.796,
+    "r": 0.804,
+    "f1": 0.8,
+    "pred": 54,
+    "gold": 51
+   },
+   "fp_place": "4/122",
+   "fp_office": "0/13"
+  },
+  "g1@0.5": {
+   "person_overlap": {
+    "p": 0.796,
+    "r": 0.804,
+    "f1": 0.8,
+    "pred": 54,
+    "gold": 51
+   },
+   "fp_place": "4/122",
+   "fp_office": "0/13"
+  },
+  "g1@0.6": {
+   "person_overlap": {
+    "p": 0.796,
+    "r": 0.804,
+    "f1": 0.8,
+    "pred": 54,
+    "gold": 51
+   },
+   "fp_place": "4/122",
+   "fp_office": "0/13"
+  },
+  "g1@0.7": {
+   "person_overlap": {
+    "p": 0.87,
+    "r": 0.765,
+    "f1": 0.814,
+    "pred": 46,
+    "gold": 51
+   },
+   "fp_place": "2/122",
+   "fp_office": "0/13"
+  },
+  "g1@0.8": {
+   "person_overlap": {
+    "p": 0.839,
+    "r": 0.51,
+    "f1": 0.634,
+    "pred": 31,
+    "gold": 51
+   },
+   "fp_place": "2/122",
+   "fp_office": "0/13"
+  },
+  "g1@0.9": {
+   "person_overlap": {
+    "p": 1.0,
+    "r": 0.078,
+    "f1": 0.145,
+    "pred": 4,
+    "gold": 51
+   },
+   "fp_place": "0/122",
+   "fp_office": "0/13"
+  },
+  "g1@0.95": {
+   "person_overlap": {
+    "p": 1.0,
+    "r": 0.02,
+    "f1": 0.038,
+    "pred": 1,
+    "gold": 51
+   },
+   "fp_place": "0/122",
+   "fp_office": "0/13"
+  },
+  "g2@0.3": {
+   "person_overlap": {
+    "p": 0.846,
+    "r": 0.824,
+    "f1": 0.835,
+    "pred": 52,
+    "gold": 51
+   },
+   "fp_place": "0/122",
+   "fp_office": "0/13"
+  },
+  "g2@0.5": {
+   "person_overlap": {
+    "p": 0.846,
+    "r": 0.824,
+    "f1": 0.835,
+    "pred": 52,
+    "gold": 51
+   },
+   "fp_place": "0/122",
+   "fp_office": "0/13"
+  },
+  "g2@0.6": {
+   "person_overlap": {
+    "p": 0.846,
+    "r": 0.824,
+    "f1": 0.835,
+    "pred": 52,
+    "gold": 51
+   },
+   "fp_place": "0/122",
+   "fp_office": "0/13"
+  },
+  "g2@0.7": {
+   "person_overlap": {
+    "p": 0.911,
+    "r": 0.784,
+    "f1": 0.843,
+    "pred": 45,
+    "gold": 51
+   },
+   "fp_place": "0/122",
+   "fp_office": "0/13"
+  },
+  "g2@0.8": {
+   "person_overlap": {
+    "p": 0.9,
+    "r": 0.529,
+    "f1": 0.667,
+    "pred": 30,
+    "gold": 51
+   },
+   "fp_place": "0/122",
+   "fp_office": "0/13"
+  },
+  "g2@0.9": {
+   "person_overlap": {
+    "p": 1.0,
+    "r": 0.098,
+    "f1": 0.179,
+    "pred": 5,
+    "gold": 51
+   },
+   "fp_place": "0/122",
+   "fp_office": "0/13"
+  },
+  "g2@0.95": {
+   "person_overlap": {
+    "p": 1.0,
+    "r": 0.039,
+    "f1": 0.075,
+    "pred": 2,
+    "gold": 51
+   },
+   "fp_place": "0/122",
+   "fp_office": "0/13"
+  }
+ },
+ "model_label_counts_raw": {
+  "other_pii": 9,
+  "private_person": 92,
+  "private_address": 14,
+  "private_date": 7,
+  "private_email": 9,
+  "private_phone": 7,
+  "account_number": 6,
+  "private_url": 3
+ },
+ "plates_ages_public_numbers": [
+  {
+   "id": "en-003",
+   "type": "age",
+   "model": []
+  },
+  {
+   "id": "en-018",
+   "type": "age",
+   "model": []
+  },
+  {
+   "id": "en-022",
+   "type": "plate",
+   "model": [
+    [
+     "account_number",
+     0.9732
+    ]
+   ]
+  },
+  {
+   "id": "en-022",
+   "type": "public_number",
+   "model": []
+  },
+  {
+   "id": "en-023",
+   "type": "public_number",
+   "model": []
+  },
+  {
+   "id": "en-028",
+   "type": "plate",
+   "model": [
+    [
+     "account_number",
+     0.9798
+    ]
+   ]
+  },
+  {
+   "id": "en-031",
+   "type": "age",
+   "model": [
+    [
+     "account_number",
+     0.7314
+    ]
+   ]
+  },
+  {
+   "id": "en-036",
+   "type": "age",
+   "model": [
+    [
+     "private_person",
+     0.8235
+    ]
+   ]
+  },
+  {
+   "id": "mr-020",
+   "type": "age",
+   "model": [
+    [
+     "private_person",
+     0.8664
+    ]
+   ]
+  },
+  {
+   "id": "mr-025",
+   "type": "public_number",
+   "model": []
+  },
+  {
+   "id": "mr-025",
+   "type": "public_number",
+   "model": []
+  },
+  {
+   "id": "mr-037",
+   "type": "age",
+   "model": [
+    [
+     "private_person",
+     0.8268
+    ]
+   ]
+  },
+  {
+   "id": "hi-009",
+   "type": "age",
+   "model": []
+  },
+  {
+   "id": "hi-012",
+   "type": "public_number",
+   "model": []
+  },
+  {
+   "id": "hi-012",
+   "type": "public_number",
+   "model": []
+  },
+  {
+   "id": "mr-Latn-020",
+   "type": "plate",
+   "model": [
+    [
+     "account_number",
+     0.9771
+    ]
+   ]
+  }
+ ],
+ "raw_model_place_hits": [
+  {
+   "id": "en-002",
+   "place": "Sarat Bose Road",
+   "labels": [
+    "other_pii"
+   ]
+  },
+  {
+   "id": "en-005",
+   "place": "Shyama Prasad Mukherjee Road",
+   "labels": [
+    "private_address"
+   ]
+  },
+  {
+   "id": "en-007",
+   "place": "AJC Bose Road",
+   "labels": [
+    "private_address"
+   ]
+  },
+  {
+   "id": "en-009",
+   "place": "Netaji Subhas Chandra Bose International Airport",
+   "labels": [
+    "private_email"
+   ]
+  },
+  {
+   "id": "en-011",
+   "place": "Aurobindo Sarani",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "en-013",
+   "place": "Rani Rashmoni Avenue",
+   "labels": [
+    "private_date"
+   ]
+  },
+  {
+   "id": "en-015",
+   "place": "Bagha Jatin",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "en-016",
+   "place": "Deshbandhu Park",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "en-018",
+   "place": "Prafulla Chandra Road",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "en-020",
+   "place": "Netaji Subhas Road",
+   "labels": [
+    "private_address"
+   ]
+  },
+  {
+   "id": "en-022",
+   "place": "AJC Bose Road",
+   "labels": [
+    "private_address"
+   ]
+  },
+  {
+   "id": "en-023",
+   "place": "Chittaranjan Avenue",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "en-025",
+   "place": "Esplanade",
+   "labels": [
+    "private_date"
+   ]
+  },
+  {
+   "id": "en-026",
+   "place": "Bidhan Sarani",
+   "labels": [
+    "private_address"
+   ]
+  },
+  {
+   "id": "en-027",
+   "place": "Thanthania",
+   "labels": [
+    "private_address"
+   ]
+  },
+  {
+   "id": "en-029",
+   "place": "Masterda Surya Sen",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "en-031",
+   "place": "Sarat Bose Road",
+   "labels": [
+    "other_pii"
+   ]
+  },
+  {
+   "id": "en-032",
+   "place": "Shyama Prasad Mukherjee Road",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "en-033",
+   "place": "Lenin Sarani",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "en-034",
+   "place": "Bipin Behari Ganguly Street",
+   "labels": [
+    "private_date",
+    "private_person"
+   ]
+  },
+  {
+   "id": "en-035",
+   "place": "Santosh Mitra Square",
+   "labels": [
+    "private_email"
+   ]
+  },
+  {
+   "id": "en-036",
+   "place": "Hemanta Basu Sarani",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "en-037",
+   "place": "Howrah Station",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "en-038",
+   "place": "Ashutosh Mukherjee Road",
+   "labels": [
+    "private_address"
+   ]
+  },
+  {
+   "id": "en-039",
+   "place": "Eden Gardens",
+   "labels": [
+    "private_address",
+    "private_url"
+   ]
+  },
+  {
+   "id": "mr-004",
+   "place": "নেতাজি সুভাষ রোডে",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "mr-005",
+   "place": "চিত্তরঞ্জন অ্যাভিনিউ",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "mr-005",
+   "place": "যতীন্দ্রমোহন অ্যাভিনিউ",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "mr-006",
+   "place": "শ্যামাপ্রসাদ মুখার্জি রোডে",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "mr-010",
+   "place": "নেতাজি সুভাষচন্দ্র বসু আন্তর্জাতিক বিমানবন্দরে",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "mr-012",
+   "place": "আচার্য জগদীশচন্দ্র বসু রোডে",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "mr-013",
+   "place": "রানি রাসমণি অ্যাভিনিউ",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "mr-014",
+   "place": "কাজী নজরুল ইসলাম অ্যাভিনিউতে",
+   "labels": [
+    "account_number"
+   ]
+  },
+  {
+   "id": "mr-016",
+   "place": "দেশবন্ধু পার্কের",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "mr-018",
+   "place": "প্রফুল্লচন্দ্র রোডে",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "mr-020",
+   "place": "গড়িয়াহাট মোড়ে",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "mr-030",
+   "place": "মাস্টারদা সূর্য সেন",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "mr-031",
+   "place": "সন্তোষ মিত্র স্কোয়্যারে",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "mr-034",
+   "place": "হাওড়া স্টেশনে",
+   "labels": [
+    "other_pii"
+   ]
+  },
+  {
+   "id": "mr-036",
+   "place": "লেনিন সরণিতে",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "mr-037",
+   "place": "হেমন্ত বসু সরণিতে",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "mr-038",
+   "place": "আশুতোষ মুখার্জি রোডের",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "hi-003",
+   "place": "विधान सरणी",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "hi-004",
+   "place": "नेताजी सुभाष रोड",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "hi-005",
+   "place": "जतींद्र मोहन एवेन्यू",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "hi-007",
+   "place": "नेताजी सुभाष चंद्र बोस अंतरराष्ट्रीय हवाई अड्डे",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "hi-009",
+   "place": "हावड़ा ब्रिज",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "hi-010",
+   "place": "रवींद्र सरोवर",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "mr-Latn-002",
+   "place": "Sarat Bose Road",
+   "labels": [
+    "private_address"
+   ]
+  },
+  {
+   "id": "mr-Latn-003",
+   "place": "Bidhan Sarani",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "mr-Latn-005",
+   "place": "Rabindra Sarobar",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "mr-Latn-006",
+   "place": "Netaji Subhas Chandra Bose International Airport",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "mr-Latn-008",
+   "place": "Chittaranjan Avenue",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "mr-Latn-009",
+   "place": "Deshbandhu Park",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "mr-Latn-014",
+   "place": "Bagha Jatin",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "mr-Latn-016",
+   "place": "Prafulla Chandra Road",
+   "labels": [
+    "private_address"
+   ]
+  },
+  {
+   "id": "mr-Latn-018",
+   "place": "Shyama Prasad Mukherjee Road",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "mr-Latn-019",
+   "place": "Sealdah",
+   "labels": [
+    "private_address"
+   ]
+  },
+  {
+   "id": "mr-Latn-020",
+   "place": "Howrah Bridge",
+   "labels": [
+    "private_address"
+   ]
+  },
+  {
+   "id": "mr-Latn-021",
+   "place": "Rabindra Sadan",
+   "labels": [
+    "private_person"
+   ]
+  },
+  {
+   "id": "mr-Latn-024",
+   "place": "Acharya Jagadish Chandra Bose Road",
+   "labels": [
+    "private_address",
+    "private_person"
+   ]
+  }
+ ],
+ "guard_sizes": {
+  "g1": 204,
+  "g2": 255
+ }
+}

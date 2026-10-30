@@ -1,0 +1,395 @@
+{
+ "schema": "sajag.vision-fixtures/1",
+ "note": "Expected road state per test image (10 of 12 from Mumbai). Images are 1024 px renditions of Wikimedia Commons files with faces and legible plates pixelated by us (prepare_fixtures.py). Credits: NOTICE.md.",
+ "images": [
+  {
+   "id": "waterlogged_jvpd",
+   "file": "waterlogged_jvpd.jpg",
+   "expected": "waterlogged",
+   "caption": "Mumbai (JVPD, Juhu–Vile Parle), June 2009: a junction under rainwater, taxis and a truck standing in it",
+   "title": "File:JVPD Flooded.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:JVPD_Flooded.jpg",
+   "author": "Michael Kohli",
+   "license": "CC BY-SA 2.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+   "masked": [
+    [
+     0.54,
+     0.615,
+     0.59,
+     0.65
+    ],
+    [
+     0.935,
+     0.5,
+     0.98,
+     0.565
+    ],
+    [
+     0.06,
+     0.5,
+     0.115,
+     0.565
+    ],
+    [
+     0.15,
+     0.545,
+     0.205,
+     0.61
+    ]
+   ]
+  },
+  {
+   "id": "waterlogged_mumbai_2017",
+   "file": "waterlogged_mumbai_2017.jpg",
+   "expected": "waterlogged",
+   "caption": "Mumbai, Aug 2017: buses, autos and a truck wading through a flooded arterial",
+   "title": "File:Flooding in Mumbai, India 2017.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Flooding_in_Mumbai,_India_2017.jpg",
+   "author": "Paasikivi",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "masked": [
+    [
+     0.275,
+     0.455,
+     0.375,
+     0.56
+    ],
+    [
+     0.3,
+     0.33,
+     0.37,
+     0.42
+    ],
+    [
+     0.44,
+     0.33,
+     0.49,
+     0.4
+    ],
+    [
+     0.24,
+     0.635,
+     0.32,
+     0.695
+    ],
+    [
+     0.65,
+     0.63,
+     0.72,
+     0.68
+    ],
+    [
+     0.795,
+     0.55,
+     0.85,
+     0.6
+    ],
+    [
+     0.225,
+     0.4,
+     0.28,
+     0.48
+    ]
+   ]
+  },
+  {
+   "id": "waterlogged_bombay_2005",
+   "file": "waterlogged_bombay_2005.jpg",
+   "expected": "waterlogged",
+   "caption": "Mumbai, Aug 2005: BEST buses and an SUV in a flooded street during heavy monsoon rain",
+   "title": "File:Bombay flooded street2.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Bombay_flooded_street2.jpg",
+   "author": "Hitesh Ashar",
+   "license": "CC BY 2.0",
+   "license_url": "https://creativecommons.org/licenses/by/2.0",
+   "masked": [
+    [
+     0.79,
+     0.35,
+     0.875,
+     0.48
+    ],
+    [
+     0.665,
+     0.33,
+     0.725,
+     0.43
+    ],
+    [
+     0.885,
+     0.3,
+     0.955,
+     0.39
+    ]
+   ]
+  },
+  {
+   "id": "underpass_a34",
+   "file": "underpass_a34.jpg",
+   "expected": "waterlogged",
+   "caption": "Flooded underpass (UK)",
+   "title": "File:Flooded A34 underpass - geograph.org.uk - 7473163.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Flooded_A34_underpass_-_geograph.org.uk_-_7473163.jpg",
+   "author": "Oscar Taylor",
+   "license": "CC BY-SA 2.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+   "masked": []
+  },
+  {
+   "id": "jam_csmt",
+   "file": "jam_csmt.jpg",
+   "expected": "congested",
+   "caption": "Mumbai, Jan 2015: evening queue of BEST buses, taxis and cars near CSMT (its dome in the background)",
+   "title": "File:Mumbai, India (21007866768).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Mumbai,_India_(21007866768).jpg",
+   "author": "Aleksandr Zykov",
+   "license": "CC BY-SA 2.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+   "masked": [
+    [
+     0.325,
+     0.92,
+     0.38,
+     0.96
+    ],
+    [
+     0.46,
+     0.91,
+     0.51,
+     0.95
+    ],
+    [
+     0.775,
+     0.785,
+     0.83,
+     0.825
+    ],
+    [
+     0.245,
+     0.855,
+     0.315,
+     0.93
+    ],
+    [
+     0.175,
+     0.815,
+     0.255,
+     0.865
+    ],
+    [
+     0.0,
+     0.62,
+     0.2,
+     0.82
+    ]
+   ]
+  },
+  {
+   "id": "jam_monsoon",
+   "file": "jam_monsoon.jpg",
+   "expected": "congested",
+   "caption": "Mumbai, July 2011: rain-hour gridlock of cars and kaali-peeli taxis on an arterial",
+   "title": "File:Traffic Logger jam in Mumbai.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Traffic_Logger_jam_in_Mumbai.jpg",
+   "author": "Lakun.patra",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "masked": [
+    [
+     0.125,
+     0.735,
+     0.18,
+     0.8
+    ],
+    [
+     0.59,
+     0.82,
+     0.665,
+     0.875
+    ],
+    [
+     0.87,
+     0.575,
+     0.93,
+     0.605
+    ]
+   ]
+  },
+  {
+   "id": "tree_borivali",
+   "file": "tree_borivali.jpg",
+   "expected": "tree_fall",
+   "caption": "Mumbai (Kulupwadi Road, Borivali), July 2005: a fallen tree across the road after the 26 July floods",
+   "title": "File:A Fallen Tree in Kulupwadi Rd, Borivali (35520292).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:A_Fallen_Tree_in_Kulupwadi_Rd,_Borivali_(35520292).jpg",
+   "author": "Rakesh from Bangalore",
+   "license": "CC BY-SA 2.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+   "masked": [
+    [
+     0.63,
+     0.43,
+     0.67,
+     0.505
+    ]
+   ]
+  },
+  {
+   "id": "tree_prabhadevi",
+   "file": "tree_prabhadevi.jpg",
+   "expected": "tree_fall",
+   "caption": "Mumbai (Old Prabhadevi Road), May 2021: a banyan blocking the road after Cyclone Tauktae",
+   "title": "File:Banyan tree blocks Old Prabhadevi Road.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Banyan_tree_blocks_Old_Prabhadevi_Road.jpg",
+   "author": "Rudolph.A.furtado",
+   "license": "CC0",
+   "license_url": "https://creativecommons.org/publicdomain/zero/1.0",
+   "masked": [
+    [
+     0.945,
+     0.5,
+     1.0,
+     0.61
+    ]
+   ]
+  },
+  {
+   "id": "clear_amar_mahal",
+   "file": "clear_amar_mahal.jpg",
+   "expected": "clear",
+   "caption": "Mumbai (Amar Mahal, Chembur), May 2015: open carriageway under the flyover, one car",
+   "title": "File:Amar Mahal highway, Chembur, Mumbai 2015 1.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Amar_Mahal_highway,_Chembur,_Mumbai_2015_1.jpg",
+   "author": "Karthikndr",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "masked": [
+    [
+     0.63,
+     0.515,
+     0.675,
+     0.555
+    ]
+   ]
+  },
+  {
+   "id": "clear_weh",
+   "file": "clear_weh.jpg",
+   "expected": "clear",
+   "caption": "Mumbai, Sept 2008: Western Express Highway, light free-flowing traffic",
+   "title": "File:Western Express Highway 1.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Western_Express_Highway_1.jpg",
+   "author": "Nicholas (Nichalp)",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "masked": [
+    [
+     0.845,
+     0.655,
+     0.935,
+     0.725
+    ],
+    [
+     0.84,
+     0.83,
+     0.93,
+     0.99
+    ],
+    [
+     0.875,
+     0.79,
+     0.915,
+     0.835
+    ],
+    [
+     0.005,
+     0.655,
+     0.055,
+     0.725
+    ],
+    [
+     0.81,
+     0.51,
+     0.85,
+     0.56
+    ]
+   ]
+  },
+  {
+   "id": "stalled_st_bus_borivali",
+   "file": "stalled_st_bus_borivali.jpg",
+   "expected": "stalled_vehicle",
+   "caption": "Mumbai (WEH flyover, Borivali), July 2005: a bus stuck in a broken, waterlogged roadside with its warning triangle out",
+   "title": "File:An ST bus near the WEH flyover at Borivali (35520287).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:An_ST_bus_near_the_WEH_flyover_at_Borivali_(35520287).jpg",
+   "author": "Rakesh from Bangalore",
+   "license": "CC BY-SA 2.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+   "masked": [
+    [
+     0.565,
+     0.46,
+     0.65,
+     0.53
+    ],
+    [
+     0.38,
+     0.44,
+     0.46,
+     0.505
+    ],
+    [
+     0.79,
+     0.29,
+     0.83,
+     0.37
+    ],
+    [
+     0.86,
+     0.31,
+     0.9,
+     0.39
+    ],
+    [
+     0.96,
+     0.32,
+     1.0,
+     0.4
+    ]
+   ]
+  },
+  {
+   "id": "bus_breakdown_anerley",
+   "file": "bus_breakdown_anerley.jpg",
+   "expected": "stalled_vehicle",
+   "caption": "Broken-down bus across a road (London)",
+   "title": "File:Broken down bus, Anerley Road - geograph.org.uk - 4333139.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Broken_down_bus,_Anerley_Road_-_geograph.org.uk_-_4333139.jpg",
+   "author": "Robin Webster",
+   "license": "CC BY-SA 2.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+   "masked": [
+    [
+     0.505,
+     0.66,
+     0.556,
+     0.7
+    ],
+    [
+     0.41,
+     0.45,
+     0.45,
+     0.505
+    ],
+    [
+     0.585,
+     0.505,
+     0.625,
+     0.56
+    ]
+   ]
+  }
+ ]
+}

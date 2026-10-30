@@ -1,0 +1,209 @@
+{
+ "schema": "sajag.city/1",
+ "id": "mumbai",
+ "name": {
+  "en": "Mumbai",
+  "mr": "मुंबई",
+  "hi": "मुंबई"
+ },
+ "region": {
+  "en": "Mumbai Metropolitan Region",
+  "mr": "मुंबई महानगर प्रदेश",
+  "hi": "मुंबई महानगर क्षेत्र"
+ },
+ "state": {
+  "code": "MH",
+  "en": "Maharashtra",
+  "mr": "महाराष्ट्र",
+  "hi": "महाराष्ट्र"
+ },
+ "timezone": "Asia/Kolkata",
+ "centre": {
+  "lat": 19.0176,
+  "lon": 72.8562,
+  "label": "Dadar / Matunga"
+ },
+ "bbox": {
+  "south": 18.89,
+  "west": 72.77,
+  "north": 19.28,
+  "east": 72.99
+ },
+ "core_bbox": {
+  "south": 18.9,
+  "west": 72.8,
+  "north": 19.13,
+  "east": 72.92
+ },
+ "languages": {
+  "ui": [
+   "en",
+   "mr",
+   "hi"
+  ],
+  "default_public": "en",
+  "default_console": "en"
+ },
+ "plates": {
+  "state_code": "MH",
+  "format": "MH NN X[X] NNNN",
+  "regex": "^MH[ -]?\\d{2}[ -]?[A-Z]{1,3}[ -]?\\d{1,4}$",
+  "note": "MH-01, MH-02, MH-03 and MH-47 are commonly listed for Mumbai RTOs; Sajag never infers an office from a code."
+ },
+ "emergency": {
+  "unified": "112",
+  "police": "100",
+  "ambulance": "108",
+  "fire": "101",
+  "civic_disaster": "1916"
+ },
+ "agencies": [
+  {
+   "id": "mumbai_police",
+   "kind": "police",
+   "en": "Mumbai Police",
+   "mr": "मुंबई पोलीस",
+   "hi": "मुंबई पुलिस"
+  },
+  {
+   "id": "mtp",
+   "kind": "traffic",
+   "en": "Mumbai Traffic Police",
+   "mr": "मुंबई वाहतूक पोलीस",
+   "hi": "मुंबई ट्रैफ़िक पुलिस"
+  },
+  {
+   "id": "maha_police",
+   "kind": "police",
+   "en": "Maharashtra Police",
+   "mr": "महाराष्ट्र पोलीस",
+   "hi": "महाराष्ट्र पुलिस"
+  },
+  {
+   "id": "bmc",
+   "kind": "civic",
+   "en": "Brihanmumbai Municipal Corporation (BMC)",
+   "mr": "बृहन्मुंबई महानगरपालिका",
+   "hi": "बृहन्मुंबई महानगरपालिका"
+  },
+  {
+   "id": "bmc_dm",
+   "kind": "disaster",
+   "en": "BMC Disaster Management (1916)",
+   "mr": "बृहन्मुंबई महानगरपालिका आपत्ती व्यवस्थापन (१९१६)",
+   "hi": "बीएमसी आपदा प्रबंधन (1916)"
+  },
+  {
+   "id": "mmrda",
+   "kind": "civic",
+   "en": "Mumbai Metropolitan Region Development Authority",
+   "mr": "मुंबई महानगर प्रदेश विकास प्राधिकरण",
+   "hi": "मुंबई महानगर क्षेत्र विकास प्राधिकरण"
+  },
+  {
+   "id": "msdma",
+   "kind": "disaster",
+   "en": "Maharashtra State Disaster Management Authority",
+   "mr": "महाराष्ट्र राज्य आपत्ती व्यवस्थापन प्राधिकरण",
+   "hi": "महाराष्ट्र राज्य आपदा प्रबंधन प्राधिकरण"
+  },
+  {
+   "id": "mfb",
+   "kind": "fire",
+   "en": "Mumbai Fire Brigade",
+   "mr": "मुंबई अग्निशमन दल",
+   "hi": "मुंबई अग्निशमन दल"
+  },
+  {
+   "id": "amb108",
+   "kind": "ambulance",
+   "en": "Ambulance (108)",
+   "mr": "रुग्णवाहिका (१०८)",
+   "hi": "एम्बुलेंस (108)"
+  },
+  {
+   "id": "erss112",
+   "kind": "emergency",
+   "en": "Emergency Response (112)",
+   "mr": "आपत्कालीन प्रतिसाद (११२)",
+   "hi": "आपातकालीन प्रतिक्रिया (112)"
+  },
+  {
+   "id": "imd",
+   "kind": "weather",
+   "en": "India Meteorological Department (Mumbai)",
+   "mr": "भारतीय हवामान विभाग (मुंबई)",
+   "hi": "भारत मौसम विज्ञान विभाग (मुंबई)"
+  },
+  {
+   "id": "ndma",
+   "kind": "disaster",
+   "en": "National Disaster Management Authority",
+   "mr": "राष्ट्रीय आपत्ती व्यवस्थापन प्राधिकरण",
+   "hi": "राष्ट्रीय आपदा प्रबंधन प्राधिकरण"
+  },
+  {
+   "id": "best",
+   "kind": "transit",
+   "en": "BEST Undertaking (buses)",
+   "mr": "बेस्ट उपक्रम (बस)",
+   "hi": "बेस्ट उपक्रम (बस)"
+  },
+  {
+   "id": "cr",
+   "kind": "rail",
+   "en": "Central Railway (suburban)",
+   "mr": "मध्य रेल्वे (उपनगरीय)",
+   "hi": "मध्य रेलवे (उपनगरीय)"
+  },
+  {
+   "id": "wr",
+   "kind": "rail",
+   "en": "Western Railway (suburban)",
+   "mr": "पश्चिम रेल्वे (उपनगरीय)",
+   "hi": "पश्चिम रेलवे (उपनगरीय)"
+  },
+  {
+   "id": "metro",
+   "kind": "transit",
+   "en": "Mumbai Metro",
+   "mr": "मुंबई मेट्रो",
+   "hi": "मुंबई मेट्रो"
+  },
+  {
+   "id": "msrdc",
+   "kind": "roads",
+   "en": "MSRDC (Sea Link, expressways)",
+   "mr": "महाराष्ट्र राज्य रस्ते विकास महामंडळ",
+   "hi": "महाराष्ट्र राज्य सड़क विकास निगम"
+  },
+  {
+   "id": "port",
+   "kind": "port",
+   "en": "Mumbai Port Authority",
+   "mr": "मुंबई बंदर प्राधिकरण",
+   "hi": "मुंबई पोर्ट प्राधिकरण"
+  }
+ ],
+ "hydrology": {
+  "sea": {
+   "en": "Arabian Sea",
+   "mr": "अरबी समुद्र",
+   "hi": "अरब सागर"
+  },
+  "river": {
+   "en": "Mithi",
+   "mr": "मिठी",
+   "hi": "मीठी"
+  },
+  "tide_station": "Apollo Bunder (Mumbai harbour), tide model from harmonic constants - labelled MODELLED",
+  "stormwater": "BMC storm-water pumping stations (Haji Ali, Irla, Love Grove, Cleveland Bunder, Britannia, Gazdarbandh) - status EMULATED until access is granted",
+  "high_tide_note": "Outfalls to the sea are gated at high tide; a heavy burst at high tide is what floods the low spots."
+ },
+ "population": {
+  "greater_mumbai_2011": 12442373,
+  "urban_agglomeration_2011": 18394912,
+  "source": "Census of India 2011"
+ },
+ "attribution": "Road data © OpenStreetMap contributors, ODbL 1.0. Agency names belong to their owners; Sajag is not affiliated with them."
+}

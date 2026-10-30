@@ -1,0 +1,4338 @@
+{
+ "event": "2025-05-26",
+ "title": "Mumbai's earliest monsoon onset in decades, 26 May 2025",
+ "window_ist": [
+  "2025-05-25T22:00:00+05:30",
+  "2025-05-26T15:00:00+05:30"
+ ],
+ "official": {
+  "bmc_12h_2300_1100_mm": {
+   "nariman_point": 252.0,
+   "csmt": 215.0,
+   "colaba": 207.0,
+   "grant_road": 202.0,
+   "malabar_hill": 136.0,
+   "worli": 130.0,
+   "haji_ali": 123.0,
+   "santacruz": 107.0,
+   "dadar": 103.0,
+   "bandra": 90.0,
+   "dharavi": 89.0,
+   "chembur": 82.0,
+   "lower_parel": 81.0,
+   "kurla": 76.0
+  },
+  "hour_0900_1000_mm": {
+   "nariman_point": 104.0,
+   "colaba": 83.0,
+   "csmt": 80.0,
+   "malabar_hill": 63.0
+  },
+  "imd": "Colaba observatory 144.3 mm and Santacruz 74.3 mm up to 17:30 (FPJ)",
+  "metro": "the underground Acharya Atre Chowk (Worli) metro station flooded; services Acharya Atre Chowk–Worli suspended (a station, not a road: not scored)",
+  "sources": [
+   {
+    "publisher": "Free Press Journal (12-h station totals; places; pumps not running)",
+    "date": "2025-05-26",
+    "time_ist": "23:15",
+    "url": "https://www.freepressjournal.in/mumbai/monsoon-mayhem-mumbai-flooded-after-early-rains-bmc-blames-imd-faces-flak-for-unpreparedness"
+   },
+   {
+    "publisher": "Free Press Journal (09:00–10:00 hourly figures; BMC-reported spots)",
+    "date": "2025-05-26",
+    "time_ist": "11:12",
+    "url": "https://www.freepressjournal.in/mumbai/mumbai-rains-city-lashed-by-heavy-showers-nariman-point-records-104-mm-in-one-hour"
+   },
+   {
+    "publisher": "News Arena India",
+    "date": "2025-05-26",
+    "time_ist": "20:25",
+    "url": "https://newsarenaindia.com/nation/mumbai-paralysed-by-record-rain-on-monsoon-s-first-day/45518"
+   }
+  ]
+ },
+ "tide": {
+  "label": "MODELLED (approximate)",
+  "station": "Apollo Bunder (Mumbai harbour)",
+  "high_waters_ist": [
+   {
+    "at": "2025-05-25T22:28+05:30",
+    "level_m": 4.15
+   },
+   {
+    "at": "2025-05-26T11:28+05:30",
+    "level_m": 4.57
+   }
+  ],
+  "outfalls_impeded_ist": [
+   [
+    "2025-05-25T22:00+05:30",
+    "2025-05-26T00:30+05:30"
+   ],
+   [
+    "2025-05-26T09:30+05:30",
+    "2025-05-26T14:00+05:30"
+   ]
+  ],
+  "gates_shut_ist": [
+   [
+    "2025-05-26T11:15+05:30",
+    "2025-05-26T12:00+05:30"
+   ]
+  ],
+  "reported": "BMC (via PTI) for the next day, 27 May: 4.88 m at 12:13 and 4.18 m at 23:56",
+  "reported_source": {
+   "publisher": "PTI via Editorji (BMC: 27 May high tides 4.88 m at 12:13, 4.18 m at 23:56)",
+   "date": "2025-05-27",
+   "url": "https://www.editorji.com/amp/india-news/mumbai-rains-brief-halt-high-tide-alert-issued-1748322079762"
+  }
+ },
+ "pumps": {
+  "label": "AS REPORTED for 26 May — the EMULATED adapter is not used",
+  "availability": {
+   "hindmata_mps": 0.0,
+   "gandhi_market_mps": 0.0,
+   "yellow_gate_mps": 0.0,
+   "chunabhatti_mps": 0.5
+  },
+  "basis": "Hindmata, Gandhi Market and Yellow Gate mini pumping systems were not running and Chunabhatti's ran below capacity (PTI, 28 May 2025; FPJ, 26 May 2025); the major stations are not reported down (assumed available)",
+  "sources": [
+   {
+    "publisher": "PTI via The Week (mini pumping stations failed on 26 May)",
+    "date": "2025-05-28",
+    "url": "https://www.theweek.in/wire-updates/national/2025/05/28/bom2-mh-waterlogging-penalty.html"
+   },
+   {
+    "publisher": "Free Press Journal (12-h station totals; places; pumps not running)",
+    "date": "2025-05-26",
+    "time_ist": "23:15",
+    "url": "https://www.freepressjournal.in/mumbai/monsoon-mayhem-mumbai-flooded-after-early-rains-bmc-blames-imd-faces-flak-for-unpreparedness"
+   }
+  ]
+ },
+ "runs": {
+  "open_meteo_archive": {
+   "label": "ARCHIVE (Open-Meteo historical archive, reanalysis/NWP based)",
+   "source": "https://archive-api.open-meteo.com/v1/archive",
+   "model": "best_match",
+   "grid_cells": [
+    "19.016,72.870",
+    "19.086,72.853",
+    "19.086,72.942",
+    "19.156,72.925",
+    "19.227,72.819"
+   ],
+   "window_total_mm_city_mean": 51.4,
+   "window_total_mm_max_point": 55.2,
+   "peak_mm_h_any_point": 17.8,
+   "finding": "The archive's gridded rain over the window is 51 mm (city mean; 55 mm at its wettest point, peak 18 mm/h) against about 252 mm at Nariman Point from the reported gauge totals over the same hours. The model is driven by its rain, so this run shows what a nowcast fed only by such a product would have seen — the case for wiring the BMC's own rain gauges into the pilot.",
+   "peak_class_counts": {
+    "0": 86,
+    "1": 0,
+    "2": 0,
+    "3": 0
+   },
+   "flagged_segments": 0,
+   "earliest_flag_ist": null,
+   "reported_check": {
+    "on_network": 15,
+    "flagged": 0,
+    "hit_rate": 0.0,
+    "missed": [
+     "Sion Circle",
+     "Dadar TT",
+     "Five Gardens (Dadar)",
+     "Worli",
+     "Mantralaya / Nariman Point",
+     "Hindmata (Dadar East)",
+     "King's Circle (Matunga)",
+     "Gandhi Market (Sion–Matunga)",
+     "KEM Hospital (Parel)",
+     "CSMT exit",
+     "Churchgate station",
+     "Below the JJ flyover",
+     "Breach Candy (old US consulate)",
+     "Oval Maidan roads",
+     "Masjid Bunder"
+    ],
+    "median_warning_lead_perfect_nowcast_min": null,
+    "median_lead_before_first_report_min": null,
+    "off_network": [
+     "Wadala"
+    ],
+    "items": [
+     {
+      "reported": "Sion Circle",
+      "what": "waterlogged (BMC)",
+      "reported_by_ist": "11:12",
+      "roundup_after_window": false,
+      "sources": [
+       "Free Press Journal (09:00–10:00 hourly figures; BMC-reported spots), 2025-05-26",
+       "Free Press Journal (12-h station totals; places; pumps not running), 2025-05-26"
+      ],
+      "segments": [
+       1043,
+       1044,
+       1069
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "lead_before_first_report_min": null,
+      "warning_lead_perfect_nowcast_min": null,
+      "max_class": 0
+     },
+     {
+      "reported": "Dadar TT",
+      "what": "waterlogged (BMC)",
+      "reported_by_ist": "11:12",
+      "roundup_after_window": false,
+      "sources": [
+       "Free Press Journal (09:00–10:00 hourly figures; BMC-reported spots), 2025-05-26",
+       "Free Press Journal (12-h station totals; places; pumps not running), 2025-05-26"
+      ],
+      "segments": [
+       1066,
+       1067
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "lead_before_first_report_min": null,
+      "warning_lead_perfect_nowcast_min": null,
+      "max_class": 0
+     },
+     {
+      "reported": "Five Gardens (Dadar)",
+      "what": "waterlogged (BMC)",
+      "reported_by_ist": "11:12",
+      "roundup_after_window": false,
+      "sources": [
+       "Free Press Journal (09:00–10:00 hourly figures; BMC-reported spots), 2025-05-26"
+      ],
+      "segments": [
+       1066,
+       1067
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "lead_before_first_report_min": null,
+      "warning_lead_perfect_nowcast_min": null,
+      "max_class": 0
+     },
+     {
+      "reported": "Worli",
+      "what": "waterlogged (BMC); the Worli underground metro station flooded",
+      "reported_by_ist": "11:12",
+      "roundup_after_window": false,
+      "sources": [
+       "Free Press Journal (09:00–10:00 hourly figures; BMC-reported spots), 2025-05-26"
+      ],
+      "segments": [
+       1074,
+       1076,
+       1077
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "lead_before_first_report_min": null,
+      "warning_lead_perfect_nowcast_min": null,
+      "max_class": 0
+     },
+     {
+      "reported": "Mantralaya / Nariman Point",
+      "what": "waterlogged",
+      "reported_by_ist": "20:25",
+      "roundup_after_window": true,
+      "sources": [
+       "News Arena India, 2025-05-26",
+       "Free Press Journal (12-h station totals; places; pumps not running), 2025-05-26"
+      ],
+      "segments": [
+       1001
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "lead_before_first_report_min": null,
+      "warning_lead_perfect_nowcast_min": null,
+      "max_class": 0
+     },
+     {
+      "reported": "Hindmata (Dadar East)",
+      "what": "severe waterlogging; its pumps were not yet running",
+      "reported_by_ist": "23:15",
+      "roundup_after_window": true,
+      "sources": [
+       "Free Press Journal (12-h station totals; places; pumps not running), 2025-05-26",
+       "PTI via The Week (mini pumping stations failed on 26 May), 2025-05-28"
+      ],
+      "segments": [
+       1065,
+       1066,
+       1070
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "lead_before_first_report_min": null,
+      "warning_lead_perfect_nowcast_min": null,
+      "max_class": 0
+     },
+     {
+      "reported": "King's Circle (Matunga)",
+      "what": "waterlogged",
+      "reported_by_ist": "23:15",
+      "roundup_after_window": true,
+      "sources": [
+       "Free Press Journal (12-h station totals; places; pumps not running), 2025-05-26"
+      ],
+      "segments": [
+       1067,
+       1068
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "lead_before_first_report_min": null,
+      "warning_lead_perfect_nowcast_min": null,
+      "max_class": 0
+     },
+     {
+      "reported": "Gandhi Market (Sion–Matunga)",
+      "what": "waterlogged; its pumping system failed",
+      "reported_by_ist": "23:15",
+      "roundup_after_window": true,
+      "sources": [
+       "Free Press Journal (12-h station totals; places; pumps not running), 2025-05-26",
+       "PTI via The Week (mini pumping stations failed on 26 May), 2025-05-28"
+      ],
+      "segments": [
+       1067,
+       1068,
+       1069
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "lead_before_first_report_min": null,
+      "warning_lead_perfect_nowcast_min": null,
+      "max_class": 0
+     },
+     {
+      "reported": "KEM Hospital (Parel)",
+      "what": "rainwater entered the hospital",
+      "reported_by_ist": "23:15",
+      "roundup_after_window": true,
+      "sources": [
+       "Free Press Journal (12-h station totals; places; pumps not running), 2025-05-26"
+      ],
+      "segments": [
+       1065,
+       1066,
+       1070
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "lead_before_first_report_min": null,
+      "warning_lead_perfect_nowcast_min": null,
+      "max_class": 0
+     },
+     {
+      "reported": "CSMT exit",
+      "what": "waterlogged",
+      "reported_by_ist": "23:15",
+      "roundup_after_window": true,
+      "sources": [
+       "Free Press Journal (12-h station totals; places; pumps not running), 2025-05-26"
+      ],
+      "segments": [
+       1005,
+       1060
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "lead_before_first_report_min": null,
+      "warning_lead_perfect_nowcast_min": null,
+      "max_class": 0
+     },
+     {
+      "reported": "Churchgate station",
+      "what": "waterlogged",
+      "reported_by_ist": "23:15",
+      "roundup_after_window": true,
+      "sources": [
+       "Free Press Journal (12-h station totals; places; pumps not running), 2025-05-26"
+      ],
+      "segments": [
+       1001,
+       1002,
+       1004,
+       1005
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "lead_before_first_report_min": null,
+      "warning_lead_perfect_nowcast_min": null,
+      "max_class": 0
+     },
+     {
+      "reported": "Below the JJ flyover",
+      "what": "waterlogged",
+      "reported_by_ist": "23:15",
+      "roundup_after_window": true,
+      "sources": [
+       "Free Press Journal (12-h station totals; places; pumps not running), 2025-05-26"
+      ],
+      "segments": [
+       1062,
+       1081,
+       1082
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "lead_before_first_report_min": null,
+      "warning_lead_perfect_nowcast_min": null,
+      "max_class": 0
+     },
+     {
+      "reported": "Breach Candy (old US consulate)",
+      "what": "waterlogged",
+      "reported_by_ist": "23:15",
+      "roundup_after_window": true,
+      "sources": [
+       "Free Press Journal (12-h station totals; places; pumps not running), 2025-05-26"
+      ],
+      "segments": [
+       1085
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "lead_before_first_report_min": null,
+      "warning_lead_perfect_nowcast_min": null,
+      "max_class": 0
+     },
+     {
+      "reported": "Oval Maidan roads",
+      "what": "waterlogged",
+      "reported_by_ist": "23:15",
+      "roundup_after_window": true,
+      "sources": [
+       "Free Press Journal (12-h station totals; places; pumps not running), 2025-05-26"
+      ],
+      "segments": [
+       1001,
+       1004,
+       1005
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "lead_before_first_report_min": null,
+      "warning_lead_perfect_nowcast_min": null,
+      "max_class": 0
+     },
+     {
+      "reported": "Masjid Bunder",
+      "what": "mini pumping station not working; water on the tracks",
+      "reported_by_ist": "23:15",
+      "roundup_after_window": true,
+      "sources": [
+       "Free Press Journal (12-h station totals; places; pumps not running), 2025-05-26"
+      ],
+      "segments": [
+       1060
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "lead_before_first_report_min": null,
+      "warning_lead_perfect_nowcast_min": null,
+      "max_class": 0
+     },
+     {
+      "reported": "Wadala",
+      "what": "waterlogged (visuals)",
+      "reported_by_ist": "23:15",
+      "roundup_after_window": true,
+      "sources": [
+       "Free Press Journal (12-h station totals; places; pumps not running), 2025-05-26"
+      ],
+      "segments": [],
+      "on_network": false,
+      "flagged": null,
+      "first_flag_ist": null,
+      "lead_before_first_report_min": null,
+      "warning_lead_perfect_nowcast_min": null,
+      "max_class": null
+     }
+    ]
+   },
+   "segments": [
+    {
+     "segment_id": 1001,
+     "road_name": "Marine Drive",
+     "place": "Marine Drive (Veer Nariman Road, Churchgate)",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1002,
+     "road_name": "Marine Drive",
+     "place": "Marine Drive (Coastal Road south end, Marine Lines)",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.2,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1003,
+     "road_name": "Marine Drive",
+     "place": "Girgaon Chowpatty (Marine Drive)",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.2,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1004,
+     "road_name": "Veer Nariman Road",
+     "place": "Churchgate (Veer Nariman Road)",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1005,
+     "road_name": "Veer Nariman Road - D N Road",
+     "place": "CSMT junction (D N Road)",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1006,
+     "road_name": "Mumbai Coastal Road (northbound)",
+     "place": "Sea Link, Worli end (Coastal Road merge, northbound)",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": true
+    },
+    {
+     "segment_id": 1007,
+     "road_name": "Mumbai Coastal Road (southbound)",
+     "place": "Marine Drive (Coastal Road south end, Marine Lines)",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": true
+    },
+    {
+     "segment_id": 1008,
+     "road_name": "Bandra-Worli Sea Link (northbound)",
+     "place": "Bandra–Worli Sea Link, Bandra end (northbound)",
+     "rain_total_mm": 49.9,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": true
+    },
+    {
+     "segment_id": 1009,
+     "road_name": "Bandra-Worli Sea Link (southbound)",
+     "place": "Sea Link, Worli end (Coastal Road fork, southbound)",
+     "rain_total_mm": 50.0,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": true
+    },
+    {
+     "segment_id": 1010,
+     "road_name": "Sea Link Worli exit ramp",
+     "place": "Worli (Sea Link toll plaza, Khan Abdul Gaffar Khan Road)",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": true
+    },
+    {
+     "segment_id": 1011,
+     "road_name": "Sea Link approach (northbound, Western Freeway)",
+     "place": "Bandra (Sea Link flyover – Western Express Highway merge)",
+     "rain_total_mm": 49.0,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": true
+    },
+    {
+     "segment_id": 1012,
+     "road_name": "Sea Link southbound approach ramp",
+     "place": "Bandra–Worli Sea Link, Bandra end (southbound)",
+     "rain_total_mm": 49.0,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": true
+    },
+    {
+     "segment_id": 1013,
+     "road_name": "Western Express Highway",
+     "place": "Kalanagar junction (Western Express Highway)",
+     "rain_total_mm": 49.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1014,
+     "road_name": "Western Express Highway",
+     "place": "Vakola (Western Express Highway)",
+     "rain_total_mm": 48.9,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1015,
+     "road_name": "Western Express Highway",
+     "place": "Western Express Highway (Sahar Elevated Road)",
+     "rain_total_mm": 48.9,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1016,
+     "road_name": "Western Express Highway",
+     "place": "Andheri (Western Express Highway, Andheri–Kurla Road)",
+     "rain_total_mm": 49.1,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1017,
+     "road_name": "Western Express Highway",
+     "place": "Jogeshwari (WEH – JVLR junction)",
+     "rain_total_mm": 49.4,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1018,
+     "road_name": "Western Express Highway",
+     "place": "Goregaon (Western Express Highway, Aarey)",
+     "rain_total_mm": 50.1,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1019,
+     "road_name": "Western Express Highway",
+     "place": "Borivali (Western Express Highway)",
+     "rain_total_mm": 40.5,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1020,
+     "road_name": "Sahar Elevated Road",
+     "place": "Mumbai Airport T2 (departure forecourt)",
+     "rain_total_mm": 48.9,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": true
+    },
+    {
+     "segment_id": 1021,
+     "road_name": "Mahim Causeway",
+     "place": "Mahim Causeway, Bandra end (SV Road)",
+     "rain_total_mm": 49.0,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1022,
+     "road_name": "Swami Vivekanand Road",
+     "place": "Bandra (SV Road, Hill Road)",
+     "rain_total_mm": 48.9,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1023,
+     "road_name": "Swami Vivekanand Road",
+     "place": "Santacruz (SV Road, Juhu Tara Road)",
+     "rain_total_mm": 48.9,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1024,
+     "road_name": "Swami Vivekanand Road",
+     "place": "Santacruz (SV Road, Linking Road, Milan Subway road)",
+     "rain_total_mm": 48.9,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1025,
+     "road_name": "Swami Vivekanand Road",
+     "place": "Irla junction (SV Road, for Cooper Hospital)",
+     "rain_total_mm": 48.9,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1026,
+     "road_name": "Swami Vivekanand Road",
+     "place": "Andheri West (SV Road, Gokhale Bridge)",
+     "rain_total_mm": 49.0,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1027,
+     "road_name": "P V Avsare Marg (Milan Subway road)",
+     "place": "Milan Subway (Santacruz)",
+     "rain_total_mm": 48.9,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1028,
+     "road_name": "G K Gokhale Bridge",
+     "place": "Andheri East (Gokhale Bridge landing, Sahar Road)",
+     "rain_total_mm": 48.9,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": true
+    },
+    {
+     "segment_id": 1029,
+     "road_name": "Teli Galli - N S Phadke Marg",
+     "place": "Andheri East (Andheri–Kurla Road, Teli Galli)",
+     "rain_total_mm": 48.9,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1030,
+     "road_name": "Sahar Road (Andheri Subway approach)",
+     "place": "Andheri Subway (Andheri East approach, Sahar Road)",
+     "rain_total_mm": 48.9,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1031,
+     "road_name": "Andheri-Kurla Road",
+     "place": "Andheri (Western Express Highway, Andheri–Kurla Road)",
+     "rain_total_mm": 49.0,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1032,
+     "road_name": "Andheri-Kurla Road",
+     "place": "Saki Naka (Andheri–Kurla Road)",
+     "rain_total_mm": 49.6,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1033,
+     "road_name": "Andheri-Kurla Road",
+     "place": "Kurla (LBS Marg, Kamani)",
+     "rain_total_mm": 50.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1034,
+     "road_name": "Saki Vihar Road",
+     "place": "Powai (JVLR, Saki Vihar Road)",
+     "rain_total_mm": 51.9,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1035,
+     "road_name": "Jogeshwari-Vikhroli Link Road",
+     "place": "Powai (JVLR, Saki Vihar Road)",
+     "rain_total_mm": 51.4,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1036,
+     "road_name": "Jogeshwari-Vikhroli Link Road",
+     "place": "Gandhinagar (LBS Marg – JVLR, Powai)",
+     "rain_total_mm": 52.0,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1037,
+     "road_name": "Jogeshwari-Vikhroli Link Road",
+     "place": "Vikhroli (EEH – JVLR junction)",
+     "rain_total_mm": 51.3,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1038,
+     "road_name": "Lal Bahadur Shastri Marg",
+     "place": "Kurla (LBS Marg, BKC Road)",
+     "rain_total_mm": 49.4,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1039,
+     "road_name": "Lal Bahadur Shastri Marg",
+     "place": "Kurla (LBS Marg, SCLR)",
+     "rain_total_mm": 49.0,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1040,
+     "road_name": "Lal Bahadur Shastri Marg",
+     "place": "Kurla (LBS Marg, Kamani)",
+     "rain_total_mm": 49.1,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1041,
+     "road_name": "Lal Bahadur Shastri Marg",
+     "place": "Ghatkopar West (LBS Marg)",
+     "rain_total_mm": 49.5,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1042,
+     "road_name": "Lal Bahadur Shastri Marg",
+     "place": "Gandhinagar (LBS Marg – JVLR, Powai)",
+     "rain_total_mm": 49.7,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1043,
+     "road_name": "Eastern Express Highway (Sion)",
+     "place": "Sion (LBS Marg – Eastern Express Highway fork)",
+     "rain_total_mm": 55.1,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1044,
+     "road_name": "Eastern Express Highway",
+     "place": "Priyadarshini (EEH – Sion–Panvel Highway)",
+     "rain_total_mm": 50.4,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1045,
+     "road_name": "Eastern Express Highway",
+     "place": "Amar Mahal junction (EEH, SCLR)",
+     "rain_total_mm": 49.5,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1046,
+     "road_name": "Eastern Express Highway",
+     "place": "Chheda Nagar (EEH, Eastern Freeway link)",
+     "rain_total_mm": 49.4,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1047,
+     "road_name": "Eastern Express Highway",
+     "place": "Ghatkopar (Eastern Express Highway)",
+     "rain_total_mm": 49.5,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1048,
+     "road_name": "Eastern Express Highway",
+     "place": "Vikhroli (EEH – JVLR junction)",
+     "rain_total_mm": 50.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1049,
+     "road_name": "Santacruz-Chembur Link Road",
+     "place": "Kurla West (SCLR, Kaustubh Rane flyover)",
+     "rain_total_mm": 48.9,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1050,
+     "road_name": "Santacruz-Chembur Link Road",
+     "place": "Amar Mahal junction (EEH, SCLR)",
+     "rain_total_mm": 49.0,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1051,
+     "road_name": "Santacruz-Chembur Link Road (Kurla ramp)",
+     "place": "Kurla (LBS Marg, SCLR)",
+     "rain_total_mm": 49.0,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1052,
+     "road_name": "Bandra Kurla Complex Road",
+     "place": "BKC (Bandra Kurla Complex Road)",
+     "rain_total_mm": 48.9,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1053,
+     "road_name": "Bandra Kurla Complex Road",
+     "place": "Kurla (LBS Marg, BKC Road)",
+     "rain_total_mm": 49.0,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1054,
+     "road_name": "Sion-Panvel Highway",
+     "place": "Chembur (Sion–Panvel Highway)",
+     "rain_total_mm": 49.7,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1055,
+     "road_name": "Sion-Panvel Highway",
+     "place": "Mankhurd (Sion–Panvel Highway, GMLR)",
+     "rain_total_mm": 49.4,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1056,
+     "road_name": "Ghatkopar-Mankhurd Link Road",
+     "place": "Eastern Freeway north end (Chembur, GMLR)",
+     "rain_total_mm": 49.4,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1057,
+     "road_name": "Mankhurd - EEH link road",
+     "place": "Chheda Nagar (EEH, Eastern Freeway link)",
+     "rain_total_mm": 49.4,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1058,
+     "road_name": "Eastern Freeway",
+     "place": "Atal Setu interchange (Eastern Freeway, Sewri)",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": true
+    },
+    {
+     "segment_id": 1059,
+     "road_name": "Eastern Freeway",
+     "place": "Eastern Freeway north end (Chembur, GMLR)",
+     "rain_total_mm": 53.8,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": true
+    },
+    {
+     "segment_id": 1060,
+     "road_name": "P D Mello Road",
+     "place": "Eastern Freeway south end (P DMello Road, Orange Gate)",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.1,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1061,
+     "road_name": "D N Road - JJ Flyover (Mohammed Ali Road)",
+     "place": "JJ junction (JJ Hospital)",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": true
+    },
+    {
+     "segment_id": 1062,
+     "road_name": "Sir JJ Road - Dr Ambedkar Road",
+     "place": "Byculla (Dr Ambedkar Road, Jijamata Udyan)",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1063,
+     "road_name": "Dr Ambedkar Road",
+     "place": "Lalbaug (Dr Ambedkar Road)",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.8,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1064,
+     "road_name": "Dr Ambedkar Road",
+     "place": "Parel (Dr Ambedkar Road)",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.2,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1065,
+     "road_name": "Dr Ambedkar Road",
+     "place": "Hindmata (Dadar East)",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.2,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1066,
+     "road_name": "Dr Ambedkar Road (Hindmata - Dadar TT)",
+     "place": "Dadar TT Circle",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.3,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1067,
+     "road_name": "Dr Ambedkar Road",
+     "place": "Kings Circle (Matunga)",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.1,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1068,
+     "road_name": "Dr Ambedkar Road",
+     "place": "Sion Hospital (LTMGH) junction",
+     "rain_total_mm": 55.1,
+     "peak_class": 0,
+     "peak_depth_cm": 0.7,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1069,
+     "road_name": "Dr Ambedkar Road",
+     "place": "Sion Circle",
+     "rain_total_mm": 55.1,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1070,
+     "road_name": "Dr E Borges Road",
+     "place": "KEM Hospital (Acharya Donde Marg)",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.2,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1071,
+     "road_name": "Tilak Bridge",
+     "place": "Dadar TT Circle",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": true
+    },
+    {
+     "segment_id": 1072,
+     "road_name": "Senapati Bapat Marg",
+     "place": "Dadar West (Tilak Bridge, Senapati Bapat Marg)",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1073,
+     "road_name": "Lady Jamshetji Road - Senapati Bapat Marg",
+     "place": "Mahim (Lady Jamshetji Road, causeway south end)",
+     "rain_total_mm": 51.1,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1074,
+     "road_name": "Pandurang Budhkar Marg",
+     "place": "Lower Parel (Senapati Bapat Marg)",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1075,
+     "road_name": "Dr Annie Besant Road",
+     "place": "Acharya Atre Chowk (Worli)",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1076,
+     "road_name": "Dr Annie Besant Road",
+     "place": "Worli Naka",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1077,
+     "road_name": "Dr Annie Besant Road - Khan Abdul Gaffar Khan Road",
+     "place": "Worli (Sea Link toll plaza, Khan Abdul Gaffar Khan Road)",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1078,
+     "road_name": "Keshavrao Khadye Marg",
+     "place": "Byculla (Dr Ambedkar Road, Jijamata Udyan)",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1079,
+     "road_name": "Sane Guruji Marg (Arthur Road)",
+     "place": "Lalbaug (Dr Ambedkar Road)",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1080,
+     "road_name": "Dr A R Nair Road",
+     "place": "Nair Hospital (Dr A R Nair Road, Mumbai Central)",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1081,
+     "road_name": "Sir JJ Road - Maulana Azad Road",
+     "place": "Nagpada junction (Maulana Azad Road)",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1082,
+     "road_name": "Maulana Azad Road - Vallabhbhai Patel Road",
+     "place": "Opera House (Jagannath Shankarsheth Marg)",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1083,
+     "road_name": "Jagannath Shankarsheth Marg",
+     "place": "Girgaon Chowpatty (Marine Drive)",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1084,
+     "road_name": "N S Patkar Marg - Hughes Road",
+     "place": "Kemps Corner",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1085,
+     "road_name": "Peddar Road (Dr G Deshmukh Marg)",
+     "place": "Haji Ali junction",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1086,
+     "road_name": "Walkeshwar Road (Raj Bhavan approach)",
+     "place": "Raj Bhavan (Walkeshwar Road, Malabar Hill)",
+     "rain_total_mm": 55.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    }
+   ]
+  },
+  "imd_gauge_anchored": {
+   "label": "OBSERVED totals (12-h station totals and the 09:00–10:00 hour, as reported) · 15-min shape MODELLED",
+   "sources": [
+    {
+     "publisher": "Free Press Journal (12-h station totals; places; pumps not running)",
+     "date": "2025-05-26",
+     "time_ist": "23:15",
+     "url": "https://www.freepressjournal.in/mumbai/monsoon-mayhem-mumbai-flooded-after-early-rains-bmc-blames-imd-faces-flak-for-unpreparedness"
+    },
+    {
+     "publisher": "Free Press Journal (09:00–10:00 hourly figures; BMC-reported spots)",
+     "date": "2025-05-26",
+     "time_ist": "11:12",
+     "url": "https://www.freepressjournal.in/mumbai/mumbai-rains-city-lashed-by-heavy-showers-nariman-point-records-104-mm-in-one-hour"
+    }
+   ],
+   "station_window_totals_mm": {
+    "nariman_point": 252.0,
+    "csmt": 215.0,
+    "colaba": 207.0,
+    "grant_road": 202.0,
+    "malabar_hill": 136.0,
+    "worli": 130.0,
+    "haji_ali": 123.0,
+    "santacruz": 107.0,
+    "dadar": 103.0,
+    "bandra": 90.0,
+    "dharavi": 89.0,
+    "chembur": 82.0,
+    "lower_parel": 81.0,
+    "kurla": 76.0
+   },
+   "station_peak_mm_h": {
+    "nariman_point": 104.0,
+    "csmt": 80.0,
+    "colaba": 83.0,
+    "grant_road": 78.2,
+    "malabar_hill": 63.0,
+    "worli": 50.3,
+    "haji_ali": 47.6,
+    "santacruz": 27.8,
+    "dadar": 39.9,
+    "bandra": 23.4,
+    "dharavi": 34.4,
+    "chembur": 16.2,
+    "lower_parel": 31.3,
+    "kurla": 19.7
+   },
+   "shape": "the 09:00–10:00 hour as observed where reported (Nariman Point, Colaba, CSMT, Malabar Hill); the rest of each 23:00–11:00 total in proportion to the Open-Meteo archive's hourly rain at the nearest point; no rain after 11:00 (not reported per station)",
+   "peak_class_counts": {
+    "0": 63,
+    "1": 17,
+    "2": 6,
+    "3": 0
+   },
+   "flagged_segments": 6,
+   "earliest_flag_ist": "2025-05-26 09:15",
+   "reported_check": {
+    "on_network": 15,
+    "flagged": 5,
+    "hit_rate": 0.333,
+    "missed": [
+     "Sion Circle",
+     "Dadar TT",
+     "Five Gardens (Dadar)",
+     "Worli",
+     "Hindmata (Dadar East)",
+     "King's Circle (Matunga)",
+     "Gandhi Market (Sion–Matunga)",
+     "KEM Hospital (Parel)",
+     "Below the JJ flyover",
+     "Breach Candy (old US consulate)"
+    ],
+    "median_warning_lead_perfect_nowcast_min": null,
+    "median_lead_before_first_report_min": null,
+    "off_network": [
+     "Wadala"
+    ],
+    "items": [
+     {
+      "reported": "Sion Circle",
+      "what": "waterlogged (BMC)",
+      "reported_by_ist": "11:12",
+      "roundup_after_window": false,
+      "sources": [
+       "Free Press Journal (09:00–10:00 hourly figures; BMC-reported spots), 2025-05-26",
+       "Free Press Journal (12-h station totals; places; pumps not running), 2025-05-26"
+      ],
+      "segments": [
+       1043,
+       1044,
+       1069
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "lead_before_first_report_min": null,
+      "warning_lead_perfect_nowcast_min": null,
+      "max_class": 0
+     },
+     {
+      "reported": "Dadar TT",
+      "what": "waterlogged (BMC)",
+      "reported_by_ist": "11:12",
+      "roundup_after_window": false,
+      "sources": [
+       "Free Press Journal (09:00–10:00 hourly figures; BMC-reported spots), 2025-05-26",
+       "Free Press Journal (12-h station totals; places; pumps not running), 2025-05-26"
+      ],
+      "segments": [
+       1066,
+       1067
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "lead_before_first_report_min": null,
+      "warning_lead_perfect_nowcast_min": null,
+      "max_class": 1
+     },
+     {
+      "reported": "Five Gardens (Dadar)",
+      "what": "waterlogged (BMC)",
+      "reported_by_ist": "11:12",
+      "roundup_after_window": false,
+      "sources": [
+       "Free Press Journal (09:00–10:00 hourly figures; BMC-reported spots), 2025-05-26"
+      ],
+      "segments": [
+       1066,
+       1067
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "lead_before_first_report_min": null,
+      "warning_lead_perfect_nowcast_min": null,
+      "max_class": 1
+     },
+     {
+      "reported": "Worli",
+      "what": "waterlogged (BMC); the Worli underground metro station flooded",
+      "reported_by_ist": "11:12",
+      "roundup_after_window": false,
+      "sources": [
+       "Free Press Journal (09:00–10:00 hourly figures; BMC-reported spots), 2025-05-26"
+      ],
+      "segments": [
+       1074,
+       1076,
+       1077
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "lead_before_first_report_min": null,
+      "warning_lead_perfect_nowcast_min": null,
+      "max_class": 0
+     },
+     {
+      "reported": "Mantralaya / Nariman Point",
+      "what": "waterlogged",
+      "reported_by_ist": "20:25",
+      "roundup_after_window": true,
+      "sources": [
+       "News Arena India, 2025-05-26",
+       "Free Press Journal (12-h station totals; places; pumps not running), 2025-05-26"
+      ],
+      "segments": [
+       1001
+      ],
+      "on_network": true,
+      "flagged": true,
+      "first_flag_ist": "2025-05-26 09:15",
+      "lead_before_first_report_min": null,
+      "warning_lead_perfect_nowcast_min": null,
+      "max_class": 2
+     },
+     {
+      "reported": "Hindmata (Dadar East)",
+      "what": "severe waterlogging; its pumps were not yet running",
+      "reported_by_ist": "23:15",
+      "roundup_after_window": true,
+      "sources": [
+       "Free Press Journal (12-h station totals; places; pumps not running), 2025-05-26",
+       "PTI via The Week (mini pumping stations failed on 26 May), 2025-05-28"
+      ],
+      "segments": [
+       1065,
+       1066,
+       1070
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "lead_before_first_report_min": null,
+      "warning_lead_perfect_nowcast_min": null,
+      "max_class": 1
+     },
+     {
+      "reported": "King's Circle (Matunga)",
+      "what": "waterlogged",
+      "reported_by_ist": "23:15",
+      "roundup_after_window": true,
+      "sources": [
+       "Free Press Journal (12-h station totals; places; pumps not running), 2025-05-26"
+      ],
+      "segments": [
+       1067,
+       1068
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "lead_before_first_report_min": null,
+      "warning_lead_perfect_nowcast_min": null,
+      "max_class": 1
+     },
+     {
+      "reported": "Gandhi Market (Sion–Matunga)",
+      "what": "waterlogged; its pumping system failed",
+      "reported_by_ist": "23:15",
+      "roundup_after_window": true,
+      "sources": [
+       "Free Press Journal (12-h station totals; places; pumps not running), 2025-05-26",
+       "PTI via The Week (mini pumping stations failed on 26 May), 2025-05-28"
+      ],
+      "segments": [
+       1067,
+       1068,
+       1069
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "lead_before_first_report_min": null,
+      "warning_lead_perfect_nowcast_min": null,
+      "max_class": 1
+     },
+     {
+      "reported": "KEM Hospital (Parel)",
+      "what": "rainwater entered the hospital",
+      "reported_by_ist": "23:15",
+      "roundup_after_window": true,
+      "sources": [
+       "Free Press Journal (12-h station totals; places; pumps not running), 2025-05-26"
+      ],
+      "segments": [
+       1065,
+       1066,
+       1070
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "lead_before_first_report_min": null,
+      "warning_lead_perfect_nowcast_min": null,
+      "max_class": 1
+     },
+     {
+      "reported": "CSMT exit",
+      "what": "waterlogged",
+      "reported_by_ist": "23:15",
+      "roundup_after_window": true,
+      "sources": [
+       "Free Press Journal (12-h station totals; places; pumps not running), 2025-05-26"
+      ],
+      "segments": [
+       1005,
+       1060
+      ],
+      "on_network": true,
+      "flagged": true,
+      "first_flag_ist": "2025-05-26 09:30",
+      "lead_before_first_report_min": null,
+      "warning_lead_perfect_nowcast_min": null,
+      "max_class": 2
+     },
+     {
+      "reported": "Churchgate station",
+      "what": "waterlogged",
+      "reported_by_ist": "23:15",
+      "roundup_after_window": true,
+      "sources": [
+       "Free Press Journal (12-h station totals; places; pumps not running), 2025-05-26"
+      ],
+      "segments": [
+       1001,
+       1002,
+       1004,
+       1005
+      ],
+      "on_network": true,
+      "flagged": true,
+      "first_flag_ist": "2025-05-26 09:15",
+      "lead_before_first_report_min": null,
+      "warning_lead_perfect_nowcast_min": null,
+      "max_class": 2
+     },
+     {
+      "reported": "Below the JJ flyover",
+      "what": "waterlogged",
+      "reported_by_ist": "23:15",
+      "roundup_after_window": true,
+      "sources": [
+       "Free Press Journal (12-h station totals; places; pumps not running), 2025-05-26"
+      ],
+      "segments": [
+       1062,
+       1081,
+       1082
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "lead_before_first_report_min": null,
+      "warning_lead_perfect_nowcast_min": null,
+      "max_class": 1
+     },
+     {
+      "reported": "Breach Candy (old US consulate)",
+      "what": "waterlogged",
+      "reported_by_ist": "23:15",
+      "roundup_after_window": true,
+      "sources": [
+       "Free Press Journal (12-h station totals; places; pumps not running), 2025-05-26"
+      ],
+      "segments": [
+       1085
+      ],
+      "on_network": true,
+      "flagged": false,
+      "first_flag_ist": null,
+      "lead_before_first_report_min": null,
+      "warning_lead_perfect_nowcast_min": null,
+      "max_class": 0
+     },
+     {
+      "reported": "Oval Maidan roads",
+      "what": "waterlogged",
+      "reported_by_ist": "23:15",
+      "roundup_after_window": true,
+      "sources": [
+       "Free Press Journal (12-h station totals; places; pumps not running), 2025-05-26"
+      ],
+      "segments": [
+       1001,
+       1004,
+       1005
+      ],
+      "on_network": true,
+      "flagged": true,
+      "first_flag_ist": "2025-05-26 09:15",
+      "lead_before_first_report_min": null,
+      "warning_lead_perfect_nowcast_min": null,
+      "max_class": 2
+     },
+     {
+      "reported": "Masjid Bunder",
+      "what": "mini pumping station not working; water on the tracks",
+      "reported_by_ist": "23:15",
+      "roundup_after_window": true,
+      "sources": [
+       "Free Press Journal (12-h station totals; places; pumps not running), 2025-05-26"
+      ],
+      "segments": [
+       1060
+      ],
+      "on_network": true,
+      "flagged": true,
+      "first_flag_ist": "2025-05-26 09:30",
+      "lead_before_first_report_min": null,
+      "warning_lead_perfect_nowcast_min": null,
+      "max_class": 2
+     },
+     {
+      "reported": "Wadala",
+      "what": "waterlogged (visuals)",
+      "reported_by_ist": "23:15",
+      "roundup_after_window": true,
+      "sources": [
+       "Free Press Journal (12-h station totals; places; pumps not running), 2025-05-26"
+      ],
+      "segments": [],
+      "on_network": false,
+      "flagged": null,
+      "first_flag_ist": null,
+      "lead_before_first_report_min": null,
+      "warning_lead_perfect_nowcast_min": null,
+      "max_class": null
+     }
+    ]
+   },
+   "segments": [
+    {
+     "segment_id": 1001,
+     "road_name": "Marine Drive",
+     "place": "Marine Drive (Veer Nariman Road, Churchgate)",
+     "rain_total_mm": 243.3,
+     "peak_class": 2,
+     "peak_depth_cm": 22.7,
+     "peak_band": "10–30 cm",
+     "peak_at_ist": "2025-05-26 10:00",
+     "first_class1_ist": "2025-05-26 08:00",
+     "first_class2_ist": "2025-05-26 09:15",
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1002,
+     "road_name": "Marine Drive",
+     "place": "Marine Drive (Coastal Road south end, Marine Lines)",
+     "rain_total_mm": 225.8,
+     "peak_class": 2,
+     "peak_depth_cm": 20.1,
+     "peak_band": "10–30 cm",
+     "peak_at_ist": "2025-05-26 10:00",
+     "first_class1_ist": "2025-05-26 07:45",
+     "first_class2_ist": "2025-05-26 09:15",
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1003,
+     "road_name": "Marine Drive",
+     "place": "Girgaon Chowpatty (Marine Drive)",
+     "rain_total_mm": 180.3,
+     "peak_class": 2,
+     "peak_depth_cm": 10.6,
+     "peak_band": "10–30 cm",
+     "peak_at_ist": "2025-05-26 10:00",
+     "first_class1_ist": "2025-05-26 07:45",
+     "first_class2_ist": "2025-05-26 10:00",
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1004,
+     "road_name": "Veer Nariman Road",
+     "place": "Churchgate (Veer Nariman Road)",
+     "rain_total_mm": 236.9,
+     "peak_class": 2,
+     "peak_depth_cm": 19.2,
+     "peak_band": "10–30 cm",
+     "peak_at_ist": "2025-05-26 10:00",
+     "first_class1_ist": "2025-05-26 08:00",
+     "first_class2_ist": "2025-05-26 09:30",
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1005,
+     "road_name": "Veer Nariman Road - D N Road",
+     "place": "CSMT junction (D N Road)",
+     "rain_total_mm": 228.7,
+     "peak_class": 2,
+     "peak_depth_cm": 16.5,
+     "peak_band": "10–30 cm",
+     "peak_at_ist": "2025-05-26 10:00",
+     "first_class1_ist": "2025-05-26 08:00",
+     "first_class2_ist": "2025-05-26 09:30",
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1006,
+     "road_name": "Mumbai Coastal Road (northbound)",
+     "place": "Sea Link, Worli end (Coastal Road merge, northbound)",
+     "rain_total_mm": 125.0,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": true
+    },
+    {
+     "segment_id": 1007,
+     "road_name": "Mumbai Coastal Road (southbound)",
+     "place": "Marine Drive (Coastal Road south end, Marine Lines)",
+     "rain_total_mm": 124.8,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": true
+    },
+    {
+     "segment_id": 1008,
+     "road_name": "Bandra-Worli Sea Link (northbound)",
+     "place": "Bandra–Worli Sea Link, Bandra end (northbound)",
+     "rain_total_mm": 104.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": true
+    },
+    {
+     "segment_id": 1009,
+     "road_name": "Bandra-Worli Sea Link (southbound)",
+     "place": "Sea Link, Worli end (Coastal Road fork, southbound)",
+     "rain_total_mm": 105.0,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": true
+    },
+    {
+     "segment_id": 1010,
+     "road_name": "Sea Link Worli exit ramp",
+     "place": "Worli (Sea Link toll plaza, Khan Abdul Gaffar Khan Road)",
+     "rain_total_mm": 126.6,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": true
+    },
+    {
+     "segment_id": 1011,
+     "road_name": "Sea Link approach (northbound, Western Freeway)",
+     "place": "Bandra (Sea Link flyover – Western Express Highway merge)",
+     "rain_total_mm": 90.7,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": true
+    },
+    {
+     "segment_id": 1012,
+     "road_name": "Sea Link southbound approach ramp",
+     "place": "Bandra–Worli Sea Link, Bandra end (southbound)",
+     "rain_total_mm": 90.5,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": true
+    },
+    {
+     "segment_id": 1013,
+     "road_name": "Western Express Highway",
+     "place": "Kalanagar junction (Western Express Highway)",
+     "rain_total_mm": 90.3,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1014,
+     "road_name": "Western Express Highway",
+     "place": "Vakola (Western Express Highway)",
+     "rain_total_mm": 101.9,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1015,
+     "road_name": "Western Express Highway",
+     "place": "Western Express Highway (Sahar Elevated Road)",
+     "rain_total_mm": 105.0,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1016,
+     "road_name": "Western Express Highway",
+     "place": "Andheri (Western Express Highway, Andheri–Kurla Road)",
+     "rain_total_mm": 97.7,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1017,
+     "road_name": "Western Express Highway",
+     "place": "Jogeshwari (WEH – JVLR junction)",
+     "rain_total_mm": 95.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1018,
+     "road_name": "Western Express Highway",
+     "place": "Goregaon (Western Express Highway, Aarey)",
+     "rain_total_mm": 94.0,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1019,
+     "road_name": "Western Express Highway",
+     "place": "Borivali (Western Express Highway)",
+     "rain_total_mm": 90.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1020,
+     "road_name": "Sahar Elevated Road",
+     "place": "Mumbai Airport T2 (departure forecourt)",
+     "rain_total_mm": 95.5,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": true
+    },
+    {
+     "segment_id": 1021,
+     "road_name": "Mahim Causeway",
+     "place": "Mahim Causeway, Bandra end (SV Road)",
+     "rain_total_mm": 90.6,
+     "peak_class": 0,
+     "peak_depth_cm": 0.8,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1022,
+     "road_name": "Swami Vivekanand Road",
+     "place": "Bandra (SV Road, Hill Road)",
+     "rain_total_mm": 90.1,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1023,
+     "road_name": "Swami Vivekanand Road",
+     "place": "Santacruz (SV Road, Juhu Tara Road)",
+     "rain_total_mm": 91.5,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1024,
+     "road_name": "Swami Vivekanand Road",
+     "place": "Santacruz (SV Road, Linking Road, Milan Subway road)",
+     "rain_total_mm": 105.8,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1025,
+     "road_name": "Swami Vivekanand Road",
+     "place": "Irla junction (SV Road, for Cooper Hospital)",
+     "rain_total_mm": 102.5,
+     "peak_class": 0,
+     "peak_depth_cm": 0.1,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1026,
+     "road_name": "Swami Vivekanand Road",
+     "place": "Andheri West (SV Road, Gokhale Bridge)",
+     "rain_total_mm": 98.3,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1027,
+     "road_name": "P V Avsare Marg (Milan Subway road)",
+     "place": "Milan Subway (Santacruz)",
+     "rain_total_mm": 105.1,
+     "peak_class": 0,
+     "peak_depth_cm": 1.9,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1028,
+     "road_name": "G K Gokhale Bridge",
+     "place": "Andheri East (Gokhale Bridge landing, Sahar Road)",
+     "rain_total_mm": 97.5,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": true
+    },
+    {
+     "segment_id": 1029,
+     "road_name": "Teli Galli - N S Phadke Marg",
+     "place": "Andheri East (Andheri–Kurla Road, Teli Galli)",
+     "rain_total_mm": 97.0,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1030,
+     "road_name": "Sahar Road (Andheri Subway approach)",
+     "place": "Andheri Subway (Andheri East approach, Sahar Road)",
+     "rain_total_mm": 97.6,
+     "peak_class": 0,
+     "peak_depth_cm": 1.5,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1031,
+     "road_name": "Andheri-Kurla Road",
+     "place": "Andheri (Western Express Highway, Andheri–Kurla Road)",
+     "rain_total_mm": 96.4,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1032,
+     "road_name": "Andheri-Kurla Road",
+     "place": "Saki Naka (Andheri–Kurla Road)",
+     "rain_total_mm": 92.9,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1033,
+     "road_name": "Andheri-Kurla Road",
+     "place": "Kurla (LBS Marg, Kamani)",
+     "rain_total_mm": 85.3,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1034,
+     "road_name": "Saki Vihar Road",
+     "place": "Powai (JVLR, Saki Vihar Road)",
+     "rain_total_mm": 87.3,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1035,
+     "road_name": "Jogeshwari-Vikhroli Link Road",
+     "place": "Powai (JVLR, Saki Vihar Road)",
+     "rain_total_mm": 90.4,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1036,
+     "road_name": "Jogeshwari-Vikhroli Link Road",
+     "place": "Gandhinagar (LBS Marg – JVLR, Powai)",
+     "rain_total_mm": 86.2,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1037,
+     "road_name": "Jogeshwari-Vikhroli Link Road",
+     "place": "Vikhroli (EEH – JVLR junction)",
+     "rain_total_mm": 85.7,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1038,
+     "road_name": "Lal Bahadur Shastri Marg",
+     "place": "Kurla (LBS Marg, BKC Road)",
+     "rain_total_mm": 77.1,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1039,
+     "road_name": "Lal Bahadur Shastri Marg",
+     "place": "Kurla (LBS Marg, SCLR)",
+     "rain_total_mm": 78.7,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1040,
+     "road_name": "Lal Bahadur Shastri Marg",
+     "place": "Kurla (LBS Marg, Kamani)",
+     "rain_total_mm": 81.6,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1041,
+     "road_name": "Lal Bahadur Shastri Marg",
+     "place": "Ghatkopar West (LBS Marg)",
+     "rain_total_mm": 82.6,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1042,
+     "road_name": "Lal Bahadur Shastri Marg",
+     "place": "Gandhinagar (LBS Marg – JVLR, Powai)",
+     "rain_total_mm": 83.4,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1043,
+     "road_name": "Eastern Express Highway (Sion)",
+     "place": "Sion (LBS Marg – Eastern Express Highway fork)",
+     "rain_total_mm": 87.5,
+     "peak_class": 0,
+     "peak_depth_cm": 1.9,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1044,
+     "road_name": "Eastern Express Highway",
+     "place": "Priyadarshini (EEH – Sion–Panvel Highway)",
+     "rain_total_mm": 79.0,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1045,
+     "road_name": "Eastern Express Highway",
+     "place": "Amar Mahal junction (EEH, SCLR)",
+     "rain_total_mm": 81.8,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1046,
+     "road_name": "Eastern Express Highway",
+     "place": "Chheda Nagar (EEH, Eastern Freeway link)",
+     "rain_total_mm": 81.5,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1047,
+     "road_name": "Eastern Express Highway",
+     "place": "Ghatkopar (Eastern Express Highway)",
+     "rain_total_mm": 81.1,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1048,
+     "road_name": "Eastern Express Highway",
+     "place": "Vikhroli (EEH – JVLR junction)",
+     "rain_total_mm": 84.0,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1049,
+     "road_name": "Santacruz-Chembur Link Road",
+     "place": "Kurla West (SCLR, Kaustubh Rane flyover)",
+     "rain_total_mm": 90.7,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1050,
+     "road_name": "Santacruz-Chembur Link Road",
+     "place": "Amar Mahal junction (EEH, SCLR)",
+     "rain_total_mm": 77.7,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1051,
+     "road_name": "Santacruz-Chembur Link Road (Kurla ramp)",
+     "place": "Kurla (LBS Marg, SCLR)",
+     "rain_total_mm": 79.9,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1052,
+     "road_name": "Bandra Kurla Complex Road",
+     "place": "BKC (Bandra Kurla Complex Road)",
+     "rain_total_mm": 91.0,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1053,
+     "road_name": "Bandra Kurla Complex Road",
+     "place": "Kurla (LBS Marg, BKC Road)",
+     "rain_total_mm": 78.8,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1054,
+     "road_name": "Sion-Panvel Highway",
+     "place": "Chembur (Sion–Panvel Highway)",
+     "rain_total_mm": 81.3,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1055,
+     "road_name": "Sion-Panvel Highway",
+     "place": "Mankhurd (Sion–Panvel Highway, GMLR)",
+     "rain_total_mm": 81.4,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1056,
+     "road_name": "Ghatkopar-Mankhurd Link Road",
+     "place": "Eastern Freeway north end (Chembur, GMLR)",
+     "rain_total_mm": 81.3,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1057,
+     "road_name": "Mankhurd - EEH link road",
+     "place": "Chheda Nagar (EEH, Eastern Freeway link)",
+     "rain_total_mm": 81.5,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1058,
+     "road_name": "Eastern Freeway",
+     "place": "Atal Setu interchange (Eastern Freeway, Sewri)",
+     "rain_total_mm": 162.6,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": true
+    },
+    {
+     "segment_id": 1059,
+     "road_name": "Eastern Freeway",
+     "place": "Eastern Freeway north end (Chembur, GMLR)",
+     "rain_total_mm": 82.6,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": true
+    },
+    {
+     "segment_id": 1060,
+     "road_name": "P D Mello Road",
+     "place": "Eastern Freeway south end (P DMello Road, Orange Gate)",
+     "rain_total_mm": 215.2,
+     "peak_class": 2,
+     "peak_depth_cm": 18.7,
+     "peak_band": "10–30 cm",
+     "peak_at_ist": "2025-05-26 10:00",
+     "first_class1_ist": "2025-05-26 08:00",
+     "first_class2_ist": "2025-05-26 09:30",
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1061,
+     "road_name": "D N Road - JJ Flyover (Mohammed Ali Road)",
+     "place": "JJ junction (JJ Hospital)",
+     "rain_total_mm": 200.8,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": true
+    },
+    {
+     "segment_id": 1062,
+     "road_name": "Sir JJ Road - Dr Ambedkar Road",
+     "place": "Byculla (Dr Ambedkar Road, Jijamata Udyan)",
+     "rain_total_mm": 143.0,
+     "peak_class": 1,
+     "peak_depth_cm": 7.4,
+     "peak_band": "2–10 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": "2025-05-26 08:00",
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1063,
+     "road_name": "Dr Ambedkar Road",
+     "place": "Lalbaug (Dr Ambedkar Road)",
+     "rain_total_mm": 90.1,
+     "peak_class": 1,
+     "peak_depth_cm": 4.6,
+     "peak_band": "2–10 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": "2025-05-26 08:00",
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1064,
+     "road_name": "Dr Ambedkar Road",
+     "place": "Parel (Dr Ambedkar Road)",
+     "rain_total_mm": 85.4,
+     "peak_class": 1,
+     "peak_depth_cm": 3.3,
+     "peak_band": "2–10 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": "2025-05-26 08:15",
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1065,
+     "road_name": "Dr Ambedkar Road",
+     "place": "Hindmata (Dadar East)",
+     "rain_total_mm": 93.4,
+     "peak_class": 1,
+     "peak_depth_cm": 3.9,
+     "peak_band": "2–10 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": "2025-05-26 08:15",
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1066,
+     "road_name": "Dr Ambedkar Road (Hindmata - Dadar TT)",
+     "place": "Dadar TT Circle",
+     "rain_total_mm": 102.6,
+     "peak_class": 1,
+     "peak_depth_cm": 4.8,
+     "peak_band": "2–10 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": "2025-05-26 08:00",
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1067,
+     "road_name": "Dr Ambedkar Road",
+     "place": "Kings Circle (Matunga)",
+     "rain_total_mm": 96.6,
+     "peak_class": 1,
+     "peak_depth_cm": 3.8,
+     "peak_band": "2–10 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": "2025-05-26 08:15",
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1068,
+     "road_name": "Dr Ambedkar Road",
+     "place": "Sion Hospital (LTMGH) junction",
+     "rain_total_mm": 93.1,
+     "peak_class": 1,
+     "peak_depth_cm": 4.4,
+     "peak_band": "2–10 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": "2025-05-26 08:00",
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1069,
+     "road_name": "Dr Ambedkar Road",
+     "place": "Sion Circle",
+     "rain_total_mm": 90.1,
+     "peak_class": 0,
+     "peak_depth_cm": 1.8,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1070,
+     "road_name": "Dr E Borges Road",
+     "place": "KEM Hospital (Acharya Donde Marg)",
+     "rain_total_mm": 97.3,
+     "peak_class": 1,
+     "peak_depth_cm": 4.3,
+     "peak_band": "2–10 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": "2025-05-26 08:00",
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1071,
+     "road_name": "Tilak Bridge",
+     "place": "Dadar TT Circle",
+     "rain_total_mm": 103.0,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": true
+    },
+    {
+     "segment_id": 1072,
+     "road_name": "Senapati Bapat Marg",
+     "place": "Dadar West (Tilak Bridge, Senapati Bapat Marg)",
+     "rain_total_mm": 103.0,
+     "peak_class": 1,
+     "peak_depth_cm": 3.0,
+     "peak_band": "2–10 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": "2025-05-26 08:15",
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1073,
+     "road_name": "Lady Jamshetji Road - Senapati Bapat Marg",
+     "place": "Mahim (Lady Jamshetji Road, causeway south end)",
+     "rain_total_mm": 93.2,
+     "peak_class": 0,
+     "peak_depth_cm": 1.5,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1074,
+     "road_name": "Pandurang Budhkar Marg",
+     "place": "Lower Parel (Senapati Bapat Marg)",
+     "rain_total_mm": 115.6,
+     "peak_class": 0,
+     "peak_depth_cm": 1.3,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1075,
+     "road_name": "Dr Annie Besant Road",
+     "place": "Acharya Atre Chowk (Worli)",
+     "rain_total_mm": 114.7,
+     "peak_class": 0,
+     "peak_depth_cm": 1.2,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1076,
+     "road_name": "Dr Annie Besant Road",
+     "place": "Worli Naka",
+     "rain_total_mm": 124.0,
+     "peak_class": 0,
+     "peak_depth_cm": 0.0,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-25 22:00",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1077,
+     "road_name": "Dr Annie Besant Road - Khan Abdul Gaffar Khan Road",
+     "place": "Worli (Sea Link toll plaza, Khan Abdul Gaffar Khan Road)",
+     "rain_total_mm": 118.4,
+     "peak_class": 0,
+     "peak_depth_cm": 1.9,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1078,
+     "road_name": "Keshavrao Khadye Marg",
+     "place": "Byculla (Dr Ambedkar Road, Jijamata Udyan)",
+     "rain_total_mm": 118.7,
+     "peak_class": 1,
+     "peak_depth_cm": 4.6,
+     "peak_band": "2–10 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": "2025-05-26 08:00",
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1079,
+     "road_name": "Sane Guruji Marg (Arthur Road)",
+     "place": "Lalbaug (Dr Ambedkar Road)",
+     "rain_total_mm": 88.2,
+     "peak_class": 1,
+     "peak_depth_cm": 2.1,
+     "peak_band": "2–10 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": "2025-05-26 08:30",
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1080,
+     "road_name": "Dr A R Nair Road",
+     "place": "Nair Hospital (Dr A R Nair Road, Mumbai Central)",
+     "rain_total_mm": 136.4,
+     "peak_class": 1,
+     "peak_depth_cm": 3.1,
+     "peak_band": "2–10 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": "2025-05-26 08:15",
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1081,
+     "road_name": "Sir JJ Road - Maulana Azad Road",
+     "place": "Nagpada junction (Maulana Azad Road)",
+     "rain_total_mm": 170.8,
+     "peak_class": 1,
+     "peak_depth_cm": 5.5,
+     "peak_band": "2–10 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": "2025-05-26 08:00",
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1082,
+     "road_name": "Maulana Azad Road - Vallabhbhai Patel Road",
+     "place": "Opera House (Jagannath Shankarsheth Marg)",
+     "rain_total_mm": 193.1,
+     "peak_class": 1,
+     "peak_depth_cm": 8.4,
+     "peak_band": "2–10 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": "2025-05-26 07:45",
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1083,
+     "road_name": "Jagannath Shankarsheth Marg",
+     "place": "Girgaon Chowpatty (Marine Drive)",
+     "rain_total_mm": 183.6,
+     "peak_class": 1,
+     "peak_depth_cm": 6.3,
+     "peak_band": "2–10 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": "2025-05-26 08:00",
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1084,
+     "road_name": "N S Patkar Marg - Hughes Road",
+     "place": "Kemps Corner",
+     "rain_total_mm": 172.2,
+     "peak_class": 1,
+     "peak_depth_cm": 4.8,
+     "peak_band": "2–10 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": "2025-05-26 08:00",
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1085,
+     "road_name": "Peddar Road (Dr G Deshmukh Marg)",
+     "place": "Haji Ali junction",
+     "rain_total_mm": 136.3,
+     "peak_class": 0,
+     "peak_depth_cm": 1.2,
+     "peak_band": "0–2 cm",
+     "peak_at_ist": "2025-05-26 08:30",
+     "first_class1_ist": null,
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    },
+    {
+     "segment_id": 1086,
+     "road_name": "Walkeshwar Road (Raj Bhavan approach)",
+     "place": "Raj Bhavan (Walkeshwar Road, Malabar Hill)",
+     "rain_total_mm": 138.6,
+     "peak_class": 1,
+     "peak_depth_cm": 6.2,
+     "peak_band": "2–10 cm",
+     "peak_at_ist": "2025-05-26 10:00",
+     "first_class1_ist": "2025-05-26 09:30",
+     "first_class2_ist": null,
+     "first_class3_ist": null,
+     "elevated": false
+    }
+   ],
+   "snapshot": {
+    "at_ist": "2025-05-26T08:00:00+05:30",
+    "label": "HINDSIGHT — the observed rain used as if it had been a perfect nowcast",
+    "flagged_within_horizon": 6,
+    "flagged_now": 0,
+    "lead_time_to_deep_min": {
+     "min": 75,
+     "median": 90,
+     "max": 120
+    },
+    "top": [
+     {
+      "segment_id": 1001,
+      "road_name": "Marine Drive",
+      "place": "Marine Drive (Veer Nariman Road, Churchgate)",
+      "risk_class": 2,
+      "expected_depth_band": "10–30 cm",
+      "lead_time_min": 75,
+      "lead_time_deep_min": 75
+     },
+     {
+      "segment_id": 1002,
+      "road_name": "Marine Drive",
+      "place": "Marine Drive (Coastal Road south end, Marine Lines)",
+      "risk_class": 2,
+      "expected_depth_band": "10–30 cm",
+      "lead_time_min": 75,
+      "lead_time_deep_min": 75
+     },
+     {
+      "segment_id": 1004,
+      "road_name": "Veer Nariman Road",
+      "place": "Churchgate (Veer Nariman Road)",
+      "risk_class": 2,
+      "expected_depth_band": "10–30 cm",
+      "lead_time_min": 90,
+      "lead_time_deep_min": 90
+     },
+     {
+      "segment_id": 1005,
+      "road_name": "Veer Nariman Road - D N Road",
+      "place": "CSMT junction (D N Road)",
+      "risk_class": 2,
+      "expected_depth_band": "10–30 cm",
+      "lead_time_min": 90,
+      "lead_time_deep_min": 90
+     },
+     {
+      "segment_id": 1060,
+      "road_name": "P D Mello Road",
+      "place": "Eastern Freeway south end (P DMello Road, Orange Gate)",
+      "risk_class": 2,
+      "expected_depth_band": "10–30 cm",
+      "lead_time_min": 90,
+      "lead_time_deep_min": 90
+     },
+     {
+      "segment_id": 1003,
+      "road_name": "Marine Drive",
+      "place": "Girgaon Chowpatty (Marine Drive)",
+      "risk_class": 2,
+      "expected_depth_band": "10–30 cm",
+      "lead_time_min": 120,
+      "lead_time_deep_min": 120
+     }
+    ],
+    "proposal_counts": {
+     "ambulance_window": 6,
+     "live_wire_hazard": 6,
+     "public_advisory_draft": 1,
+     "pump_request": 1,
+     "waterlogging_reroute": 6
+    },
+    "proposal_examples": [
+     "Marine Drive (Veer Nariman Road, Churchgate) (Marine Drive): waterlogging risk 2 (10–30 cm), deep water in about 75 min; no detour on the city network that avoids flagged roads — propose closing to small vehicles with officer judgement on site.",
+     "Ambulance (108) note — Marine Drive (Veer Nariman Road, Churchgate) (Marine Drive): passable for about 75 min more; no detour avoiding flagged roads. Nearest major hospital: JJ Hospital (3.7 km).",
+     "Live-wire hazard — Marine Drive (Veer Nariman Road, Churchgate) (Marine Drive): waterlogging risk 2 (10–30 cm). Propose asking the area's power distribution utility to inspect and, where needed, isolate street-light and overhead supply along this road.",
+     "Marine Drive (Coastal Road south end, Marine Lines) (Marine Drive): waterlogging risk 2 (10–30 cm), deep water in about 75 min; propose diverting traffic via Veer Nariman Road → Veer Nariman Road - D N Road → D N Road - JJ Flyover (Mohammed Ali Road) → Sir JJ Road - Maulana Azad Road → Maulana Azad Road - Vallabhbhai Patel Road → Jagannath Shankarsheth Marg → Marine Drive, and asking BEST to divert the bus routes on this road the same way."
+    ],
+    "advisory_draft": {
+     "en": "Traffic advisory (draft): waterlogging is likely within the next 120 minutes at these places: Marine Drive (Veer Nariman Road, Churchgate); Marine Drive (Coastal Road south end, Marine Lines); Churchgate (Veer Nariman Road); CSMT junction (D N Road); Eastern Freeway south end (P DMello Road, Orange Gate); Girgaon Chowpatty (Marine Drive). Please avoid these roads if you can. Do not touch electric poles or wires in standing water. Emergency: 112; BMC disaster control: 1916; ambulance (108).",
+     "mr": "वाहतूक सूचना (मसुदा): पुढील 120 मिनिटांत या ठिकाणी पाणी साचण्याची शक्यता आहे: मरीन ड्राइव्ह (वीर नरिमन मार्ग, चर्चगेट); मरीन ड्राइव्ह (सागरी किनारा मार्ग दक्षिण टोक, मरीन लाइन्स); चर्चगेट (वीर नरिमन मार्ग); सीएसएमटी जंक्शन (दादाभाई नौरोजी मार्ग); पूर्व मुक्त मार्ग दक्षिण टोक (पी. डिमेलो मार्ग, ऑरेंज गेट); गिरगाव चौपाटी (मरीन ड्राइव्ह). शक्य असल्यास हे रस्ते टाळा. साचलेल्या पाण्यात विजेचे खांब किंवा तारांना स्पर्श करू नका. आपत्कालीन क्रमांक: 112; बृहन्मुंबई महानगरपालिका आपत्ती नियंत्रण: 1916; रुग्णवाहिका (108).",
+     "hi": "यातायात सलाह (मसौदा): अगले 120 मिनट में इन जगहों पर जलभराव की आशंका है: मरीन ड्राइव्ह (वीर नरिमन मार्ग, चर्चगेट); मरीन ड्राइव्ह (सागरी किनारा मार्ग दक्षिण टोक, मरीन लाइन्स); चर्चगेट; छत्रपति शिवाजी महाराज टर्मिनस; पूर्व मुक्त मार्ग दक्षिण टोक (पी. डिमेलो मार्ग, ऑरेंज गेट); गिरगांव चौपाटी। हो सके तो इन सड़कों से बचें। जमा पानी में बिजली के खंभों या तारों को न छुएँ। आपातकालीन: 112; बीएमसी आपदा नियंत्रण: 1916; एम्बुलेंस (108)।"
+    },
+    "proposals": [
+     {
+      "proposal_id": "hy-reroute-1001-20250526T0230Z",
+      "kind": "waterlogging_reroute",
+      "subject_urn": "segment:1001",
+      "state": "proposed",
+      "generated_at": "2025-05-26T02:30:00+00:00",
+      "summary": "Marine Drive (Veer Nariman Road, Churchgate) (Marine Drive): waterlogging risk 2 (10–30 cm), deep water in about 75 min; no detour on the city network that avoids flagged roads — propose closing to small vehicles with officer judgement on site.",
+      "actions": [
+       {
+        "verb": "monitor",
+        "target_urn": "segment:1001",
+        "params": {
+         "reason": "waterlogging",
+         "notify_agencies": [
+          "mtp",
+          "best"
+         ]
+        },
+        "requires_officer": true,
+        "reversible": true
+       }
+      ],
+      "recommendation": {
+       "decision": "await_officer"
+      },
+      "human_gate": {
+       "state": "proposed",
+       "required_role": "duty_officer",
+       "officer": null,
+       "decided_at": null
+      },
+      "labels": [
+       "HINDSIGHT",
+       "MODELLED"
+      ],
+      "situation": {
+       "segment_id": 1001,
+       "road_name": "Marine Drive",
+       "place": "Marine Drive (Veer Nariman Road, Churchgate)",
+       "risk_class": 2,
+       "expected_depth_band": "10–30 cm",
+       "lead_time_min": 75,
+       "lead_time_deep_min": 75
+      }
+     },
+     {
+      "proposal_id": "hy-amb-1001-20250526T0230Z",
+      "kind": "ambulance_window",
+      "subject_urn": "segment:1001",
+      "state": "proposed",
+      "generated_at": "2025-05-26T02:30:00+00:00",
+      "summary": "Ambulance (108) note — Marine Drive (Veer Nariman Road, Churchgate) (Marine Drive): passable for about 75 min more; no detour avoiding flagged roads. Nearest major hospital: JJ Hospital (3.7 km).",
+      "actions": [
+       {
+        "verb": "advisory",
+        "target_urn": "segment:1001",
+        "params": {
+         "to_agency": "amb108",
+         "passable_for_min": 75,
+         "via_segment_ids": [],
+         "nearest_hospital": {
+          "id": "jj_hospital",
+          "name": "JJ Hospital",
+          "name_mr": "जे.जे. रुग्णालय",
+          "name_hi": "जे.जे. अस्पताल",
+          "distance_m": 3733
+         },
+         "note": "Ambulance (108) note — Marine Drive (Veer Nariman Road, Churchgate) (Marine Drive): passable for about 75 min more; no detour avoiding flagged roads. Nearest major hospital: JJ Hospital (3.7 km)."
+        },
+        "requires_officer": true,
+        "reversible": true
+       }
+      ],
+      "recommendation": {
+       "decision": "await_officer"
+      },
+      "human_gate": {
+       "state": "proposed",
+       "required_role": "duty_officer",
+       "officer": null,
+       "decided_at": null
+      },
+      "labels": [
+       "HINDSIGHT",
+       "MODELLED"
+      ]
+     },
+     {
+      "proposal_id": "hy-wire-1001-20250526T0230Z",
+      "kind": "live_wire_hazard",
+      "subject_urn": "segment:1001",
+      "state": "proposed",
+      "generated_at": "2025-05-26T02:30:00+00:00",
+      "summary": "Live-wire hazard — Marine Drive (Veer Nariman Road, Churchgate) (Marine Drive): waterlogging risk 2 (10–30 cm). Propose asking the area's power distribution utility to inspect and, where needed, isolate street-light and overhead supply along this road.",
+      "actions": [
+       {
+        "verb": "advisory",
+        "target_urn": "segment:1001",
+        "params": {
+         "to_agency": "power",
+         "request": "inspect and, where needed, isolate supply",
+         "why": "standing water around poles and feeder pillars: electrocution risk"
+        },
+        "requires_officer": true,
+        "reversible": true
+       }
+      ],
+      "recommendation": {
+       "decision": "await_officer"
+      },
+      "human_gate": {
+       "state": "proposed",
+       "required_role": "duty_officer",
+       "officer": null,
+       "decided_at": null
+      },
+      "labels": [
+       "HINDSIGHT",
+       "MODELLED"
+      ],
+      "for_officer_approval": true
+     },
+     {
+      "proposal_id": "hy-reroute-1002-20250526T0230Z",
+      "kind": "waterlogging_reroute",
+      "subject_urn": "segment:1002",
+      "state": "proposed",
+      "generated_at": "2025-05-26T02:30:00+00:00",
+      "summary": "Marine Drive (Coastal Road south end, Marine Lines) (Marine Drive): waterlogging risk 2 (10–30 cm), deep water in about 75 min; propose diverting traffic via Veer Nariman Road → Veer Nariman Road - D N Road → D N Road - JJ Flyover (Mohammed Ali Road) → Sir JJ Road - Maulana Azad Road → Maulana Azad Road - Vallabhbhai Patel Road → Jagannath Shankarsheth Marg → Marine Drive, and asking BEST to divert the bus routes on this road the same way.",
+      "actions": [
+       {
+        "verb": "diversion",
+        "target_urn": "segment:1002",
+        "params": {
+         "via_segment_ids": [
+          1004,
+          1005,
+          1061,
+          1081,
+          1082,
+          1083,
+          1003
+         ],
+         "via_names": [
+          "Veer Nariman Road",
+          "Veer Nariman Road - D N Road",
+          "D N Road - JJ Flyover (Mohammed Ali Road)",
+          "Sir JJ Road - Maulana Azad Road",
+          "Maulana Azad Road - Vallabhbhai Patel Road",
+          "Jagannath Shankarsheth Marg",
+          "Marine Drive"
+         ],
+         "detour_length_m": 10228,
+         "reason": "waterlogging",
+         "notify_agencies": [
+          "mtp",
+          "best"
+         ]
+        },
+        "requires_officer": true,
+        "reversible": true
+       }
+      ],
+      "recommendation": {
+       "decision": "await_officer"
+      },
+      "human_gate": {
+       "state": "proposed",
+       "required_role": "duty_officer",
+       "officer": null,
+       "decided_at": null
+      },
+      "labels": [
+       "HINDSIGHT",
+       "MODELLED"
+      ],
+      "situation": {
+       "segment_id": 1002,
+       "road_name": "Marine Drive",
+       "place": "Marine Drive (Coastal Road south end, Marine Lines)",
+       "risk_class": 2,
+       "expected_depth_band": "10–30 cm",
+       "lead_time_min": 75,
+       "lead_time_deep_min": 75
+      }
+     },
+     {
+      "proposal_id": "hy-amb-1002-20250526T0230Z",
+      "kind": "ambulance_window",
+      "subject_urn": "segment:1002",
+      "state": "proposed",
+      "generated_at": "2025-05-26T02:30:00+00:00",
+      "summary": "Ambulance (108) note — Marine Drive (Coastal Road south end, Marine Lines) (Marine Drive): passable for about 75 min more; use Veer Nariman Road → Veer Nariman Road - D N Road → D N Road - JJ Flyover (Mohammed Ali Road) → Sir JJ Road - Maulana Azad Road → Maulana Azad Road - Vallabhbhai Patel Road → Jagannath Shankarsheth Marg → Marine Drive. Nearest major hospital: JJ Hospital (2.9 km).",
+      "actions": [
+       {
+        "verb": "advisory",
+        "target_urn": "segment:1002",
+        "params": {
+         "to_agency": "amb108",
+         "passable_for_min": 75,
+         "via_segment_ids": [
+          1004,
+          1005,
+          1061,
+          1081,
+          1082,
+          1083,
+          1003
+         ],
+         "nearest_hospital": {
+          "id": "jj_hospital",
+          "name": "JJ Hospital",
+          "name_mr": "जे.जे. रुग्णालय",
+          "name_hi": "जे.जे. अस्पताल",
+          "distance_m": 2909
+         },
+         "note": "Ambulance (108) note — Marine Drive (Coastal Road south end, Marine Lines) (Marine Drive): passable for about 75 min more; use Veer Nariman Road → Veer Nariman Road - D N Road → D N Road - JJ Flyover (Mohammed Ali Road) → Sir JJ Road - Maulana Azad Road → Maulana Azad Road - Vallabhbhai Patel Road → Jagannath Shankarsheth Marg → Marine Drive. Nearest major hospital: JJ Hospital (2.9 km)."
+        },
+        "requires_officer": true,
+        "reversible": true
+       }
+      ],
+      "recommendation": {
+       "decision": "await_officer"
+      },
+      "human_gate": {
+       "state": "proposed",
+       "required_role": "duty_officer",
+       "officer": null,
+       "decided_at": null
+      },
+      "labels": [
+       "HINDSIGHT",
+       "MODELLED"
+      ]
+     },
+     {
+      "proposal_id": "hy-wire-1002-20250526T0230Z",
+      "kind": "live_wire_hazard",
+      "subject_urn": "segment:1002",
+      "state": "proposed",
+      "generated_at": "2025-05-26T02:30:00+00:00",
+      "summary": "Live-wire hazard — Marine Drive (Coastal Road south end, Marine Lines) (Marine Drive): waterlogging risk 2 (10–30 cm). Propose asking the area's power distribution utility to inspect and, where needed, isolate street-light and overhead supply along this road.",
+      "actions": [
+       {
+        "verb": "advisory",
+        "target_urn": "segment:1002",
+        "params": {
+         "to_agency": "power",
+         "request": "inspect and, where needed, isolate supply",
+         "why": "standing water around poles and feeder pillars: electrocution risk"
+        },
+        "requires_officer": true,
+        "reversible": true
+       }
+      ],
+      "recommendation": {
+       "decision": "await_officer"
+      },
+      "human_gate": {
+       "state": "proposed",
+       "required_role": "duty_officer",
+       "officer": null,
+       "decided_at": null
+      },
+      "labels": [
+       "HINDSIGHT",
+       "MODELLED"
+      ],
+      "for_officer_approval": true
+     },
+     {
+      "proposal_id": "hy-reroute-1004-20250526T0230Z",
+      "kind": "waterlogging_reroute",
+      "subject_urn": "segment:1004",
+      "state": "proposed",
+      "generated_at": "2025-05-26T02:30:00+00:00",
+      "summary": "Churchgate (Veer Nariman Road) (Veer Nariman Road): waterlogging risk 2 (10–30 cm), deep water in about 90 min; no detour on the city network that avoids flagged roads — propose closing to small vehicles with officer judgement on site.",
+      "actions": [
+       {
+        "verb": "monitor",
+        "target_urn": "segment:1004",
+        "params": {
+         "reason": "waterlogging",
+         "notify_agencies": [
+          "mtp",
+          "best"
+         ]
+        },
+        "requires_officer": true,
+        "reversible": true
+       }
+      ],
+      "recommendation": {
+       "decision": "await_officer"
+      },
+      "human_gate": {
+       "state": "proposed",
+       "required_role": "duty_officer",
+       "officer": null,
+       "decided_at": null
+      },
+      "labels": [
+       "HINDSIGHT",
+       "MODELLED"
+      ],
+      "situation": {
+       "segment_id": 1004,
+       "road_name": "Veer Nariman Road",
+       "place": "Churchgate (Veer Nariman Road)",
+       "risk_class": 2,
+       "expected_depth_band": "10–30 cm",
+       "lead_time_min": 90,
+       "lead_time_deep_min": 90
+      }
+     },
+     {
+      "proposal_id": "hy-amb-1004-20250526T0230Z",
+      "kind": "ambulance_window",
+      "subject_urn": "segment:1004",
+      "state": "proposed",
+      "generated_at": "2025-05-26T02:30:00+00:00",
+      "summary": "Ambulance (108) note — Churchgate (Veer Nariman Road) (Veer Nariman Road): passable for about 90 min more; no detour avoiding flagged roads. Nearest major hospital: JJ Hospital (3.5 km).",
+      "actions": [
+       {
+        "verb": "advisory",
+        "target_urn": "segment:1004",
+        "params": {
+         "to_agency": "amb108",
+         "passable_for_min": 90,
+         "via_segment_ids": [],
+         "nearest_hospital": {
+          "id": "jj_hospital",
+          "name": "JJ Hospital",
+          "name_mr": "जे.जे. रुग्णालय",
+          "name_hi": "जे.जे. अस्पताल",
+          "distance_m": 3522
+         },
+         "note": "Ambulance (108) note — Churchgate (Veer Nariman Road) (Veer Nariman Road): passable for about 90 min more; no detour avoiding flagged roads. Nearest major hospital: JJ Hospital (3.5 km)."
+        },
+        "requires_officer": true,
+        "reversible": true
+       }
+      ],
+      "recommendation": {
+       "decision": "await_officer"
+      },
+      "human_gate": {
+       "state": "proposed",
+       "required_role": "duty_officer",
+       "officer": null,
+       "decided_at": null
+      },
+      "labels": [
+       "HINDSIGHT",
+       "MODELLED"
+      ]
+     },
+     {
+      "proposal_id": "hy-wire-1004-20250526T0230Z",
+      "kind": "live_wire_hazard",
+      "subject_urn": "segment:1004",
+      "state": "proposed",
+      "generated_at": "2025-05-26T02:30:00+00:00",
+      "summary": "Live-wire hazard — Churchgate (Veer Nariman Road) (Veer Nariman Road): waterlogging risk 2 (10–30 cm). Propose asking the area's power distribution utility to inspect and, where needed, isolate street-light and overhead supply along this road.",
+      "actions": [
+       {
+        "verb": "advisory",
+        "target_urn": "segment:1004",
+        "params": {
+         "to_agency": "power",
+         "request": "inspect and, where needed, isolate supply",
+         "why": "standing water around poles and feeder pillars: electrocution risk"
+        },
+        "requires_officer": true,
+        "reversible": true
+       }
+      ],
+      "recommendation": {
+       "decision": "await_officer"
+      },
+      "human_gate": {
+       "state": "proposed",
+       "required_role": "duty_officer",
+       "officer": null,
+       "decided_at": null
+      },
+      "labels": [
+       "HINDSIGHT",
+       "MODELLED"
+      ],
+      "for_officer_approval": true
+     },
+     {
+      "proposal_id": "hy-reroute-1005-20250526T0230Z",
+      "kind": "waterlogging_reroute",
+      "subject_urn": "segment:1005",
+      "state": "proposed",
+      "generated_at": "2025-05-26T02:30:00+00:00",
+      "summary": "CSMT junction (D N Road) (Veer Nariman Road - D N Road): waterlogging risk 2 (10–30 cm), deep water in about 90 min; propose diverting traffic via Veer Nariman Road → Marine Drive → Jagannath Shankarsheth Marg → Maulana Azad Road - Vallabhbhai Patel Road → Sir JJ Road - Maulana Azad Road → D N Road - JJ Flyover (Mohammed Ali Road), and asking BEST to divert the bus routes on this road the same way.",
+      "actions": [
+       {
+        "verb": "diversion",
+        "target_urn": "segment:1005",
+        "params": {
+         "via_segment_ids": [
+          1004,
+          1002,
+          1003,
+          1083,
+          1082,
+          1081,
+          1061
+         ],
+         "via_names": [
+          "Veer Nariman Road",
+          "Marine Drive",
+          "Jagannath Shankarsheth Marg",
+          "Maulana Azad Road - Vallabhbhai Patel Road",
+          "Sir JJ Road - Maulana Azad Road",
+          "D N Road - JJ Flyover (Mohammed Ali Road)"
+         ],
+         "detour_length_m": 9948,
+         "reason": "waterlogging",
+         "notify_agencies": [
+          "mtp",
+          "best"
+         ]
+        },
+        "requires_officer": true,
+        "reversible": true
+       }
+      ],
+      "recommendation": {
+       "decision": "await_officer"
+      },
+      "human_gate": {
+       "state": "proposed",
+       "required_role": "duty_officer",
+       "officer": null,
+       "decided_at": null
+      },
+      "labels": [
+       "HINDSIGHT",
+       "MODELLED"
+      ],
+      "situation": {
+       "segment_id": 1005,
+       "road_name": "Veer Nariman Road - D N Road",
+       "place": "CSMT junction (D N Road)",
+       "risk_class": 2,
+       "expected_depth_band": "10–30 cm",
+       "lead_time_min": 90,
+       "lead_time_deep_min": 90
+      }
+     },
+     {
+      "proposal_id": "hy-amb-1005-20250526T0230Z",
+      "kind": "ambulance_window",
+      "subject_urn": "segment:1005",
+      "state": "proposed",
+      "generated_at": "2025-05-26T02:30:00+00:00",
+      "summary": "Ambulance (108) note — CSMT junction (D N Road) (Veer Nariman Road - D N Road): passable for about 90 min more; use Veer Nariman Road → Marine Drive → Jagannath Shankarsheth Marg → Maulana Azad Road - Vallabhbhai Patel Road → Sir JJ Road - Maulana Azad Road → D N Road - JJ Flyover (Mohammed Ali Road). Nearest major hospital: JJ Hospital (3.5 km).",
+      "actions": [
+       {
+        "verb": "advisory",
+        "target_urn": "segment:1005",
+        "params": {
+         "to_agency": "amb108",
+         "passable_for_min": 90,
+         "via_segment_ids": [
+          1004,
+          1002,
+          1003,
+          1083,
+          1082,
+          1081,
+          1061
+         ],
+         "nearest_hospital": {
+          "id": "jj_hospital",
+          "name": "JJ Hospital",
+          "name_mr": "जे.जे. रुग्णालय",
+          "name_hi": "जे.जे. अस्पताल",
+          "distance_m": 3460
+         },
+         "note": "Ambulance (108) note — CSMT junction (D N Road) (Veer Nariman Road - D N Road): passable for about 90 min more; use Veer Nariman Road → Marine Drive → Jagannath Shankarsheth Marg → Maulana Azad Road - Vallabhbhai Patel Road → Sir JJ Road - Maulana Azad Road → D N Road - JJ Flyover (Mohammed Ali Road). Nearest major hospital: JJ Hospital (3.5 km)."
+        },
+        "requires_officer": true,
+        "reversible": true
+       }
+      ],
+      "recommendation": {
+       "decision": "await_officer"
+      },
+      "human_gate": {
+       "state": "proposed",
+       "required_role": "duty_officer",
+       "officer": null,
+       "decided_at": null
+      },
+      "labels": [
+       "HINDSIGHT",
+       "MODELLED"
+      ]
+     },
+     {
+      "proposal_id": "hy-wire-1005-20250526T0230Z",
+      "kind": "live_wire_hazard",
+      "subject_urn": "segment:1005",
+      "state": "proposed",
+      "generated_at": "2025-05-26T02:30:00+00:00",
+      "summary": "Live-wire hazard — CSMT junction (D N Road) (Veer Nariman Road - D N Road): waterlogging risk 2 (10–30 cm). Propose asking the area's power distribution utility to inspect and, where needed, isolate street-light and overhead supply along this road.",
+      "actions": [
+       {
+        "verb": "advisory",
+        "target_urn": "segment:1005",
+        "params": {
+         "to_agency": "power",
+         "request": "inspect and, where needed, isolate supply",
+         "why": "standing water around poles and feeder pillars: electrocution risk"
+        },
+        "requires_officer": true,
+        "reversible": true
+       }
+      ],
+      "recommendation": {
+       "decision": "await_officer"
+      },
+      "human_gate": {
+       "state": "proposed",
+       "required_role": "duty_officer",
+       "officer": null,
+       "decided_at": null
+      },
+      "labels": [
+       "HINDSIGHT",
+       "MODELLED"
+      ],
+      "for_officer_approval": true
+     },
+     {
+      "proposal_id": "hy-reroute-1060-20250526T0230Z",
+      "kind": "waterlogging_reroute",
+      "subject_urn": "segment:1060",
+      "state": "proposed",
+      "generated_at": "2025-05-26T02:30:00+00:00",
+      "summary": "Eastern Freeway south end (P DMello Road, Orange Gate) (P D Mello Road): waterlogging risk 2 (10–30 cm), deep water in about 90 min; no detour on the city network that avoids flagged roads — propose closing to small vehicles with officer judgement on site.",
+      "actions": [
+       {
+        "verb": "monitor",
+        "target_urn": "segment:1060",
+        "params": {
+         "reason": "waterlogging",
+         "notify_agencies": [
+          "mtp",
+          "best"
+         ]
+        },
+        "requires_officer": true,
+        "reversible": true
+       }
+      ],
+      "recommendation": {
+       "decision": "await_officer"
+      },
+      "human_gate": {
+       "state": "proposed",
+       "required_role": "duty_officer",
+       "officer": null,
+       "decided_at": null
+      },
+      "labels": [
+       "HINDSIGHT",
+       "MODELLED"
+      ],
+      "situation": {
+       "segment_id": 1060,
+       "road_name": "P D Mello Road",
+       "place": "Eastern Freeway south end (P DMello Road, Orange Gate)",
+       "risk_class": 2,
+       "expected_depth_band": "10–30 cm",
+       "lead_time_min": 90,
+       "lead_time_deep_min": 90
+      }
+     },
+     {
+      "proposal_id": "hy-amb-1060-20250526T0230Z",
+      "kind": "ambulance_window",
+      "subject_urn": "segment:1060",
+      "state": "proposed",
+      "generated_at": "2025-05-26T02:30:00+00:00",
+      "summary": "Ambulance (108) note — Eastern Freeway south end (P DMello Road, Orange Gate) (P D Mello Road): passable for about 90 min more; no detour avoiding flagged roads. Nearest major hospital: JJ Hospital (2.8 km).",
+      "actions": [
+       {
+        "verb": "advisory",
+        "target_urn": "segment:1060",
+        "params": {
+         "to_agency": "amb108",
+         "passable_for_min": 90,
+         "via_segment_ids": [],
+         "nearest_hospital": {
+          "id": "jj_hospital",
+          "name": "JJ Hospital",
+          "name_mr": "जे.जे. रुग्णालय",
+          "name_hi": "जे.जे. अस्पताल",
+          "distance_m": 2826
+         },
+         "note": "Ambulance (108) note — Eastern Freeway south end (P DMello Road, Orange Gate) (P D Mello Road): passable for about 90 min more; no detour avoiding flagged roads. Nearest major hospital: JJ Hospital (2.8 km)."
+        },
+        "requires_officer": true,
+        "reversible": true
+       }
+      ],
+      "recommendation": {
+       "decision": "await_officer"
+      },
+      "human_gate": {
+       "state": "proposed",
+       "required_role": "duty_officer",
+       "officer": null,
+       "decided_at": null
+      },
+      "labels": [
+       "HINDSIGHT",
+       "MODELLED"
+      ]
+     },
+     {
+      "proposal_id": "hy-wire-1060-20250526T0230Z",
+      "kind": "live_wire_hazard",
+      "subject_urn": "segment:1060",
+      "state": "proposed",
+      "generated_at": "2025-05-26T02:30:00+00:00",
+      "summary": "Live-wire hazard — Eastern Freeway south end (P DMello Road, Orange Gate) (P D Mello Road): waterlogging risk 2 (10–30 cm). Propose asking the area's power distribution utility to inspect and, where needed, isolate street-light and overhead supply along this road.",
+      "actions": [
+       {
+        "verb": "advisory",
+        "target_urn": "segment:1060",
+        "params": {
+         "to_agency": "power",
+         "request": "inspect and, where needed, isolate supply",
+         "why": "standing water around poles and feeder pillars: electrocution risk"
+        },
+        "requires_officer": true,
+        "reversible": true
+       }
+      ],
+      "recommendation": {
+       "decision": "await_officer"
+      },
+      "human_gate": {
+       "state": "proposed",
+       "required_role": "duty_officer",
+       "officer": null,
+       "decided_at": null
+      },
+      "labels": [
+       "HINDSIGHT",
+       "MODELLED"
+      ],
+      "for_officer_approval": true
+     },
+     {
+      "proposal_id": "hy-reroute-1003-20250526T0230Z",
+      "kind": "waterlogging_reroute",
+      "subject_urn": "segment:1003",
+      "state": "proposed",
+      "generated_at": "2025-05-26T02:30:00+00:00",
+      "summary": "Girgaon Chowpatty (Marine Drive) (Marine Drive): waterlogging risk 2 (10–30 cm), deep water in about 120 min; propose diverting traffic via Marine Drive → Veer Nariman Road → Veer Nariman Road - D N Road → D N Road - JJ Flyover (Mohammed Ali Road) → Sir JJ Road - Maulana Azad Road → Maulana Azad Road - Vallabhbhai Patel Road → Jagannath Shankarsheth Marg, and asking BEST to divert the bus routes on this road the same way.",
+      "actions": [
+       {
+        "verb": "diversion",
+        "target_urn": "segment:1003",
+        "params": {
+         "via_segment_ids": [
+          1002,
+          1004,
+          1005,
+          1061,
+          1081,
+          1082,
+          1083
+         ],
+         "via_names": [
+          "Marine Drive",
+          "Veer Nariman Road",
+          "Veer Nariman Road - D N Road",
+          "D N Road - JJ Flyover (Mohammed Ali Road)",
+          "Sir JJ Road - Maulana Azad Road",
+          "Maulana Azad Road - Vallabhbhai Patel Road",
+          "Jagannath Shankarsheth Marg"
+         ],
+         "detour_length_m": 9412,
+         "reason": "waterlogging",
+         "notify_agencies": [
+          "mtp",
+          "best"
+         ]
+        },
+        "requires_officer": true,
+        "reversible": true
+       }
+      ],
+      "recommendation": {
+       "decision": "await_officer"
+      },
+      "human_gate": {
+       "state": "proposed",
+       "required_role": "duty_officer",
+       "officer": null,
+       "decided_at": null
+      },
+      "labels": [
+       "HINDSIGHT",
+       "MODELLED"
+      ],
+      "situation": {
+       "segment_id": 1003,
+       "road_name": "Marine Drive",
+       "place": "Girgaon Chowpatty (Marine Drive)",
+       "risk_class": 2,
+       "expected_depth_band": "10–30 cm",
+       "lead_time_min": 120,
+       "lead_time_deep_min": 120
+      }
+     },
+     {
+      "proposal_id": "hy-amb-1003-20250526T0230Z",
+      "kind": "ambulance_window",
+      "subject_urn": "segment:1003",
+      "state": "proposed",
+      "generated_at": "2025-05-26T02:30:00+00:00",
+      "summary": "Ambulance (108) note — Girgaon Chowpatty (Marine Drive) (Marine Drive): passable for about 120 min more; use Marine Drive → Veer Nariman Road → Veer Nariman Road - D N Road → D N Road - JJ Flyover (Mohammed Ali Road) → Sir JJ Road - Maulana Azad Road → Maulana Azad Road - Vallabhbhai Patel Road → Jagannath Shankarsheth Marg. Nearest major hospital: Nair Hospital (2.2 km).",
+      "actions": [
+       {
+        "verb": "advisory",
+        "target_urn": "segment:1003",
+        "params": {
+         "to_agency": "amb108",
+         "passable_for_min": 120,
+         "via_segment_ids": [
+          1002,
+          1004,
+          1005,
+          1061,
+          1081,
+          1082,
+          1083
+         ],
+         "nearest_hospital": {
+          "id": "nair_hospital",
+          "name": "Nair Hospital",
+          "name_mr": "नायर रुग्णालय",
+          "name_hi": "नायर अस्पताल",
+          "distance_m": 2228
+         },
+         "note": "Ambulance (108) note — Girgaon Chowpatty (Marine Drive) (Marine Drive): passable for about 120 min more; use Marine Drive → Veer Nariman Road → Veer Nariman Road - D N Road → D N Road - JJ Flyover (Mohammed Ali Road) → Sir JJ Road - Maulana Azad Road → Maulana Azad Road - Vallabhbhai Patel Road → Jagannath Shankarsheth Marg. Nearest major hospital: Nair Hospital (2.2 km)."
+        },
+        "requires_officer": true,
+        "reversible": true
+       }
+      ],
+      "recommendation": {
+       "decision": "await_officer"
+      },
+      "human_gate": {
+       "state": "proposed",
+       "required_role": "duty_officer",
+       "officer": null,
+       "decided_at": null
+      },
+      "labels": [
+       "HINDSIGHT",
+       "MODELLED"
+      ]
+     },
+     {
+      "proposal_id": "hy-wire-1003-20250526T0230Z",
+      "kind": "live_wire_hazard",
+      "subject_urn": "segment:1003",
+      "state": "proposed",
+      "generated_at": "2025-05-26T02:30:00+00:00",
+      "summary": "Live-wire hazard — Girgaon Chowpatty (Marine Drive) (Marine Drive): waterlogging risk 2 (10–30 cm). Propose asking the area's power distribution utility to inspect and, where needed, isolate street-light and overhead supply along this road.",
+      "actions": [
+       {
+        "verb": "advisory",
+        "target_urn": "segment:1003",
+        "params": {
+         "to_agency": "power",
+         "request": "inspect and, where needed, isolate supply",
+         "why": "standing water around poles and feeder pillars: electrocution risk"
+        },
+        "requires_officer": true,
+        "reversible": true
+       }
+      ],
+      "recommendation": {
+       "decision": "await_officer"
+      },
+      "human_gate": {
+       "state": "proposed",
+       "required_role": "duty_officer",
+       "officer": null,
+       "decided_at": null
+      },
+      "labels": [
+       "HINDSIGHT",
+       "MODELLED"
+      ],
+      "for_officer_approval": true
+     },
+     {
+      "proposal_id": "hy-advisory-20250526T0230Z",
+      "kind": "public_advisory_draft",
+      "subject_urn": "place:mumbai",
+      "state": "proposed",
+      "generated_at": "2025-05-26T02:30:00+00:00",
+      "summary": "Public advisory draft (English, Marathi, Hindi) for 6 place(s).",
+      "actions": [
+       {
+        "verb": "advisory",
+        "target_urn": "place:mumbai",
+        "params": {
+         "text_en": "Traffic advisory (draft): waterlogging is likely within the next 120 minutes at these places: Marine Drive (Veer Nariman Road, Churchgate); Marine Drive (Coastal Road south end, Marine Lines); Churchgate (Veer Nariman Road); CSMT junction (D N Road); Eastern Freeway south end (P DMello Road, Orange Gate); Girgaon Chowpatty (Marine Drive). Please avoid these roads if you can. Do not touch electric poles or wires in standing water. Emergency: 112; BMC disaster control: 1916; ambulance (108).",
+         "text_mr": "वाहतूक सूचना (मसुदा): पुढील 120 मिनिटांत या ठिकाणी पाणी साचण्याची शक्यता आहे: मरीन ड्राइव्ह (वीर नरिमन मार्ग, चर्चगेट); मरीन ड्राइव्ह (सागरी किनारा मार्ग दक्षिण टोक, मरीन लाइन्स); चर्चगेट (वीर नरिमन मार्ग); सीएसएमटी जंक्शन (दादाभाई नौरोजी मार्ग); पूर्व मुक्त मार्ग दक्षिण टोक (पी. डिमेलो मार्ग, ऑरेंज गेट); गिरगाव चौपाटी (मरीन ड्राइव्ह). शक्य असल्यास हे रस्ते टाळा. साचलेल्या पाण्यात विजेचे खांब किंवा तारांना स्पर्श करू नका. आपत्कालीन क्रमांक: 112; बृहन्मुंबई महानगरपालिका आपत्ती नियंत्रण: 1916; रुग्णवाहिका (108).",
+         "text_hi": "यातायात सलाह (मसौदा): अगले 120 मिनट में इन जगहों पर जलभराव की आशंका है: मरीन ड्राइव्ह (वीर नरिमन मार्ग, चर्चगेट); मरीन ड्राइव्ह (सागरी किनारा मार्ग दक्षिण टोक, मरीन लाइन्स); चर्चगेट; छत्रपति शिवाजी महाराज टर्मिनस; पूर्व मुक्त मार्ग दक्षिण टोक (पी. डिमेलो मार्ग, ऑरेंज गेट); गिरगांव चौपाटी। हो सके तो इन सड़कों से बचें। जमा पानी में बिजली के खंभों या तारों को न छुएँ। आपातकालीन: 112; बीएमसी आपदा नियंत्रण: 1916; एम्बुलेंस (108)।",
+         "channel": "public advisory (after officer approval)",
+         "segment_ids": [
+          1001,
+          1002,
+          1004,
+          1005,
+          1060,
+          1003
+         ]
+        },
+        "requires_officer": true,
+        "reversible": true
+       }
+      ],
+      "recommendation": {
+       "decision": "await_officer"
+      },
+      "human_gate": {
+       "state": "proposed",
+       "required_role": "duty_officer",
+       "officer": null,
+       "decided_at": null
+      },
+      "labels": [
+       "HINDSIGHT",
+       "MODELLED"
+      ],
+      "text": {
+       "en": "Traffic advisory (draft): waterlogging is likely within the next 120 minutes at these places: Marine Drive (Veer Nariman Road, Churchgate); Marine Drive (Coastal Road south end, Marine Lines); Churchgate (Veer Nariman Road); CSMT junction (D N Road); Eastern Freeway south end (P DMello Road, Orange Gate); Girgaon Chowpatty (Marine Drive). Please avoid these roads if you can. Do not touch electric poles or wires in standing water. Emergency: 112; BMC disaster control: 1916; ambulance (108).",
+       "mr": "वाहतूक सूचना (मसुदा): पुढील 120 मिनिटांत या ठिकाणी पाणी साचण्याची शक्यता आहे: मरीन ड्राइव्ह (वीर नरिमन मार्ग, चर्चगेट); मरीन ड्राइव्ह (सागरी किनारा मार्ग दक्षिण टोक, मरीन लाइन्स); चर्चगेट (वीर नरिमन मार्ग); सीएसएमटी जंक्शन (दादाभाई नौरोजी मार्ग); पूर्व मुक्त मार्ग दक्षिण टोक (पी. डिमेलो मार्ग, ऑरेंज गेट); गिरगाव चौपाटी (मरीन ड्राइव्ह). शक्य असल्यास हे रस्ते टाळा. साचलेल्या पाण्यात विजेचे खांब किंवा तारांना स्पर्श करू नका. आपत्कालीन क्रमांक: 112; बृहन्मुंबई महानगरपालिका आपत्ती नियंत्रण: 1916; रुग्णवाहिका (108).",
+       "hi": "यातायात सलाह (मसौदा): अगले 120 मिनट में इन जगहों पर जलभराव की आशंका है: मरीन ड्राइव्ह (वीर नरिमन मार्ग, चर्चगेट); मरीन ड्राइव्ह (सागरी किनारा मार्ग दक्षिण टोक, मरीन लाइन्स); चर्चगेट; छत्रपति शिवाजी महाराज टर्मिनस; पूर्व मुक्त मार्ग दक्षिण टोक (पी. डिमेलो मार्ग, ऑरेंज गेट); गिरगांव चौपाटी। हो सके तो इन सड़कों से बचें। जमा पानी में बिजली के खंभों या तारों को न छुएँ। आपातकालीन: 112; बीएमसी आपदा नियंत्रण: 1916; एम्बुलेंस (108)।"
+      }
+     }
+    ]
+   }
+  },
+  "imd_gauge_flat_sensitivity": {
+   "label": "SENSITIVITY — the same OBSERVED totals, flat within each window",
+   "station_peak_mm_h": {
+    "nariman_point": 104.0,
+    "csmt": 80.0,
+    "colaba": 83.0,
+    "grant_road": 16.8,
+    "malabar_hill": 63.0,
+    "worli": 10.8,
+    "haji_ali": 10.2,
+    "santacruz": 8.9,
+    "dadar": 8.6,
+    "bandra": 7.5,
+    "dharavi": 7.4,
+    "chembur": 6.8,
+    "lower_parel": 6.8,
+    "kurla": 6.3
+   },
+   "peak_class_counts": {
+    "0": 78,
+    "1": 3,
+    "2": 5,
+    "3": 0
+   },
+   "flagged_segments": 5,
+   "reported_hits": "5/15",
+   "finding": "The same totals without the archive's timing: the drains' design rates (12.5–50 mm/h of runoff) are crossed by the bursts, not by the window means, so the timing within the hour — what a live gauge feed adds — moves the result."
+  }
+ },
+ "sources": {
+  "fpj_imd_0839": {
+   "publisher": "Free Press Journal (IMD 20:30–05:30 figures; places)",
+   "date": "2025-08-19",
+   "time_ist": "08:39",
+   "url": "https://www.freepressjournal.in/mumbai/mumbai-rains-city-reels-under-relentless-downpour-sion-matunga-dadar-byculla-flooded-andheri-subway-closed-schools-colleges-shut-as-imd-issues-red-alert"
+  },
+  "pti_imd_24h_0819": {
+   "publisher": "PTI via Editorji (IMD 24 h to 08:30, 19 Aug)",
+   "date": "2025-08-19",
+   "time_ist": "09:40",
+   "url": "https://www.editorji.com/amp/india-news/maharashtra/heavy-rains-in-mumbai-suburbs-record-over-200-mm-downpour-in-24-hrs-vikhroli-tops-chart-1755576650357"
+  },
+  "pti_imd_24h_0820": {
+   "publisher": "PTI via The Week (IMD 24 h to 08:30, 20 Aug)",
+   "date": "2025-08-20",
+   "url": "https://www.theweek.in/wire-updates/national/2025/08/20/bom5-mh-rains-data.html"
+  },
+  "pti_bmc_0819": {
+   "publisher": "PTI via ThePrint (BMC gauges 04:00–15:00; pumping)",
+   "date": "2025-08-19",
+   "time_ist": "18:01",
+   "url": "https://theprint.in/india/mumbai-receives-over-200-mm-of-rain-in-11-hours/2724336"
+  },
+  "bt_0819": {
+   "publisher": "Business Today (CMO: 150 mm 04:00–11:00; Mithi 3.9 m; Kurla relocations)",
+   "date": "2025-08-19",
+   "time_ist": "15:53",
+   "url": "https://www.businesstoday.in/india/story/mumbai-rains-inundate-roads-lead-to-flight-and-train-delays-350-people-from-kurla-relocated-top-points-490083-2025-08-19"
+  },
+  "indiacom_1020": {
+   "publisher": "India.com",
+   "date": "2025-08-19",
+   "time_ist": "10:20",
+   "url": "https://www.india.com/news/india/mumbai-rains-roads-subways-closed-mumbai-palghar-thane-raigad-nasik-pune-satara-mrunaltai-gore-flyover-at-goregaon-lokhandwala-veera-desai-roadandheri-matunga-chembur-khar-dadar-east-kurla-8019474/"
+  },
+  "watchers": {
+   "publisher": "Watchers",
+   "date": "2025-08-19",
+   "time_ist": "20:05",
+   "url": "https://watchers.news/2025/08/19/extreme-rainfall-paralyzes-mumbai-three-dead-two-missing/"
+  },
+  "fpj_0526_2315": {
+   "publisher": "Free Press Journal (12-h station totals; places; pumps not running)",
+   "date": "2025-05-26",
+   "time_ist": "23:15",
+   "url": "https://www.freepressjournal.in/mumbai/monsoon-mayhem-mumbai-flooded-after-early-rains-bmc-blames-imd-faces-flak-for-unpreparedness"
+  },
+  "fpj_0526_1112": {
+   "publisher": "Free Press Journal (09:00–10:00 hourly figures; BMC-reported spots)",
+   "date": "2025-05-26",
+   "time_ist": "11:12",
+   "url": "https://www.freepressjournal.in/mumbai/mumbai-rains-city-lashed-by-heavy-showers-nariman-point-records-104-mm-in-one-hour"
+  },
+  "newsarena_0526": {
+   "publisher": "News Arena India",
+   "date": "2025-05-26",
+   "time_ist": "20:25",
+   "url": "https://newsarenaindia.com/nation/mumbai-paralysed-by-record-rain-on-monsoon-s-first-day/45518"
+  },
+  "pti_0528": {
+   "publisher": "PTI via The Week (mini pumping stations failed on 26 May)",
+   "date": "2025-05-28",
+   "url": "https://www.theweek.in/wire-updates/national/2025/05/28/bom2-mh-waterlogging-penalty.html"
+  },
+  "pti_tide_0527": {
+   "publisher": "PTI via Editorji (BMC: 27 May high tides 4.88 m at 12:13, 4.18 m at 23:56)",
+   "date": "2025-05-27",
+   "url": "https://www.editorji.com/amp/india-news/mumbai-rains-brief-halt-high-tide-alert-issued-1748322079762"
+  },
+  "tide_bmc": {
+   "publisher": "BMC tide timing as reported (3.75 m at 09:16; one outlet dates it 20 Aug)",
+   "date": "2025-08-19",
+   "url": "https://www.freepressjournal.in/mumbai/mumbai-rains-400-families-evacuated-as-mithi-river-crosses-danger-mark"
+  }
+ },
+ "honesty": "News reports name places, not every street, and the network has 86 arterial segments: a flag with no report is not called a false alarm, and an off-network report is listed but not scored. A report's time is its publication time, so a lead before it is an upper bound. Station positions are approximate and the 15-minute shape is modelled."
+}

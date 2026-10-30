@@ -1,0 +1,326 @@
+# Sajag compose override — ARGUS STACK (project sajag, the live system).
+#
+# The argus stack at ~/argus/sajag is THE system (the original `vvip` fleet was
+# retired 2026-10-19). One command brings it up and keeps it up across host
+# reboots: scripts/sajag_up.sh (idempotent; `--status` is read-only) together
+# with the systemd --user units in infra/systemd/ (sajag.target → the three
+# model hosts + sajag-up.service). Every container here is
+# `restart: unless-stopped`.
+#
+# NETWORK EXPOSURE. Only the command deck is reachable from the LAN
+# (0.0.0.0:5373). Everything that can write city state — oracle (:8191),
+# brain (:8192), emulator (:8190), PostGIS (:15434), Valkey (:6390) and NATS
+# (:4233, monitoring :8233) — is bound to 127.0.0.1; the deck reaches them
+# through its loopback proxy (services/command-deck/src/hooks.server.ts).
+# The host model services (:8083 decider, :8084 llama-server, :8085
+# embeddings) bind loopback themselves (infra/scripts/serve_models.sh).
+#
+# IMAGE OWNERSHIP. Every image this project runs is built from this tree
+# under an -argus tag, so a cleanup of the retired project's images can never
+# strand it:
+#   postgis        → sajag-postgis:arm64        (Dockerfile.postgis.arm64;
+#                    sajag_up.sh tags the existing sajag-vvip-postgis:arm64 build
+#                    instead of rebuilding when the argus tag is missing)
+#   signal-ingress → sajag-signal-ingress:latest (Dockerfile.signal-ingress)
+#   traffic-oracle → sajag-traffic-oracle:latest
+#   convoy-brain   → sajag-convoy-brain:latest
+#   command-deck   → sajag-command-deck:latest
+#   event-emulator → sajag-event-emulator:latest (Dockerfile.event-emulator)
+#
+# Port map (original → argus):
+#   postgis  55434 → 15434      valkey  6379 → 6390
+#   nats     4222/8222 → 4233/8233 (8233 = NATS HTTP monitoring, /varz /connz)
+#   traffic-oracle 8081 → 8191 (host-net, PORT env)
+#   convoy-brain   8080 → 8192 (host-net, PORT env)
+#   command-deck   5173 → 5373 (host-net, PORT env + ORACLE_PORT/BRAIN_PORT/
+#                               EMULATOR_PORT proxy targets — see
+#                               src/hooks.server.ts in this tree)
+#   event-emulator 8190        (host-net, loopback)
+#
+# Usage (from the repository root):
+#   scripts/sajag_up.sh                 # bring-up, migrate, seed, converge
+#   scripts/sajag_up.sh --status        # read-only readiness table
+#   scripts/sajag_up.sh --demo          # + city signal writer and living city
+# or by hand:
+#   docker compose -p sajag -f infra/compose.yml \
+#     -f infra/compose.gb10-override.yml -f infra/compose.argus-override.yml up -d
+#
+# Demo switches (compose interpolation; sajag_up.sh --demo sets both to 1 and
+# persists the choice in ~/.config/sajag/sajag.env so reboots keep it):
+#   VVIP_SIGNAL_POLICY_WRITER   city signal-plan writer (traffic-oracle)
+#   EMULATOR_LIVING_CITY        ambient living-city emulation (event-emulator)
+# Precondition for EMULATOR_LIVING_CITY=1: the deck's public feed must label
+# emulated corridors — GET :5373/api/public/events answers
+# "emulated_labelling": true, so every living-city event reaches /citizen and
+# /driver as SIMULATED FEED · EMULATED, never as a live restriction.
+# sajag_up.sh --demo refuses without it (SAJAG_DEMO_ALLOW_UNLABELLED=1 overrides).
+# With the living city on, EMULATOR_LIVING_VIOLATORS (default 1; 0 = none)
+# lets it drive its deliberate violators — each only a PENDING e-challan
+# recommendation for a named officer's review, never a fine on its own — and
+# EMULATOR_CITY_SEED (default 1411) picks its deterministic day program.
+# EMULATOR_LIVING_DENSITY (1–3, default 2 here) sets how busy it is: 1 = two
+# patrol beats and 2–3 causes; 2 = 18 emulated units (11 traffic beats, 3
+# Mumbai Police PCR beats, 4 ambulance (108) standby circuits) and 2–5 causes,
+# a 108 request about every 15 min; 3 = 2–7 causes. All of it EMULATED.
+#
+# PORTS. The host ports above are this file's constants. scripts/sajag_up.sh
+# reads them from the rendered compose (docker compose config) and probes
+# exactly those, so a shell that exports ORACLE_PORT & co. for a sandbox can
+# neither move the live stack nor make --status probe somebody else's.
+#
+# PASS-THROUGH FLAGS. A key with no value below (e.g. `VVIP_CONFIDENCE_FLOOR:`)
+# is passed through from the bring-up's environment (sajag.env — persist with
+# scripts/sajag_env.sh --set KEY VALUE) and is ABSENT in the container when
+# unset there, so each service keeps its own built-in default; an empty string
+# never reaches a parser.
+#
+# HEALTHCHECKS (oracle, brain, deck; the emulator adds its store and Valkey
+# seams) are connectivity only: the HTTP service answers on its port.
+# Upstream conditions a restart cannot fix (a model host still loading, NATS
+# down) stay visible in /health and in scripts/sajag_up.sh --status instead of
+# flapping container health. osint-ingress (compose.osint-ingress.yml) waits
+# for a healthy oracle.
+
+services:
+  postgis:
+    container_name: sajag-postgis
+    restart: unless-stopped
+    build:
+      context: ..
+      dockerfile: infra/docker/Dockerfile.postgis.arm64
+    image: sajag-postgis:arm64
+    ports: !override
+      - "127.0.0.1:15434:5432"
+
+  valkey:
+    container_name: sajag-valkey
+    restart: unless-stopped
+    ports: !override
+      - "127.0.0.1:6390:6379"
+
+  nats:
+    container_name: sajag-nats
+    restart: unless-stopped
+    # JetStream on the data volume plus HTTP monitoring on :8222 (published
+    # loopback-only as :8233) — /varz, /connz and /healthz make the data plane
+    # observable (sajag_up.sh --status reads the ingress publisher's counters).
+    command: ["-js", "-sd", "/data", "-m", "8222"]
+    ports: !override
+      - "127.0.0.1:4233:4222"
+      - "127.0.0.1:8233:8222"
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:8222/healthz"]
+      interval: 5s
+      timeout: 3s
+      retries: 6
+
+  signal-ingress:
+    container_name: sajag-signal-ingress
+    restart: unless-stopped
+    # Mumbai edge-synthetic feed (all 65 segments of the real-road network,
+    # IST demand, rows labelled data_quality=synthetic). Built from this tree.
+    build:
+      context: ../services/signal-ingress
+      dockerfile: ../../infra/docker/Dockerfile.signal-ingress
+    image: sajag-signal-ingress:latest
+    # NATS_URL stays nats://nats:4222 — service DNS on this project's own
+    # bridge network, i.e. the argus nats.
+    environment:
+      # seed of the synthetic city field (src/feeds/city.rs; pass-through:
+      # unset = the built-in default)
+      INGRESS_CITY_SEED:
+    depends_on:
+      nats:
+        condition: service_healthy
+
+  traffic-oracle:
+    container_name: sajag-traffic-oracle
+    restart: unless-stopped
+    # Repo-tree context + gb10 Dockerfile (mirrors compose.gb10-override.yml).
+    # The image bakes models-local/t0 — run scripts/fetch_t0.sh on a fresh
+    # clone before building (sajag_up.sh --build does it).
+    build:
+      context: ..
+      dockerfile: infra/docker/Dockerfile.traffic-oracle.gb10
+    image: sajag-traffic-oracle:latest
+    network_mode: host
+    ports: !override []
+    extra_hosts: !override []
+    environment:
+      VVIP_DATABASE_URL: postgresql://corridor_admin:${POSTGIS_PASSWORD:-dev_changeme}@127.0.0.1:15434/corridor_db
+      VVIP_VALKEY_URL: redis://127.0.0.1:6390
+      VVIP_NATS_URL: nats://127.0.0.1:4233
+      EMBEDDING_SERVICE_URL: http://127.0.0.1:8205
+      HOST: 127.0.0.1
+      PORT: "8191"
+      # C7 city signal-plan writer: empty = OFF; sajag_up.sh --demo sets 1.
+      VVIP_SIGNAL_POLICY_WRITER: ${VVIP_SIGNAL_POLICY_WRITER:-}
+      # The same switch as the brain's (below): earmark create / clear
+      # (vehicles/) and city signal-plan apply / restore (signals/) must name
+      # the officer — the deck-verified x-sajag-officer header or the body's
+      # officer — else 422. Unnamed writes were silently attributed to
+      # 'operator' before. 0 = optional, as for the brain.
+      VVIP_REQUIRE_OFFICER: ${VVIP_REQUIRE_OFFICER:-1}
+      # pass-through (unset = the oracle's default): 1 = accept reads labelled
+      # live ANPR (a real vendor feed; otherwise refused), and the situation
+      # engine's robust-inputs override (adaptive/engine_loop.py)
+      VVIP_ACCEPT_LIVE_ANPR:
+      VVIP_ADAPTIVE_ROBUST_INPUTS:
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import json,os,sys,urllib.request as u; d=json.load(u.urlopen('http://127.0.0.1:%s/health' % os.environ.get('PORT', '8191'), timeout=4)); sys.exit(0 if d.get('status') == 'ok' else 1)"
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 120s
+
+  convoy-brain:
+    container_name: sajag-convoy-brain
+    restart: unless-stopped
+    build:
+      context: ..
+      dockerfile: infra/docker/Dockerfile.convoy-brain.gb10
+    image: sajag-convoy-brain:latest
+    network_mode: host
+    ports: !override []
+    extra_hosts: !override []
+    environment:
+      VVIP_VALKEY_URL: redis://127.0.0.1:6390
+      MODEL_HOST_URL: http://127.0.0.1:8083
+      LLAMA_BASE_URL: http://127.0.0.1:8084
+      EMBEDDING_SERVICE_URL: http://127.0.0.1:8205
+      TRAFFIC_ORACLE_URL: http://127.0.0.1:8191
+      HOST: 127.0.0.1
+      PORT: "8192"
+      # No GPS hardware feeds this deployment: a launched escort walks its
+      # approved primary route with positions labelled emulated_gps (C-B),
+      # and stops the moment real fixes arrive on POST /movements/{id}/position.
+      # 0 = wait for real GPS (fails after VVIP_ESCORT_GPS_TIMEOUT_SEC).
+      VVIP_ESCORT_SIM_GPS: ${VVIP_ESCORT_SIM_GPS:-1}
+      # Escort start / stop / clear must name the duty officer (422 otherwise;
+      # a route-switch approval always must). With the operator gate on, the
+      # deck forwards the signed-in officer as x-sajag-officer on every proxied
+      # call, which the brain records ahead of any officer claimed in the body.
+      # 0 = the officer is optional (an unnamed stop / clear is attributed to
+      # the brain's system actor).
+      VVIP_REQUIRE_OFFICER: ${VVIP_REQUIRE_OFFICER:-1}
+      # pass-through (unset = the brain's defaults in config.py): the emulated
+      # escort's cruise speed (5..120 km/h), the wait for a real GPS fix
+      # (10..3600 s), the route-switch approval window (15..600 s), the
+      # decider's confidence floor, and the tier-0 cache kill switch
+      VVIP_ESCORT_SIM_SPEED_KMH:
+      VVIP_ESCORT_GPS_TIMEOUT_SEC:
+      VVIP_ESCORT_APPROVAL_TIMEOUT_SEC:
+      VVIP_CONFIDENCE_FLOOR:
+      DECIDER_TIER0_DISABLE:
+    healthcheck:
+      # /health answers 'ok' or 'degraded' (a model host loading or down):
+      # both mean the brain itself is up
+      test:
+        - CMD
+        - python
+        - -c
+        - "import json,os,sys,urllib.request as u; d=json.load(u.urlopen('http://127.0.0.1:%s/health' % os.environ.get('PORT', '8192'), timeout=12)); sys.exit(0 if d.get('status') in ('ok', 'degraded') else 1)"
+      interval: 20s
+      timeout: 15s
+      retries: 3
+      start_period: 120s
+
+  command-deck:
+    container_name: sajag-command-deck
+    restart: unless-stopped
+    # Keeps the inherited build (compose.gb10-override.yml: SvelteKit deck
+    # built from services/command-deck); the explicit image name pins the
+    # argus tag.
+    image: sajag-command-deck:latest
+    network_mode: host
+    ports: !override []
+    extra_hosts: !override []
+    environment:
+      PORT: "5373"
+      # The deck is the ONLY LAN-facing surface of the stack.
+      HOST: "0.0.0.0"
+      ORACLE_PORT: "8191"
+      BRAIN_PORT: "8192"
+      # event-emulator service below (host-net, loopback :8190)
+      EMULATOR_PORT: "8190"
+      SAJAG_CESIUM_ION_TOKEN: ${SAJAG_CESIUM_ION_TOKEN:-}
+      # Opt-in duty-officer gate (hooks.server.ts): OFF while empty. A stable
+      # SAJAG_SESSION_SECRET keeps sign-ins across restarts; SAJAG_SESSION_SECURE=1
+      # only behind TLS.
+      SAJAG_OPERATOR_PIN: ${SAJAG_OPERATOR_PIN:-}
+      SAJAG_SESSION_SECRET: ${SAJAG_SESSION_SECRET:-}
+      SAJAG_SESSION_SECURE: ${SAJAG_SESSION_SECURE:-}
+    healthcheck:
+      # GET /api/session: answered with the gate state whether or not the
+      # operator gate is on (no proxy, no upstream, no cookie set)
+      test:
+        - CMD
+        - bun
+        - -e
+        - "const r = await fetch('http://127.0.0.1:' + (process.env.PORT || '5173') + '/api/session', { signal: AbortSignal.timeout(4000) }); const d = await r.json(); process.exit(r.ok && 'gate' in d ? 0 : 1);"
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 60s
+
+  event-emulator:
+    container_name: sajag-event-emulator
+    restart: unless-stopped
+    # Replaces the hand-launched `nohup python -m event_emulator` from the
+    # retired tree's venv: built from this tree, supervised by Docker, back
+    # after every reboot. Host-networked like its peers so the fixed loopback
+    # endpoints resolve (bridge → host-gateway traffic is dropped on GB10).
+    build:
+      context: ../services/event-emulator
+      dockerfile: ../../infra/docker/Dockerfile.event-emulator
+    image: sajag-event-emulator:latest
+    network_mode: host
+    environment:
+      VVIP_DATABASE_URL: postgresql://corridor_admin:${POSTGIS_PASSWORD:-dev_changeme}@127.0.0.1:15434/corridor_db
+      VVIP_VALKEY_URL: redis://127.0.0.1:6390
+      VVIP_NATS_URL: nats://127.0.0.1:4233
+      # fixed internal endpoint (config constant, loopback-allowlisted)
+      EMULATOR_TRAFFIC_ORACLE_URL: http://localhost:8191
+      EMULATOR_DECK_ORIGINS: http://127.0.0.1:5373,http://localhost:5373
+      HOST: 127.0.0.1
+      # the emulator's own default, named here so compose is the one source
+      # of every port scripts/sajag_up.sh probes
+      PORT: "8190"
+      # ambient living-city emulation (event-emulator, WP-13); 0 = off
+      EMULATOR_LIVING_CITY: ${EMULATOR_LIVING_CITY:-0}
+      # the living city's deliberate violators (PENDING recommendations for a
+      # named officer's review; 0 = none) and its day-program seed (header)
+      EMULATOR_LIVING_VIOLATORS: ${EMULATOR_LIVING_VIOLATORS:-1}
+      EMULATOR_CITY_SEED: ${EMULATOR_CITY_SEED:-1411}
+      # how busy the living city is (header): 2 = 18 units on the real roads
+      EMULATOR_LIVING_DENSITY: ${EMULATOR_LIVING_DENSITY:-2}
+    depends_on:
+      postgis:
+        condition: service_healthy
+      valkey:
+        condition: service_healthy
+      nats:
+        condition: service_healthy
+    healthcheck:
+      # healthy = HTTP up AND the store and Valkey seams actually connected
+      test:
+        - CMD
+        - python
+        - -c
+        # Connectivity only: /health also reports 'degraded' for upstream or
+        # historical conditions (a failed last run, NATS/oracle down) that a
+        # container restart cannot fix — those stay visible in /health and in
+        # sajag_up.sh --status instead of flapping the container's health.
+        - "import json,os,sys,urllib.request as u; d=json.load(u.urlopen('http://127.0.0.1:%s/health' % os.environ.get('PORT', '8190'), timeout=3)); s=d.get('stack', {}); sys.exit(0 if s.get('store') and s.get('valkey') else 1)"
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+    deploy:
+      resources:
+        limits:
+          memory: 512M

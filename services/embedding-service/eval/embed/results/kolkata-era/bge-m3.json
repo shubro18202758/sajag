@@ -1,0 +1,19 @@
+{
+ "candidate": "bge-m3",
+ "repo": "~/models/bge-m3",
+ "family": "dense",
+ "dtype": "fp32",
+ "device": "cuda",
+ "load_s": 4.0,
+ "weights_gib": 2.12,
+ "peak_alloc_gib": 2.36,
+ "reserved_gib": 2.53,
+ "dim": 1024,
+ "timing": {
+  "query_ms_p50": 13.12,
+  "query_ms_p95": 16.65,
+  "memory_doc_ms": 5.51,
+  "sop_doc_ms": 6.67
+ },
+ "at": "2026-10-28T20:38:15+0530"
+}
